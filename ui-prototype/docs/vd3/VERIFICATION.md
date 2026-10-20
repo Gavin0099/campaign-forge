@@ -57,4 +57,6 @@ PNG關鍵姿勢分次重播擷取，capture-record記錄擷取前後stage；短�
 
 最後TypeScript／Vite、13份企劃保護與治理隔離測試的真實退出碼見 artifacts/governance-native-acceptance.json 與canonical delivery receipts。該治理檢查是隔離replay，**不是平台自然回呼**；使用者已信任／啟用修正版hooks並重新載入，不再待重複信任，目前仍不宣稱完整自動治理。
 
+交付收據：artifacts/evidence/test-results/receipt-vd3-ui.json／.txt 與 receipt-vd3-governance.json／.txt，皆由官方receipt writer執行實際命令並綁定實作commit 1eb63b4；官方memory_record寫入memory/2026-10-21.md。[memory guard實際輸出](memory-check.txt)為B0阻擋0、completion_claim_allowed=True；僅證明記憶交付流程未阻擋，不是美術核准。舊框架bare-git查詢由既有已驗證bridge綁定固定Git，驗證runner以固定Python／Node與允許環境執行；沒有改動框架來源或hook命令。
+
 重驗曾發現截圖等待跨過短暫Impact，已改各姿勢分次重播；另遇兩次Windows覆寫既有PNG的UNKNOWN檔案錯誤，失敗報告留scratch，改用buffer→唯一暫存檔→替換並記錄有限重試，原始CDP亦使用每次獨立目錄。鏡頭復位檢查等待實際React效果完成後再斷言原viewBox，未省略復位條件。最後來源凍結後才執行本報告所連的完整驗證。

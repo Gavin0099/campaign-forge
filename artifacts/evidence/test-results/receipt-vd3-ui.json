@@ -1,0 +1,17 @@
+{
+  "receipt_schema": "test_evidence_receipt.v0.1",
+  "status": "report_only",
+  "command": "\"C:\\Program Files\\nodejs\\node.exe\" D:\\campaign-forge\\ui-prototype\\tests\\verify-vd3.mjs",
+  "exit_code": 0,
+  "started_at": "2026-10-20T16:14:57Z",
+  "finished_at": "2026-10-20T16:14:57Z",
+  "runner": "governance_tools.test_evidence_receipt_writer",
+  "linked_commit": "1eb63b47a12107f970c17516638a39828892fc97",
+  "output_artifacts": [
+    "artifacts/evidence/test-results/receipt-vd3-ui.txt"
+  ],
+  "cannot_claim": [
+    "semantic correctness of the tested behavior",
+    "receipt authenticity: every field is fabricatable by a direct writer"
+  ]
+}
