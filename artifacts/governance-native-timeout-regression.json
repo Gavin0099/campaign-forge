@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-10-20T13:38:48.575507+00:00",
+  "source_sha256": "04b4be1fd0f0e00ebdcea42f79e8385ef35a40b9432c72ff59ff2f12689d4d95",
+  "origin": "executed_commands",
+  "checks": {
+    "lifecycle-tests": {
+      "exit_code": 1,
+      "stdout": "\nSessionEnd exact command elapsed: 3.390s\n",
+      "stderr": "test_changed_binding_is_refused_before_runtime_write (__main__.NativeCommandReplay.test_changed_binding_is_refused_before_runtime_write) ... ok\ntest_hostile_environment_cannot_redirect_executables (__main__.NativeCommandReplay.test_hostile_environment_cannot_redirect_executables) ... ok\ntest_lifecycle_and_stop_does_not_close_session (__main__.NativeCommandReplay.test_lifecycle_and_stop_does_not_close_session) ... ok\ntest_missing_and_stale_claim_evidence_rejected (__main__.NativeCommandReplay.test_missing_and_stale_claim_evidence_rejected) ... ok\ntest_missing_closeout_owner_fails_end_without_writing_memory (__main__.NativeCommandReplay.test_missing_closeout_owner_fails_end_without_writing_memory) ... ok\ntest_missing_identity_or_wrong_workspace_rejected_before_output (__main__.NativeCommandReplay.test_missing_identity_or_wrong_workspace_rejected_before_output) ... ok\ntest_missing_pre_task_is_blocked (__main__.NativeCommandReplay.test_missing_pre_task_is_blocked) ... ok\ntest_protected_document_change_blocks_stop (__main__.NativeCommandReplay.test_protected_document_change_blocks_stop) ... ok\ntest_replay_cannot_claim_full_native_adoption (__main__.NativeCommandReplay.test_replay_cannot_claim_full_native_adoption) ... ok\ntest_resume_preserves_original_identity (__main__.NativeCommandReplay.test_resume_preserves_original_identity) ... ok\ntest_scope_and_repeated_stop_cannot_bypass (__main__.NativeCommandReplay.test_scope_and_repeated_stop_cannot_bypass) ... ok\ntest_session_end_calls_canonical_entry_within_native_timeout (__main__.NativeCommandReplay.test_session_end_calls_canonical_entry_within_native_timeout) ... FAIL\n\n======================================================================\nFAIL: test_session_end_calls_canonical_entry_within_native_timeout (__main__.NativeCommandReplay.test_session_end_calls_canonical_entry_within_native_timeout)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\campaign-forge\\tests\\test_governance_lifecycle.py\", line 118, in test_session_end_calls_canonical_entry_within_native_timeout\n    self.assertLess(result.elapsed, 3, 'Native SessionEnd timeout is at most three seconds')\nAssertionError: 3.389999999955762 not less than 3 : Native SessionEnd timeout is at most three seconds\n\n----------------------------------------------------------------------\nRan 12 tests in 85.315s\n\nFAILED (failures=1)\n"
+    },
+    "scope": {
+      "exit_code": 0,
+      "stdout": "PASS: 13 planning files checked (only owner-approved PLAN metadata allowed) against 652ce0ea38cfe2bb4b07b942a5cdae3db823e0f2; no Actions/root LICENSE; four art assets checked.\n",
+      "stderr": ""
+    },
+    "typecheck": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "vite": {
+      "exit_code": 0,
+      "stdout": "\u001b[36mvite v4.5.5 \u001b[32mbuilding for production...\u001b[36m\u001b[39m\ntransforming...\n\u001b[32m✓\u001b[39m 33 modules transformed.\nrendering chunks...\ncomputing gzip size...\n\u001b[2mdist/\u001b[22m\u001b[32mindex.html                 \u001b[39m\u001b[1m\u001b[2m  0.40 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.31 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[35massets/index-12394745.css  \u001b[39m\u001b[1m\u001b[2m 34.96 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  9.09 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/index-339c29df.js   \u001b[39m\u001b[1m\u001b[2m170.15 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip: 57.86 kB\u001b[22m\n\u001b[32m✓ built in 559ms\u001b[39m\n",
+      "stderr": ""
+    },
+    "build": {
+      "exit_code": 0
+    }
+  },
+  "native_execution_claimed": false,
+  "native_status": {
+    "complete": false,
+    "observed_native_events": [],
+    "boundary": "Local callback receipts; corroborate with Codex hook trust and host execution. Not a security attestation."
+  },
+  "boundary": "Isolated command replay plus build/scope checks; platform trust is separate"
+}

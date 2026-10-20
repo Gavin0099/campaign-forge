@@ -3,11 +3,15 @@
 ## Human-provided requirements (2026-10-20)
 
 Owner Gavin。目標 Steam / PC 故事戰役、小隊養成奇幻戰棋 RPG；A/B/C 候選未選定。UI 僅可用 A 作展示，不制定正式故事、規則與骰子系統。
+
+2026-10-20 使用者確認 Codex hooks 已完成信任與重新載入；Hooks 檢閱頁四個事件皆為已信任／啟用、沒有錯誤。此為使用者陳述；代理本機尚未觀察到原生回呼收據，不能與完整導入驗收混同。
 授權 UI-01..05、React+TypeScript 展示、原創素材及治理導入。人物、戰鬥和地圖是當前優先成果。參考曹操傳／孔明傳的可讀性，不複製其素材。
 所有讀寫限本 repo；公開指定 framework 與 TacticalGo 可唯讀參考。不啟用 Actions、不部署、不購買、不寫正式引擎。
 使用者委託代理填 domain/risk；選定 game-ui-prototype / low。使用者後續明確指示「做完一個段落幫我push」，已授權本輪正常 commit/push，未授權 PR/部署。
 
 ## Agent-observed implementation facts
+
+治理最新修正：重驗曾有SessionEnd 3.390秒失敗，原件保留；合併Git身分查詢並在單一hook程序重用已驗證root後，13項隔離驗收通過，三個新session為2.360／2.281／2.281秒。此次bridge及生成命令雜湊變更，修正版需重新檢閱信任；平台自然事件仍未觀察到。這是代理執行觀察，不是使用者對修正版的信任確認。
 
 2026-10-20最新使用者授權：9.5小時、上限10小時Visual Quality Sprint；可查閱三款指定遊戲官方網站／截圖，研究副本限scratch。以四人、五種小人、渡口與對話為重點，原選擇後果與規則不變。這是使用者要求，並非正式角色或商品名定案。
 

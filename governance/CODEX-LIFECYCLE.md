@@ -46,7 +46,7 @@ Codex 要求信任「目前內容雜湊對應的 hook 定義」。使用者須�
 
 本機定義固定 Python、Git、Node 的絕對路徑、長度與 SHA-256。Codex 使用明確的 Windows 命令直接啟動 isolated Python；bootstrap 先檢查自身與 bridge，bridge 再檢查 Git、合約、領域 validator 與 framework Python inventory。legacy 的 bare Git 呼叫在此短生命週期程序內映射到固定 Git，只允許列出的唯讀命令並使用環境 allowlist。子程序不繼承憑證、PATH、PYTHONPATH 或 Git repo/object/config selector。Node 僅由建置 recorder 在使用前驗證，不在原生 hook 重複計算雜湊。
 
-最初 PowerShell 轉接版約 3.28 秒，超出平台限制，已移除；目前直接 Python 的隔離命令收尾約 2.86 秒。此數字限本機 replay，較慢的機器必須重新驗收，不能調高平台的 SessionEnd 上限掩蓋失敗。
+最初 PowerShell 轉接版約 3.28 秒，超出平台限制，已移除；直接 Python 版早期約2.86秒，但後續重驗曾達3.390秒。最新修正把 Git 身分核對合併，單一 hook 程序內重用已驗證的 consumer root；仍逐次核對嚴格路徑及 envelope，拒絕借用另一個 root，未跳過 canonical／ownership／guard／writer。pre/post-task 模組只在各自事件載入，未改上游框架。最新13項隔離測試通過，三個全新 session 的原樣命令為2.360、2.281、2.281秒。此數字限本機 replay，不保證平台實際執行；較慢的機器必須重新驗收，不能調高平台的 SessionEnd 上限掩蓋失敗。修正改變 bridge 與生成命令的雜湊，須重新檢閱信任修正版。
 
 這項綁定不取代 Codex 的 hook trust、Windows／Python 已安裝元件的信任，也不涵蓋舊 Git hooks 的所有內部執行器。新增 lifecycle 鏈不使用 ambient executable lookup；既有上游 Git hooks 仍有 ambient shell/Python 選擇，因此未宣稱整個工具鏈已達安全邊界或能阻止惡意本機程式。
 

@@ -1,16 +1,28 @@
 # AI Governance 導入程度 — 2026-10-20
 
+## 使用者完成平台信任後的核對
+
+使用者已確認「已完成信任與重新載入」，並確認 Hooks 檢閱頁的四個事件皆為已信任／啟用、沒有錯誤。這是使用者提供的平台狀態，取代下方歷史段落中「尚待使用者信任」的描述。
+
+代理初次核對本 repo：四事件設定存在、Python／Git／Node 及 bridge／framework 來源均符合本機綁定的長度與 SHA-256。然而 `artifacts/runtime/codex/` 尚無原生事件收據，`native_status` 仍為 `complete=false`、`observed_native_events=[]`。因此前一版本的信任步驟已由使用者確認完成，原生執行仍待平台證據；目前不能宣稱完整導入，也不能將缺少收據直接判為使用者未信任或 bridge 執行失敗。
+
+這次重驗另外發現 SessionEnd 耗時3.390秒，超出平台三秒上限；原始失敗收據保留於 `artifacts/governance-native-timeout-regression.json`。量測顯示收尾共啟動53次子程序，其中19次為同一 consumer root 的重複 Git 查詢。本輪將三個 Git 身分查詢合併，讓短生命週期程序內的 canonical root helper 重用最初已驗證的 Git 身分，每次仍檢查絕對路徑、root／.git 是否被重導，以及 envelope 的 root 是否完全相符；其餘 canonical、ownership、memory guard、writer 均維持原流程。另將 pre/post-task import 移至各自事件分支，未更動上游框架。
+
+修正後13/13隔離測試通過；三個全新 session 的 SessionEnd 原樣命令分別為2.360、2.281、2.281秒，均低於三秒。新增偽造 envelope 借用另一個 repo root 的拒絕案例；成功耗時仍只代表本機 replay，尚無平台 timeout 或原生 writer 的成功證據。此次 bridge 修正已重新產生本機 hook 定義；Codex 依定義雜湊信任，**修正版需要重新檢閱信任**，不能沿用使用者對前一版的確認。這是修正帶來的新要求，沒有改動全域信任資料。
+
+下一個診斷點是同一 repo 的普通文字訊息是否觸發 UserPromptSubmit，以及 Hooks 介面的實際執行紀錄。若仍無紀錄，須核對平台是否載入此專案設定；不反覆安裝、修改信任資料或以手動 replay 偽裝回呼。自然 SessionEnd 與 canonical writer 仍須在真正結束聊天後核對，本次沒有自行封存聊天。原始程式／隔離驗收的界線保持不變。
+
 ## 最新補線里程碑
 
 使用者本輪要求補齊剩餘接線與驗收並 push。四個 Codex 原生事件已實作，使用 repo 本機產生、固定 Python／Git 與來源雜湊的命令；沒有改動全域信任或開啟 Actions。SessionStart 建立及保留原生身分、UserPromptSubmit 作前置檢查、Stop 驗證兩個領域 validator，SessionEnd 才執行 canonical closeout。詳見 [CODEX-LIFECYCLE.md](CODEX-LIFECYCLE.md)。
 
 驗收證據為 `artifacts/governance-native-acceptance.json`（隔離命令測試、scope、TypeScript、Vite 的真實 exit code 與輸出），以及 `artifacts/governance-native-external-smoke.json`（pre_task、session_start、post_task 均 true，兩個領域 validator 實際執行）。後置 fixture 為明確標記的 synthetic、無額外檢查宣稱的最小合約案例；不以手填的測試成功欄位充作執行證據。
 
-本輪最終隔離測試 **12/12 通過**，SessionEnd 原樣命令耗時 **2.781 秒**；scope、TypeScript 與 Vite exit code 均0。readiness 17/17、drift ok、本機 Git hook 安裝 valid；其 JSON 分別保留在 `artifacts/governance-native-readiness.json`、`governance-native-drift.json`、`governance-native-git-hooks.json`。Copilot 可選項仍提示未安裝，與本次 Codex 接線分開。
+最新隔離測試 **13/13 通過**，SessionEnd 三次原樣命令耗時見上方修正紀錄；scope、TypeScript 與 Vite exit code 均0。先前 readiness 17/17、drift ok、本機 Git hook 安裝 valid；其 JSON 分別保留在 `artifacts/governance-native-readiness.json`、`governance-native-drift.json`、`governance-native-git-hooks.json`，不冒充本次重新執行。Copilot 可選項仍提示未安裝，與本次 Codex 接線分開。
 
 合約已加入 `hard_stop_rules`，故事文件違規不再只是 warning。隔離命令驗證失敗拒絕、故事保護、執行環境注入、重複 Stop、缺少前置檢查、resume/compact、缺乏／過期證據及完整導入宣稱。收尾命令另驗證 canonical 內容有效及 receipt，並要求實際耗時小於平台三秒上限；replay 禁止寫正式日記，不能替代原生 writer 證據。
 
-平台信任與自然事件驗收仍未觀察到：installer 明確回報 `REQUIRES_USER_REVIEW`，須由使用者信任目前 hook 定義並載入。完整導入判定還需要同一自然 session 的四個成功事件與 `written`／`already_present` canonical writer receipt；目前不能稱已完整導入。這項待驗狀態沒有以 smoke、Git hook 成功或靜態 full_candidate 取代。
+初次安裝時 installer 回報 `REQUIRES_USER_REVIEW`；使用者現已確認四個事件皆已信任／啟用並重新載入。自然事件驗收仍未觀察到：完整導入判定還需要同一自然 session 的四個成功事件與 `written`／`already_present` canonical writer receipt；目前不能稱已完整導入。這項待驗狀態沒有以 smoke、Git hook 成功或靜態 full_candidate 取代。
 
 啟用前已把本輪手動 smoke runtime 完整移至工作區 `scratch/governance-before-native-20261020T1109/` 保留，避免 R2 將舊 envelope 誤判為未完成 owner。沒有刪除歷史或改寫自然 session 證據。正式故事仍停 S3，未修改 UI 行為，沒有自行結束此聊天。
 

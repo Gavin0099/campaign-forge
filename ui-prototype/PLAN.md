@@ -49,6 +49,8 @@ Visual Sprint已知限制：平面沙盤／河岸方格感、材質重複、靜�
 
 ## Verification
 
+2026-10-20 最新平台確認：使用者已完成信任／重新載入，並確認四事件已信任／啟用、無錯誤；本機綁定核對一致，但尚無原生回呼收據。後續重驗發現 SessionEnd 曾達3.39秒，超過平台三秒限制；本輪改為一次 Git 身分查詢，單一 hook 程序內重用已驗證的 consumer root，保留每次路徑核對、完整 envelope／guard／writer 檢查，延後非本事件的 import。新增跨 root 偽造 envelope 拒絕測試及三個全新 session 的計時樣本。結果以 artifacts/governance-native-acceptance.json 為準；失敗原件保留為 governance-native-timeout-regression.json。此次程式修正改變 hook 定義雜湊，須重新檢閱信任修正版，再驗證平台實際執行與自然 SessionEnd／canonical writer；不是否定使用者已完成前一版本的信任。
+
 建置、範圍保護與 CUA 實際瀏覽器流程；保留 screenshots 與 docs/VERIFICATION.md。先前環境已於正常交付驗證 Git hooks；本輪已補四事件 lifecycle 程式與隔離 replay，Codex 信任及自然回呼仍待驗，不得稱完整自動治理。
 
 2026-10-20 Windows 工作副本：恢復固定框架並安裝本機 hooks；UI 治理 smoke 改用 repo runtime root 與明確的 UI 計畫，不再依賴符號連結。readiness 17/17、drift、hook 安裝檢查與 UI runtime smoke 通過；證據及本機交付界線見 governance/ADOPTION-STATUS.md。本輪僅處理治理，未修改 UI 行為或重新宣稱瀏覽器驗收。

@@ -101,12 +101,34 @@ def bind_git(binding: dict, root: Path) -> None:
             super().__init__([str(git), '-c', 'core.autocrlf=' + mode, '-c', 'core.longpaths=true', *argv], **kwargs)
 
     subprocess.Popen = BoundGit
-    top = subprocess.check_output([str(git), "-C", str(root), "rev-parse", "--show-toplevel"], text=True).strip()
-    gitdir = subprocess.check_output([str(git), "-C", str(root), "rev-parse", "--absolute-git-dir"], text=True).strip()
-    common = subprocess.check_output([str(git), "-C", str(root), "rev-parse", "--git-common-dir"], text=True).strip()
+    identity = subprocess.check_output([str(git), "-C", str(root), "rev-parse",
+                                       "--show-toplevel", "--absolute-git-dir", "--git-common-dir"], text=True).splitlines()
+    if len(identity) != 3:
+        raise ValueError("Unexpected Git repository identity response")
+    top, gitdir, common = identity
     common_path = Path(common) if Path(common).is_absolute() else root / common
     if Path(top).resolve() != root or Path(gitdir).resolve() != root / ".git" or common_path.resolve() != root / ".git":
         raise ValueError("Hook repository identity mismatch; linked/redirected git dirs are unsupported")
+
+
+def bind_consumer_root(root: Path) -> None:
+    """Reuse the Git identity verified above for this one hook process.
+
+    Canonical closeout rereads the same envelope many times. Its root helper
+    otherwise starts Git on every read (19 launches in the measured closeout).
+    Keep strict path checks on each call, accept only the already-bound root,
+    and leave envelope, ownership, guard and writer validation untouched.
+    """
+    from runtime_hooks.core import _canonical_closeout
+
+    def bound_root(path: Path) -> Path:
+        if not path.is_absolute() or path.resolve(strict=True) != root:
+            raise ValueError("Consumer root differs from the verified hook repository")
+        if root.resolve(strict=True) != root or (root / '.git').resolve(strict=True) != root / '.git':
+            raise ValueError("Verified hook repository was redirected")
+        return root
+
+    _canonical_closeout._consumer_worktree_root = bound_root
 
 
 def safe_id(value: object) -> str:
@@ -169,13 +191,12 @@ def handle(payload: dict, event: str, binding: dict, *, replay: bool = False) ->
     bind_git(binding, root)
     sys.path.insert(0, str(root / "scripts"))
     sys.path.insert(0, str(root / "ai-governance-framework"))
+    bind_consumer_root(root)
     from runtime_hooks.core._canonical_closeout import read_session_envelope
-    from runtime_hooks.core import session_start
-    from runtime_hooks.core.pre_task_check import run_pre_task_check
-    from runtime_hooks.core.post_task_check import run_post_task_check
     session = inside(root / "artifacts/runtime/codex" / sid, root)
     result: dict
     if event == "SessionStart":
+        from runtime_hooks.core import session_start
         from runtime_hooks.adapters.codex.session_start import run
         # Upstream identity adapter owns envelope creation and resume checks.
         result = run(payload, root)
@@ -202,6 +223,7 @@ def handle(payload: dict, event: str, binding: dict, *, replay: bool = False) ->
         if read_session_envelope(sid, root) is None:
             raise ValueError("SessionStart envelope required; never borrow another session")
         if event == "UserPromptSubmit":
+            from runtime_hooks.core.pre_task_check import run_pre_task_check
             turn = safe_id(payload.get("turn_id"))
             prompt = payload.get("prompt")
             if not isinstance(prompt, str):
@@ -218,6 +240,7 @@ def handle(payload: dict, event: str, binding: dict, *, replay: bool = False) ->
                 "contract": contract_text(), "declared_by": "repo_lifecycle_bridge",
                 "source": "AGENTS.md and contract.yaml", "risk": "low"}, root)
         elif event == "Stop":
+            from runtime_hooks.core.post_task_check import run_post_task_check
             turn = safe_id(payload.get("turn_id"))
             task = json.loads(inside(session / turn / "task.json", root).read_text(encoding="utf-8"))
             if not task.get("ok") or task.get("session_id") != sid or task.get("turn_id") != turn:

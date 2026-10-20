@@ -107,15 +107,31 @@ class NativeCommandReplay(unittest.TestCase):
         self.assertEqual(daily, {p.name: p.read_bytes() for p in (ROOT / 'memory').glob('????-??-??.md')})
 
     def test_session_end_calls_canonical_entry_within_native_timeout(self):
+        # Fresh identities exercise full closeout, rather than a fast duplicate.
+        for attempt in range(3):
+            self.setUp()
+            sid = self.begin()
+            result = self.invoke('SessionEnd', self.payload('SessionEnd', sid, reason='other'))
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            record = json.loads((ROOT / 'artifacts/runtime/codex' / sid / 'SessionEnd.json').read_text(encoding='utf-8'))
+            self.assertTrue(record['result']['ok'], record)
+            self.assertEqual(record['result']['canonical_entry']['closeout_status'], 'valid', record)
+            self.assertFalse(record['result']['ledger_write_allowed'])
+            print(f'\nSessionEnd exact command sample {attempt + 1}: {result.elapsed:.3f}s', flush=True)
+            self.assertLess(result.elapsed, 3, 'Native SessionEnd timeout is at most three seconds')
+
+    def test_envelope_cannot_borrow_another_consumer_root(self):
         sid = self.begin()
+        path = ROOT / 'artifacts/runtime/sessions' / sid / 'session-envelope.json'
+        envelope = json.loads(path.read_text(encoding='utf-8'))
+        envelope['repo_binding']['consumer_root'] = str(SOURCE)
+        path.write_text(json.dumps(envelope), encoding='utf-8')
+        daily = {p.name: p.read_bytes() for p in (ROOT / 'memory').glob('????-??-??.md')}
         result = self.invoke('SessionEnd', self.payload('SessionEnd', sid, reason='other'))
-        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        record = json.loads((ROOT / 'artifacts/runtime/codex' / sid / 'SessionEnd.json').read_text(encoding='utf-8'))
-        self.assertTrue(record['result']['ok'], record)
-        self.assertEqual(record['result']['canonical_entry']['closeout_status'], 'valid', record)
-        self.assertFalse(record['result']['ledger_write_allowed'])
-        print(f'\nSessionEnd exact command elapsed: {result.elapsed:.3f}s', flush=True)
-        self.assertLess(result.elapsed, 3, 'Native SessionEnd timeout is at most three seconds')
+        self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+        self.assertIn('SessionStart envelope required', result.stdout)
+        self.assertFalse((ROOT / 'artifacts/runtime/closeout-completions' / (sid + '.json')).exists())
+        self.assertEqual(daily, {p.name: p.read_bytes() for p in (ROOT / 'memory').glob('????-??-??.md')})
 
     def test_replay_cannot_claim_full_native_adoption(self):
         sid = self.begin()
