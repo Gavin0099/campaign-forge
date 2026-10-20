@@ -27,6 +27,20 @@
 
 工具版本、實際採用檔案與其相依授權，要到真正採用時逐項確認。這批沒有引用工具的原創範例故事。
 
+## S3.5 腳本格式與參考（2026-10-20 查閱）
+
+| 名稱 | 來源 | 授權 | 用途 |
+| --- | --- | --- | --- |
+| ink／Inky | [ink](https://github.com/inkle/ink)、[inky](https://github.com/inkle/inky) | MIT | 採用為對白腳本格式；未把 ink 或範例納入 repo |
+| inkjs | [y-lohse/inkjs](https://github.com/y-lohse/inkjs) | MIT | 在 repo 外暫存目錄編譯與路徑檢查 |
+| Yarn Spinner | [YarnSpinnerTool/YarnSpinner](https://github.com/YarnSpinnerTool/YarnSpinner) | MIT | 比較候選，未採用 |
+| dialogue-systems skill | [awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/main/skills/disciplines/dialogue-systems/SKILL.md) | Apache-2.0 | 參考行 ID、變數與流程分離觀念 |
+| book-game skill | [epicsagas/velith](https://github.com/epicsagas/velith/blob/main/skills/book-game/SKILL.md) | 本次未核對授權 | 參考任務與旗標欄位整理 |
+| 三線索原則 | [The Alexandrian](https://www.thealexandrian.net/wordpress/1118/roleplaying-games/three-clue-rule) | 文章，非開源 | 只取原則：關鍵真相至少三個線索來源 |
+| 5 Room Dungeons | [Roleplaying Tips](https://www.roleplayingtips.com/5-room-dungeons/) | 文章，非開源 | 只取原則：地城關的節奏結構 |
+
+均僅唯讀查閱，未複製內容。
+
 ## 創作方向與故事素材
 
 曹操傳／孔明傳只用於說明人物推動戰役的方向，D&D 只用於說明職業分工與冒險隊伍感。未把參考作品的人物、地名、劇情、關卡、文字、數值、職業規則或未授權書籍內容移植進企劃。遊戲規則及所需授權尚未決定。
