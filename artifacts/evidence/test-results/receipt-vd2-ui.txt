@@ -1,0 +1,1 @@
+PASS VD2 20 browser checks, 19 PNG captures, 2 live GIF recordings; source and media hashes match. Owner art acceptance remains pending.

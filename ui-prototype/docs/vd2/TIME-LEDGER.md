@@ -18,4 +18,6 @@
 
 14:40前後的劍擊圖集抽查發現bounding box交疊會帶入鄰角殘片；三幀改採各自連通輪廓的SVG裁切、原始PNG不變，再重跑建置、瀏覽器及錄製。補測過程曾因編輯比較頁HTML觸發Vite重新載入而中斷錄製，該次report標為失敗，未用於最後驗收；最後錄製期間凍結檔案。
 
+最後來源／PNG／GIF與治理證據核對收據完成於14:48:41 UTC，從本輪起點累計56分07秒。後續canonical交付記錄、最後commit及正常push以其Git／receipt時間補充。這56分07秒包含實作、生成等待、反覆實測、發現問題後修正及文件收整；不宣稱投入了9.5小時，也不以此時間替代Owner美術驗收。
+
 原始瀏覽器JPEG留scratch，逐幀時間戳與SHA-256、GIF時間長度和SHA-256保留在screenshots/vd2/after/recording-*.json。Source／capture雜湊與最後起訖見capture-record.json；不得把前一輪45分50秒或9.5小時預算算進本輪實際工時。
