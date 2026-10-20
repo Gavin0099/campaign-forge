@@ -21,7 +21,9 @@
 1. **L01–L07 文字試玩（必須先做）**：用 Inky 或 inkjs 跑兩條以上路徑（至少 K1 開閘＋救小昆、K1 封閘＋救星盤），請人類讀者試讀並記錄：能否說出 K1 兩邊的所得所失、是否在乎燈芯屋與小昆、L07 是否覺得被強迫。紀錄放 `docs/story/playtest/L01-L07.md`，區分人類回饋與模型自評。
 2. 依試玩回饋修 L01–L07；重新編譯並跑 `script/check/walk.js`，更新 [FLAGS](FLAGS.md)。
 3. **試玩通過並經 Gavin 確認後**才寫 L08 回聲之路與第三章（L09–L12、P01），沿用 FLAGS 與 LEVEL-LIST 的風險緩解原則。
-4. G004 通過後再改寫 README.md 與 docs/review/STORY-GATE.md（DECISIONS G006）。
+4. **skill 驗證**：在全新的 Codex session 測試 dnd-framework 是否自動載入（`.codex/skills/` 與 `.agents/skills/` 何者有效），並確認它會拒絕非開放授權內容（例如要求設計眼魔或使用 Forgotten Realms 地名）。結果記入 memory。
+5. **G005 決定後**才依 [規則改編契約](../design/RULE-ADAPTATION-CONTRACT.md) 為 Fighter、Wizard、Cleric 各原型化一個能力（規則欄位＋VFX 連結）。G005 仍未決：建議以 SRD 5.2.1 作來源，不等於採用完整 5.5e 戰鬥規則。
+6. G004 通過後再改寫 README.md 與 docs/review/STORY-GATE.md（DECISIONS G006）。
 
 ## 限制
 
