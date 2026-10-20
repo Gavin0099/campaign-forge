@@ -7,7 +7,7 @@
 1. [docs/DECISIONS.md](../DECISIONS.md)：U001–U006 使用者陳述、P006–P008、G004／G005
 2. [STORY.md](STORY.md)：世界規則、隊伍、勢力、六章、K1–K5
 3. [COMPANION-ARCS.md](COMPANION-ARCS.md)、[ANTAGONIST.md](ANTAGONIST.md)、[ENDINGS-MATRIX.md](ENDINGS-MATRIX.md)
-4. [levels/LEVEL-LIST.md](levels/LEVEL-LIST.md) 與 `levels/L##.md`
+4. [levels/LEVEL-LIST.md](levels/LEVEL-LIST.md)、`levels/L##.md` 與 [FLAGS.md](FLAGS.md)
 5. [script/](script/)：Ink 腳本；旗標名稱以 `globals.ink` 為準
 
 `docs/candidates/` 的 A／B／C 與 `ui-prototype/` 的人名是歷史或展示，不是正典。
@@ -18,10 +18,10 @@
 
 ## 下一步（依序）
 
-1. **L07–L08 腳本與關卡表**：照 LEVEL-LIST 與 ANTAGONIST 第二章出場；L07 莫瑞安必須贏，帶走小昆（`quin_taken=true`），玩家只能撤退。
-2. **第三章 L09–L12 與 P01**：K2 寫入 `k2_revenge`，讀 `trust_lis`、`k1_gate`。
-3. **旗標表**：新增 `docs/story/FLAGS.md`，列每個旗標的寫入點、讀取點與預設值，與 `globals.ink` 一致。
-4. 每完成一章，跑 ink 編譯與路徑窮舉檢查（見 script/README），並更新 memory 與 PLAN。
+1. **L01–L07 文字試玩（必須先做）**：用 Inky 或 inkjs 跑兩條以上路徑（至少 K1 開閘＋救小昆、K1 封閘＋救星盤），請人類讀者試讀並記錄：能否說出 K1 兩邊的所得所失、是否在乎燈芯屋與小昆、L07 是否覺得被強迫。紀錄放 `docs/story/playtest/L01-L07.md`，區分人類回饋與模型自評。
+2. 依試玩回饋修 L01–L07；重新編譯並跑 `script/check/walk.js`，更新 [FLAGS](FLAGS.md)。
+3. **試玩通過並經 Gavin 確認後**才寫 L08 回聲之路與第三章（L09–L12、P01），沿用 FLAGS 與 LEVEL-LIST 的風險緩解原則。
+4. G004 通過後再改寫 README.md 與 docs/review/STORY-GATE.md（DECISIONS G006）。
 
 ## 限制
 
@@ -30,6 +30,8 @@
 - 不得使用他作的人物、地名、台詞或情節（D&D 名作只作原則參考，見 NARRATIVE-GAPS）。
 - 不修改 `ui-prototype/`、`governance/`、`scripts/`、`tests/`、`artifacts/`；不選引擎、不安裝套件進 repo。
 - 保持黑暗基調但每個死亡或背叛須有事前可見徵兆。
+- 蕾絲在任何條件下都不原諒凱倫；托瑪的底線與信任無關；伊瑟拉感情線以價值衝突推進。
+- 抉擇後果優先以目標、缺席、增援與對白表達，不新增完整地圖分支（見 LEVEL-LIST〈製作風險緩解〉）。
 - 主要腳本總數超過 LEVEL-LIST 的估算時停下，提出裁剪選項給 Gavin。
 - 使用者陳述與代理觀察分開記錄；未得授權不 push、不開 PR。
 
