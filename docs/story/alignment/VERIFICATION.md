@@ -2,6 +2,8 @@
 
 本輪由 story@4f5e447 開始，main 基準505fca7。具體提交與遠端交付結果由 Git 核對；此文件不預告尚未發生的 push。
 
+主實作 `e8311673399119131a61cd9b9c81aa8bec7720e6` 已於2026-10-21 01:14:04 +08:00核對正常FF推送、遠端相符，main仍505fca7且兩工作區乾淨。[交付觀察](evidence/delivery.json) 綁定實作commit、8份證據hash與明確未宣稱事項；[實際push輸出](evidence/implementation-push.txt) 是共用Git hooks的framework smoke，不是平台自然回呼。[原稿信任分布](evidence/baseline-trust.json) 另保留實際結果。此後交付補件亦只走正常故事分支推送，最終head由最後refs核對。
+
 ## 結果分界
 
 | 面向 | 判定 | 意義 |

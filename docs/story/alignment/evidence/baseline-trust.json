@@ -1,0 +1,9 @@
+{
+  "commit": "4f5e447",
+  "counts": {
+    "2": 23040,
+    "3": 25344,
+    "4": 6912
+  },
+  "rule": "refusal iff trust_thoma >= 3; count is terminal combinations, not player probability"
+}

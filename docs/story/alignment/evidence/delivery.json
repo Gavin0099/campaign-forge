@@ -1,0 +1,63 @@
+{
+  "recordedAtUtc": "2026-10-20T17:16:29.702Z",
+  "observedAtUtc": "2026-10-20T17:14:04Z",
+  "implementationCommit": "e8311673399119131a61cd9b9c81aa8bec7720e6",
+  "remoteStoryCommitObserved": "e8311673399119131a61cd9b9c81aa8bec7720e6",
+  "baselineStoryCommit": "4f5e447c9e45cc47ecc34d4751c4db49923627b8",
+  "localAndRemoteMainObserved": "505fca779ca92c0ecd9f8fab263284e04423e723",
+  "pushExitCode": 0,
+  "pushKind": "normal fast-forward, existing shared hooks enabled",
+  "mainWorktreeCleanObserved": true,
+  "storyWorktreeCleanObservedAfterImplementationPush": true,
+  "protectedPathsDiffAgainstStoryBaseline": [],
+  "protectedPaths": [
+    "README.md",
+    "SLICES.md",
+    "docs/candidates",
+    "docs/review/STORY-GATE.md",
+    "ui-prototype",
+    "AGENTS.base.md",
+    "ai-governance-framework",
+    "governance",
+    "scripts",
+    "tests",
+    ".github"
+  ],
+  "sourceHash": "e0a4b2a967f2d9ffa7d4a014456f0376124ee5dd7c8beabb3830aa96d2fecbe4",
+  "results": {
+    "terminalPaths": 55296,
+    "choiceBoundaries": 37791,
+    "faultRejections": 14,
+    "consistencyChecks": 25,
+    "browserChecks": 32,
+    "localLinks": 123
+  },
+  "artifacts": {
+    "walk.json": "9dfd88703043ca15abb16a308e5d64bedaaa4a99f83af7b3b8d3f0c78e19bd57",
+    "build.json": "f308571bace589e6ca9770e114706a6904fa56bf3fddecd49e8093131d05a991",
+    "browser.json": "95b6ca35fe9464a7644d826404118ce3ea2cd71832edf8de0c3778027fc0f18a",
+    "negative.json": "b75fc4d8316857a3c135cb4e3380f816e01e7fa653ec5851cff9497d08ff85b2",
+    "consistency.json": "129f8a390062b418c9f1b82f4c8f1eeceb0ec9cbc076589f53d90bde2380af7f",
+    "memory-workflow.json": "64831d70f3fd25a5768f72d8e562442b9baf4444cfd297ca30c5d878b734ed9c",
+    "baseline-trust.json": "e632f0ece73455a6142b42c71be411796ba78cac90fa8b3aabb11b1757d253d3",
+    "implementation-push.txt": "b770d5ff5d7b6051ac484920f5743a94ef99c7126e11be423756b2c65979a517"
+  },
+  "notClaimed": [
+    "G004 approval",
+    "G005 approval",
+    "human playtest",
+    "independent human reviewers",
+    "commercial art approval",
+    "natural Codex hook callbacks",
+    "SessionEnd",
+    "main merge",
+    "deployment",
+    "L08-L28 scripts"
+  ],
+  "sourceNotFound": [
+    "貝恩",
+    "燈號簿",
+    "洩潮地"
+  ],
+  "note": "Delivery observation, not an official canonical session closeout. Companion commit identity and final remote equality must be checked after committing this receipt."
+}

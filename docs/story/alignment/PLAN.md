@@ -1,6 +1,6 @@
 # 敘事與產品對齊 Sprint
 
-狀態：本輪可獨立完成的實作／模型審查／候選規格完成，進入交付核對；12 小時是上限預算，不是已投入工時。G004／G005 未決。
+狀態：本輪可獨立完成的實作／模型審查／候選規格完成，主實作已正常FF推送e831167；12 小時是上限預算，不是已投入工時。G004／G005 未決。
 
 授權來源：Owner 2026-10-21 貼入的 12-Hour Continuous Narrative & Product Alignment Sprint。可連續執行本計畫 S0–S6、修改 L01–L07 工作稿、驗證與正常推送 story/strengthen-narrative；不合併 main、不替換 UI、不寫 L08 起劇本。
 
@@ -12,7 +12,7 @@
 | S3 互動試玩 | 工程PASS；人類試讀待審 | 同源 React／TS、重播版本、選項匯出與回退；32項瀏覽器檢查 |
 | S4 深度審查 | 模型兩種視角已做；獨立真人／Owner待審 | [NARRATIVE-REVIEW](NARRATIVE-REVIEW.md)，不冒充兩名獨立審查者 |
 | S5 產品規格 | 候選規格完成；待Owner決策 | [Creative Bible](../CREATIVE-BIBLE.md)、[L03](../L03-VERTICAL-SLICE.md)；G004／G005界線不變 |
-| S6 交付 | 檢查完成，Git交付核對中 | [VERIFICATION](VERIFICATION.md)；實際提交／push以最後Git核對為準 |
+| S6 交付 | 工程／範圍PASS，主實作已FF push | [VERIFICATION](VERIFICATION.md)、[交付觀察](evidence/delivery.json)；補件與最終head依最後Git核對，無main合併 |
 
 ## 計時
 
