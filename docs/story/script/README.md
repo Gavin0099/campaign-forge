@@ -9,7 +9,7 @@
 | `main.ink` | 入口，INCLUDE 其他檔 |
 | `globals.ink` | 全域旗標、隱藏信任與 `stage()` 對照函式 |
 | `ch01.ink` | 第一章 L01–L04 |
-| `ch02.ink` | 第二章 L05–L06，L07 為待寫佔位 |
+| `ch02.ink` | 第二章 L05–L07；L08 起待文字試玩後續寫 |
 
 ## 慣例
 
@@ -23,6 +23,9 @@
 ```
 mkdir -p /tmp/inkcheck && cd /tmp/inkcheck && npm init -y && npm i inkjs@2
 npx inkjs-compiler -o /tmp/out.json <repo>/docs/story/script/main.ink
+node <repo>/docs/story/script/check/walk.js /tmp/out.json   # 在 /tmp/inkcheck 執行以解析 inkjs
 ```
 
-S3.5 時以 inkjs 2 編譯通過，並窮舉走訪全部選項路徑：144 條路徑皆可到達結尾、無死路。這是語法與路徑檢查，不是文字品質或玩家測試。
+`check/walk.js` 以狀態快照窮舉所有選項路徑，並檢查後果一致性（K1 與提歐、名鑰的對應；小昆與星盤不可兩全；章末刻度；小昆連結下限）。新增規則時同步更新 [FLAGS](../FLAGS.md) 的檢查欄。
+
+最近一次結果（L01–L07）：編譯零錯誤；55,296 條終端路徑全部到達結尾；一致性錯誤 0。`#sim` 選項是文字試玩用的戰果模擬，不是玩家抉擇。這是語法、路徑與狀態檢查，不是文字品質或玩家測試。
