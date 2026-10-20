@@ -1,0 +1,17 @@
+{
+  "receipt_schema": "test_evidence_receipt.v0.1",
+  "status": "report_only",
+  "command": "C:/Users/daish/AppData/Local/Programs/Python/Python312/python.exe -I -B ui-prototype/tests/verify-governance.py",
+  "exit_code": 0,
+  "started_at": "2026-10-20T13:44:37Z",
+  "finished_at": "2026-10-20T13:44:38Z",
+  "runner": "governance_tools.test_evidence_receipt_writer",
+  "linked_commit": "76e9ac57b9f76821701317aee4d78ad7b29b724e",
+  "output_artifacts": [
+    "artifacts/evidence/test-results/receipt-closeout-timeout-fix.txt"
+  ],
+  "cannot_claim": [
+    "semantic correctness of the tested behavior",
+    "receipt authenticity: every field is fabricatable by a direct writer"
+  ]
+}
