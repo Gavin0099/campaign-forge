@@ -42,6 +42,16 @@
 - **停止條件**　交付後停下，等待 Gavin 選案。推薦、分數或既有 A 素材都不能代替選擇。
 - **本批狀態**　完成，等待 G001。
 
+## S3.5　敘事強化與單一故事收斂
+
+- **目的**　回應 Gavin「故事性還是不夠」，以 D&D 式冒險隊伍框架把三案收斂為一個情感更強的故事。
+- **輸入**　S2／S3 成果、Gavin 2026-10-20 指示（DECISIONS U001–U006）、公開 D&D 作品評論的敘事原則（只取原則）。
+- **交付**　[NARRATIVE-GAPS](docs/review/NARRATIVE-GAPS.md)、[STORY](docs/story/STORY.md)、[ANTAGONIST](docs/story/ANTAGONIST.md)、[COMPANION-ARCS](docs/story/COMPANION-ARCS.md)、[ENDINGS-MATRIX](docs/story/ENDINGS-MATRIX.md)，以及 COMPARISON、DECISIONS、PLAN 與 memory 更新。
+- **驗收**　主角有想要與需要；反派每章出場且至少贏一次；每名核心同伴有個人任務、信任階段、離隊或死亡／背叛條件；至少一條「抉擇 → 信任 → 離隊 → 後續關卡」因果鏈可追；結局無全員圓滿路線；未使用他作 IP。
+- **依賴**　S3。
+- **停止條件**　不修改 ui-prototype、governance、scripts、tests、artifacts；不定規則數值、引擎或正式名稱；完成後停在 G004。
+- **本批狀態**　工作稿完成，等待 Gavin 審閱（G004）。
+
 ## S4　世界最小規則與角色設定集
 
 - **目的**　讓已選故事的人物行動與世界限制能反覆查核。

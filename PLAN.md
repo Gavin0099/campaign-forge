@@ -14,7 +14,9 @@ S1、S2、S3 已完成。S0 的企劃骨架與公開版文件已完成，保存�
 | S0 | 公開版文件完成 | [README](README.md)、[範圍](docs/SCOPE.md)、[決策](docs/DECISIONS.md)、[授權](docs/AUTHORIZATION.md)、[來源](docs/SOURCES.md)、[執行紀錄](docs/EXECUTION.md) |
 | S1 | 完成 | 本計畫與 [SLICES](SLICES.md) |
 | S2 | 完成 | [A](docs/candidates/A-beyond-the-boundary.md)、[B](docs/candidates/B-the-debtbound-road.md)、[C](docs/candidates/C-the-last-waybeast.md) |
-| S3 | 完成，等待選案 | [比較審查](docs/review/COMPARISON.md) 與 [故事選擇關卡](docs/review/STORY-GATE.md) |
+| S3 | 完成；已由 S3.5 接續 | [比較審查](docs/review/COMPARISON.md) 與 [故事選擇關卡](docs/review/STORY-GATE.md) |
+
+| S3.5 | 工作稿完成，等待 G004 | [敘事缺口](docs/review/NARRATIVE-GAPS.md)、[單一故事](docs/story/STORY.md)、[反派](docs/story/ANTAGONIST.md)、[同伴弧線](docs/story/COMPANION-ARCS.md)、[結局矩陣](docs/story/ENDINGS-MATRIX.md) |
 
 公開交付需核對 repo 為 Public、遠端 head 與本機 commit 一致、公開檔案及相對連結可讀。Gavin 的內容決定與保存方式分開，公開文件不代表任一故事已定案。
 
@@ -26,7 +28,11 @@ S2 的六章是故事提案的比較尺度。章內的四個槽只代表需要�
 
 S3 的通過意指草案具有可繼續設計的因果與選擇。尚未有實際玩家測試，也未證明完整路線、數值平衡或製作工期成立。
 
-## 完成本批後的停止點
+## S3.5 停止點
+
+Gavin 於 2026-10-20 授權 S3.5，在選案前把故事收斂為單一工作稿《碑誓》。下一步是 Gavin 審閱（G004）與規則基礎決策（G005）；S4 起改以本稿為輸入。UI 原型人名可能與本稿不一致，不在本 slice 修改。
+
+## 完成本批後的停止點（S3 歷史）
 
 Gavin 需先在 A、B、C 中選一案，或說明不接受的核心。推薦 A 只是一項建議。未選案前不增寫正式角色設定集、不列完整 24 關表、不搭引擎。
 
