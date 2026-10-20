@@ -1,0 +1,2 @@
+PASS: current source matches stored lifecycle replay, scope, TypeScript and Vite execution. This verifies stored checks, not a new lifecycle execution.
+{"native_status": {"complete": false, "observed_native_events": [], "boundary": "Local callback receipts; corroborate with Codex hook trust and host execution. Not a security attestation."}, "commercial_art_quality": "human_review_pending"}
