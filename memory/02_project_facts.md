@@ -1,3 +1,9 @@
+## 最新使用者指示：VD3（2026-10-20）
+
+Owner 明確判定 VD2 美術驗收未通過。授權目標9.5小時、上限10小時 VD3：官方 SRD 5.2.1 能力對照、先比較動畫管線，再完成近戰攻防與獨立測試法師的 Magic Missile；不改席恩身份、不導入完整規則。工程與 Owner 美術審查分開，保留原件與實機證據，沿用正常 commit/push 授權。原生 hooks 證據仍待自然回呼，不重複要求已完成的信任。
+
+代理觀察（台北2026-10-21）：VD3以固定部件代替生成姿態換圖；席恩展示身份無正式職業定案，只有獨立test-wizard能排練Magic Missile。排練陣容與HP／行動／回合隔離；兩段各10次連播，22項實機檢查通過，原始PNG與提示、SRD聲明、720p／1080p錄影及雜湊保留。視覺技術對齊不代表Owner認可重量感／商業美術；相關待審見ui-prototype/docs/vd3/VERIFICATION.md。原型仍沒有完整5e、正式資源或新故事定案。
+
 # Project facts
 
 ## Human-provided requirements (2026-10-20)

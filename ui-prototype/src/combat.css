@@ -602,3 +602,96 @@
     transition: none;
   }
 }
+/* VD3 rehearsal shares the live battlefield, with a separate presentation cast. */
+.rehearsal-name {
+  font:
+    600 12px "Noto Sans TC",
+    sans-serif;
+  fill: #f0e1b6;
+  paint-order: stroke;
+  stroke: #1d2c2d;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+.battle-active .showcase-tray {
+  width: 266px;
+  top: 108px;
+  right: 18px;
+  max-height: calc(100% - 138px);
+  overflow-y: auto;
+  padding: 14px;
+  background: #1b2a2bef;
+}
+.showcase-tray .spell-identity {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #b4d9d6;
+  border-top: 1px solid #66776b;
+  padding-top: 9px;
+}
+.showcase-tray fieldset {
+  margin: 4px 0 8px;
+  padding: 6px 8px 8px;
+  border: 1px solid #65756a;
+}
+.showcase-tray legend {
+  color: #dbc58e;
+  font-size: 13px;
+  padding: 0 4px;
+}
+.showcase-tray fieldset label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 13px;
+  margin: 3px 0;
+}
+.showcase-tray select {
+  min-height: 28px;
+  padding: 3px 5px;
+  color: #f2e7c9;
+  background: #233334;
+  border: 1px solid #7e8d7c;
+}
+.showcase-tray small {
+  display: block;
+  line-height: 1.6;
+  color: #d6d9c8;
+  font-size: 12px;
+}
+.showcase-tray .srd-credit {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #b9ded9;
+  text-underline-offset: 3px;
+}
+.cutout-actor {
+  pointer-events: none;
+}
+.large-text .showcase-tray .spell-identity,
+.large-text .showcase-tray label,
+.large-text .showcase-tray legend,
+.large-text .showcase-tray small,
+.large-text .showcase-tray .srd-credit,
+.large-text .showcase-tray select {
+  font-size: 18px;
+}
+@media (max-width: 760px) {
+  .battle-active .showcase-tray {
+    right: 8px;
+    width: 230px;
+  }
+}
+.battle-active .showcase-tray {
+  left: auto;
+  bottom: auto;
+  transform: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.battle-active .showcase-tray p:not(.eyebrow) {
+  text-align: left;
+}

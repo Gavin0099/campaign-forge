@@ -2,6 +2,10 @@
 
 These notices apply only to their respective dependencies, not the original story or artwork.
 
+The selected SRD 5.2.1 rule references and Magic Missile presentation carry a separate
+[CC BY 4.0 attribution and changes notice](vd3/SRD-NOTICE.md), also available from the
+rehearsal UI. This does not license the project's original story or other artwork.
+
 ## @types/prop-types 15.7.15
 
 Declared license: MIT

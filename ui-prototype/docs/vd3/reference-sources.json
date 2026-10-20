@@ -1,0 +1,41 @@
+{
+  "checked_at_utc_date": "2026-10-20",
+  "scope": "Official sources read for mechanics, attribution and presentation research; no game art/audio copied",
+  "sources": [
+    {
+      "title": "D&D official SRD download page",
+      "url": "https://www.dndbeyond.com/srd",
+      "use": "SRD 5.2.1 version, publication and license"
+    },
+    {
+      "title": "System Reference Document 5.2.1",
+      "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "use": "Legal attribution page 1; weapon/Fighter pp.14–15,47–48,89–91; Rogue pp.61–62; Wizard pp.77–80; spells pp.121,132,146,162; matrix distinguishes SRD rules from original presentation"
+    },
+    {
+      "title": "CC BY 4.0 legal code",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en",
+      "use": "Attribution, changes and license notice; no endorsement claim"
+    },
+    {
+      "title": "BG3 official modding documentation: Making a Projectile Spell",
+      "url": "https://docs.baldursgate3.game/index.php?title=Making_a_Projectile_Spell",
+      "use": "Casting/projectile stages and trajectory expression; no existing game assets copied"
+    },
+    {
+      "title": "BG3 official Patch 4",
+      "url": "https://baldursgate3.game/news/patch-4-now-live_96",
+      "use": "Published Magic Missile terrain interaction correction; presentation research only"
+    },
+    {
+      "title": "Solasta official game information",
+      "url": "https://www.solasta-game.com/solasta-crown-of-the-magister/game-info",
+      "use": "SRD 5.1 tactical adaptation and environment; not a source for 5.2.1 numbers"
+    },
+    {
+      "title": "Solasta official SRD license announcement",
+      "url": "https://www.solasta-game.com/solasta-crown-of-the-magister/news/30-wotc-granted-us-a-license-to-use-the-dd-srd",
+      "use": "Historical source, 2019-09-21; no license transfer to this project"
+    }
+  ]
+}

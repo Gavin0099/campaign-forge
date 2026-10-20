@@ -1,12 +1,21 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { permitsClip } from "./combatIdentity";
 
 export type Point = { x: number; y: number };
-export type ClipKind = "physical" | "arcane" | "ward" | "hit";
-export type Stage = "move" | "windup" | "release" | "impact" | "recovery";
+export type ClipKind = "physical" | "magicMissile";
+export type Stage =
+  | "move"
+  | "windup"
+  | "release"
+  | "contact"
+  | "impact"
+  | "reaction"
+  | "recovery";
 export type Clip = {
   kind: ClipKind;
   actor: string;
   target: string;
+  targets?: string[];
   from: Point;
   to: Point;
   committed: boolean;
@@ -18,14 +27,20 @@ export type Playback = Clip & {
   sequence: number;
 };
 export const clipTiming = {
-  physical: [800, 460, 240, 180, 520],
-  arcane: [0, 900, 460, 360, 520],
-  ward: [0, 720, 420, 560, 560],
-  hit: [0, 0, 0, 400, 620],
+  physical: [880, 580, 180, 34, 88, 260, 680],
+  magicMissile: [0, 1100, 760, 0, 88, 330, 680],
 } satisfies Record<ClipKind, number[]>;
-const stages: Stage[] = ["move", "windup", "release", "impact", "recovery"];
+const stages: Stage[] = [
+  "move",
+  "windup",
+  "release",
+  "contact",
+  "impact",
+  "reaction",
+  "recovery",
+];
 
-// Visual clock only. Game state is owned by App and changes once at Impact.
+// One clock drives both actors, contact, VFX and the sole game-state boundary.
 export function useCombatPlayback() {
   const [playback, setPlayback] = useState<Playback | null>(null);
   const [reduced, setReduced] = useState(
@@ -40,8 +55,8 @@ export function useCombatPlayback() {
     started: number;
     sequence: number;
   } | null>(null);
-  const raf = useRef(0);
-  const sequence = useRef(0);
+  const raf = useRef(0),
+    sequence = useRef(0);
   const cancel = useCallback(() => {
     cancelAnimationFrame(raf.current);
     active.current = null;
@@ -66,7 +81,7 @@ export function useCombatPlayback() {
       impact: () => void = () => {},
       done: () => void = () => {},
     ) => {
-      if (active.current) return false; // Synchronous gate also catches two clicks in one React batch.
+      if (active.current || !permitsClip(clip)) return false;
       const current = {
         clip,
         impact,
@@ -84,43 +99,42 @@ export function useCombatPlayback() {
         elapsed: 0,
         sequence: current.sequence,
       });
-      let lastPaint = -100;
       const tick = (now: number) => {
         if (active.current !== current) return;
-        const duration = reducedRef.current
-          ? [0, 0, 0, 80, 80]
+        const durations = reducedRef.current
+          ? [0, 0, 0, 0, 80, 0, 80]
           : [...clipTiming[clip.kind]];
-        if (!travels) duration[0] = 0;
+        if (!travels) durations[0] = 0;
         const elapsed = now - current.started;
-        const impactAt = duration[0] + duration[1] + duration[2];
+        const impactAt = durations.slice(0, 4).reduce((a, b) => a + b, 0);
+        const total = durations.reduce((a, b) => a + b, 0);
+        let index = 0,
+          before = 0;
+        while (
+          index < stages.length - 1 &&
+          elapsed >= before + durations[index]
+        )
+          before += durations[index++];
         if (!current.impacted && elapsed >= impactAt) {
           current.impacted = true;
           current.impact();
         }
-        const total = duration.reduce((a, b) => a + b, 0);
         if (elapsed >= total) {
           active.current = null;
           setPlayback(null);
           current.done();
           return;
         }
-        if (now - lastPaint >= 32) {
-          let index = 0,
-            before = 0;
-          while (index < 4 && elapsed >= before + duration[index])
-            before += duration[index++];
-          setPlayback({
-            ...clip,
-            stage: stages[index],
-            progress: Math.min(
-              1,
-              (elapsed - before) / Math.max(1, duration[index]),
-            ),
-            elapsed,
-            sequence: current.sequence,
-          });
-          lastPaint = now;
-        }
+        setPlayback({
+          ...clip,
+          stage: stages[index],
+          progress: Math.min(
+            1,
+            (elapsed - before) / Math.max(1, durations[index]),
+          ),
+          elapsed,
+          sequence: current.sequence,
+        });
         raf.current = requestAnimationFrame(tick);
       };
       raf.current = requestAnimationFrame(tick);

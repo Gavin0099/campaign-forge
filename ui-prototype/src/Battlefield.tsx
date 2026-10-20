@@ -4,9 +4,19 @@ import { Playback } from "./combatPlayback";
 import { AnimatedActor } from "./AnimatedActor";
 import { CombatEffects } from "./CombatEffects";
 import { BattleLandmarks } from "./BattleLandmarks";
+import { rehearsalCast } from "./combatIdentity";
 
 type Point = { x: number; y: number };
-type Unit = (typeof unitSeeds)[number] & { acted?: boolean };
+type Unit = {
+  id: string;
+  name: string;
+  x: number;
+  y: number;
+  hp: number;
+  side: "ally" | "enemy";
+  mark: string;
+  acted?: boolean;
+};
 type Props = {
   units: Unit[];
   selected: string | null;
@@ -20,6 +30,7 @@ type Props = {
   playback: Playback | null;
   reduced: boolean;
   direction: "cartography" | "ember";
+  rehearsal?: boolean;
 };
 const terrain = (t: string) =>
   ({ ".": "平地", F: "林地", R: "道路", "~": "河道" })[t];
@@ -82,8 +93,8 @@ function Sprite({
   ghost = false,
   selected = false,
   playback = null,
-  idle = 0,
   reduced = false,
+  contact,
 }: {
   unit: Unit;
   x: number;
@@ -91,8 +102,8 @@ function Sprite({
   ghost?: boolean;
   selected?: boolean;
   playback?: Playback | null;
-  idle?: number;
   reduced?: boolean;
+  contact?: Point;
 }) {
   let visualX = x,
     visualY = y;
@@ -102,7 +113,11 @@ function Sprite({
     visualY = playback.from.y + (playback.to.y - playback.from.y) * travel;
   }
   const point = project(visualX + 0.5, visualY + 0.5);
-  const max = unitSeeds.find((seed) => seed.id === unit.id)!.hp;
+  const max =
+    (
+      unitSeeds.find((seed) => seed.id === unit.id) ||
+      rehearsalCast.find((seed) => seed.id === unit.id)
+    )?.hp || 1;
   const clip = useId().replace(/:/g, "");
   const column = spriteIndex[unit.id as keyof typeof spriteIndex];
   return (
@@ -116,8 +131,17 @@ function Sprite({
     >
       <ellipse className="unit-shadow" cy="2" rx="27" ry="11" />
       <ellipse className="faction-base" rx="28" ry="12" />
-      {unit.id === "shien" ? (
-        <AnimatedActor clip={playback} idle={idle} reduced={reduced} />
+      {unit.id === "shien" ||
+      unit.id === "demo-shien" ||
+      unit.id === "test-wizard" ||
+      /scout|guard/.test(unit.id) ? (
+        <AnimatedActor
+          id={unit.id}
+          clip={playback}
+          reduced={reduced}
+          contact={contact}
+          facing={unit.side === "enemy" ? -1 : 1}
+        />
       ) : (
         <svg
           x="-57"
@@ -140,27 +164,37 @@ function Sprite({
           />
         </svg>
       )}
-      {!ghost && (
-        <g className="unit-vitals" transform="translate(-25 14)">
-          <rect className="hp-track" width="50" height="5" rx="2" />
-          <rect
-            className="hp-fill"
-            width={(50 * unit.hp) / max}
-            height="5"
-            rx="2"
-          />
-          <text x="-7" y="6" textAnchor="end">
-            {unit.side === "ally" ? "◆" : "▲"}
-          </text>
-          <text x="57" y="6">
-            {unit.hp}
-          </text>
-          {unit.acted && (
-            <text className="spent-mark" x="25" y="22" textAnchor="middle">
-              已行動
+      {!ghost && (unit.id.startsWith("demo-") || unit.id === "test-wizard") ? (
+        <text className="rehearsal-name" y="24" textAnchor="middle">
+          {unit.id === "demo-shien"
+            ? "席恩 · 非魔法近戰"
+            : unit.id === "test-wizard"
+              ? "測試法師 · Wizard"
+              : unit.name}
+        </text>
+      ) : (
+        !ghost && (
+          <g className="unit-vitals" transform="translate(-25 14)">
+            <rect className="hp-track" width="50" height="5" rx="2" />
+            <rect
+              className="hp-fill"
+              width={(50 * unit.hp) / max}
+              height="5"
+              rx="2"
+            />
+            <text x="-7" y="6" textAnchor="end">
+              {unit.side === "ally" ? "◆" : "▲"}
             </text>
-          )}
-        </g>
+            <text x="57" y="6">
+              {unit.hp}
+            </text>
+            {unit.acted && (
+              <text className="spent-mark" x="25" y="22" textAnchor="middle">
+                已行動
+              </text>
+            )}
+          </g>
+        )
       )}
     </g>
   );
@@ -179,12 +213,19 @@ export function Battlefield({
   playback,
   reduced,
   direction,
+  rehearsal = false,
 }: Props) {
   const id = useId().replace(/:/g, "");
   const actor = units.find((u) => u.id === selected);
   const svgRef = useRef<SVGSVGElement>(null);
   const [camera, setCamera] = useState({ x: 610, y: 365, zoom: 1 });
-  const [idle, setIdle] = useState(0);
+  const savedCamera = useRef(camera);
+  useEffect(() => {
+    if (rehearsal) {
+      savedCamera.current = camera;
+      setCamera({ x: 520, y: 285, zoom: 1.35 });
+    } else setCamera(savedCamera.current);
+  }, [rehearsal]);
   const pan = useRef<{
     id: number;
     x: number;
@@ -193,14 +234,6 @@ export function Battlefield({
     cy: number;
     scale: number;
   } | null>(null);
-  useEffect(() => {
-    if (reduced) {
-      setIdle(0);
-      return;
-    }
-    const timer = window.setInterval(() => setIdle((n) => (n + 1) % 6), 180);
-    return () => clearInterval(timer);
-  }, [reduced]);
   const zoom = (delta: number) =>
     setCamera((c) => ({
       ...c,
@@ -216,14 +249,18 @@ export function Battlefield({
       y: Math.max(-100, Math.min(900, c.y + y / c.zoom)),
     }));
   const focus = () => {
-    const selectedUnit =
-      actor || units.find((u) => u.side === "ally" && u.hp > 0);
+    const selectedUnit = rehearsal
+      ? rehearsalCast.find(
+          (unit) => unit.id === (playback?.actor || "demo-shien"),
+        )
+      : actor || units.find((u) => u.side === "ally" && u.hp > 0);
     if (!selectedUnit) return;
     const point = project(selectedUnit.x + 0.5, selectedUnit.y + 0.5);
     setCamera({ x: point.x, y: point.y - 45, zoom: 1.65 });
   };
-  const drawingUnits = units
-    .filter((u) => u.hp > 0)
+  const visibleUnits: Unit[] = rehearsal ? rehearsalCast : units;
+  const drawingUnits = visibleUnits
+    .filter((u) => u.hp > 0 || playback?.target === u.id)
     .sort((a, b) => a.x + a.y - b.x - b.y);
   return (
     <section
@@ -231,6 +268,7 @@ export function Battlefield({
       aria-label="11 乘 9 戰場格線"
       data-direction={direction}
       data-playback={playback?.stage || "idle"}
+      data-rehearsal={rehearsal}
     >
       <div className="camera-tools" role="group" aria-label="戰場鏡頭">
         <button onClick={() => setCamera({ x: 610, y: 365, zoom: 1 })}>
@@ -427,12 +465,13 @@ export function Battlefield({
         <g className="board-grid">
           {coordinates.map(({ x, y, tile }) => {
             const cellKey = `${x},${y}`;
-            const occupant = units.find(
+            const occupant = visibleUnits.find(
               (u) => u.hp > 0 && u.x === x && u.y === y,
             );
             const move = moveCells.has(cellKey),
               skill = skillCells.has(cellKey);
             const actionable =
+              !rehearsal &&
               !playback &&
               (phase === "select"
                 ? occupant?.side === "ally" && !occupant.acted
@@ -492,11 +531,26 @@ export function Battlefield({
               y={unit.y}
               selected={unit.id === selected}
               playback={playback}
-              idle={idle}
               reduced={reduced}
+              contact={
+                playback?.kind === "physical" && playback.actor === unit.id
+                  ? (() => {
+                      const recipient = visibleUnits.find(
+                        (u) => u.id === playback.target,
+                      );
+                      if (!recipient) return undefined;
+                      const a = project(
+                          playback.to.x + 0.5,
+                          playback.to.y + 0.5,
+                        ),
+                        b = project(recipient.x + 0.5, recipient.y + 0.5);
+                      return { x: b.x - a.x - 10, y: b.y - a.y - 85 };
+                    })()
+                  : undefined
+              }
             />
           ))}
-          {actor && destination && !playback && (
+          {!rehearsal && actor && destination && !playback && (
             <Sprite unit={actor} {...destination} ghost />
           )}
         </g>
@@ -504,16 +558,20 @@ export function Battlefield({
           !reduced &&
           (() => {
             const origin = project(playback.to.x + 0.5, playback.to.y + 0.5);
-            const recipient = units.find((u) => u.id === playback.target);
-            const targetPoint = recipient
-              ? project(recipient.x + 0.5, recipient.y + 0.5)
-              : origin;
+            const targetPoints = (playback.targets || [playback.target]).map(
+              (target) => {
+                const recipient = visibleUnits.find((u) => u.id === target);
+                return recipient
+                  ? project(recipient.x + 0.5, recipient.y + 0.5)
+                  : origin;
+              },
+            );
             if (playback.stage === "move") return null;
             return (
               <CombatEffects
                 clip={playback}
                 source={origin}
-                target={targetPoint}
+                targets={targetPoints}
                 direction={direction}
               />
             );
@@ -541,7 +599,11 @@ export function Battlefield({
         </g>
       </svg>
       <div className="arena-caption">
-        <span>11 × 9 · 河道不可通行 · Alt＋拖曳平移</span>
+        <span>
+          {rehearsal
+            ? "演出排練 · 與渡口隊伍、傷害及回合隔離"
+            : "11 × 9 · 河道不可通行 · Alt＋拖曳平移"}
+        </span>
         <span>
           {destination ? "虛影為預覽 · 確認後執行" : "◆ 我方　▲ 敵方"}
         </span>

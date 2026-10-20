@@ -1,0 +1,48 @@
+{
+  "baseline_commit": "0300c85f32f50dd7f6cb0216152ddddb90e33ddf",
+  "new_asset": {
+    "file": "ui-prototype/public/art/test-caster-v4.png",
+    "sha256": "18819f6207d8c191bbf93ff96d99f843ab9f61fea06f2f7ed038c786d9029a0d",
+    "bytes": 2011454,
+    "size": [1024, 1536],
+    "mode": "RGBA",
+    "source": "built-in image_gen; original independent test wizard, not a story identity",
+    "original_tool_output": "exec-98efe7ae-61f2-4a5d-a74c-acef24faa9c3.png",
+    "original_tool_directory": "C:/Users/daish/.codex/generated_images/01a158de-56fc-7783-a2ad-61a6fb523243",
+    "prompt": "ui-prototype/docs/vd3/caster-prompt.txt",
+    "pixel_edits": false,
+    "runtime_use": "SVG fixed contour masks and joint transforms; body scale 0.09, same head enlarged 1.6 at neck pivot for approximately five-head tactical proportions; no pose-to-pose bitmap replacement",
+    "status": "visual proposal; Owner art acceptance outstanding"
+  },
+  "preserved_sources": [
+    {
+      "file": "ui-prototype/public/art/units-v2.png",
+      "sha256": "960d480660a58e1e72ced770d14d82a2390565da564383f2085f8e26687ef97d",
+      "size": [1983, 793],
+      "runtime_design_space": [2000, 800],
+      "pixel_edits": false,
+      "use": "Existing Shien and enemy contours, same pixels in all poses; original atlas dagger masked out, original fixed SVG shortsword geometry supplied by AnimatedActor.tsx"
+    },
+    {
+      "file": "ui-prototype/public/art/shien-actions-v3.png",
+      "sha256": "c0cb746a58f7f10bec15a56e17801241d251d67f3a70d273789e3b5093f40032",
+      "pixel_edits": false,
+      "use": "Historical 30-frame source preserved; no longer played by VD3 cutout renderer"
+    }
+  ],
+  "preserved_before": [
+    {
+      "file": "ui-prototype/screenshots/vd2/after/battle-preview-1280.png",
+      "sha256": "ee48b23d40b118caffff4bcd13367caf45481a9761c94c6961eeb2b2bfbf3468",
+      "viewport": [1280, 720]
+    },
+    {
+      "file": "ui-prototype/screenshots/vd2/after/battle-preview-1920.png",
+      "sha256": "9ef9d227f2aadd9c00901d8125b6678bf0d59ebe0337b62b0aca4cf360c60158",
+      "viewport": [1920, 1080]
+    }
+  ],
+  "audio": "Original local Web Audio oscillator/envelope synthesis in src/combatSound.ts; default off; no external sample, voice, music or commercial game asset",
+  "srd": "Referenced rules only, CC BY 4.0 attribution and changes in SRD-NOTICE.md and public/docs/vd3/SRD-NOTICE.html; not a license for original story or art",
+  "captures": "Actual browser frames and stage metadata in screenshots/vd3/capture-record.json and recording-*.json; GIF encoding uses actual frames, not generated battle animation"
+}

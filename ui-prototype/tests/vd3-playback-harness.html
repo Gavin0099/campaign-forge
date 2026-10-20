@@ -1,0 +1,82 @@
+<!doctype html><meta charset="utf-8" /><title>
+  VD3 actual React playback contract
+</title>
+<div id="fixture"></div>
+<button id="unmount">Unmount React</button><output id="callbacks">0:0</output
+><output id="rejected"></output>
+<script type="module">
+  import React from "react";
+  import { createRoot } from "react-dom/client";
+  import { useCombatPlayback } from "../src/combatPlayback.ts";
+  let impacts = 0,
+    done = 0;
+  const publish = () =>
+    (document.querySelector("#callbacks").textContent = `${impacts}:${done}`);
+  const valid = {
+    kind: "magicMissile",
+    actor: "test-wizard",
+    target: "demo-scout",
+    targets: ["demo-scout", "demo-scout", "demo-guard"],
+    from: { x: 1, y: 6 },
+    to: { x: 1, y: 6 },
+    committed: false,
+  };
+  function Fixture() {
+    const clock = useCombatPlayback();
+    const reject = (patch) =>
+      (document.querySelector("#rejected").textContent = String(
+        clock.start({ ...valid, ...patch }) === false,
+      ));
+    return React.createElement(
+      "div",
+      null,
+      React.createElement(
+        "button",
+        {
+          onClick: () =>
+            clock.start(
+              valid,
+              () => {
+                impacts++;
+                publish();
+              },
+              () => {
+                done++;
+                publish();
+              },
+            ),
+        },
+        clock.busy ? "Playing" : "Start",
+      ),
+      React.createElement(
+        "button",
+        { onClick: () => reject({ actor: "shien" }) },
+        "Shien cannot cast",
+      ),
+      React.createElement(
+        "button",
+        { onClick: () => reject({ committed: true }) },
+        "No committed test spell",
+      ),
+      React.createElement(
+        "button",
+        {
+          onClick: () =>
+            reject({
+              targets: ["shien", "demo-scout", "demo-guard"],
+              target: "shien",
+            }),
+        },
+        "No story targets",
+      ),
+      React.createElement(
+        "button",
+        { onClick: () => reject({ targets: ["demo-scout"] }) },
+        "Three darts required",
+      ),
+    );
+  }
+  const root = createRoot(document.querySelector("#fixture"));
+  root.render(React.createElement(Fixture));
+  document.querySelector("#unmount").onclick = () => root.unmount();
+</script>

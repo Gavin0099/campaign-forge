@@ -1,6 +1,6 @@
 # Campaign Forge UI Prototype
 
-> **最後更新**: 2026-10-20
+> **最後更新**: 2026-10-21
 > **Owner**: Gavin（需求與決策）；Codex（本輪執行）
 > **Freshness**: Sprint (7d)
 
@@ -9,6 +9,16 @@
 獨立的 React / TypeScript 本地 PC UI 展示。原始 README、PLAN、SLICES、DECISIONS、EXECUTION、候選 A 與比較文件已閱讀。A/B/C 未選案；A 只供展示，人物外觀與地圖均是提案。不得以 UI 展示取代 S4 授權。
 
 ## Slices
+
+### VD3：D&D Combat Identity & Animation Quality Gate
+
+Owner 已判 VD2 美術未通過，工程歷史保留。目標9.5小時／上限10小時，以實際投入計算。範圍：官方SRD能力參考、動畫管線比較、非魔法近戰與獨立測試法師的三枚Magic Missile、雙解析度實機錄影與狀態驗證；不定故事、職業與正式規則。實作與證據交付完成；工程功能通過，動畫重量感與商業美術品質尚未獲Owner核准。決策、來源、工時及未達標項目見 docs/vd3/。
+
+- VD3-01：官方SRD5.2.1七項候選能力與職業／條件／資源對照，保留CC BY4.0聲明與遊戲內來源頁；沒有把席恩改成法師。
+- VD3-02：製作動作前比較生成逐幀、固定2D部件與長期3D成本；採用固定部件／骨架錨點，原30幀PNG與全部原件保留。
+- VD3-03/04：非魔法近戰的準備／出手／接觸／hitstop／敵人實際後仰／恢復，以及獨立測試Wizard的三飛彈凝聚、單／多目標與同步命中。兩段不增正式規則。
+- VD3-05：22項實機檢查通過，近戰與法術各10次連播、真實React卸載、Impact一次更新、取消／切畫面／Reduced Motion、兩完整分支及缺席鍵盤流程；720p／1080p共四段實機錄製與同狀態比較，來源及媒體雜湊核對。保留紙片感、次動作、量產與整體畫風待審，沒有自行判美術通過。
+
 
 ### Visual Direction 2.0 & Combat Animation Sprint — 2026-10-20
 
@@ -64,7 +74,7 @@ Visual Sprint已知限制：平面沙盤／河岸方格感、材質重複、靜�
 
 ## Verification
 
-最新VD2：使用者已確認0fc109f修正版hooks重新信任與重新載入，該步驟不再待辦；平台原生事件仍無成功收據。下方「需重新信任」為歷史。當前UI功能／媒體驗證見docs/vd2/VERIFICATION.md與來源綁定report；VQ1的13項舊報告不能替代本輪。
+最新VD3：功能與實機證據見docs/vd3/VERIFICATION.md及其來源綁定report；VD2／VQ1報告僅保留歷史。使用者已確認0fc109f修正版hooks重新信任與重新載入，該步驟不再待辦；平台原生事件仍無成功收據。下方「需重新信任」為歷史。
 
 2026-10-20 最新平台確認：使用者已完成信任／重新載入，並確認四事件已信任／啟用、無錯誤；本機綁定核對一致，但尚無原生回呼收據。後續重驗發現 SessionEnd 曾達3.39秒，超過平台三秒限制；本輪改為一次 Git 身分查詢，單一 hook 程序內重用已驗證的 consumer root，保留每次路徑核對、完整 envelope／guard／writer 檢查，延後非本事件的 import。新增跨 root 偽造 envelope 拒絕測試及三個全新 session 的計時樣本。結果以 artifacts/governance-native-acceptance.json 為準；失敗原件保留為 governance-native-timeout-regression.json。此次程式修正改變 hook 定義雜湊，須重新檢閱信任修正版，再驗證平台實際執行與自然 SessionEnd／canonical writer；不是否定使用者已完成前一版本的信任。
 

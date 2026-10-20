@@ -7,9 +7,11 @@
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1",
-    "test:visual": "node tests/vd2-browser.mjs",
+    "test:visual": "node tests/vd3-browser.mjs",
     "test:visual:vq1": "node tests/visual-sprint.mjs",
-    "test:evidence": "node tests/verify-vd2.mjs",
+    "test:evidence": "node tests/verify-vd3.mjs",
+    "test:vd3": "node tests/vd3-browser.mjs",
+    "test:evidence:vd2": "node tests/verify-vd2.mjs",
     "test:vd2": "node tests/vd2-browser.mjs",
     "test:evidence:vq1": "node tests/verify-evidence.mjs"
   },

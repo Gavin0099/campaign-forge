@@ -1,0 +1,836 @@
+{
+  "started_at": "2026-10-20T16:07:26.308Z",
+  "baseline": "0300c85f32f50dd7f6cb0216152ddddb90e33ddf",
+  "browser": {
+    "sha256": "f76f0234efb271041dc84f9f38fb858e01859d5da6f775f5108668eb3ae80975",
+    "bytes": 4586648
+  },
+  "inputs": {
+    "ui-prototype/src/AnimatedActor.tsx": "58ec26a3d8da17b5ac5bc149ee541da483efc8ff66f14cb39933667b7159f58b",
+    "ui-prototype/src/Battlefield.tsx": "bb81e3de104e85e84905a1864245e2c0f191a11f7d3e407abb423e6950fc9916",
+    "ui-prototype/src/BattleLandmarks.tsx": "d06b8c3aa026c816532a316d529d91e4480170a28e20023640bbddbd9cf155c2",
+    "ui-prototype/src/combat.css": "b91498755e21f6b5c6d00fb5982f5e8348166aeba1a6b2ab18cc5efe19c6ef4c",
+    "ui-prototype/src/CombatEffects.tsx": "989fe2ff2ffe48b152829c89e5926ed7a7783926a5c12f8b5ebf798db3d425dd",
+    "ui-prototype/src/combatIdentity.ts": "20feab78665c6aac034dfb6a5bc4c653e3cbb88cdb104de7c25f871fd8024fc6",
+    "ui-prototype/src/combatPlayback.ts": "b2032daab22c7c79e7dea9e08be7e6c79a9ed66ef328e2098d5bf2b90a233220",
+    "ui-prototype/src/combatSound.ts": "7d1eb00854e3ac0ec20100ad7b02608b4be18b403573d1db44c2ffbf52acd10a",
+    "ui-prototype/src/data.ts": "c5ea580ff3c816e4ef8da4f9777ade3f94a94b306a61e31275ac3511a239c397",
+    "ui-prototype/src/main.tsx": "7cd105d4cf0e88636b038cf2a3da37ab2e4630a5815e99e6baa792a8489cf97a",
+    "ui-prototype/src/shienFrames.json": "e5d0fbf913fd9697509958bab33fb730fbbeb520f5dab57fdcc155c7c08058d4",
+    "ui-prototype/src/style.css": "c9844bf7b70ea74b6ad92dff6b69b0bffd571422a2ffbdabbf1fc6963ba4f639",
+    "ui-prototype/src/visual.css": "6435ba6dd298dfd0d33ba9c39c4da9f3e790d2b5d817c5e12221c41261c84c5d",
+    "ui-prototype/public/art/battlefield-v1.png": "56669110c7097f9d70ab941a19c9d2c7bffc28f068ec763a4638a8ad718a4210",
+    "ui-prototype/public/art/campaign-v1.png": "b7ea2ec49cfd93c5e400753addfb09bc46d3453ee5eff20b4105b36361047d53",
+    "ui-prototype/public/art/ferry-scene-v2-realistic-draft.png": "510588ee9f931f19d8480a6ec87704d888914f686f893bc021f35685616c6c05",
+    "ui-prototype/public/art/ferry-scene-v2.png": "2a659af48fc684af2fd8be86a88b80bfe42e1dc3a8a135bced13a366a32dd220",
+    "ui-prototype/public/art/landmarks-v3.png": "f7449e4dc713376eb958ee67a43ffb33cf3ec49bae51a9403f19f55395404d2b",
+    "ui-prototype/public/art/party-v1.png": "ecb21a0e82c549a4d38dd98b0812fa11c9ccdb57a7fdcebcaae3f3fa16002776",
+    "ui-prototype/public/art/party-v2-layout-draft.png": "6915102042cdba26a9e65998c821b8daf28570e133237978abffa40e220683fd",
+    "ui-prototype/public/art/party-v2.png": "8334b2b23adafe1a74b0d7802fddae1b1f649867c858ef600704f74e070e5f70",
+    "ui-prototype/public/art/props-v2.png": "9bc881e7bda11e472206eb7a46721964686ed66193f7b5494bd2c1f484293af0",
+    "ui-prototype/public/art/shien-actions-v3.png": "c0cb746a58f7f10bec15a56e17801241d251d67f3a70d273789e3b5093f40032",
+    "ui-prototype/public/art/terrain-v2.png": "c1aa5dd10c2476fa8fbcb3059842d11d92066bebb3f504ac2080d36fcf18ceaf",
+    "ui-prototype/public/art/test-caster-v4.png": "18819f6207d8c191bbf93ff96d99f843ab9f61fea06f2f7ed038c786d9029a0d",
+    "ui-prototype/public/art/units-v1.png": "19c5e58ead0a41afb2a57f7ae2c8af1a4c50fa7ce6ba207a06e6af9e8d3f2843",
+    "ui-prototype/public/art/units-v2-layout-draft.png": "15124b7173433e0b7f80bad2eb32278eba97c2b08c9879a4a30dedd19b0c44d2",
+    "ui-prototype/public/art/units-v2.png": "960d480660a58e1e72ced770d14d82a2390565da564383f2085f8e26687ef97d",
+    "ui-prototype/public/docs/vd3/SRD-NOTICE.html": "1ab65a2b48bee50322bbb7b6876ea810ecea83e1b5a39bdc45053510add294ee",
+    "ui-prototype/tests/encode-recordings.py": "6e43558ff539aaec452a2436fe699cb116b7e19a1b32b9569dd4b630debed3f5",
+    "ui-prototype/tests/encode-vd3.py": "080b2ce53304fc0a2e30dce4d2ca37aaee4774b7028284be70611f844e0c63b2",
+    "ui-prototype/tests/inspect-animation.py": "bcf10b2a7bac0b212e691e95c18ab35196307b47ee95ae7f600904a82cabb2c5",
+    "ui-prototype/tests/playback-harness.html": "cbddce8936187a23be524672fad4c3879b042c4ed2598a125c13e33612f4ba71",
+    "ui-prototype/tests/README.md": "888ded58009e40bf6979441017d0da055157a9665133adf03894322981464719",
+    "ui-prototype/tests/vd2-browser.mjs": "655586885b7ab1838ff73c7f03b623c7c971b8e13c40cdba908389a30f70d880",
+    "ui-prototype/tests/vd3-browser.mjs": "fc0b86ba754b18023d07e2967a239495fa9938b7f4ff927659227d1a793909e1",
+    "ui-prototype/tests/vd3-playback-harness.html": "397a6fd169a58d928991a4cc4317f606e31b5c2ce9f53b761faea79b97a9b423",
+    "ui-prototype/tests/verify-art.py": "48c44e042572d759c5ee2635fdf51fc6ea5e8d5e0ad53d5d4f6bfdac4e868b33",
+    "ui-prototype/tests/verify-evidence.mjs": "1daba0a850e58e9c677c3287db98499d79f7a7965fb09893ed884219963ae027",
+    "ui-prototype/tests/verify-governance.py": "dd4dbadfb62b2eae7cc745932b8329b67a892a72ea9273199c85226d74981660",
+    "ui-prototype/tests/verify-vd2.mjs": "c580110750e68a2fada2e3ccd06147f326e4ab1f263f8b1511e59fd32d5045a8",
+    "ui-prototype/tests/verify-vd3.mjs": "679ca2da278d9ef36dcbf2cf28670e010ba0d586aa6ea6a7a545bb3414f10073",
+    "ui-prototype/tests/visual-sprint.mjs": "8b8ca3681f00b45e66dc216c64bcbf9c36f91c563fad4916d118ab971dabf2a0",
+    "ui-prototype/package.json": "f7774c26b25295b3e127ce2290cf6c4f6116928eb99e59b6b3209e43713ff98a",
+    "ui-prototype/package-lock.json": "403d0966ac1504e643402352e5db5d95464c8ba890b25a10a2cc19a1f2b5e4cb"
+  },
+  "checks": [
+    {
+      "name": "geometry-camera-1280",
+      "pass": true,
+      "detail": {
+        "tiles": 99,
+        "fit": "60 65 1100 600",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        }
+      }
+    },
+    {
+      "name": "live-keyposes-1280",
+      "pass": true,
+      "detail": "Fixed cutout actors, three darts, two enemies and actual game screenshots"
+    },
+    {
+      "name": "geometry-camera-1920",
+      "pass": true,
+      "detail": {
+        "tiles": 99,
+        "fit": "60 65 1100 600",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        }
+      }
+    },
+    {
+      "name": "live-keyposes-1920",
+      "pass": true,
+      "detail": "Fixed cutout actors, three darts, two enemies and actual game screenshots"
+    },
+    {
+      "name": "committed-impact-single-update",
+      "pass": true,
+      "detail": {
+        "first_state_change": {
+          "at": 1699.899999988079,
+          "stage": "impact",
+          "x": "1",
+          "y": "4",
+          "hp": "3 列 4 行，平地，追兵，生命 3，技能範圍",
+          "actions": "護送居民抵達北岸出口已確認行動 1 次 · 完成一次行動後可結束展示結束回合確認護送抵達出口",
+          "feet": "fixed"
+        },
+        "stages": [
+          "move",
+          "windup",
+          "release",
+          "contact",
+          "impact",
+          "reaction",
+          "recovery",
+          "idle"
+        ]
+      }
+    },
+    {
+      "name": "residents-full-flow",
+      "pass": true,
+      "detail": "Choice, preview, action, modal focus/Esc, result and campaign consequence"
+    },
+    {
+      "name": "grain-absent-keyboard-flow",
+      "pass": true,
+      "detail": "Lida-only deployment, real Tab/Enter/Space and different campaign consequence"
+    },
+    {
+      "name": "cancel-before-after-impact",
+      "pass": true,
+      "detail": "No early mutation; applied effect remains once; no stale confirm or late callback"
+    },
+    {
+      "name": "twenty-consecutive-replays",
+      "pass": true,
+      "detail": [
+        {
+          "kind": "席恩・近戰攻防",
+          "repeat": 1,
+          "frames": 111,
+          "ms": 1840,
+          "stages": [
+            "windup",
+            "release",
+            "contact",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 1,
+          "raf_gap_p50_ms": 16.699999999999818,
+          "raf_gap_p95_ms": 16.800000000000182,
+          "impact_max_contact_gap_px": 1.4310868773849053
+        },
+        {
+          "kind": "席恩・近戰攻防",
+          "repeat": 2,
+          "frames": 111,
+          "ms": 1846,
+          "stages": [
+            "windup",
+            "release",
+            "contact",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 1,
+          "raf_gap_p50_ms": 16.699999999999818,
+          "raf_gap_p95_ms": 16.800000000000182,
+          "impact_max_contact_gap_px": 1.4310868773849053
+        },
+        {
+          "kind": "席恩・近戰攻防",
+          "repeat": 3,
+          "frames": 112,
+          "ms": 1854,
+          "stages": [
+            "windup",
+            "release",
+            "contact",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 0.999,
+          "raf_gap_p50_ms": 16.699999999999818,
+          "raf_gap_p95_ms": 16.800000000000182,
+          "impact_max_contact_gap_px": 1.4310868773849053
+        },
+        {
+          "kind": "席恩・近戰攻防",
+          "repeat": 4,
+          "frames": 112,
+          "ms": 1852,
+          "stages": [
+            "windup",
+            "move",
+            "release",
+            "contact",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 1,
+          "raf_gap_p50_ms": 16.699999999999818,
+          "raf_gap_p95_ms": 16.800000000000182,
+          "impact_max_contact_gap_px": 1.4310868773849053
+        },
+        {
+          "kind": "席恩・近戰攻防",
+          "repeat": 5,
+          "frames": 111,
+          "ms": 1850,
+          "stages": [
+            "windup",
+            "release",
+            "contact",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 1,
+          "raf_gap_p50_ms": 16.69999999999891,
+          "raf_gap_p95_ms": 16.80000000000109,
+          "impact_max_contact_gap_px": 1.4310868773849053
+        },
+        {
+          "kind": "席恩・近戰攻防",
+          "repeat": 6,
+          "frames": 112,
+          "ms": 1855,
+          "stages": [
+            "windup",
+            "release",
+            "contact",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 0.999,
+          "raf_gap_p50_ms": 16.69999999999891,
+          "raf_gap_p95_ms": 16.799999999999272,
+          "impact_max_contact_gap_px": 1.4310868773849053
+        },
+        {
+          "kind": "席恩・近戰攻防",
+          "repeat": 7,
+          "frames": 111,
+          "ms": 1842,
+          "stages": [
+            "windup",
+            "release",
+            "contact",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 1,
+          "raf_gap_p50_ms": 16.69999999999891,
+          "raf_gap_p95_ms": 16.80000000000109,
+          "impact_max_contact_gap_px": 1.4310868773849053
+        },
+        {
+          "kind": "席恩・近戰攻防",
+          "repeat": 8,
+          "frames": 111,
+          "ms": 1840,
+          "stages": [
+            "windup",
+            "release",
+            "contact",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 1,
+          "raf_gap_p50_ms": 16.700000000000728,
+          "raf_gap_p95_ms": 16.799999999999272,
+          "impact_max_contact_gap_px": 1.4310868773849053
+        },
+        {
+          "kind": "席恩・近戰攻防",
+          "repeat": 9,
+          "frames": 111,
+          "ms": 1850,
+          "stages": [
+            "windup",
+            "release",
+            "contact",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 1,
+          "raf_gap_p50_ms": 16.700000000000728,
+          "raf_gap_p95_ms": 16.799999999999272,
+          "impact_max_contact_gap_px": 1.4310868773849053
+        },
+        {
+          "kind": "席恩・近戰攻防",
+          "repeat": 10,
+          "frames": 111,
+          "ms": 1846,
+          "stages": [
+            "windup",
+            "release",
+            "contact",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 1,
+          "raf_gap_p50_ms": 16.700000000000728,
+          "raf_gap_p95_ms": 16.799999999999272,
+          "impact_max_contact_gap_px": 1.4310868773849053
+        },
+        {
+          "kind": "法師・Magic Missile",
+          "repeat": 1,
+          "frames": 180,
+          "ms": 2988,
+          "stages": [
+            "windup",
+            "release",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 0.999,
+          "raf_gap_p50_ms": 16.700000000000728,
+          "raf_gap_p95_ms": 16.799999999999272,
+          "impact_max_contact_gap_px": null
+        },
+        {
+          "kind": "法師・Magic Missile",
+          "repeat": 2,
+          "frames": 179,
+          "ms": 2977,
+          "stages": [
+            "windup",
+            "release",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 1,
+          "raf_gap_p50_ms": 16.700000000000728,
+          "raf_gap_p95_ms": 16.799999999999272,
+          "impact_max_contact_gap_px": null
+        },
+        {
+          "kind": "法師・Magic Missile",
+          "repeat": 3,
+          "frames": 179,
+          "ms": 2981,
+          "stages": [
+            "windup",
+            "release",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 1,
+          "raf_gap_p50_ms": 16.700000000000728,
+          "raf_gap_p95_ms": 16.80000000000291,
+          "impact_max_contact_gap_px": null
+        },
+        {
+          "kind": "法師・Magic Missile",
+          "repeat": 4,
+          "frames": 180,
+          "ms": 2989,
+          "stages": [
+            "windup",
+            "release",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 0.999,
+          "raf_gap_p50_ms": 16.700000000000728,
+          "raf_gap_p95_ms": 16.80000000000291,
+          "impact_max_contact_gap_px": null
+        },
+        {
+          "kind": "法師・Magic Missile",
+          "repeat": 5,
+          "frames": 179,
+          "ms": 2976,
+          "stages": [
+            "windup",
+            "release",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 1,
+          "raf_gap_p50_ms": 16.69999999999709,
+          "raf_gap_p95_ms": 16.80000000000291,
+          "impact_max_contact_gap_px": null
+        },
+        {
+          "kind": "法師・Magic Missile",
+          "repeat": 6,
+          "frames": 179,
+          "ms": 2976,
+          "stages": [
+            "windup",
+            "release",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 1,
+          "raf_gap_p50_ms": 16.69999999999709,
+          "raf_gap_p95_ms": 16.80000000000291,
+          "impact_max_contact_gap_px": null
+        },
+        {
+          "kind": "法師・Magic Missile",
+          "repeat": 7,
+          "frames": 179,
+          "ms": 2976,
+          "stages": [
+            "windup",
+            "release",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 1,
+          "raf_gap_p50_ms": 16.69999999999709,
+          "raf_gap_p95_ms": 16.80000000000291,
+          "impact_max_contact_gap_px": null
+        },
+        {
+          "kind": "法師・Magic Missile",
+          "repeat": 8,
+          "frames": 180,
+          "ms": 2988,
+          "stages": [
+            "windup",
+            "release",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 0.999,
+          "raf_gap_p50_ms": 16.69999999999709,
+          "raf_gap_p95_ms": 16.80000000000291,
+          "impact_max_contact_gap_px": null
+        },
+        {
+          "kind": "法師・Magic Missile",
+          "repeat": 9,
+          "frames": 179,
+          "ms": 2980,
+          "stages": [
+            "windup",
+            "release",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 1,
+          "raf_gap_p50_ms": 16.69999999999709,
+          "raf_gap_p95_ms": 16.80000000000291,
+          "impact_max_contact_gap_px": null
+        },
+        {
+          "kind": "法師・Magic Missile",
+          "repeat": 10,
+          "frames": 179,
+          "ms": 2981,
+          "stages": [
+            "windup",
+            "release",
+            "impact",
+            "reaction",
+            "recovery",
+            "idle"
+          ],
+          "peak_recoil": 1,
+          "raf_gap_p50_ms": 16.69999999999709,
+          "raf_gap_p95_ms": 16.80000000000291,
+          "impact_max_contact_gap_px": null
+        }
+      ]
+    },
+    {
+      "name": "rehearsal-story-isolation",
+      "pass": true,
+      "detail": "Ten melee and ten spell replays leave original HP/positions/actions/turn untouched; rigs restore, effects clear, rehearsal focus and original camera restore"
+    },
+    {
+      "name": "missile-allocation-simultaneous",
+      "pass": true,
+      "detail": "Three independent selectors support 3:0 or 2:1; both targeted rigs react from the same Impact clock"
+    },
+    {
+      "name": "audio-actual-nodes-cancel",
+      "pass": true,
+      "detail": {
+        "starts": 3,
+        "stops": 6,
+        "active": 0,
+        "note": "Real Web Audio nodes instrumented; subjective listening not verified; GIF is silent"
+      }
+    },
+    {
+      "name": "screen-navigation-cleanup",
+      "pass": true,
+      "detail": "Settings navigation cancels rehearsal RAF/audio without late effect"
+    },
+    {
+      "name": "committed-navigation-before-after-impact",
+      "pass": true,
+      "detail": "Applied once and preview cleared at either boundary"
+    },
+    {
+      "name": "reduced-motion-and-mid-clip-change",
+      "pass": true,
+      "detail": "Accepted action updates once; no prolonged rig/VFX motion, including dynamic preference switch"
+    },
+    {
+      "name": "large-text-720",
+      "pass": true,
+      "detail": "18px selectors and accessible scroll; full flow preserved with enlarged text and no horizontal overflow"
+    },
+    {
+      "name": "class-and-showcase-boundaries",
+      "pass": true,
+      "detail": "Actual hook rejects Shien casting, committed showcase spells, story targets and non-three-dart casts"
+    },
+    {
+      "name": "real-react-unmount",
+      "pass": true,
+      "detail": "Unmounted the actual hook during casting; zero Impact/Done callbacks afterwards"
+    },
+    {
+      "name": "information-and-dialogue-history",
+      "pass": true,
+      "detail": "Information/Esc and dialogue history preserved"
+    },
+    {
+      "name": "four-live-recordings",
+      "pass": true,
+      "detail": [
+        {
+          "kind": "melee",
+          "width": 1280,
+          "frames": 121,
+          "seconds": 2.4729819297790527
+        },
+        {
+          "kind": "missile",
+          "width": 1280,
+          "frames": 193,
+          "seconds": 3.6829190254211426
+        },
+        {
+          "kind": "melee",
+          "width": 1920,
+          "frames": 119,
+          "seconds": 2.4651451110839844
+        },
+        {
+          "kind": "missile",
+          "width": 1920,
+          "frames": 188,
+          "seconds": 3.6335768699645996
+        }
+      ]
+    },
+    {
+      "name": "in-app-srd-attribution",
+      "pass": true,
+      "detail": "Local notice available from rehearsal; SRD license distinguished from original story"
+    },
+    {
+      "name": "comparison-viewer",
+      "pass": true,
+      "detail": "Both resolution selectors load preserved Before, current After, four live GIFs and keyposes"
+    }
+  ],
+  "captures": [
+    {
+      "file": "battle-idle-1280.png",
+      "sha256": "e7b340a03ac3e0bc14f3f4b971a334f32673f0687118c46965d194cf98d9d2b8",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "stage_before": "idle",
+      "stage_after": "idle"
+    },
+    {
+      "file": "battle-preview-1280.png",
+      "sha256": "dfd924b741d7dbd3691600ecab358f72177a69a275cf787b1d088b316ce0a9b5",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "stage_before": "idle",
+      "stage_after": "idle"
+    },
+    {
+      "file": "rehearsal-idle-1280.png",
+      "sha256": "7eb783beb2b5518ca3eff5ae0f21ef3e9bf0d1bed4a3ba9dc55163e5b46cdfd5",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "stage_before": "idle",
+      "stage_after": "idle"
+    },
+    {
+      "file": "melee-anticipation-1280.png",
+      "sha256": "a4557343cb0220fe94c08bc603af982ce69636e4dbffa109d4ddb5756caf40b2",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "stage_before": "windup",
+      "stage_after": "windup"
+    },
+    {
+      "file": "melee-contact-1280.png",
+      "sha256": "bb4fb1d6e9dd119dfa256296c7324545f2a87a0eb9dacd47832948a8b747e370",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "stage_before": "impact",
+      "stage_after": "reaction"
+    },
+    {
+      "file": "melee-reaction-1280.png",
+      "sha256": "62bd16acd4bf6918da7676ec3a90fbde4c4651c251357318b0d13dc2a22ad927",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "stage_before": "reaction",
+      "stage_after": "recovery"
+    },
+    {
+      "file": "missile-gather-1280.png",
+      "sha256": "1ec2b172fdb32f1dbd993ac1d51d518072bcbe05a1c0d59114b56e64c97fd7d4",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "stage_before": "windup",
+      "stage_after": "windup"
+    },
+    {
+      "file": "missile-flight-1280.png",
+      "sha256": "a790f532b2d285555a0d55ea370d5ba8913986e00179732c0d12cee9d2c95fed",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "stage_before": "release",
+      "stage_after": "release"
+    },
+    {
+      "file": "missile-hit-1280.png",
+      "sha256": "f565bc97bca0a180bfedab492ed37a351b031640a68d46046eaf1a16f7d43d7c",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "stage_before": "reaction",
+      "stage_after": "recovery"
+    },
+    {
+      "file": "battle-idle-1920.png",
+      "sha256": "1a2b870b0c8b11e7717eee358a5393c6070039ad38e6a61e0c6253f10542c1ea",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "stage_before": "idle",
+      "stage_after": "idle"
+    },
+    {
+      "file": "battle-preview-1920.png",
+      "sha256": "27bfcf386a4ffa5566d09d6df7fd67558066e048ca9d59c216a13e49758dbeef",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "stage_before": "idle",
+      "stage_after": "idle"
+    },
+    {
+      "file": "rehearsal-idle-1920.png",
+      "sha256": "1e3ad41c884ba17ef75e5849c2ba6930de43c4ed23d88d65fca4a87e2b88c7c2",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "stage_before": "idle",
+      "stage_after": "idle"
+    },
+    {
+      "file": "melee-anticipation-1920.png",
+      "sha256": "32fb8b8ba950766b4bd98e31399a2c60262444d0365902749174adce8e3bfe62",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "stage_before": "windup",
+      "stage_after": "reaction"
+    },
+    {
+      "file": "melee-contact-1920.png",
+      "sha256": "a6301ec8cbab40319d00439c956817cc4f12c7de2cdabc2eb0cdd9a801778c9a",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "stage_before": "impact",
+      "stage_after": "recovery"
+    },
+    {
+      "file": "melee-reaction-1920.png",
+      "sha256": "8765182a038103092ea92a691f688ad5ae30fd8acc43168731fa23a59c811265",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "stage_before": "reaction",
+      "stage_after": "recovery"
+    },
+    {
+      "file": "missile-gather-1920.png",
+      "sha256": "b00fcabc6064f5bbf0ee8790b010dfb6b28b2270be5db7d4a7c33d18dfe35b4d",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "stage_before": "windup",
+      "stage_after": "release"
+    },
+    {
+      "file": "missile-flight-1920.png",
+      "sha256": "f4d14739cb2cd9e203a29e26e8416d03b1677a5553ad39f290257950c624a3db",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "stage_before": "release",
+      "stage_after": "reaction"
+    },
+    {
+      "file": "missile-hit-1920.png",
+      "sha256": "e6e2656eda7a7b138f510cd0e3c31505273f8666f13bf81bff7cb24e27cb789c",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "stage_before": "reaction",
+      "stage_after": "recovery"
+    },
+    {
+      "file": "reduced-motion-1280.png",
+      "sha256": "cb3758f942497a5aaae214d0795f77d0c35f35242f0e1780ee5bd5a3f99e10eb",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "stage_before": "idle",
+      "stage_after": "idle"
+    },
+    {
+      "file": "large-text-rehearsal-1280.png",
+      "sha256": "540c8921faf510fc1d832b7c288bb23b38db78e9aa3e00000855e80d16c98b90",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "stage_before": "idle",
+      "stage_after": "idle"
+    }
+  ],
+  "media": [
+    {
+      "kind": "melee",
+      "width": 1280,
+      "frames": 121,
+      "seconds": 2.4729819297790527
+    },
+    {
+      "kind": "missile",
+      "width": 1280,
+      "frames": 193,
+      "seconds": 3.6829190254211426
+    },
+    {
+      "kind": "melee",
+      "width": 1920,
+      "frames": 119,
+      "seconds": 2.4651451110839844
+    },
+    {
+      "kind": "missile",
+      "width": 1920,
+      "frames": 188,
+      "seconds": 3.6335768699645996
+    }
+  ],
+  "errors": [],
+  "file_write_retries": [],
+  "art_acceptance": "Owner review required; engineering tests do not certify art",
+  "pass": true,
+  "finished_at": "2026-10-20T16:09:56.339Z"
+}

@@ -5,6 +5,12 @@ import "./style.css";
 import "./visual.css";
 import { Battlefield } from "./Battlefield";
 import { ClipKind, useCombatPlayback } from "./combatPlayback";
+import {
+  rehearsalCast,
+  demonstrationProfiles,
+  magicMissileReference,
+} from "./combatIdentity";
+import { useCombatSound } from "./combatSound";
 import "./combat.css";
 
 function Portrait({ id, large = false }: { id: string; large?: boolean }) {
@@ -77,11 +83,17 @@ function App() {
   const finishRef = useRef<HTMLButtonElement>(null);
   const finishWasOpen = useRef(false);
   const motion = useCombatPlayback();
+  const sound = useCombatSound(motion.playback, motion.reduced);
   const [artDirection, setArtDirection] = useState<"cartography" | "ember">(
     "cartography",
   );
   const [informationOpen, setInformationOpen] = useState(false);
   const [showcaseOpen, setShowcaseOpen] = useState(false);
+  const [missileTargets, setMissileTargets] = useState([
+    "demo-scout",
+    "demo-scout",
+    "demo-guard",
+  ]);
   useEffect(() => {
     if (screen !== "battle") motion.cancel();
   }, [screen, motion.cancel]);
@@ -262,6 +274,7 @@ function App() {
     setScreen("battle");
   }
   function pickCell(p: Point) {
+    if (showcaseOpen) return;
     if (motion.busy) return;
     const occupant = units.find((u) => u.hp > 0 && same(u, p));
     if (phase === "select") {
@@ -333,10 +346,12 @@ function App() {
     );
   }
   function showcase(kind: ClipKind) {
-    const performer =
-      units.find((u) => u.id === "shien" && u.hp > 0) ||
-      units.find((u) => u.side === "ally" && u.hp > 0);
-    const recipient = units.find((u) => u.side === "enemy" && u.hp > 0);
+    const performer = rehearsalCast.find(
+      (u) => u.id === (kind === "physical" ? "demo-shien" : "test-wizard"),
+    );
+    const recipient = rehearsalCast.find(
+      (u) => u.id === (kind === "physical" ? "demo-scout" : missileTargets[0]),
+    );
     if (!performer || !recipient) return;
     const point = { x: performer.x, y: performer.y };
     if (
@@ -344,15 +359,15 @@ function App() {
         {
           kind,
           actor: performer.id,
-          target:
-            kind === "ward" || kind === "hit" ? performer.id : recipient.id,
+          target: recipient.id,
+          targets: kind === "magicMissile" ? [...missileTargets] : undefined,
           from: point,
           to: point,
           committed: false,
         },
         () => {
           setLog((current) => [
-            `${kind === "physical" ? "揮擊" : kind === "arcane" ? "裂潮・光矢" : kind === "ward" ? "封蠟・護印" : "受擊"}演出展示：不變更生命、位置、回合或正式技能。`,
+            `${kind === "physical" ? "席恩非魔法近戰命中" : "測試法師的三枚 Magic Missile 同時命中"}；排練不計入生命、行動或回合。`,
             ...current,
           ]);
         },
@@ -812,7 +827,16 @@ function App() {
             </span>
             <button
               aria-expanded={showcaseOpen}
-              onClick={() => setShowcaseOpen((open) => !open)}
+              onClick={() => {
+                motion.cancel();
+                setSelected(null);
+                setDestination(null);
+                setTarget(null);
+                setPhase("select");
+                setFeedback(null);
+                setInformationOpen(false);
+                setShowcaseOpen((open) => !open);
+              }}
             >
               演出展示
             </button>
@@ -837,29 +861,67 @@ function App() {
               playback={motion.playback}
               reduced={motion.reduced}
               direction={artDirection}
+              rehearsal={showcaseOpen}
             />
             {showcaseOpen && (
               <section className="showcase-tray" aria-label="非正式演出展示">
-                <p className="eyebrow">演出展示</p>
-                <p>不計傷害、不變更回合</p>
+                <p className="eyebrow">動作排練</p>
+                <p>獨立陣容 · 不計傷害與回合</p>
                 <button
                   disabled={motion.busy}
                   onClick={() => showcase("physical")}
                 >
-                  物理攻擊
+                  席恩・近戰攻防
                 </button>
                 <button
                   disabled={motion.busy}
-                  onClick={() => showcase("arcane")}
+                  onClick={() => showcase("magicMissile")}
                 >
-                  裂潮・光矢
+                  法師・Magic Missile
                 </button>
-                <button disabled={motion.busy} onClick={() => showcase("ward")}>
-                  封蠟・護印
+                <p className="spell-identity">
+                  {demonstrationProfiles["test-wizard"].classReference} ·{" "}
+                  {magicMissileReference.spellLevel}級塑能 ·{" "}
+                  {magicMissileReference.components.join("／")}
+                  <br />
+                  三枚力場飛彈，同時命中
+                </p>
+                <fieldset disabled={motion.busy}>
+                  <legend>飛彈目標</legend>
+                  {missileTargets.map((target, index) => (
+                    <label key={index}>
+                      第 {index + 1} 枚
+                      <select
+                        aria-label={`第 ${index + 1} 枚飛彈目標`}
+                        value={target}
+                        onChange={(e) =>
+                          setMissileTargets((current) =>
+                            current.map((id, i) =>
+                              i === index ? e.target.value : id,
+                            ),
+                          )
+                        }
+                      >
+                        <option value="demo-scout">目標 A</option>
+                        <option value="demo-guard">目標 B</option>
+                      </select>
+                    </label>
+                  ))}
+                </fieldset>
+                <button aria-pressed={sound.enabled} onClick={sound.toggle}>
+                  音效：{sound.enabled ? "開" : "關"}
                 </button>
-                <button disabled={motion.busy} onClick={() => showcase("hit")}>
-                  受擊示範
-                </button>
+                <small role="status">
+                  {sound.error || "席恩僅展示近戰；法師僅用於排練。"}
+                </small>
+                <a
+                  className="srd-credit"
+                  href="/docs/vd3/SRD-NOTICE.html"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  SRD 5.2.1 來源與授權
+                </a>
               </section>
             )}
             {informationOpen && (
@@ -930,24 +992,30 @@ function App() {
           <div className="command-dock" aria-busy={motion.busy}>
             <div className="command-context">
               <strong>
-                {actor ? `${actor.name} · 生命 ${actor.hp}` : "北岸渡口"}
+                {showcaseOpen
+                  ? "演出排練"
+                  : actor
+                    ? `${actor.name} · 生命 ${actor.hp}`
+                    : "北岸渡口"}
               </strong>
               <span>
                 {motion.playback
-                  ? `${motion.playback.committed ? "掩護推進" : "演出展示"} · ${{ move: "移動", windup: "蓄力", release: "出手", impact: "命中", recovery: "恢復" }[motion.playback.stage]}`
-                  : enemy
-                    ? `▲ ${enemy.name}　生命 ${enemy.hp} → ${Math.max(0, enemy.hp - 3)}　／ 固定效果 −3`
-                    : phase === "move"
-                      ? "選取青色斜紋格移動"
-                      : phase === "skill"
-                        ? "選取技能範圍內的敵人"
-                        : "點選 ◆ 我方單位開始"}
+                  ? `${motion.playback.committed ? "掩護推進" : motion.playback.kind === "physical" ? "非魔法近戰" : "Magic Missile"} · ${{ move: "移動", windup: "準備", release: "出手", contact: "武器接觸", impact: "命中停頓", reaction: "目標受擊", recovery: "恢復" }[motion.playback.stage]}`
+                  : showcaseOpen
+                    ? "選擇近戰或法術開始 · Esc 停止演出／離開排練"
+                    : enemy
+                      ? `▲ ${enemy.name}　生命 ${enemy.hp} → ${Math.max(0, enemy.hp - 3)}　／ 固定效果 −3`
+                      : phase === "move"
+                        ? "選取青色斜紋格移動"
+                        : phase === "skill"
+                          ? "選取技能範圍內的敵人"
+                          : "點選 ◆ 我方單位開始"}
               </span>
             </div>
             <div className="button-stack command-buttons">
               <button
                 className="primary"
-                disabled={phase !== "confirm" || motion.busy}
+                disabled={showcaseOpen || phase !== "confirm" || motion.busy}
                 onClick={confirmAction}
               >
                 確認移動與技能
@@ -974,7 +1042,7 @@ function App() {
               <p>已確認行動 {actions} 次 · 完成一次行動後可結束展示</p>
             </div>
             <button
-              disabled={phase !== "select" || motion.busy}
+              disabled={showcaseOpen || phase !== "select" || motion.busy}
               onClick={endTurn}
             >
               結束回合
@@ -982,7 +1050,7 @@ function App() {
             <button
               ref={finishRef}
               className="finish"
-              disabled={actions === 0 || motion.busy}
+              disabled={showcaseOpen || actions === 0 || motion.busy}
               onClick={() => setConfirmFinish(true)}
             >
               確認護送抵達出口

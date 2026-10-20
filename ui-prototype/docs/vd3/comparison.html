@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campaign Forge · VD3 動畫審查</title>
+  <style>
+    body {
+      margin: 0;
+      background: #172526;
+      color: #eee3c9;
+      font:
+        16px/1.7 system-ui,
+        "Microsoft JhengHei",
+        sans-serif;
+    }
+    main {
+      max-width: 1400px;
+      margin: auto;
+      padding: 24px;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    h2 {
+      font-size: 21px;
+      margin-top: 32px;
+    }
+    a {
+      color: #b5e0dc;
+    }
+    select {
+      font: inherit;
+      background: #293a3b;
+      color: inherit;
+      padding: 8px;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #142124;
+    }
+    .pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    figure {
+      margin: 12px 0;
+    }
+    figcaption {
+      margin-bottom: 8px;
+    }
+    .poses {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .status {
+      border-left: 3px solid #bd9b5c;
+      padding: 10px 16px;
+      background: #223335;
+    }
+    p {
+      max-width: 85ch;
+    }
+    @media (max-width: 760px) {
+      .pair,
+      .poses {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <main>
+    <h1>VD3 · 近戰與 Magic Missile</h1>
+    <p class="status">
+      VD2：Owner
+      美術驗收未通過。VD3：工程驗證與美術判斷分開；法師已調整為約五頭身，固定部件仍有紙片感，商業展示與動畫重量感尚未核准。這裡是實機證據，不是生成的戰鬥影片。
+    </p>
+    <label
+      >實際擷取解析度
+      <select id="size">
+        <option value="1280">1280 × 720</option>
+        <option value="1920">1920 × 1080</option>
+      </select></label
+    >
+    <h2>相同遊戲狀態比較</h2>
+    <p>
+      居民分支，席恩 1,6 → 預覽 1,4，目標 2,3，HP 6；兩張皆為 Fit 鏡頭。Before
+      是 main@0300c85 已保存的 VD2 實機
+      PNG，未覆寫。排練改用隔離陣容與聚焦鏡頭，因此下方演出不宣稱與舊 GIF
+      狀態相同。
+    </p>
+    <div class="pair">
+      <figure>
+        <figcaption>VD2 · Before</figcaption>
+        <img id="before" alt="VD2 相同預覽狀態" />
+      </figure>
+      <figure>
+        <figcaption>VD3 · After</figcaption>
+        <img id="after" alt="VD3 相同預覽狀態" />
+      </figure>
+    </div>
+    <h2>實際遊戲錄製 · 完整演出</h2>
+    <p>
+      GIF 直接編碼 Chromium CDP 畫面，使用擷取時間戳，沒有補畫或合成動作；GIF
+      無聲。遊戲中可手動開啟低音量合成音效，預設關閉。
+    </p>
+    <div class="pair">
+      <figure>
+        <figcaption>席恩 · 非魔法近戰與受擊</figcaption>
+        <img id="melee" alt="近戰完整實機動畫" />
+      </figure>
+      <figure>
+        <figcaption>獨立測試 Wizard · 三枚 Magic Missile</figcaption>
+        <img id="missile" alt="三飛彈分配兩目標並同時命中" />
+      </figure>
+    </div>
+    <h2>近戰關鍵姿勢</h2>
+    <div class="poses" id="physical-poses"></div>
+    <h2>施法關鍵姿勢</h2>
+    <div class="poses" id="magic-poses"></div>
+    <p>
+      PNG 是各姿勢分次重播擷取，實際擷取前後階段見 capture-record.json；短暫
+      Impact 可能在截圖完成前已進入 Reaction。動作時序請以完整 GIF 及逐 RAF
+      檢查為準。
+    </p>
+    <p>
+      <a href="VERIFICATION.md">驗收與未達標清單</a> ·
+      <a href="PIPELINE.md">製作管線決策</a> ·
+      <a href="SKILL-REFERENCE.md">SRD 能力對照</a> ·
+      <a href="SRD-NOTICE.md">來源授權</a> ·
+      <a href="TIME-LEDGER.md">實際投入</a>
+    </p>
+  </main>
+  <script>
+    const size = document.querySelector("#size");
+    function update() {
+      const width = size.value,
+        base = "../../screenshots/vd3/";
+      document.querySelector("#before").src =
+        `../../screenshots/vd2/after/battle-preview-${width}.png`;
+      document.querySelector("#after").src =
+        `${base}battle-preview-${width}.png`;
+      for (const kind of ["melee", "missile"])
+        document.querySelector("#" + kind).src = `${base}${kind}-${width}.gif`;
+      for (const [id, poses] of [
+        [
+          "physical-poses",
+          [
+            ["melee-anticipation", "預備與重心轉移"],
+            ["melee-contact", "固定刀刃接觸"],
+            ["melee-reaction", "敵人軀幹與頭部後仰"],
+          ],
+        ],
+        [
+          "magic-poses",
+          [
+            ["missile-gather", "施法手勢與三枚凝聚"],
+            ["missile-flight", "三枚分離軌跡"],
+            ["missile-hit", "同步命中與目標反應"],
+          ],
+        ],
+      ]) {
+        document.querySelector("#" + id).replaceChildren(
+          ...poses.map(([file, label]) => {
+            const figure = document.createElement("figure"),
+              caption = document.createElement("figcaption"),
+              image = document.createElement("img");
+            caption.textContent = label;
+            image.src = `${base}${file}-${width}.png`;
+            image.alt = label;
+            figure.append(caption, image);
+            return figure;
+          }),
+        );
+      }
+    }
+    size.addEventListener("change", update);
+    update();
+  </script>
+</html>
