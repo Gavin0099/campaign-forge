@@ -1,0 +1,8 @@
+# Local scratch and credentials must never be committed.
+.env
+.env.*
+*.pem
+*.key
+scratch/
+.DS_Store
+Thumbs.db
