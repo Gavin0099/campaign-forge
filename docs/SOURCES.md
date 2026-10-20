@@ -56,3 +56,11 @@
 工具採 MIT 不會替本 repo 的故事選定授權。此 repo 未附將故事開源的 LICENSE，也未授權以 MIT 發布故事。repo 已選擇 Public，公開可讀與開源授權分開處理。
 
 本批未作全面相似性或權利審查。AI 草稿不能據此保證完整排他的著作權，也不能保證無相似內容。未來發行前須另處理人工創作與修訂紀錄、名稱及素材來源，以及實際使用的第三方內容。此段記錄本批限制，不代替個案權利判斷。
+
+## 本輪文字試讀的工具來源（2026-10-21）
+
+以下僅供工具與候選規則研究，不授權複製原創故事或商業遊戲素材。套件裝在 ignored scratch，版本鎖與輸出授權紀錄由 [story-playtest](../story-playtest/README.md) 保存。
+
+- [inkjs](https://github.com/y-lohse/inkjs) 2.3.2（MIT），編譯與執行 Ink。
+- [React](https://github.com/facebook/react) 18.3.1（MIT）、[TypeScript](https://github.com/microsoft/TypeScript) 5.6.3（Apache-2.0）、DefinitelyTyped React 型別（MIT），同既有架構的獨立文字試讀。
+- [官方 SRD 下載頁](https://www.dndbeyond.com/srd) 與既有 VD3 的 SRD5.2.1 研究，只作 G005 候選來源；不代表採用完整規則，見 [Creative Bible](story/CREATIVE-BIBLE.md)。

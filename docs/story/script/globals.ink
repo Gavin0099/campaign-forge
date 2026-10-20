@@ -18,6 +18,15 @@ VAR trust_isera = 1
 VAR trust_sawin = 1
 VAR trust_odo = 2
 VAR tide = 1              // 裂潮刻度 1–6
+VAR key_explained = false // L01 魏德已交代名鑰用途；不是已證實收魂
+VAR soul_cycle_known = false // L07 對峙後隊伍得知迴圈
+VAR notes_holder = "weide" // weide / river；是否保有用 notes_saved
+VAR starplate_holder = "tower" // tower / party / moriane（塔頂可攜副本）
+VAR isera_recruited = false
+VAR sawin_fate = "absent" // absent / party / injured / protected
+VAR l07_protected = "" // quin / starplate / sawin
+VAR thoma_refused = false // 核心道德拒絕：與信任無關
+VAR thoma_public = false // 是否敢向莫瑞安公開質問：由前期行動支持
 
 === function stage(t) ===
 {

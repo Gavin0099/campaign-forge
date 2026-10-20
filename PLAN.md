@@ -5,6 +5,10 @@
 
 # 第一批故事企劃計畫
 
+## 最新授權：敘事與產品對齊（2026-10-21）
+
+Owner 授權工作分支 `story/strengthen-narrative` 連續執行 12 小時預算的 S0–S6，詳見 [本輪計畫](docs/story/alignment/PLAN.md)。這是 L01–L07 工作稿、驗證／文字試玩與候選產品規格，不是下方歷史 S4–S10 的正式開工。G004／G005 仍未通過，不改 main 與舊 UI。三項缺稿經本機／遠端／worktree／stash 核對為 SOURCE_NOT_FOUND，不補造。
+
 ## 本批結果
 
 S1、S2、S3 已完成。S0 的企劃骨架與公開版文件已完成，保存目標為已建立的 Public repo。所有故事設定仍為提案，下一個內容關卡是 Gavin 選擇故事。

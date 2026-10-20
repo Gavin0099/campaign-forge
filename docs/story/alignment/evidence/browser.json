@@ -1,0 +1,200 @@
+{
+  "checks": [
+    {
+      "name": "rendered-normal-text-contrast",
+      "measured": [
+        {
+          "name": "body-text",
+          "fg": "rgb(44, 48, 44)",
+          "bg": "rgb(250, 248, 240)",
+          "ratio": 12.609782978253156,
+          "threshold": 4.5
+        },
+        {
+          "name": "speaker",
+          "fg": "rgb(108, 84, 45)",
+          "bg": "rgb(250, 248, 240)",
+          "ratio": 6.709360055916504,
+          "threshold": 4.5
+        },
+        {
+          "name": "button",
+          "fg": "rgb(38, 58, 49)",
+          "bg": "rgb(248, 246, 238)",
+          "ratio": 11.205750570612116,
+          "threshold": 4.5
+        },
+        {
+          "name": "notice",
+          "fg": "rgb(84, 84, 73)",
+          "bg": "rgb(233, 230, 220)",
+          "ratio": 6.134647491355132,
+          "threshold": 4.5
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "initial-1280",
+      "passed": true
+    },
+    {
+      "name": "actual-choice-buttons-export-undo-1280",
+      "passed": true
+    },
+    {
+      "name": "initial-1920",
+      "passed": true
+    },
+    {
+      "name": "actual-choice-buttons-export-undo-1920",
+      "passed": true
+    },
+    {
+      "name": "replay:open|quin|sawin=true|public=false",
+      "passed": true
+    },
+    {
+      "name": "replay:open|starplate|sawin=true|public=false",
+      "passed": true
+    },
+    {
+      "name": "replay:open|sawin|sawin=true|public=false",
+      "passed": true
+    },
+    {
+      "name": "replay:open|quin|sawin=true|public=true",
+      "passed": true
+    },
+    {
+      "name": "replay:open|starplate|sawin=true|public=true",
+      "passed": true
+    },
+    {
+      "name": "replay:open|sawin|sawin=true|public=true",
+      "passed": true
+    },
+    {
+      "name": "replay:open|quin|sawin=false|public=false",
+      "passed": true
+    },
+    {
+      "name": "replay:open|starplate|sawin=false|public=false",
+      "passed": true
+    },
+    {
+      "name": "replay:open|quin|sawin=false|public=true",
+      "passed": true
+    },
+    {
+      "name": "replay:open|starplate|sawin=false|public=true",
+      "passed": true
+    },
+    {
+      "name": "replay:sealed|quin|sawin=true|public=false",
+      "passed": true
+    },
+    {
+      "name": "replay:sealed|starplate|sawin=true|public=false",
+      "passed": true
+    },
+    {
+      "name": "replay:sealed|sawin|sawin=true|public=false",
+      "passed": true
+    },
+    {
+      "name": "replay:sealed|quin|sawin=true|public=true",
+      "passed": true
+    },
+    {
+      "name": "replay:sealed|starplate|sawin=true|public=true",
+      "passed": true
+    },
+    {
+      "name": "replay:sealed|sawin|sawin=true|public=true",
+      "passed": true
+    },
+    {
+      "name": "replay:sealed|quin|sawin=false|public=false",
+      "passed": true
+    },
+    {
+      "name": "replay:sealed|starplate|sawin=false|public=false",
+      "passed": true
+    },
+    {
+      "name": "replay:sealed|quin|sawin=false|public=true",
+      "passed": true
+    },
+    {
+      "name": "replay:sealed|starplate|sawin=false|public=true",
+      "passed": true
+    },
+    {
+      "name": "keyboard-skip-disabled-button-order-enter-focus",
+      "passed": true
+    },
+    {
+      "name": "enlarged-200-percent-reduced-motion-1280",
+      "passed": true
+    },
+    {
+      "name": "enlarged-200-percent-reduced-motion-390",
+      "passed": true
+    },
+    {
+      "name": "invalid-replay-recovery",
+      "passed": true
+    },
+    {
+      "name": "stale-replay-version-rejection",
+      "passed": true
+    },
+    {
+      "name": "route-picker-real-ui",
+      "passed": true
+    },
+    {
+      "name": "browser-console-errors",
+      "passed": true
+    }
+  ],
+  "passed": 32,
+  "failed": 0,
+  "sourceHash": "e0a4b2a967f2d9ffa7d4a014456f0376124ee5dd7c8beabb3830aa96d2fecbe4",
+  "screenshots": [
+    {
+      "file": "reading-1280.png",
+      "sha256": "d022bb7923d9f17a7455c4eee1f8d3a34a72480d63e1698ad5a73c42b60f7e56",
+      "bytes": 88315
+    },
+    {
+      "file": "ending-1280.png",
+      "sha256": "e6ad14bd0eaa4eebeea3b2667cd3ca65fe52dee399ab8a10460b7cdc585b6ea3",
+      "bytes": 109615
+    },
+    {
+      "file": "reading-1920.png",
+      "sha256": "68ded3c6774c9053f49909fdadc0a37e72835e8d510a2578406a4f95aa1dedf9",
+      "bytes": 93036
+    },
+    {
+      "file": "ending-1920.png",
+      "sha256": "9c5e9a52fc747f4fe891b4bebc24c4a2f3bbb97db717f7936681e47e68453e5c",
+      "bytes": 114954
+    },
+    {
+      "file": "reading-large-1280.png",
+      "sha256": "3dad40521a888a6f0d2ecb35c970a2b29a48421affbfe37c3a63aa99660fd3cd",
+      "bytes": 433360
+    },
+    {
+      "file": "reading-large-390.png",
+      "sha256": "87e49297ef4bd77d0d01d8c9694305b21ff8a08ee1e189ba5f9da14eaadd1b25",
+      "bytes": 407578
+    }
+  ],
+  "browserVersion": "155.0.8059.40",
+  "errors": [],
+  "humanPlaytest": false
+}

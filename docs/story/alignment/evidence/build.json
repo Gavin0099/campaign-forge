@@ -1,0 +1,41 @@
+{
+  "builtAt": "2026-10-20T17:11:05.150Z",
+  "sourceHash": "e0a4b2a967f2d9ffa7d4a014456f0376124ee5dd7c8beabb3830aa96d2fecbe4",
+  "sources": [
+    {
+      "name": "main.ink",
+      "sha256": "516af0b324247e99ebbb5e771431aa8d366ddda52725f48f297f10f0f9913f62"
+    },
+    {
+      "name": "globals.ink",
+      "sha256": "1ee434a6f3bbe59a6e4807ca5e61ba42f53f4f809bcbe18330be02f2467cdf10"
+    },
+    {
+      "name": "ch01.ink",
+      "sha256": "228b164432859282cb5b1272e3e587c156fc9cfed18b1263c92b1f5ec226c23f"
+    },
+    {
+      "name": "ch02.ink",
+      "sha256": "7dbe2df4970906c0138377330875ed9c202236cf282c44785e35c84c11ab0902"
+    }
+  ],
+  "dependencies": {
+    "inkjs": "2.3.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "typescript": "5.6.3"
+  },
+  "compilerDiagnostics": [],
+  "typecheck": "PASS",
+  "files": {
+    "app.js": "e361563490435003ea2935d69a65d5902a2b27abe6812e5812004de8a9eca8a4",
+    "index.html": "957a66f1524470e2bc11fd7f6e62650da1ab366ea95fad1d26e8ca471ac120d8",
+    "ink.js": "f50e3a0d26a7f4fd2266b3618dda3366d51502974460b99088adf821457bb20f",
+    "react-dom.js": "35f4f974f4b2bcd44da73963347f8952e341f83909e4498227d4e26b98f66f0d",
+    "react.js": "d949f1c3687aedadcedac85261865f29b17cd273997e7f6b2bfc53b2f9d4c4dd",
+    "story.js": "483fce0094dfeca39ebd1b112f5e32befdd76e55729c60139bc74a67c3b3b6dc",
+    "story.json": "d57449c1e52a182a830a4c7d9617c76b38c9eb8f35bb04531acd11e9837cc3b7",
+    "style.css": "ba33dc27623f84da2d275cacc197ce212fee98afc67a28bc095f1b904f513ce1",
+    "THIRD-PARTY.txt": "a0a09b4840a3bc3c4d327d04029da206eac4d0d8009ed83f0dec3a5639eb2005"
+  }
+}

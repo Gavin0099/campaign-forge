@@ -58,7 +58,7 @@
 | 薩溫 | 術士：裂潮魔力、高爆發、自傷 | Sorcerer（提案） | 裂潮之子的逃兵，體內寄宿裂潮碎片 |
 | 歐朵（條件招募） | 遊俠：遠射、偵察、地形 | Ranger | 邊境獵人，可在第二章依抉擇加入 |
 
-class_id 是設計識別碼。薩溫選 Sorcerer 而非 Warlock，因為植入的裂潮碎片屬於與生俱來的魔力，而非與外力訂約；此為提案，待 G005。能力設計依 [規則改編契約](../design/RULE-ADAPTATION-CONTRACT.md)。
+class_id 是設計識別碼。薩溫的魔力來自被植入體內的裂潮碎片，不是與生俱來，也未寫成與外力訂約；暫用 Sorcerer 表示體內魔力的敘事職能，這是改編提案，不能反向更改他的背景。正式職業與規則待 G005。能力設計依 [規則改編契約](../design/RULE-ADAPTATION-CONTRACT.md)。
 
 詳細個人任務、信任階段、彼此關係、感情線與死亡／背叛條件見 [COMPANION-ARCS](COMPANION-ARCS.md)。
 

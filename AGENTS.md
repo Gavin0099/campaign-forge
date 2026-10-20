@@ -1,5 +1,13 @@
 # Campaign Forge 工作界線
 
+## Narrative & Product Alignment Authorization — 2026-10-21
+
+Owner 本輪明確授權 `story/strengthen-narrative` 的 12 小時預算 S0–S6 連續執行：L01–L07 局部台詞／因果修正、Ink 語意與負面測試、同源文字試玩、模型深度審查與產品／美術候選規格。可完成段落後正常 commit／fast-forward push 到此既有分支；不合併 main、不繞過 hooks、不 PR／部署／啟用 Actions。此批 S0–S6 與歷史故事企劃的 S0–S10 不同。
+
+G004／G005 仍待 Owner；不寫 L08–L28 正式劇本、不替換 main UI、不新增正式故事設定。後續澄清：貝恩、燈號簿、洩潮地先查本機／worktree／stash；找不到即 SOURCE_NOT_FOUND，不自行補造。新增情節與設定仍需 Owner 核准，局部修正文句與狀態仍依本次授權執行。工作稿中的修正供試讀，不表示正式採納。
+
+本輪入口 [alignment/PLAN](docs/story/alignment/PLAN.md)，正典順序沿用 CODEX-HANDOFF。測試工具暫存僅放 ignored scratch；Ink 版本／授權與來源保留。未改 UI 不冒充重跑 VD3；原生治理回呼、人類試玩及商業美術核准都不可用模型測試替代。
+
 本 repo 專做原創 Steam／PC 奇幻戰棋 RPG 的故事企劃。當前停在 S3 故事選擇關卡，A、B、C 都是提案。
 
 - 先讀 README、PLAN、SLICES、docs/DECISIONS.md 與 docs/EXECUTION.md，再接續工作。

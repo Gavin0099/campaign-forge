@@ -1,0 +1,113 @@
+{
+  "passed": 25,
+  "failed": 0,
+  "sourceHash": "e0a4b2a967f2d9ffa7d4a014456f0376124ee5dd7c8beabb3830aa96d2fecbe4",
+  "checks": [
+    {
+      "name": "all-runtime-variables-documented-and-validated",
+      "count": 26,
+      "passed": true
+    },
+    {
+      "name": "seven-level-correspondence-no-future-or-unsourced-script-content",
+      "passed": true
+    },
+    {
+      "name": "executed-evidence-matches-current-ink-and-validator",
+      "sourceHash": "e0a4b2a967f2d9ffa7d4a014456f0376124ee5dd7c8beabb3830aa96d2fecbe4",
+      "passed": true
+    },
+    {
+      "name": "actual-ink-stage-function-boundaries",
+      "cases": 9,
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:open|quin|sawin=true|public=false",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:open|starplate|sawin=true|public=false",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:open|sawin|sawin=true|public=false",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:open|quin|sawin=true|public=true",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:open|starplate|sawin=true|public=true",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:open|sawin|sawin=true|public=true",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:open|quin|sawin=false|public=false",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:open|starplate|sawin=false|public=false",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:open|quin|sawin=false|public=true",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:open|starplate|sawin=false|public=true",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:sealed|quin|sawin=true|public=false",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:sealed|starplate|sawin=true|public=false",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:sealed|sawin|sawin=true|public=false",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:sealed|quin|sawin=true|public=true",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:sealed|starplate|sawin=true|public=true",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:sealed|sawin|sawin=true|public=true",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:sealed|quin|sawin=false|public=false",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:sealed|starplate|sawin=false|public=false",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:sealed|quin|sawin=false|public=true",
+      "passed": true
+    },
+    {
+      "name": "spoken-knowledge-possession-and-replay:sealed|starplate|sawin=false|public=true",
+      "passed": true
+    },
+    {
+      "name": "local-document-links",
+      "links": 119,
+      "files": 31,
+      "passed": true
+    }
+  ],
+  "limitation": "Semantic prose quality and unmodeled knowledge claims still need human review."
+}

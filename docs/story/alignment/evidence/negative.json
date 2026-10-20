@@ -1,0 +1,204 @@
+{
+  "tests": [
+    {
+      "fault": "notes",
+      "expectedInvariant": "notes_possession",
+      "argv": [
+        "node",
+        "docs/story/script/check/walk.js",
+        "scratch/story-playtest/story.json",
+        "--inject=notes"
+      ],
+      "exitCode": 1,
+      "observed": [
+        "{\"route\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"scene\":\"L07_post\",\"errors\":[\"notes_possession\",\"name_key_possession\"]}"
+      ]
+    },
+    {
+      "fault": "starplate",
+      "expectedInvariant": "starplate_possession",
+      "argv": [
+        "node",
+        "docs/story/script/check/walk.js",
+        "scratch/story-playtest/story.json",
+        "--inject=starplate"
+      ],
+      "exitCode": 1,
+      "observed": [
+        "{\"route\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"scene\":\"L07_post\",\"errors\":[\"starplate_possession\",\"name_key_possession\"]}"
+      ]
+    },
+    {
+      "fault": "resurrection",
+      "expectedInvariant": "teo_continuity",
+      "argv": [
+        "node",
+        "docs/story/script/check/walk.js",
+        "scratch/story-playtest/story.json",
+        "--inject=resurrection"
+      ],
+      "exitCode": 1,
+      "observed": [
+        "{\"route\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"scene\":\"L07_post\",\"errors\":[\"teo_continuity\"]}"
+      ]
+    },
+    {
+      "fault": "absent",
+      "expectedInvariant": "sawin_absent_reappearance",
+      "argv": [
+        "node",
+        "docs/story/script/check/walk.js",
+        "scratch/story-playtest/story.json",
+        "--inject=absent"
+      ],
+      "exitCode": 1,
+      "observed": [
+        "{\"route\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"scene\":\"L07_post\",\"errors\":[\"sawin_absent_reappearance\",\"sawin_injury_erased\"]}"
+      ]
+    },
+    {
+      "fault": "knowledge",
+      "expectedInvariant": "K1_without_key_information",
+      "argv": [
+        "node",
+        "docs/story/script/check/walk.js",
+        "scratch/story-playtest/story.json",
+        "--inject=knowledge"
+      ],
+      "exitCode": 1,
+      "observed": [
+        "{\"route\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"scene\":\"L07_post\",\"errors\":[\"K1_without_key_information\"]}"
+      ]
+    },
+    {
+      "fault": "soul_knowledge",
+      "expectedInvariant": "L07_without_witness_information",
+      "argv": [
+        "node",
+        "docs/story/script/check/walk.js",
+        "scratch/story-playtest/story.json",
+        "--inject=soul_knowledge"
+      ],
+      "exitCode": 1,
+      "observed": [
+        "{\"route\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"scene\":\"L07_post\",\"errors\":[\"L07_without_witness_information\"]}"
+      ]
+    },
+    {
+      "fault": "trust",
+      "expectedInvariant": "trust:trust_thoma",
+      "argv": [
+        "node",
+        "docs/story/script/check/walk.js",
+        "scratch/story-playtest/story.json",
+        "--inject=trust"
+      ],
+      "exitCode": 1,
+      "observed": [
+        "{\"route\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"scene\":\"L07_post\",\"errors\":[\"trust:trust_thoma\",\"thoma_public_threshold\"]}"
+      ]
+    },
+    {
+      "fault": "refusal",
+      "expectedInvariant": "thoma_moral_boundary",
+      "argv": [
+        "node",
+        "docs/story/script/check/walk.js",
+        "scratch/story-playtest/story.json",
+        "--inject=refusal"
+      ],
+      "exitCode": 1,
+      "observed": [
+        "{\"route\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"scene\":\"L07_post\",\"errors\":[\"thoma_moral_boundary\"]}"
+      ]
+    },
+    {
+      "fault": "public",
+      "expectedInvariant": "thoma_public_threshold",
+      "argv": [
+        "node",
+        "docs/story/script/check/walk.js",
+        "scratch/story-playtest/story.json",
+        "--inject=public"
+      ],
+      "exitCode": 1,
+      "observed": [
+        "{\"route\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"scene\":\"L07_post\",\"errors\":[\"public_without_courage\",\"thoma_public_threshold\"]}"
+      ]
+    },
+    {
+      "fault": "tide",
+      "expectedInvariant": "chapter_clock",
+      "argv": [
+        "node",
+        "docs/story/script/check/walk.js",
+        "scratch/story-playtest/story.json",
+        "--inject=tide"
+      ],
+      "exitCode": 1,
+      "observed": [
+        "{\"route\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"scene\":\"L07_post\",\"errors\":[\"chapter_clock\"]}"
+      ]
+    },
+    {
+      "fault": "loss",
+      "expectedInvariant": "quin_loss",
+      "argv": [
+        "node",
+        "docs/story/script/check/walk.js",
+        "scratch/story-playtest/story.json",
+        "--inject=loss"
+      ],
+      "exitCode": 1,
+      "observed": [
+        "{\"route\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"scene\":\"L07_post\",\"errors\":[\"quin_loss\"]}"
+      ]
+    },
+    {
+      "fault": "recruitment",
+      "expectedInvariant": "L07_without_witness_information",
+      "argv": [
+        "node",
+        "docs/story/script/check/walk.js",
+        "scratch/story-playtest/story.json",
+        "--inject=recruitment"
+      ],
+      "exitCode": 1,
+      "observed": [
+        "{\"route\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"scene\":\"L07_post\",\"errors\":[\"soul_knowledge_before_witness\",\"L07_without_witness_information\"]}"
+      ]
+    },
+    {
+      "fault": "death",
+      "expectedInvariant": "maggie_reappeared_after_death",
+      "argv": [
+        "node",
+        "docs/story/script/check/walk.js",
+        "scratch/story-playtest/story.json",
+        "--inject=death"
+      ],
+      "exitCode": 1,
+      "observed": [
+        "{\"route\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"scene\":\"L07_post\",\"errors\":[\"maggie_reappeared_after_death\"]}"
+      ]
+    },
+    {
+      "fault": "count",
+      "expectedInvariant": "l07_saved",
+      "argv": [
+        "node",
+        "docs/story/script/check/walk.js",
+        "scratch/story-playtest/story.json",
+        "--inject=count"
+      ],
+      "exitCode": 1,
+      "observed": [
+        "{\"route\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"scene\":\"L07_post\",\"errors\":[\"l07_saved\"]}"
+      ]
+    }
+  ],
+  "passed": 14,
+  "failed": 0,
+  "nodeBound": true,
+  "sourceHash": "e0a4b2a967f2d9ffa7d4a014456f0376124ee5dd7c8beabb3830aa96d2fecbe4"
+}

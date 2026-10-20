@@ -2,6 +2,8 @@
 
 更新日期 2026-10-20。本文件給在 `D:\campaign-forge` 工作的 Codex 使用。開始前照 [AGENTS.md](../../AGENTS.md) 讀 memory 與 PLAN；本交接不取代治理規則。
 
+2026-10-21 最新接續：[alignment/PLAN](alignment/PLAN.md) 記錄本輪 S0–S6 的新增授權，優先於下方較早的暫停／不測試／不 push 限制；G004、G005、L08 停止點與禁止 main 替換仍有效。試讀入口與回饋題目見 [playtest/L01-L07](playtest/L01-L07.md)，共同產品規格見 [CREATIVE-BIBLE](CREATIVE-BIBLE.md)。這些工作稿未通過人工故事驗收。
+
 ## 正典檔案（衝突時依此順序）
 
 1. [docs/DECISIONS.md](../DECISIONS.md)：U001–U006 使用者陳述、P006–P008、G004／G005
