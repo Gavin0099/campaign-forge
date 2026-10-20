@@ -11,7 +11,11 @@ Owner Gavin。目標 Steam / PC 故事戰役、小隊養成奇幻戰棋 RPG；A/
 所有讀寫限本 repo；公開指定 framework 與 TacticalGo 可唯讀參考。不啟用 Actions、不部署、不購買、不寫正式引擎。
 使用者委託代理填 domain/risk；選定 game-ui-prototype / low。使用者後續明確指示「做完一個段落幫我push」，已授權本輪正常 commit/push，未授權 PR/部署。
 
+S3.5（2026-10-20 使用者陳述）：單一故事、D&D 式戰士／法師／牧師／盜賊隊伍、地城遺跡與勢力、原創內容、施法者、黑暗基調、感情線，並授權選案前執行。詳見 docs/DECISIONS.md U001–U006。
+
 ## Agent-observed implementation facts
+
+S3.5 代理觀察：單一故事工作稿位於 docs/story/（STORY、ANTAGONIST、COMPANION-ARCS、ENDINGS-MATRIX），診斷在 docs/review/NARRATIVE-GAPS.md；新人名與 ui-prototype 的展示人名不同，未修改 UI。
 
 治理最新修正：重驗曾有SessionEnd 3.390秒失敗，原件保留；合併Git身分查詢並在單一hook程序重用已驗證root後，13項隔離驗收通過，三個新session為2.360／2.281／2.281秒。此次bridge及生成命令雜湊變更，修正版需重新檢閱信任；平台自然事件仍未觀察到。這是代理執行觀察，不是使用者對修正版的信任確認。
 
