@@ -45,4 +45,4 @@ npm run dev
 - [UI 執行計畫](PLAN.md)
 - [AI Governance 導入與剩餘驗收](../governance/README.md)
 
-本次已 `git pull --ff-only origin main`，結果已是最新，基準 652ce0e。使用者後續已授權完成段落後 commit／push；沒有 PR 或部署。治理文件、本機 hooks、UI runtime smoke 已就緒；使用者已授權補上根 PLAN 治理表頭，故事正文保留；最新導入程度見 governance/ADOPTION-STATUS.md，真實 commit/push 觸發將在正常交付時驗證。
+本次已 `git pull --ff-only origin main`，結果已是最新，基準 652ce0e。使用者後續已授權完成段落後 commit／push；沒有 PR 或部署。治理文件、本機 hooks、UI runtime smoke 已就緒；使用者已授權補上根 PLAN 治理表頭，故事正文保留；最新導入程度見 governance/ADOPTION-STATUS.md，真實 commit/push hooks 已在 a97c8a8 交付時觸發通過。

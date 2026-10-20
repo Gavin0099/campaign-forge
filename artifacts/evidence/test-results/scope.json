@@ -3,10 +3,10 @@
   "status": "report_only",
   "command": "python3 scripts/validate_ui_scope.py",
   "exit_code": 0,
-  "started_at": "2026-10-20T10:06:44Z",
-  "finished_at": "2026-10-20T10:06:45Z",
+  "started_at": "2026-10-20T10:12:34Z",
+  "finished_at": "2026-10-20T10:12:35Z",
   "runner": "governance_tools.test_evidence_receipt_writer",
-  "linked_commit": "652ce0ea38cfe2bb4b07b942a5cdae3db823e0f2",
+  "linked_commit": "a97c8a85916061762d2bec09ab80a5f0fa411ed8",
   "output_artifacts": [
     "artifacts/evidence/test-results/scope.txt"
   ],

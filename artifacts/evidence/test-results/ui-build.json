@@ -3,10 +3,10 @@
   "status": "report_only",
   "command": "npm run build --prefix ui-prototype",
   "exit_code": 0,
-  "started_at": "2026-10-20T10:05:00Z",
-  "finished_at": "2026-10-20T10:05:05Z",
+  "started_at": "2026-10-20T10:12:29Z",
+  "finished_at": "2026-10-20T10:12:34Z",
   "runner": "governance_tools.test_evidence_receipt_writer",
-  "linked_commit": "652ce0ea38cfe2bb4b07b942a5cdae3db823e0f2",
+  "linked_commit": "a97c8a85916061762d2bec09ab80a5f0fa411ed8",
   "output_artifacts": [
     "artifacts/evidence/test-results/ui-build.txt"
   ],

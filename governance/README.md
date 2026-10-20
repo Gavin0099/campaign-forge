@@ -15,6 +15,6 @@
 
 上游 root readiness 與 pre-commit 固定讀 root PLAN。使用者已於本輪明確允許只加治理表頭，`proposed-root-plan-header.patch` 已依授權套用；故事正文與 S3／S4 狀態不變，scope validator 只允許這段確切 metadata。
 
-版本帳本與 submodule checkout SHA 相符；實際提交狀態與導入程度以 ADOPTION-STATUS.md 與 Git 歷史為準。真實 commit / push hook 觸發已獲授權，須在正常交付時觀察。Copilot hooks 不適用本次 Codex 工作，沒有宣稱其安裝或驗證。
+版本帳本與 submodule checkout SHA 相符；實際提交狀態與導入程度以 ADOPTION-STATUS.md 與 Git 歷史為準。真實 commit / push hook 已在 a97c8a8 正常交付中執行且通過。Copilot hooks 不適用本次 Codex 工作，沒有宣稱其安裝或驗證。
 
 診斷原件在 artifacts。UI runtime PASS 不代表 root readiness PASS，也不表示平台自動執行、正式規則完整或全框架測試通過。
