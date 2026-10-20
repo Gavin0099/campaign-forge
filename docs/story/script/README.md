@@ -23,7 +23,7 @@
 ```
 mkdir -p /tmp/inkcheck && cd /tmp/inkcheck && npm init -y && npm i inkjs@2
 npx inkjs-compiler -o /tmp/out.json <repo>/docs/story/script/main.ink
-node <repo>/docs/story/script/check/walk.js /tmp/out.json   # 在 /tmp/inkcheck 執行以解析 inkjs
+INKJS=/tmp/inkcheck/node_modules/inkjs node <repo>/docs/story/script/check/walk.js /tmp/out.json
 ```
 
 `check/walk.js` 以狀態快照窮舉所有選項路徑，並檢查後果一致性（K1 與提歐、名鑰的對應；小昆與星盤不可兩全；章末刻度；小昆連結下限）。新增規則時同步更新 [FLAGS](../FLAGS.md) 的檢查欄。
