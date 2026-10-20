@@ -12,6 +12,10 @@
 
 `docs/candidates/` 的 A／B／C 與 `ui-prototype/` 的人名是歷史或展示，不是正典。
 
+## 相關 skill
+
+[.codex/skills/dnd-framework/SKILL.md](../../.codex/skills/dnd-framework/SKILL.md)：規則基礎決策（DECISIONS G005）與任何職業、法術、怪物、狀態設計都必須依此 skill 進行，只用其列出的開放授權來源、記錄來源 ID、避開禁止 IP 與商標。G005 未決前，仍不得在故事或關卡文件新增正式數值與能力。
+
 ## 下一步（依序）
 
 1. **L07–L08 腳本與關卡表**：照 LEVEL-LIST 與 ANTAGONIST 第二章出場；L07 莫瑞安必須贏，帶走小昆（`quin_taken=true`），玩家只能撤退。
