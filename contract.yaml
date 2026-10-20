@@ -4,6 +4,8 @@ framework_interface_version: "1"
 framework_compatible: ">=1.0.0,<2.0.0"
 domain: game-ui-prototype
 risk_tier: low
+hard_stop_rules:
+  - game-ui-prototype
 documents:
   - AGENTS.base.md
   - ui-prototype/PLAN.md
@@ -16,6 +18,7 @@ rule_roots:
   - governance/rules
 validators:
   - scripts/validate_ui_scope.py
+  - scripts/validate_task_evidence.py
 evidence_roots:
   - artifacts
   - ui-prototype/screenshots

@@ -11,6 +11,12 @@
 - `PYTHONPATH=ai-governance-framework python3 -m governance_tools.governance_drift_checker --repo . --format human`。
 - `PYTHONPATH=ai-governance-framework python3 -m governance_tools.hook_install_validator --repo . --framework-root ai-governance-framework --format human`。
 
+## 原生 lifecycle 接線
+
+四個原生事件的安裝、信任與驗收見 [CODEX-LIFECYCLE.md](CODEX-LIFECYCLE.md)。執行 `python scripts/install_codex_governance.py` 產生本機設定，再以 `python scripts/record_governance_checks.py` 執行隔離測試、scope、TypeScript 與 Vite 建置。Stop 檢查兩個領域 validator；`hard_stop_rules` 明確要求違規停止，避免框架預設只發警告。
+
+接線程式與 replay 不等於平台信任或原生回呼。只有同一自然 session 的四事件及有效 writer receipt 齊備後才能報完整導入；本輪狀態見 [ADOPTION-STATUS.md](ADOPTION-STATUS.md)。
+
 ## 完整驗收剩餘界線
 
 上游 root readiness 與 pre-commit 固定讀 root PLAN。使用者已於本輪明確允許只加治理表頭，`proposed-root-plan-header.patch` 已依授權套用；故事正文與 S3／S4 狀態不變，scope validator 只允許這段確切 metadata。

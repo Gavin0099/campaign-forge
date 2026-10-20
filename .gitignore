@@ -11,6 +11,11 @@ Thumbs.db
 __pycache__/
 *.pyc
 
+# Generated host-specific bindings; hook trust is reviewed in Codex, never stored here.
+.codex/hooks.json
+.codex/governance-bindings.json
+artifacts/session-closeout.txt
+
 # >>> ai-governance hygiene (managed by adopt_governance.py; do not edit inside markers) >>>
 # Runtime governance artifacts and Python bytecode are regenerated every
 # session. Tracking them leaves the working tree permanently dirty and buries

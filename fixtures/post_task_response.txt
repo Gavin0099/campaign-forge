@@ -1,0 +1,16 @@
+[Governance Contract]
+LANG = Python
+LEVEL = L1
+SCOPE = feature
+PLAN = ui-prototype/PLAN.md
+LOADED = SYSTEM_PROMPT,AGENTS.base.md,AGENTS.md
+CONTEXT = campaign-forge -> local governance replay; NOT: story selection or S4
+PRESSURE = SAFE (20/200)
+RULES = common,game-ui-prototype
+RISK = low
+OVERSIGHT = review-required
+MEMORY_MODE = candidate
+
+Synthetic post-task replay fixture. Validate the current worktree boundaries and
+the declared governance contract. This fixture makes no gameplay, build, test,
+native-host execution or complete-adoption claim.

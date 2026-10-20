@@ -34,6 +34,8 @@
 
 ## Verification
 
-建置、範圍保護與 CUA 實際瀏覽器流程；保留 screenshots 與 docs/VERIFICATION.md。先前環境已於正常交付驗證 Git hooks；Codex lifecycle 尚未自動接線，不得稱完整自動治理。
+建置、範圍保護與 CUA 實際瀏覽器流程；保留 screenshots 與 docs/VERIFICATION.md。先前環境已於正常交付驗證 Git hooks；本輪已補四事件 lifecycle 程式與隔離 replay，Codex 信任及自然回呼仍待驗，不得稱完整自動治理。
 
 2026-10-20 Windows 工作副本：恢復固定框架並安裝本機 hooks；UI 治理 smoke 改用 repo runtime root 與明確的 UI 計畫，不再依賴符號連結。readiness 17/17、drift、hook 安裝檢查與 UI runtime smoke 通過；證據及本機交付界線見 governance/ADOPTION-STATUS.md。本輪僅處理治理，未修改 UI 行為或重新宣稱瀏覽器驗收。
+
+2026-10-20 治理補線：SessionStart／UserPromptSubmit／Stop／SessionEnd 分工、故事保護的 hard stop、執行證據及完整導入宣稱檢查已實作。Stop 不作正式收尾，SessionEnd 經 canonical entry 執行；設定為本機產生，須由使用者檢閱信任。本輪不改故事、UI 行為或 S4 狀態。

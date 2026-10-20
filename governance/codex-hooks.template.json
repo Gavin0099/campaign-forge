@@ -1,0 +1,9 @@
+{
+  "description": "Campaign Forge native lifecycle; generated locally by scripts/install_codex_governance.py. Exact hooks require Codex trust review.",
+  "events": {
+    "SessionStart": {"matcher": "^(startup|resume|clear|compact)$", "timeout": 30},
+    "UserPromptSubmit": {"timeout": 30},
+    "Stop": {"timeout": 30},
+    "SessionEnd": {"matcher": "^other$", "timeout": 3}
+  }
+}

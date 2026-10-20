@@ -60,3 +60,11 @@
 2026-10-20 使用者追加「做完一個段落幫我push」，授權本輪完成段落的正常 commit/push 到既有 campaign-forge repo；不含 PR、部署、Actions、強推或修改正式故事。
 
 2026-10-20 使用者確認「允許只加治理表頭並繼續 push」；允許套用 governance/proposed-root-plan-header.patch 的確切 metadata，故事正文與 S3／S4 狀態不變。
+
+### Codex 原生治理接線
+
+2026-10-20 使用者追加「把剩下的接線與驗收補齊，做到完整導入，完成後幫我 push」，授權本 repo 的原生事件轉接、相關驗收及正常 commit/push；不含跨工作區的全域信任修改、trust bypass、Actions、PR 或部署。
+
+接線與驗收方式見 governance/CODEX-LIFECYCLE.md。以本 repo installer 生成四個 Codex 事件，不使用固定版上游會把收尾掛在 Stop 的 installer。Stop 僅執行任務驗證及候選準備；SessionEnd 才執行 canonical closeout。沒有實際平台回呼與有效 writer receipt，不得宣稱完整自動導入。
+
+治理程式變更需執行 `python scripts/record_governance_checks.py`，保留真實 exit codes；該命令的測試使用 repo 內隔離 Git 副本，不建立模型代理、外部聊天或網路服務。程式碼與相關檔案改變會使執行證據過期。接線與信任是不同驗收；不得自行寫入使用者的 Codex 信任資料或繞過審核。

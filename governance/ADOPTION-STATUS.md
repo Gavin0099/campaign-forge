@@ -1,5 +1,21 @@
 # AI Governance 導入程度 — 2026-10-20
 
+## 最新補線里程碑
+
+使用者本輪要求補齊剩餘接線與驗收並 push。四個 Codex 原生事件已實作，使用 repo 本機產生、固定 Python／Git 與來源雜湊的命令；沒有改動全域信任或開啟 Actions。SessionStart 建立及保留原生身分、UserPromptSubmit 作前置檢查、Stop 驗證兩個領域 validator，SessionEnd 才執行 canonical closeout。詳見 [CODEX-LIFECYCLE.md](CODEX-LIFECYCLE.md)。
+
+驗收證據為 `artifacts/governance-native-acceptance.json`（隔離命令測試、scope、TypeScript、Vite 的真實 exit code 與輸出），以及 `artifacts/governance-native-external-smoke.json`（pre_task、session_start、post_task 均 true，兩個領域 validator 實際執行）。後置 fixture 為明確標記的 synthetic、無額外檢查宣稱的最小合約案例；不以手填的測試成功欄位充作執行證據。
+
+本輪最終隔離測試 **12/12 通過**，SessionEnd 原樣命令耗時 **2.781 秒**；scope、TypeScript 與 Vite exit code 均0。readiness 17/17、drift ok、本機 Git hook 安裝 valid；其 JSON 分別保留在 `artifacts/governance-native-readiness.json`、`governance-native-drift.json`、`governance-native-git-hooks.json`。Copilot 可選項仍提示未安裝，與本次 Codex 接線分開。
+
+合約已加入 `hard_stop_rules`，故事文件違規不再只是 warning。隔離命令驗證失敗拒絕、故事保護、執行環境注入、重複 Stop、缺少前置檢查、resume/compact、缺乏／過期證據及完整導入宣稱。收尾命令另驗證 canonical 內容有效及 receipt，並要求實際耗時小於平台三秒上限；replay 禁止寫正式日記，不能替代原生 writer 證據。
+
+平台信任與自然事件驗收仍未觀察到：installer 明確回報 `REQUIRES_USER_REVIEW`，須由使用者信任目前 hook 定義並載入。完整導入判定還需要同一自然 session 的四個成功事件與 `written`／`already_present` canonical writer receipt；目前不能稱已完整導入。這項待驗狀態沒有以 smoke、Git hook 成功或靜態 full_candidate 取代。
+
+啟用前已把本輪手動 smoke runtime 完整移至工作區 `scratch/governance-before-native-20261020T1109/` 保留，避免 R2 將舊 envelope 誤判為未完成 owner。沒有刪除歷史或改寫自然 session 證據。正式故事仍停 S3，未修改 UI 行為，沒有自行結束此聊天。
+
+以下為前一階段歷史；其中「尚未接線／post_task 為 null」描述已由上述新里程碑取代，平台信任與自然回呼仍待驗。
+
 ## Windows 工作副本重新驗收
 
 本次使用者指示「先幫我導入AI governance」。觀察到新工作副本的 submodule 未初始化、Git hooks 未安裝，舊驗收屬於先前環境。本次已還原固定的 e8e67796894cd562ef0bce217bfad0fac211a44d，使用官方 Python installer 安裝 hooks-only；未更新框架版本。
