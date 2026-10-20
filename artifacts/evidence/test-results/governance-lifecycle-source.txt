@@ -1,0 +1,1 @@
+PASS: current source matches the stored execution record: 12 isolated tests, scope, TypeScript and Vite; native execution not claimed.

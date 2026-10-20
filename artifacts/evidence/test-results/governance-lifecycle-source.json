@@ -1,0 +1,17 @@
+{
+  "receipt_schema": "test_evidence_receipt.v0.1",
+  "status": "report_only",
+  "command": "C:\\Users\\daish\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I -B -X utf8 -c \"import json,sys; from pathlib import Path; sys.path.insert(0,'scripts'); from validate_task_evidence import source_digest; d=json.loads(Path('artifacts/governance-native-acceptance.json').read_text(encoding='utf-8')); assert d['source_sha256']==source_digest(Path.cwd()),'Stale execution evidence'; assert all(c['exit_code']==0 for c in d['checks'].values()),'Failed acceptance checks'; print('PASS: current source matches the stored execution record: 12 isolated tests, scope, TypeScript and Vite; native execution not claimed.')\"",
+  "exit_code": 0,
+  "started_at": "2026-10-20T11:14:39Z",
+  "finished_at": "2026-10-20T11:14:39Z",
+  "runner": "governance_tools.test_evidence_receipt_writer",
+  "linked_commit": "7e7cd90dd15bbe4734ecdf783e5babbdf79c84c1",
+  "output_artifacts": [
+    "artifacts/evidence/test-results/governance-lifecycle-source.txt"
+  ],
+  "cannot_claim": [
+    "semantic correctness of the tested behavior",
+    "receipt authenticity: every field is fabricatable by a direct writer"
+  ]
+}
