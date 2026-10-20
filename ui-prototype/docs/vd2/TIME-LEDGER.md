@@ -14,4 +14,8 @@
 
 後續文件收整、canonical delivery記憶、commit與正常push另以Git提交時間與artifacts/evidence/test-results/receipt-vd2-*的實際起訖核對，不補造未執行的9.5小時。這些是段落交付，不代表聊天SessionEnd。
 
+14:34:06後的抽查發現待命截圖可能早於SVG圖片解碼完成，補上network-idle與逐圖decode等待後重新操作錄製；原始Before待命有相同問題，原件保留但排除比較，只使用完整Preview。這段驗收修正與交付收尾不含在上表41分32秒內，實際最後時點由新report與receipt記錄。
+
+14:40前後的劍擊圖集抽查發現bounding box交疊會帶入鄰角殘片；三幀改採各自連通輪廓的SVG裁切、原始PNG不變，再重跑建置、瀏覽器及錄製。補測過程曾因編輯比較頁HTML觸發Vite重新載入而中斷錄製，該次report標為失敗，未用於最後驗收；最後錄製期間凍結檔案。
+
 原始瀏覽器JPEG留scratch，逐幀時間戳與SHA-256、GIF時間長度和SHA-256保留在screenshots/vd2/after/recording-*.json。Source／capture雜湊與最後起訖見capture-record.json；不得把前一輪45分50秒或9.5小時預算算進本輪實際工時。

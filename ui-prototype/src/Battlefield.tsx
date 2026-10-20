@@ -499,6 +499,26 @@ export function Battlefield({
           {actor && destination && !playback && (
             <Sprite unit={actor} {...destination} ghost />
           )}
+        </g>
+        {playback &&
+          !reduced &&
+          (() => {
+            const origin = project(playback.to.x + 0.5, playback.to.y + 0.5);
+            const recipient = units.find((u) => u.id === playback.target);
+            const targetPoint = recipient
+              ? project(recipient.x + 0.5, recipient.y + 0.5)
+              : origin;
+            if (playback.stage === "move") return null;
+            return (
+              <CombatEffects
+                clip={playback}
+                source={origin}
+                target={targetPoint}
+                direction={direction}
+              />
+            );
+          })()}
+        <g aria-hidden="true" pointerEvents="none">
           {feedback &&
             playback?.stage === "impact" &&
             (() => {
@@ -519,24 +539,6 @@ export function Battlefield({
               );
             })()}
         </g>
-        {playback &&
-          !reduced &&
-          (() => {
-            const origin = project(playback.to.x + 0.5, playback.to.y + 0.5);
-            const recipient = units.find((u) => u.id === playback.target);
-            const targetPoint = recipient
-              ? project(recipient.x + 0.5, recipient.y + 0.5)
-              : origin;
-            if (playback.stage === "move") return null;
-            return (
-              <CombatEffects
-                clip={playback}
-                source={origin}
-                target={targetPoint}
-                direction={direction}
-              />
-            );
-          })()}
       </svg>
       <div className="arena-caption">
         <span>11 × 9 · 河道不可通行 · Alt＋拖曳平移</span>

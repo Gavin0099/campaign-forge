@@ -66,5 +66,10 @@
     ],
     "checks": [],
     "errors": []
-  }
+  },
+  "excluded_from_art_comparison": [
+    "before/battle-idle-1280.png",
+    "before/battle-idle-1920.png"
+  ],
+  "exclusion_reason": "Original captures retained unchanged, but ground materials were not fully loaded. Use fully loaded Preview captures for fair same-state comparison."
 }

@@ -87,6 +87,17 @@ page.on("response", (r) => {
 const click = (name) => page.getByRole("button", { name }).click();
 const cell = (x, y) => page.locator(`[data-cell="${x},${y}"]`);
 const unit = (id) => page.locator(`[data-unit="${id}"]`);
+async function decodeArtwork() {
+  await page.evaluate(() =>
+    Promise.all(
+      [...document.querySelectorAll("svg image")].map((element) => {
+        const image = new Image();
+        image.src = element.href.baseVal;
+        return image.decode();
+      }),
+    ),
+  );
+}
 const stage = () => page.locator(".battle-arena").getAttribute("data-playback");
 const snapshot = () =>
   page.locator("[data-unit]").evaluateAll((es) =>
@@ -241,9 +252,12 @@ async function begin(choice = "residents", absent = false) {
     await page.getByRole("combobox").selectOption("1");
   }
   await click(/確認出發/);
+  await page.waitForLoadState("networkidle");
+  await decodeArtwork();
 }
 async function shot(name) {
   await page.evaluate(() => document.fonts.ready);
+  await decodeArtwork();
   const file = `${name}.png`;
   await page.screenshot({ path: path.join(output, file) });
   captures.push({

@@ -4,7 +4,7 @@ VQ1的正式Owner判定是「工程驗證通過，但美術驗收未通過」。
 
 ## 看得到的交付
 
-- [實際Before／After比較與兩候選](comparison.html)：固定main@0fc109f基準，兩種解析度、同一待命／預覽狀態；未把After回填成Before。
+- [實際Before／After比較與兩候選](comparison.html)：固定main@0fc109f基準，兩種解析度、同一完整載入的預覽狀態；未把After回填成Before。兩張Before待命圖有材質載入不全，保留原件但排除品質比較。
 - [720p實際戰鬥GIF](../../screenshots/vd2/after/combat-live-1280.gif)、[1080p實際戰鬥GIF](../../screenshots/vd2/after/combat-live-1920.gif)：移動與揮劍→光矢→護印→受擊回復。只使用真正執行中的Chromium影格，沒有預先生成戰鬥影片。
 - [方向與管線](ART-DIRECTION.md)、[原創素材與原件SHA-256](assets.json)、[生成來源與提示紀錄](generation-record.json)、[實際時窗](TIME-LEDGER.md)。舊v1/v2素材原件保留。
 - 原型操作：繼續旅程→營地→渡口事件→選擇→部署→戰場；上方「演出展示」可重播四種演出。Alt＋拖曳或方向按鈕平移，Fit／縮放／聚焦可用；資訊面板可收合。
@@ -54,5 +54,6 @@ Chrome child只收縮減環境、使用repo scratch profile及暫存，路由只
 6. 營地與四人立繪本輪沿用v2；優先花在已選戰場與席恩，未宣稱全七頁完成重新美術驗收。
 7. 動作圖集完整原始提示留在本聊天imagegen tool transcript；repo保留來源ID、精確開頭與摘要，尚未獨立匯出全文。地標提示已完整落盤；這項封存限制明示，不把摘要標成逐字原文。
 8. 未做陌生玩家、跨OS、手把與低階PC驗收；沒有以build、PNG數量或自動檢查數量取代以上美術問題。
+9. 擷取初版未等待SVG圖片解碼，曾得到素材未完整載入的待命圖；After已補解碼等待並重新錄製／核對。Before待命原件不覆寫、明示不作評比；同狀態比較採完整載入的Preview。
 
 本次正常commit/push是段落交付，不是自然SessionEnd。使用者已完成修正版hooks信任與重新載入；尚無原生回呼成功收據，完整治理驗收不因此變更為通過。

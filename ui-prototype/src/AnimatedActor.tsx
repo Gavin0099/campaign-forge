@@ -55,12 +55,16 @@ export function AnimatedActor({
     >
       <defs>
         <clipPath id={id}>
-          <rect
-            x={frame.x - 2}
-            y={frame.y - 2}
-            width={frame.width + 4}
-            height={frame.height + 4}
-          />
+          {frame.clipPath ? (
+            <path d={frame.clipPath} />
+          ) : (
+            <rect
+              x={frame.x - 2}
+              y={frame.y - 2}
+              width={frame.width + 4}
+              height={frame.height + 4}
+            />
+          )}
         </clipPath>
       </defs>
       <g transform={`translate(${-frame.anchorX} ${-frame.anchorY})`}>
