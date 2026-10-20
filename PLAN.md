@@ -1,3 +1,8 @@
+> **最後更新**: 2026-10-20
+> **Owner**: Gavin
+> **Freshness**: Phase (30d)
+> 本表頭僅記錄治理導入日；故事仍停在 S3，未授權 S4。UI 進度見 ui-prototype/PLAN.md。
+
 # 第一批故事企劃計畫
 
 ## 本批結果

@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "severity": "ok",
+  "repo_root": "/Users/gavin_wu/Desktop/campaign-forge",
+  "baseline_yaml": "/Users/gavin_wu/Desktop/campaign-forge/.governance/baseline.yaml",
+  "baseline_version": "1.0.0",
+  "framework_version": null,
+  "checks": {
+    "baseline_yaml_present": true,
+    "baseline_version_known": true,
+    "source_commit_recorded": true,
+    "protected_files_present": true,
+    "protected_files_unmodified": true,
+    "protected_file_sentinel_present": true,
+    "contract_required_fields_present": true,
+    "contract_agents_base_referenced": true,
+    "contract_no_placeholders": true,
+    "contract_not_framework_copy": true,
+    "plan_required_sections_present": true,
+    "agents_sections_filled": true,
+    "memory_schema_complete": true,
+    "plan_freshness": true,
+    "plan_inventory_current": true,
+    "baseline_yaml_freshness": true,
+    "expansion_boundary": true
+  },
+  "findings": [],
+  "warnings": [
+    "expansion_boundary: core hook file not found: /Users/gavin_wu/Desktop/campaign-forge/runtime_hooks/core/session_start.py",
+    "expansion_boundary: core hook file not found: /Users/gavin_wu/Desktop/campaign-forge/runtime_hooks/core/pre_task_check.py",
+    "expansion_boundary: core hook file not found: /Users/gavin_wu/Desktop/campaign-forge/runtime_hooks/core/post_task_check.py"
+  ],
+  "errors": [],
+  "remediation_hints": [],
+  "plan_section_inventory": [
+    "## Scope",
+    "## Slices",
+    "## Design",
+    "## Decisions",
+    "## Risks and pending decisions",
+    "## Verification"
+  ]
+}

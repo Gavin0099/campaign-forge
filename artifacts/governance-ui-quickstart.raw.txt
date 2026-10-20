@@ -1,0 +1,1486 @@
+PASS: 13 original planning files unchanged; no Actions/root LICENSE; 4 artwork files present.
+{
+  "ok": true,
+  "project_root": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype",
+  "plan_path": "ui-prototype/PLAN.md",
+  "contract_path": "/Users/gavin_wu/Desktop/campaign-forge/contract.yaml",
+  "contract_mode": "explicit",
+  "contract_context": {
+    "source": "explicit",
+    "path": "/Users/gavin_wu/Desktop/campaign-forge/contract.yaml",
+    "name": "campaign-forge-contract",
+    "domain": "game-ui-prototype",
+    "plugin_version": "1.0.0",
+    "risk_tier": "unknown"
+  },
+  "pre_task_ok": true,
+  "session_start_ok": true,
+  "pre_task": {
+    "ok": true,
+    "project_root": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype",
+    "plan_path": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype/PLAN.md",
+    "freshness": {
+      "status": "FRESH",
+      "days_since_update": 0,
+      "threshold_days": 7
+    },
+    "runtime_contract": {
+      "rules": [
+        "common"
+      ],
+      "risk": "low",
+      "oversight": "review-required",
+      "memory_mode": "candidate",
+      "enforcement_profile": "advisory_mainline",
+      "experimental_enforcement_enabled": false
+    },
+    "suggested_rules_preview": [
+      "common"
+    ],
+    "suggested_skills": [
+      "code-style",
+      "governance-runtime"
+    ],
+    "suggested_agent": "advanced-agent",
+    "rule_pack_suggestions": {
+      "project_root": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype",
+      "language_packs": [],
+      "framework_packs": [],
+      "scope_packs": [],
+      "domain_packs": [],
+      "suggested_skills": [
+        "code-style",
+        "governance-runtime"
+      ],
+      "suggested_agent": "advanced-agent",
+      "suggested_rules": [
+        "common"
+      ],
+      "suggested_rules_preview": [
+        "common"
+      ],
+      "unloadable_signals": [],
+      "notes": [
+        "domain_packs are sourced from contract.yaml rule_roots and take highest priority",
+        "language packs use language-specific structural signals before count/share source-file confidence",
+        "low-confidence language packs remain advisory preview evidence and do not affect suggested rules, skills, or agents",
+        "avalonia framework structure files are sampled first; structural and strong source signals intentionally retain the existing medium confidence ceiling",
+        "weak avalonia lexical matches remain advisory preview evidence and do not affect suggested rules or pre-task warnings",
+        "planned registry entries are suppressed from active suggestion, preview, warning, skill, and agent surfaces",
+        "scope packs are advisory only and should be confirmed by the contract or human reviewer",
+        "suggested_rules_preview includes advisory scope packs for convenience, but does not mutate the contract",
+        "suggested_skills and suggested_agent are advisory only and do not auto-activate agent behavior",
+        "suggested_rules and suggested_rules_preview only carry pack names the loader can resolve; detected-but-unloadable names are reported in unloadable_signals instead of being suggested"
+      ]
+    },
+    "architecture_impact_preview": null,
+    "rule_packs": {
+      "requested": [
+        "common"
+      ],
+      "resolved": [
+        {
+          "name": "common",
+          "category": "scope",
+          "files": [
+            "governance/rules/common/core.md"
+          ]
+        }
+      ],
+      "missing": [],
+      "valid": true
+    },
+    "active_rules": {
+      "requested": [
+        "common"
+      ],
+      "active_rules": [
+        {
+          "name": "common",
+          "category": "scope",
+          "files": [
+            {
+              "path": "governance/rules/common/core.md",
+              "title": "Common Rule Pack"
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "valid": true,
+      "content_stripped": true,
+      "content_tier": 2
+    },
+    "topic_filter": {
+      "task_topic": "runtime_governance",
+      "filtered_out": [],
+      "rules_loaded": [
+        "common"
+      ]
+    },
+    "contract_resolution": {
+      "source": "discovery",
+      "path": "/Users/gavin_wu/Desktop/campaign-forge/contract.yaml",
+      "warnings": [],
+      "error": null
+    },
+    "domain_contract": {
+      "name": "campaign-forge-contract",
+      "contract_path": "/Users/gavin_wu/Desktop/campaign-forge/contract.yaml",
+      "contract_root": "/Users/gavin_wu/Desktop/campaign-forge",
+      "documents": [
+        {
+          "path": "/Users/gavin_wu/Desktop/campaign-forge/AGENTS.base.md",
+          "exists": true,
+          "content": "# AGENTS.base.md\n<!-- governance-baseline: protected -->\n<!-- baseline_version: 1.0.0 -->\n<!-- DO NOT EDIT — managed by ai-governance-framework -->\n<!-- To add repo-specific rules, create AGENTS.md and extend this file's sections. -->\n<!-- Hash is recorded in .governance/baseline.yaml and verified on every drift check. -->\n\n## Level Alignment\n\n- Declared L0 but involves domain logic, boundary crossing, or behavior change → upgrade to L1\n- Declared L1 but involves core domain, security, data integrity, or irreversible state → upgrade to L2\n- Uncertain classification → upgrade, do not downgrade\n\n## Execution Pipeline\n\nFor L1+, the default workflow is:\n\n1. **Analyze** — understand behavior and constraints before touching code\n2. **Define** — contracts, boundaries, failure paths\n3. **Verify Plan** — what evidence will prove the change is safe\n4. **Implement** — minimum compliant change\n5. **Refactor** — only under evidence protection\n\nDo not skip a step when the omission would hide risk.\n\n## Forbidden Behaviors\n\n- Expand scope beyond what was explicitly instructed\n- Refactor unrelated areas for cleanliness or taste\n- Add speculative abstractions for hypothetical future requirements\n- Fake, inflate, or omit evidence\n- Assume intent when the instruction is ambiguous — ask instead\n\n## Secret Handling\n\n- Never commit tokens, API keys, credentials, or secrets to the repo\n- Never write tokens or credentials into memory/ files or logs\n- If a secret appears in conversation context, do not persist it anywhere\n- `.env` files and credentials must be in `.gitignore` and never staged\n\n## AI Governance Update Routing\n\nWhen the user says \"幫我更新最新版 AI Governance\" or uses equivalent update\nwording, route the request to `governance_tools.f7_full_update` even if F-7 was\nnot named explicitly. The governed updater is an F-7 backend, not the complete\nupdate-report surface.\n\nFor updated, already-current, blocked, and fallback/manual terminal results,\nrelay the complete `[human_readable_adoption_summary]` table when available.\nIf it is unavailable or omitted, report\n`human_readable_adoption_summary: NOT REPORTED`,\n`update_report_complete=false`, and `completion_claim_allowed=false`; do not\nclaim a complete AI Governance update report.\n\n## Memory Update Triggers\n\nThe following events require updating PLAN.md and/or the relevant memory/ file:\n\n| Event | Required update |\n|-------|----------------|\n| Milestone reached | PLAN.md phase/sprint + memory/active_task |\n| Architecture decision made | PLAN.md decision log + memory/knowledge_base |\n| Bug fixed with root cause identified | memory/knowledge_base |\n| Risk or incident encountered | PLAN.md risk section + memory/active_task |\n| Session end | canonical `memory/YYYY-MM-DD.md` record when closeout is non-stateless |\n\nAutomatic closeout has one write boundary: `session_end` may append the daily\ncanonical record through `governance_tools.memory_record`. Pre-commit and\n`memory_workflow` only inspect or validate memory state; they do not write it.\n`memory/01_active_task.md`, `memory/03_knowledge_base.md`, and `PLAN.md` remain\nmilestone, decision, or human-curation surfaces and are not rewritten after\nevery session.\n\nWhen an implementation requires a canonical closeout companion, keep the\nimplementation and closeout as separate commits on the same branch and in one\npull request by default. A successful merge, push, or remote verification is\ndelivery evidence only; it must not create another memory commit or second pull\nrequest. Open a follow-up slice only for a new defect, omitted required\ngovernance state, or explicit owner authorization.\n\n## Engineering Explanation\n\nWhenever the main agent reports status, review, diagnosis, or completion, or\nthe owner asks for a plain explanation, the main agent must explain the\nengineering meaning before the technical ledger. Reordering the same fields\nunder new headings is not enough.\n\nCanonical source: `governance/RESPONSE_ENVELOPE_CONTRACT.md`, section\n`Engineering Explanation (Evidence-Preserving Interpretation)`. This section is\nthe minimum fallback when that canonical contract is not loaded.\n\n- Separate observed fact, supported interpretation, hypothesis, authority\n  state, and next action.\n- Assume the reader is a senior engineer who understands software engineering\n  but has not followed this session. Reconstruct the minimum missing context:\n  the original problem, what happened, why the facts support this result, and\n  what the result changes or does not change for the goal. Use the event\n  sequence or evidentiary relationship; do not invent causation.\n- Do not use project codes, status tokens, evidence fields, or protocol terms as\n  the explanation itself. Explain each decision-relevant term on first use and\n  connect the events; translation without relationships is not explanation.\n- Preserve exact numbers, commands, paths, identifiers, conditions, evidence,\n  and `not_claimed` boundaries when they limit the conclusion.\n- Do not turn correlation into causation, a proxy into measured effect, a\n  recommendation into an owner decision, or an unapproved follow-up into a\n  promised action.\n- Use the task's natural shape: timeline for diagnosis; completed / blocked /\n  next for progress; trustworthy / unsupported / decision impact for review;\n  problem / mechanism / difference / success meaning for concept questions.\n- Include a next action only when it is relevant. Naming a candidate action does\n  not authorize it.\n- A clear answer that changes evidence or authority is a failed explanation.\n\nThis is an owner-facing reporting rule, not a semantic gate. Human\ncomprehension remains the acceptance signal.\n\n## Session Closeout Obligation\n\nWriting `artifacts/session-closeout.txt` before session end is a **governance\nobligation**, not a suggestion.\n\nWhere a governed lifecycle hook is wired, the harness calls `session_end` on that\nhook's event; Session-End Closeout Responsibility below defines when session end\napplies and what to do without such a hook. If the closeout artifact\nis missing or insufficient, the runtime records `closeout_missing` or\n`closeout_insufficient` in the verdict and writes a fail-closed canonical daily\nrecord when the session is non-stateless. The invalid closeout content is not\npromoted. The gap remains auditable and visible to reviewers.\n\n<!-- ai-governance:session-end-closeout BEGIN version=1 canonical=AGENTS.base.md -->\n### Session-End Closeout Responsibility\n\nThese rules apply to every agent platform (Codex, Claude, Copilot and others).\nThey define when closeout is required, who is responsible, and what may be\nclaimed. They do not define which lifecycle event a platform uses; that is\nplatform-specific and must be qualified separately for each platform.\n\n1. **Task DONE is not session end.** Finishing a task, a review, or a milestone\n   ends that task only. Report DONE, do not expand the work, and leave the\n   session open for the next request.\n2. **Closeout at a defined session end is a duty, not new work.** A mandatory\n   closeout at session end is not scope expansion. Hard Stop After DONE forbids\n   closeout after task DONE; it does not forbid closeout at session end.\n3. **Session end must come from a defined, observable source.** Only two sources\n   count: a platform lifecycle event whose session-end meaning has been\n   confirmed for that platform, or the user explicitly asking to end the session\n   or to close out. The agent must not infer that the conversation is over. A\n   final answer, a DONE report, or a per-turn `Stop` event is not session end\n   unless that meaning has been confirmed.\n4. **Governed lifecycle hook present:** the harness is responsible for\n   triggering canonical closeout. A governed hook is one wired to the governance\n   closeout entry and confirmed to run for this platform.\n5. **No usable governed hook:** only when session end is established under\n   rule 3, the top-level agent must attempt the existing manual closeout\n   (`python -m governance_tools.manage_agent_closeout print-manual --agent <agent>`\n   prints the command). If it cannot run or its result cannot be verified,\n   report closeout as `NOT PERSISTED` or `UNKNOWN`; never claim it was persisted.\n6. **Subagent completion is not project-level session end.** A subagent\n   returning to its parent must not run project-level closeout unless it has its\n   own governed session identity and was explicitly given closeout\n   responsibility.\n\nA closeout, including the manual fallback, does not authorize commit, push,\npull request, or a new task; each still needs its own explicit authorization.\n\nCloseout candidate, canonical record, and memory are verified separately. A\nsuccessful closeout on one platform is not evidence for any other platform.\n<!-- ai-governance:session-end-closeout END -->\n\n### Required fields\n\nAll fields must be present. Vague values are flagged as insufficient.\n\n```\nTASK_INTENT: <one sentence — declared goal of this session>\nWORK_COMPLETED: <what was actually done — verifiable claims only>\nFILES_TOUCHED: <comma-separated file list, or NONE>\nCHECKS_RUN: <specific commands or checks run, or NONE>\nOPEN_RISKS: <what might be wrong or incomplete, or NONE>\nNOT_DONE: <what was not completed this session, or NONE>\nRECOMMENDED_MEMORY_UPDATE: <what memory/ file should change and why, or NO_UPDATE>\n```\n\n### Rules\n\n- `WORK_COMPLETED` must contain verifiable claims. Do not write \"made improvements\"\n  or \"worked on things\" — these are vague and will be rejected as insufficient.\n- `CHECKS_RUN` must name specific commands if non-`NONE`.\n- If there was no material progress, write `WORK_COMPLETED: NONE` — do not\n  fabricate completions.\n- `NOT_DONE` and `OPEN_RISKS` are the most important fields. AI agents tend to\n  omit failures. Do not.\n\n### If you cannot write the closeout\n\nWrite it anyway with `WORK_COMPLETED: NONE` and explain in `OPEN_RISKS` why\nthe session produced no verifiable output. This is a valid closeout.\n\nSee `docs/session-closeout-schema.md` for examples and field constraints.\n\n## Definition of Done\n\nA task is done when:\n\n- Behavior is explicit and observable\n- Failure paths are guarded\n- Architecture boundaries remain intact\n- Evidence matches the declared risk level\n- PLAN.md and memory/ reflect the new state"
+        },
+        {
+          "path": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype/PLAN.md",
+          "exists": true,
+          "content": "# Campaign Forge UI Prototype\n\n> **最後更新**: 2026-10-20\n> **Owner**: Gavin（需求與決策）；Codex（本輪執行）\n> **Freshness**: Sprint (7d)\n\n## Scope\n\n獨立的 React / TypeScript 本地 PC UI 展示。原始 README、PLAN、SLICES、DECISIONS、EXECUTION、候選 A 與比較文件已閱讀。A/B/C 未選案；A 只供展示，人物外觀與地圖均是提案。不得以 UI 展示取代 S4 授權。\n\n## Slices\n\n- UI-01：流程、資訊層級、資料分離、風險界線完成。\n- UI-02：主選單、六章24節點示意、營地人物、劇情抉擇完成。\n- UI-03：隊伍部署、戰場、選角→移動→技能→確認及撤銷完成；規則固定示範。\n- UI-04：選擇延續到支援、目標、同伴與戰後結果完成。\n- UI-05：四位人物、五種戰場小人、渡口場景與戰役地圖已整合；實際驗收記錄見 docs/VERIFICATION.md。\n\n## Design\n\n視覺重心是人物與戰場。成熟低飽和奇幻插畫、羊皮紙地圖、低調金屬框，繁體中文。人物立繪與小人獨立生成；敵我用 ◆／▲、文字及色彩一起區分。24節點是容量示意，後續章名與路線不揭露。\n\n## Decisions\n\n- 使用 React 18 / Vite 4 / TypeScript 5.6，僅介面驗證，不指定正式引擎。\n- 遊戲資料在 src/data.ts，素材路徑在資料設定中維護。\n- 無正式儲存，狀態在本次頁面生命週期保留；重設按鈕明確清除。\n- built-in image_gen 生成原創展示素材；不下載商業遊戲圖片。\n- domain / risk 由使用者授權代填為 game-ui-prototype / low。\n\n## Risks and pending decisions\n\n正式故事、角色身分／外觀、地圖地理、職業／技能、勝敗判定、戰鬥數值都待選案與設計。手把只有映射提案。尚無外部玩家可用性測試與正式平台相容性測試。\n\n## Verification\n\n建置、範圍保護與 CUA 實際瀏覽器流程；保留 screenshots 與 docs/VERIFICATION.md。AI Governance 真實 commit/push hook 驗證仍需另行授權；不得稱完整驗收完成。"
+        },
+        {
+          "path": "/Users/gavin_wu/Desktop/campaign-forge/governance/TESTING.md",
+          "exists": true,
+          "content": "# Testing\n\n執行 `npm run build --prefix ui-prototype` 與 `python3 scripts/validate_ui_scope.py`。\nUI 驗證見 `ui-prototype/docs/VERIFICATION.md`。不以圖稿代替實際執行畫面；預覽不得改變生命、隊伍或已確認行動數。\n治理以 contract loader、drift、hooks validator、explicit-plan quickstart smoke 驗證；真實 commit/push 與平台自動 lifecycle 是不同證據，禁止混稱。"
+        },
+        {
+          "path": "/Users/gavin_wu/Desktop/campaign-forge/governance/ARCHITECTURE.md",
+          "exists": true,
+          "content": "# Architecture\n\n- 原始企劃在 repo root / docs；本次保持內容不變。\n- UI 在 ui-prototype，資料集中 src/data.ts，視覺 public/art，React 本次頁面記憶狀態。\n- AI Governance 以 repo 內 submodule 固定 e8e67796894cd562ef0bce217bfad0fac211a44d。\n- AGENTS.base.md 與 common/core.md 原樣複製自該版本，Apache 2.0 授權只適用相應框架檔案，見 licenses。專案故事與新美術沒有因此被授予開源授權。\n- 本地 Git hooks 使用 framework 既有 installer；不建立 GitHub Actions 或外部服務。\n- 未設定 Codex 平台 lifecycle 自動呼叫，手動 runtime smoke 僅驗證函式可執行。"
+        }
+      ],
+      "ai_behavior_override": [
+        {
+          "path": "/Users/gavin_wu/Desktop/campaign-forge/AGENTS.base.md",
+          "exists": true,
+          "content": "# AGENTS.base.md\n<!-- governance-baseline: protected -->\n<!-- baseline_version: 1.0.0 -->\n<!-- DO NOT EDIT — managed by ai-governance-framework -->\n<!-- To add repo-specific rules, create AGENTS.md and extend this file's sections. -->\n<!-- Hash is recorded in .governance/baseline.yaml and verified on every drift check. -->\n\n## Level Alignment\n\n- Declared L0 but involves domain logic, boundary crossing, or behavior change → upgrade to L1\n- Declared L1 but involves core domain, security, data integrity, or irreversible state → upgrade to L2\n- Uncertain classification → upgrade, do not downgrade\n\n## Execution Pipeline\n\nFor L1+, the default workflow is:\n\n1. **Analyze** — understand behavior and constraints before touching code\n2. **Define** — contracts, boundaries, failure paths\n3. **Verify Plan** — what evidence will prove the change is safe\n4. **Implement** — minimum compliant change\n5. **Refactor** — only under evidence protection\n\nDo not skip a step when the omission would hide risk.\n\n## Forbidden Behaviors\n\n- Expand scope beyond what was explicitly instructed\n- Refactor unrelated areas for cleanliness or taste\n- Add speculative abstractions for hypothetical future requirements\n- Fake, inflate, or omit evidence\n- Assume intent when the instruction is ambiguous — ask instead\n\n## Secret Handling\n\n- Never commit tokens, API keys, credentials, or secrets to the repo\n- Never write tokens or credentials into memory/ files or logs\n- If a secret appears in conversation context, do not persist it anywhere\n- `.env` files and credentials must be in `.gitignore` and never staged\n\n## AI Governance Update Routing\n\nWhen the user says \"幫我更新最新版 AI Governance\" or uses equivalent update\nwording, route the request to `governance_tools.f7_full_update` even if F-7 was\nnot named explicitly. The governed updater is an F-7 backend, not the complete\nupdate-report surface.\n\nFor updated, already-current, blocked, and fallback/manual terminal results,\nrelay the complete `[human_readable_adoption_summary]` table when available.\nIf it is unavailable or omitted, report\n`human_readable_adoption_summary: NOT REPORTED`,\n`update_report_complete=false`, and `completion_claim_allowed=false`; do not\nclaim a complete AI Governance update report.\n\n## Memory Update Triggers\n\nThe following events require updating PLAN.md and/or the relevant memory/ file:\n\n| Event | Required update |\n|-------|----------------|\n| Milestone reached | PLAN.md phase/sprint + memory/active_task |\n| Architecture decision made | PLAN.md decision log + memory/knowledge_base |\n| Bug fixed with root cause identified | memory/knowledge_base |\n| Risk or incident encountered | PLAN.md risk section + memory/active_task |\n| Session end | canonical `memory/YYYY-MM-DD.md` record when closeout is non-stateless |\n\nAutomatic closeout has one write boundary: `session_end` may append the daily\ncanonical record through `governance_tools.memory_record`. Pre-commit and\n`memory_workflow` only inspect or validate memory state; they do not write it.\n`memory/01_active_task.md`, `memory/03_knowledge_base.md`, and `PLAN.md` remain\nmilestone, decision, or human-curation surfaces and are not rewritten after\nevery session.\n\nWhen an implementation requires a canonical closeout companion, keep the\nimplementation and closeout as separate commits on the same branch and in one\npull request by default. A successful merge, push, or remote verification is\ndelivery evidence only; it must not create another memory commit or second pull\nrequest. Open a follow-up slice only for a new defect, omitted required\ngovernance state, or explicit owner authorization.\n\n## Engineering Explanation\n\nWhenever the main agent reports status, review, diagnosis, or completion, or\nthe owner asks for a plain explanation, the main agent must explain the\nengineering meaning before the technical ledger. Reordering the same fields\nunder new headings is not enough.\n\nCanonical source: `governance/RESPONSE_ENVELOPE_CONTRACT.md`, section\n`Engineering Explanation (Evidence-Preserving Interpretation)`. This section is\nthe minimum fallback when that canonical contract is not loaded.\n\n- Separate observed fact, supported interpretation, hypothesis, authority\n  state, and next action.\n- Assume the reader is a senior engineer who understands software engineering\n  but has not followed this session. Reconstruct the minimum missing context:\n  the original problem, what happened, why the facts support this result, and\n  what the result changes or does not change for the goal. Use the event\n  sequence or evidentiary relationship; do not invent causation.\n- Do not use project codes, status tokens, evidence fields, or protocol terms as\n  the explanation itself. Explain each decision-relevant term on first use and\n  connect the events; translation without relationships is not explanation.\n- Preserve exact numbers, commands, paths, identifiers, conditions, evidence,\n  and `not_claimed` boundaries when they limit the conclusion.\n- Do not turn correlation into causation, a proxy into measured effect, a\n  recommendation into an owner decision, or an unapproved follow-up into a\n  promised action.\n- Use the task's natural shape: timeline for diagnosis; completed / blocked /\n  next for progress; trustworthy / unsupported / decision impact for review;\n  problem / mechanism / difference / success meaning for concept questions.\n- Include a next action only when it is relevant. Naming a candidate action does\n  not authorize it.\n- A clear answer that changes evidence or authority is a failed explanation.\n\nThis is an owner-facing reporting rule, not a semantic gate. Human\ncomprehension remains the acceptance signal.\n\n## Session Closeout Obligation\n\nWriting `artifacts/session-closeout.txt` before session end is a **governance\nobligation**, not a suggestion.\n\nWhere a governed lifecycle hook is wired, the harness calls `session_end` on that\nhook's event; Session-End Closeout Responsibility below defines when session end\napplies and what to do without such a hook. If the closeout artifact\nis missing or insufficient, the runtime records `closeout_missing` or\n`closeout_insufficient` in the verdict and writes a fail-closed canonical daily\nrecord when the session is non-stateless. The invalid closeout content is not\npromoted. The gap remains auditable and visible to reviewers.\n\n<!-- ai-governance:session-end-closeout BEGIN version=1 canonical=AGENTS.base.md -->\n### Session-End Closeout Responsibility\n\nThese rules apply to every agent platform (Codex, Claude, Copilot and others).\nThey define when closeout is required, who is responsible, and what may be\nclaimed. They do not define which lifecycle event a platform uses; that is\nplatform-specific and must be qualified separately for each platform.\n\n1. **Task DONE is not session end.** Finishing a task, a review, or a milestone\n   ends that task only. Report DONE, do not expand the work, and leave the\n   session open for the next request.\n2. **Closeout at a defined session end is a duty, not new work.** A mandatory\n   closeout at session end is not scope expansion. Hard Stop After DONE forbids\n   closeout after task DONE; it does not forbid closeout at session end.\n3. **Session end must come from a defined, observable source.** Only two sources\n   count: a platform lifecycle event whose session-end meaning has been\n   confirmed for that platform, or the user explicitly asking to end the session\n   or to close out. The agent must not infer that the conversation is over. A\n   final answer, a DONE report, or a per-turn `Stop` event is not session end\n   unless that meaning has been confirmed.\n4. **Governed lifecycle hook present:** the harness is responsible for\n   triggering canonical closeout. A governed hook is one wired to the governance\n   closeout entry and confirmed to run for this platform.\n5. **No usable governed hook:** only when session end is established under\n   rule 3, the top-level agent must attempt the existing manual closeout\n   (`python -m governance_tools.manage_agent_closeout print-manual --agent <agent>`\n   prints the command). If it cannot run or its result cannot be verified,\n   report closeout as `NOT PERSISTED` or `UNKNOWN`; never claim it was persisted.\n6. **Subagent completion is not project-level session end.** A subagent\n   returning to its parent must not run project-level closeout unless it has its\n   own governed session identity and was explicitly given closeout\n   responsibility.\n\nA closeout, including the manual fallback, does not authorize commit, push,\npull request, or a new task; each still needs its own explicit authorization.\n\nCloseout candidate, canonical record, and memory are verified separately. A\nsuccessful closeout on one platform is not evidence for any other platform.\n<!-- ai-governance:session-end-closeout END -->\n\n### Required fields\n\nAll fields must be present. Vague values are flagged as insufficient.\n\n```\nTASK_INTENT: <one sentence — declared goal of this session>\nWORK_COMPLETED: <what was actually done — verifiable claims only>\nFILES_TOUCHED: <comma-separated file list, or NONE>\nCHECKS_RUN: <specific commands or checks run, or NONE>\nOPEN_RISKS: <what might be wrong or incomplete, or NONE>\nNOT_DONE: <what was not completed this session, or NONE>\nRECOMMENDED_MEMORY_UPDATE: <what memory/ file should change and why, or NO_UPDATE>\n```\n\n### Rules\n\n- `WORK_COMPLETED` must contain verifiable claims. Do not write \"made improvements\"\n  or \"worked on things\" — these are vague and will be rejected as insufficient.\n- `CHECKS_RUN` must name specific commands if non-`NONE`.\n- If there was no material progress, write `WORK_COMPLETED: NONE` — do not\n  fabricate completions.\n- `NOT_DONE` and `OPEN_RISKS` are the most important fields. AI agents tend to\n  omit failures. Do not.\n\n### If you cannot write the closeout\n\nWrite it anyway with `WORK_COMPLETED: NONE` and explain in `OPEN_RISKS` why\nthe session produced no verifiable output. This is a valid closeout.\n\nSee `docs/session-closeout-schema.md` for examples and field constraints.\n\n## Definition of Done\n\nA task is done when:\n\n- Behavior is explicit and observable\n- Failure paths are guarded\n- Architecture boundaries remain intact\n- Evidence matches the declared risk level\n- PLAN.md and memory/ reflect the new state"
+        },
+        {
+          "path": "/Users/gavin_wu/Desktop/campaign-forge/AGENTS.md",
+          "exists": true,
+          "content": "# Campaign Forge 工作界線\n\n本 repo 專做原創 Steam／PC 奇幻戰棋 RPG 的故事企劃。當前停在 S3 故事選擇關卡，A、B、C 都是提案。\n\n- 先讀 README、PLAN、SLICES、docs/DECISIONS.md 與 docs/EXECUTION.md，再接續工作。\n- Gavin 選案前，保留三案獨立性。推薦結果不構成定案，不建立正式世界觀或 24 關腳本。\n- 已核准的本批只有 S0 至 S3。S4 起須在使用者選案並明確授權後才執行。\n- 所有讀寫限於本企劃工作區。可唯讀查閱 docs/SOURCES.md 列出的公開來源。不要讀取其他專案、公司檔案或公司系統。\n- GitHub 僅使用已授權工具與既有 gh 登入。目標 `Gavin0099/campaign-forge` 已由擁有者建立並選擇 Public；不重試建庫，不新增憑證、登入或權限，不變更 visibility。\n- 僅正常推送到已授權的目標 repo。若遠端出現尚未核對的提交或衝突，停止並報告；不覆寫使用者內容、不接管其他 repo、不強制 push。\n- 不啟用 GitHub Actions、付費工具或部署，不寫遊戲引擎、戰棋原型，不操作硬體。\n- 不沿用其他專案的平台或定價限制，不合併其他遊戲專案。\n- 不複製 D&D 人物、地名、原文、關卡或未授權書籍。職業名稱、技能、規則與授權仍待後續設計。\n- 不新增把故事內容開源的 LICENSE。若將來採用第三方程式或文件，先逐項保留相應來源與授權聲明。\n- 設定變更要標示提案或已確認。每個重大選擇必須寫出玩家已知資訊、實際代價與後續可見後果。\n- 每位核心同伴要有自己的目標、拒絕條件與離隊後的行動。主線不得因少一名可選同伴而無法完成。\n\n本文件未授權自動接續未來 slices，也未要求新增代理或平行執行。\n\n## UI Prototype Authorization — 2026-10-20\n\n使用者本次明確授權 `ui-prototype/` 的 UI-01 至 UI-05、原創展示美術與 AI Governance 完整導入；此範圍優先於上方「不寫戰棋原型」的一般界線。原始故事 PLAN、SLICES、docs 均保持不變，S4 仍未授權。參考 TacticalGo 僅限使用者指定的公開 skill 方法；不得挪用人物、美術、其他專案限制或正式設定。\n\n本 repo 延伸 `AGENTS.base.md`，使用者明確限制優先：未另行授權不得 commit、push、PR、部署、付費或啟用 Actions。框架的自動流程不得自行擴張權限。\n\n## Repo-Specific Risk Levels\n<!-- governance:key=risk_levels -->\n\n- domain: game-ui-prototype；risk_tier: low，由使用者「你直接幫我寫就好」授權代填。\n- L0：文字、文件、純視覺資產檢視。\n- L1：React UI 狀態、選擇後果、角色缺席與鍵盤操作；需實際操作證據。\n- 低風險依據：僅本地 UI 展示，沒有生產資料、付款、連線、正式存檔、完整戰棋引擎。\n\n## Must-Test Paths\n<!-- governance:key=must_test_paths -->\n\n- `ui-prototype/src/`：兩條故事選擇、部署缺席角色、移動／技能預覽／確認／撤銷、結果回戰役。\n- `npm run build --prefix ui-prototype`，`python3 scripts/validate_ui_scope.py`。\n- 瀏覽器實測 1920×1080、1280×720、放大文字、對白紀錄與 Esc；截圖必須來自執行畫面。\n\n## L1 → L2 Escalation Triggers\n<!-- governance:key=escalation_triggers -->\n\n正式故事定案、正式戰鬥規則、永久資料、帳號、網路服務、安全設定、費用、公開部署及跨專案寫入，均超出本輪 UI 授權，需回報與取得相應授權。\n\n## Repo-Specific Forbidden Behaviors\n<!-- governance:key=forbidden_behaviors -->\n\n不得把 A 美術或固定資料當正式設定；不得覆寫原始企劃、其他分支或使用者未提交檔案；不得複製商業遊戲素材；不得宣稱安裝 hooks 等於實際 commit/push 驗證。\n\n## AI Governance Memory Workflow Router\n<!-- governance:key=memory_workflow -->\n\n開始工作讀 `memory/01_active_task.md` 與 `memory/02_project_facts.md`。里程碑更新 `ui-prototype/PLAN.md` 與相關記憶；使用者陳述與代理觀察分開記錄。依框架 session-end 定義才觸發結束紀錄；最終回覆本身不表示 session end。\n\n治理工具以 `PYTHONPATH=ai-governance-framework python3 -m governance_tools.<tool>` 執行。UI 計畫位於 `ui-prototype/PLAN.md`；部分上游 readiness 工具硬編碼根目錄 PLAN，需如實列出差異，不能為通過檢查而修改故事企劃。框架更新使用 F7 流程；目前為首次 submodule 導入。"
+        }
+      ],
+      "rule_roots": [
+        "/Users/gavin_wu/Desktop/campaign-forge/governance/rules"
+      ],
+      "validators": [
+        {
+          "name": "validate_ui_scope",
+          "path": "/Users/gavin_wu/Desktop/campaign-forge/scripts/validate_ui_scope.py",
+          "exists": true
+        }
+      ],
+      "raw": {
+        "name": "campaign-forge-contract",
+        "plugin_version": "1.0.0",
+        "framework_interface_version": "1",
+        "framework_compatible": ">=1.0.0,<2.0.0",
+        "domain": "game-ui-prototype",
+        "risk_tier": "low",
+        "documents": [
+          "AGENTS.base.md",
+          "ui-prototype/PLAN.md",
+          "governance/TESTING.md",
+          "governance/ARCHITECTURE.md"
+        ],
+        "ai_behavior_override": [
+          "AGENTS.base.md",
+          "AGENTS.md"
+        ],
+        "rule_roots": [
+          "governance/rules"
+        ],
+        "validators": [
+          "scripts/validate_ui_scope.py"
+        ],
+        "evidence_roots": [
+          "artifacts",
+          "ui-prototype/screenshots"
+        ]
+      }
+    },
+    "resolved_contract_file": "/Users/gavin_wu/Desktop/campaign-forge/contract.yaml",
+    "summary_first": {
+      "active": false,
+      "task_level": "L1",
+      "note": "full domain contract loaded"
+    },
+    "decision_boundary": {
+      "preconditions_checked": [],
+      "boundary_effect": "pass"
+    },
+    "precondition_gate_validator": {
+      "ok": true,
+      "missing_preconditions": [],
+      "recommended_mode": "allow_analysis_only",
+      "forbidden_claims": [],
+      "rule_refs": [],
+      "signals": {
+        "wants_synthesizable_rtl": false,
+        "wants_control_interface_logic": false,
+        "has_reset_definition": false,
+        "has_handshake_definition": false,
+        "reset_negative_detected": false,
+        "handshake_negative_detected": false
+      }
+    },
+    "assumption_check": {
+      "present": false,
+      "assumptions_present": false,
+      "alternatives_present": false,
+      "alternatives_count": 0,
+      "evidence_present": false,
+      "reframe_present": false,
+      "action_decision": null,
+      "complete": false,
+      "missing": [
+        "assumptions",
+        "alternative_root_causes",
+        "evidence",
+        "reframe_or_validation_step"
+      ]
+    },
+    "evidence_integrity": {
+      "direct_evidence_frozen": false,
+      "source": "no_direct_evidence",
+      "has_strong_marker": false,
+      "has_no_evidence_marker": false
+    },
+    "evidence_integrity_gate": {
+      "ok": true,
+      "gate": "evidence_integrity_gate",
+      "violations": [],
+      "summary": {
+        "case_id": "runtime_task",
+        "kind": "unknown",
+        "phase": "final",
+        "violation_count": 0,
+        "hard_fail": false
+      }
+    },
+    "decision_policy": {
+      "risk_tier": "low",
+      "risk_score": 4.1,
+      "premise_status": "unknown",
+      "evidence_alignment": "absent",
+      "execution_scope": "local_reversible",
+      "reversibility": "easy",
+      "correctness_mode": "bounded_trial",
+      "selected_action": "proceed_with_assumption",
+      "ranked_actions": [
+        {
+          "action": "proceed_with_assumption",
+          "score": 1.4,
+          "reasons": [
+            "mode:bounded_trial",
+            "premise:unknown",
+            "evidence:absent",
+            "scope:local_reversible"
+          ]
+        },
+        {
+          "action": "need_more_info",
+          "score": 0.8,
+          "reasons": [
+            "mode:bounded_trial",
+            "premise:unknown",
+            "evidence:absent",
+            "scope:local_reversible",
+            "direct_evidence_missing"
+          ]
+        },
+        {
+          "action": "reframe",
+          "score": 0.3,
+          "reasons": [
+            "mode:bounded_trial",
+            "premise:unknown",
+            "evidence:absent",
+            "scope:local_reversible"
+          ]
+        },
+        {
+          "action": "proceed",
+          "score": 0.2,
+          "reasons": [
+            "mode:bounded_trial",
+            "premise:unknown",
+            "evidence:absent",
+            "scope:local_reversible"
+          ]
+        },
+        {
+          "action": "reject",
+          "score": 0.1,
+          "reasons": [
+            "mode:bounded_trial",
+            "premise:unknown",
+            "evidence:absent",
+            "scope:local_reversible"
+          ]
+        }
+      ],
+      "confidence": 1.0,
+      "reasons": [
+        "risk_tier:low",
+        "premise_status:unknown",
+        "evidence_alignment:absent",
+        "execution_scope:local_reversible",
+        "correctness_mode:bounded_trial",
+        "assumption_evidence_missing"
+      ],
+      "required_followup": [
+        "mark_assumption_explicitly",
+        "prepare_rollback_or_fallback"
+      ],
+      "fallback_plan": "Proceed with bounded local change and explicit rollback plan.",
+      "reframed_task": "",
+      "advisory_signals": [
+        "proceeding_under_assumption",
+        "assumption_evidence_missing"
+      ],
+      "decision_action": "proceed_with_assumption",
+      "decision_candidates": [
+        {
+          "action": "proceed_with_assumption",
+          "score": 1.4,
+          "reasons": [
+            "mode:bounded_trial",
+            "premise:unknown",
+            "evidence:absent",
+            "scope:local_reversible"
+          ]
+        },
+        {
+          "action": "need_more_info",
+          "score": 0.8,
+          "reasons": [
+            "mode:bounded_trial",
+            "premise:unknown",
+            "evidence:absent",
+            "scope:local_reversible",
+            "direct_evidence_missing"
+          ]
+        },
+        {
+          "action": "reframe",
+          "score": 0.3,
+          "reasons": [
+            "mode:bounded_trial",
+            "premise:unknown",
+            "evidence:absent",
+            "scope:local_reversible"
+          ]
+        },
+        {
+          "action": "proceed",
+          "score": 0.2,
+          "reasons": [
+            "mode:bounded_trial",
+            "premise:unknown",
+            "evidence:absent",
+            "scope:local_reversible"
+          ]
+        },
+        {
+          "action": "reject",
+          "score": 0.1,
+          "reasons": [
+            "mode:bounded_trial",
+            "premise:unknown",
+            "evidence:absent",
+            "scope:local_reversible"
+          ]
+        }
+      ]
+    },
+    "runtime_injection": {
+      "snapshot": {
+        "name": "runtime-injection-snapshot-v0",
+        "policy_version": "0",
+        "path": "/Users/gavin_wu/Desktop/campaign-forge/ai-governance-framework/governance/runtime_injection_snapshot.v0.yaml",
+        "source_refs": [
+          "docs/runtime-injection-layer-plan.md",
+          "docs/decision-context-bridge.md"
+        ],
+        "task_level_scope": [
+          "L0",
+          "L1",
+          "L2"
+        ],
+        "target_agent_classes": [
+          "instruction_capable",
+          "instruction_limited"
+        ],
+        "consumption_requirements": [
+          "inject_before_turn",
+          "reread_before_edit",
+          "require_full_read_for_large_files"
+        ],
+        "validation_requirements": [
+          "require_validation_after_edit",
+          "forbid_claim_without_evidence"
+        ],
+        "escalation_triggers": [
+          "escalate_if_context_degraded",
+          "escalate_if_required_evidence_missing"
+        ]
+      },
+      "signals_checked": [
+        {
+          "signal": "context_degraded",
+          "triggered": false,
+          "action": "pass",
+          "reason": null
+        },
+        {
+          "signal": "required_evidence_missing",
+          "triggered": false,
+          "action": "pass",
+          "reason": null
+        }
+      ],
+      "effect": "pass"
+    },
+    "consumption_observations": {
+      "snapshot": "runtime-injection-snapshot-v0",
+      "observations": [
+        {
+          "requirement": "require_full_read_for_large_files",
+          "applicable": true,
+          "observation_status": "compatible",
+          "observation_confidence": "low",
+          "decision_role": "advisory_only",
+          "observable_proxy": "large_file_detected_without_summary_first_degradation",
+          "matched_paths": [
+            "/Users/gavin_wu/Desktop/campaign-forge/AGENTS.base.md"
+          ],
+          "line_threshold": 200,
+          "caveat": "compatible observation is not proof that the file was semantically understood"
+        }
+      ]
+    },
+    "phase_classification": {
+      "schema_version": "0.1",
+      "hook": "pre_task_check",
+      "actions": [
+        {
+          "action": "precondition_gate",
+          "phase": "sync_gate",
+          "owner": "pre_task_check",
+          "description": "Execution preconditions and missing-input gate."
+        },
+        {
+          "action": "assumption_check_missing",
+          "phase": "sync_advisory",
+          "owner": "pre_task_check",
+          "description": "Assumption validation structure is incomplete."
+        }
+      ],
+      "phase_summary": {
+        "sync_gate": [
+          "precondition_gate"
+        ],
+        "sync_advisory": [
+          "assumption_check_missing"
+        ]
+      },
+      "rules": {
+        "sync_gate_blocks_execution": true,
+        "sync_advisory_hidden_gate_allowed": false,
+        "async_audit_can_retroactively_change_verdict": false
+      },
+      "unknown_actions": []
+    },
+    "errors": [],
+    "warnings": [
+      "Assumption check missing before modification planning: missing=assumptions, alternative_root_causes, evidence, reframe_or_validation_step; why=the premise, alternatives, evidence, or validation step is not visible yet; next=state the missing items before choosing an implementation",
+      "Decision policy advisory: assumption evidence missing: missing=direct evidence that tests the stated assumption; why=the decision remains uncertain even if the assumption is plausible; next=collect a trace, spec, test, or usage evidence before a high-impact change",
+      "Decision policy advisory: proceeding under assumption: missing=confirmed evidence for the premise; why=this is a provisional action, not proof that the change is correct; next=keep the change reversible and run the targeted verification"
+    ],
+    "trace_id": "0955d7f9b17f57fd",
+    "output_tier": 2,
+    "reasoning_fragments": [
+      {
+        "rule_id": "UNKNOWN",
+        "violation_type": "generic_violation",
+        "policy_refs": [],
+        "severity": "medium",
+        "prose": "Assumption check missing before modification planning: missing=assumptions, alternative_root_causes, evidence, reframe_or_validation_step; why=the premise, alternatives, evidence, or validation step i..."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "violation_type": "generic_violation",
+        "policy_refs": [],
+        "severity": "medium",
+        "prose": "Decision policy advisory: assumption evidence missing: missing=direct evidence that tests the stated assumption; why=the decision remains uncertain even if the assumption is plausible; next=collect a ..."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "violation_type": "generic_violation",
+        "policy_refs": [],
+        "severity": "medium",
+        "prose": "Decision policy advisory: proceeding under assumption: missing=confirmed evidence for the premise; why=this is a provisional action, not proof that the change is correct; next=keep the change reversib..."
+      }
+    ]
+  },
+  "session_start": {
+    "ok": true,
+    "project_root": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype",
+    "session_envelope": {
+      "schema_version": "1.0",
+      "session_id": "session-20261020T092851-9ccd8a",
+      "started_at": "2026-10-20T09:28:51.206928+00:00",
+      "provider": "unknown",
+      "repo_head_before": "652ce0ea38cfe2bb4b07b942a5cdae3db823e0f2",
+      "closeout_path": "artifacts/session-closeout.txt",
+      "artifact_path": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype/artifacts/runtime/sessions/session-20261020T092851-9ccd8a/session-envelope.json"
+    },
+    "task_level": "L1",
+    "level_decision": {
+      "requested": "L1",
+      "detected": "L1",
+      "final": "L1",
+      "upgraded": false,
+      "additional_loads": []
+    },
+    "repo_type": "product",
+    "context_aware_rules": [
+      "common",
+      "avalonia",
+      "cpp",
+      "csharp",
+      "swift"
+    ],
+    "authority_filter": {
+      "allowed_count": 0,
+      "include_on_demand": true,
+      "validation_ok": true,
+      "violations": []
+    },
+    "task_text": "Quickstart governance smoke",
+    "runtime_contract": {
+      "rules": [
+        "common"
+      ],
+      "risk": "medium",
+      "oversight": "review-required",
+      "memory_mode": "candidate",
+      "enforcement_profile": "advisory_mainline",
+      "experimental_enforcement_enabled": false
+    },
+    "suggested_rules_preview": [
+      "common"
+    ],
+    "suggested_skills": [
+      "code-style",
+      "governance-runtime"
+    ],
+    "suggested_agent": "advanced-agent",
+    "rule_pack_suggestions": {
+      "project_root": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype",
+      "language_packs": [],
+      "framework_packs": [],
+      "scope_packs": [],
+      "domain_packs": [],
+      "suggested_skills": [
+        "code-style",
+        "governance-runtime"
+      ],
+      "suggested_agent": "advanced-agent",
+      "suggested_rules": [
+        "common"
+      ],
+      "suggested_rules_preview": [
+        "common"
+      ],
+      "unloadable_signals": [],
+      "notes": [
+        "domain_packs are sourced from contract.yaml rule_roots and take highest priority",
+        "language packs use language-specific structural signals before count/share source-file confidence",
+        "low-confidence language packs remain advisory preview evidence and do not affect suggested rules, skills, or agents",
+        "avalonia framework structure files are sampled first; structural and strong source signals intentionally retain the existing medium confidence ceiling",
+        "weak avalonia lexical matches remain advisory preview evidence and do not affect suggested rules or pre-task warnings",
+        "planned registry entries are suppressed from active suggestion, preview, warning, skill, and agent surfaces",
+        "scope packs are advisory only and should be confirmed by the contract or human reviewer",
+        "suggested_rules_preview includes advisory scope packs for convenience, but does not mutate the contract",
+        "suggested_skills and suggested_agent are advisory only and do not auto-activate agent behavior",
+        "suggested_rules and suggested_rules_preview only carry pack names the loader can resolve; detected-but-unloadable names are reported in unloadable_signals instead of being suggested"
+      ]
+    },
+    "architecture_impact_preview": null,
+    "proposal_guidance": null,
+    "change_proposal": {
+      "task": "Quickstart governance smoke",
+      "project_root": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype",
+      "requested_rules": [
+        "common"
+      ],
+      "suggested_rules_preview": [
+        "common"
+      ],
+      "rule_pack_suggestions": {
+        "project_root": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype",
+        "language_packs": [],
+        "framework_packs": [],
+        "scope_packs": [],
+        "domain_packs": [],
+        "suggested_skills": [
+          "code-style",
+          "governance-runtime"
+        ],
+        "suggested_agent": "advanced-agent",
+        "suggested_rules": [
+          "common"
+        ],
+        "suggested_rules_preview": [
+          "common"
+        ],
+        "unloadable_signals": [],
+        "notes": [
+          "domain_packs are sourced from contract.yaml rule_roots and take highest priority",
+          "language packs use language-specific structural signals before count/share source-file confidence",
+          "low-confidence language packs remain advisory preview evidence and do not affect suggested rules, skills, or agents",
+          "avalonia framework structure files are sampled first; structural and strong source signals intentionally retain the existing medium confidence ceiling",
+          "weak avalonia lexical matches remain advisory preview evidence and do not affect suggested rules or pre-task warnings",
+          "planned registry entries are suppressed from active suggestion, preview, warning, skill, and agent surfaces",
+          "scope packs are advisory only and should be confirmed by the contract or human reviewer",
+          "suggested_rules_preview includes advisory scope packs for convenience, but does not mutate the contract",
+          "suggested_skills and suggested_agent are advisory only and do not auto-activate agent behavior",
+          "suggested_rules and suggested_rules_preview only carry pack names the loader can resolve; detected-but-unloadable names are reported in unloadable_signals instead of being suggested"
+        ]
+      },
+      "architecture_impact_preview": null,
+      "proposal_guidance": null,
+      "proposal_summary": {
+        "task": "Quickstart governance smoke",
+        "requested_rules": [
+          "common"
+        ],
+        "suggested_rules_preview": [
+          "common"
+        ],
+        "recommended_risk": null,
+        "recommended_oversight": null,
+        "expected_validators": [],
+        "required_evidence": [],
+        "concerns": []
+      }
+    },
+    "proposal_summary": {
+      "task": "Quickstart governance smoke",
+      "requested_rules": [
+        "common"
+      ],
+      "suggested_rules_preview": [
+        "common"
+      ],
+      "recommended_risk": null,
+      "recommended_oversight": null,
+      "expected_validators": [],
+      "required_evidence": [],
+      "concerns": []
+    },
+    "resolved_contract_file": "/Users/gavin_wu/Desktop/campaign-forge/contract.yaml",
+    "contract_resolution": {
+      "source": "explicit",
+      "path": "/Users/gavin_wu/Desktop/campaign-forge/contract.yaml",
+      "warnings": [],
+      "error": null
+    },
+    "domain_contract": {
+      "name": "campaign-forge-contract",
+      "contract_path": "/Users/gavin_wu/Desktop/campaign-forge/contract.yaml",
+      "contract_root": "/Users/gavin_wu/Desktop/campaign-forge",
+      "documents": [
+        {
+          "path": "/Users/gavin_wu/Desktop/campaign-forge/AGENTS.base.md",
+          "exists": true,
+          "content": "# AGENTS.base.md\n<!-- governance-baseline: protected -->\n<!-- baseline_version: 1.0.0 -->\n<!-- DO NOT EDIT — managed by ai-governance-framework -->\n<!-- To add repo-specific rules, create AGENTS.md and extend this file's sections. -->\n<!-- Hash is recorded in .governance/baseline.yaml and verified on every drift check. -->\n\n## Level Alignment\n\n- Declared L0 but involves domain logic, boundary crossing, or behavior change → upgrade to L1\n- Declared L1 but involves core domain, security, data integrity, or irreversible state → upgrade to L2\n- Uncertain classification → upgrade, do not downgrade\n\n## Execution Pipeline\n\nFor L1+, the default workflow is:\n\n1. **Analyze** — understand behavior and constraints before touching code\n2. **Define** — contracts, boundaries, failure paths\n3. **Verify Plan** — what evidence will prove the change is safe\n4. **Implement** — minimum compliant change\n5. **Refactor** — only under evidence protection\n\nDo not skip a step when the omission would hide risk.\n\n## Forbidden Behaviors\n\n- Expand scope beyond what was explicitly instructed\n- Refactor unrelated areas for cleanliness or taste\n- Add speculative abstractions for hypothetical future requirements\n- Fake, inflate, or omit evidence\n- Assume intent when the instruction is ambiguous — ask instead\n\n## Secret Handling\n\n- Never commit tokens, API keys, credentials, or secrets to the repo\n- Never write tokens or credentials into memory/ files or logs\n- If a secret appears in conversation context, do not persist it anywhere\n- `.env` files and credentials must be in `.gitignore` and never staged\n\n## AI Governance Update Routing\n\nWhen the user says \"幫我更新最新版 AI Governance\" or uses equivalent update\nwording, route the request to `governance_tools.f7_full_update` even if F-7 was\nnot named explicitly. The governed updater is an F-7 backend, not the complete\nupdate-report surface.\n\nFor updated, already-current, blocked, and fallback/manual terminal results,\nrelay the complete `[human_readable_adoption_summary]` table when available.\nIf it is unavailable or omitted, report\n`human_readable_adoption_summary: NOT REPORTED`,\n`update_report_complete=false`, and `completion_claim_allowed=false`; do not\nclaim a complete AI Governance update report.\n\n## Memory Update Triggers\n\nThe following events require updating PLAN.md and/or the relevant memory/ file:\n\n| Event | Required update |\n|-------|----------------|\n| Milestone reached | PLAN.md phase/sprint + memory/active_task |\n| Architecture decision made | PLAN.md decision log + memory/knowledge_base |\n| Bug fixed with root cause identified | memory/knowledge_base |\n| Risk or incident encountered | PLAN.md risk section + memory/active_task |\n| Session end | canonical `memory/YYYY-MM-DD.md` record when closeout is non-stateless |\n\nAutomatic closeout has one write boundary: `session_end` may append the daily\ncanonical record through `governance_tools.memory_record`. Pre-commit and\n`memory_workflow` only inspect or validate memory state; they do not write it.\n`memory/01_active_task.md`, `memory/03_knowledge_base.md`, and `PLAN.md` remain\nmilestone, decision, or human-curation surfaces and are not rewritten after\nevery session.\n\nWhen an implementation requires a canonical closeout companion, keep the\nimplementation and closeout as separate commits on the same branch and in one\npull request by default. A successful merge, push, or remote verification is\ndelivery evidence only; it must not create another memory commit or second pull\nrequest. Open a follow-up slice only for a new defect, omitted required\ngovernance state, or explicit owner authorization.\n\n## Engineering Explanation\n\nWhenever the main agent reports status, review, diagnosis, or completion, or\nthe owner asks for a plain explanation, the main agent must explain the\nengineering meaning before the technical ledger. Reordering the same fields\nunder new headings is not enough.\n\nCanonical source: `governance/RESPONSE_ENVELOPE_CONTRACT.md`, section\n`Engineering Explanation (Evidence-Preserving Interpretation)`. This section is\nthe minimum fallback when that canonical contract is not loaded.\n\n- Separate observed fact, supported interpretation, hypothesis, authority\n  state, and next action.\n- Assume the reader is a senior engineer who understands software engineering\n  but has not followed this session. Reconstruct the minimum missing context:\n  the original problem, what happened, why the facts support this result, and\n  what the result changes or does not change for the goal. Use the event\n  sequence or evidentiary relationship; do not invent causation.\n- Do not use project codes, status tokens, evidence fields, or protocol terms as\n  the explanation itself. Explain each decision-relevant term on first use and\n  connect the events; translation without relationships is not explanation.\n- Preserve exact numbers, commands, paths, identifiers, conditions, evidence,\n  and `not_claimed` boundaries when they limit the conclusion.\n- Do not turn correlation into causation, a proxy into measured effect, a\n  recommendation into an owner decision, or an unapproved follow-up into a\n  promised action.\n- Use the task's natural shape: timeline for diagnosis; completed / blocked /\n  next for progress; trustworthy / unsupported / decision impact for review;\n  problem / mechanism / difference / success meaning for concept questions.\n- Include a next action only when it is relevant. Naming a candidate action does\n  not authorize it.\n- A clear answer that changes evidence or authority is a failed explanation.\n\nThis is an owner-facing reporting rule, not a semantic gate. Human\ncomprehension remains the acceptance signal.\n\n## Session Closeout Obligation\n\nWriting `artifacts/session-closeout.txt` before session end is a **governance\nobligation**, not a suggestion.\n\nWhere a governed lifecycle hook is wired, the harness calls `session_end` on that\nhook's event; Session-End Closeout Responsibility below defines when session end\napplies and what to do without such a hook. If the closeout artifact\nis missing or insufficient, the runtime records `closeout_missing` or\n`closeout_insufficient` in the verdict and writes a fail-closed canonical daily\nrecord when the session is non-stateless. The invalid closeout content is not\npromoted. The gap remains auditable and visible to reviewers.\n\n<!-- ai-governance:session-end-closeout BEGIN version=1 canonical=AGENTS.base.md -->\n### Session-End Closeout Responsibility\n\nThese rules apply to every agent platform (Codex, Claude, Copilot and others).\nThey define when closeout is required, who is responsible, and what may be\nclaimed. They do not define which lifecycle event a platform uses; that is\nplatform-specific and must be qualified separately for each platform.\n\n1. **Task DONE is not session end.** Finishing a task, a review, or a milestone\n   ends that task only. Report DONE, do not expand the work, and leave the\n   session open for the next request.\n2. **Closeout at a defined session end is a duty, not new work.** A mandatory\n   closeout at session end is not scope expansion. Hard Stop After DONE forbids\n   closeout after task DONE; it does not forbid closeout at session end.\n3. **Session end must come from a defined, observable source.** Only two sources\n   count: a platform lifecycle event whose session-end meaning has been\n   confirmed for that platform, or the user explicitly asking to end the session\n   or to close out. The agent must not infer that the conversation is over. A\n   final answer, a DONE report, or a per-turn `Stop` event is not session end\n   unless that meaning has been confirmed.\n4. **Governed lifecycle hook present:** the harness is responsible for\n   triggering canonical closeout. A governed hook is one wired to the governance\n   closeout entry and confirmed to run for this platform.\n5. **No usable governed hook:** only when session end is established under\n   rule 3, the top-level agent must attempt the existing manual closeout\n   (`python -m governance_tools.manage_agent_closeout print-manual --agent <agent>`\n   prints the command). If it cannot run or its result cannot be verified,\n   report closeout as `NOT PERSISTED` or `UNKNOWN`; never claim it was persisted.\n6. **Subagent completion is not project-level session end.** A subagent\n   returning to its parent must not run project-level closeout unless it has its\n   own governed session identity and was explicitly given closeout\n   responsibility.\n\nA closeout, including the manual fallback, does not authorize commit, push,\npull request, or a new task; each still needs its own explicit authorization.\n\nCloseout candidate, canonical record, and memory are verified separately. A\nsuccessful closeout on one platform is not evidence for any other platform.\n<!-- ai-governance:session-end-closeout END -->\n\n### Required fields\n\nAll fields must be present. Vague values are flagged as insufficient.\n\n```\nTASK_INTENT: <one sentence — declared goal of this session>\nWORK_COMPLETED: <what was actually done — verifiable claims only>\nFILES_TOUCHED: <comma-separated file list, or NONE>\nCHECKS_RUN: <specific commands or checks run, or NONE>\nOPEN_RISKS: <what might be wrong or incomplete, or NONE>\nNOT_DONE: <what was not completed this session, or NONE>\nRECOMMENDED_MEMORY_UPDATE: <what memory/ file should change and why, or NO_UPDATE>\n```\n\n### Rules\n\n- `WORK_COMPLETED` must contain verifiable claims. Do not write \"made improvements\"\n  or \"worked on things\" — these are vague and will be rejected as insufficient.\n- `CHECKS_RUN` must name specific commands if non-`NONE`.\n- If there was no material progress, write `WORK_COMPLETED: NONE` — do not\n  fabricate completions.\n- `NOT_DONE` and `OPEN_RISKS` are the most important fields. AI agents tend to\n  omit failures. Do not.\n\n### If you cannot write the closeout\n\nWrite it anyway with `WORK_COMPLETED: NONE` and explain in `OPEN_RISKS` why\nthe session produced no verifiable output. This is a valid closeout.\n\nSee `docs/session-closeout-schema.md` for examples and field constraints.\n\n## Definition of Done\n\nA task is done when:\n\n- Behavior is explicit and observable\n- Failure paths are guarded\n- Architecture boundaries remain intact\n- Evidence matches the declared risk level\n- PLAN.md and memory/ reflect the new state"
+        },
+        {
+          "path": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype/PLAN.md",
+          "exists": true,
+          "content": "# Campaign Forge UI Prototype\n\n> **最後更新**: 2026-10-20\n> **Owner**: Gavin（需求與決策）；Codex（本輪執行）\n> **Freshness**: Sprint (7d)\n\n## Scope\n\n獨立的 React / TypeScript 本地 PC UI 展示。原始 README、PLAN、SLICES、DECISIONS、EXECUTION、候選 A 與比較文件已閱讀。A/B/C 未選案；A 只供展示，人物外觀與地圖均是提案。不得以 UI 展示取代 S4 授權。\n\n## Slices\n\n- UI-01：流程、資訊層級、資料分離、風險界線完成。\n- UI-02：主選單、六章24節點示意、營地人物、劇情抉擇完成。\n- UI-03：隊伍部署、戰場、選角→移動→技能→確認及撤銷完成；規則固定示範。\n- UI-04：選擇延續到支援、目標、同伴與戰後結果完成。\n- UI-05：四位人物、五種戰場小人、渡口場景與戰役地圖已整合；實際驗收記錄見 docs/VERIFICATION.md。\n\n## Design\n\n視覺重心是人物與戰場。成熟低飽和奇幻插畫、羊皮紙地圖、低調金屬框，繁體中文。人物立繪與小人獨立生成；敵我用 ◆／▲、文字及色彩一起區分。24節點是容量示意，後續章名與路線不揭露。\n\n## Decisions\n\n- 使用 React 18 / Vite 4 / TypeScript 5.6，僅介面驗證，不指定正式引擎。\n- 遊戲資料在 src/data.ts，素材路徑在資料設定中維護。\n- 無正式儲存，狀態在本次頁面生命週期保留；重設按鈕明確清除。\n- built-in image_gen 生成原創展示素材；不下載商業遊戲圖片。\n- domain / risk 由使用者授權代填為 game-ui-prototype / low。\n\n## Risks and pending decisions\n\n正式故事、角色身分／外觀、地圖地理、職業／技能、勝敗判定、戰鬥數值都待選案與設計。手把只有映射提案。尚無外部玩家可用性測試與正式平台相容性測試。\n\n## Verification\n\n建置、範圍保護與 CUA 實際瀏覽器流程；保留 screenshots 與 docs/VERIFICATION.md。AI Governance 真實 commit/push hook 驗證仍需另行授權；不得稱完整驗收完成。"
+        },
+        {
+          "path": "/Users/gavin_wu/Desktop/campaign-forge/governance/TESTING.md",
+          "exists": true,
+          "content": "# Testing\n\n執行 `npm run build --prefix ui-prototype` 與 `python3 scripts/validate_ui_scope.py`。\nUI 驗證見 `ui-prototype/docs/VERIFICATION.md`。不以圖稿代替實際執行畫面；預覽不得改變生命、隊伍或已確認行動數。\n治理以 contract loader、drift、hooks validator、explicit-plan quickstart smoke 驗證；真實 commit/push 與平台自動 lifecycle 是不同證據，禁止混稱。"
+        },
+        {
+          "path": "/Users/gavin_wu/Desktop/campaign-forge/governance/ARCHITECTURE.md",
+          "exists": true,
+          "content": "# Architecture\n\n- 原始企劃在 repo root / docs；本次保持內容不變。\n- UI 在 ui-prototype，資料集中 src/data.ts，視覺 public/art，React 本次頁面記憶狀態。\n- AI Governance 以 repo 內 submodule 固定 e8e67796894cd562ef0bce217bfad0fac211a44d。\n- AGENTS.base.md 與 common/core.md 原樣複製自該版本，Apache 2.0 授權只適用相應框架檔案，見 licenses。專案故事與新美術沒有因此被授予開源授權。\n- 本地 Git hooks 使用 framework 既有 installer；不建立 GitHub Actions 或外部服務。\n- 未設定 Codex 平台 lifecycle 自動呼叫，手動 runtime smoke 僅驗證函式可執行。"
+        }
+      ],
+      "ai_behavior_override": [
+        {
+          "path": "/Users/gavin_wu/Desktop/campaign-forge/AGENTS.base.md",
+          "exists": true,
+          "content": "# AGENTS.base.md\n<!-- governance-baseline: protected -->\n<!-- baseline_version: 1.0.0 -->\n<!-- DO NOT EDIT — managed by ai-governance-framework -->\n<!-- To add repo-specific rules, create AGENTS.md and extend this file's sections. -->\n<!-- Hash is recorded in .governance/baseline.yaml and verified on every drift check. -->\n\n## Level Alignment\n\n- Declared L0 but involves domain logic, boundary crossing, or behavior change → upgrade to L1\n- Declared L1 but involves core domain, security, data integrity, or irreversible state → upgrade to L2\n- Uncertain classification → upgrade, do not downgrade\n\n## Execution Pipeline\n\nFor L1+, the default workflow is:\n\n1. **Analyze** — understand behavior and constraints before touching code\n2. **Define** — contracts, boundaries, failure paths\n3. **Verify Plan** — what evidence will prove the change is safe\n4. **Implement** — minimum compliant change\n5. **Refactor** — only under evidence protection\n\nDo not skip a step when the omission would hide risk.\n\n## Forbidden Behaviors\n\n- Expand scope beyond what was explicitly instructed\n- Refactor unrelated areas for cleanliness or taste\n- Add speculative abstractions for hypothetical future requirements\n- Fake, inflate, or omit evidence\n- Assume intent when the instruction is ambiguous — ask instead\n\n## Secret Handling\n\n- Never commit tokens, API keys, credentials, or secrets to the repo\n- Never write tokens or credentials into memory/ files or logs\n- If a secret appears in conversation context, do not persist it anywhere\n- `.env` files and credentials must be in `.gitignore` and never staged\n\n## AI Governance Update Routing\n\nWhen the user says \"幫我更新最新版 AI Governance\" or uses equivalent update\nwording, route the request to `governance_tools.f7_full_update` even if F-7 was\nnot named explicitly. The governed updater is an F-7 backend, not the complete\nupdate-report surface.\n\nFor updated, already-current, blocked, and fallback/manual terminal results,\nrelay the complete `[human_readable_adoption_summary]` table when available.\nIf it is unavailable or omitted, report\n`human_readable_adoption_summary: NOT REPORTED`,\n`update_report_complete=false`, and `completion_claim_allowed=false`; do not\nclaim a complete AI Governance update report.\n\n## Memory Update Triggers\n\nThe following events require updating PLAN.md and/or the relevant memory/ file:\n\n| Event | Required update |\n|-------|----------------|\n| Milestone reached | PLAN.md phase/sprint + memory/active_task |\n| Architecture decision made | PLAN.md decision log + memory/knowledge_base |\n| Bug fixed with root cause identified | memory/knowledge_base |\n| Risk or incident encountered | PLAN.md risk section + memory/active_task |\n| Session end | canonical `memory/YYYY-MM-DD.md` record when closeout is non-stateless |\n\nAutomatic closeout has one write boundary: `session_end` may append the daily\ncanonical record through `governance_tools.memory_record`. Pre-commit and\n`memory_workflow` only inspect or validate memory state; they do not write it.\n`memory/01_active_task.md`, `memory/03_knowledge_base.md`, and `PLAN.md` remain\nmilestone, decision, or human-curation surfaces and are not rewritten after\nevery session.\n\nWhen an implementation requires a canonical closeout companion, keep the\nimplementation and closeout as separate commits on the same branch and in one\npull request by default. A successful merge, push, or remote verification is\ndelivery evidence only; it must not create another memory commit or second pull\nrequest. Open a follow-up slice only for a new defect, omitted required\ngovernance state, or explicit owner authorization.\n\n## Engineering Explanation\n\nWhenever the main agent reports status, review, diagnosis, or completion, or\nthe owner asks for a plain explanation, the main agent must explain the\nengineering meaning before the technical ledger. Reordering the same fields\nunder new headings is not enough.\n\nCanonical source: `governance/RESPONSE_ENVELOPE_CONTRACT.md`, section\n`Engineering Explanation (Evidence-Preserving Interpretation)`. This section is\nthe minimum fallback when that canonical contract is not loaded.\n\n- Separate observed fact, supported interpretation, hypothesis, authority\n  state, and next action.\n- Assume the reader is a senior engineer who understands software engineering\n  but has not followed this session. Reconstruct the minimum missing context:\n  the original problem, what happened, why the facts support this result, and\n  what the result changes or does not change for the goal. Use the event\n  sequence or evidentiary relationship; do not invent causation.\n- Do not use project codes, status tokens, evidence fields, or protocol terms as\n  the explanation itself. Explain each decision-relevant term on first use and\n  connect the events; translation without relationships is not explanation.\n- Preserve exact numbers, commands, paths, identifiers, conditions, evidence,\n  and `not_claimed` boundaries when they limit the conclusion.\n- Do not turn correlation into causation, a proxy into measured effect, a\n  recommendation into an owner decision, or an unapproved follow-up into a\n  promised action.\n- Use the task's natural shape: timeline for diagnosis; completed / blocked /\n  next for progress; trustworthy / unsupported / decision impact for review;\n  problem / mechanism / difference / success meaning for concept questions.\n- Include a next action only when it is relevant. Naming a candidate action does\n  not authorize it.\n- A clear answer that changes evidence or authority is a failed explanation.\n\nThis is an owner-facing reporting rule, not a semantic gate. Human\ncomprehension remains the acceptance signal.\n\n## Session Closeout Obligation\n\nWriting `artifacts/session-closeout.txt` before session end is a **governance\nobligation**, not a suggestion.\n\nWhere a governed lifecycle hook is wired, the harness calls `session_end` on that\nhook's event; Session-End Closeout Responsibility below defines when session end\napplies and what to do without such a hook. If the closeout artifact\nis missing or insufficient, the runtime records `closeout_missing` or\n`closeout_insufficient` in the verdict and writes a fail-closed canonical daily\nrecord when the session is non-stateless. The invalid closeout content is not\npromoted. The gap remains auditable and visible to reviewers.\n\n<!-- ai-governance:session-end-closeout BEGIN version=1 canonical=AGENTS.base.md -->\n### Session-End Closeout Responsibility\n\nThese rules apply to every agent platform (Codex, Claude, Copilot and others).\nThey define when closeout is required, who is responsible, and what may be\nclaimed. They do not define which lifecycle event a platform uses; that is\nplatform-specific and must be qualified separately for each platform.\n\n1. **Task DONE is not session end.** Finishing a task, a review, or a milestone\n   ends that task only. Report DONE, do not expand the work, and leave the\n   session open for the next request.\n2. **Closeout at a defined session end is a duty, not new work.** A mandatory\n   closeout at session end is not scope expansion. Hard Stop After DONE forbids\n   closeout after task DONE; it does not forbid closeout at session end.\n3. **Session end must come from a defined, observable source.** Only two sources\n   count: a platform lifecycle event whose session-end meaning has been\n   confirmed for that platform, or the user explicitly asking to end the session\n   or to close out. The agent must not infer that the conversation is over. A\n   final answer, a DONE report, or a per-turn `Stop` event is not session end\n   unless that meaning has been confirmed.\n4. **Governed lifecycle hook present:** the harness is responsible for\n   triggering canonical closeout. A governed hook is one wired to the governance\n   closeout entry and confirmed to run for this platform.\n5. **No usable governed hook:** only when session end is established under\n   rule 3, the top-level agent must attempt the existing manual closeout\n   (`python -m governance_tools.manage_agent_closeout print-manual --agent <agent>`\n   prints the command). If it cannot run or its result cannot be verified,\n   report closeout as `NOT PERSISTED` or `UNKNOWN`; never claim it was persisted.\n6. **Subagent completion is not project-level session end.** A subagent\n   returning to its parent must not run project-level closeout unless it has its\n   own governed session identity and was explicitly given closeout\n   responsibility.\n\nA closeout, including the manual fallback, does not authorize commit, push,\npull request, or a new task; each still needs its own explicit authorization.\n\nCloseout candidate, canonical record, and memory are verified separately. A\nsuccessful closeout on one platform is not evidence for any other platform.\n<!-- ai-governance:session-end-closeout END -->\n\n### Required fields\n\nAll fields must be present. Vague values are flagged as insufficient.\n\n```\nTASK_INTENT: <one sentence — declared goal of this session>\nWORK_COMPLETED: <what was actually done — verifiable claims only>\nFILES_TOUCHED: <comma-separated file list, or NONE>\nCHECKS_RUN: <specific commands or checks run, or NONE>\nOPEN_RISKS: <what might be wrong or incomplete, or NONE>\nNOT_DONE: <what was not completed this session, or NONE>\nRECOMMENDED_MEMORY_UPDATE: <what memory/ file should change and why, or NO_UPDATE>\n```\n\n### Rules\n\n- `WORK_COMPLETED` must contain verifiable claims. Do not write \"made improvements\"\n  or \"worked on things\" — these are vague and will be rejected as insufficient.\n- `CHECKS_RUN` must name specific commands if non-`NONE`.\n- If there was no material progress, write `WORK_COMPLETED: NONE` — do not\n  fabricate completions.\n- `NOT_DONE` and `OPEN_RISKS` are the most important fields. AI agents tend to\n  omit failures. Do not.\n\n### If you cannot write the closeout\n\nWrite it anyway with `WORK_COMPLETED: NONE` and explain in `OPEN_RISKS` why\nthe session produced no verifiable output. This is a valid closeout.\n\nSee `docs/session-closeout-schema.md` for examples and field constraints.\n\n## Definition of Done\n\nA task is done when:\n\n- Behavior is explicit and observable\n- Failure paths are guarded\n- Architecture boundaries remain intact\n- Evidence matches the declared risk level\n- PLAN.md and memory/ reflect the new state"
+        },
+        {
+          "path": "/Users/gavin_wu/Desktop/campaign-forge/AGENTS.md",
+          "exists": true,
+          "content": "# Campaign Forge 工作界線\n\n本 repo 專做原創 Steam／PC 奇幻戰棋 RPG 的故事企劃。當前停在 S3 故事選擇關卡，A、B、C 都是提案。\n\n- 先讀 README、PLAN、SLICES、docs/DECISIONS.md 與 docs/EXECUTION.md，再接續工作。\n- Gavin 選案前，保留三案獨立性。推薦結果不構成定案，不建立正式世界觀或 24 關腳本。\n- 已核准的本批只有 S0 至 S3。S4 起須在使用者選案並明確授權後才執行。\n- 所有讀寫限於本企劃工作區。可唯讀查閱 docs/SOURCES.md 列出的公開來源。不要讀取其他專案、公司檔案或公司系統。\n- GitHub 僅使用已授權工具與既有 gh 登入。目標 `Gavin0099/campaign-forge` 已由擁有者建立並選擇 Public；不重試建庫，不新增憑證、登入或權限，不變更 visibility。\n- 僅正常推送到已授權的目標 repo。若遠端出現尚未核對的提交或衝突，停止並報告；不覆寫使用者內容、不接管其他 repo、不強制 push。\n- 不啟用 GitHub Actions、付費工具或部署，不寫遊戲引擎、戰棋原型，不操作硬體。\n- 不沿用其他專案的平台或定價限制，不合併其他遊戲專案。\n- 不複製 D&D 人物、地名、原文、關卡或未授權書籍。職業名稱、技能、規則與授權仍待後續設計。\n- 不新增把故事內容開源的 LICENSE。若將來採用第三方程式或文件，先逐項保留相應來源與授權聲明。\n- 設定變更要標示提案或已確認。每個重大選擇必須寫出玩家已知資訊、實際代價與後續可見後果。\n- 每位核心同伴要有自己的目標、拒絕條件與離隊後的行動。主線不得因少一名可選同伴而無法完成。\n\n本文件未授權自動接續未來 slices，也未要求新增代理或平行執行。\n\n## UI Prototype Authorization — 2026-10-20\n\n使用者本次明確授權 `ui-prototype/` 的 UI-01 至 UI-05、原創展示美術與 AI Governance 完整導入；此範圍優先於上方「不寫戰棋原型」的一般界線。原始故事 PLAN、SLICES、docs 均保持不變，S4 仍未授權。參考 TacticalGo 僅限使用者指定的公開 skill 方法；不得挪用人物、美術、其他專案限制或正式設定。\n\n本 repo 延伸 `AGENTS.base.md`，使用者明確限制優先：未另行授權不得 commit、push、PR、部署、付費或啟用 Actions。框架的自動流程不得自行擴張權限。\n\n## Repo-Specific Risk Levels\n<!-- governance:key=risk_levels -->\n\n- domain: game-ui-prototype；risk_tier: low，由使用者「你直接幫我寫就好」授權代填。\n- L0：文字、文件、純視覺資產檢視。\n- L1：React UI 狀態、選擇後果、角色缺席與鍵盤操作；需實際操作證據。\n- 低風險依據：僅本地 UI 展示，沒有生產資料、付款、連線、正式存檔、完整戰棋引擎。\n\n## Must-Test Paths\n<!-- governance:key=must_test_paths -->\n\n- `ui-prototype/src/`：兩條故事選擇、部署缺席角色、移動／技能預覽／確認／撤銷、結果回戰役。\n- `npm run build --prefix ui-prototype`，`python3 scripts/validate_ui_scope.py`。\n- 瀏覽器實測 1920×1080、1280×720、放大文字、對白紀錄與 Esc；截圖必須來自執行畫面。\n\n## L1 → L2 Escalation Triggers\n<!-- governance:key=escalation_triggers -->\n\n正式故事定案、正式戰鬥規則、永久資料、帳號、網路服務、安全設定、費用、公開部署及跨專案寫入，均超出本輪 UI 授權，需回報與取得相應授權。\n\n## Repo-Specific Forbidden Behaviors\n<!-- governance:key=forbidden_behaviors -->\n\n不得把 A 美術或固定資料當正式設定；不得覆寫原始企劃、其他分支或使用者未提交檔案；不得複製商業遊戲素材；不得宣稱安裝 hooks 等於實際 commit/push 驗證。\n\n## AI Governance Memory Workflow Router\n<!-- governance:key=memory_workflow -->\n\n開始工作讀 `memory/01_active_task.md` 與 `memory/02_project_facts.md`。里程碑更新 `ui-prototype/PLAN.md` 與相關記憶；使用者陳述與代理觀察分開記錄。依框架 session-end 定義才觸發結束紀錄；最終回覆本身不表示 session end。\n\n治理工具以 `PYTHONPATH=ai-governance-framework python3 -m governance_tools.<tool>` 執行。UI 計畫位於 `ui-prototype/PLAN.md`；部分上游 readiness 工具硬編碼根目錄 PLAN，需如實列出差異，不能為通過檢查而修改故事企劃。框架更新使用 F7 流程；目前為首次 submodule 導入。"
+        }
+      ],
+      "rule_roots": [
+        "/Users/gavin_wu/Desktop/campaign-forge/governance/rules"
+      ],
+      "validators": [
+        {
+          "name": "validate_ui_scope",
+          "path": "/Users/gavin_wu/Desktop/campaign-forge/scripts/validate_ui_scope.py",
+          "exists": true
+        }
+      ],
+      "raw": {
+        "name": "campaign-forge-contract",
+        "plugin_version": "1.0.0",
+        "framework_interface_version": "1",
+        "framework_compatible": ">=1.0.0,<2.0.0",
+        "domain": "game-ui-prototype",
+        "risk_tier": "low",
+        "documents": [
+          "AGENTS.base.md",
+          "ui-prototype/PLAN.md",
+          "governance/TESTING.md",
+          "governance/ARCHITECTURE.md"
+        ],
+        "ai_behavior_override": [
+          "AGENTS.base.md",
+          "AGENTS.md"
+        ],
+        "rule_roots": [
+          "governance/rules"
+        ],
+        "validators": [
+          "scripts/validate_ui_scope.py"
+        ],
+        "evidence_roots": [
+          "artifacts",
+          "ui-prototype/screenshots"
+        ]
+      }
+    },
+    "domain_skip_reason": null,
+    "validator_preflight": {
+      "ok": false,
+      "count": 1,
+      "validators": [
+        {
+          "name": "validate_ui_scope",
+          "path": "/Users/gavin_wu/Desktop/campaign-forge/scripts/validate_ui_scope.py",
+          "ok": false,
+          "rule_ids": [],
+          "errors": [
+            "no DomainValidator implementation found"
+          ]
+        }
+      ]
+    },
+    "risk_signal": {
+      "active": false,
+      "overrides": {}
+    },
+    "state": {
+      "generated_at": "2026-10-20T09:28:51.739495+00:00",
+      "state_surface_contract": {
+        "surface_role": "derived_context_snapshot",
+        "authority_scope": "session_context_only",
+        "source_of_truth": {
+          "plan": "ui-prototype/PLAN.md",
+          "runtime_artifacts": "artifacts/runtime/*"
+        },
+        "non_authoritative_for": [
+          "gate_verdict",
+          "classification_validation",
+          "escalation_closure"
+        ],
+        "operator_note": "This file is a convenience snapshot for session bootstrap. It must not be used as sole authority for closure or promotion decisions."
+      },
+      "plan_path": "ui-prototype/PLAN.md",
+      "project_root": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype",
+      "project": {
+        "owner": "Gavin（需求與決策）；Codex（本輪執行）",
+        "freshness_policy": "Sprint (7d)"
+      },
+      "current_phase": {
+        "id": null,
+        "name": null
+      },
+      "gate_status": {},
+      "active_sprint": [],
+      "backlog_counts": {
+        "P0": 0,
+        "P1": 0,
+        "P2": 0
+      },
+      "freshness": {
+        "status": "FRESH",
+        "last_updated": "2026-10-20",
+        "days_since_update": 0,
+        "threshold_days": 7
+      },
+      "runtime_contract": {
+        "task": "unspecified",
+        "rules": [
+          "common"
+        ],
+        "risk": "medium",
+        "oversight": "review-required",
+        "memory_mode": "candidate"
+      },
+      "suggested_rules_preview": [
+        "common"
+      ],
+      "suggested_skills": [
+        "code-style",
+        "governance-runtime"
+      ],
+      "suggested_agent": "advanced-agent",
+      "rule_pack_suggestions": {
+        "project_root": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype",
+        "language_packs": [],
+        "framework_packs": [],
+        "scope_packs": [],
+        "domain_packs": [],
+        "suggested_skills": [
+          "code-style",
+          "governance-runtime"
+        ],
+        "suggested_agent": "advanced-agent",
+        "suggested_rules": [
+          "common"
+        ],
+        "suggested_rules_preview": [
+          "common"
+        ],
+        "unloadable_signals": [],
+        "notes": [
+          "domain_packs are sourced from contract.yaml rule_roots and take highest priority",
+          "language packs use language-specific structural signals before count/share source-file confidence",
+          "low-confidence language packs remain advisory preview evidence and do not affect suggested rules, skills, or agents",
+          "avalonia framework structure files are sampled first; structural and strong source signals intentionally retain the existing medium confidence ceiling",
+          "weak avalonia lexical matches remain advisory preview evidence and do not affect suggested rules or pre-task warnings",
+          "planned registry entries are suppressed from active suggestion, preview, warning, skill, and agent surfaces",
+          "scope packs are advisory only and should be confirmed by the contract or human reviewer",
+          "suggested_rules_preview includes advisory scope packs for convenience, but does not mutate the contract",
+          "suggested_skills and suggested_agent are advisory only and do not auto-activate agent behavior",
+          "suggested_rules and suggested_rules_preview only carry pack names the loader can resolve; detected-but-unloadable names are reported in unloadable_signals instead of being suggested"
+        ]
+      },
+      "architecture_impact_preview": null,
+      "proposal_guidance": null,
+      "rule_packs": {
+        "requested": [
+          "common"
+        ],
+        "resolved": [
+          {
+            "name": "common",
+            "category": "scope",
+            "files": [
+              "ai-governance-framework/governance/rules/common/core.md"
+            ]
+          }
+        ],
+        "missing": [],
+        "valid": true
+      },
+      "active_rules": {
+        "requested": [
+          "common"
+        ],
+        "active_rules": [
+          {
+            "name": "common",
+            "category": "scope",
+            "files": [
+              {
+                "path": "ai-governance-framework/governance/rules/common/core.md",
+                "title": "Common Rule Pack",
+                "content": "# Common Rule Pack\n\n- 在實作前先遵守當前 `PLAN` scope。\n- 只要 architecture 或 safety red line 不清楚，就立刻 escalate。\n- 優先做最小、可回滾、且足以滿足任務的變更。"
+              }
+            ]
+          }
+        ],
+        "missing": [],
+        "valid": true
+      }
+    },
+    "pre_task_check": {
+      "ok": true,
+      "project_root": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype",
+      "plan_path": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype/PLAN.md",
+      "freshness": {
+        "status": "FRESH",
+        "days_since_update": 0,
+        "threshold_days": 7
+      },
+      "runtime_contract": {
+        "rules": [
+          "common"
+        ],
+        "risk": "medium",
+        "oversight": "review-required",
+        "memory_mode": "candidate",
+        "enforcement_profile": "advisory_mainline",
+        "experimental_enforcement_enabled": false
+      },
+      "suggested_rules_preview": [
+        "common"
+      ],
+      "suggested_skills": [
+        "code-style",
+        "governance-runtime"
+      ],
+      "suggested_agent": "advanced-agent",
+      "rule_pack_suggestions": {
+        "project_root": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype",
+        "language_packs": [],
+        "framework_packs": [],
+        "scope_packs": [],
+        "domain_packs": [],
+        "suggested_skills": [
+          "code-style",
+          "governance-runtime"
+        ],
+        "suggested_agent": "advanced-agent",
+        "suggested_rules": [
+          "common"
+        ],
+        "suggested_rules_preview": [
+          "common"
+        ],
+        "unloadable_signals": [],
+        "notes": [
+          "domain_packs are sourced from contract.yaml rule_roots and take highest priority",
+          "language packs use language-specific structural signals before count/share source-file confidence",
+          "low-confidence language packs remain advisory preview evidence and do not affect suggested rules, skills, or agents",
+          "avalonia framework structure files are sampled first; structural and strong source signals intentionally retain the existing medium confidence ceiling",
+          "weak avalonia lexical matches remain advisory preview evidence and do not affect suggested rules or pre-task warnings",
+          "planned registry entries are suppressed from active suggestion, preview, warning, skill, and agent surfaces",
+          "scope packs are advisory only and should be confirmed by the contract or human reviewer",
+          "suggested_rules_preview includes advisory scope packs for convenience, but does not mutate the contract",
+          "suggested_skills and suggested_agent are advisory only and do not auto-activate agent behavior",
+          "suggested_rules and suggested_rules_preview only carry pack names the loader can resolve; detected-but-unloadable names are reported in unloadable_signals instead of being suggested"
+        ]
+      },
+      "architecture_impact_preview": null,
+      "rule_packs": {
+        "requested": [
+          "common"
+        ],
+        "resolved": [
+          {
+            "name": "common",
+            "category": "scope",
+            "files": [
+              "governance/rules/common/core.md"
+            ]
+          }
+        ],
+        "missing": [],
+        "valid": true
+      },
+      "active_rules": {
+        "requested": [
+          "common"
+        ],
+        "active_rules": [
+          {
+            "name": "common",
+            "category": "scope",
+            "files": [
+              {
+                "path": "governance/rules/common/core.md",
+                "title": "Common Rule Pack"
+              }
+            ]
+          }
+        ],
+        "missing": [],
+        "valid": true,
+        "content_stripped": true,
+        "content_tier": 2
+      },
+      "topic_filter": {
+        "task_topic": "runtime_governance",
+        "filtered_out": [],
+        "rules_loaded": [
+          "common"
+        ]
+      },
+      "contract_resolution": {
+        "source": "explicit",
+        "path": "/Users/gavin_wu/Desktop/campaign-forge/contract.yaml",
+        "warnings": [],
+        "error": null
+      },
+      "domain_contract": {
+        "name": "campaign-forge-contract",
+        "contract_path": "/Users/gavin_wu/Desktop/campaign-forge/contract.yaml",
+        "contract_root": "/Users/gavin_wu/Desktop/campaign-forge",
+        "documents": [
+          {
+            "path": "/Users/gavin_wu/Desktop/campaign-forge/AGENTS.base.md",
+            "exists": true,
+            "content": "# AGENTS.base.md\n<!-- governance-baseline: protected -->\n<!-- baseline_version: 1.0.0 -->\n<!-- DO NOT EDIT — managed by ai-governance-framework -->\n<!-- To add repo-specific rules, create AGENTS.md and extend this file's sections. -->\n<!-- Hash is recorded in .governance/baseline.yaml and verified on every drift check. -->\n\n## Level Alignment\n\n- Declared L0 but involves domain logic, boundary crossing, or behavior change → upgrade to L1\n- Declared L1 but involves core domain, security, data integrity, or irreversible state → upgrade to L2\n- Uncertain classification → upgrade, do not downgrade\n\n## Execution Pipeline\n\nFor L1+, the default workflow is:\n\n1. **Analyze** — understand behavior and constraints before touching code\n2. **Define** — contracts, boundaries, failure paths\n3. **Verify Plan** — what evidence will prove the change is safe\n4. **Implement** — minimum compliant change\n5. **Refactor** — only under evidence protection\n\nDo not skip a step when the omission would hide risk.\n\n## Forbidden Behaviors\n\n- Expand scope beyond what was explicitly instructed\n- Refactor unrelated areas for cleanliness or taste\n- Add speculative abstractions for hypothetical future requirements\n- Fake, inflate, or omit evidence\n- Assume intent when the instruction is ambiguous — ask instead\n\n## Secret Handling\n\n- Never commit tokens, API keys, credentials, or secrets to the repo\n- Never write tokens or credentials into memory/ files or logs\n- If a secret appears in conversation context, do not persist it anywhere\n- `.env` files and credentials must be in `.gitignore` and never staged\n\n## AI Governance Update Routing\n\nWhen the user says \"幫我更新最新版 AI Governance\" or uses equivalent update\nwording, route the request to `governance_tools.f7_full_update` even if F-7 was\nnot named explicitly. The governed updater is an F-7 backend, not the complete\nupdate-report surface.\n\nFor updated, already-current, blocked, and fallback/manual terminal results,\nrelay the complete `[human_readable_adoption_summary]` table when available.\nIf it is unavailable or omitted, report\n`human_readable_adoption_summary: NOT REPORTED`,\n`update_report_complete=false`, and `completion_claim_allowed=false`; do not\nclaim a complete AI Governance update report.\n\n## Memory Update Triggers\n\nThe following events require updating PLAN.md and/or the relevant memory/ file:\n\n| Event | Required update |\n|-------|----------------|\n| Milestone reached | PLAN.md phase/sprint + memory/active_task |\n| Architecture decision made | PLAN.md decision log + memory/knowledge_base |\n| Bug fixed with root cause identified | memory/knowledge_base |\n| Risk or incident encountered | PLAN.md risk section + memory/active_task |\n| Session end | canonical `memory/YYYY-MM-DD.md` record when closeout is non-stateless |\n\nAutomatic closeout has one write boundary: `session_end` may append the daily\ncanonical record through `governance_tools.memory_record`. Pre-commit and\n`memory_workflow` only inspect or validate memory state; they do not write it.\n`memory/01_active_task.md`, `memory/03_knowledge_base.md`, and `PLAN.md` remain\nmilestone, decision, or human-curation surfaces and are not rewritten after\nevery session.\n\nWhen an implementation requires a canonical closeout companion, keep the\nimplementation and closeout as separate commits on the same branch and in one\npull request by default. A successful merge, push, or remote verification is\ndelivery evidence only; it must not create another memory commit or second pull\nrequest. Open a follow-up slice only for a new defect, omitted required\ngovernance state, or explicit owner authorization.\n\n## Engineering Explanation\n\nWhenever the main agent reports status, review, diagnosis, or completion, or\nthe owner asks for a plain explanation, the main agent must explain the\nengineering meaning before the technical ledger. Reordering the same fields\nunder new headings is not enough.\n\nCanonical source: `governance/RESPONSE_ENVELOPE_CONTRACT.md`, section\n`Engineering Explanation (Evidence-Preserving Interpretation)`. This section is\nthe minimum fallback when that canonical contract is not loaded.\n\n- Separate observed fact, supported interpretation, hypothesis, authority\n  state, and next action.\n- Assume the reader is a senior engineer who understands software engineering\n  but has not followed this session. Reconstruct the minimum missing context:\n  the original problem, what happened, why the facts support this result, and\n  what the result changes or does not change for the goal. Use the event\n  sequence or evidentiary relationship; do not invent causation.\n- Do not use project codes, status tokens, evidence fields, or protocol terms as\n  the explanation itself. Explain each decision-relevant term on first use and\n  connect the events; translation without relationships is not explanation.\n- Preserve exact numbers, commands, paths, identifiers, conditions, evidence,\n  and `not_claimed` boundaries when they limit the conclusion.\n- Do not turn correlation into causation, a proxy into measured effect, a\n  recommendation into an owner decision, or an unapproved follow-up into a\n  promised action.\n- Use the task's natural shape: timeline for diagnosis; completed / blocked /\n  next for progress; trustworthy / unsupported / decision impact for review;\n  problem / mechanism / difference / success meaning for concept questions.\n- Include a next action only when it is relevant. Naming a candidate action does\n  not authorize it.\n- A clear answer that changes evidence or authority is a failed explanation.\n\nThis is an owner-facing reporting rule, not a semantic gate. Human\ncomprehension remains the acceptance signal.\n\n## Session Closeout Obligation\n\nWriting `artifacts/session-closeout.txt` before session end is a **governance\nobligation**, not a suggestion.\n\nWhere a governed lifecycle hook is wired, the harness calls `session_end` on that\nhook's event; Session-End Closeout Responsibility below defines when session end\napplies and what to do without such a hook. If the closeout artifact\nis missing or insufficient, the runtime records `closeout_missing` or\n`closeout_insufficient` in the verdict and writes a fail-closed canonical daily\nrecord when the session is non-stateless. The invalid closeout content is not\npromoted. The gap remains auditable and visible to reviewers.\n\n<!-- ai-governance:session-end-closeout BEGIN version=1 canonical=AGENTS.base.md -->\n### Session-End Closeout Responsibility\n\nThese rules apply to every agent platform (Codex, Claude, Copilot and others).\nThey define when closeout is required, who is responsible, and what may be\nclaimed. They do not define which lifecycle event a platform uses; that is\nplatform-specific and must be qualified separately for each platform.\n\n1. **Task DONE is not session end.** Finishing a task, a review, or a milestone\n   ends that task only. Report DONE, do not expand the work, and leave the\n   session open for the next request.\n2. **Closeout at a defined session end is a duty, not new work.** A mandatory\n   closeout at session end is not scope expansion. Hard Stop After DONE forbids\n   closeout after task DONE; it does not forbid closeout at session end.\n3. **Session end must come from a defined, observable source.** Only two sources\n   count: a platform lifecycle event whose session-end meaning has been\n   confirmed for that platform, or the user explicitly asking to end the session\n   or to close out. The agent must not infer that the conversation is over. A\n   final answer, a DONE report, or a per-turn `Stop` event is not session end\n   unless that meaning has been confirmed.\n4. **Governed lifecycle hook present:** the harness is responsible for\n   triggering canonical closeout. A governed hook is one wired to the governance\n   closeout entry and confirmed to run for this platform.\n5. **No usable governed hook:** only when session end is established under\n   rule 3, the top-level agent must attempt the existing manual closeout\n   (`python -m governance_tools.manage_agent_closeout print-manual --agent <agent>`\n   prints the command). If it cannot run or its result cannot be verified,\n   report closeout as `NOT PERSISTED` or `UNKNOWN`; never claim it was persisted.\n6. **Subagent completion is not project-level session end.** A subagent\n   returning to its parent must not run project-level closeout unless it has its\n   own governed session identity and was explicitly given closeout\n   responsibility.\n\nA closeout, including the manual fallback, does not authorize commit, push,\npull request, or a new task; each still needs its own explicit authorization.\n\nCloseout candidate, canonical record, and memory are verified separately. A\nsuccessful closeout on one platform is not evidence for any other platform.\n<!-- ai-governance:session-end-closeout END -->\n\n### Required fields\n\nAll fields must be present. Vague values are flagged as insufficient.\n\n```\nTASK_INTENT: <one sentence — declared goal of this session>\nWORK_COMPLETED: <what was actually done — verifiable claims only>\nFILES_TOUCHED: <comma-separated file list, or NONE>\nCHECKS_RUN: <specific commands or checks run, or NONE>\nOPEN_RISKS: <what might be wrong or incomplete, or NONE>\nNOT_DONE: <what was not completed this session, or NONE>\nRECOMMENDED_MEMORY_UPDATE: <what memory/ file should change and why, or NO_UPDATE>\n```\n\n### Rules\n\n- `WORK_COMPLETED` must contain verifiable claims. Do not write \"made improvements\"\n  or \"worked on things\" — these are vague and will be rejected as insufficient.\n- `CHECKS_RUN` must name specific commands if non-`NONE`.\n- If there was no material progress, write `WORK_COMPLETED: NONE` — do not\n  fabricate completions.\n- `NOT_DONE` and `OPEN_RISKS` are the most important fields. AI agents tend to\n  omit failures. Do not.\n\n### If you cannot write the closeout\n\nWrite it anyway with `WORK_COMPLETED: NONE` and explain in `OPEN_RISKS` why\nthe session produced no verifiable output. This is a valid closeout.\n\nSee `docs/session-closeout-schema.md` for examples and field constraints.\n\n## Definition of Done\n\nA task is done when:\n\n- Behavior is explicit and observable\n- Failure paths are guarded\n- Architecture boundaries remain intact\n- Evidence matches the declared risk level\n- PLAN.md and memory/ reflect the new state"
+          },
+          {
+            "path": "/Users/gavin_wu/Desktop/campaign-forge/ui-prototype/PLAN.md",
+            "exists": true,
+            "content": "# Campaign Forge UI Prototype\n\n> **最後更新**: 2026-10-20\n> **Owner**: Gavin（需求與決策）；Codex（本輪執行）\n> **Freshness**: Sprint (7d)\n\n## Scope\n\n獨立的 React / TypeScript 本地 PC UI 展示。原始 README、PLAN、SLICES、DECISIONS、EXECUTION、候選 A 與比較文件已閱讀。A/B/C 未選案；A 只供展示，人物外觀與地圖均是提案。不得以 UI 展示取代 S4 授權。\n\n## Slices\n\n- UI-01：流程、資訊層級、資料分離、風險界線完成。\n- UI-02：主選單、六章24節點示意、營地人物、劇情抉擇完成。\n- UI-03：隊伍部署、戰場、選角→移動→技能→確認及撤銷完成；規則固定示範。\n- UI-04：選擇延續到支援、目標、同伴與戰後結果完成。\n- UI-05：四位人物、五種戰場小人、渡口場景與戰役地圖已整合；實際驗收記錄見 docs/VERIFICATION.md。\n\n## Design\n\n視覺重心是人物與戰場。成熟低飽和奇幻插畫、羊皮紙地圖、低調金屬框，繁體中文。人物立繪與小人獨立生成；敵我用 ◆／▲、文字及色彩一起區分。24節點是容量示意，後續章名與路線不揭露。\n\n## Decisions\n\n- 使用 React 18 / Vite 4 / TypeScript 5.6，僅介面驗證，不指定正式引擎。\n- 遊戲資料在 src/data.ts，素材路徑在資料設定中維護。\n- 無正式儲存，狀態在本次頁面生命週期保留；重設按鈕明確清除。\n- built-in image_gen 生成原創展示素材；不下載商業遊戲圖片。\n- domain / risk 由使用者授權代填為 game-ui-prototype / low。\n\n## Risks and pending decisions\n\n正式故事、角色身分／外觀、地圖地理、職業／技能、勝敗判定、戰鬥數值都待選案與設計。手把只有映射提案。尚無外部玩家可用性測試與正式平台相容性測試。\n\n## Verification\n\n建置、範圍保護與 CUA 實際瀏覽器流程；保留 screenshots 與 docs/VERIFICATION.md。AI Governance 真實 commit/push hook 驗證仍需另行授權；不得稱完整驗收完成。"
+          },
+          {
+            "path": "/Users/gavin_wu/Desktop/campaign-forge/governance/TESTING.md",
+            "exists": true,
+            "content": "# Testing\n\n執行 `npm run build --prefix ui-prototype` 與 `python3 scripts/validate_ui_scope.py`。\nUI 驗證見 `ui-prototype/docs/VERIFICATION.md`。不以圖稿代替實際執行畫面；預覽不得改變生命、隊伍或已確認行動數。\n治理以 contract loader、drift、hooks validator、explicit-plan quickstart smoke 驗證；真實 commit/push 與平台自動 lifecycle 是不同證據，禁止混稱。"
+          },
+          {
+            "path": "/Users/gavin_wu/Desktop/campaign-forge/governance/ARCHITECTURE.md",
+            "exists": true,
+            "content": "# Architecture\n\n- 原始企劃在 repo root / docs；本次保持內容不變。\n- UI 在 ui-prototype，資料集中 src/data.ts，視覺 public/art，React 本次頁面記憶狀態。\n- AI Governance 以 repo 內 submodule 固定 e8e67796894cd562ef0bce217bfad0fac211a44d。\n- AGENTS.base.md 與 common/core.md 原樣複製自該版本，Apache 2.0 授權只適用相應框架檔案，見 licenses。專案故事與新美術沒有因此被授予開源授權。\n- 本地 Git hooks 使用 framework 既有 installer；不建立 GitHub Actions 或外部服務。\n- 未設定 Codex 平台 lifecycle 自動呼叫，手動 runtime smoke 僅驗證函式可執行。"
+          }
+        ],
+        "ai_behavior_override": [
+          {
+            "path": "/Users/gavin_wu/Desktop/campaign-forge/AGENTS.base.md",
+            "exists": true,
+            "content": "# AGENTS.base.md\n<!-- governance-baseline: protected -->\n<!-- baseline_version: 1.0.0 -->\n<!-- DO NOT EDIT — managed by ai-governance-framework -->\n<!-- To add repo-specific rules, create AGENTS.md and extend this file's sections. -->\n<!-- Hash is recorded in .governance/baseline.yaml and verified on every drift check. -->\n\n## Level Alignment\n\n- Declared L0 but involves domain logic, boundary crossing, or behavior change → upgrade to L1\n- Declared L1 but involves core domain, security, data integrity, or irreversible state → upgrade to L2\n- Uncertain classification → upgrade, do not downgrade\n\n## Execution Pipeline\n\nFor L1+, the default workflow is:\n\n1. **Analyze** — understand behavior and constraints before touching code\n2. **Define** — contracts, boundaries, failure paths\n3. **Verify Plan** — what evidence will prove the change is safe\n4. **Implement** — minimum compliant change\n5. **Refactor** — only under evidence protection\n\nDo not skip a step when the omission would hide risk.\n\n## Forbidden Behaviors\n\n- Expand scope beyond what was explicitly instructed\n- Refactor unrelated areas for cleanliness or taste\n- Add speculative abstractions for hypothetical future requirements\n- Fake, inflate, or omit evidence\n- Assume intent when the instruction is ambiguous — ask instead\n\n## Secret Handling\n\n- Never commit tokens, API keys, credentials, or secrets to the repo\n- Never write tokens or credentials into memory/ files or logs\n- If a secret appears in conversation context, do not persist it anywhere\n- `.env` files and credentials must be in `.gitignore` and never staged\n\n## AI Governance Update Routing\n\nWhen the user says \"幫我更新最新版 AI Governance\" or uses equivalent update\nwording, route the request to `governance_tools.f7_full_update` even if F-7 was\nnot named explicitly. The governed updater is an F-7 backend, not the complete\nupdate-report surface.\n\nFor updated, already-current, blocked, and fallback/manual terminal results,\nrelay the complete `[human_readable_adoption_summary]` table when available.\nIf it is unavailable or omitted, report\n`human_readable_adoption_summary: NOT REPORTED`,\n`update_report_complete=false`, and `completion_claim_allowed=false`; do not\nclaim a complete AI Governance update report.\n\n## Memory Update Triggers\n\nThe following events require updating PLAN.md and/or the relevant memory/ file:\n\n| Event | Required update |\n|-------|----------------|\n| Milestone reached | PLAN.md phase/sprint + memory/active_task |\n| Architecture decision made | PLAN.md decision log + memory/knowledge_base |\n| Bug fixed with root cause identified | memory/knowledge_base |\n| Risk or incident encountered | PLAN.md risk section + memory/active_task |\n| Session end | canonical `memory/YYYY-MM-DD.md` record when closeout is non-stateless |\n\nAutomatic closeout has one write boundary: `session_end` may append the daily\ncanonical record through `governance_tools.memory_record`. Pre-commit and\n`memory_workflow` only inspect or validate memory state; they do not write it.\n`memory/01_active_task.md`, `memory/03_knowledge_base.md`, and `PLAN.md` remain\nmilestone, decision, or human-curation surfaces and are not rewritten after\nevery session.\n\nWhen an implementation requires a canonical closeout companion, keep the\nimplementation and closeout as separate commits on the same branch and in one\npull request by default. A successful merge, push, or remote verification is\ndelivery evidence only; it must not create another memory commit or second pull\nrequest. Open a follow-up slice only for a new defect, omitted required\ngovernance state, or explicit owner authorization.\n\n## Engineering Explanation\n\nWhenever the main agent reports status, review, diagnosis, or completion, or\nthe owner asks for a plain explanation, the main agent must explain the\nengineering meaning before the technical ledger. Reordering the same fields\nunder new headings is not enough.\n\nCanonical source: `governance/RESPONSE_ENVELOPE_CONTRACT.md`, section\n`Engineering Explanation (Evidence-Preserving Interpretation)`. This section is\nthe minimum fallback when that canonical contract is not loaded.\n\n- Separate observed fact, supported interpretation, hypothesis, authority\n  state, and next action.\n- Assume the reader is a senior engineer who understands software engineering\n  but has not followed this session. Reconstruct the minimum missing context:\n  the original problem, what happened, why the facts support this result, and\n  what the result changes or does not change for the goal. Use the event\n  sequence or evidentiary relationship; do not invent causation.\n- Do not use project codes, status tokens, evidence fields, or protocol terms as\n  the explanation itself. Explain each decision-relevant term on first use and\n  connect the events; translation without relationships is not explanation.\n- Preserve exact numbers, commands, paths, identifiers, conditions, evidence,\n  and `not_claimed` boundaries when they limit the conclusion.\n- Do not turn correlation into causation, a proxy into measured effect, a\n  recommendation into an owner decision, or an unapproved follow-up into a\n  promised action.\n- Use the task's natural shape: timeline for diagnosis; completed / blocked /\n  next for progress; trustworthy / unsupported / decision impact for review;\n  problem / mechanism / difference / success meaning for concept questions.\n- Include a next action only when it is relevant. Naming a candidate action does\n  not authorize it.\n- A clear answer that changes evidence or authority is a failed explanation.\n\nThis is an owner-facing reporting rule, not a semantic gate. Human\ncomprehension remains the acceptance signal.\n\n## Session Closeout Obligation\n\nWriting `artifacts/session-closeout.txt` before session end is a **governance\nobligation**, not a suggestion.\n\nWhere a governed lifecycle hook is wired, the harness calls `session_end` on that\nhook's event; Session-End Closeout Responsibility below defines when session end\napplies and what to do without such a hook. If the closeout artifact\nis missing or insufficient, the runtime records `closeout_missing` or\n`closeout_insufficient` in the verdict and writes a fail-closed canonical daily\nrecord when the session is non-stateless. The invalid closeout content is not\npromoted. The gap remains auditable and visible to reviewers.\n\n<!-- ai-governance:session-end-closeout BEGIN version=1 canonical=AGENTS.base.md -->\n### Session-End Closeout Responsibility\n\nThese rules apply to every agent platform (Codex, Claude, Copilot and others).\nThey define when closeout is required, who is responsible, and what may be\nclaimed. They do not define which lifecycle event a platform uses; that is\nplatform-specific and must be qualified separately for each platform.\n\n1. **Task DONE is not session end.** Finishing a task, a review, or a milestone\n   ends that task only. Report DONE, do not expand the work, and leave the\n   session open for the next request.\n2. **Closeout at a defined session end is a duty, not new work.** A mandatory\n   closeout at session end is not scope expansion. Hard Stop After DONE forbids\n   closeout after task DONE; it does not forbid closeout at session end.\n3. **Session end must come from a defined, observable source.** Only two sources\n   count: a platform lifecycle event whose session-end meaning has been\n   confirmed for that platform, or the user explicitly asking to end the session\n   or to close out. The agent must not infer that the conversation is over. A\n   final answer, a DONE report, or a per-turn `Stop` event is not session end\n   unless that meaning has been confirmed.\n4. **Governed lifecycle hook present:** the harness is responsible for\n   triggering canonical closeout. A governed hook is one wired to the governance\n   closeout entry and confirmed to run for this platform.\n5. **No usable governed hook:** only when session end is established under\n   rule 3, the top-level agent must attempt the existing manual closeout\n   (`python -m governance_tools.manage_agent_closeout print-manual --agent <agent>`\n   prints the command). If it cannot run or its result cannot be verified,\n   report closeout as `NOT PERSISTED` or `UNKNOWN`; never claim it was persisted.\n6. **Subagent completion is not project-level session end.** A subagent\n   returning to its parent must not run project-level closeout unless it has its\n   own governed session identity and was explicitly given closeout\n   responsibility.\n\nA closeout, including the manual fallback, does not authorize commit, push,\npull request, or a new task; each still needs its own explicit authorization.\n\nCloseout candidate, canonical record, and memory are verified separately. A\nsuccessful closeout on one platform is not evidence for any other platform.\n<!-- ai-governance:session-end-closeout END -->\n\n### Required fields\n\nAll fields must be present. Vague values are flagged as insufficient.\n\n```\nTASK_INTENT: <one sentence — declared goal of this session>\nWORK_COMPLETED: <what was actually done — verifiable claims only>\nFILES_TOUCHED: <comma-separated file list, or NONE>\nCHECKS_RUN: <specific commands or checks run, or NONE>\nOPEN_RISKS: <what might be wrong or incomplete, or NONE>\nNOT_DONE: <what was not completed this session, or NONE>\nRECOMMENDED_MEMORY_UPDATE: <what memory/ file should change and why, or NO_UPDATE>\n```\n\n### Rules\n\n- `WORK_COMPLETED` must contain verifiable claims. Do not write \"made improvements\"\n  or \"worked on things\" — these are vague and will be rejected as insufficient.\n- `CHECKS_RUN` must name specific commands if non-`NONE`.\n- If there was no material progress, write `WORK_COMPLETED: NONE` — do not\n  fabricate completions.\n- `NOT_DONE` and `OPEN_RISKS` are the most important fields. AI agents tend to\n  omit failures. Do not.\n\n### If you cannot write the closeout\n\nWrite it anyway with `WORK_COMPLETED: NONE` and explain in `OPEN_RISKS` why\nthe session produced no verifiable output. This is a valid closeout.\n\nSee `docs/session-closeout-schema.md` for examples and field constraints.\n\n## Definition of Done\n\nA task is done when:\n\n- Behavior is explicit and observable\n- Failure paths are guarded\n- Architecture boundaries remain intact\n- Evidence matches the declared risk level\n- PLAN.md and memory/ reflect the new state"
+          },
+          {
+            "path": "/Users/gavin_wu/Desktop/campaign-forge/AGENTS.md",
+            "exists": true,
+            "content": "# Campaign Forge 工作界線\n\n本 repo 專做原創 Steam／PC 奇幻戰棋 RPG 的故事企劃。當前停在 S3 故事選擇關卡，A、B、C 都是提案。\n\n- 先讀 README、PLAN、SLICES、docs/DECISIONS.md 與 docs/EXECUTION.md，再接續工作。\n- Gavin 選案前，保留三案獨立性。推薦結果不構成定案，不建立正式世界觀或 24 關腳本。\n- 已核准的本批只有 S0 至 S3。S4 起須在使用者選案並明確授權後才執行。\n- 所有讀寫限於本企劃工作區。可唯讀查閱 docs/SOURCES.md 列出的公開來源。不要讀取其他專案、公司檔案或公司系統。\n- GitHub 僅使用已授權工具與既有 gh 登入。目標 `Gavin0099/campaign-forge` 已由擁有者建立並選擇 Public；不重試建庫，不新增憑證、登入或權限，不變更 visibility。\n- 僅正常推送到已授權的目標 repo。若遠端出現尚未核對的提交或衝突，停止並報告；不覆寫使用者內容、不接管其他 repo、不強制 push。\n- 不啟用 GitHub Actions、付費工具或部署，不寫遊戲引擎、戰棋原型，不操作硬體。\n- 不沿用其他專案的平台或定價限制，不合併其他遊戲專案。\n- 不複製 D&D 人物、地名、原文、關卡或未授權書籍。職業名稱、技能、規則與授權仍待後續設計。\n- 不新增把故事內容開源的 LICENSE。若將來採用第三方程式或文件，先逐項保留相應來源與授權聲明。\n- 設定變更要標示提案或已確認。每個重大選擇必須寫出玩家已知資訊、實際代價與後續可見後果。\n- 每位核心同伴要有自己的目標、拒絕條件與離隊後的行動。主線不得因少一名可選同伴而無法完成。\n\n本文件未授權自動接續未來 slices，也未要求新增代理或平行執行。\n\n## UI Prototype Authorization — 2026-10-20\n\n使用者本次明確授權 `ui-prototype/` 的 UI-01 至 UI-05、原創展示美術與 AI Governance 完整導入；此範圍優先於上方「不寫戰棋原型」的一般界線。原始故事 PLAN、SLICES、docs 均保持不變，S4 仍未授權。參考 TacticalGo 僅限使用者指定的公開 skill 方法；不得挪用人物、美術、其他專案限制或正式設定。\n\n本 repo 延伸 `AGENTS.base.md`，使用者明確限制優先：未另行授權不得 commit、push、PR、部署、付費或啟用 Actions。框架的自動流程不得自行擴張權限。\n\n## Repo-Specific Risk Levels\n<!-- governance:key=risk_levels -->\n\n- domain: game-ui-prototype；risk_tier: low，由使用者「你直接幫我寫就好」授權代填。\n- L0：文字、文件、純視覺資產檢視。\n- L1：React UI 狀態、選擇後果、角色缺席與鍵盤操作；需實際操作證據。\n- 低風險依據：僅本地 UI 展示，沒有生產資料、付款、連線、正式存檔、完整戰棋引擎。\n\n## Must-Test Paths\n<!-- governance:key=must_test_paths -->\n\n- `ui-prototype/src/`：兩條故事選擇、部署缺席角色、移動／技能預覽／確認／撤銷、結果回戰役。\n- `npm run build --prefix ui-prototype`，`python3 scripts/validate_ui_scope.py`。\n- 瀏覽器實測 1920×1080、1280×720、放大文字、對白紀錄與 Esc；截圖必須來自執行畫面。\n\n## L1 → L2 Escalation Triggers\n<!-- governance:key=escalation_triggers -->\n\n正式故事定案、正式戰鬥規則、永久資料、帳號、網路服務、安全設定、費用、公開部署及跨專案寫入，均超出本輪 UI 授權，需回報與取得相應授權。\n\n## Repo-Specific Forbidden Behaviors\n<!-- governance:key=forbidden_behaviors -->\n\n不得把 A 美術或固定資料當正式設定；不得覆寫原始企劃、其他分支或使用者未提交檔案；不得複製商業遊戲素材；不得宣稱安裝 hooks 等於實際 commit/push 驗證。\n\n## AI Governance Memory Workflow Router\n<!-- governance:key=memory_workflow -->\n\n開始工作讀 `memory/01_active_task.md` 與 `memory/02_project_facts.md`。里程碑更新 `ui-prototype/PLAN.md` 與相關記憶；使用者陳述與代理觀察分開記錄。依框架 session-end 定義才觸發結束紀錄；最終回覆本身不表示 session end。\n\n治理工具以 `PYTHONPATH=ai-governance-framework python3 -m governance_tools.<tool>` 執行。UI 計畫位於 `ui-prototype/PLAN.md`；部分上游 readiness 工具硬編碼根目錄 PLAN，需如實列出差異，不能為通過檢查而修改故事企劃。框架更新使用 F7 流程；目前為首次 submodule 導入。"
+          }
+        ],
+        "rule_roots": [
+          "/Users/gavin_wu/Desktop/campaign-forge/governance/rules"
+        ],
+        "validators": [
+          {
+            "name": "validate_ui_scope",
+            "path": "/Users/gavin_wu/Desktop/campaign-forge/scripts/validate_ui_scope.py",
+            "exists": true
+          }
+        ],
+        "raw": {
+          "name": "campaign-forge-contract",
+          "plugin_version": "1.0.0",
+          "framework_interface_version": "1",
+          "framework_compatible": ">=1.0.0,<2.0.0",
+          "domain": "game-ui-prototype",
+          "risk_tier": "low",
+          "documents": [
+            "AGENTS.base.md",
+            "ui-prototype/PLAN.md",
+            "governance/TESTING.md",
+            "governance/ARCHITECTURE.md"
+          ],
+          "ai_behavior_override": [
+            "AGENTS.base.md",
+            "AGENTS.md"
+          ],
+          "rule_roots": [
+            "governance/rules"
+          ],
+          "validators": [
+            "scripts/validate_ui_scope.py"
+          ],
+          "evidence_roots": [
+            "artifacts",
+            "ui-prototype/screenshots"
+          ]
+        }
+      },
+      "resolved_contract_file": "/Users/gavin_wu/Desktop/campaign-forge/contract.yaml",
+      "summary_first": {
+        "active": false,
+        "task_level": "L1",
+        "note": "full domain contract loaded"
+      },
+      "decision_boundary": {
+        "preconditions_checked": [],
+        "boundary_effect": "pass"
+      },
+      "precondition_gate_validator": {
+        "ok": true,
+        "missing_preconditions": [],
+        "recommended_mode": "allow_analysis_only",
+        "forbidden_claims": [],
+        "rule_refs": [],
+        "signals": {
+          "wants_synthesizable_rtl": false,
+          "wants_control_interface_logic": false,
+          "has_reset_definition": false,
+          "has_handshake_definition": false,
+          "reset_negative_detected": false,
+          "handshake_negative_detected": false
+        }
+      },
+      "assumption_check": {
+        "present": false,
+        "assumptions_present": false,
+        "alternatives_present": false,
+        "alternatives_count": 0,
+        "evidence_present": false,
+        "reframe_present": false,
+        "action_decision": null,
+        "complete": false,
+        "missing": [
+          "assumptions",
+          "alternative_root_causes",
+          "evidence",
+          "reframe_or_validation_step"
+        ]
+      },
+      "evidence_integrity": {
+        "direct_evidence_frozen": false,
+        "source": "no_direct_evidence",
+        "has_strong_marker": false,
+        "has_no_evidence_marker": false
+      },
+      "evidence_integrity_gate": {
+        "ok": true,
+        "gate": "evidence_integrity_gate",
+        "violations": [],
+        "summary": {
+          "case_id": "runtime_task",
+          "kind": "unknown",
+          "phase": "final",
+          "violation_count": 0,
+          "hard_fail": false
+        }
+      },
+      "decision_policy": {
+        "risk_tier": "low",
+        "risk_score": 4.1,
+        "premise_status": "unknown",
+        "evidence_alignment": "absent",
+        "execution_scope": "local_reversible",
+        "reversibility": "easy",
+        "correctness_mode": "bounded_trial",
+        "selected_action": "proceed_with_assumption",
+        "ranked_actions": [
+          {
+            "action": "proceed_with_assumption",
+            "score": 1.4,
+            "reasons": [
+              "mode:bounded_trial",
+              "premise:unknown",
+              "evidence:absent",
+              "scope:local_reversible"
+            ]
+          },
+          {
+            "action": "need_more_info",
+            "score": 0.8,
+            "reasons": [
+              "mode:bounded_trial",
+              "premise:unknown",
+              "evidence:absent",
+              "scope:local_reversible",
+              "direct_evidence_missing"
+            ]
+          },
+          {
+            "action": "reframe",
+            "score": 0.3,
+            "reasons": [
+              "mode:bounded_trial",
+              "premise:unknown",
+              "evidence:absent",
+              "scope:local_reversible"
+            ]
+          },
+          {
+            "action": "proceed",
+            "score": 0.2,
+            "reasons": [
+              "mode:bounded_trial",
+              "premise:unknown",
+              "evidence:absent",
+              "scope:local_reversible"
+            ]
+          },
+          {
+            "action": "reject",
+            "score": 0.1,
+            "reasons": [
+              "mode:bounded_trial",
+              "premise:unknown",
+              "evidence:absent",
+              "scope:local_reversible"
+            ]
+          }
+        ],
+        "confidence": 1.0,
+        "reasons": [
+          "risk_tier:low",
+          "premise_status:unknown",
+          "evidence_alignment:absent",
+          "execution_scope:local_reversible",
+          "correctness_mode:bounded_trial",
+          "assumption_evidence_missing"
+        ],
+        "required_followup": [
+          "mark_assumption_explicitly",
+          "prepare_rollback_or_fallback"
+        ],
+        "fallback_plan": "Proceed with bounded local change and explicit rollback plan.",
+        "reframed_task": "",
+        "advisory_signals": [
+          "proceeding_under_assumption",
+          "assumption_evidence_missing"
+        ],
+        "decision_action": "proceed_with_assumption",
+        "decision_candidates": [
+          {
+            "action": "proceed_with_assumption",
+            "score": 1.4,
+            "reasons": [
+              "mode:bounded_trial",
+              "premise:unknown",
+              "evidence:absent",
+              "scope:local_reversible"
+            ]
+          },
+          {
+            "action": "need_more_info",
+            "score": 0.8,
+            "reasons": [
+              "mode:bounded_trial",
+              "premise:unknown",
+              "evidence:absent",
+              "scope:local_reversible",
+              "direct_evidence_missing"
+            ]
+          },
+          {
+            "action": "reframe",
+            "score": 0.3,
+            "reasons": [
+              "mode:bounded_trial",
+              "premise:unknown",
+              "evidence:absent",
+              "scope:local_reversible"
+            ]
+          },
+          {
+            "action": "proceed",
+            "score": 0.2,
+            "reasons": [
+              "mode:bounded_trial",
+              "premise:unknown",
+              "evidence:absent",
+              "scope:local_reversible"
+            ]
+          },
+          {
+            "action": "reject",
+            "score": 0.1,
+            "reasons": [
+              "mode:bounded_trial",
+              "premise:unknown",
+              "evidence:absent",
+              "scope:local_reversible"
+            ]
+          }
+        ]
+      },
+      "runtime_injection": {
+        "snapshot": {
+          "name": "runtime-injection-snapshot-v0",
+          "policy_version": "0",
+          "path": "/Users/gavin_wu/Desktop/campaign-forge/ai-governance-framework/governance/runtime_injection_snapshot.v0.yaml",
+          "source_refs": [
+            "docs/runtime-injection-layer-plan.md",
+            "docs/decision-context-bridge.md"
+          ],
+          "task_level_scope": [
+            "L0",
+            "L1",
+            "L2"
+          ],
+          "target_agent_classes": [
+            "instruction_capable",
+            "instruction_limited"
+          ],
+          "consumption_requirements": [
+            "inject_before_turn",
+            "reread_before_edit",
+            "require_full_read_for_large_files"
+          ],
+          "validation_requirements": [
+            "require_validation_after_edit",
+            "forbid_claim_without_evidence"
+          ],
+          "escalation_triggers": [
+            "escalate_if_context_degraded",
+            "escalate_if_required_evidence_missing"
+          ]
+        },
+        "signals_checked": [
+          {
+            "signal": "context_degraded",
+            "triggered": false,
+            "action": "pass",
+            "reason": null
+          },
+          {
+            "signal": "required_evidence_missing",
+            "triggered": false,
+            "action": "pass",
+            "reason": null
+          }
+        ],
+        "effect": "pass"
+      },
+      "consumption_observations": {
+        "snapshot": "runtime-injection-snapshot-v0",
+        "observations": [
+          {
+            "requirement": "require_full_read_for_large_files",
+            "applicable": true,
+            "observation_status": "compatible",
+            "observation_confidence": "low",
+            "decision_role": "advisory_only",
+            "observable_proxy": "large_file_detected_without_summary_first_degradation",
+            "matched_paths": [
+              "/Users/gavin_wu/Desktop/campaign-forge/AGENTS.base.md"
+            ],
+            "line_threshold": 200,
+            "caveat": "compatible observation is not proof that the file was semantically understood"
+          }
+        ]
+      },
+      "phase_classification": {
+        "schema_version": "0.1",
+        "hook": "pre_task_check",
+        "actions": [
+          {
+            "action": "precondition_gate",
+            "phase": "sync_gate",
+            "owner": "pre_task_check",
+            "description": "Execution preconditions and missing-input gate."
+          },
+          {
+            "action": "assumption_check_missing",
+            "phase": "sync_advisory",
+            "owner": "pre_task_check",
+            "description": "Assumption validation structure is incomplete."
+          }
+        ],
+        "phase_summary": {
+          "sync_gate": [
+            "precondition_gate"
+          ],
+          "sync_advisory": [
+            "assumption_check_missing"
+          ]
+        },
+        "rules": {
+          "sync_gate_blocks_execution": true,
+          "sync_advisory_hidden_gate_allowed": false,
+          "async_audit_can_retroactively_change_verdict": false
+        },
+        "unknown_actions": []
+      },
+      "errors": [],
+      "warnings": [
+        "Assumption check missing before modification planning: missing=assumptions, alternative_root_causes, evidence, reframe_or_validation_step; why=the premise, alternatives, evidence, or validation step is not visible yet; next=state the missing items before choosing an implementation",
+        "Decision policy advisory: assumption evidence missing: missing=direct evidence that tests the stated assumption; why=the decision remains uncertain even if the assumption is plausible; next=collect a trace, spec, test, or usage evidence before a high-impact change",
+        "Decision policy advisory: proceeding under assumption: missing=confirmed evidence for the premise; why=this is a provisional action, not proof that the change is correct; next=keep the change reversible and run the targeted verification"
+      ],
+      "trace_id": "e4e5d4449a3124bc",
+      "output_tier": 2,
+      "reasoning_fragments": [
+        {
+          "rule_id": "UNKNOWN",
+          "violation_type": "generic_violation",
+          "policy_refs": [],
+          "severity": "medium",
+          "prose": "Assumption check missing before modification planning: missing=assumptions, alternative_root_causes, evidence, reframe_or_validation_step; why=the premise, alternatives, evidence, or validation step i..."
+        },
+        {
+          "rule_id": "UNKNOWN",
+          "violation_type": "generic_violation",
+          "policy_refs": [],
+          "severity": "medium",
+          "prose": "Decision policy advisory: assumption evidence missing: missing=direct evidence that tests the stated assumption; why=the decision remains uncertain even if the assumption is plausible; next=collect a ..."
+        },
+        {
+          "rule_id": "UNKNOWN",
+          "violation_type": "generic_violation",
+          "policy_refs": [],
+          "severity": "medium",
+          "prose": "Decision policy advisory: proceeding under assumption: missing=confirmed evidence for the premise; why=this is a provisional action, not proof that the change is correct; next=keep the change reversib..."
+        }
+      ]
+    },
+    "governance_classification": {
+      "classification_evidence": {
+        "has_file_access": {
+          "value": true,
+          "source": "observed"
+        },
+        "instruction_loaded": {
+          "value": "true",
+          "source": "observed"
+        },
+        "context_integrity": {
+          "value": "unknown",
+          "source": "assumed"
+        },
+        "tool_gate": {
+          "value": "active",
+          "source": "observed"
+        }
+      },
+      "initial_agent_class": null,
+      "effective_agent_class": "instruction_capable",
+      "classification_changed": null,
+      "reclassification_reason": null,
+      "governance_strategy": "injection+enforcement",
+      "injection_reliance": "none"
+    },
+    "closeout_context": {
+      "inject": false,
+      "closeout_status": null,
+      "session_id": null,
+      "closed_at": null,
+      "injection_level": "none",
+      "task_intent": null,
+      "work_summary": null,
+      "open_risks": [],
+      "diagnostic": null
+    },
+    "plan_context_provenance": {
+      "fidelity": "full",
+      "origin": "PLAN.md",
+      "summary_kind": null
+    },
+    "version_compatibility": {
+      "verdict": "compatible",
+      "enabled_runtime_features": [
+        "agents_rule_candidates",
+        "canonical_closeout",
+        "decision_context_bridge",
+        "post_task_check",
+        "pre_task_check",
+        "session_index"
+      ],
+      "disabled_runtime_features": [],
+      "missing_migrations": [],
+      "repo_manifest_found": true,
+      "error": null,
+      "advisory_only": true
+    }
+  }
+}

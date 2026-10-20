@@ -1,0 +1,26 @@
+{
+  "battlefield-v1.png": {
+    "sha256": "56669110c7097f9d70ab941a19c9d2c7bffc28f068ec763a4638a8ad718a4210",
+    "bytes": 4217271,
+    "source": "built-in image_gen, 2026-10-20",
+    "status": "original generated visual proposal; not owner-approved final game art"
+  },
+  "campaign-v1.png": {
+    "sha256": "b7ea2ec49cfd93c5e400753addfb09bc46d3453ee5eff20b4105b36361047d53",
+    "bytes": 3857548,
+    "source": "built-in image_gen, 2026-10-20",
+    "status": "original generated visual proposal; not owner-approved final game art"
+  },
+  "party-v1.png": {
+    "sha256": "ecb21a0e82c549a4d38dd98b0812fa11c9ccdb57a7fdcebcaae3f3fa16002776",
+    "bytes": 2800666,
+    "source": "built-in image_gen, 2026-10-20",
+    "status": "original generated visual proposal; not owner-approved final game art"
+  },
+  "units-v1.png": {
+    "sha256": "19c5e58ead0a41afb2a57f7ae2c8af1a4c50fa7ce6ba207a06e6af9e8d3f2843",
+    "bytes": 1743514,
+    "source": "built-in image_gen, 2026-10-20",
+    "status": "original generated visual proposal; not owner-approved final game art"
+  }
+}

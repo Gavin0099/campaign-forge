@@ -16,3 +16,47 @@
 - 每位核心同伴要有自己的目標、拒絕條件與離隊後的行動。主線不得因少一名可選同伴而無法完成。
 
 本文件未授權自動接續未來 slices，也未要求新增代理或平行執行。
+
+## UI Prototype Authorization — 2026-10-20
+
+使用者本次明確授權 `ui-prototype/` 的 UI-01 至 UI-05、原創展示美術與 AI Governance 完整導入；此範圍優先於上方「不寫戰棋原型」的一般界線。原始故事正文、SLICES、docs 均保持不變（根 PLAN 可加下方明確授權的治理表頭），S4 仍未授權。參考 TacticalGo 僅限使用者指定的公開 skill 方法；不得挪用人物、美術、其他專案限制或正式設定。
+
+本 repo 延伸 `AGENTS.base.md`，使用者明確限制優先：未另行授權不得 commit、push、PR、部署、付費或啟用 Actions。框架的自動流程不得自行擴張權限。
+
+## Repo-Specific Risk Levels
+<!-- governance:key=risk_levels -->
+
+- domain: game-ui-prototype；risk_tier: low，由使用者「你直接幫我寫就好」授權代填。
+- L0：文字、文件、純視覺資產檢視。
+- L1：React UI 狀態、選擇後果、角色缺席與鍵盤操作；需實際操作證據。
+- 低風險依據：僅本地 UI 展示，沒有生產資料、付款、連線、正式存檔、完整戰棋引擎。
+
+## Must-Test Paths
+<!-- governance:key=must_test_paths -->
+
+- `ui-prototype/src/`：兩條故事選擇、部署缺席角色、移動／技能預覽／確認／撤銷、結果回戰役。
+- `npm run build --prefix ui-prototype`，`python3 scripts/validate_ui_scope.py`。
+- 瀏覽器實測 1920×1080、1280×720、放大文字、對白紀錄與 Esc；截圖必須來自執行畫面。
+
+## L1 → L2 Escalation Triggers
+<!-- governance:key=escalation_triggers -->
+
+正式故事定案、正式戰鬥規則、永久資料、帳號、網路服務、安全設定、費用、公開部署及跨專案寫入，均超出本輪 UI 授權，需回報與取得相應授權。
+
+## Repo-Specific Forbidden Behaviors
+<!-- governance:key=forbidden_behaviors -->
+
+不得把 A 美術或固定資料當正式設定；不得覆寫原始企劃、其他分支或使用者未提交檔案；不得複製商業遊戲素材；不得宣稱安裝 hooks 等於實際 commit/push 驗證。
+
+## AI Governance Memory Workflow Router
+<!-- governance:key=memory_workflow -->
+
+開始工作讀 `memory/01_active_task.md` 與 `memory/02_project_facts.md`。里程碑更新 `ui-prototype/PLAN.md` 與相關記憶；使用者陳述與代理觀察分開記錄。依框架 session-end 定義才觸發結束紀錄；最終回覆本身不表示 session end。
+
+治理工具以 `PYTHONPATH=ai-governance-framework python3 -m governance_tools.<tool>` 執行。UI 計畫位於 `ui-prototype/PLAN.md`；部分上游 readiness 工具硬編碼根目錄 PLAN，需如實列出差異，不能為通過檢查而修改故事企劃。框架更新使用 F7 流程；目前為首次 submodule 導入。
+
+### 本輪 Git 授權更新
+
+2026-10-20 使用者追加「做完一個段落幫我push」，授權本輪完成段落的正常 commit/push 到既有 campaign-forge repo；不含 PR、部署、Actions、強推或修改正式故事。
+
+2026-10-20 使用者確認「允許只加治理表頭並繼續 push」；允許套用 governance/proposed-root-plan-header.patch 的確切 metadata，故事正文與 S3／S4 狀態不變。

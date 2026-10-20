@@ -1,0 +1,1 @@
+{"ok": true, "pre_task_ok": true, "session_start_ok": true, "validator_preflight_ok": true, "evidence": "/Users/gavin_wu/Desktop/campaign-forge/artifacts/governance-ui-quickstart.json"}

@@ -1,0 +1,13 @@
+
+> campaign-forge-ui-prototype@0.1.0 build
+> tsc --noEmit && vite build
+
+vite v4.5.5 building for production...
+transforming...
+✓ 31 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.40 kB │ gzip:  0.31 kB
+dist/assets/index-c215dc7c.css   22.91 kB │ gzip:  6.33 kB
+dist/assets/index-8844cdb1.js   163.87 kB │ gzip: 55.16 kB
+✓ built in 1.27s
