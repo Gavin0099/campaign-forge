@@ -1,0 +1,103 @@
+{
+  "assets": [
+    {
+      "file": "ferry-scene-v2-realistic-draft.png",
+      "width": 1672,
+      "height": 940,
+      "mode": "RGB",
+      "sha256": "510588ee9f931f19d8480a6ec87704d888914f686f893bc021f35685616c6c05",
+      "bytes": 3298049,
+      "source": "built-in image_gen, original proposal, 2026-10-20",
+      "runtime": false
+    },
+    {
+      "file": "ferry-scene-v2.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "sha256": "2a659af48fc684af2fd8be86a88b80bfe42e1dc3a8a135bced13a366a32dd220",
+      "bytes": 3557427,
+      "source": "built-in image_gen, original proposal, 2026-10-20",
+      "runtime": true
+    },
+    {
+      "file": "party-v2-layout-draft.png",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "sha256": "6915102042cdba26a9e65998c821b8daf28570e133237978abffa40e220683fd",
+      "bytes": 2500223,
+      "source": "built-in image_gen, original proposal, 2026-10-20",
+      "runtime": false
+    },
+    {
+      "file": "party-v2.png",
+      "width": 1774,
+      "height": 887,
+      "mode": "RGBA",
+      "sha256": "8334b2b23adafe1a74b0d7802fddae1b1f649867c858ef600704f74e070e5f70",
+      "bytes": 1728900,
+      "source": "built-in image_gen, original proposal, 2026-10-20",
+      "runtime": true,
+      "column_separator_max_alpha": [
+        1,
+        0,
+        0
+      ],
+      "transparent_fraction": 0.575,
+      "separator_visible_alpha_threshold": 16,
+      "separator_check_pass": true
+    },
+    {
+      "file": "props-v2.png",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA",
+      "sha256": "9bc881e7bda11e472206eb7a46721964686ed66193f7b5494bd2c1f484293af0",
+      "bytes": 1884519,
+      "source": "built-in image_gen, original proposal, 2026-10-20",
+      "runtime": true
+    },
+    {
+      "file": "terrain-v2.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "sha256": "c1aa5dd10c2476fa8fbcb3059842d11d92066bebb3f504ac2080d36fcf18ceaf",
+      "bytes": 3536280,
+      "source": "built-in image_gen, original proposal, 2026-10-20",
+      "runtime": true
+    },
+    {
+      "file": "units-v2-layout-draft.png",
+      "width": 1983,
+      "height": 793,
+      "mode": "RGBA",
+      "sha256": "15124b7173433e0b7f80bad2eb32278eba97c2b08c9879a4a30dedd19b0c44d2",
+      "bytes": 1865675,
+      "source": "built-in image_gen, original proposal, 2026-10-20",
+      "runtime": false
+    },
+    {
+      "file": "units-v2.png",
+      "width": 1983,
+      "height": 793,
+      "mode": "RGBA",
+      "sha256": "960d480660a58e1e72ced770d14d82a2390565da564383f2085f8e26687ef97d",
+      "bytes": 1204421,
+      "source": "built-in image_gen, original proposal, 2026-10-20",
+      "runtime": true,
+      "column_separator_max_alpha": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "transparent_fraction": 0.7245,
+      "separator_visible_alpha_threshold": 16,
+      "separator_check_pass": true
+    }
+  ],
+  "original_v1_preserved": true,
+  "third_party_game_art_in_runtime": false
+}

@@ -1,0 +1,43 @@
+{
+  "valid": true,
+  "repo_root": "D:\\campaign-forge",
+  "hook_dir": "D:\\campaign-forge\\.git\\hooks",
+  "framework_root": "D:\\campaign-forge\\ai-governance-framework",
+  "checks": {
+    "git_hooks_dir_present": true,
+    "pre_commit_installed": true,
+    "pre_push_installed": true,
+    "framework_root_config_present": true,
+    "external_tree_identity_config_present": true,
+    "external_tree_identity_config_valid": true,
+    "external_tree_identity_config_has_repository_root": true,
+    "copilot_instructions_present": false,
+    "copilot_instructions_governed": false,
+    "copilot_lifecycle_bridge_present": false,
+    "copilot_lifecycle_bridge_governed": false,
+    "copilot_vscode_hooks_present": false,
+    "copilot_vscode_hooks_governed": true,
+    "copilot_session_end_hooks_present": false,
+    "copilot_session_end_hooks_governed": false,
+    "copilot_lifecycle_installed": false,
+    "framework_root_exists": true,
+    "framework_file:scripts/lib/python.sh": true,
+    "framework_file:scripts/run-runtime-governance.sh": true,
+    "framework_file:governance_tools/plan_freshness.py": true,
+    "framework_file:governance_tools/contract_validator.py": true,
+    "self_smoke_dependency_declared": true,
+    "framework_file:contract.yaml": true,
+    "copilot_instructions_managed_block_unique": false,
+    "copilot_checkpoint_projection_present": false,
+    "copilot_checkpoint_projection_inside_managed_block": false,
+    "copilot_checkpoint_source_expected": false,
+    "copilot_checkpoint_version_current": false,
+    "copilot_checkpoint_body_matches_header": false,
+    "copilot_checkpoint_matches_canonical": false
+  },
+  "errors": [],
+  "warnings": [
+    "copilot-instructions.md not found: D:\\campaign-forge\\.github\\copilot-instructions.md — run install-hooks.sh to deploy DONE boundary rules for Copilot Workspace",
+    "Copilot lifecycle hooks are not fully installed; expected managed .github/hooks lifecycle bridge and genuine Copilot sessionEnd config. The optional VS Code config must not register the framework lifecycle bridge: Stop is not session end; adding SessionStart writes the session envelope twice. Retire legacy managed entries with hook_installer; resolve custom wiring manually"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "guard": "memory_authority_guard",
+  "version": "1.2.0",
+  "contract": "governance/MEMORY_AUTHORITY_CONTRACT.md",
+  "phase": "phase1",
+  "mode": "warning",
+  "ok": true,
+  "ok_meaning": "guard_executed_report_only_not_authority_clean",
+  "authority_integrity_status": "clean",
+  "enforcement_action": "allow",
+  "blocking_violation_codes": [],
+  "report_only_violation_codes": [],
+  "claim_ceiling": "report_only_phase1",
+  "not_claimed": [
+    "blocking_enforcement",
+    "semantic_truth_verification"
+  ],
+  "blocking_policy": {
+    "enabled_codes": [],
+    "mode": "report_only_default",
+    "override_mode": "allowed"
+  },
+  "evidence_root_policy": {
+    "roots": [
+      "artifacts",
+      "ui-prototype/screenshots"
+    ],
+    "framework_owned_roots": [
+      "artifacts"
+    ],
+    "consumer_roots": [
+      "artifacts",
+      "ui-prototype/screenshots"
+    ],
+    "source": "contract",
+    "contract_path": "D:\\campaign-forge\\contract.yaml",
+    "warnings": [],
+    "evidence_file_suffixes": [
+      ".cat",
+      ".csv",
+      ".diff",
+      ".dmp",
+      ".err",
+      ".etl",
+      ".evtx",
+      ".html",
+      ".inf",
+      ".json",
+      ".jsonl",
+      ".junit",
+      ".log",
+      ".ndjson",
+      ".out",
+      ".patch",
+      ".sarif",
+      ".tap",
+      ".trace",
+      ".txt",
+      ".wer",
+      ".xml"
+    ]
+  },
+  "violation_count": 0,
+  "violation_counts_by_code": {},
+  "authority_coverage_rate": {
+    "session_derived": {
+      "total_entries": 3,
+      "bound_entries": 3,
+      "rate": 1.0
+    },
+    "structural": {
+      "total_sections": 0,
+      "promoted_sections": 0,
+      "rate": null
+    }
+  },
+  "violations": [],
+  "active_non_canonical_writer": {
+    "active_from": "2026-06-02",
+    "count": 0,
+    "violations": [],
+    "mode": "report_only"
+  }
+}

@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1",
+    "test:visual": "node tests/visual-sprint.mjs",
+    "test:evidence": "node tests/verify-evidence.mjs"
   },
   "dependencies": {
     "react": "18.3.1",
@@ -15,6 +17,7 @@
   "devDependencies": {
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
+    "playwright": "1.64.1",
     "typescript": "file:vendor/typescript-5.6.3.tgz",
     "vite": "4.5.5"
   }

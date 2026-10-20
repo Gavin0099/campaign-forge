@@ -1,0 +1,66 @@
+{
+  "retrieved_at": "2026-10-20",
+  "sources": [
+    {
+      "game": "The Banner Saga",
+      "official_page": "https://store.steampowered.com/app/237990/?l=english",
+      "app_id": 237990,
+      "html_sha256": "9b4dd84a2e5a8ada4f6d1e6b9ded0c75f37c8b1bd091336e7d0bbc92ae9e0a2e",
+      "screenshots": [
+        {
+          "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/237990/ss_fa141a65b0690cd4c72b8f2898185646ce316bb4.1920x1080.jpg?t=1650912084",
+          "local_research_copy": "scratch\\visual-benchmarks\\banner-saga-0.jpg",
+          "sha256": "887ac2d6e96b9a45a034f46b464e0700250c1fc3858bc71e3148e71821effa32",
+          "usage": "private study only; not shipped or used as generation input"
+        },
+        {
+          "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/237990/ss_a54786888cedbf83fd13fb50ecfcdd9380010a11.1920x1080.jpg?t=1650912084",
+          "local_research_copy": "scratch\\visual-benchmarks\\banner-saga-2.jpg",
+          "sha256": "cc3b1d9efe1548306152863ec53ca72f6aa7f808389f21efdfe72a8ce7464302",
+          "usage": "private study only; not shipped or used as generation input"
+        }
+      ]
+    },
+    {
+      "game": "Fell Seal: Arbiter's Mark",
+      "official_page": "https://store.steampowered.com/app/699170/?l=english",
+      "app_id": 699170,
+      "html_sha256": "3d25e2170ccc35dfd3ff62ee944c7cabece51d2b8d31deca22a07c9a9edd0644",
+      "screenshots": [
+        {
+          "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/699170/ss_cc36a170f0d1492aa2d9696ea00a1b9a133bcdff.1920x1080.jpg?t=1789474578",
+          "local_research_copy": "scratch\\visual-benchmarks\\fell-seal-0.jpg",
+          "sha256": "fced24e08c22f0f70eb3c1e70306c41ecef233eae8b59840052723d25768e338",
+          "usage": "private study only; not shipped or used as generation input"
+        },
+        {
+          "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/699170/ss_a7124c46107bf40fa726a3692826b45225adf55c.1920x1080.jpg?t=1789474578",
+          "local_research_copy": "scratch\\visual-benchmarks\\fell-seal-1.jpg",
+          "sha256": "420d5a255ed72aff354a451eb32dfbdb909e87d6dab7fc4f7c0662cfb746e293",
+          "usage": "private study only; not shipped or used as generation input"
+        }
+      ]
+    },
+    {
+      "game": "Tactics Ogre: Reborn",
+      "official_page": "https://store.steampowered.com/app/1451090/?l=english",
+      "app_id": 1451090,
+      "html_sha256": "ea657e35ded251acfd3abd5f06613450d8f87ae742d69974e13f3ee326ed237b",
+      "screenshots": [
+        {
+          "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1451090/ss_1e6d95aea4292f591c408a4d403ef65f907f94fe.1920x1080.jpg?t=1786031697",
+          "local_research_copy": "scratch\\visual-benchmarks\\tactics-ogre-0.jpg",
+          "sha256": "f85b0a27193faf03efaa30c43d7f1b4729e7acbcdb6818b43389a4171769cbc0",
+          "usage": "private study only; not shipped or used as generation input"
+        },
+        {
+          "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1451090/ss_399b976817400a4ff98dcc7e3b59bff25608093d.1920x1080.jpg?t=1786031697",
+          "local_research_copy": "scratch\\visual-benchmarks\\tactics-ogre-2.jpg",
+          "sha256": "0fd61918108874bd9f7c0211907dc2396bbbd06cb2987e5ed2952b9f51d69a90",
+          "usage": "private study only; not shipped or used as generation input"
+        }
+      ]
+    }
+  ],
+  "rights": "Screenshots remain copyright of respective rights holders; research copies stay ignored under scratch."
+}

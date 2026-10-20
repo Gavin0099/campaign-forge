@@ -1,0 +1,62 @@
+{
+  "baseCommit": "6f5109e80e9413fc7b47007963ef6ce10e15e6b9",
+  "origin": "actual local Chromium render",
+  "captures": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "choice": "residents",
+      "deployed": [
+        "shien",
+        "lida",
+        "olun"
+      ],
+      "actor": "shien",
+      "destination": {
+        "x": 1,
+        "y": 4
+      },
+      "target": "scout",
+      "turn": 1,
+      "actions": 0,
+      "battlefield": {
+        "x": 304.21875,
+        "y": 200.953125,
+        "width": 965.546875,
+        "height": 789.984375
+      },
+      "scroll": {
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "choice": "residents",
+      "deployed": [
+        "shien",
+        "lida",
+        "olun"
+      ],
+      "actor": "shien",
+      "destination": {
+        "x": 1,
+        "y": 4
+      },
+      "target": "scout",
+      "turn": 1,
+      "actions": 0,
+      "battlefield": {
+        "x": 214.21875,
+        "y": 191.25,
+        "width": 525.546875,
+        "height": 429.984375
+      },
+      "scroll": {
+        "width": 1280,
+        "height": 720
+      }
+    }
+  ]
+}

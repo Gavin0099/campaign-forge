@@ -61,6 +61,12 @@
 
 2026-10-20 使用者確認「允許只加治理表頭並繼續 push」；允許套用 governance/proposed-root-plan-header.patch 的確切 metadata，故事正文與 S3／S4 狀態不變。
 
+## Visual Quality Sprint Authorization — 2026-10-20
+
+使用者追加9.5小時、上限10小時的美術打磨；可依序完成競品基準、四人立繪、五種小人、同源11×9渡口地景、戰鬥資訊與視覺回饋及1080p／720p驗收，不需逐片人工確認。沿用正常commit/push授權，沒有PR、部署、Actions或S4授權。
+
+可唯讀查閱 The Banner Saga、Fell Seal: Arbiter's Mark、Tactics Ogre: Reborn 的官方網站／Steam頁面及截圖，研究副本僅存scratch並記錄來源；商業遊戲素材不得進入原型或公開再散布。保留既有原創素材、生成提示與Before／After。實際時間、功能結果、視覺技術檢查與人工美術判定分開記錄；商業品質不能由build成功推定。原劇情後果、地形資料與固定示範規則保持不變。
+
 ### Codex 原生治理接線
 
 2026-10-20 使用者追加「把剩下的接線與驗收補齊，做到完整導入，完成後幫我 push」，授權本 repo 的原生事件轉接、相關驗收及正常 commit/push；不含跨工作區的全域信任修改、trust bypass、Actions、PR 或部署。

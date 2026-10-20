@@ -1,0 +1,26 @@
+{
+  "scope": "test-only local Chrome launcher; not production authority",
+  "checks": [
+    {
+      "case": "relative-path",
+      "exit_code": 1,
+      "profile_untouched": true,
+      "acceptance_report_untouched": true,
+      "failed_before_playwright_import": true
+    },
+    {
+      "case": "wrong-byte-length",
+      "exit_code": 1,
+      "profile_untouched": true,
+      "acceptance_report_untouched": true,
+      "failed_before_playwright_import": true
+    },
+    {
+      "case": "wrong-digest",
+      "exit_code": 1,
+      "profile_untouched": true,
+      "acceptance_report_untouched": true,
+      "failed_before_playwright_import": true
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "started_at": "2026-10-20T11:57:07.620Z",
+  "browser": {
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "sha256": "f76f0234efb271041dc84f9f38fb858e01859d5da6f775f5108668eb3ae80975"
+  },
+  "origin": "local installed Chrome, real React UI interactions; not generated mock screenshots",
+  "results": [
+    {
+      "name": "geometry-1920",
+      "pass": true,
+      "detail": "All 99 rendered ground polygons exactly match hit polygons and unchanged baseline terrain"
+    },
+    {
+      "name": "complete-residents",
+      "pass": true,
+      "detail": "Preview, confirm, modal keyboard trap/Esc, result consequences and return to campaign"
+    },
+    {
+      "name": "residents-1920",
+      "pass": true,
+      "detail": "Same baseline preview state, undo leaves position/HP unchanged, confirmation moves and deals exactly 3, turn resets"
+    },
+    {
+      "name": "geometry-1280",
+      "pass": true,
+      "detail": "All 99 rendered ground polygons exactly match hit polygons and unchanged baseline terrain"
+    },
+    {
+      "name": "complete-residents",
+      "pass": true,
+      "detail": "Preview, confirm, modal keyboard trap/Esc, result consequences and return to campaign"
+    },
+    {
+      "name": "residents-1280",
+      "pass": true,
+      "detail": "Same baseline preview state, undo leaves position/HP unchanged, confirmation moves and deals exactly 3, turn resets"
+    },
+    {
+      "name": "complete-grain",
+      "pass": true,
+      "detail": "Preview, confirm, modal keyboard trap/Esc, result consequences and return to campaign"
+    },
+    {
+      "name": "absent-characters-keyboard",
+      "pass": true,
+      "detail": "Only Lida deployed; keyboard activation of SVG cells and confirmation; main flow succeeds without Shien or Olun"
+    },
+    {
+      "name": "complete-residents",
+      "pass": true,
+      "detail": "Preview, confirm, modal keyboard trap/Esc, result consequences and return to campaign"
+    },
+    {
+      "name": "large-text",
+      "pass": true,
+      "detail": "Enlarged text at 720p; controls reachable and full flow completed without horizontal overflow"
+    },
+    {
+      "name": "reduced-motion",
+      "pass": true,
+      "detail": "Animated hit suppressed; live text and final position/HP remain available"
+    },
+    {
+      "name": "history-esc-four-characters",
+      "pass": true,
+      "detail": "Dialogue history open/close, Esc return and four distinct character views rendered"
+    },
+    {
+      "name": "browser-console",
+      "pass": true,
+      "detail": "No page errors or failed HTTP resources"
+    }
+  ],
+  "inputs": {
+    "ui-prototype/src/Battlefield.tsx": "0369c1dc4a42d06f876107a4135cfaa38562e27313d39c1e4b764d4d4855fa27",
+    "ui-prototype/src/data.ts": "c5ea580ff3c816e4ef8da4f9777ade3f94a94b306a61e31275ac3511a239c397",
+    "ui-prototype/src/main.tsx": "86c9c328feb86115abf91a208f3e85619acf5394526cb4022b53958487487e4f",
+    "ui-prototype/src/style.css": "c9844bf7b70ea74b6ad92dff6b69b0bffd571422a2ffbdabbf1fc6963ba4f639",
+    "ui-prototype/src/visual.css": "6435ba6dd298dfd0d33ba9c39c4da9f3e790d2b5d817c5e12221c41261c84c5d",
+    "ui-prototype/public/art/battlefield-v1.png": "56669110c7097f9d70ab941a19c9d2c7bffc28f068ec763a4638a8ad718a4210",
+    "ui-prototype/public/art/campaign-v1.png": "b7ea2ec49cfd93c5e400753addfb09bc46d3453ee5eff20b4105b36361047d53",
+    "ui-prototype/public/art/ferry-scene-v2-realistic-draft.png": "510588ee9f931f19d8480a6ec87704d888914f686f893bc021f35685616c6c05",
+    "ui-prototype/public/art/ferry-scene-v2.png": "2a659af48fc684af2fd8be86a88b80bfe42e1dc3a8a135bced13a366a32dd220",
+    "ui-prototype/public/art/party-v1.png": "ecb21a0e82c549a4d38dd98b0812fa11c9ccdb57a7fdcebcaae3f3fa16002776",
+    "ui-prototype/public/art/party-v2-layout-draft.png": "6915102042cdba26a9e65998c821b8daf28570e133237978abffa40e220683fd",
+    "ui-prototype/public/art/party-v2.png": "8334b2b23adafe1a74b0d7802fddae1b1f649867c858ef600704f74e070e5f70",
+    "ui-prototype/public/art/props-v2.png": "9bc881e7bda11e472206eb7a46721964686ed66193f7b5494bd2c1f484293af0",
+    "ui-prototype/public/art/terrain-v2.png": "c1aa5dd10c2476fa8fbcb3059842d11d92066bebb3f504ac2080d36fcf18ceaf",
+    "ui-prototype/public/art/units-v1.png": "19c5e58ead0a41afb2a57f7ae2c8af1a4c50fa7ce6ba207a06e6af9e8d3f2843",
+    "ui-prototype/public/art/units-v2-layout-draft.png": "15124b7173433e0b7f80bad2eb32278eba97c2b08c9879a4a30dedd19b0c44d2",
+    "ui-prototype/public/art/units-v2.png": "960d480660a58e1e72ced770d14d82a2390565da564383f2085f8e26687ef97d",
+    "ui-prototype/tests/visual-sprint.mjs": "8b8ca3681f00b45e66dc216c64bcbf9c36f91c563fad4916d118ab971dabf2a0",
+    "ui-prototype/package-lock.json": "403d0966ac1504e643402352e5db5d95464c8ba890b25a10a2cc19a1f2b5e4cb"
+  },
+  "captures": [
+    {
+      "file": "camp-1920.png",
+      "width": 1920,
+      "scroll": 1920,
+      "height": 1080,
+      "sha256": "abd9e28b8f6ee8413c2338b4387fdc7c7926f772d7aef628ebc753dca62219d5"
+    },
+    {
+      "file": "story-1920.png",
+      "width": 1920,
+      "scroll": 1920,
+      "height": 1080,
+      "sha256": "8e548babe189b3cd86a1e337f2c42387e63b8ccd64867c4d4329b627ee16bfac"
+    },
+    {
+      "file": "deploy-1920.png",
+      "width": 1920,
+      "scroll": 1920,
+      "height": 1080,
+      "sha256": "ded86f2d47c9b0800bc333c2c9012f6b36419de38871800a0ae79f0f9ea2b131"
+    },
+    {
+      "file": "battle-idle-1920.png",
+      "width": 1920,
+      "scroll": 1920,
+      "height": 1080,
+      "sha256": "d51082c0da33573f32ecf80fb97ce3c5825f6d6bce266418d1124e753a71deab"
+    },
+    {
+      "file": "battle-move-range-1920.png",
+      "width": 1920,
+      "scroll": 1920,
+      "height": 1080,
+      "sha256": "cb43988839157e407fef9b36fb288a591ce21bd901544047911e5b008888a310"
+    },
+    {
+      "file": "battle-skill-range-1920.png",
+      "width": 1920,
+      "scroll": 1920,
+      "height": 1080,
+      "sha256": "cee56a30aebf03bfca47fa8de98dc33b9e0155ff5619cfbc543fed04ed46401b"
+    },
+    {
+      "file": "battle-preview-1920.png",
+      "width": 1920,
+      "scroll": 1920,
+      "height": 1080,
+      "sha256": "a7590a7711c0906102d39e78635849d1f5eca2b47192ccaa90af8e26dcfbd402"
+    },
+    {
+      "file": "battle-hit-1920.png",
+      "width": 1920,
+      "scroll": 1920,
+      "height": 1080,
+      "sha256": "732aa871e8d379316de2f56ff8c817992684da6eaf61785e14ec43bec3b9013e"
+    },
+    {
+      "file": "camp-1280.png",
+      "width": 1280,
+      "scroll": 1280,
+      "height": 720,
+      "sha256": "e4406abd6a2a9ab61593046378687101e36498720d02fd11d96cd5911bb74dd0"
+    },
+    {
+      "file": "story-1280.png",
+      "width": 1280,
+      "scroll": 1280,
+      "height": 720,
+      "sha256": "f29a9cedcb02bafdbada4d5f529f0921a0de35b6979803593c2bf150547cb3b0"
+    },
+    {
+      "file": "deploy-1280.png",
+      "width": 1280,
+      "scroll": 1280,
+      "height": 720,
+      "sha256": "f1071036131fa091bdea5ca8e8b5205cc5b589167185474670430ec1cd41a317"
+    },
+    {
+      "file": "battle-idle-1280.png",
+      "width": 1280,
+      "scroll": 1280,
+      "height": 720,
+      "sha256": "ef3f7a80fbd90b33c76d9185c5f12cb4ab5b47f57e82c841af2cad77f4ddb2e3"
+    },
+    {
+      "file": "battle-move-range-1280.png",
+      "width": 1280,
+      "scroll": 1280,
+      "height": 720,
+      "sha256": "2ad417f3002f5f793f7228084939ccdcdaaf87a87bd94c7cf3f22e2ed76c5b06"
+    },
+    {
+      "file": "battle-skill-range-1280.png",
+      "width": 1280,
+      "scroll": 1280,
+      "height": 720,
+      "sha256": "37181ee83950e36a629848b504ea9d1be5ebcfd889b07d44c08eafbe6067516f"
+    },
+    {
+      "file": "battle-preview-1280.png",
+      "width": 1280,
+      "scroll": 1280,
+      "height": 720,
+      "sha256": "90052577ed8e5eb9f0e8ac611c12701dc7c194922567852fd137dd0315ff4abd"
+    },
+    {
+      "file": "battle-hit-1280.png",
+      "width": 1280,
+      "scroll": 1280,
+      "height": 720,
+      "sha256": "785eb0038d856a8f2bb1944f1c23368f6c12fc7eddaeb877b786fb613dbf50b7"
+    },
+    {
+      "file": "battle-large-text-1280.png",
+      "width": 1280,
+      "scroll": 1280,
+      "height": 720,
+      "sha256": "c921663ee349abf895d6170e06c5538aa3fb810e2fd15fb3aba4884562796108"
+    },
+    {
+      "file": "battle-reduced-motion-1280.png",
+      "width": 1280,
+      "scroll": 1280,
+      "height": 720,
+      "sha256": "0d60544e2cb545de03ff0b06ceb7fcd22816eab897f4274ca3886096dfce6a9d"
+    },
+    {
+      "file": "story-history-1280.png",
+      "width": 1280,
+      "scroll": 1280,
+      "height": 720,
+      "sha256": "09535737207a48edbe0c46f56fa581d81bdb5cc815b5892293830df597be9804"
+    },
+    {
+      "file": "character-shien-1920.png",
+      "width": 1920,
+      "scroll": 1920,
+      "height": 1080,
+      "sha256": "69f75f227cb7c7e28bb87e7e8a57514ec79b6a4b720d8000154995d8b81494d9"
+    },
+    {
+      "file": "character-lida-1920.png",
+      "width": 1920,
+      "scroll": 1920,
+      "height": 1080,
+      "sha256": "856ed4998f6c55478263f7c46a5e27813bdcd204881fb12e122a771580bf518e"
+    },
+    {
+      "file": "character-olun-1920.png",
+      "width": 1920,
+      "scroll": 1920,
+      "height": 1080,
+      "sha256": "0b8bc6624ec9afff7bdd5a9232ba76d5913271033f91db2f16c24f539261a2cd"
+    },
+    {
+      "file": "character-marui-1920.png",
+      "width": 1920,
+      "scroll": 1920,
+      "height": 1080,
+      "sha256": "0560564031ab2f21c54249ea3fb1e7e0985024a2b0a94eb7dac11a4a6db5f21e"
+    },
+    {
+      "file": "character-shien-1280.png",
+      "width": 1280,
+      "scroll": 1280,
+      "height": 720,
+      "sha256": "7a1fa254390160660b0f29dbe95834abcf559456e58eee460ff4ee3787e71e1b"
+    },
+    {
+      "file": "character-lida-1280.png",
+      "width": 1280,
+      "scroll": 1280,
+      "height": 720,
+      "sha256": "c103c9a72d3627586a48bdb2ed0d68d5d7988f5aa08f108fbab5651590279c9e"
+    },
+    {
+      "file": "character-olun-1280.png",
+      "width": 1280,
+      "scroll": 1280,
+      "height": 720,
+      "sha256": "8970a4cd605dcdbe1cbce8fb8e6f8429018e1a7adc993634002a0bd1f394f472"
+    },
+    {
+      "file": "character-marui-1280.png",
+      "width": 1280,
+      "scroll": 1280,
+      "height": 720,
+      "sha256": "3eebba581769c3c6ab6c78080c387a390192194baffec5d191a99e539eb514ab"
+    },
+    {
+      "file": "battle-thumbnail-640.png",
+      "width": 640,
+      "height": 360,
+      "sha256": "7705fe9d753e3d35901fd94e1d3270c3a0d9305cd712b1c4cf773aefa090d59a",
+      "origin": "Chromium resampling of actual 1920x1080 capture"
+    },
+    {
+      "file": "battle-thumbnail-460.png",
+      "width": 460,
+      "height": 259,
+      "sha256": "a642b708a65b72a6b1fec999eaaeb45362fe1104ec08947eaa22d4ee55140e45",
+      "origin": "Chromium resampling of actual 1920x1080 capture"
+    }
+  ],
+  "same_state": {
+    "choice": "residents",
+    "deployed": [
+      "shien",
+      "lida",
+      "olun"
+    ],
+    "actor": "shien",
+    "destination": {
+      "x": 1,
+      "y": 4
+    },
+    "target": "scout",
+    "turn": 1,
+    "actions": 0
+  },
+  "pass": true,
+  "finished_at": "2026-10-20T11:57:19.361Z",
+  "errors": [],
+  "browser_version": "155.0.8059.40"
+}

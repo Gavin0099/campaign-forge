@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-Hant">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>渡口美術打磨 — 實際畫面比較</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 32px; color: #eee5d1; background: #17221f; font: 16px/1.65 'Microsoft JhengHei', system-ui, sans-serif; }
+  h1 { margin: 0 0 10px; font: 32px/1.25 'PMingLiU', serif; }
+  p { max-width: 85ch; color: #cad1bf; }
+  label { display: inline-flex; gap: 10px; align-items: center; margin: 10px 28px 10px 0; }
+  select { padding: 8px; background: #2c3930; color: #eee5d1; border: 1px solid #ac996d; font: inherit; }
+  a { color: #e4c48b; }
+  .comparison { position: relative; width: 100%; aspect-ratio: 16/9; border: 1px solid #8a896a; margin-top: 18px; }
+  .comparison img { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .comparison .before { clip-path: inset(0 50% 0 0); }
+  .divider { position: absolute; inset: 0 auto 0 50%; width: 2px; background: #ffe6af; }
+  .tag { position: absolute; top: 12px; padding: 4px 12px; background: #15241feb; color: #fff0d1; border: 1px solid #a99671; }
+  .tag.old { left: 12px; }.tag.new { right: 12px; }
+  .slider { display: flex; margin-top: 18px; }.slider input { flex: 1; accent-color: #d2b37b; }
+  .thumbs { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; margin-top: 32px; }
+  figure { margin: 0; max-width: 100%; }figure img { display: block; max-width: 100%; border: 1px solid #69765a; }figcaption { margin-top: 8px; color: #cbd1bd; }
+  :focus-visible { outline: 3px solid #f2cf8f; outline-offset: 4px; }
+</style>
+<h1>渡口美術打磨 — Before／After</h1>
+<p>本頁使用本機 Chrome 實際操作截圖。戰鬥預覽狀態一致：居民路線、三人部署、席恩移至第2列5行的預覽、追兵目標、回合1、已確認0次。功能與座標檢查通過不代表商業美術品質通過；最終品質仍需人工審圖。</p>
+<label>畫面 <select id="scene"><option value="battle-preview">戰鬥預覽</option><option value="battle-idle">戰鬥待命</option><option value="camp">營地</option><option value="story">對話</option><option value="deploy">部署</option></select></label>
+<label>解析度 <select id="resolution"><option value="1920">1920×1080</option><option value="1280">1280×720</option></select></label>
+<div class="comparison"><img id="after" alt="打磨後的實際執行畫面"><img id="before" class="before" alt="打磨前的相同流程畫面"><div class="divider"></div><span class="tag old">Before</span><span class="tag new">After</span></div>
+<label class="slider">比較分界 <input id="split" type="range" min="0" max="100" value="50" aria-label="調整Before與After分界"></label>
+<p><a id="original-before">開啟 Before 原圖</a>　<a id="original-after">開啟 After 原圖</a>　<a href="VERIFICATION.md">驗收與人工審查項目</a></p>
+<div class="thumbs"><figure><img id="thumb640" width="640" height="360" alt="實際1080p戰鬥截圖縮至640乘360"><figcaption>640×360 · 看類型、角色陣營、渡口與選取焦點</figcaption></figure><figure><img id="thumb460" width="460" height="259" alt="實際1080p戰鬥截圖縮至460乘259"><figcaption>460×259 · 不要求讀取完整技能文字</figcaption></figure></div>
+<script>
+  const scene = document.querySelector('#scene'), resolution = document.querySelector('#resolution'), split = document.querySelector('#split');
+  const base = '../../screenshots/visual-sprint/';
+  function update() {
+    for (const state of ['before', 'after']) {
+      const src = `${base}${state}/${scene.value}-${resolution.value}.png`;
+      document.querySelector(`#${state}`).src = src;
+      document.querySelector(`#original-${state}`).href = src;
+    }
+    for (const size of ['640', '460']) document.querySelector(`#thumb${size}`).src = `${base}after/battle-preview-1920.png`;
+  }
+  split.addEventListener('input', () => { document.querySelector('#before').style.clipPath = `inset(0 ${100-split.value}% 0 0)`; document.querySelector('.divider').style.left = `${split.value}%`; });
+  scene.addEventListener('change', update); resolution.addEventListener('change', update); update();
+</script>
+</html>

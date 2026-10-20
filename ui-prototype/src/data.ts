@@ -69,4 +69,4 @@ export const unitSeeds = [
   { id: 'guard', name: '封路兵', x: 8, y: 5, hp: 8, side: 'enemy' as const, mark: '敵' }
 ]
 
-export const artwork = { party: "/art/party-v1.png", units: "/art/units-v1.png", battlefield: "/art/battlefield-v1.png", campaign: "/art/campaign-v1.png" } as const
+export const artwork = { party: "/art/party-v2.png", units: "/art/units-v2.png", battlefield: "/art/ferry-scene-v2.png", campaign: "/art/campaign-v1.png" } as const

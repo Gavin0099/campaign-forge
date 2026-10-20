@@ -1,0 +1,61 @@
+{
+  "method": "WCAG relative luminance of specified solid CSS foreground/background pairs; not every composited pixel or gradient",
+  "pairs": [
+    {
+      "pair": "body",
+      "foreground": "#eee5d1",
+      "background": "#23332e",
+      "ratio": 10.58,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "pair": "secondary",
+      "foreground": "#bac8b6",
+      "background": "#171b1b",
+      "ratio": 9.95,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "pair": "eyebrow",
+      "foreground": "#d0ac72",
+      "background": "#23332e",
+      "ratio": 6.2,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "pair": "primary_button",
+      "foreground": "#161b1a",
+      "background": "#c1a06c",
+      "ratio": 7.06,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "pair": "disabled_button",
+      "foreground": "#aaafa1",
+      "background": "#28332d",
+      "ratio": 5.84,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "pair": "active_step",
+      "foreground": "#17241f",
+      "background": "#c8ab76",
+      "ratio": 7.29,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "pair": "damage",
+      "foreground": "#f0b395",
+      "background": "#23332e",
+      "ratio": 7.31,
+      "minimum": 4.5,
+      "pass": true
+    }
+  ]
+}

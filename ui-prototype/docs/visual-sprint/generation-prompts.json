@@ -1,0 +1,10 @@
+{
+  "status": "Original provisional artwork; not final character/story approval",
+  "party": {
+    "prompt": "Use case: identity-preserve. Asset type: original indie tactical RPG full-body character lineup sprite atlas, 4 EQUAL COLUMNS, transparent PNG. Edit the supplied ORIGINAL Campaign Forge lineup, not any commercial game. Keep exactly the same four people, faces, hair, ages, clothing identities and weapons, in the same left-to-right order. Shien: slim young man, messy dark-brown hair, moss-green long coat, ivory scarf, rolled brass map tube on his back and short sword. Lida: adult woman, copper braid over shoulder, deep desaturated teal long dress, ivory hooded shawl, large medicine satchel, small wrapped dressing. Olun: broad older silver-haired bearded officer, weathered steel plate, oxblood-red tabard, tall plain shield. Marui: lean short-dark-haired female boat scout, ochre coat, rust scarf, rope coil and plain boat hook. Refine into mature hand-painted collectible RPG character art: credible adult anatomy, subtle expressive faces, economical but beautiful fabric folds, cold pewter metal and warm worn leather; restrained detail, strong readable silhouette, bespoke costuming. The four should read as one art-directed company, not four different rendering styles. Cool overcast daylight from upper LEFT, restrained warm reflected light. Full figures from crown to boots with generous transparent padding. NO backdrop, no brown rectangles, no environment or floor, no cast shadows beyond a small soft boot contact shadow. A wide 4:3 image split into four perfectly equal invisible vertical panels, one person centered in each quarter at 12.5%,37.5%,62.5%,87.5%. All feet at same 94% baseline, all heads between 6% and 10% image height. No overlap between columns, no objects crossing their own quarter. Highest craftsmanship, painted fine contours, subtle gouache grain. No text, no logos, no UI, no unique insignia. Preserve original character identity. Actual transparent alpha.",
+    "inputs": [
+      "ui-prototype/public/art/party-v1.png"
+    ],
+    "requested_transparency": true
+  }
+}

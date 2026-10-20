@@ -9,6 +9,10 @@ Owner Gavin。目標 Steam / PC 故事戰役、小隊養成奇幻戰棋 RPG；A/
 
 ## Agent-observed implementation facts
 
-Node16 / React18 / Vite4 / TypeScript5.6，本地頁面記憶狀態，不是存檔。四張 built-in image_gen 圖像原檔保留於 ui-prototype/public/art。範圍與執行證據以 artifacts、ui-prototype/docs 為準。
+2026-10-20最新使用者授權：9.5小時、上限10小時Visual Quality Sprint；可查閱三款指定遊戲官方網站／截圖，研究副本限scratch。以四人、五種小人、渡口與對話為重點，原選擇後果與規則不變。這是使用者要求，並非正式角色或商品名定案。
+
+本次Windows實際執行環境為Node24.13.0、Chrome155.0.8059.40、Python3.12與Pillow12.2.0；Playwright1.64.1是開發驗收依賴。新增8份原創v2素材（含3份保留草稿），v1四份原件雜湊未改。素材與互動格共享mapRows的投影，不依賴背景生成圖決定通行。
+
+早期環境記錄為Node16 / React18 / Vite4 / TypeScript5.6；本次Windows版本見上方最新觀察。本地頁面狀態不屬正式存檔。四張v1 built-in image_gen原檔保留於ui-prototype/public/art。範圍與執行證據以artifacts、ui-prototype/docs為準。
 
 使用者後續明確允許「只加治理表頭並繼續 push」，範圍是 governance/proposed-root-plan-header.patch，沒有授權修改故事正文或 S4。

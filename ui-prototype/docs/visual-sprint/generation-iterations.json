@@ -1,0 +1,65 @@
+{
+  "source": "built-in image_gen",
+  "date": "2026-10-20",
+  "scope": "Original demonstration proposals, not approved character or world decisions",
+  "entries": [
+    {
+      "asset": "party-v2-layout-draft.png",
+      "prompt": "Use case: identity-preserve. Asset type: original indie tactical RPG full-body character lineup sprite atlas, 4 EQUAL COLUMNS, transparent PNG. Edit the supplied ORIGINAL Campaign Forge lineup, not any commercial game. Keep exactly the same four people, faces, hair, ages, clothing identities and weapons, in the same left-to-right order. Shien: slim young man, messy dark-brown hair, moss-green long coat, ivory scarf, rolled brass map tube on his back and short sword. Lida: adult woman, copper braid over shoulder, deep desaturated teal long dress, ivory hooded shawl, large medicine satchel, small wrapped dressing. Olun: broad older silver-haired bearded officer, weathered steel plate, oxblood-red tabard, tall plain shield. Marui: lean short-dark-haired female boat scout, ochre coat, rust scarf, rope coil and plain boat hook. Refine into mature hand-painted collectible RPG character art: credible adult anatomy, subtle expressive faces, economical but beautiful fabric folds, cold pewter metal and warm worn leather; restrained detail, strong readable silhouette, bespoke costuming. The four should read as one art-directed company, not four different rendering styles. Cool overcast daylight from upper LEFT, restrained warm reflected light. Full figures from crown to boots with generous transparent padding. NO backdrop, no brown rectangles, no environment or floor, no cast shadows beyond a small soft boot contact shadow. A wide 4:3 image split into four perfectly equal invisible vertical panels, one person centered in each quarter at 12.5%,37.5%,62.5%,87.5%. All feet at same 94% baseline, all heads between 6% and 10% image height. No overlap between columns, no objects crossing their own quarter. Highest craftsmanship, painted fine contours, subtle gouache grain. No text, no logos, no UI, no unique insignia. Preserve original character identity. Actual transparent alpha.",
+      "inputs": [
+        "party-v1.png"
+      ],
+      "transparent_background": true,
+      "status": "layout rejected: edge contact and insufficient column separation; retained original"
+    },
+    {
+      "asset": "party-v2.png",
+      "prompt": "Edit this original four-person Campaign Forge character atlas. Preserve the exact painted faces, costumes, props, identity and beautiful rendering. FIX ONLY THE LAYOUT: arrange each entire person in their own EQUAL QUARTER with generous transparent margins. Wide landscape canvas. Shrink the four figures so that every person occupies at most 75% of their quarter width, with at least 12% empty transparent margin on both sides inside each quarter. Nothing may touch another figure or the canvas edge. Exactly four figures in same order: green-coated surveyor Shien, teal-dressed healer Lida, broad silver-armored oxblood officer Olun, ochre boat scout Marui. Each quarter centered at x=12.5%,37.5%,62.5%,87.5%. Feet baseline at y=94%; tallest head at y=12%. Preserve credible differing body heights. Every whole boot, hook, shield and coat hem visible. Transparent alpha, no background, no floor, no text, no panel frames. Four distinct full bodies. Do not change design.",
+      "inputs": [
+        "party-v2-layout-draft.png"
+      ],
+      "transparent_background": true,
+      "status": "layout refinement, renderer must clip each equal quarter"
+    },
+    {
+      "asset": "units-v2-layout-draft.png",
+      "prompt": "Create an ORIGINAL hand-painted tactical RPG battle-unit sprite sheet. Use the supplied original character lineup as strict identity reference for the FIRST THREE figures, and the supplied old unit sheet only to preserve the two enemy identities and five-column order. Exactly FIVE separate upright full-body figures in FIVE EQUAL columns on a wide 5:2 transparent canvas. Figures centered at 10%,30%,50%,70%,90% width. Each fits within inner 70% of its own column; generous transparent spacing, no overlap. Feet all at 92% canvas height. Mature simplified 4-head-tall adult proportions, not cute chibi or giant heads. Camera elevated 30 degrees, 3/4 front facing lower right, visible top shoulders. 1 Shien slim dark messy hair, moss-green long coat, ivory scarf, brass map tube across back, short sword; 2 Lida copper braid, teal dress and ivory shawl, brown medical satchel; 3 Olun broad older grey-bearded officer, weathered steel plate and oxblood tabard, tall rectangular plain shield; 4 hostile pursuer, brown pointed hood, dark brown leather with rust sash, spear; 5 hostile road guard, closed steel helmet, reddish-brown quilted armor, round shield and short blade. EXACTLY those five, no scout Marui in this sheet. Coherent hand-painted gouache textures, bold readable silhouette and broad costume color blocks matching portrait source, very economical highlights and details for 90px-tall display. Cool overcast light from upper left. Whole weapons and feet visible. No floor, no scenery, no labels, no UI, no halos or bases, no captions. Actual transparent alpha. Not a commercial game's art style; preserve our original identities.",
+      "inputs": [
+        "party-v2.png",
+        "units-v1.png"
+      ],
+      "transparent_background": true,
+      "status": "layout rejected: weapons crossed columns"
+    },
+    {
+      "asset": "units-v2.png",
+      "prompt": "Edit this ORIGINAL Campaign Forge five-unit sprite atlas, preserving each exact painted design, costume and identity. ONLY correct the sprite-sheet layout: shrink every complete figure by 25% relative to its own column, arrange five completely separate whole figures centered in five perfectly equal columns at 10%,30%,50%,70%,90% of canvas width, feet at 90% height. Wide 5:2 canvas. Each figure INCLUDING ALL WEAPONS must fit within middle 70% of their column, with empty transparent left and right margin. No weapon may enter the neighbor's column. All feet and faces remain same relative scale and approximately aligned; Olun is broader, not taller than other adults. DO NOT add a sixth figure. Same order green surveyor, teal healer, armored red officer, brown hooded spear pursuer, closed-helmet round-shield guard. Keep the sharp readable hand-painted rendering, 4-head adult proportions and elevated 3/4 viewpoint, do not make more chibi. Fully transparent alpha, no text, no panels, no scenery or floor. Generous empty space is REQUIRED so software can crop each equal fifth without including any part of adjacent figures.",
+      "inputs": [
+        "units-v2-layout-draft.png"
+      ],
+      "transparent_background": true,
+      "status": "layout refinement pending inspection"
+    },
+    {
+      "asset": "terrain-v2.png",
+      "prompt": "Original hand-painted fantasy tactical RPG TERRAIN MATERIAL ATLAS. A perfectly square image divided into four equal seamless texture quadrants, no borders or gaps. Top-left: rain-dark moss grass with very fine clover, warm-grey tiny stones and subtle muddy earth, desaturated sage olive green. Top-right: worn broad irregular grey-brown flagstone road, small moss seams, subdued limestone, no perspective. Bottom-left: deep desaturated slate teal river water, delicate pale turquoise ripples, no bank or shore, no boats, no plants. Bottom-right: darker fern-green woodland floor, sparse tiny leaves, brown needles and roots, no tree trunks or full trees. ALL FOUR are viewed perfectly straight down orthographic as flat material swatches for programmatically projected tiles; uniform diffuse upper-left cool light, no directional dramatic shadows, no baked grid, no text or characters. Mature artisanal gouache and ink fantasy game art, atmospheric but readable, low contrast texture suitable under unit sprites and tactical highlights. The four swatches must meet exactly at 50% x and y, each filling its quarter edge to edge. Original materials only, not referencing a commercial game.",
+      "inputs": [],
+      "transparent_background": false,
+      "status": "original material atlas; positions exclusively driven by mapRows"
+    },
+    {
+      "asset": "props-v2.png",
+      "prompt": "Original mature hand-painted fantasy tactical RPG environment prop atlas, transparent alpha, wide 3:1 layout split into three equal columns with generous transparent padding. Three separate isolated miniature diorama props, 30-degree elevated isometric 3/4 camera. LEFT: small cluster of two low windswept alder trees, desaturated moss sage foliage, visible weathered trunks and two grey rocks, footprint at bottom center, foliage narrow enough not to obscure neighboring tiles. MIDDLE: a modest wooden cable-ferry boat with low timber deck, rope, short mast and two mooring posts on a very short jetty, NO water or ground underneath. RIGHT: three weathered wooden supply crates, one canvas-covered bundle, coil of rope and a battered lantern together, no text or insignia. At 16%,50%,83% horizontal centers, no overlap, all objects completely contained in respective thirds. Consistent overcast cool upper-left light, fine gouache grain, beautifully painted economical shapes, damp old timber and cold grey metal, restrained natural colors. No characters, no symbols, no borders, no UI, no backdrop, no cast shadows beyond tiny contact shadow. Transparent PNG sprite atlas for an original game, no commercial references.",
+      "inputs": [],
+      "transparent_background": true,
+      "status": "original decorative props, no gameplay effect"
+    },
+    {
+      "asset": "ferry-scene-v2-realistic-draft.png",
+      "prompt": "Original mature hand-painted fantasy RPG narrative environment illustration, widescreen 16:9. An intimate rain-soaked lowland cable-ferry landing just before a coming flood, no people. Grey-green river curving through mossy low banks, modest rough-hewn wooden ferry on rope guide at the near bank, a few abandoned supply crates and rolled canvas beside a weathered waymarker with NO writing. Distant dark alder trees and pale layered mist, cold overcast early morning light from upper left with a restrained tiny amber lantern by the landing. Viewer stands at riverbank height looking across the crossing, not overhead battle map. Composition: left two-thirds open atmospheric river and far-bank silhouette to support a dark dialogue overlay, landing and boat in middle distance, right third darker foliage behind a foreground speaking character that will be composited in the UI. Sophisticated hand-painted gouache and fine ink edges, credible material detail, quiet narrative tension, restrained moss, slate teal, weathered ochre and pewter palette. The place feels inhabited and consequential, not generic ornate high fantasy. No castle, no spectacle, no text, no logos, no grid, no UI or frame. Original proposal art for Campaign Forge; do not imitate a commercial game's distinctive art.",
+      "inputs": [],
+      "transparent_background": false,
+      "status": "repainted for style coherence; retained original, see scene-refinement.json"
+    }
+  ]
+}

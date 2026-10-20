@@ -1,0 +1,10 @@
+{
+  "asset": "ferry-scene-v2.png",
+  "prompt": "Repaint the supplied original ferry environment into a clearly HAND-PAINTED gouache and ink game background, matching the crafted painted rendering of the supplied original character lineup. Preserve the exact landing, ferry, river, waymarker without writing, crates, perspective and open dialogue composition. Replace photographic microtexture with broad deliberate brush shapes, visible soft gouache grain, simplified water reflections, layered graphic mist and hand-drawn contours. Quiet mature illustrated fantasy, believable materials, restrained sage moss, slate teal, pewter, ochre and warm amber. Cool upper-left overcast daylight consistent with the characters. Keep the lantern as tiny warm accent. The whole scene should be an illustrator's original fantasy painting, not a photograph or photoreal 3D render. No people added; characters are composited by software later. No text, UI, grid or logos. Widescreen 16:9, keep room on left for dialogue and dark trees on right for foreground portrait.",
+  "inputs": [
+    "ferry-scene-v2-realistic-draft.png",
+    "party-v2.png"
+  ],
+  "transparent_background": false,
+  "status": "painterly refinement; first scene draft retained, identity/geography still proposal"
+}
