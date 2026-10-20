@@ -1,5 +1,15 @@
 # AI Governance 導入程度 — 2026-10-20
 
+## Windows 工作副本重新驗收
+
+本次使用者指示「先幫我導入AI governance」。觀察到新工作副本的 submodule 未初始化、Git hooks 未安裝，舊驗收屬於先前環境。本次已還原固定的 e8e67796894cd562ef0bce217bfad0fac211a44d，使用官方 Python installer 安裝 hooks-only；未更新框架版本。
+
+Windows 以普通檔案簽出 ui-prototype/memory 與 .governance 的符號連結，且建立真正連結被 WinError 1314 拒絕；原 UI smoke 因此 session_start_ok=false。已移除兩個連結，改從 repo runtime root 讀取唯一的記憶、規則與 baseline，仍明確使用 UI 計畫；相同 smoke 重跑的 pre_task、session_start 與 validator preflight 均通過。
+
+本機 readiness 17/17、drift 與 hook 安裝檢查通過，證據為 artifacts/governance-windows-readiness.json、governance-windows-drift.json、governance-windows-hooks.json，以及更新的 governance-ui-quickstart.json。手動 runtime、安裝檢查與真實 Git hook 觸發是不同證據；本次 Git 交付結果另以實際終端輸出及遠端 HEAD 核對，尚未自動接上 Codex lifecycle。下方原有環境的紀錄保留為歷史，不能當成本機最新執行結果。
+
+另外執行 `python scripts/validate_ui_scope.py` 通過13份企劃保護檢查；`npm run build --prefix ui-prototype` 首次因未安裝依賴找不到 tsc，執行 `npm ci --prefix ui-prototype --ignore-scripts --no-audit --no-fund` 後建置成功。記憶 authority guard 全部計數0、warnings/blockers 為空且 completion_claim_allowed=true，原件見 artifacts/governance-windows-memory.json；這是里程碑記憶檢查，不是 session-end closeout。本輪 UI 行為未變更，未重跑或宣稱新的瀏覽器驗收。
+
 ## 結論
 
 本 repo 已達框架靜態評估的 **full_candidate**：必要靜態治理檔案齊備，版本帳本與 submodule 一致，repo-specific 規則、contract 與 validator 已存在。根目錄 readiness 全部17項檢查通過，沒有 error。這個名稱表示可進一步驗收的完整候選，不等於所有 agent 對話都有自動強制治理。

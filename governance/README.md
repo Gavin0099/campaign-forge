@@ -7,7 +7,7 @@
 - root contract：game-ui-prototype / low（使用者授權代理填寫）。
 - 官方受保護 baseline、專案 AGENTS 規則、memory 01–04、版本宣告與本地 Git hooks。
 - 原始企劃保護 DomainValidator，可由 CLI 或 framework 載入。
-- `python3 scripts/verify_governance_ui.py`：以 ui-prototype 為 runtime root；其 memory 與 .governance symlink 指回 repo，避免重複真相來源。檢查 domain contract、pre-task、session-start、validator preflight。這是手動測試，未接上 Codex lifecycle。
+- `python scripts/verify_governance_ui.py`：以 repo 為 runtime root，明確指定 ui-prototype/PLAN.md；直接讀取根目錄的 memory、規則與 .governance，無需符號連結權限。檢查 domain contract、pre-task、session-start、validator preflight。這是手動測試，未接上 Codex lifecycle。
 - `PYTHONPATH=ai-governance-framework python3 -m governance_tools.governance_drift_checker --repo . --format human`。
 - `PYTHONPATH=ai-governance-framework python3 -m governance_tools.hook_install_validator --repo . --framework-root ai-governance-framework --format human`。
 
@@ -18,3 +18,19 @@
 版本帳本與 submodule checkout SHA 相符；實際提交狀態與導入程度以 ADOPTION-STATUS.md 與 Git 歷史為準。真實 commit / push hook 已在 a97c8a8 正常交付中執行且通過。Copilot hooks 不適用本次 Codex 工作，沒有宣稱其安裝或驗證。
 
 診斷原件在 artifacts。UI runtime PASS 不代表 root readiness PASS，也不表示平台自動執行、正式規則完整或全框架測試通過。
+
+## Windows 工作副本設定
+
+框架與 hooks 不會隨一般 clone 自動就緒。從 repo 根目錄以 PowerShell 執行：
+
+```powershell
+git submodule update --init -- ai-governance-framework
+$env:PYTHONPATH = (Resolve-Path ai-governance-framework).Path
+$env:PYTHONUTF8 = '1'
+python -m governance_tools.hook_installer --repo . --framework-root ai-governance-framework --hooks-only
+python -m governance_tools.external_repo_readiness --repo . --framework-root ai-governance-framework --format human
+python scripts/verify_governance_ui.py
+python scripts/validate_ui_scope.py
+```
+
+使用已安裝的 Python 3，不依賴 WindowsApps 的 python3 別名。Git hooks 由 Git for Windows 的 Bash 執行，無需 WSL。此設定只安裝本 repo 的 Git hooks，不新增 Copilot、Actions 或 Codex 平台 lifecycle。新工作副本需重跑設定；原有歷史證據不能代替本機驗證。
