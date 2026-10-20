@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Campaign Forge · VD2 實際畫面比較</title>
+  <style>
+    body {
+      margin: 0;
+      background: #152326;
+      color: #eadfc6;
+      font:
+        16px/1.7 system-ui,
+        "Microsoft JhengHei",
+        sans-serif;
+    }
+    main {
+      max-width: 1400px;
+      margin: auto;
+      padding: 28px;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    label,
+    button {
+      margin-right: 20px;
+    }
+    select,
+    input,
+    button {
+      font: inherit;
+    }
+    select,
+    button {
+      background: #293835;
+      color: #eadfc6;
+      padding: 7px;
+      border: 1px solid #af9a6f;
+    }
+    .compare {
+      position: relative;
+      aspect-ratio: 16/9;
+      margin: 20px 0;
+      background: #10191b;
+    }
+    .compare img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    #after {
+      clip-path: inset(0 50% 0 0);
+    }
+    img,
+    video {
+      max-width: 100%;
+    }
+    .pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    a {
+      color: #b7e8d7;
+    }
+    small {
+      color: #d4c7ad;
+    }
+    @media (max-width: 760px) {
+      .pair {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <main>
+    <h1>戰地測繪 · VD2 實際執行證據</h1>
+    <p>
+      VQ1：工程通過，Owner美術未通過。①戰地測繪已獲選作本輪展示方向；本輪最終美術仍待Owner審查，正式故事未選案。
+    </p>
+    <label
+      >解析度
+      <select id="size">
+        <option value="1280">1280 × 720</option>
+        <option value="1920">1920 × 1080</option>
+      </select></label
+    ><label
+      >狀態
+      <select id="state">
+        <option value="preview">相同預覽：席恩1,6→1,4，目標2,3，HP6</option>
+        <option value="idle">待命</option>
+      </select></label
+    >
+    <p>
+      <label for="split">左：After／右：Before</label
+      ><input
+        id="split"
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        style="width: min(600px, 90%)"
+      />
+    </p>
+    <div class="compare">
+      <img id="before" alt="修改前實際畫面" /><img
+        id="after"
+        alt="戰地測繪修改後實際畫面"
+      />
+    </div>
+    <h2>兩套候選，同一戰場狀態</h2>
+    <div class="pair">
+      <figure>
+        <img id="cartography" alt="①戰地測繪候選" />
+        <figcaption>① 戰地測繪：Owner選擇本輪深化</figcaption>
+      </figure>
+      <figure>
+        <img id="ember" alt="②燼光巡禮候選" />
+        <figcaption>② 燼光巡禮：保留比較</figcaption>
+      </figure>
+    </div>
+    <h2>實際操作錄製</h2>
+    <p>
+      順序：確認移動與揮擊 → 光矢 → 護印 →
+      受擊回復。GIF只編碼真實Chromium錄製影格；展示法術不改數值。
+    </p>
+    <button id="play">載入所選解析度GIF</button>
+    <p><img id="live" alt="按上方按鈕載入真正執行中的戰鬥GIF" /></p>
+    <p>
+      <a href="VERIFICATION.md">驗證、已知未達標項目及人工驗收界線</a> ·
+      <a href="ART-DIRECTION.md">方向與動畫管線</a> ·
+      <a href="TIME-LEDGER.md">實際時窗</a>
+    </p>
+  </main>
+  <script>
+    const $ = (id) => document.getElementById(id);
+    function update() {
+      const w = $("size").value,
+        s = $("state").value;
+      for (const phase of ["before", "after"])
+        $(phase).src = `../../screenshots/vd2/${phase}/battle-${s}-${w}.png`;
+      for (const d of ["cartography", "ember"])
+        $(d).src = `../../screenshots/vd2/after/candidate-${d}-${w}.png`;
+      $("after").style.clipPath = `inset(0 ${100 - $("split").value}% 0 0)`;
+    }
+    $("size").onchange = update;
+    $("state").onchange = update;
+    $("split").oninput = update;
+    $("play").onclick = () => {
+      $("live").src =
+        `../../screenshots/vd2/after/combat-live-${$("size").value}.gif`;
+    };
+    update();
+  </script>
+</html>

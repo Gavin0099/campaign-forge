@@ -1,5 +1,11 @@
 # 視覺與流程驗收
 
+## 現行VD2
+
+VQ1是歷史驗證；Owner美術驗收未通過。現行流程與可重複指令見[VD2驗收](../docs/vd2/VERIFICATION.md)。啟動本機Vite於5174後，固定Node執行`tests/vd2-browser.mjs`，再以固定Python執行`tests/encode-recordings.py`、Node執行`tests/verify-vd2.mjs`。前者實際操作並錄製兩種解析度，後者只編碼真正瀏覽器影格為GIF，再核對目前來源與媒體雜湊。
+
+`test:evidence`現指向VD2；`test:evidence:vq1`保留歷史檢查器，改版後應拒絕舊來源，不要重拍覆蓋VQ1。VD2 Before亦固定在0fc109f，不接受以修改後來源重拍。以下原指令與13項結果為VQ1歷史使用說明。
+
 `npm ci --prefix ui-prototype` 安裝包含固定版 Playwright 的開發依賴。不需要付費瀏覽器服務或下載專用 Chromium；使用明確綁定的既有 Chrome。
 
 在 repo 根目錄，先啟動 `npm run dev --prefix ui-prototype -- --host 127.0.0.1 --port 5173 --strictPort`。使用本機 Node 執行：

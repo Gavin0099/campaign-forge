@@ -1,0 +1,41 @@
+{
+  "mode": "before",
+  "generated_at": "2026-10-20T13:54:57.029Z",
+  "browser": "155.0.8059.40",
+  "captures": [
+    {
+      "file": "battle-idle-1280.png",
+      "sha256": "d0c2f1889144046ad556db1f2fec11244110f6bb4f50a135023e3e08b9712c76",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      }
+    },
+    {
+      "file": "battle-preview-1280.png",
+      "sha256": "9c0022cb12afd2e551418ca26d5a73f323014db12e5ae80d9e387120f12b0376",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      }
+    },
+    {
+      "file": "battle-idle-1920.png",
+      "sha256": "2889c4c8344a5faed51443695bbe423f0d106f1fe33a9917b2bc0e9a3edba725",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    {
+      "file": "battle-preview-1920.png",
+      "sha256": "45c96089e96acda07ca123641ca7a09931aecc22296439803f1f7b31d7b14d99",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "checks": [],
+  "errors": []
+}

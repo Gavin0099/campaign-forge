@@ -4,6 +4,8 @@ import { artwork, Choice, mapRows, scenario, Screen, unitSeeds } from "./data";
 import "./style.css";
 import "./visual.css";
 import { Battlefield } from "./Battlefield";
+import { ClipKind, useCombatPlayback } from "./combatPlayback";
+import "./combat.css";
 
 function Portrait({ id, large = false }: { id: string; large?: boolean }) {
   const column = scenario.party.findIndex((p) => p.id === id);
@@ -74,6 +76,15 @@ function App() {
   const modalRef = useRef<HTMLDivElement>(null);
   const finishRef = useRef<HTMLButtonElement>(null);
   const finishWasOpen = useRef(false);
+  const motion = useCombatPlayback();
+  const [artDirection, setArtDirection] = useState<"cartography" | "ember">(
+    "cartography",
+  );
+  const [informationOpen, setInformationOpen] = useState(false);
+  const [showcaseOpen, setShowcaseOpen] = useState(false);
+  useEffect(() => {
+    if (screen !== "battle") motion.cancel();
+  }, [screen, motion.cancel]);
   useEffect(() => {
     const heading = document.querySelector<HTMLElement>("main h1");
     heading?.setAttribute("tabindex", "-1");
@@ -116,6 +127,7 @@ function App() {
   }
 
   function resetDemo() {
+    motion.cancel();
     setChoice(null);
     setComplete(false);
     setScreen("journey");
@@ -143,6 +155,33 @@ function App() {
       return;
     }
     if (screen === "battle") {
+      if (motion.busy) {
+        motion.cancel();
+        setSelected(null);
+        setDestination(null);
+        setTarget(null);
+        setPhase("select");
+        setLog((current) => [
+          "演出已停止；已命中的固定效果保留，未命中的動作不套用。",
+          ...current,
+        ]);
+        return;
+      }
+      if (showcaseOpen) {
+        setShowcaseOpen(false);
+        return;
+      }
+      if (phase !== "select") {
+        setSelected(null);
+        setDestination(null);
+        setTarget(null);
+        setPhase("select");
+        return;
+      }
+      if (informationOpen) {
+        setInformationOpen(false);
+        return;
+      }
       setScreen("deploy");
       return;
     }
@@ -175,6 +214,17 @@ function App() {
     return () => window.removeEventListener("keydown", handler);
   });
   function openSettings() {
+    if (screen === "battle" && motion.busy) {
+      motion.cancel();
+      setSelected(null);
+      setDestination(null);
+      setTarget(null);
+      setPhase("select");
+      setLog((current) => [
+        "演出已停止；已命中的固定效果保留，未命中的動作不套用。",
+        ...current,
+      ]);
+    }
     setReturnScreen(screen);
     setScreen("settings");
   }
@@ -192,6 +242,9 @@ function App() {
     );
   }
   function enterBattle() {
+    motion.cancel();
+    setInformationOpen(false);
+    setShowcaseOpen(false);
     if (!choice || deployed.length === 0) return;
     setUnits(
       unitSeeds
@@ -209,6 +262,7 @@ function App() {
     setScreen("battle");
   }
   function pickCell(p: Point) {
+    if (motion.busy) return;
     const occupant = units.find((u) => u.hp > 0 && same(u, p));
     if (phase === "select") {
       if (occupant?.side === "ally" && !occupant.acted) {
@@ -234,23 +288,82 @@ function App() {
     }
   }
   function confirmAction() {
-    if (!actor || !destination || !enemy || !choice) return;
-    const updated = units.map((u) => {
-      if (u.id === actor.id) return { ...u, ...destination, acted: true };
-      if (u.id === enemy.id) return { ...u, hp: Math.max(0, u.hp - 3) };
-      return u;
-    });
-    setFeedback({ id: enemy.id, sequence: actions + 1 });
-    setUnits(updated);
-    setLog((current) => [
-      `${actor.name}移動後使用「掩護推進」；${enemy.name}承受固定示範效果 3。`,
-      ...current,
-    ]);
-    setActions((n) => n + 1);
-    setSelected(null);
-    setDestination(null);
-    setTarget(null);
-    setPhase("select");
+    if (
+      phase !== "confirm" ||
+      !actor ||
+      actor.acted ||
+      !destination ||
+      !enemy ||
+      enemy.hp <= 0 ||
+      !choice
+    )
+      return;
+    motion.start(
+      {
+        kind: "physical",
+        actor: actor.id,
+        target: enemy.id,
+        from: { x: actor.x, y: actor.y },
+        to: destination,
+        committed: true,
+      },
+      () => {
+        setUnits((current) =>
+          current.map((u) =>
+            u.id === actor.id
+              ? { ...u, ...destination, acted: true }
+              : u.id === enemy.id
+                ? { ...u, hp: Math.max(0, u.hp - 3) }
+                : u,
+          ),
+        );
+        setFeedback({ id: enemy.id, sequence: performance.now() });
+        setLog((current) => [
+          `${actor.name}移動後使用「掩護推進」；${enemy.name}承受固定示範效果 3。`,
+          ...current,
+        ]);
+        setActions((n) => n + 1);
+      },
+      () => {
+        setSelected(null);
+        setDestination(null);
+        setTarget(null);
+        setPhase("select");
+      },
+    );
+  }
+  function showcase(kind: ClipKind) {
+    const performer =
+      units.find((u) => u.id === "shien" && u.hp > 0) ||
+      units.find((u) => u.side === "ally" && u.hp > 0);
+    const recipient = units.find((u) => u.side === "enemy" && u.hp > 0);
+    if (!performer || !recipient) return;
+    const point = { x: performer.x, y: performer.y };
+    if (
+      motion.start(
+        {
+          kind,
+          actor: performer.id,
+          target:
+            kind === "ward" || kind === "hit" ? performer.id : recipient.id,
+          from: point,
+          to: point,
+          committed: false,
+        },
+        () => {
+          setLog((current) => [
+            `${kind === "physical" ? "揮擊" : kind === "arcane" ? "裂潮・光矢" : kind === "ward" ? "封蠟・護印" : "受擊"}演出展示：不變更生命、位置、回合或正式技能。`,
+            ...current,
+          ]);
+        },
+      )
+    ) {
+      setSelected(null);
+      setDestination(null);
+      setTarget(null);
+      setPhase("select");
+      setFeedback(null);
+    }
   }
   function endTurn() {
     setTurn((n) => n + 1);
@@ -283,7 +396,8 @@ function App() {
           ]),
         ) as CSSProperties
       }
-      className={`app ${textLarge ? "large-text" : ""}`}
+      className={`app ${textLarge ? "large-text" : ""} ${screen === "battle" ? "battle-active" : ""}`}
+      data-direction={artDirection}
     >
       <header className="topbar">
         <div className="brand">
@@ -676,6 +790,39 @@ function App() {
               第 {turn} 回合<small>我方行動 · 固定示範</small>
             </div>
           </div>
+          <div className="battle-workbench">
+            <label>
+              候選美術{" "}
+              <select
+                aria-label="候選美術方向"
+                value={artDirection}
+                onChange={(event) =>
+                  setArtDirection(event.target.value as "cartography" | "ember")
+                }
+              >
+                <option value="cartography">① 戰地測繪</option>
+                <option value="ember">② 燼光巡禮</option>
+              </select>
+            </label>
+            <span className="direction-note">
+              {artDirection === "cartography"
+                ? "墨線・界碑・裂潮"
+                : "焦岩・懸燈・餘燼"}{" "}
+              ／ 未定案
+            </span>
+            <button
+              aria-expanded={showcaseOpen}
+              onClick={() => setShowcaseOpen((open) => !open)}
+            >
+              演出展示
+            </button>
+            <button
+              aria-expanded={informationOpen}
+              onClick={() => setInformationOpen((open) => !open)}
+            >
+              戰鬥資訊
+            </button>
+          </div>
           <div className="battle-layout">
             <Battlefield
               units={units}
@@ -687,104 +834,155 @@ function App() {
               skillCells={skillCells}
               feedback={feedback}
               onPick={pickCell}
+              playback={motion.playback}
+              reduced={motion.reduced}
+              direction={artDirection}
             />
-            <aside className="battle-sidebar">
-              <div className="battle-box">
-                <div className="eyebrow">操作順序</div>
-                <ol className="steps">
-                  <li className={phase === "select" ? "active-step" : ""}>
-                    選角色
-                  </li>
-                  <li className={phase === "move" ? "active-step" : ""}>
-                    選位置
-                  </li>
-                  <li className={phase === "skill" ? "active-step" : ""}>
-                    選敵人
-                  </li>
-                  <li className={phase === "confirm" ? "active-step" : ""}>
-                    確認行動
-                  </li>
-                </ol>
-                <p>
-                  {phase === "select"
-                    ? "點選尚未行動的我方單位。"
-                    : phase === "move"
-                      ? "青色斜紋格可移動；河道不可走。"
-                      : phase === "skill"
-                        ? "淡金框為技能範圍；選取紅色標記敵人。"
-                        : "移動與技能都還未執行，請先閱讀預覽。"}
-                </p>
-              </div>
-              <div className="battle-box">
-                <div className="eyebrow">選取與預覽</div>
-                <div className="actor-inspection">
-                  {actor && <Portrait id={actor.id} />}
-                  <div>
-                    <h2>{actor?.name || "等待你的命令"}</h2>
-                    <p>
-                      {actor
-                        ? `生命 ${actor.hp} / ${unitSeeds.find((u) => u.id === actor.id)?.hp} · ${actor.acted ? "已行動" : "可行動"}`
-                        : "點選 ◆ 我方單位開始。"}
-                    </p>
-                  </div>
-                </div>
-                {destination && (
+            {showcaseOpen && (
+              <section className="showcase-tray" aria-label="非正式演出展示">
+                <p className="eyebrow">演出展示</p>
+                <p>不計傷害、不變更回合</p>
+                <button
+                  disabled={motion.busy}
+                  onClick={() => showcase("physical")}
+                >
+                  物理攻擊
+                </button>
+                <button
+                  disabled={motion.busy}
+                  onClick={() => showcase("arcane")}
+                >
+                  裂潮・光矢
+                </button>
+                <button disabled={motion.busy} onClick={() => showcase("ward")}>
+                  封蠟・護印
+                </button>
+                <button disabled={motion.busy} onClick={() => showcase("hit")}>
+                  受擊示範
+                </button>
+              </section>
+            )}
+            {informationOpen && (
+              <aside className="battle-sidebar">
+                <div className="battle-box">
+                  <div className="eyebrow">操作順序</div>
+                  <ol className="steps">
+                    <li className={phase === "select" ? "active-step" : ""}>
+                      選角色
+                    </li>
+                    <li className={phase === "move" ? "active-step" : ""}>
+                      選位置
+                    </li>
+                    <li className={phase === "skill" ? "active-step" : ""}>
+                      選敵人
+                    </li>
+                    <li className={phase === "confirm" ? "active-step" : ""}>
+                      確認行動
+                    </li>
+                  </ol>
                   <p>
-                    移動至：第 {destination.x + 1} 列、第 {destination.y + 1} 行
+                    {phase === "select"
+                      ? "點選尚未行動的我方單位。"
+                      : phase === "move"
+                        ? "青色斜紋格可移動；河道不可走。"
+                        : phase === "skill"
+                          ? "淡金框為技能範圍；選取紅色標記敵人。"
+                          : "移動與技能都還未執行，請先閱讀預覽。"}
                   </p>
-                )}
-                {enemy && (
-                  <div className="skill-forecast">
-                    <span>
-                      掩護推進 <small>未執行</small>
-                    </span>
-                    <strong>
-                      ▲ {enemy.name} <b>−3</b>
-                    </strong>
-                    <p>
-                      生命 {enemy.hp} → {Math.max(0, enemy.hp - 3)} ·
-                      固定展示效果
-                    </p>
-                  </div>
-                )}
-                <div className="button-stack">
-                  <button
-                    className="primary"
-                    disabled={phase !== "confirm"}
-                    onClick={confirmAction}
-                  >
-                    確認移動與技能
-                  </button>
-                  <button
-                    disabled={phase === "select"}
-                    onClick={() => {
-                      setDestination(null);
-                      setTarget(null);
-                      if (destination) setPhase("move");
-                      else {
-                        setSelected(null);
-                        setPhase("select");
-                      }
-                    }}
-                  >
-                    撤銷未確認操作
-                  </button>
                 </div>
-              </div>
-            </aside>
+                <div className="battle-box">
+                  <div className="eyebrow">選取與預覽</div>
+                  <div className="actor-inspection">
+                    {actor && <Portrait id={actor.id} />}
+                    <div>
+                      <h2>{actor?.name || "等待你的命令"}</h2>
+                      <p>
+                        {actor
+                          ? `生命 ${actor.hp} / ${unitSeeds.find((u) => u.id === actor.id)?.hp} · ${actor.acted ? "已行動" : "可行動"}`
+                          : "點選 ◆ 我方單位開始。"}
+                      </p>
+                    </div>
+                  </div>
+                  {destination && (
+                    <p>
+                      移動至：第 {destination.x + 1} 列、第 {destination.y + 1}{" "}
+                      行
+                    </p>
+                  )}
+                  {enemy && !motion.busy && (
+                    <div className="skill-forecast">
+                      <span>
+                        掩護推進 <small>未執行</small>
+                      </span>
+                      <strong>
+                        ▲ {enemy.name} <b>−3</b>
+                      </strong>
+                      <p>
+                        生命 {enemy.hp} → {Math.max(0, enemy.hp - 3)} ·
+                        固定展示效果
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </aside>
+            )}
+          </div>
+          <div className="command-dock" aria-busy={motion.busy}>
+            <div className="command-context">
+              <strong>
+                {actor ? `${actor.name} · 生命 ${actor.hp}` : "北岸渡口"}
+              </strong>
+              <span>
+                {motion.playback
+                  ? `${motion.playback.committed ? "掩護推進" : "演出展示"} · ${{ move: "移動", windup: "蓄力", release: "出手", impact: "命中", recovery: "恢復" }[motion.playback.stage]}`
+                  : enemy
+                    ? `▲ ${enemy.name}　生命 ${enemy.hp} → ${Math.max(0, enemy.hp - 3)}　／ 固定效果 −3`
+                    : phase === "move"
+                      ? "選取青色斜紋格移動"
+                      : phase === "skill"
+                        ? "選取技能範圍內的敵人"
+                        : "點選 ◆ 我方單位開始"}
+              </span>
+            </div>
+            <div className="button-stack command-buttons">
+              <button
+                className="primary"
+                disabled={phase !== "confirm" || motion.busy}
+                onClick={confirmAction}
+              >
+                確認移動與技能
+              </button>
+              <button
+                disabled={phase === "select" || motion.busy}
+                onClick={() => {
+                  setDestination(null);
+                  setTarget(null);
+                  if (destination) setPhase("move");
+                  else {
+                    setSelected(null);
+                    setPhase("select");
+                  }
+                }}
+              >
+                撤銷未確認操作
+              </button>
+            </div>
           </div>
           <section className="battle-controls" aria-label="回合與護送操作">
             <div>
               <strong>{choiceData?.objective}</strong>
               <p>已確認行動 {actions} 次 · 完成一次行動後可結束展示</p>
             </div>
-            <button disabled={phase !== "select"} onClick={endTurn}>
+            <button
+              disabled={phase !== "select" || motion.busy}
+              onClick={endTurn}
+            >
               結束回合
             </button>
             <button
               ref={finishRef}
               className="finish"
-              disabled={actions === 0}
+              disabled={actions === 0 || motion.busy}
               onClick={() => setConfirmFinish(true)}
             >
               確認護送抵達出口

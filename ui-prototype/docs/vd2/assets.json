@@ -1,0 +1,70 @@
+{
+  "assets": [
+    {
+      "file": "ui-prototype/public/art/shien-actions-v3.png",
+      "sha256": "c0cb746a58f7f10bec15a56e17801241d251d67f3a70d273789e3b5093f40032",
+      "size": [
+        1374,
+        1145
+      ],
+      "mode": "RGBA",
+      "original_tool_output": "exec-12b25326-e45e-4d40-94f0-1a4f19d7055a",
+      "source_directory": "C:/Users/daish/.codex/generated_images/01a158de-56fc-7783-a2ad-61a6fb523243",
+      "pixel_edits": false
+    },
+    {
+      "file": "ui-prototype/public/art/landmarks-v3.png",
+      "sha256": "f7449e4dc713376eb958ee67a43ffb33cf3ec49bae51a9403f19f55395404d2b",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "original_tool_output": "exec-367e4091-fb88-4db9-8063-6f1c8be80cd7",
+      "source_directory": "C:/Users/daish/.codex/generated_images/01a158de-56fc-7783-a2ad-61a6fb523243",
+      "pixel_edits": false
+    }
+  ],
+  "before_baseline_commit": "0fc109fc40a17c869a35e4ba687f6162f74d0a33",
+  "before": {
+    "mode": "before",
+    "generated_at": "2026-10-20T13:54:57.029Z",
+    "browser": "155.0.8059.40",
+    "captures": [
+      {
+        "file": "battle-idle-1280.png",
+        "sha256": "d0c2f1889144046ad556db1f2fec11244110f6bb4f50a135023e3e08b9712c76",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        }
+      },
+      {
+        "file": "battle-preview-1280.png",
+        "sha256": "9c0022cb12afd2e551418ca26d5a73f323014db12e5ae80d9e387120f12b0376",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        }
+      },
+      {
+        "file": "battle-idle-1920.png",
+        "sha256": "2889c4c8344a5faed51443695bbe423f0d106f1fe33a9917b2bc0e9a3edba725",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      {
+        "file": "battle-preview-1920.png",
+        "sha256": "45c96089e96acda07ca123641ca7a09931aecc22296439803f1f7b31d7b14d99",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        }
+      }
+    ],
+    "checks": [],
+    "errors": []
+  }
+}

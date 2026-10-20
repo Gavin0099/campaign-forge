@@ -1,0 +1,46 @@
+<!doctype html><meta charset="utf-8" /><title>
+  Playback unmount acceptance fixture
+</title>
+<div id="fixture"></div>
+<button id="unmount">Unmount React</button><output id="callbacks">0:0</output>
+<script type="module">
+  import React from "react";
+  import { createRoot } from "react-dom/client";
+  import { useCombatPlayback } from "../src/combatPlayback.ts";
+  let impacts = 0,
+    completed = 0;
+  const publish = () =>
+    (document.querySelector("#callbacks").textContent =
+      `${impacts}:${completed}`);
+  function Fixture() {
+    const playback = useCombatPlayback();
+    return React.createElement(
+      "button",
+      {
+        onClick: () =>
+          playback.start(
+            {
+              kind: "arcane",
+              actor: "fixture",
+              target: "other",
+              from: { x: 0, y: 0 },
+              to: { x: 0, y: 0 },
+              committed: true,
+            },
+            () => {
+              impacts++;
+              publish();
+            },
+            () => {
+              completed++;
+              publish();
+            },
+          ),
+      },
+      playback.busy ? "Playing" : "Start",
+    );
+  }
+  const root = createRoot(document.querySelector("#fixture"));
+  root.render(React.createElement(Fixture));
+  document.querySelector("#unmount").onclick = () => root.unmount();
+</script>
