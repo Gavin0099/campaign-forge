@@ -1,0 +1,14 @@
+{
+  "kind": "RESEARCH_ONLY_VALIDATION",
+  "checked_at": "2026-10-21T17:02:29.623Z",
+  "local_links_checked": 10,
+  "source_hashes_checked": 8,
+  "pinned_downloads_blob_verified": 23,
+  "skills_read": 5,
+  "protected_paths_unchanged": true,
+  "changed_paths_allowed": true,
+  "future_budget_hours": 10,
+  "new_gameplay_tested": false,
+  "human_playtest": false,
+  "commercial_art_pass": false
+}

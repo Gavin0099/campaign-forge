@@ -10,6 +10,15 @@
 
 ## Slices
 
+### Gameplay First / Playable L03 Research — 2026-10-22
+
+使用者要求先研究與實作規格，暫不實作新規則、不安裝引擎、不動其他AI worktree、不合main。B美術保留候選，不代表人工通過。研究基線00146ba，成果見 [docs/playable-l03-research/README.md](docs/playable-l03-research/README.md)。
+
+- R-01：六份指定UI／演出程式盤點、五個指定Skill按固定commit讀取，六個公開repo版本／LICENSE與官方文件查核；23份下載檔核對Git blob／SHA256，未安裝或搬入外部實作。
+- R-02：現有純地形的唯讀連通性分析確認開閘三我方均不能到右岸絞盤；記錄方法、SHA與結果，未把它稱為戰鬥驗證。
+- R-03：建議先沿用React＋SVG；列Phaser／Godot隔離PoC規格、Demo狀態機／獨立行動／兩種AI／接船與護送目標／勝敗Retry、10h未來估算、工程與人類keep/kill/refactor驗收、最小追加授權。
+- 研究文件已備；P0–P6 Gameplay實作全為NOT_STARTED、需Owner追加批准。兩分支可勝性、平衡、3–5分鐘真人試玩與樂趣尚無證據，正式故事／G004／G005／S3／S4不變。
+
 ### L03 Art Quality Gate — 2026-10-22
 
 Owner 明確拒絕 `codex/l03-battle-ui@b783cf9` 商業美術品質；23項工程 PASS 不能抵消。另開 `codex/l03-art-quality-gate`，先做實際 Skill 路徑／版本／SHA／規則對應審查，再交付同一 K1 抉擇前狀態的 A手繪奇幻／B立體造型兩套可執行靜態樣板。B 是預繪2.5D外觀，沒有3D模型。原操作頁保留，不合併 main，不進動畫／規則／量產。
@@ -93,6 +102,8 @@ Owner 已判 VD2 美術未通過，工程歷史保留。目標9.5小時／上限
 Visual Sprint已知限制：平面沙盤／河岸方格感、材質重複、靜態小人姿態、12–14px戰鬥metadata的真人閱讀舒適度。沒有用build或代理自評宣告商業美術品質通過；人工檢查見docs/visual-sprint/VERIFICATION.md。實際時間以TIME-LEDGER.md記錄，不把9.5小時預算填作實際工時。
 
 ## Verification
+
+最新研究只核對來源／文件／既有程式不變與故事範圍保護，未進行新玩法實機或人類試玩；詳細命令、結果及實際投入見docs/playable-l03-research/VERIFICATION.md。下方Art Gate等是歷史版本工程證據，不能當Playable L03通過。
 
 目前最新為 Art Quality Gate：靜態樣板工程與既有功能回歸通過；Owner美術待審，b783cf9美術已明確FAIL。原L03／VD3等報告為各版歷史，不能代表本輪新場景完整導航／動畫通過。原生hooks callback證據仍待驗，信任／reload不再要求重做。
 

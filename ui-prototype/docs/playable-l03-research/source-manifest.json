@@ -1,0 +1,462 @@
+{
+  "schema": 1,
+  "kind": "RESEARCH_PROVENANCE_NOT_SKILL_INSTALLATION_OR_GAMEPLAY_VALIDATION",
+  "baseline": "00146ba5d0da44734af38e855022b3383a80471b",
+  "created_at": "2026-10-21T16:59:33.357Z",
+  "repository_snapshots": [
+    {
+      "repo": "gamedev-skills/awesome-gamedev-agent-skills",
+      "default_branch": "main",
+      "commit": "0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd",
+      "commit_date": "2026-10-09T10:18:19Z",
+      "license_metadata": "Apache-2.0",
+      "tree_truncated": false,
+      "file_count": 196,
+      "metadata_retrieved_at": "2026-10-22T00:43:28.1720299+08:00",
+      "files": [
+        {
+          "repo": "gamedev-skills/awesome-gamedev-agent-skills",
+          "commit": "0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd",
+          "path": "LICENSE",
+          "git_blob": "c7fc0c6d59cb8129a0e30fe13f5a6118f3933c44",
+          "sha256": "6f82dcfeb95a1c0a0452180a3b16f21bf82111780018fed59d95a052b5b75f6c",
+          "bytes": 11395,
+          "url": "https://raw.githubusercontent.com/gamedev-skills/awesome-gamedev-agent-skills/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/LICENSE",
+          "retrieved_at": "2026-10-22T00:50:37.8385036+08:00",
+          "blob_match_verified": true,
+          "read_scope": "License identity and sections 1-9; appendix not needed"
+        },
+        {
+          "repo": "gamedev-skills/awesome-gamedev-agent-skills",
+          "commit": "0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd",
+          "path": "NOTICE",
+          "git_blob": "d4204881c3f79f39151a53a6aae476b188a8c51f",
+          "sha256": "2dcb65b1c5be24e5ba11e937f3996100f4e980d8cf8ac5b30ba1d70dae6c40f8",
+          "bytes": 883,
+          "url": "https://raw.githubusercontent.com/gamedev-skills/awesome-gamedev-agent-skills/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/NOTICE",
+          "retrieved_at": "2026-10-22T00:50:38.2976971+08:00",
+          "blob_match_verified": true,
+          "read_scope": "License / notice text"
+        },
+        {
+          "repo": "gamedev-skills/awesome-gamedev-agent-skills",
+          "commit": "0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd",
+          "path": "skills/workflows/prototype-fast/SKILL.md",
+          "git_blob": "b1835db78a7def4523b2b992a6eb62e8ff7c9072",
+          "sha256": "02491395c621833d2252f7a33a96aa11f26eb48523fea167c68272fb3c785ba1",
+          "bytes": 6024,
+          "url": "https://raw.githubusercontent.com/gamedev-skills/awesome-gamedev-agent-skills/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/skills/workflows/prototype-fast/SKILL.md",
+          "retrieved_at": "2026-10-22T00:50:38.8403840+08:00",
+          "blob_match_verified": true,
+          "read_scope": "Full SKILL.md; referenced supporting skills/references not loaded"
+        },
+        {
+          "repo": "gamedev-skills/awesome-gamedev-agent-skills",
+          "commit": "0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd",
+          "path": "skills/disciplines/level-design/SKILL.md",
+          "git_blob": "f46ebe758c357a7e78d52f7c15ec6b9f00fe2c33",
+          "sha256": "f1656cb00b9af8dc625a9655448b410b37ce6f1e523048a5abf09fda25cbfd32",
+          "bytes": 7081,
+          "url": "https://raw.githubusercontent.com/gamedev-skills/awesome-gamedev-agent-skills/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/skills/disciplines/level-design/SKILL.md",
+          "retrieved_at": "2026-10-22T00:50:39.3081101+08:00",
+          "blob_match_verified": true,
+          "read_scope": "Full SKILL.md; referenced supporting skills/references not loaded"
+        },
+        {
+          "repo": "gamedev-skills/awesome-gamedev-agent-skills",
+          "commit": "0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd",
+          "path": "skills/disciplines/game-ai/SKILL.md",
+          "git_blob": "7a77e9eaffb6ff607c0072528ebda2c629d728e2",
+          "sha256": "ef23a6440743b3583d1072c92f6b0b45f3d11df33b3b77db53bce8b82c2f8940",
+          "bytes": 7999,
+          "url": "https://raw.githubusercontent.com/gamedev-skills/awesome-gamedev-agent-skills/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/skills/disciplines/game-ai/SKILL.md",
+          "retrieved_at": "2026-10-22T00:50:39.7649178+08:00",
+          "blob_match_verified": true,
+          "read_scope": "Full SKILL.md; referenced supporting skills/references not loaded"
+        },
+        {
+          "repo": "gamedev-skills/awesome-gamedev-agent-skills",
+          "commit": "0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd",
+          "path": "skills/disciplines/game-ui-ux/SKILL.md",
+          "git_blob": "c84646755c3d8f2b96fd955d1d2706e911b45596",
+          "sha256": "8a094c84a377503aa8f4c40df676d1c6b6fc07d36ff95554ce06467f1614397e",
+          "bytes": 8436,
+          "url": "https://raw.githubusercontent.com/gamedev-skills/awesome-gamedev-agent-skills/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/skills/disciplines/game-ui-ux/SKILL.md",
+          "retrieved_at": "2026-10-22T00:50:40.2963452+08:00",
+          "blob_match_verified": true,
+          "read_scope": "Full SKILL.md; referenced supporting skills/references not loaded"
+        },
+        {
+          "repo": "gamedev-skills/awesome-gamedev-agent-skills",
+          "commit": "0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd",
+          "path": "skills/disciplines/game-feel/SKILL.md",
+          "git_blob": "54eba4a29c87b7e9303579889eaeb26f6dac7a5a",
+          "sha256": "68fc818ad939151be2db9e358e4295a71830c19d61f3aff849f1599307f39f9d",
+          "bytes": 8985,
+          "url": "https://raw.githubusercontent.com/gamedev-skills/awesome-gamedev-agent-skills/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/skills/disciplines/game-feel/SKILL.md",
+          "retrieved_at": "2026-10-22T00:50:40.7974570+08:00",
+          "blob_match_verified": true,
+          "read_scope": "Full SKILL.md; referenced supporting skills/references not loaded"
+        }
+      ]
+    },
+    {
+      "repo": "franciscobom/Grid-Tactics",
+      "default_branch": "master",
+      "commit": "8d1952b46c771318b6f798b44038bac4490afe64",
+      "commit_date": "2026-02-15T00:37:11Z",
+      "license_metadata": null,
+      "tree_truncated": false,
+      "file_count": 35,
+      "metadata_retrieved_at": "2026-10-22T00:43:29.4165980+08:00",
+      "files": [],
+      "license_inspection": "No LICENSE path in complete 35-file tree; reuse permission unconfirmed; no source/assets incorporated",
+      "web_read_files": [
+        {
+          "path": "src/logic/TurnManager.js",
+          "git_blob": "a6880519f4ae45ac85b1cb2d14d369bad9edfb50",
+          "url": "https://github.com/franciscobom/Grid-Tactics/blob/8d1952b46c771318b6f798b44038bac4490afe64/src/logic/TurnManager.js",
+          "read_scope": "Turn lifecycle / bounded AI action architecture, read via web; not copied into project"
+        },
+        {
+          "path": "src/logic/AIController.js",
+          "git_blob": "4a61eb339184f460f2e87df6c0ce85a3da415e8d",
+          "url": "https://github.com/franciscobom/Grid-Tactics/blob/8d1952b46c771318b6f798b44038bac4490afe64/src/logic/AIController.js",
+          "read_scope": "Turn lifecycle / bounded AI action architecture, read via web; not copied into project"
+        }
+      ]
+    },
+    {
+      "repo": "phaserjs/template-react",
+      "default_branch": "main",
+      "commit": "7d292284722f6cccd6a8bfa5dccf668e383e0156",
+      "commit_date": "2026-04-21T08:32:37Z",
+      "license_metadata": "MIT",
+      "tree_truncated": false,
+      "file_count": 27,
+      "metadata_retrieved_at": "2026-10-22T00:43:30.6004100+08:00",
+      "files": [
+        {
+          "repo": "phaserjs/template-react",
+          "commit": "7d292284722f6cccd6a8bfa5dccf668e383e0156",
+          "path": "LICENSE",
+          "git_blob": "c68e66523f12df87367ed4e849edfdaf7a3fe18b",
+          "sha256": "05bee6c7843b9982f8259e6b24c4decb4211c503b058ff8837369e316adec1c7",
+          "bytes": 1095,
+          "url": "https://raw.githubusercontent.com/phaserjs/template-react/7d292284722f6cccd6a8bfa5dccf668e383e0156/LICENSE",
+          "retrieved_at": "2026-10-22T00:50:41.2740475+08:00",
+          "blob_match_verified": true,
+          "read_scope": "License / notice text"
+        },
+        {
+          "repo": "phaserjs/template-react",
+          "commit": "7d292284722f6cccd6a8bfa5dccf668e383e0156",
+          "path": "package.json",
+          "git_blob": "a5afce6d79dbe10d60f3b0547682fb843d82936f",
+          "sha256": "2cf6fdb58ccd122b23f5a5dcedbad254081f42a2f4c8a1691103a4c16b5e1c7c",
+          "bytes": 1399,
+          "url": "https://raw.githubusercontent.com/phaserjs/template-react/7d292284722f6cccd6a8bfa5dccf668e383e0156/package.json",
+          "retrieved_at": "2026-10-22T00:50:41.4987173+08:00",
+          "blob_match_verified": true,
+          "read_scope": "File content / integration / version"
+        },
+        {
+          "repo": "phaserjs/template-react",
+          "commit": "7d292284722f6cccd6a8bfa5dccf668e383e0156",
+          "path": "src/PhaserGame.jsx",
+          "git_blob": "824a0adf23b1d1f624f0adb72a98c139b8e2ef02",
+          "sha256": "3ab18fc4889c1762520785522e02715f0b346f637d9790d6b112aefe4cfacbd6",
+          "bytes": 1413,
+          "url": "https://raw.githubusercontent.com/phaserjs/template-react/7d292284722f6cccd6a8bfa5dccf668e383e0156/src/PhaserGame.jsx",
+          "retrieved_at": "2026-10-22T00:50:42.3716962+08:00",
+          "blob_match_verified": true,
+          "read_scope": "File content / integration / version"
+        },
+        {
+          "repo": "phaserjs/template-react",
+          "commit": "7d292284722f6cccd6a8bfa5dccf668e383e0156",
+          "path": "src/game/EventBus.js",
+          "git_blob": "46279c3dd210434ac43ab1a18902f6619f982fa5",
+          "sha256": "23f7dd48a676f943466fb8b05c3abf7d94ab44216009c9eddb97151947ce4567",
+          "bytes": 156,
+          "url": "https://raw.githubusercontent.com/phaserjs/template-react/7d292284722f6cccd6a8bfa5dccf668e383e0156/src/game/EventBus.js",
+          "retrieved_at": "2026-10-22T00:50:42.9823227+08:00",
+          "blob_match_verified": true,
+          "read_scope": "File content / integration / version"
+        }
+      ]
+    },
+    {
+      "repo": "HopeMetal/2DTacticalRPGDemo",
+      "default_branch": "main",
+      "commit": "c58849b67a89897ecdb6b3dbb7f25183d3be96ac",
+      "commit_date": "2025-06-23T10:30:04Z",
+      "license_metadata": "MIT",
+      "tree_truncated": false,
+      "file_count": 69,
+      "metadata_retrieved_at": "2026-10-22T00:43:31.8096562+08:00",
+      "files": [
+        {
+          "repo": "HopeMetal/2DTacticalRPGDemo",
+          "commit": "c58849b67a89897ecdb6b3dbb7f25183d3be96ac",
+          "path": "LICENSE",
+          "git_blob": "0b29b608e3a044c1f65098ac9fe089391f33a8aa",
+          "sha256": "55d069f8a275b7cd4b8f0b4725fa904936710d75fe528a287f2147c7180eb95a",
+          "bytes": 1056,
+          "url": "https://raw.githubusercontent.com/HopeMetal/2DTacticalRPGDemo/c58849b67a89897ecdb6b3dbb7f25183d3be96ac/LICENSE",
+          "retrieved_at": "2026-10-22T00:50:43.4410909+08:00",
+          "blob_match_verified": true,
+          "read_scope": "License / notice text"
+        },
+        {
+          "repo": "HopeMetal/2DTacticalRPGDemo",
+          "commit": "c58849b67a89897ecdb6b3dbb7f25183d3be96ac",
+          "path": "README.md",
+          "git_blob": "f2f7b5ac645621b4d87b9f0e57da709c77da941f",
+          "sha256": "83060040d8ebfb58ba6ba91564b4c1484a42c05d96519e47444646fc43235457",
+          "bytes": 491,
+          "url": "https://raw.githubusercontent.com/HopeMetal/2DTacticalRPGDemo/c58849b67a89897ecdb6b3dbb7f25183d3be96ac/README.md",
+          "retrieved_at": "2026-10-22T00:50:43.6712582+08:00",
+          "blob_match_verified": true,
+          "read_scope": "File content / integration / version"
+        },
+        {
+          "repo": "HopeMetal/2DTacticalRPGDemo",
+          "commit": "c58849b67a89897ecdb6b3dbb7f25183d3be96ac",
+          "path": "imagese/LICENSE.TXT",
+          "git_blob": "7120fae09af687a952301bf6aa9e7a9bb447b22e",
+          "sha256": "6faaa92ff2b05cd48f80721237c0bc9059dd8e34029b0dd109bc9be6a08c79ee",
+          "bytes": 22525,
+          "url": "https://raw.githubusercontent.com/HopeMetal/2DTacticalRPGDemo/c58849b67a89897ecdb6b3dbb7f25183d3be96ac/imagese/LICENSE.TXT",
+          "retrieved_at": "2026-10-22T00:50:43.8569128+08:00",
+          "blob_match_verified": true,
+          "read_scope": "Human-readable terms / README asset credit; not a full asset inventory"
+        },
+        {
+          "repo": "HopeMetal/2DTacticalRPGDemo",
+          "commit": "c58849b67a89897ecdb6b3dbb7f25183d3be96ac",
+          "path": "control/CController.gd",
+          "git_blob": "ed6700bcfc42bec32c4a2a50449ef414434debb5",
+          "sha256": "0918a493ba435e139099e619310d4c205dce11c1d9ec8c7356432efb31dbcbd3",
+          "bytes": 8540,
+          "url": "https://raw.githubusercontent.com/HopeMetal/2DTacticalRPGDemo/c58849b67a89897ecdb6b3dbb7f25183d3be96ac/control/CController.gd",
+          "retrieved_at": "2026-10-22T00:50:44.4773257+08:00",
+          "blob_match_verified": true,
+          "read_scope": "Core turn / AI / movement and dependencies"
+        },
+        {
+          "repo": "HopeMetal/2DTacticalRPGDemo",
+          "commit": "c58849b67a89897ecdb6b3dbb7f25183d3be96ac",
+          "path": "combat/Combat.gd",
+          "git_blob": "379ba1b84c1f5602c14150073d44a7cb6af64be4",
+          "sha256": "6c7f75ccfe645b688790f3b005d1c5feb50f8eaa3493a7c27ff4e947ff7b6f78",
+          "bytes": 7721,
+          "url": "https://raw.githubusercontent.com/HopeMetal/2DTacticalRPGDemo/c58849b67a89897ecdb6b3dbb7f25183d3be96ac/combat/Combat.gd",
+          "retrieved_at": "2026-10-22T00:50:45.0375160+08:00",
+          "blob_match_verified": true,
+          "read_scope": "Core turn / AI / movement and dependencies"
+        },
+        {
+          "repo": "HopeMetal/2DTacticalRPGDemo",
+          "commit": "c58849b67a89897ecdb6b3dbb7f25183d3be96ac",
+          "path": "project.godot",
+          "git_blob": "6c0806a690439cb57016b03bac1ad0deacfcd35b",
+          "sha256": "95510a651ab4e6ba09498de7d85801243a40a29032e1c47f88a3d040fe424bb9",
+          "bytes": 5861,
+          "url": "https://raw.githubusercontent.com/HopeMetal/2DTacticalRPGDemo/c58849b67a89897ecdb6b3dbb7f25183d3be96ac/project.godot",
+          "retrieved_at": "2026-10-22T00:50:45.5690732+08:00",
+          "blob_match_verified": true,
+          "read_scope": "Engine feature declaration"
+        }
+      ]
+    },
+    {
+      "repo": "prettymuchbryce/easystarjs",
+      "default_branch": "master",
+      "commit": "10615147add3af46f76a5d86ee7b7e7bebf83ac5",
+      "commit_date": "2020-11-19T03:48:50Z",
+      "license_metadata": "MIT",
+      "tree_truncated": false,
+      "file_count": 44,
+      "metadata_retrieved_at": "2026-10-22T00:43:32.9848618+08:00",
+      "files": [
+        {
+          "repo": "prettymuchbryce/easystarjs",
+          "commit": "10615147add3af46f76a5d86ee7b7e7bebf83ac5",
+          "path": "LICENSE",
+          "git_blob": "ff7321cea888e8ecbff15ae38af80e136e1fa6bc",
+          "sha256": "dbb23ecd59fbe6d317945837e986daa8a4c9bdf2f228d01c1834db7f109a5f6d",
+          "bytes": 1081,
+          "url": "https://raw.githubusercontent.com/prettymuchbryce/easystarjs/10615147add3af46f76a5d86ee7b7e7bebf83ac5/LICENSE",
+          "retrieved_at": "2026-10-22T00:50:46.1182868+08:00",
+          "blob_match_verified": true,
+          "read_scope": "License / notice text"
+        },
+        {
+          "repo": "prettymuchbryce/easystarjs",
+          "commit": "10615147add3af46f76a5d86ee7b7e7bebf83ac5",
+          "path": "README.md",
+          "git_blob": "074d82b854cf71e30bcde817371e22b4b996e34c",
+          "sha256": "66d7b16c5f4cdfc0be2552d6da8e0e881f9416dda21ce578c352bf16223c651b",
+          "bytes": 3857,
+          "url": "https://raw.githubusercontent.com/prettymuchbryce/easystarjs/10615147add3af46f76a5d86ee7b7e7bebf83ac5/README.md",
+          "retrieved_at": "2026-10-22T00:50:46.6856506+08:00",
+          "blob_match_verified": true,
+          "read_scope": "File content / integration / version"
+        },
+        {
+          "repo": "prettymuchbryce/easystarjs",
+          "commit": "10615147add3af46f76a5d86ee7b7e7bebf83ac5",
+          "path": "package.json",
+          "git_blob": "63257ae629b94e945276995999bf652732575137",
+          "sha256": "bd5fc0b2c9f28f093de73143c8e1a8aca95c408eb8b66be9d24e7fd0d9dc1d1d",
+          "bytes": 1678,
+          "url": "https://raw.githubusercontent.com/prettymuchbryce/easystarjs/10615147add3af46f76a5d86ee7b7e7bebf83ac5/package.json",
+          "retrieved_at": "2026-10-22T00:50:47.1819069+08:00",
+          "blob_match_verified": true,
+          "read_scope": "File content / integration / version"
+        }
+      ]
+    },
+    {
+      "repo": "ramaureirac/godot-tactical-rpg",
+      "default_branch": "development",
+      "commit": "cfe785e5b6f88fe8b24559616dfb9a3f8b433f6e",
+      "commit_date": "2026-02-21T20:59:19Z",
+      "license_metadata": "MIT",
+      "tree_truncated": false,
+      "file_count": 180,
+      "metadata_retrieved_at": "2026-10-22T00:43:34.2777421+08:00",
+      "files": [
+        {
+          "repo": "ramaureirac/godot-tactical-rpg",
+          "commit": "cfe785e5b6f88fe8b24559616dfb9a3f8b433f6e",
+          "path": "LICENSE",
+          "git_blob": "25960d668d4b0f98bd33d48b770b257a76900e47",
+          "sha256": "8954c3cac53b0be27ec1f752acd43201a6b7923c2bc2927b92a0d17d5dc415cb",
+          "bytes": 1083,
+          "url": "https://raw.githubusercontent.com/ramaureirac/godot-tactical-rpg/cfe785e5b6f88fe8b24559616dfb9a3f8b433f6e/LICENSE",
+          "retrieved_at": "2026-10-22T00:50:47.8410732+08:00",
+          "blob_match_verified": true,
+          "read_scope": "License / notice text"
+        },
+        {
+          "repo": "ramaureirac/godot-tactical-rpg",
+          "commit": "cfe785e5b6f88fe8b24559616dfb9a3f8b433f6e",
+          "path": "README.md",
+          "git_blob": "acc24f06d193c4a8502b526e7d0c873049eaa865",
+          "sha256": "688a22c68fbfc38a53e076ebef89937f4c8cb2228d839f394da176988b414f1b",
+          "bytes": 4167,
+          "url": "https://raw.githubusercontent.com/ramaureirac/godot-tactical-rpg/cfe785e5b6f88fe8b24559616dfb9a3f8b433f6e/README.md",
+          "retrieved_at": "2026-10-22T00:50:48.4559199+08:00",
+          "blob_match_verified": true,
+          "read_scope": "File content / integration / version"
+        },
+        {
+          "repo": "ramaureirac/godot-tactical-rpg",
+          "commit": "cfe785e5b6f88fe8b24559616dfb9a3f8b433f6e",
+          "path": "project.godot",
+          "git_blob": "79f18e6e5ee1152394e197e11977221620d063b1",
+          "sha256": "1e7fd2453b46975ebf6e1a7a9f02c686641fb03665a46402e079b9b15d021218",
+          "bytes": 9742,
+          "url": "https://raw.githubusercontent.com/ramaureirac/godot-tactical-rpg/cfe785e5b6f88fe8b24559616dfb9a3f8b433f6e/project.godot",
+          "retrieved_at": "2026-10-22T00:50:49.0374527+08:00",
+          "blob_match_verified": true,
+          "read_scope": "Engine feature declaration"
+        }
+      ]
+    }
+  ],
+  "official_documents": [
+    {
+      "url": "https://docs.phaser.io/phaser/concepts/scenes",
+      "read_scope": "Scene manager / lifecycle core sections; mutable page",
+      "checked_date_taipei": "2026-10-22",
+      "web_read_status": "READ",
+      "content_sha256": null
+    },
+    {
+      "url": "https://docs.phaser.io/api-documentation/4.0.0/class/tilemaps-tilemap",
+      "read_scope": "v4.0.0 Tilemap introduction and supported map formats/orientations",
+      "checked_date_taipei": "2026-10-22",
+      "web_read_status": "READ",
+      "content_sha256": null
+    },
+    {
+      "url": "https://docs.phaser.io/phaser/concepts/tweens",
+      "read_scope": "Core Tween Manager / Scene ownership sections; mutable page",
+      "checked_date_taipei": "2026-10-22",
+      "web_read_status": "READ",
+      "content_sha256": null
+    },
+    {
+      "url": "https://doc.mapeditor.org/en/stable/manual/custom-properties/",
+      "read_scope": "Types / enum / class sections; page identifies Tiled 1.12.2",
+      "checked_date_taipei": "2026-10-22",
+      "web_read_status": "READ",
+      "content_sha256": null
+    },
+    {
+      "url": "https://doc.mapeditor.org/en/stable/reference/json-map-format/",
+      "read_scope": "Map / layer / properties fields; page identifies Tiled 1.12.2",
+      "checked_date_taipei": "2026-10-22",
+      "web_read_status": "READ",
+      "content_sha256": null
+    }
+  ],
+  "failed_document_urls": [
+    "https://docs.phaser.io/phaser/concepts/tilemaps",
+    "https://docs.phaser.io/phaser/concepts/gameobjects/tilemap"
+  ],
+  "local_sources": [
+    {
+      "path": "ui-prototype/src/L03Preview.tsx",
+      "sha256": "af1a2ef64e963b1a2c4c94dc53e2510c8b99aecd59b71ca6d6159769a854b35c",
+      "bytes": 40726
+    },
+    {
+      "path": "ui-prototype/src/l03Scene.ts",
+      "sha256": "08780782ab51ef026e001c75f9959f65cdc33eb7d7b5d5a9fdd704eb65ae340d",
+      "bytes": 4587
+    },
+    {
+      "path": "ui-prototype/src/ArtGate.tsx",
+      "sha256": "aceeff179e6613d1b1286b2581e5aaa55df60bef91e65fe3be2a3dba76b65130",
+      "bytes": 10841
+    },
+    {
+      "path": "ui-prototype/src/artGateScene.ts",
+      "sha256": "fc9d264cbee53d6351065fec4ac06cf18a9c0756ce510d3a92efc15b80c974a5",
+      "bytes": 2496
+    },
+    {
+      "path": "ui-prototype/src/Battlefield.tsx",
+      "sha256": "bb81e3de104e85e84905a1864245e2c0f191a11f7d3e407abb423e6950fc9916",
+      "bytes": 19852
+    },
+    {
+      "path": "ui-prototype/src/combatPlayback.ts",
+      "sha256": "b2032daab22c7c79e7dea9e08be7e6c79a9ed66ef328e2098d5bf2b90a233220",
+      "bytes": 4005
+    },
+    {
+      "path": "ui-prototype/src/main.tsx",
+      "sha256": "2a97fa90f6ae684fb7a54ef9a55365af4062d7377453fe59cdf811207ec9d0a4",
+      "bytes": 45713
+    },
+    {
+      "path": "ui-prototype/package.json",
+      "sha256": "7be910ce26e797587a3b94144e811635023e7b08fb20111301d5ce7310a058ad",
+      "bytes": 1163
+    }
+  ],
+  "unexecuted": [
+    "External installation commands",
+    "External game demos / engines",
+    "New combat rules",
+    "Playable encounter / human playtest",
+    "Phaser React18 Vite4 compatibility PoC",
+    "Godot PoC"
+  ],
+  "source_bodies_published": false
+}

@@ -1,0 +1,105 @@
+{
+  "kind": "READ_ONLY_EXISTING_TOPOLOGY_ANALYSIS_NOT_GAMEPLAY_TEST",
+  "observed_at": "2026-10-21T16:51:58.248Z",
+  "source": "ui-prototype/src/l03Scene.ts",
+  "sha256": "08780782ab51ef026e001c75f9959f65cdc33eb7d7b5d5a9fdd704eb65ae340d",
+  "method": "Compile existing pure module in memory; exhaustive four-neighbor flood fill of existing walkable(). Ignore occupancy and turn movement budgets: optimistic geometric connectivity only.",
+  "results": [
+    {
+      "gate": "open",
+      "ally": "karen",
+      "start": {
+        "x": 2,
+        "y": 5
+      },
+      "reachable_cells": 36,
+      "marker": {
+        "x": 8,
+        "y": 1
+      },
+      "marker_distance": null,
+      "can_reach_within_one_of_marker": false,
+      "min_steps_within_one": null
+    },
+    {
+      "gate": "open",
+      "ally": "lace",
+      "start": {
+        "x": 0,
+        "y": 2
+      },
+      "reachable_cells": 36,
+      "marker": {
+        "x": 8,
+        "y": 1
+      },
+      "marker_distance": null,
+      "can_reach_within_one_of_marker": false,
+      "min_steps_within_one": null
+    },
+    {
+      "gate": "open",
+      "ally": "thoma",
+      "start": {
+        "x": 1,
+        "y": 7
+      },
+      "reachable_cells": 36,
+      "marker": {
+        "x": 8,
+        "y": 1
+      },
+      "marker_distance": null,
+      "can_reach_within_one_of_marker": false,
+      "min_steps_within_one": null
+    },
+    {
+      "gate": "sealed",
+      "ally": "karen",
+      "start": {
+        "x": 2,
+        "y": 5
+      },
+      "reachable_cells": 83,
+      "marker": {
+        "x": 8,
+        "y": 4
+      },
+      "marker_distance": 7,
+      "can_reach_within_one_of_marker": true,
+      "min_steps_within_one": 6
+    },
+    {
+      "gate": "sealed",
+      "ally": "lace",
+      "start": {
+        "x": 0,
+        "y": 2
+      },
+      "reachable_cells": 83,
+      "marker": {
+        "x": 8,
+        "y": 4
+      },
+      "marker_distance": 10,
+      "can_reach_within_one_of_marker": true,
+      "min_steps_within_one": 9
+    },
+    {
+      "gate": "sealed",
+      "ally": "thoma",
+      "start": {
+        "x": 1,
+        "y": 7
+      },
+      "reachable_cells": 83,
+      "marker": {
+        "x": 8,
+        "y": 4
+      },
+      "marker_distance": 10,
+      "can_reach_within_one_of_marker": true,
+      "min_steps_within_one": 9
+    }
+  ]
+}

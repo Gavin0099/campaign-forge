@@ -1,3 +1,9 @@
+## 最新使用者指示：Gameplay First研究（2026-10-22）
+
+使用者要求由展示轉向可玩L03，但本輪先交研究／實作規格，不直接新增戰鬥或安裝引擎；不改其他AI worktree、不合main、不改正式故事／S3／S4。B美術保留候選，並非商業美術通過；完成段落正常commit/push授權沿用。
+
+代理觀察：獨立codex/playable-l03-research自00146ba。六程式盤點、五個指定Skill固定SHA讀取、六repo授權及官方文件核對完成；Grid-Tactics授權未確認，HopeMetal程式MIT但圖片CC-BY-SA3.0，Phaser模板為4.0.0／React19／Vite6，未安裝。既有walkable的唯讀洪泛搜尋證明開閘三我方都被隔在左岸，不能到絞盤；不是Gameplay測試。研究建議React＋SVG，保留11×9但另提Demo部署、獨立行動／兩AI／兩目標／勝敗重試與10h估算；全部待追加授權，未實作或人類試玩。文件及驗證見ui-prototype/docs/playable-l03-research/。本段為里程碑，非SessionEnd；原生hooks回呼待驗不變。
+
 ## 最新使用者指示：L03 Art Quality Gate（2026-10-22）
 
 使用者判定 b783cf9 美術FAIL，要求先Skill Compliance Audit，再以同一L03狀態交付A手繪／B立體造型兩張720p實機及1080p檢視。不增規則、動畫、關卡，不合併main；Owner選方向後才進下一階段。歷史Skill完整遵循證據不足，不能拿規格與Prompt冒充已載入。

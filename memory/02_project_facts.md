@@ -1,3 +1,9 @@
+## 最新使用者要求與代理觀察：Playable L03研究（2026-10-22）
+
+使用者：先完成Gameplay Gap Analysis、指定五Skills／repos／官方文件、最小Demo與技術路線比較、10h工作計畫及追加授權範圍；不直接實作／安裝引擎／動其他AI worktree／合main。B美術候選保留不等於最終審查通過。
+
+代理：基線00146ba的L03只有固定−3與無HP效果支援，無敵方回合或目標勝敗；ArtGate是螢幕錨點的靜態2.5D，未接導航。既有開閘移除橋(4,4)/(5,4)，三我方均在左岸；忽略占位的連通性仍無法到絞盤或相鄰格。Phaser官方模板固定7d29228為Phaser4／React19／Vite6；HopeMetal c58849b圖片另有CC-BY-SA3.0，不可用根MIT概括。五個Skill只讀方法與版本證據，沒有安裝；詳ui-prototype/docs/playable-l03-research/source-manifest.json。新增Demo規則／部署／AI／目標目前僅提案，10h是未來估算，不是實際工作完成或正式規則核准。
+
 ## 最新使用者判定：L03 Art Quality Gate（2026-10-22）
 
 使用者判定codex/l03-battle-ui@b783cf9的商業美術FAIL，工程23PASS不代替藝術品質。要求Skill路徑／版本／SHA／規則與成果審查、同狀態A手繪／B立體造型靜態候選，先不做規則／動畫／關卡／大量角色，不合併main，選方向後再深入。
