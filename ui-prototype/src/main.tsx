@@ -12,6 +12,7 @@ import {
 } from "./combatIdentity";
 import { useCombatSound } from "./combatSound";
 import "./combat.css";
+import { L03Preview } from "./L03Preview";
 
 function Portrait({ id, large = false }: { id: string; large?: boolean }) {
   const column = scenario.party.findIndex((p) => p.id === id);
@@ -55,6 +56,9 @@ const terrainName = (t: string) =>
   ({ ".": "平地", F: "林地", R: "道路", "~": "河道" })[t] || "地形";
 
 function App() {
+  const [l03Open, setL03Open] = useState(
+    () => new URLSearchParams(location.search).get("scene") === "l03",
+  );
   const [screen, setScreen] = useState<Screen>("menu");
   const [returnScreen, setReturnScreen] = useState<Screen>("menu");
   const [choice, setChoice] = useState<Choice | null>(null);
@@ -217,6 +221,7 @@ function App() {
   }
   useEffect(() => {
     const handler = (event: KeyboardEvent) => {
+      if (l03Open) return;
       if (event.key === "Escape") {
         event.preventDefault();
         back();
@@ -401,6 +406,8 @@ function App() {
   const partyMember =
     scenario.party.find((p) => p.id === partyFocus) || scenario.party[0];
 
+  if (l03Open) return <L03Preview onExit={() => setL03Open(false)} />;
+
   return (
     <div
       style={
@@ -448,6 +455,9 @@ function App() {
             <h1>界碑之外</h1>
             <p>渡口只剩最後一趟船。你帶走誰，另一邊就要自己尋路。</p>
             <div className="menu-actions">
+              <button className="primary" onClick={() => setL03Open(true)}>
+                碑誓 · L03 戰鬥畫面 <span>↗</span>
+              </button>
               <button className="primary" onClick={() => setScreen("journey")}>
                 繼續旅程 <span>→</span>
               </button>
