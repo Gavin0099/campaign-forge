@@ -1,0 +1,342 @@
+{
+  "started_at": "2026-10-21T16:34:44.738Z",
+  "commit": "00146ba5d0da44734af38e855022b3383a80471b",
+  "dirty_src": "",
+  "base_url": "http://127.0.0.1:4317/",
+  "method": "Playwright headless Chromium; cell picks via dispatchEvent('click'). Agent observation, not human playtest.",
+  "checks": [
+    {
+      "id": "A1 Esc from story returns to camp",
+      "pass": true,
+      "detail": {
+        "afterEsc": "火光照得到每個人"
+      }
+    },
+    {
+      "id": "B-residents result reachable after 1 action with enemies alive",
+      "pass": true,
+      "detail": {
+        "scoutHp": 3
+      }
+    },
+    {
+      "id": "B-grain result reachable after 1 action with enemies alive",
+      "pass": true,
+      "detail": {
+        "scoutHp": 3
+      }
+    },
+    {
+      "id": "B3 [design] residents vs grain board differs beyond text",
+      "pass": false,
+      "detail": {
+        "board_identical": true
+      }
+    },
+    {
+      "id": "C1 main-battle move cells respect river (path, not Manhattan)",
+      "pass": false,
+      "detail": {
+        "shien": [],
+        "lida": [],
+        "olun": [],
+        "shien_from_3_4": [
+          "6,4"
+        ]
+      }
+    },
+    {
+      "id": "D1 double confirm applies −3 once",
+      "pass": true,
+      "detail": {
+        "hp0": 6,
+        "hp1": 3
+      }
+    },
+    {
+      "id": "D2 Esc before impact: no damage, actor not moved",
+      "pass": true,
+      "detail": {
+        "hp1": 3,
+        "hp2": 3,
+        "shienAt": "2 列 7 行，平地，席恩，生命 9"
+      }
+    },
+    {
+      "id": "D3 opening settings mid-animation cancels without ghost damage",
+      "pass": true,
+      "detail": {
+        "before": 3,
+        "after": 3,
+        "while_in_settings": "閱讀與操作"
+      }
+    },
+    {
+      "id": "D4 one Esc in battle select phase keeps battle progress",
+      "pass": false,
+      "detail": {
+        "before": 3,
+        "screen_after_esc": "渡口的最後一趟",
+        "after_reenter": 6,
+        "actions": "已確認行動 0 次 · 完成一次行動後可結束展示"
+      }
+    },
+    {
+      "id": "E1 solo 莉妲 route completes; absentees not on board",
+      "pass": true,
+      "detail": {
+        "allyCells": [
+          "2 列 8 行，平地，莉妲，生命 7"
+        ]
+      }
+    },
+    {
+      "id": "F1 720p large text no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "overflow": false
+      }
+    },
+    {
+      "id": "G-open L03 move cells respect river/bridge",
+      "pass": true,
+      "detail": {
+        "bad": []
+      }
+    },
+    {
+      "id": "G-sealed L03 move cells respect river/bridge",
+      "pass": true,
+      "detail": {
+        "bad": []
+      }
+    },
+    {
+      "id": "G1 L03 double confirm applies −3 once",
+      "pass": true,
+      "detail": {
+        "k1": "3"
+      }
+    },
+    {
+      "id": "G2 gate switch mid-animation resets cleanly",
+      "pass": true,
+      "detail": {
+        "knight": "6"
+      }
+    },
+    {
+      "id": "G3 L03 720p large text no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "overflow": false
+      }
+    }
+  ],
+  "observations": {
+    "first_five_minutes": {
+      "menu": "一段關於命令與承擔的旅程\n界碑之外\n\n渡口只剩最後一趟船。你帶走誰，另一邊就要自己尋路。\n\nL03 · 美術方向 A／B\n↗\n碑誓 · L03 戰鬥畫面\n↗\n繼續旅程\n→\n開始展示／重設\n設定\n\n候選 A 僅供介面驗證；故事、人物與規則尚未定案。",
+      "journey": "戰役旅程 · 章節示意\n路從渡口展開\n\n六章、約 24 個節點僅表示節奏容量，不是正式關卡表。\n\n第 01 章\n名冊之外\n01\n◆\n·\n·\n·\n名冊之外\n當前章節\n02\n·\n·\n·\n·\n第 2 章・未揭露\n未揭露路線\n03\n·\n·\n·\n·\n第 3 章・未揭露\n未揭露路線\n04\n·\n·\n·\n·\n第 4 章・未揭露\n未揭露路線\n05\n·\n·\n·\n·\n第 5 章・未揭露\n未揭露路線\n06\n·\n·\n·\n·\n第 6 章・未揭露\n未揭露路線\n目前節點\n渡口的最後一趟\n\n軍糧與低地居民都在等船。裂潮將在下一次往返後抵達渡口。\n\n為何出發\n實測發現低地仍有人。隊伍必須在裂潮前決定渡口的最後一趟船。\n先前選擇\n尚未作出渡口選擇。\n隊伍狀態\n席恩、莉妲與奧倫同行。瑪芮仍在渡口安排自己的船。\n前往營地 →",
+      "camp_cta": "前往渡口事件 →",
+      "camp": "營地 · 北岸歇腳處\n火光照得到每個人\n\n船夫在整理纜繩，醫療帳裡仍有空位。今晚的安靜不會維持太久。\n\n前往渡口事件 →\n席恩 · 人物外觀展示提案\n席恩\n測繪與軍需副官\n›\n莉妲\n醫療者\n›\n奧倫\n重裝軍官\n›\n瑪芮\n渡船斥候\n›\n人物檔案 · 展示資料\n席恩\n\n測繪與軍需副官\n\n為何同行\n想用自己的功績換取父親案件重審。\n現在擔心\n怕再次把後果交給別人的簽名。\n個人心願\n讓受影響的人知道自己的命令。\n拒絕條件\n若命令只剩數字，必須重新詢問現場的人。\n離隊後\n仍會整理撤離路線與責任紀錄。\n關係與近況\n信任仍在建立；渡口的決定尚未發生。\n裝備：展示占位\n技能：掩護推進（模擬）",
+      "story": "劇情事件 · 第一章・名冊之外\n渡口的最後一趟船\n展開對白紀錄\n低地渡口 · 場景與人物展示提案\n席恩\n\n船還能再走一趟。名冊與岸上的人不一致，我們現在就得改令。\n\n作決定前已知\n低地仍有居民，官方名冊卻記為「已撤空」。\n現有船隻與時間只夠完整護送其中一邊。\n留下的一邊會自行撤離；目前無法確定能帶出多少人或物資。\n\n裂潮抵達時間有誤差；未選一方的結果未知。\n\n你的命令 · 兩者都需付代價\n先護送居民\n→\n可預期：更多低地居民可搭上這趟船。\n代價：部分糧車與工事器材留在低地，後續防線補給吃緊。\n先護送軍糧\n→\n可預期：營地保住糧食與工事材料。\n代價：部分居民錯過軍方護送，渡口留下失散者。"
+    },
+    "result_residents": {
+      "scoutHp": 3,
+      "resultText": "戰後結果 · 展示結局\n渡口之後，路還沒完\n\n居民登上北岸，糧車仍困在低地。奧倫接受改令，但要求席恩親自承擔接下來的補給缺口。\n\n留下的後果\n救下與保住\n更多低地居民可搭上這趟船。\n失去與未完成\n部分糧車與工事器材留在低地，後續防線補給吃緊。\n同伴的看法\n奧倫仍同行，但要求公開守線風險。莉妲開始照護已抵岸的居民。\n接下來為何出發\n下一次行動：在補給不足下徵集糧車、縮短防線。\n成長與物資 · 模擬\n一次行動的紀錄\n\n隊伍經驗：展示占位\n\n物資：短缺，等待徵集\n\n未設定正式數值成長、掉落或存檔。\n\n返回戰役旅程 →",
+      "olun_moves": [
+        "2,4",
+        "1,5",
+        "2,5",
+        "3,5",
+        "0,6",
+        "2,6",
+        "3,6",
+        "0,7",
+        "3,7",
+        "4,7",
+        "0,8",
+        "1,8",
+        "2,8",
+        "3,8",
+        "4,8"
+      ]
+    },
+    "result_grain": {
+      "scoutHp": 3,
+      "resultText": "戰後結果 · 展示結局\n渡口之後，路還沒完\n\n糧隊抵達北岸，低地居民只能自行尋路。莉妲留下照護後來的傷者，要求席恩記下失散者姓名。\n\n留下的後果\n救下與保住\n營地保住糧食與工事材料。\n失去與未完成\n部分居民錯過軍方護送，渡口留下失散者。\n同伴的看法\n莉妲仍同行，但要求回渡口尋人；奧倫保住了工事材料。\n接下來為何出發\n下一次行動：回收落單者與渡口遺物。\n成長與物資 · 模擬\n一次行動的紀錄\n\n隊伍經驗：展示占位\n\n物資：營地糧倉保有存量\n\n未設定正式數值成長、掉落或存檔。\n\n返回戰役旅程 →",
+      "olun_moves": [
+        "2,4",
+        "1,5",
+        "2,5",
+        "3,5",
+        "0,6",
+        "2,6",
+        "3,6",
+        "0,7",
+        "3,7",
+        "4,7",
+        "0,8",
+        "1,8",
+        "2,8",
+        "3,8",
+        "4,8"
+      ]
+    },
+    "choice_battle_diff": {
+      "objective_residents": "護送居民抵達北岸出口",
+      "objective_grain": "護送糧隊抵達北岸出口",
+      "board_identical": true
+    },
+    "olun_target_from_4_7": false,
+    "after_adversarial_log": "事件紀錄（5） · 回合結束。敵方行動在此展示中省略，所有我方角色恢復可行動。",
+    "solo_result": "戰後結果 · 展示結局\n渡口之後，路還沒完\n\n糧隊抵達北岸，低地居民只能自行尋路。莉妲留下照護後來的傷者，要求席恩記下失散者姓名。\n\n留下的後果\n救下與保住\n營地保住糧食與工事材料。\n失去與未完成\n部分居民錯過軍方護送，渡口留下失散者。\n同伴的看法\n莉妲仍同行，但要求回渡口尋人；奧倫保住了工事材料。\n接下來為何出發\n下一次行動：回收落單者與渡口遺物。\n成長與物資 · 模擬\n一次行動的紀錄\n\n隊伍經驗：展示占位\n\n物資：營地糧倉保有存量\n\n未設定正式數值成長、掉落或存檔。\n\n返回戰役旅程 →",
+    "l03_open": {
+      "units": [
+        {
+          "id": "lace",
+          "hp": "7"
+        },
+        {
+          "id": "knight",
+          "hp": "6"
+        },
+        {
+          "id": "karen",
+          "hp": "9"
+        },
+        {
+          "id": "thoma",
+          "hp": "8"
+        },
+        {
+          "id": "crawler",
+          "hp": "8"
+        }
+      ],
+      "objective": "守住絞盤，接應三艘船"
+    },
+    "l03_sealed": {
+      "units": [
+        {
+          "id": "lace",
+          "hp": "7"
+        },
+        {
+          "id": "knight",
+          "hp": "6"
+        },
+        {
+          "id": "karen",
+          "hp": "9"
+        },
+        {
+          "id": "thoma",
+          "hp": "8"
+        },
+        {
+          "id": "crawler",
+          "hp": "8"
+        }
+      ],
+      "objective": "護送學院車隊通過橋頭"
+    },
+    "l03_after_knight": {
+      "k2": "removed",
+      "status": "行動紀錄\n蕾絲完成繩索演出，議會騎士固定 −3。"
+    },
+    "l03_open_bridge_click": "行動紀錄\n隊員恢復可演出；本展示不執行敵方回合。",
+    "l03_thoma_support_status": "行動紀錄\n選擇兩格內的我方，預覽支援標記；不改生命。",
+    "l03_crawler_hp": "8",
+    "art_gate_text": "跳到場景檢視\n◆ 凱倫\n◆ 蕾絲\n◆ 托瑪\n▲ 議會騎士\n▲ 登岸爬行者\n◇\n提歐的燈\n◇\n◇\n◇\n◇\n瑪歌\n◇\n◇\n第一章 · L03\n渡口閘門\n\n水正漲。三艘船還在橋的另一邊。\n\nA 手繪奇幻\nB 立體造型\n地標\n大字\n返回\n≈ 洪水逼近 ／ K1 抉擇前\n凱倫\n盾劍護衛\n◆ 9 / 9\n蕾絲\n繩具與機關\n◆ 7 / 7\n托瑪\n醫療與支援\n◆ 8 / 8\n渡口 · 等待抉擇\n同一股水，兩條去路\n\n先看清船上的燈、橋頭的車隊，再作決定。\n\nA · 手繪奇幻\n靜態美術候選 · 待審\n\n場景檢視：選取只更新資訊，不推進戰鬥或抉擇。Esc 取消選取。\n\n提歐的燈三艘船閘門與絞盤渡口木橋瑪歌車隊的三箱逃難者"
+  },
+  "captures": [
+    {
+      "file": "screenshots/quality-review/01-menu-1920.png",
+      "sha256": "9633130fa7320604dab0c6b6b231416b41b7e2ea4417d7897aa6d99d206329e1",
+      "note": "首次進入的主選單"
+    },
+    {
+      "file": "screenshots/quality-review/02-journey-1920.png",
+      "sha256": "843e014e87fd34dbbeef1ce8c921af63b3361f7323c11d0b1bf1b3d56d2d794d",
+      "note": "旅程頁：首次玩家看到的任務說明"
+    },
+    {
+      "file": "screenshots/quality-review/03-camp-1920.png",
+      "sha256": "abd9e28b8f6ee8413c2338b4387fdc7c7926f772d7aef628ebc753dca62219d5",
+      "note": "營地"
+    },
+    {
+      "file": "screenshots/quality-review/04-story-log-1920.png",
+      "sha256": "00cb9305eebb87b3d4206c20316e1f3f2df1e4f3d41f7716b48a2a7450c09411",
+      "note": "劇情抉擇＋對白紀錄展開"
+    },
+    {
+      "file": "screenshots/quality-review/05-battle-residents-1920.png",
+      "sha256": "cb007bf7d7f66bf2f98e0f5622376521afcf34130453bf28d14f635d057a15ee",
+      "note": "戰鬥開場：先護送居民"
+    },
+    {
+      "file": "screenshots/quality-review/06-result-residents-1920.png",
+      "sha256": "34e20b555a380660ab22ba779ab3fd58e5dc4bae80cb3ff4952ff5fd7b401fa3",
+      "note": "戰後結果：先護送居民，僅一次行動、未擊倒任何敵人"
+    },
+    {
+      "file": "screenshots/quality-review/05-battle-grain-1920.png",
+      "sha256": "1f20db6ecce5c6143a8e768066627efa9bcf0df9e35748cfdf6584d8742a8b90",
+      "note": "戰鬥開場：先護送軍糧"
+    },
+    {
+      "file": "screenshots/quality-review/06-result-grain-1920.png",
+      "sha256": "f128a4f0b981c5fd46ac276dfbbe95c27f326c36a6fbf86898838720eb949124",
+      "note": "戰後結果：先護送軍糧，僅一次行動、未擊倒任何敵人"
+    },
+    {
+      "file": "screenshots/quality-review/07-main-move-range-river.png",
+      "sha256": "c93452152a2feda778f079adcaafc433db4a82d46c20be8b96dcd2114fcd8a94",
+      "note": "主流程：席恩在(3,4)河邊時顯示的移動範圍"
+    },
+    {
+      "file": "screenshots/quality-review/08-battle-720.png",
+      "sha256": "ac3201b37826e735c976a7eaea2aab9a69120cbc22f3ac15f83fd01aeca76b54",
+      "note": "720p 主流程戰鬥"
+    },
+    {
+      "file": "screenshots/quality-review/09-battle-720-large.png",
+      "sha256": "8c0240b119976deb000a54dcf46144a426d42be3b0a9a25e8e38f5095a2b4090",
+      "note": "720p＋放大文字"
+    },
+    {
+      "file": "screenshots/quality-review/10-l03-open-1920.png",
+      "sha256": "23c55bbd13736d36825bd076f748ac384f222f63c2b1d2a11a4a74ee75cf8749",
+      "note": "L03 開閘接船 開場"
+    },
+    {
+      "file": "screenshots/quality-review/10-l03-sealed-1920.png",
+      "sha256": "dac9e2edee22f82644553e53f6105f1b2bbfe88dacac496bb6007651689ab60e",
+      "note": "L03 封閘護橋 開場"
+    },
+    {
+      "file": "screenshots/quality-review/11-l03-knight-defeated.png",
+      "sha256": "4e4d0be55989b0df9594f25b0a6e6c14e7999b46f2caf24053ba821ea46df04e",
+      "note": "L03 擊倒議會騎士後：沒有勝利、敵方回合或目標進度變化"
+    },
+    {
+      "file": "screenshots/quality-review/12-l03-720.png",
+      "sha256": "6413269b732c84e036a376e9fb3a631e2ad28e51a1339c04fd5b1e7000280afa",
+      "note": "L03 720p"
+    },
+    {
+      "file": "screenshots/quality-review/13-l03-720-large.png",
+      "sha256": "2990dd5d2cbbec2f86342ad4e23ae011c37cd997d08e893b3521ca8dbbd12ed2",
+      "note": "L03 720p 放大文字"
+    },
+    {
+      "file": "screenshots/quality-review/14-art-gate-a-1920.png",
+      "sha256": "7236c8ef467856fe28935fea7f1592219f3438d7ac1731f2683d46a22ecf65db",
+      "note": "art-gate A"
+    }
+  ],
+  "page_errors": [],
+  "finished_at": "2026-10-21T16:36:12.033Z"
+}
