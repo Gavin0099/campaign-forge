@@ -1,0 +1,46 @@
+{
+  "ui_branch_dnd_skill_present": false,
+  "new_owner_art_verdict": "PENDING",
+  "baseline": "b783cf9093ce878bbb2bfdb6462364fb464e188a",
+  "prior_owner_art_verdict": "FAIL",
+  "recorded_at": "2026-10-22T00:04:55.7316949+08:00",
+  "historical_compliance": "INSUFFICIENT_VERSIONED_EVIDENCE",
+  "skill_files": [
+    {
+      "scope": "immersive UI hierarchy and rendered verification",
+      "path": "C:/Users/daish/.codex/skills/frontend-design/SKILL.md",
+      "version": "2.0",
+      "name": "frontend-design",
+      "bytes": 16343,
+      "read_evidence": "Read via exec_command during this Art Quality Gate turn before implementation; this timestamp records manifest creation, not historical skill invocation",
+      "sha256": "15dec421f25b266e7df5366e18a2321df946de05556bb07dfe07e942aa20a742"
+    },
+    {
+      "scope": "built-in image generation and non-destructive provenance",
+      "path": "C:/Users/daish/.codex/skills/.system/imagegen/SKILL.md",
+      "version": null,
+      "name": "imagegen",
+      "bytes": 19516,
+      "read_evidence": "Read via exec_command during this Art Quality Gate turn before implementation; this timestamp records manifest creation, not historical skill invocation",
+      "sha256": "706d4d96e1d5c9e6023fe3ccabba1bb34b364024d344fd25b8515ec7d28fe3c4"
+    },
+    {
+      "scope": "local executable identity inspection; no complete adversarial audit claim",
+      "path": "C:/Users/daish/.codex/skills/external-executable-trust-audit/SKILL.md",
+      "version": null,
+      "name": "external-executable-trust-audit",
+      "bytes": 3052,
+      "read_evidence": "Read via exec_command during this Art Quality Gate turn before implementation; this timestamp records manifest creation, not historical skill invocation",
+      "sha256": "5ca3988fc2e963dbd24127e476b34727d1bcbd18906c4277e8781ae95190265a"
+    },
+    {
+      "scope": "audit and narrative/original-IP boundaries only; no rules implementation",
+      "path": "D:/campaign-forge/scratch/narrative-alignment/.codex/skills/dnd-framework/SKILL.md",
+      "version": "story/strengthen-narrative@0be4c94cee65036037707f9fc25b432f6b266e9d",
+      "name": "dnd-framework",
+      "bytes": 8702,
+      "read_evidence": "Read via exec_command during this Art Quality Gate turn before implementation; this timestamp records manifest creation, not historical skill invocation",
+      "sha256": "c07764e756590c286dd88421e82ad374601a6732e2c2876f958a6dd8dfa5427b"
+    }
+  ]
+}

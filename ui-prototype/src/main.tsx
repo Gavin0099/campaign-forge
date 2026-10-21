@@ -13,6 +13,7 @@ import {
 import { useCombatSound } from "./combatSound";
 import "./combat.css";
 import { L03Preview } from "./L03Preview";
+import { ArtGate } from "./ArtGate";
 
 function Portrait({ id, large = false }: { id: string; large?: boolean }) {
   const column = scenario.party.findIndex((p) => p.id === id);
@@ -56,6 +57,15 @@ const terrainName = (t: string) =>
   ({ ".": "平地", F: "林地", R: "道路", "~": "河道" })[t] || "地形";
 
 function App() {
+  const [artGateOpen, setArtGateOpen] = useState(
+    () => new URLSearchParams(location.search).get("scene") === "art-gate",
+  );
+  const artGateEntry = useRef<HTMLButtonElement>(null);
+  const artGateWasOpen = useRef(artGateOpen);
+  useEffect(() => {
+    if (artGateWasOpen.current && !artGateOpen) artGateEntry.current?.focus();
+    artGateWasOpen.current = artGateOpen;
+  }, [artGateOpen]);
   const [l03Open, setL03Open] = useState(
     () => new URLSearchParams(location.search).get("scene") === "l03",
   );
@@ -221,7 +231,7 @@ function App() {
   }
   useEffect(() => {
     const handler = (event: KeyboardEvent) => {
-      if (l03Open) return;
+      if (l03Open || artGateOpen) return;
       if (event.key === "Escape") {
         event.preventDefault();
         back();
@@ -406,6 +416,7 @@ function App() {
   const partyMember =
     scenario.party.find((p) => p.id === partyFocus) || scenario.party[0];
 
+  if (artGateOpen) return <ArtGate onExit={() => setArtGateOpen(false)} />;
   if (l03Open) return <L03Preview onExit={() => setL03Open(false)} />;
 
   return (
@@ -455,6 +466,13 @@ function App() {
             <h1>界碑之外</h1>
             <p>渡口只剩最後一趟船。你帶走誰，另一邊就要自己尋路。</p>
             <div className="menu-actions">
+              <button
+                ref={artGateEntry}
+                className="primary"
+                onClick={() => setArtGateOpen(true)}
+              >
+                L03 · 美術方向 A／B <span>↗</span>
+              </button>
               <button className="primary" onClick={() => setL03Open(true)}>
                 碑誓 · L03 戰鬥畫面 <span>↗</span>
               </button>

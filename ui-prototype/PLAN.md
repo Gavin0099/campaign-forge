@@ -1,6 +1,6 @@
 # Campaign Forge UI Prototype
 
-> **最後更新**: 2026-10-21
+> **最後更新**: 2026-10-22
 > **Owner**: Gavin（需求與決策）；Codex（本輪執行）
 > **Freshness**: Sprint (7d)
 
@@ -9,6 +9,16 @@
 獨立的 React / TypeScript 本地 PC UI 展示。原始 README、PLAN、SLICES、DECISIONS、EXECUTION、候選 A 與比較文件已閱讀。A/B/C 未選案；A 只供展示，人物外觀與地圖均是提案。不得以 UI 展示取代 S4 授權。
 
 ## Slices
+
+### L03 Art Quality Gate — 2026-10-22
+
+Owner 明確拒絕 `codex/l03-battle-ui@b783cf9` 商業美術品質；23項工程 PASS 不能抵消。另開 `codex/l03-art-quality-gate`，先做實際 Skill 路徑／版本／SHA／規則對應審查，再交付同一 K1 抉擇前狀態的 A手繪奇幻／B立體造型兩套可執行靜態樣板。B 是預繪2.5D外觀，沒有3D模型。原操作頁保留，不合併 main，不進動畫／規則／量產。
+
+- AG-01：四份 Skill 本輪實際讀取及摘要留存；dnd-framework 只在故事分支，唯讀引用。上一輪完整遵循證據不足，不補作歷史證明。
+- AG-02：新整體渡口繪景／造型候選，三船、三箱、提歐的燈、瑪歌、群眾、閘門與洪水同時可見；原件與四份提示留存，不重用舊 terrain／props。B 角色為相同五人造型轉換，非新角色。
+- AG-03：原React入口、A/B共用固定資料、獨立人物、接地影與橋欄固定遮擋、靠邊HUD、七地標檢視／Esc／大字／返回焦點整合。新圖尚未接回11×9導航／技能，不把靜態樣板說成完整戰鬥改版。
+- AG-04：A/B各720p／1080p真實截圖，新樣板11項檢查、原L03與舊兩流程23項回歸、build與範圍保護通過；歷史Before不覆寫。詳見 [docs/art-gate/VERIFICATION.md](docs/art-gate/VERIFICATION.md) 及來源綁定報告。
+- 商業美術仍待Owner選A／B或拒絕兩案。固定角色立牌感、閘門水利拓撲、NPC／船分層、新地形走格對齊、素材邊緣與原生1080p列為未達標；動畫Gate未進入。實際投入見TIME-LEDGER，不將9.5／12小時舊預算寫成實際時間。
 
 ### L03 戰鬥畫面與 UI 追加（2026-10-21）
 
@@ -83,6 +93,8 @@ Owner 已判 VD2 美術未通過，工程歷史保留。目標9.5小時／上限
 Visual Sprint已知限制：平面沙盤／河岸方格感、材質重複、靜態小人姿態、12–14px戰鬥metadata的真人閱讀舒適度。沒有用build或代理自評宣告商業美術品質通過；人工檢查見docs/visual-sprint/VERIFICATION.md。實際時間以TIME-LEDGER.md記錄，不把9.5小時預算填作實際工時。
 
 ## Verification
+
+目前最新為 Art Quality Gate：靜態樣板工程與既有功能回歸通過；Owner美術待審，b783cf9美術已明確FAIL。原L03／VD3等報告為各版歷史，不能代表本輪新場景完整導航／動畫通過。原生hooks callback證據仍待驗，信任／reload不再要求重做。
 
 最新VD3：功能與實機證據見docs/vd3/VERIFICATION.md及其來源綁定report；VD2／VQ1報告僅保留歷史。使用者已確認0fc109f修正版hooks重新信任與重新載入，該步驟不再待辦；平台原生事件仍無成功收據。下方「需重新信任」為歷史。
 

@@ -1,0 +1,75 @@
+{
+  "assets": [
+    {
+      "file": "ui-prototype/public/art/art-gate/river-a-v1.png",
+      "original": "C:/Users/daish/.codex/generated_images/01a158de-56fc-7783-a2ad-61a6fb523243/exec-1ff8da42-eb42-4ceb-945d-1ea867ca1db3.png",
+      "input_hashes": {},
+      "bytes": 3867085,
+      "sha256": "c53fcd2d1e175a2be348843bcad67c8b8069388c03e4c0f7f5123a80351c36d6",
+      "inputs": [],
+      "prompt_sha256": "798f12756eb4b9f47e8fd9f89c6ed0822283cf04562193b501548b872284b2a4",
+      "prompt": "scene-a-prompt.txt",
+      "width": 1672,
+      "mode": "generate",
+      "height": 941
+    },
+    {
+      "file": "ui-prototype/public/art/art-gate/river-b-v1.png",
+      "original": "C:/Users/daish/.codex/generated_images/01a158de-56fc-7783-a2ad-61a6fb523243/exec-328c0772-1372-4373-b9eb-4b778f8ead2f.png",
+      "input_hashes": {
+        "ui-prototype/public/art/art-gate/river-a-v1.png": "c53fcd2d1e175a2be348843bcad67c8b8069388c03e4c0f7f5123a80351c36d6"
+      },
+      "bytes": 3071989,
+      "sha256": "0bbeb750de918900138dd8b1219898173e846b9e52eea6c799dde31a6eb29fc0",
+      "inputs": [
+        "ui-prototype/public/art/art-gate/river-a-v1.png"
+      ],
+      "prompt_sha256": "34f817680a5ce7b4065209a2bd270506f98e345c22d6612ced9e5b69529018a9",
+      "prompt": "scene-b-prompt.txt",
+      "width": 1672,
+      "mode": "edit-style-transfer",
+      "height": 941
+    },
+    {
+      "file": "ui-prototype/public/art/art-gate/party-b-v1.png",
+      "original": "C:/Users/daish/.codex/generated_images/01a158de-56fc-7783-a2ad-61a6fb523243/exec-00a51d80-e047-4e3f-9d1f-45f828facbe2.png",
+      "input_hashes": {
+        "ui-prototype/public/art/l03-party-v1.png": "f67086afa5919d17872ceb8c22c4e6eefd5513dc6e14d8637f38cf90abd4bb08"
+      },
+      "bytes": 1160208,
+      "sha256": "1cffacbb664c2c74af32f48f5c01894462a70d9dd02fa87c26f30b11d05d1524",
+      "inputs": [
+        "ui-prototype/public/art/l03-party-v1.png"
+      ],
+      "prompt_sha256": "df8e6c8ec21f134f21ee6fd4fde68365d531c5443d3d2d6bf8696fd43a9214ac",
+      "prompt": "partyB-prompt.txt",
+      "width": 2172,
+      "mode": "edit-style-transfer-transparent",
+      "height": 724
+    },
+    {
+      "file": "ui-prototype/public/art/art-gate/enemies-b-v1.png",
+      "original": "C:/Users/daish/.codex/generated_images/01a158de-56fc-7783-a2ad-61a6fb523243/exec-c87d2f1e-3507-44c7-a9c0-10b4e11f8d96.png",
+      "input_hashes": {
+        "ui-prototype/public/art/l03-enemies-v1.png": "2cdaba9f74dc384ec262a71f9ec1b814949a4325c52b93836b2da50669ddea8c"
+      },
+      "bytes": 1392004,
+      "sha256": "f6c2b2c5870960c9ffd367f64603f06b061ba889f0e21a4cbe4d6b6e08a4cf1c",
+      "inputs": [
+        "ui-prototype/public/art/l03-enemies-v1.png"
+      ],
+      "prompt_sha256": "a8b616e76d74c5994bd5ac7d05e41022f63aca94622723a5dfa00179cc1a29be",
+      "prompt": "enemyB-prompt.txt",
+      "width": 1774,
+      "mode": "edit-style-transfer-transparent",
+      "height": 887
+    }
+  ],
+  "use": "original unapproved game art studies, not licensed competitor assets",
+  "recorded_at": "2026-10-22T00:12:43.4770040+08:00",
+  "raw_outputs_preserved": true,
+  "model": "NOT_EXPOSED_BY_TOOL",
+  "seed": "NOT_EXPOSED_BY_TOOL",
+  "postprocessing": "none; raw PNG bytes copied without modification",
+  "tool": "built-in image_gen.imagegen"
+}

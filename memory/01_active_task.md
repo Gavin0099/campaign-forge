@@ -1,4 +1,10 @@
-## 最新使用者指示：L03 戰鬥畫面與 UI（2026-10-21）
+## 最新使用者指示：L03 Art Quality Gate（2026-10-22）
+
+使用者判定 b783cf9 美術FAIL，要求先Skill Compliance Audit，再以同一L03狀態交付A手繪／B立體造型兩張720p實機及1080p檢視。不增規則、動畫、關卡，不合併main；Owner選方向後才進下一階段。歷史Skill完整遵循證據不足，不能拿規格與Prompt冒充已載入。
+
+代理觀察：本輪實際讀取frontend-design 2.0、imagegen、external-executable-trust-audit及故事worktree的dnd-framework，留完整SHA與對應；後者UI分支無檔，不複製來偽造歷史。新codex/l03-art-quality-gate分支：兩套整體場景、B同五人造型轉換、獨立角色／陰影／固定欄杆遮擋／靠邊HUD／七地標檢視接入React；同一pre-K1資料。11項樣板檢查與23項舊L03／兩完整路線回歸、build和scope通過，Before不覆寫。B僅預繪2.5D，沒有3D mesh；新圖尚未接11×9導航，NPC／船仍烘在底圖，閘門水利拓撲和角色立牌感待改。交付與證據見ui-prototype/docs/art-gate/。**停在Owner審查A/B，商業美術未通過、動畫Gate未進入。** 原生hooks回呼仍待驗，已完成的信任不重問。本段是里程碑，非SessionEnd。
+
+## 歷史使用者指示：L03 戰鬥畫面與 UI（2026-10-21）
 
 使用者指出上一輪故事／文字試玩交付沒有改戰鬥與UI，追加要求實際修改。代理核對原12小時計畫確實限制只交規格，不再把規格視為畫面完成。本輪在 `codex/l03-battle-ui` 製作《碑誓》L03候選：同源11×9、開／封閘對照、目標與代價、3名角色與2種敵方原創手繪、選人／路徑／目標／確認及取消。托瑪只做支援標記，沒有新增正式治療規則。原A人物流程保留，main與故事分支均不合併。最新實測、時窗及視覺限制見ui-prototype/docs/l03/VERIFICATION.md。G004／G005、人類試玩、商業美術與原生hooks回呼仍未通過；里程碑不構成SessionEnd。
 

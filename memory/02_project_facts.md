@@ -1,4 +1,10 @@
-## 最新使用者指示與代理觀察：L03 UI（2026-10-21）
+## 最新使用者判定：L03 Art Quality Gate（2026-10-22）
+
+使用者判定codex/l03-battle-ui@b783cf9的商業美術FAIL，工程23PASS不代替藝術品質。要求Skill路徑／版本／SHA／規則與成果審查、同狀態A手繪／B立體造型靜態候選，先不做規則／動畫／關卡／大量角色，不合併main，選方向後再深入。
+
+代理可核對事實：UI分支無dnd-framework，故事0be4c94有該Skill（blob7983f232e6f61ed537fc1a5e2abfab4217d9ffda）；本輪唯讀載入，歷史完整合規仍證據不足。新四PNG皆built-in image_gen原件，非商業遊戲素材，原件／Prompt／SHA留存。A/B實機共用pre-K1狀態、5單位、7敘事地標，兩尺寸截圖；11檢查和23回歸、build、scope通過。新圖用螢幕錨點，未整合11×9導航；Maggie／Teo／船與車隊畫入底圖，沒有獨立動態模型；B僅2.5D外觀。兩案均待Owner審查，無美術PASS或3D引擎完成宣稱。正式故事G004/G005與SOURCE_NOT_FOUND內容界線不變。詳ui-prototype/docs/art-gate/。
+
+## 歷史使用者指示與代理觀察：L03 UI（2026-10-21）
 
 使用者要求戰鬥畫面和UI也要修改。已在獨立codex/l03-battle-ui分支追加L03候選操作頁，沒有將舊UI人物改名成新故事人物。新透明原創手繪圖集含凱倫／蕾絲／托瑪、匿名騎士與爬行者；造型是未定案提案。共用既有材質／樹木工程資產，機關、船、橋與地形為原創程式幾何。99格地景與互動同一資料；範圍、固定−3與無效果支援標記只作UI示例，不代表SRD／G005實作或真實勝敗。工程與視覺人工審查分開，詳細證據與保留問題見ui-prototype/docs/l03/。main和story/strengthen-narrative保持各自既有提交。
 

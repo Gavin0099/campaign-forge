@@ -7,7 +7,10 @@ const root = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
   "../..",
 );
-const output = path.join(root, "ui-prototype/screenshots/l03");
+const output = path.join(
+  root,
+  "ui-prototype/screenshots/art-gate/legacy-regression",
+);
 const hash = (file) =>
   crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
 const report = JSON.parse(

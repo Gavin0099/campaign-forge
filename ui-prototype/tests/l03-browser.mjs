@@ -16,7 +16,7 @@ assert.equal(fs.realpathSync(binding.path), binding.path);
 assert.equal(fs.statSync(binding.path).size, binding.bytes);
 assert.equal(hash(fs.readFileSync(binding.path)), binding.sha256);
 const { chromium } = await import("playwright");
-const output = path.join(root, "ui-prototype/screenshots/l03"),
+const output = path.join(root, "ui-prototype/screenshots/art-gate/legacy-regression"),
   scratch = path.join(root, "scratch/l03-browser");
 fs.mkdirSync(output, { recursive: true });
 fs.mkdirSync(scratch, { recursive: true });

@@ -1,0 +1,401 @@
+{
+  "started_at": "2026-10-21T16:14:44.006Z",
+  "baseline": "b783cf9093ce878bbb2bfdb6462364fb464e188a",
+  "browser": {
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "bytes": 4586648,
+    "sha256": "f76f0234efb271041dc84f9f38fb858e01859d5da6f775f5108668eb3ae80975",
+    "scope": "local UI browser acceptance only"
+  },
+  "inputs": {
+    "ui-prototype/src/AnimatedActor.tsx": "58ec26a3d8da17b5ac5bc149ee541da483efc8ff66f14cb39933667b7159f58b",
+    "ui-prototype/src/artGate.css": "8bf329492c3ba2dbe73e12124619db24a16df24ffbc64c3a77dad67f97331c8d",
+    "ui-prototype/src/ArtGate.tsx": "aceeff179e6613d1b1286b2581e5aaa55df60bef91e65fe3be2a3dba76b65130",
+    "ui-prototype/src/artGateScene.ts": "fc9d264cbee53d6351065fec4ac06cf18a9c0756ce510d3a92efc15b80c974a5",
+    "ui-prototype/src/Battlefield.tsx": "bb81e3de104e85e84905a1864245e2c0f191a11f7d3e407abb423e6950fc9916",
+    "ui-prototype/src/BattleLandmarks.tsx": "d06b8c3aa026c816532a316d529d91e4480170a28e20023640bbddbd9cf155c2",
+    "ui-prototype/src/combat.css": "b91498755e21f6b5c6d00fb5982f5e8348166aeba1a6b2ab18cc5efe19c6ef4c",
+    "ui-prototype/src/CombatEffects.tsx": "989fe2ff2ffe48b152829c89e5926ed7a7783926a5c12f8b5ebf798db3d425dd",
+    "ui-prototype/src/combatIdentity.ts": "20feab78665c6aac034dfb6a5bc4c653e3cbb88cdb104de7c25f871fd8024fc6",
+    "ui-prototype/src/combatPlayback.ts": "b2032daab22c7c79e7dea9e08be7e6c79a9ed66ef328e2098d5bf2b90a233220",
+    "ui-prototype/src/combatSound.ts": "7d1eb00854e3ac0ec20100ad7b02608b4be18b403573d1db44c2ffbf52acd10a",
+    "ui-prototype/src/data.ts": "c5ea580ff3c816e4ef8da4f9777ade3f94a94b306a61e31275ac3511a239c397",
+    "ui-prototype/src/l03.css": "4711831275025200ac7041ebd06461da23b6f9cbffe23df084526cbcbe57dec0",
+    "ui-prototype/src/L03Preview.tsx": "af1a2ef64e963b1a2c4c94dc53e2510c8b99aecd59b71ca6d6159769a854b35c",
+    "ui-prototype/src/l03Scene.ts": "08780782ab51ef026e001c75f9959f65cdc33eb7d7b5d5a9fdd704eb65ae340d",
+    "ui-prototype/src/main.tsx": "2a97fa90f6ae684fb7a54ef9a55365af4062d7377453fe59cdf811207ec9d0a4",
+    "ui-prototype/src/shienFrames.json": "e5d0fbf913fd9697509958bab33fb730fbbeb520f5dab57fdcc155c7c08058d4",
+    "ui-prototype/src/style.css": "c9844bf7b70ea74b6ad92dff6b69b0bffd571422a2ffbdabbf1fc6963ba4f639",
+    "ui-prototype/src/visual.css": "6435ba6dd298dfd0d33ba9c39c4da9f3e790d2b5d817c5e12221c41261c84c5d",
+    "ui-prototype/public/art/art-gate/enemies-b-v1.png": "f6c2b2c5870960c9ffd367f64603f06b061ba889f0e21a4cbe4d6b6e08a4cf1c",
+    "ui-prototype/public/art/art-gate/party-b-v1.png": "1cffacbb664c2c74af32f48f5c01894462a70d9dd02fa87c26f30b11d05d1524",
+    "ui-prototype/public/art/art-gate/river-a-v1.png": "c53fcd2d1e175a2be348843bcad67c8b8069388c03e4c0f7f5123a80351c36d6",
+    "ui-prototype/public/art/art-gate/river-b-v1.png": "0bbeb750de918900138dd8b1219898173e846b9e52eea6c799dde31a6eb29fc0",
+    "ui-prototype/public/art/l03-party-v1.png": "f67086afa5919d17872ceb8c22c4e6eefd5513dc6e14d8637f38cf90abd4bb08",
+    "ui-prototype/public/art/l03-enemies-v1.png": "2cdaba9f74dc384ec262a71f9ec1b814949a4325c52b93836b2da50669ddea8c",
+    "ui-prototype/tests/art-gate-browser.mjs": "75d4f4ac2019e1287edc6e36f7a799e4ccfe6e9c6550ce39aca80ee69c191ccd",
+    "ui-prototype/tests/verify-art-gate.mjs": "9f445b0ae2722f51a917d91da44ac9896a57c9f96bb7a52f9e771ba095a7a30c",
+    "ui-prototype/package.json": "7be910ce26e797587a3b94144e811635023e7b08fb20111301d5ce7310a058ad"
+  },
+  "checks": [
+    {
+      "name": "a-1280-composition",
+      "pass": true,
+      "detail": "Actual loaded environment + independent actors + HTML HUD; shared pre-K1 state, 5 actor hit targets, 7 narrative inspection points, no horizontal clipping. Object count in painted plate requires visual inspection, not DOM-count proof."
+    },
+    {
+      "name": "b-1280-composition",
+      "pass": true,
+      "detail": "Actual loaded environment + independent actors + HTML HUD; shared pre-K1 state, 5 actor hit targets, 7 narrative inspection points, no horizontal clipping. Object count in painted plate requires visual inspection, not DOM-count proof."
+    },
+    {
+      "name": "a-1920-composition",
+      "pass": true,
+      "detail": "Actual loaded environment + independent actors + HTML HUD; shared pre-K1 state, 5 actor hit targets, 7 narrative inspection points, no horizontal clipping. Object count in painted plate requires visual inspection, not DOM-count proof."
+    },
+    {
+      "name": "b-1920-composition",
+      "pass": true,
+      "detail": "Actual loaded environment + independent actors + HTML HUD; shared pre-K1 state, 5 actor hit targets, 7 narrative inspection points, no horizontal clipping. Object count in painted plate requires visual inspection, not DOM-count proof."
+    },
+    {
+      "name": "switch-preserves-state",
+      "pass": true,
+      "detail": "Direction control changes scene/actor assets and URL while pre-K1 data remains identical."
+    },
+    {
+      "name": "landmarks-keyboard-and-escape",
+      "pass": true,
+      "detail": "All seven narrative targets are keyboard operable; Esc cancels selection without advancing state. Maggie has a scene anchor and inspectable description."
+    },
+    {
+      "name": "landmark-labels",
+      "pass": true,
+      "detail": "Optional labels are controlled independently of scene data."
+    },
+    {
+      "name": "large-text-and-narrow",
+      "pass": true,
+      "detail": "200% text setting reflows HUD into document flow; 1280 and 390 have no horizontal overflow; essential landmarks remain available in text index. Narrow image itself is not a desktop-quality tactical view."
+    },
+    {
+      "name": "failed-plate-recovery",
+      "pass": true,
+      "detail": "Real failed scene image request gives an alert, retains narrative inspection and succeeds after retry."
+    },
+    {
+      "name": "reduced-motion-static",
+      "pass": true,
+      "detail": "No new motion pipeline; selection remains keyboard-operable under reduced motion."
+    },
+    {
+      "name": "menu-entry-and-return",
+      "pass": true,
+      "detail": "Candidate view mounts from original menu and returns without replacing legacy L03 entry."
+    }
+  ],
+  "captures": [
+    {
+      "file": "a-1280.png",
+      "sha256": "41795ed5c12fadefc16a14ec90abce07b9a58d585a68e5d847a8f2c4de160501",
+      "width": 1280,
+      "height": 720,
+      "state_sha256": "64d6f876bc0632366b7b595bae1a8d7a5c32806a3d2a191aafb215c05a9f178c"
+    },
+    {
+      "file": "b-1280.png",
+      "sha256": "6cf2fb74f891b40055d3e72f8c5f66790ddd6617a63f0345f4aa7adfa9149b3f",
+      "width": 1280,
+      "height": 720,
+      "state_sha256": "64d6f876bc0632366b7b595bae1a8d7a5c32806a3d2a191aafb215c05a9f178c"
+    },
+    {
+      "file": "a-1920.png",
+      "sha256": "eafbccecef1404241a215de06456c600ed25150c2994eaa79de2c38f7d3563d7",
+      "width": 1920,
+      "height": 1080,
+      "state_sha256": "64d6f876bc0632366b7b595bae1a8d7a5c32806a3d2a191aafb215c05a9f178c"
+    },
+    {
+      "file": "b-1920.png",
+      "sha256": "10a623ab096e34f6f976bb15cdd85c6eeba282e4251b0b8cb395ba23c9bff82b",
+      "width": 1920,
+      "height": 1080,
+      "state_sha256": "64d6f876bc0632366b7b595bae1a8d7a5c32806a3d2a191aafb215c05a9f178c"
+    },
+    {
+      "file": "maggie-1280.png",
+      "sha256": "e2fab8fefc0548e3463f0c7d33e7b421887f2400bb235874ef4002a2d73b1071",
+      "width": 1280,
+      "height": 720,
+      "state_sha256": "64d6f876bc0632366b7b595bae1a8d7a5c32806a3d2a191aafb215c05a9f178c"
+    },
+    {
+      "file": "large-1280.png",
+      "sha256": "3b914b4f1a963681e0e26f59f4c9e78c73586fdd433a5887366ed34074794ea9",
+      "width": 1280,
+      "height": 720,
+      "state_sha256": "64d6f876bc0632366b7b595bae1a8d7a5c32806a3d2a191aafb215c05a9f178c"
+    },
+    {
+      "file": "large-390.png",
+      "sha256": "c76adc89407a3429d15f90a06cbca75ffaee6123e96adf04af713a1b490f6434",
+      "width": 390,
+      "height": 844,
+      "state_sha256": "64d6f876bc0632366b7b595bae1a8d7a5c32806a3d2a191aafb215c05a9f178c"
+    }
+  ],
+  "console_errors": [],
+  "measurements": [
+    {
+      "direction": "a",
+      "width": 1280,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "plate": {
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "width": 1280,
+        "height": 720
+      },
+      "overflow": false,
+      "actorHitTargets": [
+        {
+          "id": "karen",
+          "x": 288.40625,
+          "y": 248.7675018310547,
+          "width": 119.1875,
+          "height": 119.18751525878906,
+          "visible": true
+        },
+        {
+          "id": "lace",
+          "x": 198.796875,
+          "y": 153.65750122070312,
+          "width": 101.59375,
+          "height": 101.59375,
+          "visible": true
+        },
+        {
+          "id": "thoma",
+          "x": 141.1953125,
+          "y": 382.5050048828125,
+          "width": 122.390625,
+          "height": 122.390625,
+          "visible": true
+        },
+        {
+          "id": "knight",
+          "x": 773.59375,
+          "y": 238.69375610351562,
+          "width": 107.1875,
+          "height": 107.1875,
+          "visible": true
+        },
+        {
+          "id": "crawler",
+          "x": 620.796875,
+          "y": 214.07376098632812,
+          "width": 112,
+          "height": 112,
+          "visible": true
+        }
+      ],
+      "stage": {
+        "width": 1280,
+        "height": 720
+      }
+    },
+    {
+      "direction": "b",
+      "width": 1280,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "plate": {
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "width": 1280,
+        "height": 720
+      },
+      "overflow": false,
+      "actorHitTargets": [
+        {
+          "id": "karen",
+          "x": 288.40625,
+          "y": 248.7675018310547,
+          "width": 119.1875,
+          "height": 119.18751525878906,
+          "visible": true
+        },
+        {
+          "id": "lace",
+          "x": 198.796875,
+          "y": 153.65750122070312,
+          "width": 101.59375,
+          "height": 101.59375,
+          "visible": true
+        },
+        {
+          "id": "thoma",
+          "x": 141.1953125,
+          "y": 382.5050048828125,
+          "width": 122.390625,
+          "height": 122.390625,
+          "visible": true
+        },
+        {
+          "id": "knight",
+          "x": 773.59375,
+          "y": 238.69375610351562,
+          "width": 107.1875,
+          "height": 107.1875,
+          "visible": true
+        },
+        {
+          "id": "crawler",
+          "x": 620.796875,
+          "y": 214.07376098632812,
+          "width": 112,
+          "height": 112,
+          "visible": true
+        }
+      ],
+      "stage": {
+        "width": 1280,
+        "height": 720
+      }
+    },
+    {
+      "direction": "a",
+      "width": 1920,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "plate": {
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "width": 1920,
+        "height": 1080
+      },
+      "overflow": false,
+      "actorHitTargets": [
+        {
+          "id": "karen",
+          "x": 432.6015625,
+          "y": 373.15185546875,
+          "width": 178.796875,
+          "height": 178.796875,
+          "visible": true
+        },
+        {
+          "id": "lace",
+          "x": 298.1953125,
+          "y": 230.5018768310547,
+          "width": 152.390625,
+          "height": 152.39064025878906,
+          "visible": true
+        },
+        {
+          "id": "thoma",
+          "x": 211.796875,
+          "y": 573.75,
+          "width": 183.59375,
+          "height": 183.59375,
+          "visible": true
+        },
+        {
+          "id": "knight",
+          "x": 1160.3984375,
+          "y": 358.025634765625,
+          "width": 160.796875,
+          "height": 160.796875,
+          "visible": true
+        },
+        {
+          "id": "crawler",
+          "x": 931.1875,
+          "y": 321.1106262207031,
+          "width": 168,
+          "height": 168,
+          "visible": true
+        }
+      ],
+      "stage": {
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    {
+      "direction": "b",
+      "width": 1920,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "plate": {
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "width": 1920,
+        "height": 1080
+      },
+      "overflow": false,
+      "actorHitTargets": [
+        {
+          "id": "karen",
+          "x": 432.6015625,
+          "y": 373.15185546875,
+          "width": 178.796875,
+          "height": 178.796875,
+          "visible": true
+        },
+        {
+          "id": "lace",
+          "x": 298.1953125,
+          "y": 230.5018768310547,
+          "width": 152.390625,
+          "height": 152.39064025878906,
+          "visible": true
+        },
+        {
+          "id": "thoma",
+          "x": 211.796875,
+          "y": 573.75,
+          "width": 183.59375,
+          "height": 183.59375,
+          "visible": true
+        },
+        {
+          "id": "knight",
+          "x": 1160.3984375,
+          "y": 358.025634765625,
+          "width": 160.796875,
+          "height": 160.796875,
+          "visible": true
+        },
+        {
+          "id": "crawler",
+          "x": 931.1875,
+          "y": 321.1106262207031,
+          "width": 168,
+          "height": 168,
+          "visible": true
+        }
+      ],
+      "stage": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "art_quality": "PENDING_OWNER_REVIEW",
+  "functional_scope": "static scene inspection, not movement/grid/animation validation",
+  "human_playtest": false,
+  "scene_state_sha256": "64d6f876bc0632366b7b595bae1a8d7a5c32806a3d2a191aafb215c05a9f178c",
+  "pass": true,
+  "finished_at": "2026-10-21T16:14:53.368Z"
+}
