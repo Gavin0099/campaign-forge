@@ -14,6 +14,7 @@ import { useCombatSound } from "./combatSound";
 import "./combat.css";
 import { L03Preview } from "./L03Preview";
 import { ArtGate } from "./ArtGate";
+import { PlayableL03 } from "./playable-l03/PlayableL03";
 
 function Portrait({ id, large = false }: { id: string; large?: boolean }) {
   const column = scenario.party.findIndex((p) => p.id === id);
@@ -57,6 +58,13 @@ const terrainName = (t: string) =>
   ({ ".": "平地", F: "林地", R: "道路", "~": "河道" })[t] || "地形";
 
 function App() {
+  const [p1vOpen, setP1vOpen] = useState(() => new URLSearchParams(location.search).get("scene") === "playable-l03");
+  const p1vEntry = useRef<HTMLButtonElement>(null);
+  const p1vWasOpen = useRef(p1vOpen);
+  useEffect(() => {
+    if (p1vWasOpen.current && !p1vOpen) p1vEntry.current?.focus();
+    p1vWasOpen.current = p1vOpen;
+  }, [p1vOpen]);
   const [artGateOpen, setArtGateOpen] = useState(
     () => new URLSearchParams(location.search).get("scene") === "art-gate",
   );
@@ -231,7 +239,7 @@ function App() {
   }
   useEffect(() => {
     const handler = (event: KeyboardEvent) => {
-      if (l03Open || artGateOpen) return;
+      if (l03Open || artGateOpen || p1vOpen) return;
       if (event.key === "Escape") {
         event.preventDefault();
         back();
@@ -416,6 +424,7 @@ function App() {
   const partyMember =
     scenario.party.find((p) => p.id === partyFocus) || scenario.party[0];
 
+  if (p1vOpen) return <PlayableL03 onExit={() => setP1vOpen(false)} />;
   if (artGateOpen) return <ArtGate onExit={() => setArtGateOpen(false)} />;
   if (l03Open) return <L03Preview onExit={() => setL03Open(false)} />;
 
@@ -472,6 +481,9 @@ function App() {
                 onClick={() => setArtGateOpen(true)}
               >
                 L03 · 美術方向 A／B <span>↗</span>
+              </button>
+              <button ref={p1vEntry} className="primary" onClick={() => setP1vOpen(true)}>
+                Playable L03 (P1v) <span>↗</span>
               </button>
               <button className="primary" onClick={() => setL03Open(true)}>
                 碑誓 · L03 戰鬥畫面 <span>↗</span>

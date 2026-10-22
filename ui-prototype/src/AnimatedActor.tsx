@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { useId, type ReactNode } from "react";
 import type { Playback, Point } from "./combatPlayback";
 
 const ease = (v: number) => v * v * (3 - 2 * v);
@@ -340,12 +340,14 @@ export function AnimatedActor({
   reduced,
   contact,
   facing = 1,
+  children,
 }: {
   id?: string;
   clip: Playback | null;
   reduced: boolean;
   contact?: Point;
   facing?: number;
+  children?: ReactNode;
 }) {
   const isMage = id === "test-wizard",
     isEnemy = /scout|guard/.test(id);
@@ -448,6 +450,15 @@ export function AnimatedActor({
     : isEnemy
       ? [rig.origin[0] + 30, 355]
       : [209, 333];
+  // Painted L03 figures reuse the move clock and restrained walk bob, without
+  // pretending that their single-frame art has the soldier's articulated rig.
+  if (children) return (
+    <g className="animated-actor" data-pose={clip?.stage || "idle"}
+      data-feet={walking ? "walking" : "fixed"}
+      transform={`translate(0 ${walking && clip ? Math.sin(clip.progress * Math.PI * 4) * 2 : 0})`}>
+      {children}
+    </g>
+  );
   return (
     <g
       className="animated-actor cutout-actor"

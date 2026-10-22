@@ -10,6 +10,12 @@
 
 ## Slices
 
+### Authorized P1v: first playable L03 screen — 2026-10-22
+
+使用者：只完成 `docs/tasks/playable-l03-P1v-screen.md`，90分鐘上限；基線 `13a6e17`，不pull。Owner確認同worktree沒有另一代理。A（存活六回合）僅供新畫面；規則預設與P0／P0b／P0c程式、輸出保持不變。正常commit後嘗試push，失敗留本機；P0d延後，P2未授權。
+
+代理觀察：新增主選單「Playable L03 (P1v)」與獨立React／SVG戰場，直接採用既有純規則的合法移動、敵方意圖、events、勝敗與Retry。原11×9／五單位素材、絞盤(2,1)、六回合與三格干擾可操作；逐格移動、Wait、Enter／Esc、跳過動畫、Reduced Motion與退出清理有瀏覽器驗證。最終實測、兩尺寸起始／意圖／動畫中／勝／敗截圖、exit codes、限制與Git交付狀態見 `docs/playable-l03-p1v/` 及handoff的「P1v playable screen」。A仍為THIN實驗；真人試玩與3–5分鐘節奏為HUMAN_PENDING，不宣稱正式規則、玩法或商業美術通過。里程碑不是SessionEnd。
+
 ### Authorized P0c: opt-in victory variants — 2026-10-22
 
 使用者：只完成 `docs/tasks/playable-l03-P0c-variants.md`，45分鐘驗證；沿用 `codex/playable-l03-research` @ d42024b，不pull。Owner確認同worktree沒有另一代理。比較Baseline／A／B／C／B+ N=2及3，預設關閉、P0及P0b輸出不變，commit後嘗試push；失敗留本機，P1未授權。

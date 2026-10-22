@@ -1,4 +1,10 @@
-## 最新使用者指示：僅P0c勝利條件比較（2026-10-22）
+## 最新使用者指示：僅P1v可玩畫面（2026-10-22）
+
+使用者：沿用乾淨且已同步的 `codex/playable-l03-research@13a6e17`，不pull，只做P1v brief，90分鐘上限；Owner確認無同worktree其他代理。A的六回合設定只在本畫面啟用，P0／P0b／P0c與規則預設不變；重用美術、無新依賴，實際Playwright與指定截圖，commit後嘗試push，失敗留本機。P0d明確延後，不P2／main／PR／stash。
+
+代理觀察：新增獨立React／SVG入口與五單位戰場，合法移動與意圖皆讀純規則，結算結果僅播放events，沒有在動畫中重算敵方或進度。機器操作已證明原成功trace在A多守第六回合可勝、原失敗trace仍敗，跳過／正常播放狀態一致，Retry／等待／鍵盤／重複輸入與退出清理可驗。最終凍結證據與交付以 `ui-prototype/docs/playable-l03-p1v/`、handoff之「P1v playable screen」為準。畫面仍是規則測試床；單幀原畫移動僅步進與輕微步行起伏，無新骨架或戰鬥規則。真人試玩為HUMAN_PENDING；未宣稱節奏、樂趣、Owner美術或完整原生治理通過。本段是任務里程碑，非SessionEnd，未手寫每日記錄。共享PLAN與本檔以自有lock編輯；使用者不pull指示優先於共享預設流程。
+
+## 歷史使用者指示：僅P0c勝利條件比較（2026-10-22）
 
 使用者：只完成P0c，45分鐘；基線d42024b已同步，不pull，工作樹乾淨且Owner確認沒有另一代理在本worktree。變體預設關閉，P0及P0b輸出逐byte不變，commit後嘗試正常push；失敗留本機。不P1、不main、不PR、不stash。
 
