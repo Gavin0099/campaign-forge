@@ -1,4 +1,10 @@
-## 最新使用者指示：僅P0b站位驗證（2026-10-22）
+## 最新使用者指示：僅P0c勝利條件比較（2026-10-22）
+
+使用者：只完成P0c，45分鐘；基線d42024b已同步，不pull，工作樹乾淨且Owner確認沒有另一代理在本worktree。變體預設關閉，P0及P0b輸出逐byte不變，commit後嘗試正常push；失敗留本機。不P1、不main、不PR、不stash。
+
+代理觀察：Baseline／B／C／B+ N=2及3皆CHEESE，B及B+仍有一人兩次4格的廉價勝法；A在P0b空間排除一次移動勝法、保留5個第一回合站位勝法與原P0，判THIN並作候選推薦，不是已採用或玩法通過。A單／雙人有限搜尋未找到勝法；B系列部分雙人搜尋達10000-state cap，存在性勝法均重播。完整比較、5及6回合有界多移動、測試與交付狀態見docs/handoff/codex-playable-l03-research.md的P0c章節及ui-prototype/docs/playable-l03-p0c/。P0/P0b測試與fixture不改；僅明確傳入p0c設定才生效。非SessionEnd，未寫每日canonical紀錄。
+
+## 歷史使用者指示：僅P0b站位驗證（2026-10-22）
 
 使用者：14:51確認Claude工作session已關閉，背景helper PID 16256不在本worktree工作，授權繼續寫入。只完成P0b，保存搜尋與站位／平手測試、補walkable邊界、更新handoff與資源自查，全部重測、記錄exit codes、commit後嘗試正常push；失敗留本機。不P1、不main、不PR、不stash。
 

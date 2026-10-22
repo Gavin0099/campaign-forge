@@ -1,0 +1,3302 @@
+{
+  "scope": "P0c opt-in verification only; defaults, UI, story and P1 unchanged",
+  "counting": "P0b T1 unique labeled endpoints, cheapest representative over all legal orders; one-move distinct command+turn and idle once. Cost: moves, distinct moved allies, path tiles. Not human win rates.",
+  "lineupBounds": "Same P0b <=1 command/turn witness search, 10000 distinct turn-boundary states, stop at first win; absent allies removed; holdStreak included in key. Counts for T1 and <=1 total also supplied per lineup.",
+  "multiMoveBounds": "<=2 moves per turn AND <=2 moves in total, all command orders/units/legal destinations, then wait, no cap; 5 and 6 turns. Exact within bounds, not all strategies with up to 10/12 moves.",
+  "verdictCriterion": "CHEESE if <=1 move wins or <=2-total-move full-party hold/rush wins at the variant horizon; THIN if other win exists without those witnesses; OK requires additional tactical evidence; UNSOLVABLE means no win found in tested bounds, not a proof of global impossibility.",
+  "results": [
+    {
+      "name": "Baseline",
+      "options": {},
+      "verdict": "CHEESE",
+      "turnOneThenWait": {
+        "strategies": 6796,
+        "wins": 493,
+        "losses": 6303,
+        "minimumCostWin": {
+          "moves": 1,
+          "units": 1,
+          "tiles": 3,
+          "commands": [
+            {
+              "type": "move",
+              "turn": 1,
+              "unit": "lace",
+              "to": {
+                "x": 3,
+                "y": 4
+              }
+            }
+          ],
+          "progress": 2,
+          "turn": 5
+        }
+      },
+      "atMostOneMove": {
+        "strategies": 217,
+        "wins": 6,
+        "losses": 211,
+        "minimumCostWin": {
+          "moves": 1,
+          "units": 1,
+          "tiles": 1,
+          "commands": [
+            {
+              "type": "move",
+              "turn": 2,
+              "unit": "lace",
+              "to": {
+                "x": 0,
+                "y": 3
+              }
+            }
+          ],
+          "progress": 2,
+          "turn": 5
+        }
+      },
+      "minimumCostWin": {
+        "moves": 1,
+        "units": 1,
+        "tiles": 1,
+        "commands": [
+          {
+            "type": "move",
+            "turn": 2,
+            "unit": "lace",
+            "to": {
+              "x": 0,
+              "y": 3
+            }
+          }
+        ],
+        "progress": 2,
+        "turn": 5
+      },
+      "originalP0": {
+        "legal": true,
+        "status": "success",
+        "progress": 1
+      },
+      "laceRetreat": {
+        "legal": true,
+        "status": "success",
+        "progress": 2
+      },
+      "lineups": [
+        {
+          "party": [
+            "karen"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 93,
+            "wins": 0,
+            "losses": 93,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              20,
+              66,
+              103,
+              161
+            ],
+            "witness": {
+              "moves": 4,
+              "units": 1,
+              "tiles": 9,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "karen",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "karen",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "karen",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5
+            }
+          }
+        },
+        {
+          "party": [
+            "lace"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 89,
+            "wins": 0,
+            "losses": 89,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              20,
+              49,
+              93,
+              160
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 6,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "lace",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5
+            }
+          }
+        },
+        {
+          "party": [
+            "karen",
+            "lace"
+          ],
+          "turnOneThenWait": {
+            "strategies": 387,
+            "wins": 5,
+            "losses": 382,
+            "minimumCostWin": {
+              "moves": 2,
+              "units": 2,
+              "tiles": 5,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5
+            }
+          },
+          "atMostOneMove": {
+            "strategies": 167,
+            "wins": 0,
+            "losses": 167,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              37,
+              505,
+              2503,
+              8003
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 7,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "karen",
+                  "to": {
+                    "x": 0,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5
+            }
+          }
+        },
+        {
+          "party": [
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 89,
+            "wins": 0,
+            "losses": 89,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              20,
+              62,
+              103,
+              161
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 7,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5
+            }
+          }
+        },
+        {
+          "party": [
+            "karen",
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 383,
+            "wins": 4,
+            "losses": 379,
+            "minimumCostWin": {
+              "moves": 2,
+              "units": 2,
+              "tiles": 6,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5
+            }
+          },
+          "atMostOneMove": {
+            "strategies": 169,
+            "wins": 0,
+            "losses": 169,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              37,
+              482,
+              2577,
+              7967
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 2,
+              "tiles": 9,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "karen",
+                  "to": {
+                    "x": 1,
+                    "y": 0
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5
+            }
+          }
+        },
+        {
+          "party": [
+            "lace",
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 369,
+            "wins": 8,
+            "losses": 361,
+            "minimumCostWin": {
+              "moves": 2,
+              "units": 2,
+              "tiles": 5,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5
+            }
+          },
+          "atMostOneMove": {
+            "strategies": 145,
+            "wins": 0,
+            "losses": 145,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              33,
+              386,
+              2377,
+              7669
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 6,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "lace",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5
+            }
+          }
+        }
+      ],
+      "multiMove": []
+    },
+    {
+      "name": "A",
+      "options": {
+        "survivalTurns": 6
+      },
+      "verdict": "THIN",
+      "turnOneThenWait": {
+        "strategies": 6796,
+        "wins": 5,
+        "losses": 6791,
+        "minimumCostWin": {
+          "moves": 3,
+          "units": 3,
+          "tiles": 8,
+          "commands": [
+            {
+              "type": "move",
+              "turn": 1,
+              "unit": "karen",
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            },
+            {
+              "type": "move",
+              "turn": 1,
+              "unit": "lace",
+              "to": {
+                "x": 1,
+                "y": 1
+              }
+            },
+            {
+              "type": "move",
+              "turn": 1,
+              "unit": "thoma",
+              "to": {
+                "x": 3,
+                "y": 3
+              }
+            }
+          ],
+          "progress": 2,
+          "turn": 6
+        }
+      },
+      "atMostOneMove": {
+        "strategies": 217,
+        "wins": 0,
+        "losses": 217,
+        "minimumCostWin": null
+      },
+      "minimumCostWin": {
+        "moves": 3,
+        "units": 3,
+        "tiles": 8,
+        "commands": [
+          {
+            "type": "move",
+            "turn": 1,
+            "unit": "karen",
+            "to": {
+              "x": 2,
+              "y": 2
+            }
+          },
+          {
+            "type": "move",
+            "turn": 1,
+            "unit": "lace",
+            "to": {
+              "x": 1,
+              "y": 1
+            }
+          },
+          {
+            "type": "move",
+            "turn": 1,
+            "unit": "thoma",
+            "to": {
+              "x": 3,
+              "y": 3
+            }
+          }
+        ],
+        "progress": 2,
+        "turn": 6
+      },
+      "originalP0": {
+        "legal": true,
+        "status": "success",
+        "progress": 2
+      },
+      "laceRetreat": {
+        "legal": true,
+        "status": "failure",
+        "progress": 4
+      },
+      "lineups": [
+        {
+          "party": [
+            "karen"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 93,
+            "wins": 0,
+            "losses": 93,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": false,
+            "truncated": false,
+            "widths": [
+              20,
+              66,
+              103,
+              161,
+              30,
+              0
+            ]
+          }
+        },
+        {
+          "party": [
+            "lace"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 89,
+            "wins": 0,
+            "losses": 89,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": false,
+            "truncated": false,
+            "widths": [
+              20,
+              49,
+              93,
+              160,
+              30,
+              0
+            ]
+          }
+        },
+        {
+          "party": [
+            "karen",
+            "lace"
+          ],
+          "turnOneThenWait": {
+            "strategies": 387,
+            "wins": 0,
+            "losses": 387,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 167,
+            "wins": 0,
+            "losses": 167,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": false,
+            "truncated": false,
+            "widths": [
+              37,
+              505,
+              2503,
+              8003,
+              4703,
+              0
+            ]
+          }
+        },
+        {
+          "party": [
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 89,
+            "wins": 0,
+            "losses": 89,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": false,
+            "truncated": false,
+            "widths": [
+              20,
+              62,
+              103,
+              161,
+              30,
+              0
+            ]
+          }
+        },
+        {
+          "party": [
+            "karen",
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 383,
+            "wins": 0,
+            "losses": 383,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 169,
+            "wins": 0,
+            "losses": 169,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": false,
+            "truncated": false,
+            "widths": [
+              37,
+              482,
+              2577,
+              7967,
+              4863,
+              0
+            ]
+          }
+        },
+        {
+          "party": [
+            "lace",
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 369,
+            "wins": 0,
+            "losses": 369,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 145,
+            "wins": 0,
+            "losses": 145,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": false,
+            "truncated": false,
+            "widths": [
+              33,
+              386,
+              2377,
+              7669,
+              4624,
+              0
+            ]
+          }
+        }
+      ],
+      "multiMove": []
+    },
+    {
+      "name": "B",
+      "options": {
+        "requiredHoldTurns": 1
+      },
+      "verdict": "CHEESE",
+      "turnOneThenWait": {
+        "strategies": 6796,
+        "wins": 330,
+        "losses": 6466,
+        "minimumCostWin": {
+          "moves": 2,
+          "units": 2,
+          "tiles": 4,
+          "commands": [
+            {
+              "type": "move",
+              "turn": 1,
+              "unit": "karen",
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            },
+            {
+              "type": "move",
+              "turn": 1,
+              "unit": "thoma",
+              "to": {
+                "x": 0,
+                "y": 4
+              }
+            }
+          ],
+          "progress": 2,
+          "turn": 5,
+          "holdStreak": 5
+        }
+      },
+      "atMostOneMove": {
+        "strategies": 217,
+        "wins": 0,
+        "losses": 217,
+        "minimumCostWin": null
+      },
+      "minimumCostWin": {
+        "moves": 2,
+        "units": 1,
+        "tiles": 4,
+        "commands": [
+          {
+            "type": "move",
+            "turn": 1,
+            "unit": "lace",
+            "to": {
+              "x": 0,
+              "y": 3
+            }
+          },
+          {
+            "type": "move",
+            "turn": 3,
+            "unit": "lace",
+            "to": {
+              "x": 2,
+              "y": 2
+            }
+          }
+        ],
+        "progress": 2,
+        "turn": 5,
+        "holdStreak": 3
+      },
+      "originalP0": {
+        "legal": true,
+        "status": "success",
+        "progress": 1
+      },
+      "laceRetreat": {
+        "legal": true,
+        "status": "failure",
+        "progress": 2
+      },
+      "lineups": [
+        {
+          "party": [
+            "karen"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 93,
+            "wins": 0,
+            "losses": 93,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              20,
+              70,
+              111,
+              181
+            ],
+            "witness": {
+              "moves": 4,
+              "units": 1,
+              "tiles": 9,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "karen",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "karen",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "karen",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 3
+            }
+          }
+        },
+        {
+          "party": [
+            "lace"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 89,
+            "wins": 0,
+            "losses": 89,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              20,
+              53,
+              101,
+              180
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 6,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "lace",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 3
+            }
+          }
+        },
+        {
+          "party": [
+            "karen",
+            "lace"
+          ],
+          "turnOneThenWait": {
+            "strategies": 387,
+            "wins": 5,
+            "losses": 382,
+            "minimumCostWin": {
+              "moves": 2,
+              "units": 2,
+              "tiles": 5,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 5
+            }
+          },
+          "atMostOneMove": {
+            "strategies": 167,
+            "wins": 0,
+            "losses": 167,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": true,
+            "widths": [
+              37,
+              545,
+              2922,
+              10000
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 7,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "karen",
+                  "to": {
+                    "x": 0,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 2
+            }
+          }
+        },
+        {
+          "party": [
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 89,
+            "wins": 0,
+            "losses": 89,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              20,
+              66,
+              111,
+              181
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 7,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 3
+            }
+          }
+        },
+        {
+          "party": [
+            "karen",
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 383,
+            "wins": 4,
+            "losses": 379,
+            "minimumCostWin": {
+              "moves": 2,
+              "units": 2,
+              "tiles": 6,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 5
+            }
+          },
+          "atMostOneMove": {
+            "strategies": 169,
+            "wins": 0,
+            "losses": 169,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              37,
+              519,
+              2997,
+              9973
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 2,
+              "tiles": 9,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "karen",
+                  "to": {
+                    "x": 1,
+                    "y": 0
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 4
+            }
+          }
+        },
+        {
+          "party": [
+            "lace",
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 369,
+            "wins": 8,
+            "losses": 361,
+            "minimumCostWin": {
+              "moves": 2,
+              "units": 2,
+              "tiles": 5,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 5
+            }
+          },
+          "atMostOneMove": {
+            "strategies": 145,
+            "wins": 0,
+            "losses": 145,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              33,
+              430,
+              2859,
+              9856
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 6,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "lace",
+                  "to": {
+                    "x": 2,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "lace",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 3
+            }
+          }
+        }
+      ],
+      "multiMove": [
+        {
+          "bounds": {
+            "survivalTurns": 5,
+            "maxMovesPerTurn": 2,
+            "maxMovesTotal": 2,
+            "stateCap": null,
+            "exhaustiveWithinBounds": true
+          },
+          "strategies": 24668,
+          "wins": 229,
+          "losses": 24439,
+          "minimumCostWin": {
+            "moves": 2,
+            "units": 1,
+            "tiles": 4,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 0,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 5,
+            "holdStreak": 3
+          },
+          "latestRequiredArrivalWin": {
+            "moves": 2,
+            "units": 1,
+            "tiles": 4,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "lace",
+                "to": {
+                  "x": 0,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 5,
+                "unit": "lace",
+                "to": {
+                  "x": 1,
+                  "y": 1
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 5,
+            "holdStreak": 1,
+            "holdTurns": [
+              5
+            ]
+          }
+        },
+        {
+          "bounds": {
+            "survivalTurns": 6,
+            "maxMovesPerTurn": 2,
+            "maxMovesTotal": 2,
+            "stateCap": null,
+            "exhaustiveWithinBounds": true
+          },
+          "strategies": 24922,
+          "wins": 0,
+          "losses": 24922,
+          "minimumCostWin": null,
+          "latestRequiredArrivalWin": null
+        }
+      ]
+    },
+    {
+      "name": "C",
+      "options": {
+        "thomaStartsWest": true
+      },
+      "verdict": "CHEESE",
+      "turnOneThenWait": {
+        "strategies": 5669,
+        "wins": 234,
+        "losses": 5435,
+        "minimumCostWin": {
+          "moves": 1,
+          "units": 1,
+          "tiles": 3,
+          "commands": [
+            {
+              "type": "move",
+              "turn": 1,
+              "unit": "karen",
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            }
+          ],
+          "progress": 2,
+          "turn": 5
+        }
+      },
+      "atMostOneMove": {
+        "strategies": 219,
+        "wins": 6,
+        "losses": 213,
+        "minimumCostWin": {
+          "moves": 1,
+          "units": 1,
+          "tiles": 1,
+          "commands": [
+            {
+              "type": "move",
+              "turn": 2,
+              "unit": "lace",
+              "to": {
+                "x": 1,
+                "y": 4
+              }
+            }
+          ],
+          "progress": 2,
+          "turn": 5
+        }
+      },
+      "minimumCostWin": {
+        "moves": 1,
+        "units": 1,
+        "tiles": 1,
+        "commands": [
+          {
+            "type": "move",
+            "turn": 2,
+            "unit": "lace",
+            "to": {
+              "x": 1,
+              "y": 4
+            }
+          }
+        ],
+        "progress": 2,
+        "turn": 5
+      },
+      "originalP0": {
+        "legal": false,
+        "status": "playing",
+        "progress": 0,
+        "reason": "illegal-move",
+        "rejected": {
+          "type": "move",
+          "turn": 1,
+          "unit": "thoma",
+          "to": {
+            "x": 2,
+            "y": 2
+          }
+        }
+      },
+      "laceRetreat": {
+        "legal": true,
+        "status": "failure",
+        "progress": 4
+      },
+      "lineups": [
+        {
+          "party": [
+            "karen"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 93,
+            "wins": 0,
+            "losses": 93,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              20,
+              66,
+              103,
+              161
+            ],
+            "witness": {
+              "moves": 4,
+              "units": 1,
+              "tiles": 9,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "karen",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "karen",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "karen",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5
+            }
+          }
+        },
+        {
+          "party": [
+            "lace"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 89,
+            "wins": 0,
+            "losses": 89,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              20,
+              49,
+              93,
+              160
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 6,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "lace",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5
+            }
+          }
+        },
+        {
+          "party": [
+            "karen",
+            "lace"
+          ],
+          "turnOneThenWait": {
+            "strategies": 387,
+            "wins": 5,
+            "losses": 382,
+            "minimumCostWin": {
+              "moves": 2,
+              "units": 2,
+              "tiles": 5,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5
+            }
+          },
+          "atMostOneMove": {
+            "strategies": 167,
+            "wins": 0,
+            "losses": 167,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              37,
+              505,
+              2503,
+              8003
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 7,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "karen",
+                  "to": {
+                    "x": 0,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5
+            }
+          }
+        },
+        {
+          "party": [
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 16,
+            "wins": 0,
+            "losses": 16,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 74,
+            "wins": 0,
+            "losses": 74,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              16,
+              49,
+              93,
+              160
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 8,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5
+            }
+          }
+        },
+        {
+          "party": [
+            "karen",
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 308,
+            "wins": 0,
+            "losses": 308,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 156,
+            "wins": 0,
+            "losses": 156,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              33,
+              442,
+              2300,
+              7077
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 8,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5
+            }
+          }
+        },
+        {
+          "party": [
+            "lace",
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 305,
+            "wins": 0,
+            "losses": 305,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 151,
+            "wins": 0,
+            "losses": 151,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              33,
+              366,
+              2346,
+              7905
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 6,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "lace",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5
+            }
+          }
+        }
+      ],
+      "multiMove": []
+    },
+    {
+      "name": "B+ N=2",
+      "options": {
+        "requiredHoldTurns": 2
+      },
+      "verdict": "CHEESE",
+      "turnOneThenWait": {
+        "strategies": 6796,
+        "wins": 330,
+        "losses": 6466,
+        "minimumCostWin": {
+          "moves": 2,
+          "units": 2,
+          "tiles": 4,
+          "commands": [
+            {
+              "type": "move",
+              "turn": 1,
+              "unit": "karen",
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            },
+            {
+              "type": "move",
+              "turn": 1,
+              "unit": "thoma",
+              "to": {
+                "x": 0,
+                "y": 4
+              }
+            }
+          ],
+          "progress": 2,
+          "turn": 5,
+          "holdStreak": 5
+        }
+      },
+      "atMostOneMove": {
+        "strategies": 217,
+        "wins": 0,
+        "losses": 217,
+        "minimumCostWin": null
+      },
+      "minimumCostWin": {
+        "moves": 2,
+        "units": 1,
+        "tiles": 4,
+        "commands": [
+          {
+            "type": "move",
+            "turn": 1,
+            "unit": "lace",
+            "to": {
+              "x": 0,
+              "y": 3
+            }
+          },
+          {
+            "type": "move",
+            "turn": 3,
+            "unit": "lace",
+            "to": {
+              "x": 2,
+              "y": 2
+            }
+          }
+        ],
+        "progress": 2,
+        "turn": 5,
+        "holdStreak": 3
+      },
+      "originalP0": {
+        "legal": true,
+        "status": "success",
+        "progress": 1
+      },
+      "laceRetreat": {
+        "legal": true,
+        "status": "failure",
+        "progress": 2
+      },
+      "lineups": [
+        {
+          "party": [
+            "karen"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 93,
+            "wins": 0,
+            "losses": 93,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              20,
+              70,
+              111,
+              181
+            ],
+            "witness": {
+              "moves": 4,
+              "units": 1,
+              "tiles": 9,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "karen",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "karen",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "karen",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 3
+            }
+          }
+        },
+        {
+          "party": [
+            "lace"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 89,
+            "wins": 0,
+            "losses": 89,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              20,
+              53,
+              101,
+              180
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 6,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "lace",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 3
+            }
+          }
+        },
+        {
+          "party": [
+            "karen",
+            "lace"
+          ],
+          "turnOneThenWait": {
+            "strategies": 387,
+            "wins": 5,
+            "losses": 382,
+            "minimumCostWin": {
+              "moves": 2,
+              "units": 2,
+              "tiles": 5,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 5
+            }
+          },
+          "atMostOneMove": {
+            "strategies": 167,
+            "wins": 0,
+            "losses": 167,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": true,
+            "widths": [
+              37,
+              545,
+              2922,
+              10000
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 7,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "karen",
+                  "to": {
+                    "x": 0,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 2
+            }
+          }
+        },
+        {
+          "party": [
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 89,
+            "wins": 0,
+            "losses": 89,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              20,
+              66,
+              111,
+              181
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 7,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 3
+            }
+          }
+        },
+        {
+          "party": [
+            "karen",
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 383,
+            "wins": 4,
+            "losses": 379,
+            "minimumCostWin": {
+              "moves": 2,
+              "units": 2,
+              "tiles": 6,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 5
+            }
+          },
+          "atMostOneMove": {
+            "strategies": 169,
+            "wins": 0,
+            "losses": 169,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              37,
+              519,
+              2997,
+              9973
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 2,
+              "tiles": 9,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "karen",
+                  "to": {
+                    "x": 1,
+                    "y": 0
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 4
+            }
+          }
+        },
+        {
+          "party": [
+            "lace",
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 369,
+            "wins": 8,
+            "losses": 361,
+            "minimumCostWin": {
+              "moves": 2,
+              "units": 2,
+              "tiles": 5,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 5
+            }
+          },
+          "atMostOneMove": {
+            "strategies": 145,
+            "wins": 0,
+            "losses": 145,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              33,
+              430,
+              2859,
+              9856
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 6,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "lace",
+                  "to": {
+                    "x": 2,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "lace",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 3
+            }
+          }
+        }
+      ],
+      "multiMove": [
+        {
+          "bounds": {
+            "survivalTurns": 5,
+            "maxMovesPerTurn": 2,
+            "maxMovesTotal": 2,
+            "stateCap": null,
+            "exhaustiveWithinBounds": true
+          },
+          "strategies": 24668,
+          "wins": 208,
+          "losses": 24460,
+          "minimumCostWin": {
+            "moves": 2,
+            "units": 1,
+            "tiles": 4,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 0,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 5,
+            "holdStreak": 3
+          },
+          "latestRequiredArrivalWin": {
+            "moves": 2,
+            "units": 1,
+            "tiles": 4,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 0,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 4,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 5,
+            "holdStreak": 2,
+            "holdTurns": [
+              4,
+              5
+            ]
+          }
+        },
+        {
+          "bounds": {
+            "survivalTurns": 6,
+            "maxMovesPerTurn": 2,
+            "maxMovesTotal": 2,
+            "stateCap": null,
+            "exhaustiveWithinBounds": true
+          },
+          "strategies": 24922,
+          "wins": 0,
+          "losses": 24922,
+          "minimumCostWin": null,
+          "latestRequiredArrivalWin": null
+        }
+      ]
+    },
+    {
+      "name": "B+ N=3",
+      "options": {
+        "requiredHoldTurns": 3
+      },
+      "verdict": "CHEESE",
+      "turnOneThenWait": {
+        "strategies": 6796,
+        "wins": 330,
+        "losses": 6466,
+        "minimumCostWin": {
+          "moves": 2,
+          "units": 2,
+          "tiles": 4,
+          "commands": [
+            {
+              "type": "move",
+              "turn": 1,
+              "unit": "karen",
+              "to": {
+                "x": 2,
+                "y": 2
+              }
+            },
+            {
+              "type": "move",
+              "turn": 1,
+              "unit": "thoma",
+              "to": {
+                "x": 0,
+                "y": 4
+              }
+            }
+          ],
+          "progress": 2,
+          "turn": 5,
+          "holdStreak": 5
+        }
+      },
+      "atMostOneMove": {
+        "strategies": 217,
+        "wins": 0,
+        "losses": 217,
+        "minimumCostWin": null
+      },
+      "minimumCostWin": {
+        "moves": 2,
+        "units": 1,
+        "tiles": 4,
+        "commands": [
+          {
+            "type": "move",
+            "turn": 1,
+            "unit": "lace",
+            "to": {
+              "x": 0,
+              "y": 3
+            }
+          },
+          {
+            "type": "move",
+            "turn": 3,
+            "unit": "lace",
+            "to": {
+              "x": 2,
+              "y": 2
+            }
+          }
+        ],
+        "progress": 2,
+        "turn": 5,
+        "holdStreak": 3
+      },
+      "originalP0": {
+        "legal": true,
+        "status": "success",
+        "progress": 1
+      },
+      "laceRetreat": {
+        "legal": true,
+        "status": "failure",
+        "progress": 2
+      },
+      "lineups": [
+        {
+          "party": [
+            "karen"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 93,
+            "wins": 0,
+            "losses": 93,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              20,
+              70,
+              111,
+              181
+            ],
+            "witness": {
+              "moves": 4,
+              "units": 1,
+              "tiles": 9,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "karen",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "karen",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "karen",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 3
+            }
+          }
+        },
+        {
+          "party": [
+            "lace"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 89,
+            "wins": 0,
+            "losses": 89,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              20,
+              53,
+              101,
+              180
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 6,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "lace",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 3
+            }
+          }
+        },
+        {
+          "party": [
+            "karen",
+            "lace"
+          ],
+          "turnOneThenWait": {
+            "strategies": 387,
+            "wins": 5,
+            "losses": 382,
+            "minimumCostWin": {
+              "moves": 2,
+              "units": 2,
+              "tiles": 5,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 5
+            }
+          },
+          "atMostOneMove": {
+            "strategies": 167,
+            "wins": 0,
+            "losses": 167,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": true,
+            "widths": [
+              37,
+              545,
+              2922,
+              10000
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 2,
+              "tiles": 8,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "karen",
+                  "to": {
+                    "x": 1,
+                    "y": 0
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 4
+            }
+          }
+        },
+        {
+          "party": [
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 20,
+            "wins": 0,
+            "losses": 20,
+            "minimumCostWin": null
+          },
+          "atMostOneMove": {
+            "strategies": 89,
+            "wins": 0,
+            "losses": 89,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              20,
+              66,
+              111,
+              181
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 7,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 3
+            }
+          }
+        },
+        {
+          "party": [
+            "karen",
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 383,
+            "wins": 4,
+            "losses": 379,
+            "minimumCostWin": {
+              "moves": 2,
+              "units": 2,
+              "tiles": 6,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 5
+            }
+          },
+          "atMostOneMove": {
+            "strategies": 169,
+            "wins": 0,
+            "losses": 169,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              37,
+              519,
+              2997,
+              9973
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 2,
+              "tiles": 9,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "karen",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "karen",
+                  "to": {
+                    "x": 1,
+                    "y": 0
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 4
+            }
+          }
+        },
+        {
+          "party": [
+            "lace",
+            "thoma"
+          ],
+          "turnOneThenWait": {
+            "strategies": 369,
+            "wins": 8,
+            "losses": 361,
+            "minimumCostWin": {
+              "moves": 2,
+              "units": 2,
+              "tiles": 5,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 1,
+                  "unit": "thoma",
+                  "to": {
+                    "x": 2,
+                    "y": 2
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 5
+            }
+          },
+          "atMostOneMove": {
+            "strategies": 145,
+            "wins": 0,
+            "losses": 145,
+            "minimumCostWin": null
+          },
+          "witness": {
+            "found": true,
+            "truncated": false,
+            "widths": [
+              33,
+              430,
+              2859,
+              9856
+            ],
+            "witness": {
+              "moves": 3,
+              "units": 1,
+              "tiles": 6,
+              "commands": [
+                {
+                  "type": "move",
+                  "turn": 2,
+                  "unit": "lace",
+                  "to": {
+                    "x": 2,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 3,
+                  "unit": "lace",
+                  "to": {
+                    "x": 3,
+                    "y": 1
+                  }
+                },
+                {
+                  "type": "move",
+                  "turn": 4,
+                  "unit": "lace",
+                  "to": {
+                    "x": 1,
+                    "y": 1
+                  }
+                }
+              ],
+              "progress": 2,
+              "turn": 5,
+              "holdStreak": 3
+            }
+          }
+        }
+      ],
+      "multiMove": [
+        {
+          "bounds": {
+            "survivalTurns": 5,
+            "maxMovesPerTurn": 2,
+            "maxMovesTotal": 2,
+            "stateCap": null,
+            "exhaustiveWithinBounds": true
+          },
+          "strategies": 24668,
+          "wins": 172,
+          "losses": 24496,
+          "minimumCostWin": {
+            "moves": 2,
+            "units": 1,
+            "tiles": 4,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 0,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 5,
+            "holdStreak": 3
+          },
+          "latestRequiredArrivalWin": {
+            "moves": 2,
+            "units": 1,
+            "tiles": 4,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 0,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 5,
+            "holdStreak": 3,
+            "holdTurns": [
+              3,
+              4,
+              5
+            ]
+          }
+        },
+        {
+          "bounds": {
+            "survivalTurns": 6,
+            "maxMovesPerTurn": 2,
+            "maxMovesTotal": 2,
+            "stateCap": null,
+            "exhaustiveWithinBounds": true
+          },
+          "strategies": 24922,
+          "wins": 0,
+          "losses": 24922,
+          "minimumCostWin": null,
+          "latestRequiredArrivalWin": null
+        }
+      ]
+    }
+  ]
+}

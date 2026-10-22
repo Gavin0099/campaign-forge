@@ -44,3 +44,38 @@ node --experimental-strip-types ui-prototype/tests/playable-l03-p0.mjs
 The test checks committed success/failure/retry traces byte for byte. To
 explicitly regenerate fixtures after an authorized rules change, append
 `--write-traces`. Tests record machine evidence only, not human playtest.
+
+## P0c opt-in verification
+
+No experiment is enabled by default. Pass `p0c` alongside the existing
+`blockAlliedPassage` flag to `initialState('open', config)`:
+
+| Experiment | `p0c` options |
+| --- | --- |
+| A | `{ survivalTurns: 6 }` |
+| B | `{ requiredHoldTurns: 1 }` |
+| C | `{ thomaStartsWest: true }` |
+| B+ | `{ requiredHoldTurns: 2 }` or `{ requiredHoldTurns: 3 }` |
+
+Hold means a living ally is orthogonally adjacent to (2,1) at the end of
+enemy resolution, with progress below 3. At the deadline the last N ends
+must all qualify; a gap resets the streak. The ally may change between
+turns. Missing the hold requirement loses at the deadline; progress 3
+still loses immediately. Hold history is serialized only when requested.
+Retry retains the experiment and resets its history. Horizons are 5 or 6;
+hold N is an integer from 0 (off) to the selected horizon.
+
+Question: which option removes cheap waiting wins? Keep the experiment
+and evidence isolated, never adopt it as default. For this 45-minute P0c,
+CHEESE means a full-party win with at most one command, or a two-command
+hold/rush witness; THIN means another verified win without that cheap
+witness in the tested spaces, with depth still unproved. OK needs further
+tactical evidence. No win found is UNSOLVABLE within the tested bounds,
+never a successful fix or a proof of global impossibility.
+
+Run `node --experimental-strip-types ui-prototype/tests/playable-l03-p0c-search.mjs`
+to recompute and byte-check the comparison JSON, and
+`node --experimental-strip-types ui-prototype/tests/playable-l03-p0c.mjs`
+for objective boundary tests and witness replay. Search uses the real
+`command`/`resolve` API. See the report for exact counting, caps and
+multi-move bounds; these are machine experiments, not human win rates.

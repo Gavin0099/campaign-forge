@@ -10,6 +10,12 @@
 
 ## Slices
 
+### Authorized P0c: opt-in victory variants — 2026-10-22
+
+使用者：只完成 `docs/tasks/playable-l03-P0c-variants.md`，45分鐘驗證；沿用 `codex/playable-l03-research` @ d42024b，不pull。Owner確認同worktree沒有另一代理。比較Baseline／A／B／C／B+ N=2及3，預設關閉、P0及P0b輸出不變，commit後嘗試push；失敗留本機，P1未授權。
+
+代理觀察：Baseline／B／C／B+皆 **CHEESE**；A僅 **THIN**，是本輪建議保留比較的候選，並非採用。A第一回合站位後等待5勝／6791敗，至多一次移動0勝／217敗，原P0守點仍勝；最低已找到3人3次8格，單／雙人於P0b有限搜尋未找到勝法。B與B+均有蕾絲一人兩次4格後等待的廉價解；B可最後回合才守點。5／6回合、每回合及全場至多兩次移動的完整有界搜尋結果與上限、陣容cap、可重播trace、兩次一致性與exit codes見 `docs/playable-l03-p0c/` 和 `../docs/handoff/codex-playable-l03-research.md` 的P0c章節。沒有改預設、UI、美術、正式故事／規則，沒有真人樂趣或Owner接受證據。里程碑不構成SessionEnd。
+
 ### Authorized P0b: stance validation — 2026-10-22
 
 使用者：本輪只完成 `docs/tasks/playable-l03-P0b-stance.md`，保存搜尋、站位／平手測試，補 `walkable()` 邊界、更新handoff與正常commit／push；P1未授權。14:51確認同worktree沒有另一工作session，可繼續寫入。

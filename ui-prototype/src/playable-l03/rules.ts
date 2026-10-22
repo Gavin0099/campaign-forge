@@ -6,7 +6,10 @@ export type Route = "open" | "sealed";
 export type Unit = Readonly<{
   id: string; side: "ally" | "enemy"; cell: Cell; alive: boolean;
 }>;
-export type RulesConfig = Readonly<{ blockAlliedPassage: boolean }>;
+// P0c experiments only. Omitted by default so P0/P0b serialized states stay identical.
+export type RulesConfig = Readonly<{ blockAlliedPassage: boolean;
+  p0c?: Readonly<{ survivalTurns?: 5 | 6; requiredHoldTurns?: number; thomaStartsWest?: boolean }>;
+}>;
 export type MapDef = Readonly<{
   rows: readonly string[]; winch: Cell; wagon: Cell; exit: Cell;
 }>;
@@ -30,6 +33,7 @@ export type State = Readonly<{
   route: Route; config: RulesConfig; turn: number;
   status: "playing" | "success" | "failure";
   progress: number; units: readonly Unit[]; moved: readonly string[];
+  holdStreak?: number;
 }>;
 export type Event =
   | { type: "move"; unit: string; path: readonly Cell[] }
@@ -61,8 +65,14 @@ export function walkable(p: Cell, route: Route): boolean {
     !(route === "open" && p.y === 4 && (p.x === 4 || p.x === 5));
 }
 export function initialState(route: Route = "open", config = DEFAULT_CONFIG): State {
+  const experiment = config.p0c;
+  const limit = experiment?.survivalTurns ?? 5;
+  const hold = experiment?.requiredHoldTurns ?? 0;
+  if (![5, 6].includes(limit) || !Number.isInteger(hold) || hold < 0 || hold > limit)
+    throw new Error("invalid-P0c-config");
   return { route, config: { ...config }, turn: 1, status: "playing", progress: 0,
-    units: DEPLOYMENT.map(u => ({ ...u, cell: { ...u.cell } })), moved: [] };
+    units: DEPLOYMENT.map(u => ({ ...u, cell: experiment?.thomaStartsWest && u.id === "thoma"
+      ? { x: 0, y: 4 } : { ...u.cell } })), moved: [], ...(hold ? { holdStreak: 0 } : {}) };
 }
 // Bounded BFS; destinations always empty, even when allied transit is enabled.
 export function findPath(state: State, actor: Unit, to: Cell): Cell[] | undefined {
@@ -130,10 +140,16 @@ export function resolve(state: State, expectedTurn: number): Result {
     events.push({ type: "move", unit: enemy.id, path: traveled });
   }
   const progress = current.progress + contributors.length;
+  const limit = state.config.p0c?.survivalTurns ?? 5;
+  const hold = state.config.p0c?.requiredHoldTurns ?? 0;
+  const held = current.units.some(u => u.alive && u.side === "ally" && distance(u.cell, MAP.winch) === 1);
+  const holdStreak = held && progress < 3 ? (state.holdStreak ?? 0) + 1 : 0;
   // Loss takes precedence if the failure threshold is reached on the last turn.
-  const status = progress >= 3 ? "failure" : state.turn >= 5 ? "success" : "playing";
+  const status = progress >= 3 ? "failure" : state.turn >= limit
+    ? (holdStreak >= hold ? "success" : "failure") : "playing";
   events.push({ type: "progress", delta: contributors.length, total: progress }, { type: "turn", completed: state.turn });
   if (status !== "playing") events.push({ type: "result", status });
   return { ok: true, state: { ...current, progress, status,
-    turn: status === "playing" ? state.turn + 1 : state.turn, moved: [] }, events };
+    turn: status === "playing" ? state.turn + 1 : state.turn, moved: [],
+    ...(hold ? { holdStreak } : {}) }, events };
 }
