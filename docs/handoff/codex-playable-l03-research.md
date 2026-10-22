@@ -883,3 +883,174 @@ also read and applied; nothing installed or copied from reference projects.
 
 The explained human-playtest FAIL remains open and prevents claiming full
 playable/Owner acceptance; the scoped readability engineering checks pass.
+
+## P1v3 visual pass
+
+The original screen's pale flat grid, tiny figures and text lists made it read
+like a prototype dashboard. This pass uses the existing painted materials at
+full strength, deeper terrain edges, larger figures, close portrait cards and
+one moss/slate/brass frame. Movement and phase feedback remain presentation
+of the existing pure command result. The result is visually more cohesive;
+the tests establish correct interaction and state, not Owner art approval.
+
+| Field | Value |
+| --- | --- |
+| Branch / Owner-named base | `codex/playable-l03-research` / `7319ef03923a6838375e95a6a16f1de4c42c9d11` |
+| Implementation head | `5f7cc4102d92a10d63f574dfedfa790262d79383` |
+| Implementation push | **YES**, normal `git push origin codex/playable-l03-research`, exit **0**; remote advanced `7319ef0..5f7cc41` |
+| Owner instruction | ONLY P1v3 visual pass, 90-minute cap, no pull, rules unchanged, existing art only, no dependencies; P2 in scratch/p2 is off limits; commit then try push |
+| Recorded window through implementation push | 2026-10-22 19:05:58–19:31:13 Asia/Taipei, **25m15s**; final reply includes handoff delivery time |
+| Human acceptance | **HUMAN_PENDING** |
+
+### 1. What changed
+
+- `PlayableL03.tsx`, `presentation.tsx`, `playable.css`: painted grass/stone/
+  water/forest, 18-unit bank faces, lower water surface, subtle CSS water
+  glint, outer trees, wagon cargo, bridge remnants and a framed winch marker.
+- This screen's projection changes to ±44/+26 per cell step; figures grow
+  from 26 to 50 scene units. Original PNG crop/foot anchors and actual animated
+  Y/X/id depth order remain. Ally rings/enemy diamonds are small, with soft
+  shadows. Only the tiles receive pointer input.
+- Dark metal/brass header, side panel, controls and result overlay; portraits
+  for three allies/two knights, ready/used icons, turn/interference gauges,
+  persistent phase, and opt-in development coordinates. Existing state labels
+  remain available to assistive technology.
+- Mouse/keyboard move-path preview reads the same pure command's returned
+  path; 180ms arrival feedback, 900ms phase banners, selection pulse and hover.
+  Reduced Motion disables these effects without changing the rule result.
+- **Shared-file: `ui-prototype/PLAN.md`**;
+  **Shared-file: `memory/01_active_task.md`**. Codex acquired both locks,
+  fetched, checked for unknown remote branch commits, printed SHARED-EDIT
+  lines and used both commit trailers. Owner's no-pull instruction took
+  precedence. Only Codex's own locks are released after the successful push.
+- `rules.ts`, original PNGs, `L03Preview.tsx`, `ArtGate.tsx`, `l03Scene.ts`,
+  `AnimatedActor.tsx`, dependencies, original fixtures and story are unchanged.
+
+### Assets and style guide
+
+Five existing original assets, all unchanged: `terrain-v2.png` (four material
+quadrants), `props-v2.png` (trees and cargo), `ferry-scene-v2.png` (dim blurred
+backdrop), `l03-party-v1.png` (figures/portraits), `l03-enemies-v1.png` (knights).
+No new image generation, copied commercial art or font download. Dimensions
+and SHA-256 are in [asset manifest](../../ui-prototype/docs/playable-l03-p1v3/asset-manifest.json).
+Sources remain the existing L03 art direction/prompts and visual-sprint
+manifest. Inspected `landmarks-v3.png` but did not use its unrelated survey
+stones/lantern/brazier as a fictitious winch. Winch, bridge remnants and wagon
+chassis use original SVG geometry; these remain less painterly than the atlas.
+
+[STYLE.md](../../ui-prototype/docs/playable-l03-p1v3/STYLE.md) records palette,
+fonts, framing, scale, camera and motion. No conflict with the supplied root
+ART-DIRECTION was found. There is a brief-internal tradeoff: literal 1.2–1.5
+full diamond-height figures would violate P1v2's same-column zero-overlap
+assertion. Kept the tests and a 50-unit figure / 52-unit foot separation;
+**the literal requested height ratio is not achieved**. This is visible and
+documented, not hidden by changing the assertion or relabelling the scale.
+
+### 2. Verification
+
+Full outputs, source/capture hashes and failed attempts:
+[verification](../../ui-prototype/docs/playable-l03-p1v3/VERIFICATION.md),
+[command results](../../ui-prototype/docs/playable-l03-p1v3/command-results.json).
+
+| Command from root | Exit | Result |
+| --- | --- | --- |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p0.mjs` | **0** | 8 checks |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p0b.mjs` | **0** | 9 checks |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p0c.mjs` | **0** | 9 checks |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p1v-browser.mjs --p1v3` | **0** | 26 checks, including both legacy story/absence flows |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p1v2-browser.mjs --p1v3` | **0** | 9 checks, all original overlap/click assertions retained |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p1v3-browser.mjs` | **0** | 9 new path/phase/arrival/gauge/dev/reduced-motion checks |
+| `npm run build --prefix ui-prototype` | **0** | TypeScript + Vite, 50 modules |
+| `& 'C:\Users\daish\AppData\Local\Programs\Python\Python312\python.exe' scripts/validate_ui_scope.py` | **0** | 13 protected planning files |
+| Source/capture digest and comparison-path audit | **0** | All final report hashes current; 28 comparison PNG paths present |
+| `git diff --check`, `git diff --cached --check` | **0**, **0** | Clean |
+| Protected-path `git diff --quiet 7319ef0 -- …` | **0** | Rules, assets, old screens, dependencies, traces and story unchanged |
+| Normal implementation commit | **0** | Existing pre-commit advisory `missing_canonical_memory`, `completion_claim_allowed=True`; not bypassed |
+| Pre-push fetch / unknown-commit check | **0** | No unknown commits on this remote branch |
+| Normal implementation push | **0** | Existing inventory and governance hooks ran; no bypass; branch updated |
+
+70 final checks = 26 pure + 44 browser. The baseline capture run also passed
+26 checks before implementation. Original P1v behavior assertions remain;
+only the winch text selector was adjusted for coordinates hidden by default.
+P1v2 still tests 100 real pointer hits, all five units, initial column and
+winch cluster, names/foot anchors/viewport separation, depth order, keyboard,
+Esc, hover exit and 200% text.
+
+Failed attempts are retained under `playable-l03-p1v3/attempts/`: 720p sidebar
+overflow (exit 1), 1080p control overflow of 10px (exit 1), and a short arrival
+effect missed by selector backoff polling (exit 1). Layout was fixed; the
+effect test now starts RAF observation before input, without lengthening the
+effect. Initial sandbox fetch/Python access failed; approved same-scope
+invocations succeeded. Final checks above all passed. No code in the
+governance framework was changed; its push smoke is not a native callback.
+
+### Screenshots
+
+All 42 real execution PNGs are under `ui-prototype/docs/playable-l03-p1v3/`.
+Use [comparison.html](../../ui-prototype/docs/playable-l03-p1v3/comparison.html)
+to switch resolution and state. For each size `1280x720` / `1920x1080`:
+
+- `before/<size>-{start,move-range,intent,mid-animation,turn-banner,victory,defeat}.png`
+- `p1v-regression/<size>-{start,move-range,intent,mid-animation,turn-banner,victory,defeat}.png`
+- `after-<size>-{path-preview,enemy-turn-banner,ally-turn-banner}.png`
+- `p1v2-regression/after-<size>-{column,winch,text-200}.png`
+
+Before transition captures contain no banner because the old UI had none.
+Dynamic captures are real samples at equivalent replay stages, not perfectly
+identical animation frames. Both sizes were visually inspected by the model;
+that is not human playtest or Owner art acceptance.
+
+### 3–6. Limits, risks, open questions and not claimed
+
+- Literal unit-height ratio remains below the brief as explained above;
+  720p details and face recognition still need human review. The portraits
+  carry finer facial detail than the battlefield figures.
+- Single-frame sprite sliding/bobbing, repeated terrain and geometric machine/
+  bridge parts remain visible. No true 3D, skeletal animation, attacks, sound,
+  new hit feedback, camera zoom/pan or performance benchmark was introduced.
+- A remains THIN; P2, new rules, story/Ink, S4, other worktrees, main, PR,
+  deployment, Actions and dependencies are outside this pass. No agent was
+  spawned. No `stash`, force push or `--no-verify` was used.
+- For Claude/GPT when Owner requests review: judge consistency and 720p
+  character readability from actual captures, and verify that the explicitly
+  documented scale tradeoff is acceptable. Review remains input to Gavin.
+- For Gavin: human playtest and art approval remain **HUMAN_PENDING**.
+  This handoff does not authorize further work or claim commercial quality,
+  full accessibility certification, gamepad/screen-reader testing, native
+  lifecycle completion or session end. No daily memory was hand-edited.
+
+### Resource self-check — RESOURCE-CHECKLIST A–D
+
+Read the cached `game-ui-ux` and `game-feel` SKILL.md from pinned
+`gamedev-skills/awesome-gamedev-agent-skills@0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd`,
+with the existing SHA-256 values `8a094c84a377503aa8f4c40df676d1c6b6fc07d36ff95554ce06467f1614397e`
+and `68fc818ad939151be2db9e358e4295a71830c19d61f3aff849f1599307f39f9d`.
+Also read/applied local frontend-design 2.0. No installation or code borrowing.
+
+| Item | Result and evidence |
+| --- | --- |
+| A: prototype-fast | **N/A new mechanic / PASS scope** — presentation-only; keep criterion: cohesive painted screen with preserved original behavior/overlap checks |
+| A: level-design | **N/A new map / PASS regression** — unchanged MAP/rules; P0 8 checks and original win trace replay |
+| A: game-ai | **N/A new AI / PASS regression** — same resolver/intent; P0b/P0c/P1v pass |
+| A: game-ui-ux — range/threat/intent | **PASS scoped** — visible move range, same-command path, knight portraits and real predicted arrows; no attack threat exists in this P1v ruleset |
+| A: game-ui-ux — objectives/input | **PASS** — counters/gauges, persistent phase, key hints; final P1v/P1v3 reports and both-size screenshots |
+| A: game-ui-ux — responsive/focus | **PASS tested scope** — 720p/1080p, 200%, 390px, Space/arrows/Esc/Enter/Retry; no gamepad claim |
+| A: game-feel — pacing/feedback | **PASS scoped** — exact command result before/after animation, 180ms landing/900ms banners return to rest, selection/path feedback; P1v3 9 checks |
+| A: game-feel — impact | **N/A** — no hit event or attack in unchanged rules; no fabricated damage or combat animation |
+| A: game-feel — reduced motion | **PASS** — water/pulse/bounce/banner animation names become none; same final state, both sizes |
+| B: Grid-Tactics separation | **PASS** — pure rules unchanged, presentation reads command events; architecture reference only, no copied code |
+| B: HopeMetal licensing | **N/A new borrowing / PASS boundary** — no external code/art; five existing repo-original assets with provenance and hashes |
+| B: engine/dependencies | **PASS** — package and lockfile unchanged; no engine or new dependency |
+| C: solo 3–5 minute battle | **FAIL / HUMAN_PENDING** — no uncoached human trial; machine replay is not that evidence |
+| C: understandable enemy actions | **PASS engineering / HUMAN_PENDING comprehension** — existing reason plus preview arrows/portrait cards; exact resolver parity |
+| C: win or lose | **PASS** — actual animated/skipped success and failure, both sizes |
+| C: tactical alternatives | **PASS minimum / THIN retained** — original hold vs idle outcomes; no claim of improved tactical depth |
+| C: restart/change strategy | **PASS** — pure Retry and browser state/reset/focus checks |
+| C: duplicate/stuck/invalid/interrupted | **PASS tested scope** — original input guards, skip, reduced-motion change and unmount assertions retained |
+| C: sizes/keyboard | **PASS automated** — 44 final browser checks, actual screenshots, keyboard path preview and movement |
+| C: automated vs human | **PASS** — HUMAN_PENDING consistently recorded; no model review substituted |
+| D: SRD/CC-BY/IP/contract | **N/A rule adaptation / PASS boundary** — no rules change, WotC IP or new third-party source; original proposal assets reused |
+| D: authorization | **PASS** — Owner-named branch/base, no pull/main/PR/stash/P2/story/Actions/deploy/new art/dependencies; normal hooks and own-branch push |
+
+The human-playtest FAIL is explained and remains open. These results support
+the scoped visual implementation, not full playable or commercial approval.
