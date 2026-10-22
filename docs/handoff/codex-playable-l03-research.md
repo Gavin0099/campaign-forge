@@ -1240,3 +1240,161 @@ Also read/applied local frontend-design 2.0. No installation or code borrowing.
 
 The human-playtest FAIL is explained and remains open. These results support
 the scoped visual implementation, not full playable or commercial approval.
+
+## P1v5 feedback
+
+The battlefield previously showed counters and movement without explaining
+interference or blocked movement at the point of action. This pass ties short
+visual feedback to the existing progress and blocked-intent events, and shows
+the current predicted destination before End Turn. Rules, logical positions
+and the existing animation lock remain unchanged.
+
+| Field | Value |
+| --- | --- |
+| Branch / Owner-named base | `codex/playable-l03-research` / `3c95f0e91b5c8ed5e1b65d48f92935da986bc62c` |
+| Step 1 / 2 / 3 / 4 | `f3aba38` / `0483147` / `c3a65ea` / `435c886` |
+| Verification milestone | `4825b7d` |
+| Owner instruction | ONLY P1v5, 60-minute cap, commit after each numbered step, no pull, no rules.ts/dependency/scratch-worktree changes; normal task-branch push attempt |
+| Started (Asia/Taipei) | 2026-10-23 00:57:41 |
+| Human acceptance | **HUMAN_PENDING** |
+
+### 1. Done and skipped
+
+- **Step 1 done:** winch jerk and wheel turn, rope pulled taut with shake,
+  newly filled gauge pips flash, short actual-value pop including `絞盤干擾 1/3`,
+  stronger red 2/3 warning, and defeat fade. The existing threshold remains
+  `>=3`; the idle trace can go 2→4, and the view does not rewrite it to 3.
+- **Step 2 done for the available blocked event:** short enemy recoil,
+  dust, visual-layer shake (3 scene px maximum), status pop and an adjacent
+  ally's clash spark labelled 阻擋. Tile hit polygons do not shake.
+- **Step 3 done:** animated intent arrows and pulsing exact predicted target
+  tiles. Already-adjacent contributors point to the winch.
+- **Step 4 done:** hover/focus glow, move-commit pulse and subtle arrival dust.
+  During impact feedback the phase banner sits above the action.
+- All transient feedback respects Reduced Motion and Skip Animation;
+  toggling either mid-feedback clears it permanently. Static warnings and
+  intent outlines remain. No effect extends busy or resolves a command.
+- **Skipped / N/A:** physical shove, damage numbers and hit reaction to damage,
+  because the unchanged rules contain no shove, HP or hit event. No fabricated
+  damage or new mechanic. No priority was dropped for the timebox.
+- No new art, dependencies or engine. Original bitmap files remain unchanged.
+- Shared-file: `ui-prototype/PLAN.md`; Shared-file: `memory/01_active_task.md`.
+  Both were edited under Codex-owned locks, after fetch and the no-unknown-
+  commits check. Owner's no-pull instruction overrides the shared-file default.
+  `memory/03_knowledge_base.md` records the observed duplicate-key cleanup bug.
+
+### 2. Verification and screenshots
+
+[Verification](../../ui-prototype/docs/playable-l03-p1v5/VERIFICATION.md),
+[actual command results](../../ui-prototype/docs/playable-l03-p1v5/command-results.json),
+[source/capture audit](../../ui-prototype/docs/playable-l03-p1v5/evidence-audit.json).
+
+| Command from repo root | Exit | Result |
+| --- | --- | --- |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p0.mjs` | 0 | 8 |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p0b.mjs` | 0 | 9 |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p0c.mjs` | 0 | 9 |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p1v-browser.mjs --p1v4 --p1v5` | 0 | 26 |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p1v2-browser.mjs --p1v4 --p1v5` | 0 | 9 |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p1v3-browser.mjs --p1v5` | 0 | 9 |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p1v4-browser.mjs --p1v5` | 0 | 9 |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p1v5-browser.mjs` | 0 | 14 |
+| `npm run build --prefix ui-prototype` | 0 | TypeScript + Vite |
+| `scripts/validate_ui_scope.py` via installed Python | 0 | 13 protected planning files |
+| `node ui-prototype/tests/verify-p1v5-evidence.mjs` | 0 | 67 browser checks, 41 capture hashes, 52 source bindings |
+| `scripts/record_governance_checks.py` via installed Python | 0 | 13 isolated lifecycle tests; scope, typecheck, Vite all 0 |
+| Protected-path diff; whitespace / staged whitespace checks | 0 | Rules, original art, dependencies and story unchanged |
+
+93 game checks = 26 pure + 53 existing browser + 14 feedback-specific browser.
+The 13 governance replay tests are separate. Old browser harnesses only gain
+a new evidence output destination; no behavioural assertion was removed.
+Tests cover both resolutions, 200% text, narrow fallback, keyboard, Retry,
+both legacy story/absence flows, invalid/duplicate input and animation exit.
+The recorder refresh is local isolated replay, not a native platform callback.
+
+Step 4 initially failed twice (exit 1): dust and the arrival wrapper shared
+a sibling React key, leaving stale SVG after timeout. Unique keys fix it;
+failed report and screenshots are retained under `attempts/`. Read-only
+shell/Python probes and sandbox Git writes also initially failed; approved
+same-scope invocations succeeded. These are recorded separately from passing
+product checks.
+
+Actual 1280×720 browser captures, all under
+`ui-prototype/docs/playable-l03-p1v5/`:
+
+- `1280x720-winch-interference.png`
+- `1280x720-winch-1-of-3.png`
+- `1280x720-warning-2-of-3.png`
+- `1280x720-body-block.png`
+- `1280x720-intent-pulse.png`
+- `1280x720-hover-glow.png`
+- `1280x720-move-confirm.png`
+- `1280x720-defeat.png`
+
+Both-resolution regressions are in `p1v-regression/`, `p1v2-regression/`,
+`p1v3-regression/`, `p1v4-regression/`. They are actual execution screenshots,
+not generated mockups. Production timers were not slowed to capture effects.
+
+### 3–6. Limits, risks, open questions and not claimed
+
+Effects are short CSS/SVG presentation over the existing single-frame
+figures. The wheel and rope overlays remain geometric. This is not skeletal
+animation or a new combat system. Exact impacts are keyed to blocked intent
+at settlement; they do not invent attack turns.
+
+For Owner-requested Claude/GPT review: inspect whether the 720p winch overlay,
+clash spark and warning remain readable without hiding the painted scene,
+and check event/state isolation and dynamic motion cancellation.
+For Gavin: effect strength, comfort and readability await actual human play.
+No uncoached 3–5 minute human trial, commercial art acceptance, full
+accessibility/gamepad certification, story/S4 decision, main merge, PR,
+deployment, Actions, or natural native lifecycle completion is claimed.
+No agents were spawned; no other worktree was touched. Task DONE is not
+SessionEnd; no daily canonical record was hand-written.
+
+### Resource self-check — RESOURCE-CHECKLIST A–D
+
+Read the cached **game-feel** and **game-ui-ux** skills from the existing pinned
+`gamedev-skills/awesome-gamedev-agent-skills@0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd`.
+SHA-256: game-feel
+`68fc818ad939151be2db9e358e4295a71830c19d61f3aff849f1599307f39f9d`;
+game-ui-ux
+`8a094c84a377503aa8f4c40df676d1c6b6fc07d36ff95554ce06467f1614397e`.
+Applied discrete event hooks, transient layered feedback, unchanged simulation,
+event-driven HUD and keyboard/focus preservation. No skill was installed.
+
+| Item | Self-check and evidence |
+| --- | --- |
+| A: prototype-fast | N/A new mechanic; PASS narrow four-step presentation scope and checkpoint commits |
+| A: level-design | N/A new map; PASS regression, P0 trace and map unchanged |
+| A: game-ai | N/A new AI; PASS pure resolver and predicted-intent parity |
+| A: game-ui-ux | **PASS scoped engineering** — legal ranges, exact intent targets, visible gauge/warning, keyboard/focus and both-size original browser assertions |
+| A: game-feel | **PASS scoped engineering** — 14 feedback checks, real blocked/progress events, recoil/dust/spark, decay, no extra lock, reduced/skip and mid-effect cancellation; captures above |
+| B: Grid-Tactics separation | PASS — pure rules unchanged; renderer consumes existing events; architecture reference only, no copied source |
+| B: HopeMetal licenses | N/A new borrowing; no third-party code/art added |
+| B: engine/dependencies | PASS — package and lockfile unchanged |
+| C: solo 3–5 minute battle | **FAIL / HUMAN_PENDING** — no uncoached human trial; automated replay is not human evidence |
+| C: understandable enemy action | PASS engineering / HUMAN_PENDING comprehension — exact targets, arrows, reasons and real event feedback |
+| C: win or lose | PASS — animated and skipped victory/defeat, both sizes |
+| C: tactical choices differ | PASS minimum / THIN retained — existing hold vs idle outcomes; no deeper tactical claim |
+| C: restart/change strategy | PASS — original Retry and state/focus assertions |
+| C: duplicates/stuck/invalid/interruption | PASS tested scope — unchanged original guards plus mid-feedback skip/reduce cancellation |
+| C: 720p/1080p/keyboard | PASS automated — original size, click, overlap, 200% and keyboard assertions retained |
+| C: automated vs human | PASS — human acceptance consistently HUMAN_PENDING |
+| D: SRD/CC-BY/WotC/contract | N/A new rule adaptation; PASS original rules/art unchanged, no new third-party IP |
+| D: authorization | PASS — own named branch/worktree, four presentation priorities only, no pull/rules/dependencies/main/PR/stash/S4/Actions/deploy |
+
+The explained human-playtest FAIL remains open. These results support the
+scoped feedback implementation, not full playable or art approval.
+
+
+### Git delivery and time
+
+The four numbered steps were committed immediately after their scoped checks.
+Implementation/evidence push succeeded with exit **0**, advancing the existing
+remote task branch from `3c95f0e` to `4825b7d`. Normal pre-commit/pre-push hooks
+ran; no bypass. Shared-file locks are released only after that successful push.
+The final handoff commit/push and exact total elapsed time are reported in the
+final response; this handoff does not pretend to know its own future SHA.
+Recorded implementation-delivery window: 2026-10-23 00:57:41–01:19:16
+Asia/Taipei, **21m35s**. This is actual elapsed time, not the 60-minute budget.
