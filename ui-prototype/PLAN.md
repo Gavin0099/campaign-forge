@@ -1,6 +1,6 @@
 # Campaign Forge UI Prototype
 
-> **最後更新**: 2026-10-22
+> **最後更新**: 2026-10-23
 > **Owner**: Gavin（需求與決策）；Codex（本輪執行）
 > **Freshness**: Sprint (7d)
 
@@ -9,6 +9,12 @@
 獨立的 React / TypeScript 本地 PC UI 展示。原始 README、PLAN、SLICES、DECISIONS、EXECUTION、候選 A 與比較文件已閱讀。A/B/C 未選案；A 只供展示，人物外觀與地圖均是提案。不得以 UI 展示取代 S4 授權。
 
 ## Slices
+
+### Authorized P1v5: battlefield interaction feedback — 2026-10-23
+
+使用者：以乾淨且同步的 `codex/playable-l03-research@3c95f0e` 接續，只做四項P1v5互動回饋，60分鐘上限，依序每步commit；不pull、不改rules.ts、不碰scratch worktrees、不加依賴。Owner確認本worktree無其他代理。commit後嘗試正常push，失敗留本機。
+
+代理觀察：四步分別保存為f3aba38／0483147／c3a65ea／435c886。絞盤轉動、拉索震動、新刻度閃光、數字、2/3警示與失敗淡入；真實blocked事件的反衝、塵土、相鄰友軍阻擋火花與視覺層3px震動；原規則意圖目標脈動／箭頭流動；hover光、移動確認與落腳塵土。effects不延長busy、不改格位，skip及Reduced Motion抑制且可中途取消。規則沒有傷害或推人事件，因此不新增傷害數字或推人規則。26項純規則、53項既有browser、14項新browser皆exit0（合93項）；build、scope通過。實機截圖、失敗修正、來源雜湊與交付見 `docs/playable-l03-p1v5/` 及handoff「P1v5 feedback」。HUMAN_PENDING；共享PLAN與active_task持自有lock、不pull指示優先。這是任務里程碑，不是SessionEnd。
 
 ### Authorized P1v4: hand-painted art pass — 2026-10-22
 

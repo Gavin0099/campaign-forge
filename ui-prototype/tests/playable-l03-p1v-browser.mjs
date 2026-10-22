@@ -15,7 +15,7 @@ assert.equal(fs.realpathSync(binding.path), binding.path);
 assert.equal(fs.statSync(binding.path).size, binding.bytes);
 assert.equal(hash(fs.readFileSync(binding.path)), binding.sha256);
 const { chromium } = await import('playwright');
-const output = path.join(root, process.argv.includes('--p1v4') ? 'ui-prototype/docs/playable-l03-p1v4/p1v-regression' : process.argv.includes('--p1v3')
+const output = path.join(root, process.argv.includes('--p1v5') ? 'ui-prototype/docs/playable-l03-p1v5/p1v-regression' : process.argv.includes('--p1v4') ? 'ui-prototype/docs/playable-l03-p1v4/p1v-regression' : process.argv.includes('--p1v3')
   ? `ui-prototype/docs/playable-l03-p1v3/${process.argv.includes('--before') ? 'before' : 'p1v-regression'}` : process.argv.includes('--p1v2')
   ? 'ui-prototype/docs/playable-l03-p1v2/p1v-regression' : 'ui-prototype/docs/playable-l03-p1v');
 const scratch = path.join(root, 'scratch/playable-l03-p1v-browser');

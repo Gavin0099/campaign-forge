@@ -85,7 +85,7 @@ try {
   pass('skip/reduce suppress new hover/confirm/footstep effects; legal outlines and movement remain available');
   await load();await prime();
   const seen=page.waitForFunction(()=>!!document.querySelector('[data-p1v-winch-feedback="2"]'),undefined,{polling:'raf'});
-  await turn();await seen;
+  await turn();await seen;await page.waitForTimeout(120);
   await capture('winch-interference');
   assert.equal(await page.locator('.p1v-winch-jerk').count(),1);
   assert.equal(await page.locator('.p1v-winch-rope.taut').count(),1);
@@ -128,7 +128,7 @@ try {
   // Continue the same real trace: its single contributor produces the requested 1/3 pop.
   await page.getByLabel('跳過動畫').check();await turn();await page.getByLabel('跳過動畫').uncheck();
   const oneSeen=page.waitForFunction(()=>!!document.querySelector('[data-p1v-winch-feedback="1"]'),undefined,{polling:'raf'});
-  await turn();await oneSeen;await capture('winch-1-of-3');
+  await turn();await oneSeen;await page.waitForTimeout(120);await capture('winch-1-of-3');
   assert.equal(await page.locator('.p1v-pip-flash').count(),1);
   pass('single-contributor trace shows exactly 絞盤干擾 1/3 and one newly filled pip');
   for(const mode of ['skip','reduce']){
@@ -137,6 +137,17 @@ try {
     await turn();assert.equal(await page.locator('[data-p1v-block-feedback],.p1v-block-recoil,.p1v-impact-scene').count(),0);
     pass(`${mode}: body-block result preserved without recoil, dust, spark, or shake`);
     await page.emulateMedia({reducedMotion:'no-preference'});
+  }
+  for(const mode of ['skip','reduce']){
+    await load();await prime();await turn();
+    assert.equal(await page.locator('[data-p1v-winch-feedback]').count(),1);
+    const before=await state();
+    if(mode==='skip')await page.getByLabel('跳過動畫').check();else await page.emulateMedia({reducedMotion:'reduce'});
+    await page.waitForFunction(()=>!document.querySelector('[data-p1v-winch-feedback],.p1v-winch-jerk'));
+    if(mode==='skip')await page.getByLabel('跳過動畫').uncheck();else await page.emulateMedia({reducedMotion:'no-preference'});
+    assert.equal(await page.locator('[data-p1v-winch-feedback],.p1v-winch-jerk').count(),0);
+    assert.deepEqual(await state(),before);
+    pass(`${mode}: changing preference during feedback cancels it permanently without replaying or resolving again`);
   }
   assert.deepEqual(errors,[]);
   for(const [file,digest] of Object.entries(report.source_sha256))assert.equal(hash(fs.readFileSync(path.join(root,file))),digest);

@@ -1,5 +1,6 @@
 # Decisions and observations
 
+- 2026-10-23 P1v5觀察：同一單位的落腳塵土與arrival動畫若共用相鄰React key，timeout移除後可能殘留舊SVG；以dust-序號與角色動畫序號分開，瀏覽器斷言短效DOM歸零。表現讀取既有progress／blocked事件，效果timer不持有busy；沒有hit／shove事件就不顯示假傷害或改格位。
 - 2026-10-20：UI 計畫放 ui-prototype/PLAN.md，保護原始故事 PLAN。基線 plan_path 指向 UI 計畫。
 - 人物概念圖和戰場小人分開生成；CSS atlas 呈現，沒有聲稱已有動作動畫。
 - 早期v1立繪需保留3:8欄位比例；v2已改為透明四等欄2:1圖集，按新原檔比例呈現，不能拉伸填滿人物面板。

@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-22T17:07:38.822Z",
+  "started_at": "2026-10-22T17:11:10.395Z",
   "browser": {
     "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
     "bytes": 4586648,
@@ -11,7 +11,7 @@
     "ui-prototype/src/playable-l03/presentation.tsx": "714cc5b6eaf5e5d6904ae79bd1537616eba5f15e6b7d2cba2eb7fbb90c1504e1",
     "ui-prototype/src/playable-l03/playable.css": "b8f13b21ff4e406f4d824ef0220ae2a0ac587992987c363c51f0b04298b38db3",
     "ui-prototype/src/playable-l03/rules.ts": "42f70baac448476dca3dd0abcb766b867cb692b448d951e08404482700592d76",
-    "ui-prototype/tests/playable-l03-p1v5-browser.mjs": "540701afd61d37dc8e761aec1938bd21f3f84fccbe4e294bd001ea10dc15b5ac"
+    "ui-prototype/tests/playable-l03-p1v5-browser.mjs": "f393e76ea2e5cccafb7045542a1819f1e7293c0a5345bef31bdf84861f48381c"
   },
   "checks": [
     {
@@ -49,12 +49,18 @@
     },
     {
       "name": "reduce: body-block result preserved without recoil, dust, spark, or shake"
+    },
+    {
+      "name": "skip: changing preference during feedback cancels it permanently without replaying or resolving again"
+    },
+    {
+      "name": "reduce: changing preference during feedback cancels it permanently without replaying or resolving again"
     }
   ],
   "captures": [
     {
       "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-intent-pulse.png",
-      "sha256": "9b9c89339433ba9db1c12e95f178959500d94cd0160a04776cc9c4c8768f1c13",
+      "sha256": "17b36f6fb012813219a5e838e1a3c1f35cfc3a50bc295931cf4e4eb76feb13bd",
       "state": {
         "route": "open",
         "config": {
@@ -118,7 +124,7 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-hover-glow.png",
-      "sha256": "1caa101686c5c2669c4072810dd7bf1801298d30f261117ee3c267a865cac748",
+      "sha256": "b26d106cceefcfc7def8709126c00565cf7c3b2b1cc28e9dc5075db0636b419c",
       "state": {
         "route": "open",
         "config": {
@@ -182,7 +188,7 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-move-confirm.png",
-      "sha256": "e0561462a8dd29c7e31cea9f3f2178e44d1bf27e99eb13bdbbc3d512bf8f8373",
+      "sha256": "1d8cfe9216d5d85dce7a1cafae1396440a6115245ff2d9cd6c8f675a8acf2392",
       "state": {
         "route": "open",
         "config": {
@@ -246,7 +252,7 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-winch-interference.png",
-      "sha256": "68c417bef2ae181e498220a7d27494d834fc514b8fc2dbf821e1c15e74781877",
+      "sha256": "53cbd3075ce58d76970ba9ea84f7ab30875e0816e500fc5563b87549a60f16f7",
       "state": {
         "route": "open",
         "config": {
@@ -310,7 +316,7 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-warning-2-of-3.png",
-      "sha256": "8517f0a592df550d109f321e2a8374a7aa9b0e163fa536d6e684e082e6981e73",
+      "sha256": "cb66bdd9071b183393bc1459a1002cb29bf396c8aec16256a755d35670c7cbb5",
       "state": {
         "route": "open",
         "config": {
@@ -374,7 +380,7 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-defeat.png",
-      "sha256": "267fa09da2f13728eb63f0d62128cbdc6ba16e63ead38052c5afe4e54bd09d27",
+      "sha256": "da4c0b07673e03f51f701813b72117c20980b5721defa0f5d3328a70b09aae27",
       "state": {
         "route": "open",
         "config": {
@@ -438,7 +444,7 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-body-block.png",
-      "sha256": "4929ec84bc0202b01d05a073e9ab6595fa642979c521f1b529c85ed3fd9e4267",
+      "sha256": "39c91eedcdcf58fdab2564acf515ce4bd4cdfb497a242efa0f428848b43f4d7f",
       "state": {
         "route": "open",
         "config": {
@@ -502,7 +508,7 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-winch-1-of-3.png",
-      "sha256": "08eef1ee12a411781edc5d1014070d1d834d3bc24581c63d8d0668d80b2eb0ba",
+      "sha256": "31b1c847b7f070e643b29a14b11931ea8cee2e3b2046e73e828cdafad7db7752",
       "state": {
         "route": "open",
         "config": {
@@ -568,5 +574,5 @@
   "errors": [],
   "human_playtest": "HUMAN_PENDING",
   "exit_code": 0,
-  "finished_at": "2026-10-22T17:07:48.842Z"
+  "finished_at": "2026-10-22T17:11:21.533Z"
 }

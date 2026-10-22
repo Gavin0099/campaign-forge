@@ -10,7 +10,8 @@ const binding=JSON.parse(fs.readFileSync(path.join(root,'.codex/visual-browser-b
 assert(path.isAbsolute(binding.path));assert.equal(fs.realpathSync(binding.path),binding.path);
 assert.equal(fs.statSync(binding.path).size,binding.bytes);assert.equal(hash(fs.readFileSync(binding.path)),binding.sha256);
 const {chromium}=await import('playwright');
-const output=path.join(root,'ui-prototype/docs/playable-l03-p1v4');
+const evidenceDir=process.argv.includes('--p1v5') ? 'ui-prototype/docs/playable-l03-p1v5/p1v4-regression' : 'ui-prototype/docs/playable-l03-p1v4';
+const output=path.join(root,evidenceDir);fs.mkdirSync(output,{recursive:true});
 const scratch=path.join(root,'scratch/playable-l03-p1v4-browser');fs.mkdirSync(scratch,{recursive:true});
 const env=Object.fromEntries(['SystemRoot','WINDIR','SystemDrive'].filter(k=>process.env[k]).map(k=>[k,process.env[k]]));
 Object.assign(env,{TEMP:scratch,TMP:scratch});
@@ -29,7 +30,7 @@ const initial=()=>initialState('open',{...DEFAULT_CONFIG,p0c:{survivalTurns:6}})
 async function capture(name){
  const file=`after-${page.viewportSize().width}x${page.viewportSize().height}-${name}.png`;
  await page.screenshot({path:path.join(output,file)});
- captures.push({path:`ui-prototype/docs/playable-l03-p1v4/${file}`,sha256:hash(fs.readFileSync(path.join(output,file))),viewport:page.viewportSize(),state:await state()});
+ captures.push({path:`${evidenceDir}/${file}`,sha256:hash(fs.readFileSync(path.join(output,file))),viewport:page.viewportSize(),state:await state()});
 }
 try {
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'ui-prototype/docs/art-manifest.json')));

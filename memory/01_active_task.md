@@ -1,4 +1,10 @@
-## 最新使用者指示：僅P1v4手繪美術（2026-10-22）
+## 最新使用者指示：僅P1v5戰場互動回饋（2026-10-23）
+
+使用者：3c95f0e已同步、不pull；60分鐘只做P1v5四步，每步commit以保留部分成果。Owner確認同worktree無另一代理。presentation only，不改rules.ts、不碰scratch worktrees、不加npm依賴；commit後嘗試push，失敗留本機，不main／PR／stash。
+
+代理觀察：四個編號步驟已各自commit（f3aba38／0483147／c3a65ea／435c886）；完成絞盤／繩索／刻度、阻擋反衝與火花、意圖脈動與箭頭、hover／確認／落腳塵土。規則只有blocked，沒有hit/shove事件，不製造傷害或位移結果。初測抓到塵土與角色動畫共用React sibling key導致舊DOM殘留，獨立key修正後消失；失敗紀錄保留。93項自動檢查exit0（26 pure + 53原browser + 14新browser），原斷言保留，兩種動畫關閉設定及中途切換可驗。build與scope通過；來源／截圖／交付與時間以ui-prototype/docs/playable-l03-p1v5及handoff「P1v5 feedback」為準。真人試玩／Owner美術HUMAN_PENDING，沒有新規則、素材、依賴、故事、S4或治理完整導入宣稱。PLAN及本檔以自有lock更新、不pull指示優先；任務DONE非SessionEnd。
+
+## 歷史使用者指示：僅P1v4手繪美術（2026-10-22）
 
 使用者：基線f1e0ab6，同worktree無另一代理、乾淨才繼續，不pull；只做120分鐘P1v4，允許built-in image_gen生成渡口／道具／第二騎士肖像並放大單位。不改rules.ts、不加npm依賴、不碰scratch/p2與scratch/p0d；commit後嘗試push，失敗留本機，不main／PR／stash。
 

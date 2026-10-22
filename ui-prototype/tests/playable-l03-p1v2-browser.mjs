@@ -15,7 +15,7 @@ assert.equal(hash(fs.readFileSync(binding.path)), binding.sha256);
 const { chromium } = await import('playwright');
 const before = process.argv.includes('--before');
 const phase = before ? 'before' : 'after';
-const output = path.join(root, process.argv.includes('--p1v4') ? 'ui-prototype/docs/playable-l03-p1v4/p1v2-regression' : process.argv.includes('--p1v3') ? 'ui-prototype/docs/playable-l03-p1v3/p1v2-regression' : 'ui-prototype/docs/playable-l03-p1v2');
+const output = path.join(root, process.argv.includes('--p1v5') ? 'ui-prototype/docs/playable-l03-p1v5/p1v2-regression' : process.argv.includes('--p1v4') ? 'ui-prototype/docs/playable-l03-p1v4/p1v2-regression' : process.argv.includes('--p1v3') ? 'ui-prototype/docs/playable-l03-p1v3/p1v2-regression' : 'ui-prototype/docs/playable-l03-p1v2');
 const scratch = path.join(root, 'scratch/playable-l03-p1v2-browser');
 fs.mkdirSync(output, { recursive: true }); fs.mkdirSync(scratch, { recursive: true });
 const env = Object.fromEntries(['SystemRoot', 'WINDIR', 'SystemDrive'].filter(k => process.env[k]).map(k => [k, process.env[k]]));

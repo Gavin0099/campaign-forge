@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-10-22T17:13:04.431Z",
+  "exit_code": 0,
+  "browser_checks": 67,
+  "capture_hashes_checked": 41,
+  "source_bindings_checked": 52,
+  "scope": "Current source and unmodified execution screenshots; historical failed attempts intentionally excluded.",
+  "human_playtest": "HUMAN_PENDING"
+}
