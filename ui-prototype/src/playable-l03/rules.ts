@@ -55,6 +55,7 @@ export const neighbors = (p: Cell): Cell[] => [
 ];
 export function walkable(p: Cell, route: Route): boolean {
   if (!Number.isInteger(p.x) || !Number.isInteger(p.y)) return false;
+  if (p.y < 0 || p.y >= MAP.rows.length || p.x < 0 || p.x >= MAP.rows[0].length) return false;
   const tile = MAP.rows[p.y]?.[p.x];
   return !!tile && tile !== "~" &&
     !(route === "open" && p.y === 4 && (p.x === 4 || p.x === 5));

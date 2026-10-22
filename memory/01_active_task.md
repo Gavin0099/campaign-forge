@@ -1,4 +1,10 @@
-## 最新使用者指示：僅P0純規則PoC（2026-10-22）
+## 最新使用者指示：僅P0b站位驗證（2026-10-22）
+
+使用者：14:51確認Claude工作session已關閉，背景helper PID 16256不在本worktree工作，授權繼續寫入。只完成P0b，保存搜尋與站位／平手測試、補walkable邊界、更新handoff與資源自查，全部重測、記錄exit codes、commit後嘗試正常push；失敗留本機。不P1、不main、不PR、不stash。
+
+代理觀察：基線097f5a7；全第一回合站位後等待493勝／6303敗，最低1人1次3格；五回合至多一次移動6勝／211敗，蕾絲T2(1,3)→(0,3)只走1格就勝，結論CHEESE。三個單人／三個雙人陣容均有獨立重播勝法，但均非一次移動即可勝；未移動的缺席同伴不再充當障礙。walkable補明確矩形邊界，負列繼承屬性回歸修前exit1、修後通過；沒有改玩法規則。證據、範圍、提案與交付狀態見docs/handoff/codex-playable-l03-research.md之P0b章節。這是任務里程碑，非SessionEnd。
+
+## 歷史使用者指示：僅P0純規則PoC（2026-10-22）
 
 使用者：在codex/playable-l03-research先fetch／快轉pull、合origin/main，只做docs/tasks/playable-l03-P0.md的60分鐘範圍；絞盤西岸(2,1)，獨立TypeScript規則、六項驗收、資源自查與handoff、commit後嘗試push；不P1、不動main、不PR、不stash。
 

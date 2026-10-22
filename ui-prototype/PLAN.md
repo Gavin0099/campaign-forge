@@ -10,6 +10,12 @@
 
 ## Slices
 
+### Authorized P0b: stance validation — 2026-10-22
+
+使用者：本輪只完成 `docs/tasks/playable-l03-P0b-stance.md`，保存搜尋、站位／平手測試，補 `walkable()` 邊界、更新handoff與正常commit／push；P1未授權。14:51確認同worktree沒有另一工作session，可繼續寫入。
+
+代理觀察：結論 **CHEESE**。全6796種第一回合結束站位、之後只等待，493勝／6303敗；最低1人移動1次3格。五回合最多移動一次217策略，6勝／211敗；蕾絲第二回合(1,3)→(0,3)後等待，進度2勝利，僅1人1次1格。移除其他同伴的三個單人與三個雙人陣容均找到可重播勝法（每回合至多一個移動指令的有限搜尋，不是完整策略勝率）。五種站位、敵人爭格／平手／順序與bounds回歸已保存；只改一行明確矩形邊界，未調整規則或地圖。完整命令、exit codes、提交與推送狀態見 `../docs/handoff/codex-playable-l03-research.md` 的 P0b stance validation。調整均為提案，未開始P1；沒有UI、人類試玩、樂趣或完整兩路線驗收。
+
 ### Authorized P0: west-bank winch rules PoC — 2026-10-22
 
 使用者本次只授權 `docs/tasks/playable-l03-P0.md` 的60分鐘純規則PoC，並要求合入origin/main的協作文件、commit及正常push；P1–P6仍未授權。這取代下方研究階段的P0未開始狀態，不改正式故事。
