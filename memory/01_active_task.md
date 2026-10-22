@@ -1,4 +1,10 @@
-## 最新使用者指示：僅P1v可玩畫面（2026-10-22）
+## 最新使用者指示：僅P1v2可讀性（2026-10-22）
+
+使用者：基線 `codex/playable-l03-research@63a1f11` 已同步，不pull；Owner確認同worktree無其他代理。只做P1v2，60分鐘timebox，規則不改、A限本畫面。完成commit後嘗試push，失敗留本機；不P2／main／PR／stash。
+
+代理觀察：遮擋來自大圖與姓名共用繪製層、圖像本身攔截鄰格點擊。改為按實際腳點深度排序、原圖縮小與腳底裁切、格子獨佔點擊、固定資訊列顯示姓名與陣營，敵我底座另有形狀區分。檢視敵人／已行動角色不授予行動權，純規則與原fixtures不改。兩尺寸群聚／同列實機、P1v回歸與最終命令／截圖見 `ui-prototype/docs/playable-l03-p1v2/`、handoff「P1v2 readability」。真人試玩仍HUMAN_PENDING，縮小角色的細節與辨識度待Owner實測。共享PLAN與本檔持自有lock，使用者不pull指示優先；非SessionEnd，不寫每日記錄。
+
+## 歷史使用者指示：僅P1v可玩畫面（2026-10-22）
 
 使用者：沿用乾淨且已同步的 `codex/playable-l03-research@13a6e17`，不pull，只做P1v brief，90分鐘上限；Owner確認無同worktree其他代理。A的六回合設定只在本畫面啟用，P0／P0b／P0c與規則預設不變；重用美術、無新依賴，實際Playwright與指定截圖，commit後嘗試push，失敗留本機。P0d明確延後，不P2／main／PR／stash。
 

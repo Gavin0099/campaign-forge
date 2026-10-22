@@ -18,15 +18,21 @@
 .p1v-layout { display: grid; grid-template-columns: minmax(0,1fr) 17.5rem; flex: 1; min-height: 0; }
 .p1v-board { min-width: 0; display: flex; flex-direction: column; justify-content: center; background: #2b4036; position: relative; }
 .p1v-map-caption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 16px 24px; color: var(--l03-muted); font-size: .875rem; }
-.p1v-map { display: block; width: 100%; height: calc(100vh - 290px); flex: none; min-height: 330px; max-height: calc(100vh - 240px); }
+.p1v-inspection { display: grid; min-height: 2.5rem; padding: .375rem 24px; background: #142820; color: #fff0d0; font-size: 1rem; }
+.p1v-inspection > span { grid-area: 1 / 1; justify-self: start; }
+/* Keep the instruction's wrapping footprint: hover must never shift the tile under the pointer. */
+.p1v-inspection-placeholder.hidden { visibility: hidden; }
+.p1v-map { display: block; width: 100%; height: calc(100vh - 330px); flex: none; min-height: 290px; max-height: calc(100vh - 280px); }
 .p1v-cell { fill: transparent; stroke: #253b3466; stroke-width: 1; cursor: pointer; }
 .p1v-cell:hover { fill: #ffe1a222; stroke: #ffe1a2; stroke-width: 2; }
 .p1v-cell.legal { fill: #a6e2d33d; stroke: #d5ffed; stroke-width: 2; }
 .p1v-cell.selected { stroke: #ffe1a2; fill: #ffe1a23d; stroke-width: 3; }
+.p1v .p1v-cell:focus { outline: none; }
 .p1v .p1v-cell:focus-visible { outline: none; stroke: #ffe1a2; stroke-width: 4; fill: #ffe1a244; }
 .p1v-move-plus { fill: #122e26; font-size: 15px; pointer-events: none; }
-.p1v-unit text, .p1v-landmarks text { fill: #fff0d0; font: 14px "Microsoft JhengHei",sans-serif; paint-order: stroke; stroke: #183027; stroke-width: 4px; stroke-linejoin: round; }
-.p1v-unit { cursor: pointer; }
+.p1v-landmarks text { fill: #fff0d0; font: 14px "Microsoft JhengHei",sans-serif; paint-order: stroke; stroke: #183027; stroke-width: 4px; stroke-linejoin: round; }
+/* Tiles alone own input. Sprite artwork and landmarks never steal a neighbour's hit. */
+.p1v-unit, .p1v-unit *, .p1v-landmarks { pointer-events: none; }
 .p1v-intent-path { fill: none; stroke: #ffd2a0; stroke-width: 3; stroke-dasharray: 7 5; pointer-events: none; }
 .p1v-intent-path.knight-1 { stroke: #f9afa1; stroke-dasharray: 3 5; }
 .p1v-sidebar { padding: 14px 22px; border-left: 1px solid var(--l03-line); background: #182e28; }

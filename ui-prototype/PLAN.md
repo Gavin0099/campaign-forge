@@ -10,6 +10,12 @@
 
 ## Slices
 
+### Authorized P1v2: battle-screen readability — 2026-10-22
+
+使用者：只做 `docs/tasks/playable-l03-P1v2-readability.md`，60分鐘上限；從乾淨且同步的 `63a1f11` 接續，不pull。Owner確認同worktree無其他代理。規則保持不變，A僅在本畫面；commit後嘗試push，失敗留本機，不開始P2。
+
+代理觀察：角色依實際投影腳點及橫向位置排序，縮小原圖並移除腳底透明padding；原圖檔不改。格子為唯一hit area，敵我以圓形／菱形底座及顏色區分；完整姓名在獨立資訊列隨hover／focus／點選顯示，敵人與已行動角色僅檢視，不取得行動權。新增原P0絞盤群聚與同列站位之雙尺寸實機測試、Before／After，完整結果以 `docs/playable-l03-p1v2/` 與handoff「P1v2 readability」為準。小人細節因縮小受限，真人辨識／3–5分鐘試玩仍HUMAN_PENDING；A仍THIN，未提升為玩法或商業美術通過。里程碑不是SessionEnd。
+
 ### Authorized P1v: first playable L03 screen — 2026-10-22
 
 使用者：只完成 `docs/tasks/playable-l03-P1v-screen.md`，90分鐘上限；基線 `13a6e17`，不pull。Owner確認同worktree沒有另一代理。A（存活六回合）僅供新畫面；規則預設與P0／P0b／P0c程式、輸出保持不變。正常commit後嘗試push，失敗留本機；P0d延後，P2未授權。

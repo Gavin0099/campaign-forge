@@ -15,7 +15,8 @@ assert.equal(fs.realpathSync(binding.path), binding.path);
 assert.equal(fs.statSync(binding.path).size, binding.bytes);
 assert.equal(hash(fs.readFileSync(binding.path)), binding.sha256);
 const { chromium } = await import('playwright');
-const output = path.join(root, 'ui-prototype/docs/playable-l03-p1v');
+const output = path.join(root, process.argv.includes('--p1v2')
+  ? 'ui-prototype/docs/playable-l03-p1v2/p1v-regression' : 'ui-prototype/docs/playable-l03-p1v');
 const scratch = path.join(root, 'scratch/playable-l03-p1v-browser');
 fs.mkdirSync(output, { recursive: true }); fs.mkdirSync(scratch, { recursive: true });
 const env = Object.fromEntries(['SystemRoot', 'WINDIR', 'SystemDrive'].filter(k => process.env[k]).map(k => [k, process.env[k]]));
@@ -41,12 +42,14 @@ const report = { started_at: new Date().toISOString(), url, browser: binding,
   checks, captures, errors, human_playtest: 'HUMAN_PENDING' };
 function pass(name, details = {}) { checks.push({name, ...details}); console.log(`PASS ${checks.length}: ${name}`); }
 const getState = () => page.locator('[data-p1v-state]').getAttribute('data-p1v-state').then(JSON.parse);
+// Unit artwork is noninteractive; use the owning tile for all pointer checks.
+const unitTile = async id => page.locator(`[data-p1v-cell="${key((await getState()).units.find(u=>u.id===id).cell)}"]`);
 const settled = () => page.waitForSelector('[data-p1v-busy="false"]');
 const initial = () => initialState('open', {...DEFAULT_CONFIG, p0c:{survivalTurns:6}});
 async function screenshot(name) {
   const file = `${name}.png`;
   await page.screenshot({path:path.join(output,file), fullPage:false});
-  captures.push({path:`ui-prototype/docs/playable-l03-p1v/${file}`,sha256:hash(fs.readFileSync(path.join(output,file))),
+  captures.push({path:path.relative(root,path.join(output,file)).replaceAll('\\','/'),sha256:hash(fs.readFileSync(path.join(output,file))),
     viewport:page.viewportSize(), state:await getState(), busy:await page.locator('[data-p1v-busy]').getAttribute('data-p1v-busy'),
     frame:await page.locator('[data-p1v-frame]').getAttribute('data-p1v-frame').then(v=>v ? JSON.parse(v) : null)});
 }
@@ -132,15 +135,15 @@ try {
     const original = await getState();
     await page.locator('[data-p1v-cell="4,0"]').click();
     assert.match(await page.locator('[data-p1v-message]').textContent(),/無法移動/);
-    await page.locator('[data-p1v-unit="knight-1"]').click();
+    await (await unitTile('knight-1')).click();
     assert.match(await page.locator('[data-p1v-message]').textContent(),/敵方單位無法操作/);
     await page.locator('[data-p1v-select="lace"]').click();
     assert(await page.locator('[data-p1v-cell][data-legal="true"]').count()>0);
-    await page.locator('[data-p1v-unit="thoma"] ellipse').click(); // select ally, never overlap
+    await (await unitTile('thoma')).click();
     assert.deepEqual(await getState(),original);
     await page.keyboard.press('Escape');
     assert.equal(await page.locator('[data-p1v-cell][data-legal="true"]').count(),0);
-    await page.locator('[data-p1v-unit="lace"] svg').click();
+    await (await unitTile('lace')).click();
     assert.equal(await page.locator('[data-p1v-selected]').getAttribute('data-p1v-selected'),'lace');
     await page.keyboard.press('Escape');
     pass(`${prefix}: illegal water/enemy clicks rejected; occupied ally selects, no state mutation; Esc clears range`);
@@ -168,7 +171,7 @@ try {
     await page.keyboard.press('ArrowUp'); await page.keyboard.press('ArrowUp'); await page.keyboard.press('Space'); await settled();
     let keyboardExpected=command(initial(),{type:'move',turn:1,unit:'lace',to:{x:1,y:1}}).state;
     assert.deepEqual(await getState(),keyboardExpected);
-    await page.locator('[data-p1v-unit="lace"] ellipse').click();
+    await (await unitTile('lace')).click();
     assert.match(await page.locator('[data-p1v-message]').textContent(),/已行動/);
     await page.locator('[data-p1v-select="thoma"]').click(); await page.getByRole('button',{name:'等待',exact:true}).click();
     assert(await page.locator('[data-p1v-select="thoma"]').isDisabled());

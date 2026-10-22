@@ -19,10 +19,12 @@ type Frame = { unit: string; from: Cell; to: Cell; progress: number };
 
 function Figure({ id }: { id: string }) {
   const column = ["karen", "lace", "thoma"].indexOf(id);
-  return column >= 0 ? <svg x="-25" y="-65" width="50" height="70"
-    viewBox={`${column * 724 + 110} 0 520 724`} preserveAspectRatio="xMidYMax meet">
+  // The nearest units in the same screen column are only 30 scene units apart.
+  // Fit the entire silhouette below that gap; crop the transparent foot padding.
+  return column >= 0 ? <svg data-p1v-figure={id} x="-12" y="-26" width="24" height="26"
+    viewBox={`${column * 724 + 110} 0 520 ${id === "thoma" ? 711 : 710}`} preserveAspectRatio="xMidYMax meet">
     <image href="/art/l03-party-v1.png" width="2172" height="724" />
-  </svg> : <svg x="-32" y="-66" width="64" height="71" viewBox="0 0 887 887" preserveAspectRatio="xMidYMax meet">
+  </svg> : <svg data-p1v-figure={id} x="-14" y="-26" width="28" height="26" viewBox="0 0 887 871" preserveAspectRatio="xMidYMax meet">
     <image href="/art/l03-enemies-v1.png" width="1774" height="887" />
   </svg>;
 }
@@ -31,6 +33,8 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
   const [state, setState] = useState(start);
   const stateRef = useRef(state);
   const [selected, setSelected] = useState<string | null>(null);
+  const [inspected, setInspected] = useState<string | null>(null);
+  const [hovered, setHovered] = useState<string | null>(null);
   const [waited, setWaited] = useState<string[]>([]);
   const [message, setMessage] = useState(initialMessage);
   const [busy, setBusy] = useState(false);
@@ -78,7 +82,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     if (busyRef.current) return;
     const result = command(stateRef.current, input);
     if (!result.ok) { setMessage("無法執行；請選擇亮格或可行動的我方。" ); return; }
-    setSelected(null);
+    setSelected(null); setInspected(null); setHovered(null);
     if (input.type === "resolve" || input.type === "retry") setWaited([]);
     if (input.type === "retry") {
       stateRef.current = result.state; setState(result.state); setVisualUnits(result.state.units);
@@ -108,23 +112,34 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
   function pick(p: Cell) {
     if (busyRef.current || stateRef.current.status !== "playing") return;
     const occupant = state.units.find(u => u.alive && key(u.cell) === key(p));
+    setInspected(occupant?.id || null);
     if (occupant?.side === "ally") {
-      if (state.moved.includes(occupant.id) || waited.includes(occupant.id)) { setMessage("此單位本回合已行動。" ); return; }
+      if (state.moved.includes(occupant.id) || waited.includes(occupant.id)) { setSelected(null); setMessage("此單位本回合已行動。" ); return; }
       setSelected(occupant.id); setMessage(`${names[occupant.id]}：可移動最多三格，或等待。`); return;
     }
     if (selected && legal.has(key(p))) { apply({ type: "move", turn: state.turn, unit: selected, to: { x: p.x, y: p.y } }); return; }
+    if (occupant?.side === "enemy") setSelected(null);
     setMessage(occupant?.side === "enemy" ? "敵方單位無法操作，請查看右側意圖。" : "此格無法移動；請先選我方，再點亮格。");
   }
   const endTurn = () => apply({ type: "resolve", turn: stateRef.current.turn });
   const active = state.status === "playing";
+  const inspectedUnit = state.units.find(u => u.id === (hovered || inspected));
+  // Sort actual animated foot positions, including a stable column tie-breaker.
+  const actors = visualUnits.filter(u => u.alive).map(u => {
+    const moving = frame?.unit === u.id ? frame : null;
+    const f = moving ? moving.progress * moving.progress * (3 - 2 * moving.progress) : 1;
+    const p = moving ? center({x:moving.from.x+(moving.to.x-moving.from.x)*f,y:moving.from.y+(moving.to.y-moving.from.y)*f}) : center(u.cell);
+    return { u, moving, p };
+  }).sort((a,b) => a.p.y-b.p.y || a.p.x-b.p.x || a.u.id.localeCompare(b.u.id));
   return <main className="l03-app p1v" ref={root} tabIndex={-1} data-p1v-status={state.status}
     data-p1v-turn={state.turn} data-p1v-progress={state.progress} data-p1v-busy={busy}
     data-p1v-selected={selected || ""} data-p1v-state={JSON.stringify(state)} data-p1v-waited={waited.join(",")}
+    data-p1v-inspected={inspected || ""}
     data-p1v-frame={frame ? JSON.stringify(frame) : ""}
     onKeyDown={e => {
       if (!active && e.key === "Tab") { e.preventDefault(); retryButton.current?.focus(); return; }
       if (e.key === "Enter" && e.repeat) { e.preventDefault(); return; }
-      if (e.key === "Escape") { e.preventDefault(); setSelected(null); setMessage("已取消選擇。" ); }
+      if (e.key === "Escape") { e.preventDefault(); setSelected(null); setInspected(null); setHovered(null); setMessage("已取消選擇。" ); }
       if (e.key === "Enter" && !e.repeat && !e.defaultPrevented &&
         !(e.target as Element).closest("button,input")) { e.preventDefault(); endTurn(); }
     }}>
@@ -138,7 +153,16 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     <p className="p1v-objective">勝利：守過第六回合　／　失敗：絞盤干擾達三格</p>
     <div className="p1v-layout">
       <section className="p1v-board" aria-label="戰場">
-        <div className="p1v-map-caption"><span>渡口 · 11 × 9</span><span>底座選人　亮格 ＋ 移動　虛線 → 敵方路線</span></div>
+        <div className="p1v-map-caption"><span>渡口 · 11 × 9</span><span>圓底座：我方　菱形底座：敵方　點格選人</span></div>
+        <div className="p1v-inspection" aria-live="polite">
+          <span className={inspectedUnit ? "p1v-inspection-placeholder hidden" : "p1v-inspection-placeholder"}
+            aria-hidden={!!inspectedUnit}>指向、聚焦或點選單位所在格，查看姓名與狀態。</span>
+          {inspectedUnit && <span data-p1v-label={inspectedUnit.id}>
+            {inspectedUnit.side === "ally" ? "● 我方" : "◆ 敵方"} · <strong>{names[inspectedUnit.id]}</strong>
+            {` · (${inspectedUnit.cell.x},${inspectedUnit.cell.y}) · `}
+            {inspectedUnit.side === "enemy" ? "查看右側意圖" : state.moved.includes(inspectedUnit.id) || waited.includes(inspectedUnit.id) ? "已行動" : "可行動"}
+          </span>}
+        </div>
         <svg className="p1v-map" viewBox="150 10 900 410" role="group" aria-label="11乘9渡口戰場；空白鍵選格，方向鍵移動焦點">
           <defs>
             {["grass", "stone", "water", "forest"].map((name, index) => <pattern key={name} id={`${uid}-${name}`}
@@ -175,12 +199,14 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
             className={`p1v-intent-path knight-${i}`} markerEnd={`url(#${uid}-arrow)`} />)}
           {cells.map(p => {
             const occupant = state.units.find(u => key(u.cell) === key(p));
-            const canMove = legal.has(key(p)), chosen = occupant?.id === selected;
+            const canMove = legal.has(key(p)), chosen = !!occupant && occupant.id === (inspected || selected);
             return <g key={key(p)}>
               <polygon data-p1v-cell={key(p)} data-legal={canMove} role="button" tabIndex={active && !busy ? 0 : -1}
-                aria-label={`${p.x},${p.y}${occupant ? ` ${names[occupant.id]}` : ""}${canMove ? " 可移動" : ""}`}
+                aria-label={`${p.x},${p.y}${occupant ? ` ${occupant.side === "ally" ? "我方" : "敵方"} ${names[occupant.id]}` : ""}${canMove ? " 可移動" : ""}`}
                 aria-disabled={!active || busy} aria-pressed={chosen} points={sceneDiamond(p.x,p.y)}
                 className={`p1v-cell ${canMove ? "legal" : ""} ${chosen ? "selected" : ""}`}
+                onMouseEnter={() => { if (!busy && active) setHovered(occupant?.id || null); }} onMouseLeave={() => setHovered(null)}
+                onFocus={() => { if (!busy && active) setHovered(occupant?.id || null); }} onBlur={() => setHovered(null)}
                 onClick={() => pick(p)} onKeyDown={e => {
                   if (e.key === " ") { e.preventDefault(); e.stopPropagation(); pick(p); }
                   const delta = ({ArrowUp:[0,-1],ArrowDown:[0,1],ArrowLeft:[-1,0],ArrowRight:[1,0]} as Record<string, number[]>)[e.key];
@@ -189,22 +215,18 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
               {canMove && <text className="p1v-move-plus" x={center(p).x} y={center(p).y+4} textAnchor="middle" aria-hidden="true">＋</text>}
             </g>;
           })}
-          {[...visualUnits].sort((a,b) => (a.cell.x+a.cell.y)-(b.cell.x+b.cell.y)).map(u => {
-            const moving = frame?.unit === u.id ? frame : null;
-            const f = moving ? moving.progress * moving.progress * (3 - 2 * moving.progress) : 1;
-            const p = moving ? center({x:moving.from.x+(moving.to.x-moving.from.x)*f,y:moving.from.y+(moving.to.y-moving.from.y)*f}) : center(u.cell);
+          {actors.map(({u, moving, p}) => {
             const clip: Playback | null = moving ? { kind:"physical", actor:u.id, target:"", from:moving.from, to:moving.to,
               committed:true, stage:"move", progress:moving.progress, elapsed:moving.progress*230, sequence:1 } : null;
             return <g key={u.id} transform={`translate(${p.x} ${p.y})`} className="p1v-unit" data-p1v-unit={u.id}
-              data-cell={key(u.cell)} data-moving={!!moving} role="button" tabIndex={-1}
-              aria-label={`${names[u.id]}，${u.side === "ally" ? "選擇單位" : "敵方單位"}`}
-              aria-disabled={busy || !active} aria-pressed={u.id === selected}
-              onClick={() => pick(u.cell)} onKeyDown={e => { if (e.key === " ") { e.preventDefault(); e.stopPropagation(); pick(u.cell); } }}>
-              <ellipse rx="20" ry="7" fill={u.side === "ally" ? "#183c39" : "#532d2b"} stroke={u.id === selected ? "#ffe0a4" : u.side === "ally" ? "#a6e2d3" : "#ffbd9c"} strokeWidth="2" />
-              <g pointerEvents={selected ? "none" : undefined}>
+              data-cell={key(u.cell)} data-moving={!!moving} aria-hidden="true">
+              <g data-p1v-base={u.side} fill={u.side === "ally" ? "#183c39" : "#532d2b"}
+                stroke={u.id === (inspected || selected) ? "#ffe0a4" : u.side === "ally" ? "#a6e2d3" : "#ffbd9c"} strokeWidth="2">
+                {u.side === "ally" ? <ellipse rx="14" ry="3" /> : <path d="M-16 0 0-4 16 0 0 4Z" />}
+              </g>
+              <g>
                 <AnimatedActor id={u.id} clip={clip} reduced={reduced}><Figure id={u.id} /></AnimatedActor>
               </g>
-              <text y="21" textAnchor="middle" pointerEvents="none">{names[u.id]}</text>
             </g>;
           })}
         </svg>
