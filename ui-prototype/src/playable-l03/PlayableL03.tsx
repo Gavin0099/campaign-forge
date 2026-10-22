@@ -27,6 +27,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
   const [phase, setPhase] = useState<"ally" | "enemy">("ally");
   const [banner, setBanner] = useState<{ phase: "ally" | "enemy"; serial: number } | null>(null);
   const [arrival, setArrival] = useState<{ unit: string; serial: number } | null>(null);
+  const [winchFeedback, setWinchFeedback] = useState<{ total: number; delta: number; serial: number } | null>(null);
   const feedbackSerial = useRef(0);
   const resolving = useRef(false);
   const [waited, setWaited] = useState<string[]>([]);
@@ -53,6 +54,9 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     stateRef.current = result.state;
     setState(result.state); setVisualUnits(result.state.units); setFrame(null);
     busyRef.current = false; setBusy(false);
+    const interference = result.events.find(e => e.type === "progress" && e.delta > 0);
+    if (interference?.type === "progress" && !skipRef.current && !reducedRef.current)
+      setWinchFeedback({ total: interference.total, delta: interference.delta, serial: ++feedbackSerial.current });
     const lastMove = [...result.events].reverse().find(e => e.type === "move");
     if (lastMove && !skipRef.current && !reducedRef.current) setArrival({ unit: lastMove.unit, serial: ++feedbackSerial.current });
     if (resolving.current) {
@@ -81,6 +85,14 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     const timer = window.setTimeout(() => setArrival(null), 180);
     return () => window.clearTimeout(timer);
   }, [arrival]);
+  useEffect(() => {
+    if (!winchFeedback) return;
+    const timer = window.setTimeout(() => setWinchFeedback(null), 700);
+    return () => window.clearTimeout(timer);
+  }, [winchFeedback]);
+  useEffect(() => {
+    if (skip || reduced) { setWinchFeedback(null); setArrival(null); }
+  }, [skip, reduced]);
 
   // Both legal highlights and intent are pure queries against the SAME state.
   const legal = useMemo(() => new Set(selected && !waited.includes(selected) ? cells.filter(p =>
@@ -99,7 +111,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     if (busyRef.current) return;
     const result = command(stateRef.current, input);
     if (!result.ok) { setMessage("無法執行；請選擇亮格或可行動的我方。" ); return; }
-    setSelected(null); setInspected(null); setHovered(null); setHoverCell(null); setArrival(null);
+    setSelected(null); setInspected(null); setHovered(null); setHoverCell(null); setArrival(null); setWinchFeedback(null);
     if (input.type === "resolve" || input.type === "retry") setWaited([]);
     if (input.type === "retry") {
       stateRef.current = result.state; setState(result.state); setVisualUnits(result.state.units);
@@ -145,6 +157,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
   }
   const endTurn = () => apply({ type: "resolve", turn: stateRef.current.turn });
   const active = state.status === "playing";
+  const winchFx = !skip && !reduced ? winchFeedback : null;
   const inspectedUnit = state.units.find(u => u.id === (hovered || inspected));
   // Sort actual animated foot positions, including a stable column tie-breaker.
   const actors = visualUnits.filter(u => u.alive).map(u => {
@@ -154,6 +167,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     return { u, moving, p };
   }).sort((a,b) => a.p.y-b.p.y || a.p.x-b.p.x || a.u.id.localeCompare(b.u.id));
   return <main className="l03-app p1v" ref={root} tabIndex={-1} data-p1v-status={state.status} data-p1v-dev={dev}
+    data-p1v-motion={!skip && !reduced}
     data-p1v-turn={state.turn} data-p1v-progress={state.progress} data-p1v-busy={busy}
     data-p1v-selected={selected || ""} data-p1v-state={JSON.stringify(state)} data-p1v-waited={waited.join(",")}
     data-p1v-inspected={inspected || ""}
@@ -170,7 +184,12 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
       <div className="p1v-title"><span className="p1v-title-seal" aria-hidden="true">⚜</span><div><span className="p1v-kicker">渡口防衛{dev ? " · L03 / P1v · A 測試" : ""}</span><h1>守住絞盤</h1></div></div>
       <div className="p1v-counters">
         <div className="p1v-gauge" aria-label={`回合 ${state.turn} / 6`}><span aria-hidden="true">◷</span><div><span>回合 <strong>{state.turn}<small> / 6</small></strong></span><div className="p1v-pips" aria-hidden="true">{Array.from({length:6},(_,i)=><i key={i} className={i < state.turn ? "filled" : ""} />)}</div></div></div>
-        <div className="p1v-gauge danger" aria-label={`絞盤干擾 ${state.progress} / 3`}><span aria-hidden="true">⚙</span><div><span>絞盤干擾 <strong>{state.progress}<small> / 3</small></strong></span><div className="p1v-pips" aria-hidden="true">{Array.from({length:3},(_,i)=><i key={i} className={i < state.progress ? "filled" : ""} />)}</div></div></div>
+        <div className={`p1v-gauge danger ${state.progress >= 2 ? "p1v-winch-warning" : ""}`} aria-label={`絞盤干擾 ${state.progress} / 3`}>
+          <span aria-hidden="true">⚙</span><div><span>絞盤干擾 <strong>{state.progress}<small> / 3</small></strong></span>
+            <div className="p1v-pips" aria-hidden="true">{Array.from({length:3},(_,i)=><i key={`${i}-${winchFx?.serial || 0}`} className={`${i < state.progress ? "filled" : ""} ${winchFx && i >= winchFx.total-winchFx.delta && i < winchFx.total ? "p1v-pip-flash" : ""}`} />)}</div>
+          </div>
+          {winchFx && <span key={winchFx.serial} className="p1v-winch-pop" data-p1v-winch-feedback={winchFx.total} aria-hidden="true">絞盤干擾 {winchFx.total}/3</span>}
+        </div>
       </div>
       <button onClick={onExit}>返回選單</button>
     </header>
@@ -194,7 +213,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
             </marker>
           </defs>
           <Terrain uid={uid} />
-          <Landmarks dev={dev} />
+          <Landmarks dev={dev} winchSerial={winchFx?.serial} warning={state.progress >= 2} />
           {active && !busy && enemyPaths.map((e, i) => <polyline key={e.unit} data-p1v-intent-path={e.unit}
             points={e.path.map(p => `${center(p).x},${center(p).y}`).join(" ")}
             className={`p1v-intent-path knight-${i}`} markerEnd={`url(#${uid}-arrow)`} />)}

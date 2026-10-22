@@ -56,7 +56,7 @@ export function Terrain({ uid }: { uid: string }) {
   </g>;
 }
 
-export function Landmarks({ dev }: { dev: boolean }) {
+export function Landmarks({ dev, winchSerial, warning = false }: { dev: boolean; winchSerial?: number; warning?: boolean }) {
   const winch=center(MAP.winch), wagon=center(MAP.wagon);
   return <g className="p1v-landmarks" aria-hidden="true">
     {[{x:3,y:4},{x:6,y:4}].map((p,i) => <g key={i} transform={`translate(${center(p).x} ${center(p).y})`}>
@@ -65,7 +65,12 @@ export function Landmarks({ dev }: { dev: boolean }) {
     <text x={center({x:5,y:4}).x} y={center({x:5,y:4}).y+18} textAnchor="middle">斷橋</text>
     <g transform={`translate(${winch.x} ${winch.y})`}>
       <ellipse rx="24" ry="8" cy="4" fill="#0b1411" opacity=".45" />
-      <Prop kind="winch" crop="0 280 536 540" x={-32} y={-49} width={64} height={58} />
+      <g key={winchSerial || "rest"} className={winchSerial ? "p1v-winch-jerk" : undefined}>
+        <Prop kind="winch" crop="0 280 536 540" x={-32} y={-49} width={64} height={58} />
+        {winchSerial && <g className="p1v-winch-wheel" transform="translate(0 -22)"><circle r="9" /><path d="M-9 0H9M0-9V9M-6-6 6 6M-6 6 6-6" /></g>}
+      </g>
+      <path key={`rope-${winchSerial || 0}`} className={`p1v-winch-rope ${winchSerial ? "taut" : ""}`} d={winchSerial ? "M8-18 65 12" : "M8-18Q34 6 65 12"} />
+      {warning && <ellipse className="p1v-winch-alert" rx="29" ry="11" cy="4" />}
       <text y="-56" textAnchor="middle" data-p1v-landmark="winch">絞盤{dev ? " (2,1)" : ""}</text>
       <path className="p1v-objective-pin" d="M-4-70L0-74 4-70 0-66Z" fill="#e5cd91" />
     </g>

@@ -146,3 +146,26 @@
   .p1v-skip,.p1v-dev { min-height:26px; }
 }
 @media (prefers-reduced-motion:reduce) { .p1v-water-glint,.p1v-selection-ring,.p1v-arrival,.p1v-turn-banner { animation:none !important; } }
+
+/* P1v5: result-driven feedback; these layers never own input or extend busy. */
+.p1v-gauge.danger { position:relative; }
+.p1v-winch-warning { color:#ffc5ad; }
+.p1v-winch-warning strong { color:#ffb298; }
+.p1v-winch-warning .p1v-pips .filled { background:#d76b53; border-color:#ffb298; }
+.p1v-winch-pop { position:absolute; top:100%; right:0; white-space:nowrap; pointer-events:none; padding:4px 9px; border:1px solid #d99c7c; background:#301f19; color:#ffe2bb; font:700 .875rem "Microsoft JhengHei",sans-serif; animation:p1v-number-pop .7s ease-out both; }
+.p1v-pip-flash { animation:p1v-pip-flash .7s ease-out; }
+.p1v-winch-jerk { transform-origin:0 0; animation:p1v-winch-jerk .5s ease-out; }
+.p1v-winch-wheel { fill:#493a27; stroke:#e0c18a; stroke-width:1.6; transform-box:fill-box; transform-origin:center; animation:p1v-wheel .5s ease-out; }
+.p1v-winch-rope { fill:none; stroke:#c0a16c; stroke-width:2; filter:drop-shadow(0 1px 1px #101510); }
+.p1v-winch-rope.taut { stroke:#f1d5a0; animation:p1v-rope .5s ease-out; }
+.p1v-winch-alert { fill:#ab433322; stroke:#e58c72; stroke-width:2; animation:p1v-warning 1.2s ease-in-out infinite; }
+.p1v-result[data-p1v-result=failure] { animation:p1v-defeat .45s ease-out; }
+@keyframes p1v-winch-jerk { 15% { transform:rotate(-6deg) translateX(-2px); } 35% { transform:rotate(4deg); } 65% { transform:rotate(-2deg); } 100% { transform:none; } }
+@keyframes p1v-wheel { from { rotate:0deg; } to { rotate:100deg; } }
+@keyframes p1v-rope { 15%,45% { transform:translateY(-2px); } 30%,60% { transform:translateY(1px); } 100% { transform:none; } }
+@keyframes p1v-pip-flash { 20% { background:#fff2c9; box-shadow:0 0 12px #ffe4a5; } }
+@keyframes p1v-number-pop { 0% { opacity:0; transform:translateY(6px); } 20%,70% { opacity:1; } 100% { opacity:0; transform:translateY(-8px); } }
+@keyframes p1v-warning { 50% { stroke:#ffb298; fill:#ab433355; } }
+@keyframes p1v-defeat { from { opacity:0; backdrop-filter:blur(0); } to { opacity:1; backdrop-filter:blur(3px); } }
+.p1v[data-p1v-motion=false] *, .p1v[data-p1v-motion=false] *::before, .p1v[data-p1v-motion=false] *::after { animation:none !important; }
+@media (prefers-reduced-motion:reduce) { .p1v * { animation:none !important; } }

@@ -1,0 +1,228 @@
+{
+  "started_at": "2026-10-22T17:01:29.622Z",
+  "browser": {
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "bytes": 4586648,
+    "sha256": "f76f0234efb271041dc84f9f38fb858e01859d5da6f775f5108668eb3ae80975",
+    "scope": "local UI browser acceptance only"
+  },
+  "source_sha256": {
+    "ui-prototype/src/playable-l03/PlayableL03.tsx": "92960f9c4da36dc4e0a3a2db5746833063df0d1d9a34e13bba966946d7bdc9e6",
+    "ui-prototype/src/playable-l03/presentation.tsx": "714cc5b6eaf5e5d6904ae79bd1537616eba5f15e6b7d2cba2eb7fbb90c1504e1",
+    "ui-prototype/src/playable-l03/playable.css": "159d652e1f938bf122ea047502b53795b60397e28a7978a30e2e3ccb74ce7444",
+    "ui-prototype/src/playable-l03/rules.ts": "42f70baac448476dca3dd0abcb766b867cb692b448d951e08404482700592d76",
+    "ui-prototype/tests/playable-l03-p1v5-browser.mjs": "8fdef9fe42d8436eb07226abdce8e7087711ce993482ace80a4fd038a5cfc197"
+  },
+  "checks": [
+    {
+      "name": "progress 0→2: jerk, wheel, taut rope, two flashes, pop; warning persists, feedback expires, input already unlocked"
+    },
+    {
+      "name": "threshold crossing enters defeat immediately with Retry focus; Retry clears feedback and warning"
+    },
+    {
+      "name": "skip: interference still resolves identically; no transient winch effects ever mount; warning stays static"
+    },
+    {
+      "name": "reduce: interference still resolves identically; no transient winch effects ever mount; warning stays static"
+    }
+  ],
+  "captures": [
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-winch-interference.png",
+      "sha256": "6b37bf978e0077bac72dbdc285245d14d9e7891c756ee161578559a4d67d3e3a",
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 5,
+        "status": "playing",
+        "progress": 2,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-warning-2-of-3.png",
+      "sha256": "0b2d1e32143e6ccd885d7b2df2218a045cfe259b2b92d902030801e9ff973124",
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 5,
+        "status": "playing",
+        "progress": 2,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-defeat.png",
+      "sha256": "6fe65a2a0c86072c1c5f45a861f5f4a304e635c414439e4c6e04673062b6e8b3",
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 5,
+        "status": "failure",
+        "progress": 4,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    }
+  ],
+  "errors": [],
+  "human_playtest": "HUMAN_PENDING",
+  "exit_code": 0,
+  "finished_at": "2026-10-22T17:01:32.900Z"
+}
