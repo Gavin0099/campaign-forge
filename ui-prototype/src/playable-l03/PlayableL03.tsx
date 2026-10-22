@@ -30,6 +30,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
   const [arrival, setArrival] = useState<{ unit: string; serial: number } | null>(null);
   const [winchFeedback, setWinchFeedback] = useState<{ total: number; delta: number; serial: number } | null>(null);
   const [blocks, setBlocks] = useState<{ items: BlockFeedback[]; serial: number } | null>(null);
+  const [confirmed, setConfirmed] = useState<{ cell: Cell; serial: number } | null>(null);
   const feedbackSerial = useRef(0);
   const resolving = useRef(false);
   const [waited, setWaited] = useState<string[]>([]);
@@ -113,7 +114,12 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     return () => window.clearTimeout(timer);
   }, [blocks]);
   useEffect(() => {
-    if (skip || reduced) { setWinchFeedback(null); setArrival(null); setBlocks(null); }
+    if (!confirmed) return;
+    const timer = window.setTimeout(() => setConfirmed(null), 280);
+    return () => window.clearTimeout(timer);
+  }, [confirmed]);
+  useEffect(() => {
+    if (skip || reduced) { setWinchFeedback(null); setArrival(null); setBlocks(null); setConfirmed(null); }
   }, [skip, reduced]);
 
   // Both legal highlights and intent are pure queries against the SAME state.
@@ -134,6 +140,8 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     const result = command(stateRef.current, input);
     if (!result.ok) { setMessage("無法執行；請選擇亮格或可行動的我方。" ); return; }
     setSelected(null); setInspected(null); setHovered(null); setHoverCell(null); setArrival(null); setWinchFeedback(null); setBlocks(null);
+    setConfirmed(input.type === "move" && !skipRef.current && !reducedRef.current
+      ? { cell: input.to, serial: ++feedbackSerial.current } : null);
     if (input.type === "resolve" || input.type === "retry") setWaited([]);
     if (input.type === "retry") {
       stateRef.current = result.state; setState(result.state); setVisualUnits(result.state.units);
@@ -272,6 +280,8 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
               {canMove && <text className="p1v-move-plus" x={center(p).x} y={center(p).y+4} textAnchor="middle" aria-hidden="true">＋</text>}
             </g>;
           })}
+          {hoverCell && active && !busy && !skip && !reduced && <polygon className="p1v-hover-glow" data-p1v-hover-glow={key(hoverCell)} points={sceneDiamond(hoverCell.x,hoverCell.y)} aria-hidden="true" />}
+          {confirmed && !skip && !reduced && <polygon key={confirmed.serial} className="p1v-confirm-pulse" data-p1v-confirm={key(confirmed.cell)} points={sceneDiamond(confirmed.cell.x,confirmed.cell.y)} aria-hidden="true" />}
           {movePath.length > 0 && <g className="p1v-move-path" data-p1v-move-path={movePath.map(key).join(";")} aria-hidden="true">
             <polyline points={movePath.map(p => `${center(p).x},${center(p).y}`).join(" ")} />
             {movePath.slice(1).map((p,i) => <g key={key(p)} transform={`translate(${center(p).x} ${center(p).y})`}><circle r="7" /><text y="3" textAnchor="middle">{i+1}</text></g>)}
@@ -284,6 +294,9 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
             return <g key={u.id} transform={`translate(${p.x} ${p.y})`} className="p1v-unit" data-p1v-unit={u.id}
               data-cell={key(u.cell)} data-moving={!!moving} aria-hidden="true">
               <ellipse className="p1v-shadow" rx="21" ry="7" cy="2" />
+              {arrival?.unit === u.id && !skip && !reduced && <g key={`dust-${arrival.serial}`} className="p1v-footstep-dust" data-p1v-footstep={u.id}>
+                <ellipse rx="11" ry="3" cy="2" /><circle cx="-10" cy="0" r="2.5" /><circle cx="9" cy="1" r="2" />
+              </g>}
               <g className={u.id === selected ? "p1v-selection-ring" : ""} data-p1v-base={u.side} fill={u.side === "ally" ? "#183c3966" : "#532d2b66"}
                 stroke={u.id === (inspected || selected) ? "#ffe0a4" : u.side === "ally" ? "#a6e2d3" : "#ffbd9c"} strokeWidth="2">
                 {u.side === "ally" ? <ellipse rx="17" ry="6" /> : <path d="M-19 0 0-7 19 0 0 7Z" />}
@@ -307,7 +320,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
             })}
           </g>}
         </svg>
-        {banner && active && <div key={banner.serial} className={`p1v-turn-banner ${banner.phase}`} data-p1v-turn-banner={banner.phase} role="status"><span>— {String(state.turn).padStart(2,"0")} —</span><strong>{banner.phase === "enemy" ? "敵方回合" : "我方回合"}</strong></div>}
+        {banner && active && <div key={banner.serial} className={`p1v-turn-banner ${banner.phase} ${blockFx || winchFx ? "p1v-banner-with-feedback" : ""}`} data-p1v-turn-banner={banner.phase} role="status"><span>— {String(state.turn).padStart(2,"0")} —</span><strong>{banner.phase === "enemy" ? "敵方回合" : "我方回合"}</strong></div>}
       </section>
       <aside className="p1v-sidebar">
         <h2>敵方意圖</h2>

@@ -168,6 +168,13 @@
 @keyframes p1v-warning { 50% { stroke:#ffb298; fill:#ab433355; } }
 @keyframes p1v-defeat { from { opacity:0; backdrop-filter:blur(0); } to { opacity:1; backdrop-filter:blur(3px); } }
 .p1v-feedback-layer { pointer-events:none; }
+.p1v-hover-glow,.p1v-confirm-pulse { pointer-events:none; fill:#f3d59816; stroke:#f3d598; stroke-width:2; }
+.p1v-hover-glow { opacity:.7; filter:drop-shadow(0 0 4px #f0d69b); }
+.p1v-confirm-pulse { transform-box:fill-box; transform-origin:center; animation:p1v-confirm .28s ease-out both; }
+.p1v-footstep-dust { fill:#c1af83; transform-box:fill-box; transform-origin:center; animation:p1v-dust .18s ease-out both; }
+.p1v-turn-banner.p1v-banner-with-feedback { top:14%; padding:5px 18px; }
+.p1v-banner-with-feedback strong { font-size:1.125rem; }
+@keyframes p1v-confirm { 0% { opacity:1; transform:scale(.92); fill:#f3d59855; } 100% { opacity:0; transform:scale(1.16); fill:#f3d59800; } }
 .p1v-telegraphs { pointer-events:none; }
 .p1v-intent-path { animation:p1v-intent-flow 1s linear infinite; }
 .p1v-intent-target { fill:#d58c6b18; stroke:#eeb08a; stroke-width:2; animation:p1v-threat-pulse 1.4s ease-in-out infinite; }

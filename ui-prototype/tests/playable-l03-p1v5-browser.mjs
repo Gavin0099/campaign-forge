@@ -63,6 +63,26 @@ try {
     if(mode==='skip')await page.getByLabel('跳過動畫').uncheck();else await page.emulateMedia({reducedMotion:'no-preference'});
   }
   pass('skip/reduce retain static, accurate intent markers and stop all arrow/pulse animation');
+  await load();await page.locator('[data-p1v-select="lace"]').click();await page.locator('[data-p1v-cell="1,1"]').hover();
+  assert.equal(await page.locator('[data-p1v-hover-glow="1,1"]').count(),1);
+  await capture('hover-glow');
+  // Observe both short effects from before input; never slow the production animation.
+  const confirmSeen=page.waitForFunction(()=>!!document.querySelector('[data-p1v-confirm="1,1"]'),undefined,{polling:'raf'});
+  const footSeen=page.waitForFunction(()=>!!document.querySelector('[data-p1v-footstep="lace"]'),undefined,{polling:'raf'});
+  const moved=command(initial(),{type:'move',turn:1,unit:'lace',to:{x:1,y:1}});
+  await page.locator('[data-p1v-cell="1,1"]').click();await confirmSeen;await capture('move-confirm');await footSeen;await settled();
+  assert.deepEqual(await state(),moved.state);
+  await page.waitForTimeout(300);assert.equal(await page.locator('[data-p1v-confirm],[data-p1v-footstep]').count(),0,await page.locator('[data-p1v-confirm],[data-p1v-footstep]').evaluateAll(ns=>ns.map(n=>n.outerHTML)).then(JSON.stringify));
+  pass('hover glow, move-commit pulse and footstep dust follow actual move, return to rest and preserve exact state');
+  for(const mode of ['skip','reduce']){
+    await load();if(mode==='skip')await page.getByLabel('跳過動畫').check();else await page.emulateMedia({reducedMotion:'reduce'});
+    await page.locator('[data-p1v-select="lace"]').click();await page.locator('[data-p1v-cell="1,1"]').hover();
+    assert.equal(await page.locator('[data-p1v-hover-glow]').count(),0);
+    await page.locator('[data-p1v-cell="1,1"]').click();await settled();
+    assert.deepEqual(await state(),moved.state);assert.equal(await page.locator('[data-p1v-confirm],[data-p1v-footstep]').count(),0);
+    await page.emulateMedia({reducedMotion:'no-preference'});
+  }
+  pass('skip/reduce suppress new hover/confirm/footstep effects; legal outlines and movement remain available');
   await load();await prime();
   const seen=page.waitForFunction(()=>!!document.querySelector('[data-p1v-winch-feedback="2"]'),undefined,{polling:'raf'});
   await turn();await seen;
