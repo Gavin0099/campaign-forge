@@ -1,5 +1,153 @@
 # Handoff: codex/playable-l03-research
 
+## P1v playable screen
+
+This is the current chunk. Earlier P0/P0b/P0c delivery and scope statements
+below are historical; only the P1v screen is added here. A remains **THIN**,
+enabled only in this screen. Rules defaults and all P0/P0b/P0c outputs remain
+unchanged. P0d is deferred; P2 is not started.
+
+| Field | P1v current chunk |
+| --- | --- |
+| Branch / own worktree | `codex/playable-l03-research` / `D:\campaign-forge` |
+| Owner-named baseline | `13a6e17496dca1eaa8d3a98fe459dc819b37e8a4`; clean status; Owner confirmed exclusive worktree use |
+| Implementation | `ece8e50dae7fadcec66e8f46b0d4ce2230130db0`, normal commit with hooks, pushed successfully |
+| Delivery | `git push origin codex/playable-l03-research` exit **0**, remote advanced `13a6e17..ece8e50`. This handoff is a separate documentation commit; its SHA and push result are reported in the final response. No PR/main/force/stash/hook bypass. |
+| Owner instruction | Only `docs/tasks/playable-l03-P1v-screen.md`, 90-minute maximum, A for this screen only, reuse art/components, no dependencies, real Playwright/screenshots, commit then try push. Explicit **do not pull** supersedes the shared-edit pull default. |
+| Time, Asia/Taipei | First clock `2026-10-22T17:15:29+08:00` immediately after initial reads; final browser run `17:38:49–17:39:44`; implementation pushed before `17:46`; handoff prepared `17:48`. Final elapsed including delivery is reported in the final response. |
+
+### 1. What changed
+
+- New **Playable L03 (P1v)** menu entry and optional direct URL; the old L03
+  preview is retained. New screen/CSS live under `ui-prototype/src/playable-l03/`.
+- Existing 11×9 terrain, winch, wagon geometry and five painted characters;
+  six-turn counter, interference, concise objective, exact legal moves,
+  selection, Wait, End Turn, illegal-input message and keyboard controls.
+- Both knights' planned paths and reasons come from pure `resolve`. Each
+  accepted result is computed once; RAF plays its move events one tile at a
+  time, then adopts the same result. Busy/input guards prevent duplicate
+  turns; skip/reduced-motion consume that same pending result.
+- Existing `AnimatedActor` accepts optional painted children, retaining its
+  default articulated rendering. L03 cutouts use eased travel and walk bob;
+  this does not create articulated limbs or new frame animation.
+- Victory/defeat dialog, focus confinement, inert background and Retry;
+  exit/unmount cancels playback and reopening starts fresh.
+- Browser test and 13 real runtime PNGs, plus source/art hashes and exact
+  result/frame evidence under `ui-prototype/docs/playable-l03-p1v/`.
+
+Shared files edited: `ui-prototype/PLAN.md`, `memory/01_active_task.md`.
+Own locks acquired; fetch/remote ancestry checked, **no pull** per Owner;
+`SHARED-EDIT` printed and `Shared-file` trailers included in implementation
+commit. Release only these own locks after handoff delivery. No daily memory,
+story, Ink, rules defaults, governance program, dependencies or original art
+changed. Governance acceptance receipt was refreshed with the existing recorder.
+
+### 2. How to run and verify
+
+From the worktree root:
+
+```powershell
+npm run dev --prefix ui-prototype -- --port 5183 --strictPort
+```
+
+Open `http://127.0.0.1:5183/`, click **Playable L03 (P1v)** beside the existing
+preview; or open `http://127.0.0.1:5183/?scene=playable-l03` directly. Port
+5173 was occupied and was left alone. Click an ally, then a highlighted ＋
+tile; **等待** forgoes that ally's move and **結束回合** resolves enemies.
+Space selects a focused cell; arrows move focus, Esc cancels selection,
+Enter on the map ends the turn. Buttons keep their native Enter behavior.
+Use unit bases/roster to switch while selected; figures let legal destination
+clicks pass through. **跳過動畫** can interrupt playback; **重試** clears all state.
+
+| Command / check | Observed result | Exit |
+| --- | --- | --- |
+| `npm run build --prefix ui-prototype` | TypeScript + Vite, 49 modules | **0** |
+| `node ui-prototype/tests/playable-l03-p0.mjs` | 8 PASS; original traces unchanged | **0** |
+| `node ui-prototype/tests/playable-l03-p0b.mjs` | 9 PASS; original witnesses unchanged | **0** |
+| `node ui-prototype/tests/playable-l03-p0c.mjs` | 9 PASS; defaults/variants and fixtures unchanged | **0** |
+| `node ui-prototype/tests/playable-l03-p1v-browser.mjs` | 26 browser checks, both sizes; animated and skipped full win/loss | **0** |
+| `python scripts/validate_ui_scope.py` | 13 protected planning files | **0** |
+| `python scripts/record_governance_checks.py` | 13 isolated lifecycle tests, scope/typecheck/build receipts | **0** |
+| `python -I -B ui-prototype/tests/verify-governance.py` | Current source matches acceptance receipt | **0** |
+| `git diff --check` | No whitespace errors | **0** |
+| Protected-path `git diff --exit-code 13a6e17 -- ...` | Rules, all prior P0/P0b/P0c tests/outputs, three original views, art and package/lock unchanged | **0** |
+| Evidence hash/dimension readback | 15 inputs and 13 PNGs match; both captured knight frames actually in flight | **0** |
+| Implementation commit; pre-push fetch and ancestry; normal push | Hooks exit 0; no unknown remote commits; branch pushed | **0** |
+
+Python commands used the existing absolute Python 3.12 binding with approved
+execution after sandbox access failed; the successful actual checks above
+are retained. See [verification](../../ui-prototype/docs/playable-l03-p1v/VERIFICATION.md),
+[browser results](../../ui-prototype/docs/playable-l03-p1v/browser-results.json)
+and [command results](../../ui-prototype/docs/playable-l03-p1v/command-results.json).
+No browser/dependency install, new credential or trust change.
+
+Original success JSONL plus A's sixth resolve reaches **turn 6 / success /
+progress 2**. Original idle failure reaches **turn 5 / failure / progress 4**;
+4/3 is the actual atomic rules result, intentionally not clamped. Every
+committed command is compared with an independent pure-rules result.
+Retry, illegal moves, Wait, repeated/held input, mid-play skip, dynamic
+reduced motion, exit/reopen, focus, 200% body text and a narrow fallback
+are covered. Existing two story routes, absent companions, dialogue log,
+move/skill preview/cancel/confirmation and results-to-campaign also pass.
+
+Screenshots: `ui-prototype/docs/playable-l03-p1v/` has
+`1280x720-{start,intent,mid-animation,victory,defeat,move-range}.png`,
+`1920x1080-{start,intent,mid-animation,victory,defeat,move-range}.png`, and
+`1280x720-text-200.png`. These are runtime viewport captures after artwork
+decode, not generated mockups. Linked individually in the verification file.
+
+### 3–6. Limits, risks, questions and not claimed
+
+- **HUMAN_PENDING:** no human playtest or measured 3–5 minute solo battle,
+  enjoyment decision, Owner acceptance or commercial art approval. A still
+  has known first-turn-position-then-wait wins; this screen does not fix THIN.
+- Only open/hold is playable. No sealed escort, pressure experiment, HP,
+  attacks, new rule/story/art, P0d or P2. Formal rule selection remains open.
+- Tall existing cutouts overlap in adjacent diagonal cells. Bases and roster
+  remain usable; labels can be partly occluded. Walking is single-frame
+  travel/bob. No screen-reader/gamepad audit or performance certification.
+- For Claude, when Owner requests review: inspect pure-result consumption
+  during skip/unmount, local Wait versus unchanged `State.moved`, and range,
+  figure click-through and label visibility. No review agents were started.
+- For Gavin: play both outcomes and judge whether A deserves pressure/depth
+  work in a separately authorized chunk. No automatic continuation proposed.
+- Passing hooks/isolated replay are not native platform callbacks. No native
+  adoption, SessionEnd/canonical closeout, model approval or merge is claimed.
+  Pre-commit advisory `missing_canonical_memory` did not fail the hook; this
+  task handoff is not SessionEnd. Canonical memory was not fabricated.
+
+### Resource self-check — P1v
+
+Checklist: `docs/review/RESOURCE-CHECKLIST.md`. All five relevant cached
+original gamedev skills read at pinned upstream
+`0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd`; no installation. Existing source
+manifests retain provenance. Local frontend-design, ui-design, typography
+and executable-trust guidance were applied to layout/input/browser binding.
+
+| Section / item | Result and evidence |
+| --- | --- |
+| A: prototype-fast | **PASS** — one isolated screen and explicit 90-minute stop; playability verified while depth remains THIN, no default adoption |
+| A: level-design | **PASS scoped reachability / N/A sealed** — unchanged map and pure legal paths, open success/failure replay; no new depth claim |
+| A: game-ai | **PASS** — pure deterministic resolve supplies both intent and actual events; previews update with positioning |
+| A: game-ui-ux | **PASS automated** — exact range, both enemy intents/reasons, progress/objective, input hints, invalid message, focus and keyboard; human comprehension pending |
+| A: game-feel | **PASS scoped movement/skip** — real mid-animation captures, step timing, busy guard and equal skipped outcome; hit reaction N/A because no attacks, pacing enjoyment HUMAN_PENDING |
+| B: Grid-Tactics | **PASS architecture / N/A reuse** — prior read-only reference pinned `8d1952b46c771318b6f798b44038bac4490afe64`; no license, no code/art copied; pure rules remain separate and animation plays events |
+| B: HopeMetal | **PASS license separation / N/A reuse** — prior reference pinned `c58849b67a89897ecdb6b3dbb7f25183d3be96ac`, code MIT versus images CC-BY-SA 3.0; no source/art borrowed |
+| B: engine/dependencies | **PASS** — no engine or dependency added; package and lockfile unchanged |
+| C1: full 3–5 minute solo battle | **FAIL / HUMAN_PENDING** for the human-duration criterion: complete six-turn automated battle works, but no human timing/playtest occurred; explained acceptance gap, not ready for full playable-bar approval |
+| C2: understandable responsive enemy actions | **PASS automated** — both paths and one-line reasons visible, resolve reflects player state; human comprehension pending |
+| C3: win or lose | **PASS** — both full outcomes at both sizes, animation/skip equality |
+| C4: two choices produce different outcomes | **PASS** — original repositioning trace wins, idle loses; tactical depth still THIN |
+| C5: restart and change strategy | **PASS** — Retry clears pure state and all local UI, both strategies replayed |
+| C6: no duplicate/stuck/invalid/interrupted state | **PASS tested paths** — repeated/held input, illegal moves, mid-skip, reduced motion and exit/unmount; deterministic result readback |
+| C7: both resolutions/basic keyboard | **PASS** — 1280×720, 1920×1080, Space/arrows/Esc/Enter; extra 200% text and 390px fallback |
+| C8: separate automated/human evidence | **PASS** — browser report separate; HUMAN_PENDING explicit, no model-as-human substitution |
+| D: SRD/rule adaptation/no WotC IP | **PASS unchanged provenance / N/A new adaptation** — no external text, art or new rules; only pre-existing authorized A screen opt-in, default untouched |
+| D: project authorization | **PASS** — only P1v, own worktree/branch, no main/PR/deploy/Actions/stash, no P0d/P2/story changes; current handoff is the stop point |
+
+The explained C1 gap means this is a playable-screen delivery for Owner
+testing, not a claim that the full playable acceptance bar has passed.
+
 ## P0c variant comparison
 
 **Recommendation: A, THIN, as an experiment only.** Extending to six turns
