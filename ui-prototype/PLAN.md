@@ -10,6 +10,12 @@
 
 ## Slices
 
+### Authorized P1v3: visual pass — 2026-10-22
+
+使用者：螢幕弱、不像遊戲、風格不一致；只做 `docs/tasks/playable-l03-P1v3-visual.md`，90分鐘上限，沿用乾淨且同步的 `7319ef0`，不pull。只用既有素材，不生圖、不加依賴、不改rules.ts與故事；不碰scratch/p2。Owner確認本worktree無另一代理。正常commit後嘗試push，失敗留本機。
+
+代理觀察：本畫面改為較深等角投影、全強度地表貼圖、岸壁與低水面、樹木／貨物裁切、原角色放大、同源肖像卡、暗金屬框、圖示進度、路徑預覽與短促回合／抵達回饋。原有100次群聚點擊與零重疊斷言保持；P0/P0b/P0c為8/9/9項，P1v/P1v2/P1v3為26/9/9項，build／scope均exit 0。720p與1080p Before／After、失敗嘗試及完整輸出見 `docs/playable-l03-p1v3/`。字面1.2–1.5全菱形高度與零重疊衝突，保留50單位高（原26），未宣稱尺寸目標全部達成。幾何機關與單幀小人仍是限制；HUMAN_PENDING，不構成美術或正式規則驗收。共享檔持自有lock、不pull指示優先；交付不是SessionEnd。
+
 ### Authorized P1v2: battle-screen readability — 2026-10-22
 
 使用者：只做 `docs/tasks/playable-l03-P1v2-readability.md`，60分鐘上限；從乾淨且同步的 `63a1f11` 接續，不pull。Owner確認同worktree無其他代理。規則保持不變，A僅在本畫面；commit後嘗試push，失敗留本機，不開始P2。

@@ -1,0 +1,102 @@
+{
+  "started_at": "2026-10-22T11:22:12.526Z",
+  "browser": {
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "bytes": 4586648,
+    "sha256": "f76f0234efb271041dc84f9f38fb858e01859d5da6f775f5108668eb3ae80975",
+    "scope": "local UI browser acceptance only"
+  },
+  "source_sha256": {
+    "ui-prototype/src/playable-l03/PlayableL03.tsx": "b942fd8b8b48430b98fb0bcaf1aa34697cd4eff547b4c625f0f7acef0d75d269",
+    "ui-prototype/src/playable-l03/playable.css": "dbbb6b451169b675a73dc0887e2aaf76f286d6c8db5e93d3a51817dccb505e79",
+    "ui-prototype/src/playable-l03/presentation.tsx": "a0263fc9348bdfaa06126682ddd727a37f63bce862d1dd266c8a85c536b17dde",
+    "ui-prototype/src/playable-l03/rules.ts": "42f70baac448476dca3dd0abcb766b867cb692b448d951e08404482700592d76",
+    "ui-prototype/tests/playable-l03-p1v3-browser.mjs": "74b6d06bf9c1a9c08597f77a4e769d4f982216e1fea3a0d162f45f2a630b53c1",
+    "ui-prototype/public/art/terrain-v2.png": "c1aa5dd10c2476fa8fbcb3059842d11d92066bebb3f504ac2080d36fcf18ceaf",
+    "ui-prototype/public/art/props-v2.png": "9bc881e7bda11e472206eb7a46721964686ed66193f7b5494bd2c1f484293af0",
+    "ui-prototype/public/art/ferry-scene-v2.png": "2a659af48fc684af2fd8be86a88b80bfe42e1dc3a8a135bced13a366a32dd220",
+    "ui-prototype/public/art/l03-party-v1.png": "f67086afa5919d17872ceb8c22c4e6eefd5513dc6e14d8637f38cf90abd4bb08",
+    "ui-prototype/public/art/l03-enemies-v1.png": "2cdaba9f74dc384ec262a71f9ec1b814949a4325c52b93836b2da50669ddea8c"
+  },
+  "checks": [
+    {
+      "name": "1280: five original portraits, accurate gauges, debug toggle changes presentation only"
+    }
+  ],
+  "captures": [
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v3/after-1280x720-path-preview.png",
+      "sha256": "0179378c18a0bf13683fb1fa6870dcda463dbf0d561e4e2201fb2d8a1846bfdd",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      },
+      "frame": ""
+    }
+  ],
+  "errors": [],
+  "human_playtest": "HUMAN_PENDING",
+  "exit_code": 1,
+  "failure": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('.p1v-arrival')\n\n    at D:\\campaign-forge\\ui-prototype\\tests\\playable-l03-p1v3-browser.mjs:69:16",
+  "finished_at": "2026-10-22T11:22:43.850Z"
+}

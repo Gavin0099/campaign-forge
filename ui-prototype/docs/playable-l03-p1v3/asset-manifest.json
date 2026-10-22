@@ -1,0 +1,53 @@
+{
+  "assets": [
+    {
+      "path": "ui-prototype/public/art/terrain-v2.png",
+      "sha256": "c1aa5dd10c2476fa8fbcb3059842d11d92066bebb3f504ac2080d36fcf18ceaf",
+      "bytes": 3536280,
+      "width": 1254,
+      "height": 1254,
+      "origin": "Existing repo-original generated proposal; no new image generation in P1v3",
+      "modified": false
+    },
+    {
+      "path": "ui-prototype/public/art/props-v2.png",
+      "sha256": "9bc881e7bda11e472206eb7a46721964686ed66193f7b5494bd2c1f484293af0",
+      "bytes": 1884519,
+      "width": 2172,
+      "height": 724,
+      "origin": "Existing repo-original generated proposal; no new image generation in P1v3",
+      "modified": false
+    },
+    {
+      "path": "ui-prototype/public/art/ferry-scene-v2.png",
+      "sha256": "2a659af48fc684af2fd8be86a88b80bfe42e1dc3a8a135bced13a366a32dd220",
+      "bytes": 3557427,
+      "width": 1672,
+      "height": 941,
+      "origin": "Existing repo-original generated proposal; no new image generation in P1v3",
+      "modified": false
+    },
+    {
+      "path": "ui-prototype/public/art/l03-party-v1.png",
+      "sha256": "f67086afa5919d17872ceb8c22c4e6eefd5513dc6e14d8637f38cf90abd4bb08",
+      "bytes": 1182539,
+      "width": 2172,
+      "height": 724,
+      "origin": "Existing repo-original generated proposal; no new image generation in P1v3",
+      "modified": false
+    },
+    {
+      "path": "ui-prototype/public/art/l03-enemies-v1.png",
+      "sha256": "2cdaba9f74dc384ec262a71f9ec1b814949a4325c52b93836b2da50669ddea8c",
+      "bytes": 1392827,
+      "width": 1774,
+      "height": 887,
+      "origin": "Existing repo-original generated proposal; no new image generation in P1v3",
+      "modified": false
+    }
+  ],
+  "provenance": [
+    "ui-prototype/docs/l03/ART-DIRECTION.md",
+    "ui-prototype/docs/visual-sprint/art-manifest.json"
+  ]
+}

@@ -1,4 +1,10 @@
-## 最新使用者指示：僅P1v2可讀性（2026-10-22）
+## 最新使用者指示：僅P1v3視覺調整（2026-10-22）
+
+使用者：從 `codex/playable-l03-research@7319ef0` 接續，不pull；本worktree沒有另一代理。只做90分鐘P1v3，使用既有美術，不改rules.ts，不加npm依賴、不生圖、不碰scratch/p2。commit後嘗試push，失敗保留本機；不main／PR／stash。
+
+代理觀察：加入繪畫地表、岸壁、同源樹木與貨物、放大角色與肖像、暗金屬框、圖示進度、移動預覽、抵達彈跳及雙方回合橫幅。程式與實機測試共70項（8+9+9+26+9+9），build／scope exit 0；原規則、故事、依賴與PNG原件不改。50單位小人與52單位同列腳點間距保留零重疊，未達字面1.2–1.5全菱形高度；這是明列折衷，非Owner美術通過。實機Before／After、失敗重試、STYLE與驗證見 `ui-prototype/docs/playable-l03-p1v3/`；Git交付以handoff「P1v3 visual pass」及最終SHA為準。真人試玩HUMAN_PENDING，非SessionEnd，不寫每日記錄。
+
+## 歷史使用者指示：僅P1v2可讀性（2026-10-22）
 
 使用者：基線 `codex/playable-l03-research@63a1f11` 已同步，不pull；Owner確認同worktree無其他代理。只做P1v2，60分鐘timebox，規則不改、A限本畫面。完成commit後嘗試push，失敗留本機；不P2／main／PR／stash。
 

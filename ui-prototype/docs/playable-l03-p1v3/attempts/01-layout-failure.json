@@ -1,0 +1,34 @@
+{
+  "started_at": "2026-10-22T11:18:07.096Z",
+  "url": "http://127.0.0.1:5183/",
+  "browser": {
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "bytes": 4586648,
+    "sha256": "f76f0234efb271041dc84f9f38fb858e01859d5da6f775f5108668eb3ae80975",
+    "scope": "local UI browser acceptance only"
+  },
+  "source_sha256": {
+    "ui-prototype/src/main.tsx": "2cb0735790eb1eb700669467066d904aeb6d506c596bca8d3776ed9a8cb88346",
+    "ui-prototype/src/AnimatedActor.tsx": "fc4b5446f16f78efeccc0958858ebf8ae791d5c1deb5b635a53df73804b38a93",
+    "ui-prototype/src/playable-l03/presentation.tsx": "a0263fc9348bdfaa06126682ddd727a37f63bce862d1dd266c8a85c536b17dde",
+    "ui-prototype/src/playable-l03/PlayableL03.tsx": "b942fd8b8b48430b98fb0bcaf1aa34697cd4eff547b4c625f0f7acef0d75d269",
+    "ui-prototype/src/playable-l03/playable.css": "fdc7bd786f0cf5e68bb0724b6fe637680cbb31265ed8204f66d01e0b8672b289",
+    "ui-prototype/src/playable-l03/rules.ts": "42f70baac448476dca3dd0abcb766b867cb692b448d951e08404482700592d76",
+    "ui-prototype/src/l03Scene.ts": "08780782ab51ef026e001c75f9959f65cdc33eb7d7b5d5a9fdd704eb65ae340d",
+    "ui-prototype/src/l03.css": "4711831275025200ac7041ebd06461da23b6f9cbffe23df084526cbcbe57dec0",
+    "ui-prototype/tests/playable-l03-p1v-browser.mjs": "b67d21dd7f774b785dd8c3a0c4609712eeaaf9be740c2a7c0a32c4dbb6cd75ea",
+    "ui-prototype/package.json": "7be910ce26e797587a3b94144e811635023e7b08fb20111301d5ce7310a058ad",
+    "ui-prototype/package-lock.json": "403d0966ac1504e643402352e5db5d95464c8ba890b25a10a2cc19a1f2b5e4cb",
+    "ui-prototype/public/art/l03-party-v1.png": "f67086afa5919d17872ceb8c22c4e6eefd5513dc6e14d8637f38cf90abd4bb08",
+    "ui-prototype/public/art/l03-enemies-v1.png": "2cdaba9f74dc384ec262a71f9ec1b814949a4325c52b93836b2da50669ddea8c",
+    "ui-prototype/public/art/terrain-v2.png": "c1aa5dd10c2476fa8fbcb3059842d11d92066bebb3f504ac2080d36fcf18ceaf",
+    "ui-prototype/docs/playable-l03-p0/success.jsonl": "8618965d532ea1e9ed9ef00fc768f1d367883baeb66375b7f31e5873cbf74622",
+    "ui-prototype/docs/playable-l03-p0/failure.jsonl": "bb940ac62ef909d041d44fd0d0e0bc621d0433d990ec93350c2d0ab3ce3ab9b9"
+  },
+  "checks": [],
+  "captures": [],
+  "errors": [],
+  "human_playtest": "HUMAN_PENDING",
+  "exit_code": 1,
+  "failure": "AssertionError [ERR_ASSERTION]: {\"width\":1280,\"height\":720,\"scrollWidth\":1280,\"controls\":{\"x\":0,\"y\":719,\"width\":1280,\"height\":73,\"top\":719,\"right\":1280,\"bottom\":792,\"left\":0}}\n    at file:///D:/campaign-forge/ui-prototype/tests/playable-l03-p1v-browser.mjs:135:45"
+}

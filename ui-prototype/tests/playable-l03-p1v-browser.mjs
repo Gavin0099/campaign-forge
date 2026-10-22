@@ -15,7 +15,8 @@ assert.equal(fs.realpathSync(binding.path), binding.path);
 assert.equal(fs.statSync(binding.path).size, binding.bytes);
 assert.equal(hash(fs.readFileSync(binding.path)), binding.sha256);
 const { chromium } = await import('playwright');
-const output = path.join(root, process.argv.includes('--p1v2')
+const output = path.join(root, process.argv.includes('--p1v3')
+  ? `ui-prototype/docs/playable-l03-p1v3/${process.argv.includes('--before') ? 'before' : 'p1v-regression'}` : process.argv.includes('--p1v2')
   ? 'ui-prototype/docs/playable-l03-p1v2/p1v-regression' : 'ui-prototype/docs/playable-l03-p1v');
 const scratch = path.join(root, 'scratch/playable-l03-p1v-browser');
 fs.mkdirSync(output, { recursive: true }); fs.mkdirSync(scratch, { recursive: true });
@@ -32,6 +33,7 @@ const checks = [], captures = [], errors = [];
 page.on('pageerror', e => errors.push(e.message));
 page.on('response', r => { if (r.status() >= 400) errors.push(`${r.status()} ${r.url()}`); });
 const sourceFiles = ['ui-prototype/src/main.tsx', 'ui-prototype/src/AnimatedActor.tsx',
+  ...(process.argv.includes('--p1v3') && !process.argv.includes('--before') ? ['ui-prototype/src/playable-l03/presentation.tsx'] : []),
   'ui-prototype/src/playable-l03/PlayableL03.tsx', 'ui-prototype/src/playable-l03/playable.css',
   'ui-prototype/src/playable-l03/rules.ts', 'ui-prototype/src/l03Scene.ts', 'ui-prototype/src/l03.css',
   'ui-prototype/tests/playable-l03-p1v-browser.mjs', 'ui-prototype/package.json', 'ui-prototype/package-lock.json',
@@ -96,6 +98,7 @@ async function replay(name, skip, capturePrefix) {
       if (capturePrefix && input.turn === 1) await screenshot(`${capturePrefix}-intent`);
       await page.locator('[data-p1v-end]').click();
       if (capturePrefix && input.turn === 1) {
+        if (process.argv.includes('--p1v3')) await screenshot(`${capturePrefix}-turn-banner`);
         await page.waitForFunction(()=>{
           const raw=document.querySelector('[data-p1v-frame]')?.dataset.p1vFrame;
           const f=raw ? JSON.parse(raw) : null;
@@ -126,7 +129,7 @@ try {
     assert.equal(await page.locator('[data-p1v-unit]').count(),5);
     assert.equal(await page.locator('[data-p1v-intent]').count(),2);
     assert.equal(await page.locator('[data-p1v-intent-path]').count(),2);
-    assert(await page.getByText('絞盤 (2,1)',{exact:true}).isVisible());
+    assert(await page.getByText(/^絞盤(?: \(2,1\))?$/).isVisible());
     const layout = await page.evaluate(()=>({width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,
       controls:document.querySelector('.p1v-controls').getBoundingClientRect().toJSON()}));
     assert(layout.scrollWidth<=size.width); assert(layout.controls.bottom<=size.height+1,JSON.stringify(layout));

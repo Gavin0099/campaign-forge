@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P1v3 — 實機 Before / After</title>
+<style>body{margin:24px;background:#14201c;color:#eee7d6;font:16px system-ui,sans-serif}h1{font:28px Georgia,serif}select{font:inherit;padding:8px;margin:8px;background:#30372c;color:inherit;border:1px solid #d2b777}main{display:grid;grid-template-columns:1fr 1fr;gap:20px}img{width:100%;border:1px solid #756448}figure{margin:0}figcaption{margin:12px 0;color:#d2b777}a{color:#d2b777}p{max-width:90ch;line-height:1.6}@media(max-width:900px){main{grid-template-columns:1fr}}</style>
+<h1>P1v3 · 渡口戰場</h1>
+<p>兩側均為真實 Chrome 執行畫面。規則與地圖不變；Before 在變更前錄取。回合橫幅的 Before 是同一轉場時點，當時尚無橫幅；動態畫面取樣幀不完全相同。真人試玩與 Owner 美術驗收：HUMAN_PENDING。</p>
+<label>解析度 <select id="size"><option>1280x720</option><option>1920x1080</option></select></label>
+<label>場景 <select id="scene"><option value="start">開始</option><option value="move-range">選取／移動範圍</option><option value="intent">敵方意圖</option><option value="mid-animation">動畫中</option><option value="turn-banner">回合轉場</option><option value="victory">勝利</option><option value="defeat">失敗</option></select></label>
+<main><figure><figcaption>Before · 7319ef0</figcaption><img id="before" alt="修改前的實機畫面"></figure><figure><figcaption>After · P1v3</figcaption><img id="after" alt="P1v3 實機畫面"></figure></main>
+<p><a href="STYLE.md">風格與素材</a> · <a href="VERIFICATION.md">測試與已知限制</a> · <a href="visual-results.json">新增回饋證據</a></p>
+<script>const size=document.querySelector('#size'),scene=document.querySelector('#scene');function show(){document.querySelector('#before').src=`before/${size.value}-${scene.value}.png`;document.querySelector('#after').src=`p1v-regression/${size.value}-${scene.value}.png`;}size.onchange=scene.onchange=show;show();</script>
+</html>
