@@ -1,5 +1,191 @@
 # Handoff: codex/playable-l03-research
 
+## P1v4 art pass
+
+This is the latest chunk. All earlier P1v/P1v2/P1v3/P0 sections below describe
+historical deliveries. The scope here is presentation only: replace the tiled
+ground and geometric props, distinguish the knight portraits, and enlarge
+figures without breaking the retained input/overlap contracts.
+
+| Field | P1v4 |
+| --- | --- |
+| Branch / own worktree | `codex/playable-l03-research` / `D:\campaign-forge` |
+| Owner-named baseline | `f1e0ab627e92e68c726c3cdef47c08735cd70831`; clean, exclusive worktree confirmed by Owner; no pull |
+| Implementation | **`8bd06dbb870f406ff76ceffe531027cb44ec3187`**, normal commit exit 0, **pushed successfully** |
+| Push | `git push origin codex/playable-l03-research` exit **0**, remote `f1e0ab6..8bd06db`; hooks enabled |
+| Owner instruction | Only P1v4 art, 120-minute cap; built-in image_gen allowed; rules.ts/packages/P2/P0d untouched; commit and try push; no main/PR/stash |
+| Time, Asia/Taipei | Start **2026-10-22 20:34:40**; implementation push confirmed **21:07:49** = **33m09s**. This handoff is a separate documentation commit. Its final SHA, push result and total elapsed are reported in the final response. |
+
+### 1. What changed visually
+
+- One continuous original painted ferry landscape replaces 99 repeated material
+  diamonds. The exact original grid sits over it; idle lines are hidden, legal
+  ranges/hover/focus/selection remain visible, and intent arrows are unchanged.
+- Built-in generated alpha props replace the SVG winch, wooden bridge ends and
+  wagon chassis. Original coordinates remain winch (2,1), wagon (8,4),
+  surviving bridge ends (3,4)/(6,4). The river gap stays open and impassable.
+- The second knight now has a distinct open-face kettle-helmet portrait;
+  all five portrait signatures are unique. Battlefield knight bodies remain
+  the existing closed-helmet figure, a known visual mismatch.
+- Common figure viewport increased from 50 to 52 scene units. A tighter knight
+  crop removes unused space/neighboring creature fringe, making the visible
+  knight art about 24.7% taller; party art is 4% taller.
+- **Shared-file: `ui-prototype/PLAN.md`** and
+  **Shared-file: `memory/01_active_task.md`**. Both were edited under Codex-owned
+  locks, with SHARED-EDIT output and matching commit trailers. Initial and
+  pre-push fetches showed no unknown commits on this branch. Owner's no-pull
+  instruction overrides the default shared-file pull step.
+- No original PNG bytes, rules, story/Ink, dependencies, older UI logic,
+  P0/P0b/P0c fixtures or other worktrees were changed.
+
+### Assets generated / rejected
+
+All originals: `ui-prototype/public/art/l03-p1v4/`. Built-in image_gen only.
+Full prompts/date: [art-prompts.json](../../ui-prototype/docs/art-prompts.json).
+Full hashes/dimensions: [art-manifest.json](../../ui-prototype/docs/art-manifest.json).
+
+| Original | Use | SHA-256 |
+| --- | --- | --- |
+| `battlefield.png` | Used, guide-aligned single painting | `8c42a5e46952a85db4bce232ac8b3463090a1ddc0f3bf65b25bcea6031e713c5` |
+| `props.png` | Used, winch / broken bridge / wagon transparent atlas | `8f9e678bd048cffe67c9d1f384b6cb0a3ae53cf4d306fa5262019787ac0d16cf` |
+| `knight-2-portrait.png` | Used, distinct second knight portrait | `419984a8c18c6a25341857a61ca29e3cc15137c88a0eae2368bc7717dde58019` |
+| `battlefield-attempt-01.png` | **REJECTED**, river too wide / bridge layout displaced; original retained | `dceaf33a86eda498f3a44c82be53bc5c1d1347c8a7e69bfcc3bd6bf792f4530b` |
+
+The source-authored geometry guide is explicitly a diagram, not a game
+screenshot. The accepted painting was regenerated from that guide, preserving
+the original camera. Runtime crops/masks do not modify PNG bytes. Existing
+party/enemy art is reused unchanged. No commercial/reference-game imagery.
+
+### Scale exception, with actual failure evidence
+
+1.3 full diamond heights = 67.6 units. Running the unweakened P1v2 browser
+suite failed `figures overlap: lace/thoma`, exit **1**. The original report
+and screenshot are in
+[rejected-scale-1.3](../../ui-prototype/docs/playable-l03-p1v4/rejected-scale-1.3/after-results.json).
+The winch cluster also has same-screen-X foot positions only 52 units apart.
+
+Final common viewport: **52 / 52 = 1.00 tile**. This is the geometric
+zero-overlap maximum, not an assertion that the 1.2–1.5 target was met.
+Visible pixels measured with alpha ≥128: **0.95973–0.97890 tile**.
+Viewport screen height is **39.31px at 720p / 66.98px at 1080p**.
+Feet, depth sort and tile-only hit areas are unchanged; no tolerance/behavior
+assertion was relaxed. See [STYLE](../../ui-prototype/docs/playable-l03-p1v4/STYLE.md).
+
+### 2. Verification and screenshots
+
+[Verification](../../ui-prototype/docs/playable-l03-p1v4/VERIFICATION.md),
+[actual command ledger](../../ui-prototype/docs/playable-l03-p1v4/command-results.json),
+[Before/After viewer](../../ui-prototype/docs/playable-l03-p1v4/comparison.html).
+
+| Command from repo root | Exit / result |
+| --- | --- |
+| `node ui-prototype/tests/playable-l03-p0.mjs` | **0**, 8 checks, original traces byte-identical |
+| `node ui-prototype/tests/playable-l03-p0b.mjs` | **0**, 9 checks |
+| `node ui-prototype/tests/playable-l03-p0c.mjs` | **0**, 9 checks |
+| `node ui-prototype/tests/playable-l03-p1v-browser.mjs --p1v4` | **0**, 26 checks |
+| `node ui-prototype/tests/playable-l03-p1v2-browser.mjs --p1v4` | **0**, 9 checks |
+| `node ui-prototype/tests/playable-l03-p1v3-browser.mjs --p1v4` | **0**, 9 checks |
+| `node ui-prototype/tests/playable-l03-p1v4-browser.mjs` | **0**, 9 checks |
+| `npm run build --prefix ui-prototype` | **0**, TypeScript + Vite |
+| Existing Python `scripts/validate_ui_scope.py` | **0**, 13 protected files; approved sandbox retry |
+| `node ui-prototype/tests/verify-p1v4-evidence.mjs` | **0**, 53 browser checks / 33 capture hashes / 47 source bindings current |
+| `git diff --check`, staged check, protected-path and original-art baseline checks | **0** |
+| Normal implementation commit / pre-push fetch / normal push | **0 / 0 / 0** |
+
+**79 final automated checks** (26 pure + 53 browser). Earlier browser
+assertions/selectors are unchanged; only evidence destinations and source
+hash inclusion were extended. The P1v regression includes both legacy story
+choices, absence/solo deployment, dialogue log, move/skill preview, Esc,
+confirmation and result-to-campaign, plus victory/defeat/retry, interrupted
+animations, keyboard, 200% text and the 390px fallback. P1v2 keeps its 100
+pointer hits and overlap/depth/anchor checks. New art checks cover all 99
+cell-centre hits, 18 impassable river cells, true-alpha props, unique portraits,
+one ground image, hidden idle grid and measured character size.
+
+All captures are real browser output under
+`ui-prototype/docs/playable-l03-p1v4/`. For each `SIZE` =
+`1280x720` / `1920x1080`:
+
+- `after-SIZE-start.png`
+- `after-SIZE-selected-path-preview.png`
+- `after-SIZE-enemy-intent.png`
+- `p1v3-regression/after-SIZE-{enemy,ally}-turn-banner.png`
+- `p1v-regression/SIZE-{victory,defeat}.png`
+- `p1v2-regression/after-SIZE-{column,winch,text-200}.png`
+
+The separate `DIAGNOSTIC-grid-alignment` captures deliberately reveal the
+full grid through test-only CSS; they are not normal gameplay screenshots.
+Prior P1v3 images in the comparison are archived Before evidence, not
+freshly recaptured or regenerated. The model inspected both sizes, path,
+cluster, phase, success/failure and alignment. This is not human testing.
+
+### 3–6. Known gaps, risks, open questions and not claimed
+
+- Requested 1.3-tile scale is not attained: explicit retained-test exception
+  above. 720p face recognition and readability require human assessment.
+- Both knight bodies still share their old sprite; second portrait/body
+  helmet consistency remains unfinished.
+- Painted shoreline/foliage edges are approximate decoration, not a navigation
+  mesh. Rule polygons alone determine movement; the two-column gap is retained.
+- Optional 2–3 frame animation was skipped; single-frame bob/slide remains.
+  No attack/hit/audio/engine/rules work was added.
+- A remains **THIN**; no claim of deeper tactics or improved 3–5 minute pacing.
+- **HUMAN_PENDING**: human playtest and Owner art approval. No commercial
+  quality acceptance, gamepad/screen-reader trial, GPU benchmark, full
+  accessibility certification or native lifecycle completion is claimed.
+- Normal pre-commit issued its existing advisory `missing_canonical_memory`
+  with `completion_claim_allowed=True`; it did not fail. Pre-push inventory
+  and framework self-smoke ran normally. Self-smoke is not a native callback,
+  and its doc-only advisories do not authorize additional work.
+- Sandbox initially blocked Python access and Git index writes; approved
+  same-scope escalations ran the existing validator and normal Git operations.
+  No credentials, global settings, hooks, governance code or trust were changed.
+- For Claude/GPT when Owner requests review: assess the painting/grid alignment,
+  material/portrait consistency and the explicit size compromise from captures.
+- For Gavin: accept/reject the art and scale exception; model review is input
+  only. No review, merge or future slice has been initiated.
+- This handoff is task DONE, not SessionEnd; no daily memory was hand-edited.
+
+### Resource self-check — RESOURCE-CHECKLIST A–D
+
+Read the cached game-ui-ux / game-feel skills at
+`gamedev-skills/awesome-gamedev-agent-skills@0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd`
+(SHA-256 `8a094c84a377503aa8f4c40df676d1c6b6fc07d36ff95554ce06467f1614397e` /
+`68fc818ad939151be2db9e358e4295a71830c19d61f3aff849f1599307f39f9d`).
+Also applied imagegen, frontend-design and the executable trust-audit skill
+to the existing browser binding. No skill/dependency install or code borrowing.
+
+| Checklist item | Result and evidence |
+| --- | --- |
+| A: prototype-fast | **N/A new mechanic / PASS scope** — art only; keep if continuous painting preserves existing input/overlap/trace contracts |
+| A: level-design | **N/A map design / PASS regression** — unchanged rules/MAP; P0 reachability and win traces |
+| A: game-ai | **N/A AI changes / PASS regression** — unchanged resolver, existing intent reasons and exact replay parity |
+| A: game-ui-ux — range/threat/intent | **PASS scoped** — visible legal range, same-command preview and enemy arrows; no attack threat exists in this ruleset |
+| A: game-ui-ux — objectives/input | **PASS** — existing counters, phase, key hints; P1v/P1v3 reports and both-size captures |
+| A: game-ui-ux — focus/responsive | **PASS tested scope** — keyboard, Retry, Esc, 200%, 720p/1080p and 390px; no gamepad claim |
+| A: game-feel — pacing/feedback | **PASS scoped** — existing short landing/phase feedback returns to rest, unchanged result before/after playback; P1v3 9 checks |
+| A: game-feel — impact | **N/A** — no attack/hit event in scope; no fabricated damage feedback |
+| A: game-feel — reduced motion | **PASS** — pulse/glints/landing/banner effects disabled with identical rule results |
+| B: Grid-Tactics separation | **PASS** — pure rules unchanged, view reads events; architecture reference only, no copied unlicensed code |
+| B: HopeMetal licenses | **N/A new borrowing / PASS boundary** — original generated/reused art only, no external code or art |
+| B: engine/dependencies | **PASS** — package and lockfile unchanged |
+| C: solo 3–5 minute battle | **FAIL / HUMAN_PENDING** — no uncoached human trial; automated replay is insufficient |
+| C: understandable enemy actions | **PASS engineering / HUMAN_PENDING comprehension** — visible reasons/arrows, unchanged resolver parity |
+| C: win or lose | **PASS** — animated/skipped victory and defeat at both sizes |
+| C: tactical alternatives | **PASS minimum / THIN retained** — hold vs idle still produce different outcomes; no depth claim |
+| C: restart/change strategy | **PASS** — Retry/reset/focus and pure-rule replay checks |
+| C: duplicates/stuck/invalid/interrupted | **PASS tested scope** — all retained P1v guards/skip/unmount checks |
+| C: resolutions/keyboard | **PASS automated** — 53 browser checks, actual images and all 99 grid-centre hit checks |
+| C: automated vs human | **PASS** — HUMAN_PENDING is separate from machine results and model inspection |
+| D: SRD/CC-BY/IP/contract | **N/A rule adaptation / PASS boundary** — no rules change, WotC IP, commercial imagery or external source imported |
+| D: authorization | **PASS** — Owner branch/base, no pull/main/PR/stash/P2/P0d/story/dependencies; normal hooks and own-branch push |
+
+The human-playtest FAIL is explained and remains open. No unexplained C/D
+FAIL is being hidden as art approval. This self-check supports scoped delivery,
+not full playable/commercial acceptance.
+
+---
+
 ## P1v playable screen
 
 This is the current chunk. Earlier P0/P0b/P0c delivery and scope statements
