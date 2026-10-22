@@ -78,3 +78,51 @@
 接線與驗收方式見 governance/CODEX-LIFECYCLE.md。以本 repo installer 生成四個 Codex 事件，不使用固定版上游會把收尾掛在 Stop 的 installer。Stop 僅執行任務驗證及候選準備；SessionEnd 才執行 canonical closeout。沒有實際平台回呼與有效 writer receipt，不得宣稱完整自動導入。
 
 治理程式變更需執行 `python scripts/record_governance_checks.py`，保留真實 exit codes；該命令的測試使用 repo 內隔離 Git 副本，不建立模型代理、外部聊天或網路服務。程式碼與相關檔案改變會使執行證據過期。接線與信任是不同驗收；不得自行寫入使用者的 Codex 信任資料或繞過審核。
+
+## Multi-Agent Coordination — 2026-10-22
+
+Owner authorization (Gavin, 2026-10-22): Codex and Claude Code may run in parallel under herdr, each in its own Git worktree. This section supersedes the line above "本文件未…要求新增代理或平行執行" for these two agents only, and narrows every earlier push authorization: no agent pushes to `main` any more. It grants no new scope, slice, PR, deploy, Actions or S4 authority; each task still needs its own Owner instruction. `AGENTS.base.md` and all lines above still apply.
+
+### Roles and worktrees
+
+| Agent | Owns | Worktree (only place it writes) | Branches |
+| --- | --- | --- | --- |
+| Codex | Implementation: art, battle UI, gameplay code under `ui-prototype/` | `D:\campaign-forge` | `codex/<task>` |
+| Claude Code | Review and narrative: quality audits, story text, Ink | `D:\campaign-forge\scratch\quality-review`, `D:\campaign-forge\scratch\narrative-alignment` | `review/<task>`, `story/<task>` |
+| Gavin | Merges into `main`; resolves conflicts; approves shared-file edits when asked | any | `main` |
+
+- Work only in your own worktree. Read other branches through `git fetch origin` and `git show` / `git diff origin/<branch>`, never by touching another worktree.
+- Never run `checkout`, `switch`, `stash`, `reset`, `clean`, `restore` or `worktree remove` in another agent's worktree. Never `git stash` at all: stashes are shared by every worktree. Commit work-in-progress to your own branch instead.
+- Never edit files outside your role. If you need a change in the other agent's area, write it under "Open questions" in your handoff or review file.
+- One agent process per worktree. Before starting, confirm no other Codex or Claude session (desktop app included) is open on the same worktree.
+
+### Git
+
+- Push only to your own branch prefix. Never push to `main`, never merge into `main`, never open a PR, never force-push, never `--no-verify`. The shared Git hooks in `.git/hooks` run for every worktree; a failing hook is a stop-and-report, not something to bypass.
+- `git fetch origin` before starting a task and before every push. If your remote branch has commits you did not make, stop and report (existing rule above).
+- Start a new task branch from `origin/main` unless the Owner names another base.
+
+### Shared files (single writer)
+
+Shared files: `docs/DECISIONS.md`, `docs/story/FLAGS.md`, `memory/01_active_task.md`, `memory/02_project_facts.md`, `ui-prototype/PLAN.md`.
+
+1. Default owner: Claude edits `docs/story/FLAGS.md`; Codex edits `ui-prototype/PLAN.md`; `docs/DECISIONS.md` and `memory/01–02` are open to both, one at a time.
+2. Take the lock: `New-Item -ItemType File -Path D:\campaign-forge\scratch\locks\<file-name>.lock -Value "<agent> <branch> <ISO time>" -ErrorAction Stop` (create `scratch\locks` first if missing). If the file already exists, do not edit; wait, or report to the Owner. Never delete another agent's lock; ask the Owner about a lock older than 2 hours.
+3. `git fetch origin` and `git pull --ff-only` on your branch, then edit, commit and push.
+4. Say which: print `SHARED-EDIT: <path> by <agent> on <branch>` in your pane output, add a `Shared-file: <path>` trailer to the commit message, and list the file in your handoff or review file.
+5. Release: delete only your own lock after the push.
+6. New IDs in `docs/DECISIONS.md` (Dxxx, Pxxx, Uxxx, Gxxx, Exxx): pick the next number after the highest one on any branch: `git grep -h -o -E '^[|] [A-Z][0-9]{3}' $(git for-each-ref --format='%(refname)' refs/remotes/origin) -- docs/DECISIONS.md`.
+7. Never hand-edit the governance daily record `memory/YYYY-MM-DD.md`; it is written only by closeout.
+
+### Handoff (Codex → Claude → Gavin)
+
+1. When a chunk is done, Codex commits and pushes `codex/<task>`, then writes `docs/handoff/<branch-with-slashes-as-dashes>.md` from `docs/handoff/TEMPLATE.md` (for example `docs/handoff/codex-playable-l03-research.md`), commits and pushes it on the same branch, and stops. Pushing a handoff is a task DONE, not session end.
+2. Claude reviews the diff and that file and writes findings to `docs/review/<same-slug>.md` on `review/<task>`. Claude does not edit Codex's handoff file (it lives on a branch checked out in Codex's worktree).
+3. When the Owner asks, Grok Bot (Gavin's desktop assistant) sends the compare link and handoff to the ChatGPT web project `campaign-forge` using `docs/review/GPT-REVIEW-PROMPT.md`, and commits the reply verbatim as `docs/review/gpt-<same-slug>.md` on a `review/gpt-<task>` branch. GPT is an independent third reviewer. Its findings carry the same weight as Claude's: they are input, not approval.
+4. Codex acts on Claude or GPT findings only when the Owner says so, by reading `git show origin/review/<task>:docs/review/<slug>.md` (or the `gpt-` file).
+5. Gavin decides merges. Model review never counts as Owner approval, human playtest or commercial art approval.
+
+### Codex specifics
+
+- You are the implementer. Do not write story text, Ink or `docs/story/**` except to read them; `docs/story/CODEX-HANDOFF.md` story steps now belong to Claude.
+- Governance hooks for your worktree are the ones in `governance/CODEX-LIFECYCLE.md`; herdr's global Codex hook only reports pane state and does not replace them.
