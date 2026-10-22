@@ -116,6 +116,7 @@ Shared files: `docs/DECISIONS.md`, `docs/story/FLAGS.md`, `memory/01_active_task
 
 ### Handoff (Codex → Claude → Gavin)
 
+0. Every chunk is reviewed against `docs/review/RESOURCE-CHECKLIST.md` (skills, reference repos, playable acceptance bar, project rules). Codex fills a self-check section in its handoff. Claude and GPT each fill the checklist in their review. A chunk with any unexplained FAIL in sections C or D is not ready for Owner decision.
 1. When a chunk is done, Codex commits and pushes `codex/<task>`, then writes `docs/handoff/<branch-with-slashes-as-dashes>.md` from `docs/handoff/TEMPLATE.md` (for example `docs/handoff/codex-playable-l03-research.md`), commits and pushes it on the same branch, and stops. Pushing a handoff is a task DONE, not session end.
 2. Claude reviews the diff and that file and writes findings to `docs/review/<same-slug>.md` on `review/<task>`. Claude does not edit Codex's handoff file (it lives on a branch checked out in Codex's worktree).
 3. When the Owner asks, Grok Bot (Gavin's desktop assistant) sends the compare link and handoff to the ChatGPT web project `campaign-forge` using `docs/review/GPT-REVIEW-PROMPT.md`, and commits the reply verbatim as `docs/review/gpt-<same-slug>.md` on a `review/gpt-<task>` branch. GPT is an independent third reviewer. Its findings carry the same weight as Claude's: they are input, not approval.

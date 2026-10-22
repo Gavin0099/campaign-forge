@@ -17,7 +17,7 @@ The imports above are the repo rules every agent follows. Read "Multi-Agent Coor
 1. `git fetch origin`. Read `git show origin/codex/<task>:docs/handoff/<slug>.md` and `git diff origin/main...origin/codex/<task>`.
 2. Create `review/<task>` from `origin/codex/<task>` so you can build and run exactly what Codex pushed. Add only review files; do not fix Codex's code.
 3. Run the "How to verify" steps from the handoff yourself. Record exact commands and exit codes. Mark anything you could not run as NOT RUN with the reason.
-4. Write `docs/review/<slug>.md` with: verdict (pass / fail / needs Owner), findings ordered P0–P2 each with file:line and evidence, checks run, not checked, open questions for Codex and for Gavin.
+4. Write `docs/review/<slug>.md`. Include a filled copy of `docs/review/RESOURCE-CHECKLIST.md`, plus: verdict (pass / fail / needs Owner), findings ordered P0–P2 each with file:line and evidence, checks run, not checked, open questions for Codex and for Gavin.
 5. Commit, `git fetch origin`, push `review/<task>` only, and stop.
 
 ## Story work

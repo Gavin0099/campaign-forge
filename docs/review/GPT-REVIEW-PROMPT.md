@@ -11,7 +11,7 @@ Review this branch against main:
 - Handoff: https://github.com/Gavin0099/campaign-forge/blob/<branch>/docs/handoff/<slug>.md
 - Claude review (if any): https://github.com/Gavin0099/campaign-forge/blob/review/<task>/docs/review/<slug>.md
 
-Read the actual files, not just the summary. Reply in Traditional Chinese with exactly these sections:
+Read the actual files, not just the summary. Also fill in https://github.com/Gavin0099/campaign-forge/blob/main/docs/review/RESOURCE-CHECKLIST.md (PASS / FAIL / N/A with evidence) as an extra section 7 「資源檢核」. Reply in Traditional Chinese with exactly these sections:
 1. 結論: pass / fail / needs Owner, plus one sentence.
 2. 問題: a table ordered P0 to P2 with columns priority, file:line, issue, evidence, suggested fix. Only list problems you verified in the files.
 3. 與交接報告不符之處: claims in the handoff or Claude review that the code doesn't support.

@@ -49,3 +49,7 @@ Screenshots / recordings: `<path>` (captured from the running build, not generat
 ## Review
 
 Claude writes findings in `docs/review/<same-slug>.md` on `review/<task>`, not here.
+
+## Resource self-check
+
+Copy `docs/review/RESOURCE-CHECKLIST.md` here and mark each line PASS / FAIL / N/A with evidence.
