@@ -1,4 +1,4 @@
-import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState, type CSSProperties } from "react";
 import { AnimatedActor } from "../AnimatedActor";
 import type { Playback } from "../combatPlayback";
 import { command, DEFAULT_CONFIG, initialState, key, MAP, resolve,
@@ -15,6 +15,7 @@ const reasons = { "turn-winch": "已在絞盤旁，本回合干擾＋1", approac
 const cells = MAP.rows.flatMap((row, y) => [...row].map((tile, x) => ({ x, y, tile })));
 const initialMessage = "選擇我方單位，再點亮格移動。";
 type Frame = { unit: string; from: Cell; to: Cell; progress: number };
+type BlockFeedback = { unit: string; cell: Cell; ally?: Cell; dx: number; dy: number };
 
 export function PlayableL03({ onExit }: { onExit: () => void }) {
   const [state, setState] = useState(start);
@@ -28,6 +29,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
   const [banner, setBanner] = useState<{ phase: "ally" | "enemy"; serial: number } | null>(null);
   const [arrival, setArrival] = useState<{ unit: string; serial: number } | null>(null);
   const [winchFeedback, setWinchFeedback] = useState<{ total: number; delta: number; serial: number } | null>(null);
+  const [blocks, setBlocks] = useState<{ items: BlockFeedback[]; serial: number } | null>(null);
   const feedbackSerial = useRef(0);
   const resolving = useRef(false);
   const [waited, setWaited] = useState<string[]>([]);
@@ -57,6 +59,21 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     const interference = result.events.find(e => e.type === "progress" && e.delta > 0);
     if (interference?.type === "progress" && !skipRef.current && !reducedRef.current)
       setWinchFeedback({ total: interference.total, delta: interference.delta, serial: ++feedbackSerial.current });
+    if (!skipRef.current && !reducedRef.current) {
+      // A blocked intent is the existing rule event. Only a genuinely adjacent
+      // ally earns a clash spark; no invented hit, damage, or displaced cell.
+      const items = result.events.flatMap(e => {
+        if (e.type !== "intent" || e.reason !== "blocked") return [];
+        const unit = result.state.units.find(u => u.id === e.unit)!;
+        const ally = result.state.units.find(u => u.alive && u.side === "ally" &&
+          Math.abs(u.cell.x-unit.cell.x)+Math.abs(u.cell.y-unit.cell.y) === 1);
+        const from = center(unit.cell), toward = center(ally?.cell || MAP.winch);
+        const length = Math.hypot(from.x-toward.x, from.y-toward.y) || 1;
+        return [{ unit: e.unit, cell: unit.cell, ally: ally?.cell,
+          dx: (from.x-toward.x)/length*7, dy: (from.y-toward.y)/length*7 }];
+      });
+      if (items.length) setBlocks({ items, serial: ++feedbackSerial.current });
+    }
     const lastMove = [...result.events].reverse().find(e => e.type === "move");
     if (lastMove && !skipRef.current && !reducedRef.current) setArrival({ unit: lastMove.unit, serial: ++feedbackSerial.current });
     if (resolving.current) {
@@ -91,7 +108,12 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     return () => window.clearTimeout(timer);
   }, [winchFeedback]);
   useEffect(() => {
-    if (skip || reduced) { setWinchFeedback(null); setArrival(null); }
+    if (!blocks) return;
+    const timer = window.setTimeout(() => setBlocks(null), 600);
+    return () => window.clearTimeout(timer);
+  }, [blocks]);
+  useEffect(() => {
+    if (skip || reduced) { setWinchFeedback(null); setArrival(null); setBlocks(null); }
   }, [skip, reduced]);
 
   // Both legal highlights and intent are pure queries against the SAME state.
@@ -111,7 +133,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     if (busyRef.current) return;
     const result = command(stateRef.current, input);
     if (!result.ok) { setMessage("無法執行；請選擇亮格或可行動的我方。" ); return; }
-    setSelected(null); setInspected(null); setHovered(null); setHoverCell(null); setArrival(null); setWinchFeedback(null);
+    setSelected(null); setInspected(null); setHovered(null); setHoverCell(null); setArrival(null); setWinchFeedback(null); setBlocks(null);
     if (input.type === "resolve" || input.type === "retry") setWaited([]);
     if (input.type === "retry") {
       stateRef.current = result.state; setState(result.state); setVisualUnits(result.state.units);
@@ -158,6 +180,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
   const endTurn = () => apply({ type: "resolve", turn: stateRef.current.turn });
   const active = state.status === "playing";
   const winchFx = !skip && !reduced ? winchFeedback : null;
+  const blockFx = !skip && !reduced ? blocks : null;
   const inspectedUnit = state.units.find(u => u.id === (hovered || inspected));
   // Sort actual animated foot positions, including a stable column tie-breaker.
   const actors = visualUnits.filter(u => u.alive).map(u => {
@@ -212,8 +235,10 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
               <path d="M0 0L10 5L0 10Z" fill="#ffd2a0" />
             </marker>
           </defs>
-          <Terrain uid={uid} />
-          <Landmarks dev={dev} winchSerial={winchFx?.serial} warning={state.progress >= 2} />
+          <g className={blockFx ? "p1v-impact-scene" : undefined}>
+            <Terrain uid={uid} />
+            <Landmarks dev={dev} winchSerial={winchFx?.serial} warning={state.progress >= 2} />
+          </g>
           {active && !busy && enemyPaths.map((e, i) => <polyline key={e.unit} data-p1v-intent-path={e.unit}
             points={e.path.map(p => `${center(p).x},${center(p).y}`).join(" ")}
             className={`p1v-intent-path knight-${i}`} markerEnd={`url(#${uid}-arrow)`} />)}
@@ -239,7 +264,9 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
             <polyline points={movePath.map(p => `${center(p).x},${center(p).y}`).join(" ")} />
             {movePath.slice(1).map((p,i) => <g key={key(p)} transform={`translate(${center(p).x} ${center(p).y})`}><circle r="7" /><text y="3" textAnchor="middle">{i+1}</text></g>)}
           </g>}
+          <g className={blockFx ? "p1v-impact-scene" : undefined}>
           {actors.map(({u, moving, p}) => {
+            const block = blockFx?.items.find(b => b.unit === u.id);
             const clip: Playback | null = moving ? { kind:"physical", actor:u.id, target:"", from:moving.from, to:moving.to,
               committed:true, stage:"move", progress:moving.progress, elapsed:moving.progress*230, sequence:1 } : null;
             return <g key={u.id} transform={`translate(${p.x} ${p.y})`} className="p1v-unit" data-p1v-unit={u.id}
@@ -250,10 +277,23 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
                 {u.side === "ally" ? <ellipse rx="17" ry="6" /> : <path d="M-19 0 0-7 19 0 0 7Z" />}
               </g>
               <g key={arrival?.unit === u.id ? arrival.serial : "idle"} className={arrival?.unit === u.id && !reduced && !skip ? "p1v-arrival" : undefined}>
-                <AnimatedActor id={u.id} clip={clip} reduced={reduced}><Figure id={u.id} /></AnimatedActor>
+                <g className={block ? "p1v-block-recoil" : undefined} style={block ? {"--recoil-x":`${block.dx}px`,"--recoil-y":`${block.dy}px`} as CSSProperties : undefined}>
+                  <AnimatedActor id={u.id} clip={clip} reduced={reduced}><Figure id={u.id} /></AnimatedActor>
+                </g>
               </g>
             </g>;
           })}
+          </g>
+          {blockFx && <g key={blockFx.serial} className="p1v-feedback-layer" aria-hidden="true">
+            {blockFx.items.map(b => {
+              const p = center(b.cell), ally = b.ally ? center(b.ally) : null;
+              return <g key={b.unit} data-p1v-block-feedback={b.unit} transform={`translate(${p.x} ${p.y})`}>
+                <g className="p1v-impact-dust"><ellipse rx="15" ry="5" /><circle cx="-13" cy="-3" r="4" /><circle cx="12" cy="-4" r="3" /></g>
+                {ally && <g transform={`translate(${(ally.x-p.x)/2} ${(ally.y-p.y)/2-12})`}><path className="p1v-clash" data-p1v-clash d="M-11 0H11M0-11V11M-7-7 7 7M-7 7 7-7" /></g>}
+                <text className="p1v-block-pop" y="-62" textAnchor="middle">{ally ? "阻擋" : "通道受阻"}</text>
+              </g>;
+            })}
+          </g>}
         </svg>
         {banner && active && <div key={banner.serial} className={`p1v-turn-banner ${banner.phase}`} data-p1v-turn-banner={banner.phase} role="status"><span>— {String(state.turn).padStart(2,"0")} —</span><strong>{banner.phase === "enemy" ? "敵方回合" : "我方回合"}</strong></div>}
       </section>

@@ -30,16 +30,27 @@ async function load(){await page.goto(url);await settled();await page.evaluate(a
 async function capture(name){const file=`1280x720-${name}.png`;await page.screenshot({path:path.join(output,file)});captures.push({path:`ui-prototype/docs/playable-l03-p1v5/${file}`,sha256:hash(fs.readFileSync(path.join(output,file))),state:await state()});}
 async function turn(){const before=await state(),expected=resolve(before,before.turn);await page.locator('[data-p1v-end]').click();await settled();assert.deepEqual(await state(),expected.state);return expected;}
 async function prime(){await page.getByLabel('跳過動畫').check();for(let i=0;i<3;i++)await turn();await page.getByLabel('跳過動畫').uncheck();}
+async function blockSetup(){
+  await page.getByLabel('跳過動畫').check();
+  const rows=fs.readFileSync(path.join(root,'ui-prototype/docs/playable-l03-p0/success.jsonl'),'utf8').trim().split('\n').map(JSON.parse);
+  for(const {command:input} of rows.filter(r=>r.command).slice(0,6)){
+    if(input.type==='resolve'){await turn();continue;}
+    const before=await state(),expected=command(before,input);assert(expected.ok);
+    await page.locator(`[data-p1v-select="${input.unit}"]`).click();
+    await page.locator(`[data-p1v-cell="${input.to.x},${input.to.y}"]`).click();await settled();assert.deepEqual(await state(),expected.state);
+  }
+  await page.getByLabel('跳過動畫').uncheck();
+}
 try {
   await load();await prime();
   const seen=page.waitForFunction(()=>!!document.querySelector('[data-p1v-winch-feedback="2"]'),undefined,{polling:'raf'});
   await turn();await seen;
+  await capture('winch-interference');
   assert.equal(await page.locator('.p1v-winch-jerk').count(),1);
   assert.equal(await page.locator('.p1v-winch-rope.taut').count(),1);
   assert.equal(await page.locator('.p1v-pip-flash').count(),2);
   assert.equal(await page.locator('.p1v-winch-warning').count(),1);
   assert.equal(await page.locator('[data-p1v-end]').isEnabled(),true);
-  await capture('winch-interference');
   await page.waitForTimeout(750);
   assert.equal(await page.locator('[data-p1v-winch-feedback]').count(),0);
   assert.equal(await page.locator('.p1v-winch-jerk').count(),0);
@@ -61,6 +72,31 @@ try {
     pass(`${mode}: interference still resolves identically; no transient winch effects ever mount; warning stays static`);
   }
   await page.emulateMedia({reducedMotion:'no-preference'});
+  await load();await blockSetup();
+  const expectedBlock=resolve(await state(),3);assert(expectedBlock.events.some(e=>e.type==='intent' && e.reason==='blocked'));
+  const blockSeen=page.waitForFunction(()=>!!document.querySelector('[data-p1v-block-feedback="knight-2"]'),undefined,{polling:'raf'});
+  await turn();await blockSeen;await capture('body-block');
+  assert.equal(await page.locator('[data-p1v-clash]').count(),1);
+  assert.equal(await page.locator('.p1v-block-recoil').count(),1);
+  assert.equal(await page.locator('[data-p1v-end]').isEnabled(),true);
+  assert.deepEqual(await state(),expectedBlock.state);
+  const cells=await page.locator('[data-p1v-cell]').evaluateAll(ns=>ns.map(n=>{const b=n.getBoundingClientRect();return document.elementFromPoint(b.x+b.width/2,b.y+b.height/2)?.getAttribute('data-p1v-cell')===n.getAttribute('data-p1v-cell');}));
+  assert(cells.every(Boolean));
+  await page.waitForTimeout(650);assert.equal(await page.locator('[data-p1v-block-feedback]').count(),0);
+  pass('real success trace: blocked knight recoils, dust/status/spark appear, all tile hits stay stationary, no extra lock or rule displacement');
+  // Continue the same real trace: its single contributor produces the requested 1/3 pop.
+  await page.getByLabel('跳過動畫').check();await turn();await page.getByLabel('跳過動畫').uncheck();
+  const oneSeen=page.waitForFunction(()=>!!document.querySelector('[data-p1v-winch-feedback="1"]'),undefined,{polling:'raf'});
+  await turn();await oneSeen;await capture('winch-1-of-3');
+  assert.equal(await page.locator('.p1v-pip-flash').count(),1);
+  pass('single-contributor trace shows exactly 絞盤干擾 1/3 and one newly filled pip');
+  for(const mode of ['skip','reduce']){
+    await load();await blockSetup();
+    if(mode==='skip')await page.getByLabel('跳過動畫').check();else await page.emulateMedia({reducedMotion:'reduce'});
+    await turn();assert.equal(await page.locator('[data-p1v-block-feedback],.p1v-block-recoil,.p1v-impact-scene').count(),0);
+    pass(`${mode}: body-block result preserved without recoil, dust, spark, or shake`);
+    await page.emulateMedia({reducedMotion:'no-preference'});
+  }
   assert.deepEqual(errors,[]);
   for(const [file,digest] of Object.entries(report.source_sha256))assert.equal(hash(fs.readFileSync(path.join(root,file))),digest);
   report.exit_code=0;

@@ -152,7 +152,7 @@
 .p1v-winch-warning { color:#ffc5ad; }
 .p1v-winch-warning strong { color:#ffb298; }
 .p1v-winch-warning .p1v-pips .filled { background:#d76b53; border-color:#ffb298; }
-.p1v-winch-pop { position:absolute; top:100%; right:0; white-space:nowrap; pointer-events:none; padding:4px 9px; border:1px solid #d99c7c; background:#301f19; color:#ffe2bb; font:700 .875rem "Microsoft JhengHei",sans-serif; animation:p1v-number-pop .7s ease-out both; }
+.p1v-gauge > .p1v-winch-pop { position:absolute; top:100%; right:0; white-space:nowrap; pointer-events:none; padding:4px 9px; border:1px solid #d99c7c; background:#301f19; color:#ffe2bb; font:700 .875rem "Microsoft JhengHei",sans-serif; animation:p1v-number-pop .7s ease-out both; }
 .p1v-pip-flash { animation:p1v-pip-flash .7s ease-out; }
 .p1v-winch-jerk { transform-origin:0 0; animation:p1v-winch-jerk .5s ease-out; }
 .p1v-winch-wheel { fill:#493a27; stroke:#e0c18a; stroke-width:1.6; transform-box:fill-box; transform-origin:center; animation:p1v-wheel .5s ease-out; }
@@ -167,5 +167,16 @@
 @keyframes p1v-number-pop { 0% { opacity:0; transform:translateY(6px); } 20%,70% { opacity:1; } 100% { opacity:0; transform:translateY(-8px); } }
 @keyframes p1v-warning { 50% { stroke:#ffb298; fill:#ab433355; } }
 @keyframes p1v-defeat { from { opacity:0; backdrop-filter:blur(0); } to { opacity:1; backdrop-filter:blur(3px); } }
+.p1v-feedback-layer { pointer-events:none; }
+.p1v-impact-scene { animation:p1v-impact-shake .24s ease-out; }
+.p1v-block-recoil { animation:p1v-recoil .3s ease-out; }
+.p1v-impact-dust { fill:#c1af83; opacity:0; transform-origin:center; transform-box:fill-box; animation:p1v-dust .45s ease-out; }
+.p1v-clash { stroke:#ffe0a4; stroke-width:2.5; stroke-linecap:round; animation:p1v-clash .35s ease-out both; }
+.p1v-block-pop { fill:#ffe0a4; font:700 16px "Microsoft JhengHei",sans-serif; paint-order:stroke; stroke:#18221c; stroke-width:4px; stroke-linejoin:round; animation:p1v-number-pop .6s ease-out both; }
+/* The shake affects visual layers only. Tile hit polygons remain stationary. */
+@keyframes p1v-impact-shake { 15% { translate:-3px 1px; } 35% { translate:2px -1px; } 60% { translate:-1px 0; } 100% { translate:0 0; } }
+@keyframes p1v-recoil { 25% { translate:var(--recoil-x) var(--recoil-y); } 100% { translate:0 0; } }
+@keyframes p1v-dust { 0% { opacity:.55; transform:scale(.6); } 100% { opacity:0; transform:scale(1.7) translateY(-3px); } }
+@keyframes p1v-clash { 0%,20% { opacity:1; } 100% { opacity:0; } }
 .p1v[data-p1v-motion=false] *, .p1v[data-p1v-motion=false] *::before, .p1v[data-p1v-motion=false] *::after { animation:none !important; }
 @media (prefers-reduced-motion:reduce) { .p1v * { animation:none !important; } }
