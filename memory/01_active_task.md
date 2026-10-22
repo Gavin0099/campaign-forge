@@ -1,4 +1,10 @@
-## 最新使用者指示：Gameplay First研究（2026-10-22）
+## 最新使用者指示：僅P0純規則PoC（2026-10-22）
+
+使用者：在codex/playable-l03-research先fetch／快轉pull、合origin/main，只做docs/tasks/playable-l03-P0.md的60分鐘範圍；絞盤西岸(2,1)，獨立TypeScript規則、六項驗收、資源自查與handoff、commit後嘗試push；不P1、不動main、不PR、不stash。
+
+代理觀察：基線d0f4005，合規範後f80677d；純規則模組與8項測試完成，預設阻擋友軍通行下守點5回合成功／不動失敗，重試換策略成功。三份trace可逐byte重播，build與scope通過；封閘只驗可達，不實作護送。詳docs/handoff/codex-playable-l03-research.md。P1–P6、正式規則／故事、完整可玩UI與真人試玩未執行，QR-11保留。此為P0里程碑，非SessionEnd。
+
+## 歷史使用者指示：Gameplay First研究（2026-10-22）
 
 使用者要求由展示轉向可玩L03，但本輪先交研究／實作規格，不直接新增戰鬥或安裝引擎；不改其他AI worktree、不合main、不改正式故事／S3／S4。B美術保留候選，並非商業美術通過；完成段落正常commit/push授權沿用。
 

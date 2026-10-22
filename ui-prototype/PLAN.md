@@ -10,6 +10,12 @@
 
 ## Slices
 
+### Authorized P0: west-bank winch rules PoC — 2026-10-22
+
+使用者本次只授權 `docs/tasks/playable-l03-P0.md` 的60分鐘純規則PoC，並要求合入origin/main的協作文件、commit及正常push；P1–P6仍未授權。這取代下方研究階段的P0未開始狀態，不改正式故事。
+
+代理觀察：獨立 `src/playable-l03/rules.ts` 重用11×9地形，絞盤(2,1)，同一固定西岸部署；移動驗證、兩名騎士阻擋／繞路、階段開始時計進度、5回合存活／3進度失敗及重試皆可同步結算。8項Node檢查通過：守點成功(進度1)、不動失敗(進度4)、重試換策略成功，三份trace逐byte重播相同；禁止穿越存活單位預設開啟仍有解。Build與scope通過。封閘僅地圖可達，沒有護送勝敗、UI、傷害或新增美術；QR-11未解、真人可玩性未驗。交接見 `../docs/handoff/codex-playable-l03-research.md`；P0完成即停止，不自行接P1。
+
 ### Gameplay First / Playable L03 Research — 2026-10-22
 
 使用者要求先研究與實作規格，暫不實作新規則、不安裝引擎、不動其他AI worktree、不合main。B美術保留候選，不代表人工通過。研究基線00146ba，成果見 [docs/playable-l03-research/README.md](docs/playable-l03-research/README.md)。
