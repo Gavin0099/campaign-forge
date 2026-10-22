@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-22T17:03:56.852Z",
+  "started_at": "2026-10-22T17:05:11.426Z",
   "browser": {
     "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
     "bytes": 4586648,
@@ -7,13 +7,19 @@
     "scope": "local UI browser acceptance only"
   },
   "source_sha256": {
-    "ui-prototype/src/playable-l03/PlayableL03.tsx": "fec3d77f6f298918c875243b818137bebfb773fb40e3e53216ff0e7b985652ad",
+    "ui-prototype/src/playable-l03/PlayableL03.tsx": "ed33e2639b3e1699cf172de0d64aafa766cd389087ca57975f8e6b26262f1f3b",
     "ui-prototype/src/playable-l03/presentation.tsx": "714cc5b6eaf5e5d6904ae79bd1537616eba5f15e6b7d2cba2eb7fbb90c1504e1",
-    "ui-prototype/src/playable-l03/playable.css": "01d5fba3c4e72434a631bfead728213ad164219a14a591327e91786bf96172c9",
+    "ui-prototype/src/playable-l03/playable.css": "d13ef0b4ac21f1ef9a2a7c200ef2d6252cb79c29c88680176be3a36e54a78baf",
     "ui-prototype/src/playable-l03/rules.ts": "42f70baac448476dca3dd0abcb766b867cb692b448d951e08404482700592d76",
-    "ui-prototype/tests/playable-l03-p1v5-browser.mjs": "12bd480778b955e590fbad96724fdb5a00ea4de3a9cc8612081938663770de4a"
+    "ui-prototype/tests/playable-l03-p1v5-browser.mjs": "261a36e8319c08691ca8a1e203ee42c2571de878649a61653b7c2de140eaa142"
   },
   "checks": [
+    {
+      "name": "before End Turn: animated arrow and pulsing destinations match exact pure-rule preview without changing state"
+    },
+    {
+      "name": "skip/reduce retain static, accurate intent markers and stop all arrow/pulse animation"
+    },
     {
       "name": "progress 0→2: jerk, wheel, taut rope, two flashes, pop; warning persists, feedback expires, input already unlocked"
     },
@@ -41,8 +47,72 @@
   ],
   "captures": [
     {
+      "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-intent-pulse.png",
+      "sha256": "c6fce5bc2010660066c6f23489555a900a091aa397d0f174c621408afcef39a3",
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
       "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-winch-interference.png",
-      "sha256": "cdf160668debf6166547c75c55123b85768bc0718095c5786d81a8e0fb8f10c4",
+      "sha256": "6c7317c8bb89b8c7dfb5d1a6513c0edd02985338d1869a7a8c5acc9b8523db86",
       "state": {
         "route": "open",
         "config": {
@@ -106,7 +176,7 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-warning-2-of-3.png",
-      "sha256": "f7567e6be06265176591f1c3befcd6a64b03fcd6db701ad3322e4bdef43d89ba",
+      "sha256": "7164f3ef2b4805b2aab63f46df242a7e363ca7d0fad8a6929d053d25dd1df269",
       "state": {
         "route": "open",
         "config": {
@@ -170,7 +240,7 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-defeat.png",
-      "sha256": "29942197b2b435a08f7f1d0cbd56b358adca3cec64cfe47e084fd7c0ac192dde",
+      "sha256": "f4096886ed93befce74f1bba591ba1a3dd010c0a5077315d0a47ffede670f0fc",
       "state": {
         "route": "open",
         "config": {
@@ -234,7 +304,7 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-body-block.png",
-      "sha256": "1c0db2cd9c8a0c0d9f134128046d591af6e2c8c56065e8af4bd7805de3ca6113",
+      "sha256": "99d9787f0b8de1f461ed76582104dd75292a24db22813a13c8a0bbc5c18f1425",
       "state": {
         "route": "open",
         "config": {
@@ -298,7 +368,7 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v5/1280x720-winch-1-of-3.png",
-      "sha256": "6f43aa3e35b5e53081d981654bcb8ca64d3bc461afa1f00f0854a46d6b980970",
+      "sha256": "62b4705ccd5040886df771213e4e72182a6c52b5508793879491089a024a4df4",
       "state": {
         "route": "open",
         "config": {
@@ -364,5 +434,5 @@
   "errors": [],
   "human_playtest": "HUMAN_PENDING",
   "exit_code": 0,
-  "finished_at": "2026-10-22T17:04:04.554Z"
+  "finished_at": "2026-10-22T17:05:19.616Z"
 }

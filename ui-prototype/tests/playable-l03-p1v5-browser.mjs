@@ -42,6 +42,27 @@ async function blockSetup(){
   await page.getByLabel('跳過動畫').uncheck();
 }
 try {
+  await load();
+  const intentExpected=resolve(initial(),1).events.filter(e=>e.type==='move');
+  for(const intent of intentExpected){
+    const end=intent.path.at(-1);
+    assert.equal(await page.locator(`[data-p1v-intent-target="${intent.unit}"]`).getAttribute('data-target'),`${end.x},${end.y}`);
+  }
+  const arrow=page.locator('[data-p1v-intent-path]').first(),target=page.locator('[data-p1v-intent-target]').first();
+  const beforeArrow=await arrow.evaluate(e=>getComputedStyle(e).strokeDashoffset);
+  const beforeTarget=await target.evaluate(e=>getComputedStyle(e).fill);
+  await page.waitForTimeout(320);await capture('intent-pulse');
+  assert.notEqual(await arrow.evaluate(e=>getComputedStyle(e).strokeDashoffset),beforeArrow);
+  assert.notEqual(await target.evaluate(e=>getComputedStyle(e).fill),beforeTarget);
+  assert.deepEqual(await state(),initial());
+  pass('before End Turn: animated arrow and pulsing destinations match exact pure-rule preview without changing state');
+  for(const mode of ['skip','reduce']){
+    if(mode==='skip')await page.getByLabel('跳過動畫').check();else await page.emulateMedia({reducedMotion:'reduce'});
+    const names=await page.locator('.p1v-intent-path,.p1v-intent-target').evaluateAll(ns=>ns.map(n=>getComputedStyle(n).animationName));
+    assert(names.length>0 && names.every(n=>n==='none'));
+    if(mode==='skip')await page.getByLabel('跳過動畫').uncheck();else await page.emulateMedia({reducedMotion:'no-preference'});
+  }
+  pass('skip/reduce retain static, accurate intent markers and stop all arrow/pulse animation');
   await load();await prime();
   const seen=page.waitForFunction(()=>!!document.querySelector('[data-p1v-winch-feedback="2"]'),undefined,{polling:'raf'});
   await turn();await seen;

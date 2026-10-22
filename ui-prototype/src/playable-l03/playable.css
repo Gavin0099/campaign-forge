@@ -168,6 +168,11 @@
 @keyframes p1v-warning { 50% { stroke:#ffb298; fill:#ab433355; } }
 @keyframes p1v-defeat { from { opacity:0; backdrop-filter:blur(0); } to { opacity:1; backdrop-filter:blur(3px); } }
 .p1v-feedback-layer { pointer-events:none; }
+.p1v-telegraphs { pointer-events:none; }
+.p1v-intent-path { animation:p1v-intent-flow 1s linear infinite; }
+.p1v-intent-target { fill:#d58c6b18; stroke:#eeb08a; stroke-width:2; animation:p1v-threat-pulse 1.4s ease-in-out infinite; }
+@keyframes p1v-intent-flow { to { stroke-dashoffset:-24; } }
+@keyframes p1v-threat-pulse { 50% { fill:#d58c6b55; stroke:#ffdab1; stroke-width:3; } }
 .p1v-impact-scene { animation:p1v-impact-shake .24s ease-out; }
 .p1v-block-recoil { animation:p1v-recoil .3s ease-out; }
 .p1v-impact-dust { fill:#c1af83; opacity:0; transform-origin:center; transform-box:fill-box; animation:p1v-dust .45s ease-out; }

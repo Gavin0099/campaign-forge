@@ -242,6 +242,18 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
           {active && !busy && enemyPaths.map((e, i) => <polyline key={e.unit} data-p1v-intent-path={e.unit}
             points={e.path.map(p => `${center(p).x},${center(p).y}`).join(" ")}
             className={`p1v-intent-path knight-${i}`} markerEnd={`url(#${uid}-arrow)`} />)}
+          {active && !busy && <g className="p1v-telegraphs" aria-hidden="true">
+            {intents.map(e => {
+              const path = enemyPaths.find(p => p.unit === e.unit)?.path;
+              const target = path?.[path.length-1] || (e.reason === "turn-winch" ? MAP.winch : null);
+              if (!target) return null;
+              const from = center(state.units.find(u => u.id === e.unit)!.cell), to = center(target);
+              return <g key={e.unit}>
+                <polygon className="p1v-intent-target" data-p1v-intent-target={e.unit} data-target={key(target)} points={sceneDiamond(target.x,target.y)} />
+                {!path && <path className="p1v-intent-path" data-p1v-winch-intent={e.unit} d={`M${from.x} ${from.y}L${to.x} ${to.y}`} markerEnd={`url(#${uid}-arrow)`} />}
+              </g>;
+            })}
+          </g>}
           {cells.map(p => {
             const occupant = state.units.find(u => key(u.cell) === key(p));
             const canMove = legal.has(key(p)), chosen = !!occupant && occupant.id === (inspected || selected);
