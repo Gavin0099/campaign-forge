@@ -1,0 +1,9 @@
+PASS 1: AC1: fixed 11x9 map, west-bank winch, both route deployments and objectives reachable
+PASS 2: AC2: legal moves deterministic, one move per turn, rejected moves deep-equal
+PASS 3: AC2: single passage flag blocks living allies by default; never allows occupied endpoints or enemies
+PASS 4: AC3: resolve synchronously settles one turn; stale and finished resolutions rejected
+PASS 5: AC4: interference progresses only after arrival; failure takes precedence on turn five
+PASS 6: AC4/5: hold succeeds, standing still fails, default blocking ON remains solvable
+PASS 7: AC5: retry clears terminal state, progress and moves; changing strategy wins
+PASS 8: AC5: committed success, failure and retry traces match byte for byte
+8 tests passed; hold=success progress=1, idle=failure progress=4

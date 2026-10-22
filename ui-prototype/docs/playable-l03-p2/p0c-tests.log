@@ -1,0 +1,10 @@
+PASS 1: experiments omitted by default; empty options serialize exactly as defaults
+PASS 2: A survives through turn six, threshold loss still takes precedence
+PASS 3: B checks final adjacency; early holding alone fails, final arrival passes
+PASS 4: B+ N=2/3 require each last turn, reset on gaps, not total hold count
+PASS 5: only living companions count; progress must stay below three even during hold
+PASS 6: C only changes Thoma spawn, is reachable, retry preserves experiments and resets history
+PASS 7: invalid horizon/hold parameters fail immediately
+PASS 8: every reported solo/duo and multi-move witness legally replays at stated cost and bounds
+PASS 9: all variants stay opt-in and originals remain repeatable; P0c traces are byte-identical
+9 P0c tests passed

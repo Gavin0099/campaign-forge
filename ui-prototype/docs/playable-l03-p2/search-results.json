@@ -1,0 +1,2354 @@
+{
+  "schema": 1,
+  "config": {
+    "blockAlliedPassage": true,
+    "p0c": {
+      "survivalTurns": 6
+    },
+    "enemyBehaviour": "p2",
+    "detourThreshold": 1
+  },
+  "variant": "A+P2",
+  "costOrder": "commands, distinct voluntarily moved allies, path tiles",
+  "method": "P0d exhaustive bounded harness copied at 2dc92b6; state key includes P2 memory; full party; spaces overlap",
+  "cases": {
+    "turnOneThenWait": {
+      "strategies": 6796,
+      "wins": 88,
+      "losses": 6708,
+      "minimumCostWin": {
+        "moves": 2,
+        "units": 2,
+        "tiles": 5,
+        "commands": [
+          {
+            "type": "move",
+            "turn": 1,
+            "unit": "thoma",
+            "to": {
+              "x": 3,
+              "y": 5
+            }
+          },
+          {
+            "type": "move",
+            "turn": 1,
+            "unit": "lace",
+            "to": {
+              "x": 1,
+              "y": 5
+            }
+          }
+        ],
+        "progress": 2,
+        "turn": 6
+      },
+      "bestWinTies": {
+        "t1ThenWait": 1,
+        "afterT1": 0
+      },
+      "cheapestWinsRequiringTelegraphReaction": 0,
+      "cheapestCommands": [
+        [
+          {
+            "type": "move",
+            "turn": 1,
+            "unit": "thoma",
+            "to": {
+              "x": 3,
+              "y": 5
+            }
+          },
+          {
+            "type": "move",
+            "turn": 1,
+            "unit": "lace",
+            "to": {
+              "x": 1,
+              "y": 5
+            }
+          }
+        ]
+      ],
+      "keyGateWitness": null,
+      "allBestWinsAreT1ThenWait": true,
+      "distinctWinningStrategyFamilies": 4,
+      "families": [
+        {
+          "family": "karen:rear|lace:rear|thoma:rear|afterT1:false",
+          "wins": 48,
+          "minimumCostWin": {
+            "moves": 2,
+            "units": 2,
+            "tiles": 5,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 1,
+                  "y": 5
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:rear|thoma:south|afterT1:false",
+          "wins": 12,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 3,
+            "tiles": 5,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "thoma",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 1,
+                  "y": 5
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:south|thoma:rear|afterT1:false",
+          "wins": 24,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 3,
+            "tiles": 3,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "thoma",
+                "to": {
+                  "x": 1,
+                  "y": 5
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:south|lace:rear|thoma:rear|afterT1:false",
+          "wins": 4,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 3,
+            "tiles": 7,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 1,
+                  "y": 5
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        }
+      ]
+    },
+    "atMostOneMove": {
+      "strategies": 210,
+      "wins": 0,
+      "losses": 210,
+      "minimumCostWin": null,
+      "bestWinTies": {
+        "t1ThenWait": 0,
+        "afterT1": 0
+      },
+      "cheapestWinsRequiringTelegraphReaction": 0,
+      "cheapestCommands": [],
+      "keyGateWitness": null,
+      "allBestWinsAreT1ThenWait": null,
+      "distinctWinningStrategyFamilies": 0,
+      "families": []
+    },
+    "atMostTwoMoves": {
+      "bounds": {
+        "survivalTurns": 6,
+        "maxMovesPerTurn": 2,
+        "maxMovesTotal": 2,
+        "stateCap": null,
+        "exhaustiveWithinBounds": true
+      },
+      "strategies": 24785,
+      "wins": 80,
+      "losses": 24705,
+      "minimumCostWin": {
+        "moves": 2,
+        "units": 1,
+        "tiles": 2,
+        "commands": [
+          {
+            "type": "move",
+            "turn": 1,
+            "unit": "karen",
+            "to": {
+              "x": 3,
+              "y": 5
+            }
+          },
+          {
+            "type": "move",
+            "turn": 2,
+            "unit": "karen",
+            "to": {
+              "x": 2,
+              "y": 5
+            }
+          }
+        ],
+        "progress": 1,
+        "turn": 6
+      },
+      "bestWinTies": {
+        "t1ThenWait": 0,
+        "afterT1": 1
+      },
+      "cheapestWinsRequiringTelegraphReaction": 0,
+      "cheapestCommands": [
+        [
+          {
+            "type": "move",
+            "turn": 1,
+            "unit": "karen",
+            "to": {
+              "x": 3,
+              "y": 5
+            }
+          },
+          {
+            "type": "move",
+            "turn": 2,
+            "unit": "karen",
+            "to": {
+              "x": 2,
+              "y": 5
+            }
+          }
+        ]
+      ],
+      "keyGateWitness": null,
+      "allBestWinsAreT1ThenWait": false,
+      "distinctWinningStrategyFamilies": 6,
+      "families": [
+        {
+          "family": "karen:rear|lace:rear|thoma:rear|afterT1:false",
+          "wins": 2,
+          "minimumCostWin": {
+            "moves": 2,
+            "units": 2,
+            "tiles": 5,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 1,
+                  "y": 5
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:rear|thoma:rear|afterT1:true",
+          "wins": 32,
+          "minimumCostWin": {
+            "moves": 2,
+            "units": 2,
+            "tiles": 2,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:rear|thoma:south|afterT1:true",
+          "wins": 12,
+          "minimumCostWin": {
+            "moves": 2,
+            "units": 2,
+            "tiles": 4,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "thoma",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:south|thoma:rear|afterT1:true",
+          "wins": 12,
+          "minimumCostWin": {
+            "moves": 2,
+            "units": 2,
+            "tiles": 3,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:west|thoma:rear|afterT1:true",
+          "wins": 6,
+          "minimumCostWin": {
+            "moves": 2,
+            "units": 1,
+            "tiles": 2,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 5
+                }
+              }
+            ],
+            "progress": 1,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:south|lace:rear|thoma:rear|afterT1:true",
+          "wins": 16,
+          "minimumCostWin": {
+            "moves": 2,
+            "units": 2,
+            "tiles": 4,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        }
+      ]
+    },
+    "atMostThreeMoves": {
+      "bounds": {
+        "survivalTurns": 6,
+        "maxMovesPerTurn": 2,
+        "maxMovesTotal": 3,
+        "stateCap": null,
+        "exhaustiveWithinBounds": true
+      },
+      "strategies": 1919308,
+      "wins": 14220,
+      "losses": 1905088,
+      "minimumCostWin": {
+        "moves": 2,
+        "units": 1,
+        "tiles": 2,
+        "commands": [
+          {
+            "type": "move",
+            "turn": 1,
+            "unit": "karen",
+            "to": {
+              "x": 3,
+              "y": 5
+            }
+          },
+          {
+            "type": "move",
+            "turn": 2,
+            "unit": "karen",
+            "to": {
+              "x": 2,
+              "y": 5
+            }
+          }
+        ],
+        "progress": 1,
+        "turn": 6
+      },
+      "bestWinTies": {
+        "t1ThenWait": 0,
+        "afterT1": 1
+      },
+      "cheapestWinsRequiringTelegraphReaction": 0,
+      "cheapestCommands": [
+        [
+          {
+            "type": "move",
+            "turn": 1,
+            "unit": "karen",
+            "to": {
+              "x": 3,
+              "y": 5
+            }
+          },
+          {
+            "type": "move",
+            "turn": 2,
+            "unit": "karen",
+            "to": {
+              "x": 2,
+              "y": 5
+            }
+          }
+        ]
+      ],
+      "keyGateWitness": null,
+      "allBestWinsAreT1ThenWait": false,
+      "distinctWinningStrategyFamilies": 40,
+      "families": [
+        {
+          "family": "karen:east|lace:rear|thoma:rear|afterT1:true",
+          "wins": 284,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 4,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:east|lace:rear|thoma:south|afterT1:true",
+          "wins": 121,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 6,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 2
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "thoma",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:east|lace:rear|thoma:west|afterT1:true",
+          "wins": 10,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 3,
+            "tiles": 7,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "lace",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "thoma",
+                "to": {
+                  "x": 1,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:east|lace:south|thoma:rear|afterT1:true",
+          "wins": 132,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 1,
+            "tiles": 5,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:east|lace:west|thoma:rear|afterT1:true",
+          "wins": 20,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 1,
+            "tiles": 5,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 4,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:north|lace:rear|thoma:rear|afterT1:true",
+          "wins": 97,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 7,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 4,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 0
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:north|lace:west|thoma:rear|afterT1:true",
+          "wins": 1,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 1,
+            "tiles": 7,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 4,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 0
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:east|thoma:rear|afterT1:true",
+          "wins": 291,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 4,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "lace",
+                "to": {
+                  "x": 3,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:east|thoma:south|afterT1:true",
+          "wins": 177,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 6,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 3,
+                  "y": 2
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "thoma",
+                "to": {
+                  "x": 1,
+                  "y": 2
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "thoma",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:east|thoma:west|afterT1:true",
+          "wins": 38,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 6,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "lace",
+                "to": {
+                  "x": 3,
+                  "y": 2
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "thoma",
+                "to": {
+                  "x": 1,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:north|thoma:rear|afterT1:true",
+          "wins": 96,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 5,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 1,
+                  "y": 0
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 5
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:north|thoma:south|afterT1:true",
+          "wins": 16,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 3,
+            "tiles": 8,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 1,
+                  "y": 0
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "thoma",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:rear|thoma:east|afterT1:true",
+          "wins": 185,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 4,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "lace",
+                "to": {
+                  "x": 1,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 4,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:rear|thoma:north|afterT1:true",
+          "wins": 72,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 7,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "thoma",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              },
+              {
+                "type": "move",
+                "turn": 4,
+                "unit": "thoma",
+                "to": {
+                  "x": 2,
+                  "y": 0
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:rear|thoma:rear|afterT1:false",
+          "wins": 2,
+          "minimumCostWin": {
+            "moves": 2,
+            "units": 2,
+            "tiles": 5,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 1,
+                  "y": 5
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:rear|thoma:rear|afterT1:true",
+          "wins": 4896,
+          "minimumCostWin": {
+            "moves": 2,
+            "units": 2,
+            "tiles": 2,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:rear|thoma:south|afterT1:true",
+          "wins": 1254,
+          "minimumCostWin": {
+            "moves": 2,
+            "units": 2,
+            "tiles": 4,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "thoma",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:rear|thoma:west|afterT1:true",
+          "wins": 388,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 5,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "thoma",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 6,
+                "unit": "thoma",
+                "to": {
+                  "x": 1,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:south|thoma:east|afterT1:true",
+          "wins": 56,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 6,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "thoma",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 2
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:south|thoma:rear|afterT1:true",
+          "wins": 1962,
+          "minimumCostWin": {
+            "moves": 2,
+            "units": 2,
+            "tiles": 3,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:south|thoma:south|afterT1:true",
+          "wins": 42,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 3,
+            "tiles": 6,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              },
+              {
+                "type": "move",
+                "turn": 4,
+                "unit": "thoma",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:south|thoma:west|afterT1:true",
+          "wins": 265,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 6,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 3,
+                  "y": 2
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "thoma",
+                "to": {
+                  "x": 1,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 1,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:west|thoma:east|afterT1:true",
+          "wins": 8,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 1,
+            "tiles": 7,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "thoma",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              },
+              {
+                "type": "move",
+                "turn": 4,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 1
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:west|thoma:rear|afterT1:true",
+          "wins": 1065,
+          "minimumCostWin": {
+            "moves": 2,
+            "units": 1,
+            "tiles": 2,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 5
+                }
+              }
+            ],
+            "progress": 1,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:west|thoma:south|afterT1:true",
+          "wins": 321,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 5,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 6,
+                "unit": "thoma",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 1,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:rear|lace:west|thoma:west|afterT1:true",
+          "wins": 18,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 4,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 4,
+                "unit": "thoma",
+                "to": {
+                  "x": 0,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 1,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:south|lace:east|thoma:rear|afterT1:true",
+          "wins": 198,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 5,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 3,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "lace",
+                "to": {
+                  "x": 3,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:south|lace:east|thoma:west|afterT1:true",
+          "wins": 24,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 3,
+            "tiles": 7,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 3,
+                  "y": 2
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "thoma",
+                "to": {
+                  "x": 1,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:south|lace:rear|thoma:east|afterT1:true",
+          "wins": 125,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 6,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:south|lace:rear|thoma:rear|afterT1:true",
+          "wins": 1316,
+          "minimumCostWin": {
+            "moves": 2,
+            "units": 2,
+            "tiles": 4,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:south|lace:rear|thoma:south|afterT1:true",
+          "wins": 45,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 7,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 4,
+                "unit": "thoma",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:south|lace:rear|thoma:west|afterT1:true",
+          "wins": 56,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 8,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "thoma",
+                "to": {
+                  "x": 1,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:south|lace:south|thoma:rear|afterT1:true",
+          "wins": 31,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 6,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              },
+              {
+                "type": "move",
+                "turn": 4,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:south|lace:west|thoma:rear|afterT1:true",
+          "wins": 280,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 1,
+            "tiles": 5,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 1,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:west|lace:east|thoma:rear|afterT1:true",
+          "wins": 10,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 8,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "lace",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 4,
+                "unit": "karen",
+                "to": {
+                  "x": 1,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 4,
+                "unit": "lace",
+                "to": {
+                  "x": 3,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:west|lace:rear|thoma:east|afterT1:true",
+          "wins": 2,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 3,
+            "tiles": 9,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "lace",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "karen",
+                "to": {
+                  "x": 1,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:west|lace:rear|thoma:rear|afterT1:true",
+          "wins": 268,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 5,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "thoma",
+                "to": {
+                  "x": 3,
+                  "y": 4
+                }
+              },
+              {
+                "type": "move",
+                "turn": 6,
+                "unit": "karen",
+                "to": {
+                  "x": 1,
+                  "y": 3
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:west|lace:rear|thoma:south|afterT1:true",
+          "wins": 9,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 8,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "thoma",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "karen",
+                "to": {
+                  "x": 1,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:west|lace:south|thoma:rear|afterT1:true",
+          "wins": 34,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 2,
+            "tiles": 7,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "lace",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 3,
+                "unit": "karen",
+                "to": {
+                  "x": 1,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        },
+        {
+          "family": "karen:west|lace:west|thoma:rear|afterT1:true",
+          "wins": 5,
+          "minimumCostWin": {
+            "moves": 3,
+            "units": 1,
+            "tiles": 6,
+            "commands": [
+              {
+                "type": "move",
+                "turn": 1,
+                "unit": "karen",
+                "to": {
+                  "x": 3,
+                  "y": 5
+                }
+              },
+              {
+                "type": "move",
+                "turn": 2,
+                "unit": "karen",
+                "to": {
+                  "x": 2,
+                  "y": 3
+                }
+              },
+              {
+                "type": "move",
+                "turn": 4,
+                "unit": "karen",
+                "to": {
+                  "x": 1,
+                  "y": 2
+                }
+              }
+            ],
+            "progress": 2,
+            "turn": 6
+          }
+        }
+      ]
+    }
+  },
+  "rearDelay": {
+    "commands": [
+      {
+        "type": "move",
+        "turn": 1,
+        "unit": "karen",
+        "to": {
+          "x": 1,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "turn": 1,
+        "unit": "lace",
+        "to": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "turn": 2,
+        "unit": "karen",
+        "to": {
+          "x": 2,
+          "y": 5
+        }
+      }
+    ],
+    "status": "success",
+    "progress": 2
+  },
+  "directedProbe": {
+    "original": [
+      {
+        "type": "move",
+        "turn": 1,
+        "unit": "lace",
+        "to": {
+          "x": 1,
+          "y": 1
+        }
+      },
+      {
+        "type": "move",
+        "turn": 1,
+        "unit": "thoma",
+        "to": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "turn": 1,
+        "unit": "karen",
+        "to": {
+          "x": 3,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "turn": 2,
+        "unit": "karen",
+        "to": {
+          "x": 3,
+          "y": 1
+        }
+      }
+    ],
+    "singlesExamined": 24,
+    "pairsExamined": 6,
+    "stopAtFirstWitness": true,
+    "exhaustive": false,
+    "witnessCost": {
+      "moves": 6,
+      "units": 3,
+      "tiles": 15
+    }
+  },
+  "keyGate": {
+    "commands": [
+      {
+        "type": "move",
+        "turn": 1,
+        "unit": "lace",
+        "to": {
+          "x": 1,
+          "y": 1
+        }
+      },
+      {
+        "type": "move",
+        "turn": 1,
+        "unit": "thoma",
+        "to": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "turn": 1,
+        "unit": "karen",
+        "to": {
+          "x": 3,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "turn": 2,
+        "unit": "karen",
+        "to": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      {
+        "type": "move",
+        "turn": 4,
+        "unit": "karen",
+        "to": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "type": "move",
+        "turn": 4,
+        "unit": "lace",
+        "to": {
+          "x": 3,
+          "y": 1
+        }
+      }
+    ],
+    "ignoredCommands": [
+      {
+        "type": "move",
+        "turn": 1,
+        "unit": "lace",
+        "to": {
+          "x": 1,
+          "y": 1
+        }
+      },
+      {
+        "type": "move",
+        "turn": 1,
+        "unit": "thoma",
+        "to": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "turn": 1,
+        "unit": "karen",
+        "to": {
+          "x": 3,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "turn": 2,
+        "unit": "karen",
+        "to": {
+          "x": 3,
+          "y": 1
+        }
+      }
+    ],
+    "reactionTurn": 4,
+    "telegraph": {
+      "type": "enemy-intent",
+      "unit": "knight-1",
+      "behaviour": "hunt-weak-point",
+      "intent": "prepare-breakout",
+      "reason": "detour:4>1",
+      "targetTile": {
+        "x": 1,
+        "y": 1
+      },
+      "targetAlly": "lace",
+      "plannedPath": [
+        {
+          "x": 1,
+          "y": 2
+        }
+      ],
+      "action": "wait",
+      "plan": {
+        "ally": "lace",
+        "from": {
+          "x": 1,
+          "y": 1
+        },
+        "to": {
+          "x": 1,
+          "y": 2
+        },
+        "path": [
+          {
+            "x": 1,
+            "y": 2
+          },
+          {
+            "x": 1,
+            "y": 1
+          }
+        ],
+        "preparedTurn": 3
+      }
+    },
+    "reacting": {
+      "status": "success",
+      "progress": 2
+    },
+    "ignoring": {
+      "status": "failure",
+      "progress": 4
+    },
+    "ignoringWithoutP2": {
+      "status": "success",
+      "progress": 2
+    }
+  },
+  "verdict": "CHEESE"
+}

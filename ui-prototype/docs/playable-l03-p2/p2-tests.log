@@ -1,0 +1,12 @@
+PASS 1: opt-in only, validates threshold, default has no pressure data
+PASS 2: detour pressure, blocked then prepare then exact no-damage swap on distinct phases
+PASS 3: threshold is strict: equal detour uses ordinary target interference
+PASS 4: fully blocked is pressure even with high detour threshold
+PASS 5: player vacates telegraphed cell: cancellation with reason and no swap
+PASS 6: replacement blocker is re-planned, never surprise-swapped under old telegraph
+PASS 7: absent/dead target cancels and other knights remain obstacles
+PASS 8: phase-start progress, immutable deterministic preview, terminal/stale guards, retry reset
+PASS 9: deterministic placement sample: every intent/action matches, no overlap or surprise swap
+PASS 10: copied P0d bounded harness matches independent P0c <=2 enumerator
+PASS 11: saved search witnesses and cheapest ties replay with matching intents/actions
+11 tests passed

@@ -1,0 +1,91 @@
+{
+  "recorded_at": "2026-10-22T10:36:13.491Z",
+  "base": "ce45ad2b29ddbfd9e975e4f894b4001faa63d378",
+  "scope": "P2 rules/tests/evidence only; native process exits, not Owner approval",
+  "commands": [
+    {
+      "command": "node --experimental-strip-types ui-prototype/tests/playable-l03-p0.mjs",
+      "exit_code": 0
+    },
+    {
+      "command": "node --experimental-strip-types ui-prototype/tests/playable-l03-p0b.mjs",
+      "exit_code": 0
+    },
+    {
+      "command": "node --experimental-strip-types ui-prototype/tests/playable-l03-p0c.mjs",
+      "exit_code": 0
+    },
+    {
+      "command": "node --experimental-strip-types ui-prototype/tests/playable-l03-p2.mjs",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run build --prefix ui-prototype",
+      "exit_code": 0
+    },
+    {
+      "command": "Python312/python.exe scripts/validate_ui_scope.py",
+      "exit_code": 0
+    },
+    {
+      "command": "node --experimental-strip-types ui-prototype/tests/playable-l03-p0b-search.mjs",
+      "exit_code": 0
+    },
+    {
+      "command": "node --experimental-strip-types ui-prototype/tests/playable-l03-p0c-search.mjs",
+      "exit_code": 0
+    },
+    {
+      "command": "node --experimental-strip-types ui-prototype/tests/playable-l03-p2-search.mjs (final run 1)",
+      "exit_code": 0
+    },
+    {
+      "command": "node --experimental-strip-types ui-prototype/tests/playable-l03-p2-search.mjs (final run 2)",
+      "exit_code": 0
+    },
+    {
+      "command": "P1V_URL=http://127.0.0.1:5184/ node --experimental-strip-types ui-prototype/tests/playable-l03-p1v-browser.mjs",
+      "exit_code": 0
+    }
+  ],
+  "repeat_checks": [
+    {
+      "artifact": "search-results.json",
+      "first_sha256": "c51d862a9c1e3060643773ce4bac655db9bdccea30c2e8f0bd996ffc70b92d86",
+      "second_sha256": "c51d862a9c1e3060643773ce4bac655db9bdccea30c2e8f0bd996ffc70b92d86",
+      "byte_identical": true
+    },
+    {
+      "artifact": "witnesses.jsonl",
+      "first_sha256": "81f5ff28141dd74707f7d4f4014a84c87535081b89b674230fa027e3aab42c79",
+      "second_sha256": "81f5ff28141dd74707f7d4f4014a84c87535081b89b674230fa027e3aab42c79",
+      "byte_identical": true
+    }
+  ],
+  "source_sha256": {
+    "ui-prototype/src/playable-l03/rules.ts": "0e1782d405819037de59db947eb4b1f1a60b81db8c3cf961cdc5a0514689c321",
+    "ui-prototype/tests/playable-l03-p2.mjs": "5381a4d97ccdfdd49c0fc99237dc97c2aa6f93f6b28d985519a065f2df608331",
+    "ui-prototype/tests/playable-l03-p2-search.mjs": "40643ac402a21d4a632472ab08a77ace263c6ec9a5f5f56334062e41b22966e5",
+    "ui-prototype/tests/playable-l03-p2-support.mjs": "c6cb2cc8efb741f09504a9b7b85d8212b5b93eca0128cd1a879efd53cad1ad0f"
+  },
+  "p1v": {
+    "checks": 26,
+    "exit_code": 0,
+    "source_digest_verified": true,
+    "relocated_capture_digests_verified": true,
+    "original_evidence_restored_byte_identical": true,
+    "note": "Raw unchanged browser report retains its original output paths; new captures are relocated by basename to p1v-regression/."
+  },
+  "environment_failures": [
+    {
+      "command": "Python312/python.exe scripts/validate_ui_scope.py (before pinned submodule checkout)",
+      "exit_code": 1,
+      "reason": "governance_tools missing; same command passes after checkout of existing e8e67796894cd562ef0bce217bfad0fac211a44d pin"
+    },
+    {
+      "command": "sandbox process creation during verification",
+      "exit_code": null,
+      "reason": "setup refresh had errors; no process started; approved commands ran outside sandbox in the same P2 working directory"
+    }
+  ]
+}

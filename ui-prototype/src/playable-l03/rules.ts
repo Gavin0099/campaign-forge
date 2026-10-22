@@ -9,6 +9,23 @@ export type Unit = Readonly<{
 // P0c experiments only. Omitted by default so P0/P0b serialized states stay identical.
 export type RulesConfig = Readonly<{ blockAlliedPassage: boolean;
   p0c?: Readonly<{ survivalTurns?: 5 | 6; requiredHoldTurns?: number; thomaStartsWest?: boolean }>;
+  enemyBehaviour?: "p2";
+  detourThreshold?: number;
+}>;
+export type BreakoutPlan = Readonly<{
+  ally: string; from: Cell; to: Cell; path: readonly Cell[]; preparedTurn: number;
+}>;
+export type EnemyPressure = Readonly<
+  { stage: "blocked"; ally: string; cell: Cell } |
+  { stage: "prepare-breakout"; plan: BreakoutPlan }
+>;
+export type EnemyIntent = Readonly<{
+  type: "enemy-intent"; unit: string;
+  behaviour: "target-interference" | "hunt-weak-point";
+  intent: "approach" | "turn-winch" | "blocked" | "prepare-breakout" | "breakout" | "cancel-breakout";
+  reason: string; targetTile: Cell; targetAlly?: string;
+  plannedPath: readonly Cell[]; action: "move" | "wait" | "progress" | "swap";
+  plan?: BreakoutPlan;
 }>;
 export type MapDef = Readonly<{
   rows: readonly string[]; winch: Cell; wagon: Cell; exit: Cell;
@@ -34,8 +51,11 @@ export type State = Readonly<{
   status: "playing" | "success" | "failure";
   progress: number; units: readonly Unit[]; moved: readonly string[];
   holdStreak?: number;
+  enemyPressure?: Readonly<Record<string, EnemyPressure>>;
 }>;
 export type Event =
+  | EnemyIntent
+  | { type: "breakout"; unit: string; plan: BreakoutPlan }
   | { type: "move"; unit: string; path: readonly Cell[] }
   | { type: "intent"; unit: string; target: "winch"; reason: "turn-winch" | "approach" | "blocked" }
   | { type: "progress"; delta: number; total: number }
@@ -70,9 +90,13 @@ export function initialState(route: Route = "open", config = DEFAULT_CONFIG): St
   const hold = experiment?.requiredHoldTurns ?? 0;
   if (![5, 6].includes(limit) || !Number.isInteger(hold) || hold < 0 || hold > limit)
     throw new Error("invalid-P0c-config");
+  if ((config.enemyBehaviour !== undefined && config.enemyBehaviour !== "p2") ||
+    (config.detourThreshold !== undefined && (!Number.isSafeInteger(config.detourThreshold) || config.detourThreshold < 0)))
+    throw new Error("invalid-P2-config");
   return { route, config: { ...config }, turn: 1, status: "playing", progress: 0,
     units: DEPLOYMENT.map(u => ({ ...u, cell: experiment?.thomaStartsWest && u.id === "thoma"
-      ? { x: 0, y: 4 } : { ...u.cell } })), moved: [], ...(hold ? { holdStreak: 0 } : {}) };
+      ? { x: 0, y: 4 } : { ...u.cell } })), moved: [], ...(hold ? { holdStreak: 0 } : {}),
+    ...(config.enemyBehaviour === "p2" ? { enemyPressure: {} } : {}) };
 }
 // Bounded BFS; destinations always empty, even when allied transit is enabled.
 export function findPath(state: State, actor: Unit, to: Cell): Cell[] | undefined {
@@ -93,6 +117,88 @@ export function findPath(state: State, actor: Unit, to: Cell): Cell[] | undefine
   return undefined;
 }
 const rejected = (state: State, reason: string): Result => ({ ok: false, state, events: [], reason });
+
+const approachPath = (state: State, enemy: Unit) => neighbors(MAP.winch)
+  .map(to => findPath(state, enemy, to)).filter((p): p is Cell[] => !!p)
+  .sort((a, b) => a.length - b.length)[0];
+
+// P2 is opt-in. Planning ignores allies only to identify pressure and its FIRST
+// blocker (P0d's swap geometry); execution always validates the advertised cells.
+function p2Enemy(state: State, enemy: Unit, contributes: boolean): { state: State; events: Event[] } {
+  const events: Event[] = [], memory = { ...state.enemyPressure };
+  const previous = memory[enemy.id];
+  delete memory[enemy.id];
+  let current: State = { ...state, enemyPressure: memory };
+  const emit = (intent: Omit<EnemyIntent, "type" | "unit">) =>
+    events.push({ type: "enemy-intent", unit: enemy.id, ...intent });
+  const move = (path: readonly Cell[]) => {
+    if (path.length < 2) return;
+    current = { ...current, units: current.units.map(u => u.id === enemy.id
+      ? { ...u, cell: path[path.length - 1] } : u) };
+    events.push({ type: "move", unit: enemy.id, path });
+  };
+  if (previous?.stage === "prepare-breakout") {
+    const plan = previous.plan;
+    const ally = state.units.find(u => u.id === plan.ally && u.alive && u.side === "ally");
+    const invalid = !ally || !same(ally.cell, plan.from) ? "target-moved-or-absent"
+      : !same(enemy.cell, plan.path[0]) ? "knight-displaced"
+      : plan.preparedTurn !== state.turn - 1 ? "expired-telegraph"
+      : plan.path.slice(1, -1).some(p => state.units.some(u => u.alive && u.id !== enemy.id && same(u.cell, p)))
+        ? "advertised-path-occupied" : undefined;
+    if (!invalid && !contributes) {
+      emit({ behaviour: "hunt-weak-point", intent: "breakout", reason: "telegraph-still-valid",
+        targetTile: plan.from, targetAlly: plan.ally, plannedPath: plan.path, action: "swap", plan });
+      current = { ...current, units: current.units.map(u => u.id === enemy.id
+        ? { ...u, cell: plan.from } : u.id === plan.ally ? { ...u, cell: plan.to } : u) };
+      events.push({ type: "breakout", unit: enemy.id, plan });
+      return { state: current, events };
+    }
+    emit({ behaviour: "hunt-weak-point", intent: "cancel-breakout", reason: invalid ?? "already-at-objective",
+      targetTile: plan.from, targetAlly: plan.ally, plannedPath: [enemy.cell], action: "wait", plan });
+  }
+  if (contributes) {
+    emit({ behaviour: "target-interference", intent: "turn-winch", reason: "adjacent-at-phase-start",
+      targetTile: MAP.winch, plannedPath: [enemy.cell], action: "progress" });
+    return { state: current, events };
+  }
+  const normal = approachPath(state, enemy);
+  const direct = approachPath({ ...state, config: { ...state.config, blockAlliedPassage: true },
+    units: state.units.filter(u => u.side === "enemy") }, enemy);
+  const index = direct?.findIndex((p, i) => i > 0 && state.units.some(u =>
+    u.alive && u.side === "ally" && same(u.cell, p))) ?? -1;
+  const pressured = direct && index > 0 && (!normal || normal.length - direct.length > (state.config.detourThreshold ?? 1));
+  if (pressured) {
+    const ally = state.units.find(u => u.alive && u.side === "ally" && same(u.cell, direct[index]))!;
+    const reason = normal ? `detour:${normal.length - direct.length}>${state.config.detourThreshold ?? 1}` : "direct-lane-blocked";
+    if (previous?.stage === "blocked" && previous.ally === ally.id && same(previous.cell, ally.cell) && index <= 3) {
+      const plan: BreakoutPlan = { ally: ally.id, from: ally.cell, to: direct[index - 1],
+        path: direct.slice(0, index + 1), preparedTurn: state.turn };
+      memory[enemy.id] = { stage: "prepare-breakout", plan };
+      emit({ behaviour: "hunt-weak-point", intent: "prepare-breakout", reason,
+        targetTile: ally.cell, targetAlly: ally.id, plannedPath: [enemy.cell], action: "wait", plan });
+    } else {
+      // Approach the blocker, but never enter its cell before a full telegraph turn.
+      const path = direct.slice(0, Math.min(3, index - 1) + 1);
+      memory[enemy.id] = { stage: "blocked", ally: ally.id, cell: ally.cell };
+      emit({ behaviour: "hunt-weak-point", intent: "blocked",
+        reason: previous ? `replan:${reason}` : reason, targetTile: ally.cell, targetAlly: ally.id,
+        plannedPath: path, action: path.length > 1 ? "move" : "wait" });
+      move(path);
+    }
+  } else {
+    if (previous?.stage === "blocked") emit({ behaviour: "hunt-weak-point", intent: "cancel-breakout",
+      reason: "pressure-cleared", targetTile: previous.cell, targetAlly: previous.ally,
+      plannedPath: [enemy.cell], action: "wait" });
+    let steps = Math.min(3, (normal?.length ?? 1) - 1);
+    while (steps > 0 && state.units.some(u => u.alive && u.id !== enemy.id && same(u.cell, normal![steps]))) steps--;
+    const path = normal?.slice(0, steps + 1) ?? [enemy.cell];
+    emit({ behaviour: "target-interference", intent: steps ? "approach" : "blocked",
+      reason: steps ? "shortest-open-approach" : "no-open-step", targetTile: MAP.winch,
+      plannedPath: path, action: steps ? "move" : "wait" });
+    move(path);
+  }
+  return { state: current, events };
+}
 
 export function command(state: State, input: Command): Result {
   if (input.type === "retry") {
@@ -122,6 +228,11 @@ export function resolve(state: State, expectedTurn: number): Result {
   // Only knights adjacent at phase START contribute; arriving grants a reaction turn.
   const contributors = state.units.filter(u => u.alive && u.side === "enemy" && distance(u.cell, MAP.winch) === 1);
   for (const enemy of state.units.filter(u => u.alive && u.side === "enemy")) {
+    if (state.config.enemyBehaviour === "p2") {
+      const result = p2Enemy(current, enemy, contributors.some(u => u.id === enemy.id));
+      current = result.state; events.push(...result.events);
+      continue;
+    }
     if (contributors.some(u => u.id === enemy.id)) {
       events.push({ type: "intent", unit: enemy.id, target: "winch", reason: "turn-winch" });
       continue;
