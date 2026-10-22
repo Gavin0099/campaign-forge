@@ -1,0 +1,29 @@
+{
+  "phase": "after",
+  "started_at": "2026-10-22T12:47:35.561Z",
+  "browser": {
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "bytes": 4586648,
+    "sha256": "f76f0234efb271041dc84f9f38fb858e01859d5da6f775f5108668eb3ae80975",
+    "scope": "local UI browser acceptance only"
+  },
+  "source_sha256": {
+    "ui-prototype/src/playable-l03/PlayableL03.tsx": "0082996c499d0ad26a060ce93b6105a218e87542c05c84cc46a070b60edbe759",
+    "ui-prototype/src/playable-l03/playable.css": "95b407e66b858981c83f361a5cd2f04da2c4237a7ec51c84d0fa4b4f5823e217",
+    "ui-prototype/src/playable-l03/presentation.tsx": "ba971921bacb4d17bde1e513c1df168b89c5626dfd9ebdaefc97302b66da39f1",
+    "ui-prototype/src/playable-l03/rules.ts": "42f70baac448476dca3dd0abcb766b867cb692b448d951e08404482700592d76",
+    "ui-prototype/src/l03Scene.ts": "08780782ab51ef026e001c75f9959f65cdc33eb7d7b5d5a9fdd704eb65ae340d",
+    "ui-prototype/src/AnimatedActor.tsx": "fc4b5446f16f78efeccc0958858ebf8ae791d5c1deb5b635a53df73804b38a93",
+    "ui-prototype/tests/playable-l03-p1v2-browser.mjs": "18643b479200c91c6b6ab9579c9996aeb2c4e97eebba0b14ef4070e0f9eab7e4",
+    "ui-prototype/docs/playable-l03-p0/success.jsonl": "8618965d532ea1e9ed9ef00fc768f1d367883baeb66375b7f31e5873cbf74622",
+    "ui-prototype/public/art/l03-party-v1.png": "f67086afa5919d17872ceb8c22c4e6eefd5513dc6e14d8637f38cf90abd4bb08",
+    "ui-prototype/public/art/l03-enemies-v1.png": "2cdaba9f74dc384ec262a71f9ec1b814949a4325c52b93836b2da50669ddea8c"
+  },
+  "checks": [],
+  "captures": [],
+  "errors": [],
+  "human_playtest": "HUMAN_PENDING",
+  "exit_code": 1,
+  "failure": "AssertionError [ERR_ASSERTION]: figures overlap: lace/thoma\n    at verifyUnits (file:///D:/campaign-forge/ui-prototype/tests/playable-l03-p1v2-browser.mjs:106:74)\n    at async file:///D:/campaign-forge/ui-prototype/tests/playable-l03-p1v2-browser.mjs:116:18",
+  "finished_at": "2026-10-22T12:47:36.835Z"
+}

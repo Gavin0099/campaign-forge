@@ -15,7 +15,7 @@ assert.equal(fs.realpathSync(binding.path), binding.path);
 assert.equal(fs.statSync(binding.path).size, binding.bytes);
 assert.equal(hash(fs.readFileSync(binding.path)), binding.sha256);
 const { chromium } = await import('playwright');
-const output = path.join(root, process.argv.includes('--p1v3')
+const output = path.join(root, process.argv.includes('--p1v4') ? 'ui-prototype/docs/playable-l03-p1v4/p1v-regression' : process.argv.includes('--p1v3')
   ? `ui-prototype/docs/playable-l03-p1v3/${process.argv.includes('--before') ? 'before' : 'p1v-regression'}` : process.argv.includes('--p1v2')
   ? 'ui-prototype/docs/playable-l03-p1v2/p1v-regression' : 'ui-prototype/docs/playable-l03-p1v');
 const scratch = path.join(root, 'scratch/playable-l03-p1v-browser');
@@ -33,7 +33,7 @@ const checks = [], captures = [], errors = [];
 page.on('pageerror', e => errors.push(e.message));
 page.on('response', r => { if (r.status() >= 400) errors.push(`${r.status()} ${r.url()}`); });
 const sourceFiles = ['ui-prototype/src/main.tsx', 'ui-prototype/src/AnimatedActor.tsx',
-  ...(process.argv.includes('--p1v3') && !process.argv.includes('--before') ? ['ui-prototype/src/playable-l03/presentation.tsx'] : []),
+  ...((process.argv.includes('--p1v3') || process.argv.includes('--p1v4')) && !process.argv.includes('--before') ? ['ui-prototype/src/playable-l03/presentation.tsx'] : []),
   'ui-prototype/src/playable-l03/PlayableL03.tsx', 'ui-prototype/src/playable-l03/playable.css',
   'ui-prototype/src/playable-l03/rules.ts', 'ui-prototype/src/l03Scene.ts', 'ui-prototype/src/l03.css',
   'ui-prototype/tests/playable-l03-p1v-browser.mjs', 'ui-prototype/package.json', 'ui-prototype/package-lock.json',

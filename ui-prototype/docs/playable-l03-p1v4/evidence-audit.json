@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-22T13:06:03.469Z",
+  "exit_code": 0,
+  "browser_checks": 53,
+  "capture_hashes_checked": 33,
+  "source_bindings_checked": 47,
+  "reference_sha256": {
+    "layout-guide.svg": "7e14ba3220d285413b55f2584ece0233ce7f928298fbec6113ce5b16ce5a1295",
+    "layout-guide.png": "90d0394c6bb8a157de83e06088c35d88252e17e771aceea6d5ab793c589e513d",
+    "STYLE.md": "7622edae696f8b753518ab32842a164c933a3a921c5bcaa508d6c3fc2397ceab",
+    "VERIFICATION.md": "e9d12deb387eba3a9001bac4ef11e309962603a30d152728d423bf51fee51dcc",
+    "comparison.html": "681946bec1106d23e7ec1658668155c3c57a1274f788343c74d335c62c86321e"
+  },
+  "scope": "Final browser reports/current source, unmodified captures and comparison targets. Historical rejected-scale source is intentionally not current."
+}

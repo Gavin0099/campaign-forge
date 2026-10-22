@@ -189,10 +189,6 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
         </div>
         <svg className="p1v-map" viewBox="130 32 940 590" role="group" aria-label="11乘9渡口戰場；空白鍵選格，方向鍵移動焦點">
           <defs>
-            {["grass", "stone", "water", "forest"].map((name, index) => <pattern key={name} id={`${uid}-${name}`}
-              width="176" height="176" patternUnits="userSpaceOnUse" patternTransform="matrix(1 .591 -1 .591 550 70)">
-              <image href="/art/terrain-v2.png" width="352" height="352" x={index % 2 ? -176 : 0} y={index > 1 ? -176 : 0} />
-            </pattern>)}
             <marker id={`${uid}-arrow`} viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
               <path d="M0 0L10 5L0 10Z" fill="#ffd2a0" />
             </marker>

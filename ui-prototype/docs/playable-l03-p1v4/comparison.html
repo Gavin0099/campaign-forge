@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>L03 P1v4 — captured art comparison</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:24px;background:#101a19;color:#eee7d6;font:16px/1.5 system-ui,sans-serif}h1{font-size:24px;margin:0 0 8px}p{max-width:90ch;color:#b9bbab}label{display:inline-flex;gap:8px;align-items:center;margin:8px 24px 12px 0}select{padding:8px;background:#202822;color:#eee7d6;border:1px solid #b39a63}main{display:grid;grid-template-columns:1fr 1fr;gap:20px}figure{margin:0}figcaption{margin-bottom:8px}img{display:block;width:100%;height:auto;border:1px solid #756448}a{color:#e1c58b}a:focus-visible,select:focus-visible{outline:2px solid #ffe0a4;outline-offset:3px}@media(max-width:900px){main{grid-template-columns:1fr}}
+</style>
+<h1>L03: painted ferry crossing</h1>
+<p>Actual browser captures. Left: archived P1v3. Right: P1v4. Generated source art is separate from these screenshots. Character viewport height is 1.00 tile; the rejected 1.3 trial overlaps. Owner art review and human playtest remain pending.</p>
+<label>Resolution <select id="size"><option>1280x720</option><option>1920x1080</option></select></label>
+<label>State <select id="state"><option value="start">Start</option><option value="path">Selected / path</option><option value="intent">Enemy intent</option><option value="turn">Enemy turn</option><option value="victory">Victory</option><option value="defeat">Defeat</option><option value="cluster">Winch cluster</option></select></label>
+<main><figure><figcaption>P1v3 · archived capture</figcaption><a id="before-link"><img id="before" alt="Previous P1v3 game capture"></a></figure><figure><figcaption>P1v4 · current capture</figcaption><a id="after-link"><img id="after" alt="New P1v4 game capture"></a></figure></main>
+<p><a href="VERIFICATION.md">Verification and limits</a> · <a href="STYLE.md">Style and scale</a> · <a href="../art-prompts.json">All prompts</a> · <a href="../art-manifest.json">Original hashes</a> · <a href="rejected-scale-1.3/failure.png">Rejected 1.3 scale test</a></p>
+<script>
+const size=document.getElementById('size'), state=document.getElementById('state');
+function update(){
+ const s=size.value;
+ const paths={
+ start:['../playable-l03-p1v3/p1v-regression/'+s+'-start.png','after-'+s+'-start.png'],
+ path:['../playable-l03-p1v3/after-'+s+'-path-preview.png','after-'+s+'-selected-path-preview.png'],
+ intent:['../playable-l03-p1v3/p1v-regression/'+s+'-intent.png','after-'+s+'-enemy-intent.png'],
+ turn:['../playable-l03-p1v3/after-'+s+'-enemy-turn-banner.png','p1v3-regression/after-'+s+'-enemy-turn-banner.png'],
+ victory:['../playable-l03-p1v3/p1v-regression/'+s+'-victory.png','p1v-regression/'+s+'-victory.png'],
+ defeat:['../playable-l03-p1v3/p1v-regression/'+s+'-defeat.png','p1v-regression/'+s+'-defeat.png'],
+ cluster:['../playable-l03-p1v3/p1v2-regression/after-'+s+'-winch.png','p1v2-regression/after-'+s+'-winch.png']
+ };
+ ['before','after'].forEach((id,i)=>{document.getElementById(id).src=paths[state.value][i];document.getElementById(id+'-link').href=paths[state.value][i];});
+}size.addEventListener('change',update);state.addEventListener('change',update);update();
+</script></html>

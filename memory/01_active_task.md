@@ -1,4 +1,10 @@
-## 最新使用者指示：僅P1v3視覺調整（2026-10-22）
+## 最新使用者指示：僅P1v4手繪美術（2026-10-22）
+
+使用者：基線f1e0ab6，同worktree無另一代理、乾淨才繼續，不pull；只做120分鐘P1v4，允許built-in image_gen生成渡口／道具／第二騎士肖像並放大單位。不改rules.ts、不加npm依賴、不碰scratch/p2與scratch/p0d；commit後嘗試push，失敗留本機，不main／PR／stash。
+
+代理觀察：一張手繪地景與透明三物圖集接入原11×9格位，第二騎士肖像獨立；4張生成原件含1張寬河棄稿及完整Prompt／SHA。1.3倍格高實機重疊，採52/52=1.00共同視窗上限；可見alpha比例0.960–0.979，保留失敗紀錄與原overlap／click斷言。79項自動檢查與實際截圖／命令見ui-prototype/docs/playable-l03-p1v4，Git交付以handoff「P1v4 art pass」及最後SHA為準。兩騎士身體仍共用舊圖、額外動畫幀未做；真人試玩與Owner美術判定HUMAN_PENDING。共享檔持自有lock，不pull指示優先；任務完成不是SessionEnd、不寫每日紀錄。
+
+## 歷史使用者指示：僅P1v3視覺調整（2026-10-22）
 
 使用者：從 `codex/playable-l03-research@7319ef0` 接續，不pull；本worktree沒有另一代理。只做90分鐘P1v3，使用既有美術，不改rules.ts，不加npm依賴、不生圖、不碰scratch/p2。commit後嘗試push，失敗保留本機；不main／PR／stash。
 

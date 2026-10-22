@@ -37,7 +37,7 @@
 .p1v-phase.enemy { color:var(--p-enemy); }
 .p1v-layout { display:grid; grid-template-columns:minmax(0,1fr) 17.5rem; flex:1; min-height:0; }
 .p1v-board { min-width:0; display:flex; flex-direction:column; position:relative; isolation:isolate; background:#1c2825; }
-.p1v-board::before { content:""; position:absolute; inset:0; z-index:-2; opacity:.2; background:url('/art/ferry-scene-v2.png') center / cover; filter:blur(5px) saturate(.5); }
+.p1v-board::before { content:""; position:absolute; inset:0; z-index:-2; opacity:.3; background:url('/art/l03-p1v4/battlefield.png') center / cover; filter:blur(18px) saturate(.5); }
 .p1v-board::after { content:""; position:absolute; inset:0; pointer-events:none; z-index:-1; background:radial-gradient(ellipse at 48% 42%,#24302b00 25%,#0c171cbb 100%); }
 .p1v-map-caption { display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; padding:10px 24px 5px; color:#d1c4a5; font-size:.75rem; letter-spacing:.06em; }
 .p1v-map-caption i { display:inline-block; width:9px; height:5px; border:1px solid var(--p-ally); border-radius:50%; vertical-align:middle; margin-right:5px; }
@@ -46,11 +46,11 @@
 .p1v-inspection > span { grid-area:1 / 1; justify-self:start; }
 /* Stable wrapping footprint: a hover must never move the tile under the pointer. */
 .p1v-inspection-placeholder.hidden { visibility:hidden; }
-.p1v-map { display:block; width:100%; height:calc(100vh - 285px); flex:1 1 auto; min-height:320px; max-height:calc(100vh - 274px); overflow:visible; }
-.p1v-terrain { filter:drop-shadow(0 14px 13px #030c0b80); }
-.p1v-cell { fill:transparent; stroke:#d7ceb214; stroke-width:.7; cursor:pointer; }
+.p1v-map { display:block; width:100%; height:calc(100vh - 285px); flex:1 1 auto; min-height:320px; max-height:calc(100vh - 274px); overflow:hidden; }
+.p1v-terrain { pointer-events:none; }
+.p1v-cell { fill:transparent; stroke:transparent; stroke-width:.7; cursor:pointer; }
 .p1v-cell:hover { fill:#ffe1a222; stroke:#f2d79c; stroke-width:2; }
-.p1v-cell.legal { fill:#9edfc82b; stroke:#b0dfc5; stroke-width:1.5; }
+.p1v-cell.legal { fill:#9edfc81c; stroke:#b0dfc5; stroke-width:1; }
 .p1v-cell.selected { stroke:#f2d79c; fill:#ffe1a22b; stroke-width:2.5; }
 .p1v .p1v-cell:focus { outline:none; }
 .p1v .p1v-cell:focus-visible { outline:none; stroke:#fff0bd; stroke-width:3.5; fill:#ffe1a244; }

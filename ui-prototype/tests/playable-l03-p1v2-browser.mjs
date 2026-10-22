@@ -15,7 +15,7 @@ assert.equal(hash(fs.readFileSync(binding.path)), binding.sha256);
 const { chromium } = await import('playwright');
 const before = process.argv.includes('--before');
 const phase = before ? 'before' : 'after';
-const output = path.join(root, process.argv.includes('--p1v3') ? 'ui-prototype/docs/playable-l03-p1v3/p1v2-regression' : 'ui-prototype/docs/playable-l03-p1v2');
+const output = path.join(root, process.argv.includes('--p1v4') ? 'ui-prototype/docs/playable-l03-p1v4/p1v2-regression' : process.argv.includes('--p1v3') ? 'ui-prototype/docs/playable-l03-p1v3/p1v2-regression' : 'ui-prototype/docs/playable-l03-p1v2');
 const scratch = path.join(root, 'scratch/playable-l03-p1v2-browser');
 fs.mkdirSync(output, { recursive: true }); fs.mkdirSync(scratch, { recursive: true });
 const env = Object.fromEntries(['SystemRoot', 'WINDIR', 'SystemDrive'].filter(k => process.env[k]).map(k => [k, process.env[k]]));
@@ -30,7 +30,7 @@ const checks = [], captures = [], errors = [];
 page.on('pageerror', e => errors.push(e.message));
 page.on('response', r => { if (r.status() >= 400) errors.push(`${r.status()} ${r.url()}`); });
 const sourceFiles = ['ui-prototype/src/playable-l03/PlayableL03.tsx', 'ui-prototype/src/playable-l03/playable.css',
-  ...(process.argv.includes('--p1v3') ? ['ui-prototype/src/playable-l03/presentation.tsx'] : []),
+  ...(process.argv.includes('--p1v3') || process.argv.includes('--p1v4') ? ['ui-prototype/src/playable-l03/presentation.tsx'] : []),
   'ui-prototype/src/playable-l03/rules.ts', 'ui-prototype/src/l03Scene.ts', 'ui-prototype/src/AnimatedActor.tsx',
   'ui-prototype/tests/playable-l03-p1v2-browser.mjs', 'ui-prototype/docs/playable-l03-p0/success.jsonl',
   ...['l03-party-v1.png','l03-enemies-v1.png'].map(f => `ui-prototype/public/art/${f}`)];

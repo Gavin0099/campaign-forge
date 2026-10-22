@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="130 32 940 590">
+<rect x="130" y="32" width="940" height="590" fill="#182521"/>
+<!-- Exact existing camera: origin 550,70; x step 44,26; y step -44,26. -->
+<path d="M550 70L1034 356L638 590L154 304Z" fill="#777344"/>
+<path d="M726 174L814 226L418 460L330 408Z" fill="#38656c"/>
+<path d="M484 265L748 421" stroke="#a69a78" stroke-width="24"/>
+<path d="M726 174L814 226L418 460L330 408Z" fill="#38656c"/>
+<path d="M550 70L638 122L550 174L462 122Z" fill="#46563a"/>
+<path d="M682 512L858 408L814 434L726 434L594 564L638 590Z" fill="#46563a"/>
+<path d="M154 304L638 590L1034 356L1034 374L638 608L154 322Z" fill="#414332"/>
+</svg>

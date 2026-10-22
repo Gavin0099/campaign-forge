@@ -1,94 +1,78 @@
 import type { Cell } from "./rules";
-import { MAP, key, walkable } from "./rules";
+import { MAP } from "./rules";
 
-// This camera belongs only to the playable view. Map cells and rules are unchanged.
-// A steeper diamond gives the 50-unit figures room without overlapping the
-// nearest same-column pair (52 units between their feet).
+// Presentation-only camera; the painting was generated from this exact layout.
 export const project = (x: number, y: number) => ({ x: 550 + (x - y) * 44, y: 70 + (x + y) * 26 });
 export const center = (p: Cell) => project(p.x + .5, p.y + .5);
 export const diamond = (x: number, y: number) =>
   [project(x,y),project(x+1,y),project(x+1,y+1),project(x,y+1)].map(p => `${p.x},${p.y}`).join(" ");
 
+// 67.6 (1.3 tiles) fails P1v2's same-column/cluster overlap checks. The nearest
+// co-column foot spacing is 52; use that geometric maximum without moving feet.
+export const FIGURE_HEIGHT = 52;
 export function Figure({ id }: { id: string }) {
   const column = ["karen", "lace", "thoma"].indexOf(id);
-  return column >= 0 ? <svg data-p1v-figure={id} x="-19" y="-50" width="38" height="50"
-    viewBox={`${column * 724 + 110} 0 520 ${id === "thoma" ? 711 : 710}`} preserveAspectRatio="xMidYMax meet">
-    <image href="/art/l03-party-v1.png" width="2172" height="724" />
-  </svg> : <svg data-p1v-figure={id} x="-21" y="-50" width="42" height="50" viewBox="0 0 887 871" preserveAspectRatio="xMidYMax meet">
-    <image href="/art/l03-enemies-v1.png" width="1774" height="887" />
+  const width = column >= 0 ? FIGURE_HEIGHT * .76 : 44;
+  return <svg data-p1v-figure={id} x={-width/2} y={-FIGURE_HEIGHT} width={width} height={FIGURE_HEIGHT}
+    viewBox={column >= 0 ? `${column * 724 + 110} 0 520 ${id === "thoma" ? 711 : 710}` : "15 8 745 863"}
+    preserveAspectRatio="xMidYMax meet">
+    <image href={column >= 0 ? "/art/l03-party-v1.png" : "/art/l03-enemies-v1.png"}
+      width={column >= 0 ? 2172 : 1774} height={column >= 0 ? 724 : 887} />
   </svg>;
 }
 
 export function Portrait({ id }: { id: string }) {
   const column = ["karen", "lace", "thoma"].indexOf(id);
-  return <svg className="p1v-portrait" viewBox={column < 0 ? "185 30 390 390" : `${column * 724 + 240} 0 300 300`} aria-hidden="true">
+  if (id === "knight-2") return <svg className="p1v-portrait" viewBox="0 0 1254 1254" aria-hidden="true" data-p1v-portrait={id}>
+    <image href="/art/l03-p1v4/knight-2-portrait.png" width="1254" height="1254" />
+  </svg>;
+  return <svg className="p1v-portrait" data-p1v-portrait={id}
+    viewBox={column < 0 ? "185 30 390 390" : `${column * 724 + 240} 0 300 300`} aria-hidden="true">
     <image href={`/art/${column < 0 ? "l03-enemies-v1" : "l03-party-v1"}.png`}
       width={column < 0 ? 1774 : 2172} height={column < 0 ? 887 : 724} />
   </svg>;
 }
 
-function Prop({ crop, x, y, width, height }: { crop: string; x: number; y: number; width: number; height: number }) {
-  return <svg x={x} y={y} width={width} height={height} viewBox={crop} preserveAspectRatio="xMidYMax meet">
-    <image href="/art/props-v2.png" width="2048" height="683" />
+function Prop({ crop, x, y, width, height, kind }: { crop: string; x: number; y: number; width: number; height: number; kind: string }) {
+  return <svg x={x} y={y} width={width} height={height} viewBox={crop} preserveAspectRatio="xMidYMax meet" data-p1v-prop={kind}>
+    <image href="/art/l03-p1v4/props.png" width="1536" height="1024" />
   </svg>;
 }
 
 export function Terrain({ uid }: { uid: string }) {
-  const cells = MAP.rows.flatMap((row,y) => [...row].map((tile,x) => ({x,y,tile})))
-    .sort((a,b) => a.x+a.y-b.x-b.y || a.x-b.x);
   return <g className="p1v-terrain" aria-hidden="true">
-    {cells.map(p => {
-      const water = !walkable(p,"open"), a=project(p.x,p.y+1), b=project(p.x+1,p.y+1), c=project(p.x+1,p.y);
-      const surface = water ? "water" : p.tile === "F" ? "forest" : p.tile === "R" ? "stone" : "grass";
-      return <g key={key(p)}>
-        {!water && <g className="p1v-tile-sides">
-          <polygon points={`${a.x},${a.y} ${b.x},${b.y} ${b.x},${b.y+18} ${a.x},${a.y+18}`} fill="#383a2b" />
-          <polygon points={`${b.x},${b.y} ${c.x},${c.y} ${c.x},${c.y+18} ${b.x},${b.y+18}`} fill="#242b25" />
-          <path d={`M${a.x} ${a.y+5}L${b.x} ${b.y+5}L${c.x} ${c.y+5}`} fill="none" stroke="#96886a" strokeOpacity=".25" />
-        </g>}
-        <g transform={water ? "translate(0 12)" : undefined}>
-          <polygon points={diamond(p.x,p.y)} fill={`url(#${uid}-${surface})`} />
-          <polygon className={water ? "p1v-water-glint" : "p1v-ground-tone"} points={diamond(p.x,p.y)}
-            fill={water ? "#8eb9ad" : "#202b1e"} opacity={water ? .08 : .12} />
-        </g>
-      </g>;
-    })}
+    <defs>
+      <linearGradient id={`${uid}-edge-x`}><stop offset="0" stopColor="black" /><stop offset=".025" stopColor="white" /><stop offset=".975" stopColor="white" /><stop offset="1" stopColor="black" /></linearGradient>
+      <linearGradient id={`${uid}-edge-y`} x2="0" y2="1"><stop offset="0" stopColor="black" /><stop offset=".035" stopColor="white" /><stop offset=".965" stopColor="white" /><stop offset="1" stopColor="black" /></linearGradient>
+      <mask id={`${uid}-edge-mask-x`} maskUnits="userSpaceOnUse" x="130" y="32" width="940" height="590"><rect x="130" y="32" width="940" height="590" fill={`url(#${uid}-edge-x)`} /></mask>
+      <mask id={`${uid}-edge-mask`} maskUnits="userSpaceOnUse" x="130" y="32" width="940" height="590"><rect x="130" y="32" width="940" height="590" fill={`url(#${uid}-edge-y)`} mask={`url(#${uid}-edge-mask-x)`} /></mask>
+    </defs>
+    {/* Invert the layout guide's xMidYMid framing. Hit polygons keep the same camera. */}
+    <image data-p1v-battlefield href="/art/l03-p1v4/battlefield.png" x="130" y="13.666667" width="940" height="626.666667" mask={`url(#${uid}-edge-mask)`} />
+    <g fill="none" stroke="#9abfb9" strokeWidth="1.2">
+      <path className="p1v-water-glint" d="M743 217q-17 12-29 17m-25 15-26 15m-22 14-24 14" />
+      <path className="p1v-water-glint" d="M583 335q-20 9-29 17m-25 15-26 15m-22 14-24 14" />
+    </g>
   </g>;
 }
 
 export function Landmarks({ dev }: { dev: boolean }) {
   const winch=center(MAP.winch), wagon=center(MAP.wagon);
   return <g className="p1v-landmarks" aria-hidden="true">
-    {/* Decorative trees stay at the outer forest edge, away from the west-bank unit cluster. */}
-    {[{x:0,y:0},{x:1,y:0},{x:10,y:7},{x:10,y:8}].map(p => {
-      const at=center(p); return <g key={key(p)} transform={`translate(${at.x} ${at.y})`}>
-        <Prop crop="0 0 680 683" x={-37} y={-80} width={74} height={88} />
-      </g>;
-    })}
-    {/* Only the surviving banks get planks. The broken river cells remain open water. */}
-    {[{x:3,y:4},{x:6,y:4}].map(p => <g key={key(p)} transform={`translate(${center(p).x} ${center(p).y})`}>
-      <path d="M-31-3L-2-20 31 0 2 17Z" fill="#776047" stroke="#c0a77b" />
-      <path d="M-24 1L5-16M-14 7L15-10M-4 13L25-4" stroke="#332d25" strokeWidth="3" />
-      <path d="M-27 4v15M25 2v17" stroke="#484236" strokeWidth="6" />
+    {[{x:3,y:4},{x:6,y:4}].map((p,i) => <g key={i} transform={`translate(${center(p).x} ${center(p).y})`}>
+      <g transform={i ? "scale(-1 1)" : undefined}><Prop kind="bridge" crop="530 310 490 510" x={-30} y={-31} width={60} height={48} /></g>
     </g>)}
     <text x={center({x:5,y:4}).x} y={center({x:5,y:4}).y+18} textAnchor="middle">斷橋</text>
     <g transform={`translate(${winch.x} ${winch.y})`}>
-      <ellipse rx="23" ry="8" cy="4" fill="#0b1411" opacity=".6" />
-      <path d="M-20-2L0-14 22-1 0 12Z" fill="#67543c" stroke="#c6ae7d" />
-      <path d="M-11 0V-24M11 2V-22" stroke="#3b3026" strokeWidth="7" />
-      <path d="M-12-14H13" stroke="#9c875c" strokeWidth="8" />
-      <circle cy="-21" r="14" fill="#2c3028" stroke="#c7a767" strokeWidth="3" />
-      <path d="M-11-21H11M0-32V-10M-8-29L8-13" stroke="#d4bc83" strokeWidth="2" />
-      <text y="-43" textAnchor="middle" data-p1v-landmark="winch">絞盤{dev ? " (2,1)" : ""}</text>
-      <path className="p1v-objective-pin" d="M-4-58L0-62 4-58 0-54Z" fill="#e5cd91" />
+      <ellipse rx="24" ry="8" cy="4" fill="#0b1411" opacity=".45" />
+      <Prop kind="winch" crop="0 280 536 540" x={-32} y={-49} width={64} height={58} />
+      <text y="-56" textAnchor="middle" data-p1v-landmark="winch">絞盤{dev ? " (2,1)" : ""}</text>
+      <path className="p1v-objective-pin" d="M-4-70L0-74 4-70 0-66Z" fill="#e5cd91" />
     </g>
     <g transform={`translate(${wagon.x} ${wagon.y})`}>
-      <ellipse rx="35" ry="10" cy="6" fill="#0b1411" opacity=".5" />
-      <path d="M-35-7L-9-20 36 7 10 22Z" fill="#735e44" stroke="#bda37b" strokeWidth="2" />
-      <circle cx="-18" cy="9" r="9" fill="#292a23" stroke="#887552" strokeWidth="3" />
-      <circle cx="20" cy="23" r="9" fill="#292a23" stroke="#887552" strokeWidth="3" />
-      <Prop crop="1370 150 678 490" x={-39} y={-51} width={78} height={62} />
-      <text y="-57" textAnchor="middle">車隊</text>
+      <ellipse rx="33" ry="10" cy="6" fill="#0b1411" opacity=".4" />
+      <Prop kind="wagon" crop="1020 290 516 510" x={-40} y={-57} width={80} height={68} />
+      <text y="-63" textAnchor="middle">車隊</text>
     </g>
   </g>;
 }

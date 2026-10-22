@@ -10,6 +10,13 @@
 
 ## Slices
 
+### Authorized P1v4: hand-painted art pass — 2026-10-22
+
+使用者：從乾淨且已同步的 `f1e0ab6` 接續，只做 P1v4，120分鐘上限，不pull；確認同worktree無其他代理。明確允許built-in image_gen生成渡口、手繪道具、第二騎士肖像與放大角色；不改rules.ts、不加依賴、不碰scratch/p2或scratch/p0d。正常commit後嘗試push，失敗留本機。
+
+代理觀察：單張連續手繪地景取代99格重複材質，精確配置參考約束河道，透明手繪絞盤／斷橋／車輛接入原格位，五個肖像簽名互異。4張生成原件含1張棄用寬河稿，完整Prompt／SHA留存。1.3格高實測重疊，保留失敗證據，採共同viewport幾何上限52/52=1.00，可見alpha高度0.960–0.979；既有深度排序與五點點擊測試不弱化。最終實機、79項檢查、命令exit codes及限制見 `docs/playable-l03-p1v4/`；Git結果以handoff「P1v4 art pass」為準。原規則／劇情／依賴不變，兩騎士身體仍共用舊圖，額外動畫幀未做。HUMAN_PENDING；非Owner美術驗收、非SessionEnd。共享PLAN及active_task持自有lock，使用者不pull指示優先。
+
+
 ### Authorized P1v3: visual pass — 2026-10-22
 
 使用者：螢幕弱、不像遊戲、風格不一致；只做 `docs/tasks/playable-l03-P1v3-visual.md`，90分鐘上限，沿用乾淨且同步的 `7319ef0`，不pull。只用既有素材，不生圖、不加依賴、不改rules.ts與故事；不碰scratch/p2。Owner確認本worktree無另一代理。正常commit後嘗試push，失敗留本機。
