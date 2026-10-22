@@ -1,5 +1,207 @@
 # Handoff: codex/playable-l03-research
 
+## P0c variant comparison
+
+**Recommendation: A, THIN, as an experiment only.** Extending to six turns
+removes the known one-command wins in the P0b spaces while preserving the
+original P0 success. It still has five T1-then-wait wins, so this is a narrow
+mechanical improvement, not evidence of an engaging battle. B and both B+
+windows still permit one ally to move twice, four tiles total, and wait to
+win. No variant is OK. No option was adopted as default; P1 is not started.
+
+| Field | P0c current chunk |
+| --- | --- |
+| Branch / own worktree | `codex/playable-l03-research` / `D:\campaign-forge` |
+| Baseline | `d42024bf381f466c665fb661f493e291968aa2bb`; clean status, Owner confirms no competing agent |
+| Implementation | `ab749d6523e48a469456bc3a1047b5d69313b437` (**local**, normal commit succeeded with hooks) |
+| Delivery | Normal `git push origin codex/playable-l03-research` exit **1**, github.com:443 connection failure. No retry, escalation of push, force, hook bypass or credential change. This handoff is a separate local documentation commit; its SHA is reported in the final response (`git rev-parse HEAD`). |
+| Owner instruction | Only P0c, 45 minutes, opt-in variants, original P0/P0b byte-identical, commit then try push; leave local on failure. Latest direct instruction explicitly says **do not pull**, superseding the task's pull step and shared-edit pull default. No P1/main/PR/stash. |
+| Review input | `origin/review/gpt-playable-l03-research` @ `336016e`, `docs/review/gpt-playable-l03-p0b.md`, read with `git show`, exit 0; model input, not approval |
+| Time | First recorded clock `2026-10-22T15:31:55+08:00`, immediately after a 6.1-second initial status/read batch. Evidence freeze `15:43`; final handoff preparation `15:46` (about 14 minutes since first clock). Final commit/check overhead and precise elapsed time reported in final response; 45-minute maximum. |
+
+### Results and verdicts
+
+W/L are counts of strategies in the named search space, never human win
+rates. T1 includes all legal 0–3-command orders and deduplicates by labeled
+end placement, retaining the minimum-cost representative, then only waits.
+Max-one-move includes all legal command/turn combinations along the idle
+timeline plus idle once; commands after a terminal state are excluded.
+Cost order is **commands, distinct moved allies, path tiles**, matching P0b;
+the display below is **units/moves/tiles**. Full party remains present in
+these two searches, so unmoved allies can still block enemies.
+
+| Variant | Turn-1-then-wait W/L | Max-one-move W/L | Min-cost win (units/moves/tiles) | Original P0 success trace still wins? | Lace (0,3) cheese still wins? | Solo wins? | Duo wins? | Verdict |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Baseline | 493/6303 | 6/211 | 1/1/1 | Yes, progress 1 | Yes, progress 2 | 3/3 lineups | 3/3 lineups | **CHEESE** |
+| A (6 turns) | 5/6791 | 0/217 | 3/3/8 | Yes, progress 2 | No | None found (bounded) | None found (bounded) | **THIN** |
+| B | 330/6466 | 0/217 | 1/2/4 | Yes, progress 1 | No | 3/3 lineups | 3/3 lineups | **CHEESE** |
+| C | 234/5435 | 6/213 | 1/1/1 | No: Thoma's T1 move becomes illegal | No | 3/3 lineups | 3/3 lineups | **CHEESE** |
+| B+ N=2 | 330/6466 | 0/217 | 1/2/4 | Yes, progress 1 | No | 3/3 lineups | 3/3 lineups | **CHEESE** |
+| B+ N=3 | 330/6466 | 0/217 | 1/2/4 | Yes, progress 1 | No | 3/3 lineups | 3/3 lineups | **CHEESE** |
+
+Minima combine the P0b spaces with the additional five-turn B/B+ two-command
+searches. A's 3/3/8 is the cheapest **found in its P0b spaces**, not a global
+optimum across multi-turn play. A was not given the additional B/B+ search;
+its THIN verdict is correspondingly limited. Solo/duo uses the same P0b
+existence search: absent allies removed, both enemies retained, <=1 command
+per turn, deduplicated by position/progress/**hold history**, deterministic
+10,000-state cap, stops at first win. A had no truncation but only covers
+that command-per-turn bound; it is not a global claim that reduced parties
+cannot win. B and B+ Karen+Lace lineups hit the cap and still find legal
+witnesses. No solo/duo optimum or full multi-turn W/L is asserted.
+Per-lineup T1 and one-command counts, widths and cap flags are in JSON.
+
+- **Baseline — CHEESE:** the original Lace T2 (1,3)→(0,3) one-tile retreat
+  still wins; no actual protection of the winch is required.
+- **A — THIN:** one-command wins disappear; its cheapest T1 solution moves
+  Karen→(2,2), Lace→(1,1), Thoma→(3,3), eight path tiles, then waits through
+  turn six, progress 2. This asks for coordinated initial positioning but
+  still no later action. Reduced-party robustness is unproved. Recommend
+  retaining A for Owner comparison because it is the only tested option
+  without a demonstrated one/two-command cheap win at its selected horizon;
+  this is not a rule adoption or authorization to continue.
+- **B — CHEESE:** final adjacency eliminates the old remote retreat, but a
+  two-command one-ally win remains, including last-turn arrival.
+- **C — CHEESE:** changing Thoma to (0,4) eliminates the exact old retreat
+  while creating Lace T2 (1,3)→(1,4), one tile, progress 2. The original P0
+  Thoma command to (2,2) is now four steps and rejected; not a valid loss
+  replay and not silently rerouted.
+- **B+ N=2 — CHEESE:** excludes last-turn-only arrival but still permits two
+  moves by one ally; the additional hold turn is largely waiting.
+- **B+ N=3 — CHEESE:** same minimum and T1 winning placements as N=2;
+  longer holding cuts some timed sequences but does not remove cheap wins.
+
+THIN here means solvable and no cheap witness in the tested spaces, with
+depth unproved. CHEESE means <=1 command or a <=2-command hold/rush witness
+in the selected horizon. OK requires additional tactical evidence. No win
+found means **UNSOLVABLE within the reported bounds**, never a successful
+fix or a proof of global impossibility. No extra candidate rules proposed.
+
+### Cheapest bounded multi-move wins for B and B+
+
+Exact bounds: **at most 2 commands per turn AND 2 total**, all legal units,
+destinations and command orders, at 5 and 6 turns, no beam or state cap.
+These are deliberately cheap-strategy searches, not all strategies allowed
+up to ten/twelve commands. Every winning witness below is independently
+replayed through the real `command`/`resolve` API in the P0c tests and new
+JSONL evidence. Cost is **1 ally / 2 commands / 4 path tiles** in every
+five-turn row. Other two allies stay present as stationary blockers.
+
+| Variant / horizon | W/L within bounds | Cheapest found | Cheapest arrival at the latest allowed time |
+| --- | --- | --- | --- |
+| B / 5 | 229/24439 | Lace T1→(0,3), T3→(2,2), then wait; progress 2 | Lace T2→(0,3), **T5→(1,1)**; holds only T5, progress 2 |
+| B+ N=2 / 5 | 208/24460 | Same T1/T3 strategy; holds T3–5, progress 2 | Lace T1→(0,3), **T4→(2,2)**; holds T4–5, progress 2 |
+| B+ N=3 / 5 | 172/24496 | Same T1/T3 strategy; holds T3–5, progress 2 | Same; arrival **T3**, progress 2 |
+| B / 6 | 0/24922 | No win found: **UNSOLVABLE in these two-command bounds** | None found |
+| B+ N=2 / 6 | 0/24922 | No win found: **UNSOLVABLE in these two-command bounds** | None found |
+| B+ N=3 / 6 | 0/24922 | No win found: **UNSOLVABLE in these two-command bounds** | None found |
+
+Six-turn rows are extra horizon probes, not adoption of A+B or a claim
+those complete variants cannot win with more commands. Within five turns
+the exhaustive zero/one-command search has no wins, and all two-command
+sequences were checked, establishing the minimum displayed command count
+and its minimum units/tiles under the existing P0b cost order.
+
+### 1. What changed
+
+`ui-prototype/src/playable-l03/rules.ts` gains optional `config.p0c` only:
+survivalTurns 5/6, requiredHoldTurns N, Thoma west-start flag. No experiment
+in DEFAULT_CONFIG. A hold requires a living ally orthogonally adjacent to
+(2,1) after enemy resolution and progress <3; a gap resets history. Required
+history is serialized only when enabled; threshold failure precedes success.
+New tests/search/report/witnesses are isolated under `playable-l03-p0c`.
+README documents the contract. No attack/HP/push gameplay/UI/art/story.
+
+Shared files edited: `ui-prototype/PLAN.md`, `memory/01_active_task.md`.
+Own locks acquired, fetch/ancestry checked, no pull per latest Owner
+instruction, `SHARED-EDIT` printed and `Shared-file` commit trailers added.
+Locks released only for this task's own files at local handoff after failed
+push; no other agent's lock/worktree touched. No daily memory record edited.
+
+### 2. Tests and delivery evidence
+
+Detailed commands/hashes/setup failures are in
+`ui-prototype/docs/playable-l03-p0c/VERIFICATION.md`. All from repo root:
+
+| Command/check | Exit code / observed result |
+| --- | --- |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p0c-search.mjs --write-results`, then without write flag | **0 / 0**, full searches twice, identical report/stdout |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p0c.mjs --write-traces` | **0**, 9 PASS, new witnesses only |
+| Same P0c tests without write flag, twice | **0 / 0**, 9 PASS each, identical stdout and JSONL |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p0.mjs` | **0**, 8 PASS; original fixtures exact |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p0b.mjs` | **0**, 9 PASS; original fixtures exact; stdout hash equals prior P0b handoff |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p0b-search.mjs` | **0**, original report exact; stdout hash equals prior P0b handoff |
+| `npm run build --prefix ui-prototype` | **0**, TypeScript + Vite, 46 modules |
+| Existing absolute Python + `scripts/validate_ui_scope.py` | **0** on approved run; 13 planning files checked |
+| `git diff --exit-code d42024b --` original P0/P0b test/support/search and evidence paths | **0**, unchanged |
+| `git diff --check`; `git diff --cached --check` before implementation commit | **0 / 0** |
+| `git add` exact implementation paths | **0** |
+| `git commit --file scratch/p0c/implementation-message.txt` | Sandbox **1** (`index.lock` denied), approved same command **0**, `ab749d6`; normal hooks, no bypass |
+| Pre-push `git fetch origin`; `git log --oneline HEAD..origin/codex/playable-l03-research`; ancestor check | **0 / 0 / 0**, no unknown commits |
+| `git push origin codex/playable-l03-research` | **1**, could not connect github.com:443; no retry; local commits retained |
+| Handoff staging/commit | Sandbox `git add` **128** (`index.lock` denied); following commit **1** because nothing was staged, not a hook rejection. Approved stage/check/commit retried with normal hooks; final result reported with final SHA. |
+
+Both search captures SHA256:
+`de4ea34aacd662ea514444d1f2c53365dd921a8784f81575b55b7bfac627da8e`.
+Both test captures:
+`d0a638e28ae85c6d9876f6553265b1c37b99a0999bb9cbb243958bce94a218c4`.
+These are PowerShell stdout captures, distinct from UTF-8 report hashes.
+
+The successful pre-commit hook advised `missing_canonical_memory` with
+`completion_claim_allowed=True`. This milestone is not SessionEnd; no
+canonical closeout was fabricated. The network failed before pre-push
+verification could be observed: installed hooks are **not** evidence of a
+successful pre-push hook run. No governance code changed; governance-code
+regression suite is N/A. No native lifecycle callback claim.
+
+### 3–6. Limits, risks, open questions, not claimed
+
+P1–P6, formal rules/story, art, playable UI, keyboard/resolution acceptance,
+complete sealed-route victory, human fun, Owner approval and merge into
+main are not completed or claimed. Search caps and omitted strategies limit
+negative conclusions, especially A's reduced parties. A's five static wins
+may still feel trivial; THIN is a provisional model interpretation, not
+human gameplay acceptance. Results do not address QR-11 rewards/costs.
+Implementation and handoff remain local after the failed normal push.
+
+For independent review: assess the THIN threshold, dedup/cost boundaries,
+last-N-end interpretation and whether these two-command counterexamples
+are sufficient to reject B/B+ as tactical fixes. For Gavin: A is the
+recommended comparison candidate with these limits; no further work or
+default selection is presumed. No reviewer agents were started.
+
+### Resource self-check — P0c
+
+Source: `docs/review/RESOURCE-CHECKLIST.md`. Cached original prototype-fast,
+level-design and game-ai SKILL.md reread at pinned upstream
+`0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd`; same files recorded in the
+existing source manifest. No skill installation, external code execution,
+additional agents or borrowed source/art. Earlier manifests remain provenance,
+not proof of a current human playtest.
+
+| Section / item | Result and evidence |
+| --- | --- |
+| A: prototype-fast | **PASS verification** — one question, explicit keep/verdict/timebox before search, isolated options, results retained without promoting default; human fun **N/A** |
+| A: level-design | **PASS open solvability / FAIL depth for B/C/B+** — table and witnesses expose cheap wins; A **THIN**, sealed victory **N/A** map-only boundary, no complete-branch claim |
+| A: game-ai | **PASS determinism / FAIL tactical resistance** — same real API, two identical search outputs, unchanged P0b tie/order tests; cheap waiting remains for B/B+ |
+| A: game-ui-ux | **N/A**, P1/UI excluded |
+| A: game-feel | **N/A**, animation/feedback excluded |
+| B: Grid-Tactics | **PASS architecture separation**, pure state/event API and no view dependency; prior pinned reference only, no new external implementation copied |
+| B: HopeMetal | **N/A reuse / PASS license separation**, no code/assets borrowed; existing code-MIT versus image-CC-BY-SA distinction retained |
+| B: new engine/dependency | **PASS**, package and lockfiles unchanged; existing Node/TypeScript/Vite/Python only |
+| C: complete 3–5 minute solo battle | **N/A**, headless verification only; no human duration claim |
+| C: understandable enemy actions | **PASS mechanics**, unchanged intent events/tie/order tests and legal witness replays; human readability **N/A** |
+| C: can win/lose | **PASS**, counts, boundary tests and trace replays; reduced parties have explicit bounds |
+| C: two tactical choices change outcome | **PASS outcome differences / FAIL depth for B/C/B+**, retreat versus waiting and hold deadline tested; explained measured defect, not an unexplained release gate. A remains THIN, no OK claim |
+| C: retry/change strategy | **PASS regression**, unchanged P0 tests plus P0c retry resets history and keeps experiment |
+| C: duplicate/stuck/invalid paths | **PASS tested rules / N/A animation**, unchanged P0/P0b guards plus new hold/threshold tests; finite search, real movement API |
+| C: 720p/1080p/keyboard | **N/A**, no UI changes or complete playable claim |
+| C: automated vs human feedback | **PASS**, all new evidence explicitly machine-only; GPT review is model input |
+| D: SRD/CC-BY/rule contract | **N/A adaptation / PASS scope**, original provisional occupancy options explicitly authorized, no copied SRD/WotC content or third-party art. Missing formal rule contract remains a historical limitation, not treated as satisfied |
+| D: AGENTS/Owner scope | **PASS**, only P0c, own branch/worktree, locked shared milestones, no default adoption, pull, main changes, story/Ink, P1, stash, PR, force, deployment, Actions, trust changes or paid tool |
+
+## Historical P0b report
+
 P0b verdict: **CHEESE**. One tile of movement by Lace on turn two, followed
 by waiting, wins with progress 2. The earlier multi-unit hold proves that
 occupancy affects outcomes, but is unnecessary to win this reduced encounter.
