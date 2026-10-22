@@ -9,6 +9,7 @@ export type Unit = Readonly<{
 // P0c experiments only. Omitted by default so P0/P0b serialized states stay identical.
 export type RulesConfig = Readonly<{ blockAlliedPassage: boolean;
   p0c?: Readonly<{ survivalTurns?: 5 | 6; requiredHoldTurns?: number; thomaStartsWest?: boolean }>;
+  p0d?: Readonly<{ blockedTurnsBeforeBreakout: number }>;
 }>;
 export type MapDef = Readonly<{
   rows: readonly string[]; winch: Cell; wagon: Cell; exit: Cell;
@@ -34,10 +35,13 @@ export type State = Readonly<{
   status: "playing" | "success" | "failure";
   progress: number; units: readonly Unit[]; moved: readonly string[];
   holdStreak?: number;
+  blockedTurns?: Readonly<Record<string, number>>;
 }>;
 export type Event =
   | { type: "move"; unit: string; path: readonly Cell[] }
   | { type: "intent"; unit: string; target: "winch"; reason: "turn-winch" | "approach" | "blocked" }
+  | { type: "breakout"; unit: string; blockedTurns: number; path: readonly Cell[];
+      swapped?: { unit: string; from: Cell; to: Cell } }
   | { type: "progress"; delta: number; total: number }
   | { type: "turn"; completed: number }
   | { type: "result"; status: "success" | "failure" }
@@ -70,9 +74,13 @@ export function initialState(route: Route = "open", config = DEFAULT_CONFIG): St
   const hold = experiment?.requiredHoldTurns ?? 0;
   if (![5, 6].includes(limit) || !Number.isInteger(hold) || hold < 0 || hold > limit)
     throw new Error("invalid-P0c-config");
+  const pressure = config.p0d?.blockedTurnsBeforeBreakout;
+  if (config.p0d && (!Number.isSafeInteger(pressure) || pressure! < 1))
+    throw new Error("invalid-P0d-config");
   return { route, config: { ...config }, turn: 1, status: "playing", progress: 0,
     units: DEPLOYMENT.map(u => ({ ...u, cell: experiment?.thomaStartsWest && u.id === "thoma"
-      ? { x: 0, y: 4 } : { ...u.cell } })), moved: [], ...(hold ? { holdStreak: 0 } : {}) };
+      ? { x: 0, y: 4 } : { ...u.cell } })), moved: [], ...(hold ? { holdStreak: 0 } : {}),
+    ...(config.p0d ? { blockedTurns: {} } : {}) };
 }
 // Bounded BFS; destinations always empty, even when allied transit is enabled.
 export function findPath(state: State, actor: Unit, to: Cell): Cell[] | undefined {
@@ -93,6 +101,28 @@ export function findPath(state: State, actor: Unit, to: Cell): Cell[] | undefine
   return undefined;
 }
 const rejected = (state: State, reason: string): Result => ({ ok: false, state, events: [], reason });
+
+// D experiment: after N consecutive blocked phases, take ONE bounded breakout.
+// Ignore living allies only when planning; other enemies remain obstacles.
+// Travel <=3 cells, stop at the FIRST ally, swapping it into the preceding cell.
+// Shortest approach and path ties use the existing N/W/E/S order. No damage.
+function breakout(state: State, enemy: Unit, streak: number): { state: State; event?: Event } {
+  const planning = { ...state, config: { ...state.config, blockAlliedPassage: true },
+    units: state.units.filter(u => u.side === "enemy") };
+  const path = neighbors(MAP.winch).map(to => findPath(planning, enemy, to))
+    .filter((p): p is Cell[] => !!p).sort((a, b) => a.length - b.length)[0];
+  if (!path || path.length < 2) return { state };
+  let steps = Math.min(3, path.length - 1);
+  let swapped: { unit: string; from: Cell; to: Cell } | undefined;
+  for (let i = 1; i <= steps; i++) {
+    const ally = state.units.find(u => u.alive && u.side === "ally" && same(u.cell, path[i]));
+    if (ally) { steps = i; swapped = { unit: ally.id, from: ally.cell, to: path[i - 1] }; break; }
+  }
+  return { state: { ...state, units: state.units.map(u => u.id === enemy.id
+    ? { ...u, cell: path[steps] } : u.id === swapped?.unit ? { ...u, cell: swapped.to } : u) },
+    event: { type: "breakout", unit: enemy.id, blockedTurns: streak, path: path.slice(0, steps + 1),
+      ...(swapped ? { swapped } : {}) } };
+}
 
 export function command(state: State, input: Command): Result {
   if (input.type === "retry") {
@@ -119,22 +149,34 @@ export function resolve(state: State, expectedTurn: number): Result {
   if (state.route !== "open") return rejected(state, "sealed-map-only-in-P0");
   let current = state;
   const events: Event[] = [];
+  const threshold = state.config.p0d?.blockedTurnsBeforeBreakout;
+  const blockedTurns = { ...state.blockedTurns };
+  const blocked = (enemy: Unit) => {
+    if (threshold === undefined) return;
+    const streak = Math.min(threshold, (blockedTurns[enemy.id] ?? 0) + 1);
+    blockedTurns[enemy.id] = streak;
+    if (streak < threshold) return;
+    const result = breakout(current, enemy, streak);
+    if (result.event) { current = result.state; events.push(result.event); blockedTurns[enemy.id] = 0; }
+  };
   // Only knights adjacent at phase START contribute; arriving grants a reaction turn.
   const contributors = state.units.filter(u => u.alive && u.side === "enemy" && distance(u.cell, MAP.winch) === 1);
   for (const enemy of state.units.filter(u => u.alive && u.side === "enemy")) {
     if (contributors.some(u => u.id === enemy.id)) {
       events.push({ type: "intent", unit: enemy.id, target: "winch", reason: "turn-winch" });
+      if (threshold !== undefined) blockedTurns[enemy.id] = 0;
       continue;
     }
     const paths = neighbors(MAP.winch).map(to => findPath(current, enemy, to))
       .filter((p): p is Cell[] => !!p).sort((a, b) => a.length - b.length);
     const path = paths[0];
     events.push({ type: "intent", unit: enemy.id, target: "winch", reason: path ? "approach" : "blocked" });
-    if (!path) continue;
+    if (!path) { blocked(enemy); continue; }
     // With allied transit allowed, never end a partial move inside another unit.
     let steps = Math.min(3, path.length - 1);
     while (steps > 0 && current.units.some(u => u.alive && u.id !== enemy.id && same(u.cell, path[steps]))) steps--;
-    if (!steps) continue;
+    if (!steps) { blocked(enemy); continue; }
+    if (threshold !== undefined) blockedTurns[enemy.id] = 0;
     const traveled = path.slice(0, steps + 1);
     current = { ...current, units: current.units.map(u => u.id === enemy.id ? { ...u, cell: traveled[steps] } : u) };
     events.push({ type: "move", unit: enemy.id, path: traveled });
@@ -151,5 +193,5 @@ export function resolve(state: State, expectedTurn: number): Result {
   if (status !== "playing") events.push({ type: "result", status });
   return { ok: true, state: { ...current, progress, status,
     turn: status === "playing" ? state.turn + 1 : state.turn, moved: [],
-    ...(hold ? { holdStreak } : {}) }, events };
+    ...(hold ? { holdStreak } : {}), ...(threshold === undefined ? {} : { blockedTurns }) }, events };
 }
