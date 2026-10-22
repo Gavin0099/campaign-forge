@@ -739,3 +739,147 @@ game-ai `ef23a6440743b3583d1072c92f6b0b45f3d11df33b3b77db53bce8b82c2f8940`.
 - **PASS — authorized scope:** task P0 only, own branch/worktree, requested
   merge of origin/main into this branch, no merge into main, no story/setting
   changes, no P1, no stash, no PR/deploy/Actions. Scope validator exit **0**.
+
+## P1v2 readability
+
+This section is the current readability delivery; earlier P0/P1v delivery
+statements above remain historical. Adjacent units previously obscured names
+and intercepted clicks meant for other tiles. The new view uses tile-only
+input, smaller foot-anchored silhouettes, deterministic depth order and a
+separate name strip. Automated checks establish reliable tile targeting and
+unobscured names in the requested clusters; they do not establish human
+recognition, fun or commercial art quality.
+
+| Field | Value |
+| --- | --- |
+| Branch / named base | `codex/playable-l03-research` / `63a1f112cc7a331aee20bf37e82b935e57cbd2e8` |
+| Implementation | `d98a4725d98282c26592884866932ce2d96e9680` |
+| Delivery | **LOCAL ONLY**: normal push exit **1**, GitHub port 443 connection failure; no retry or bypass |
+| Owner instruction | Only `docs/tasks/playable-l03-P1v2-readability.md`, 60-minute cap, no pull, unchanged rules, A only on this screen; commit then try push, retain locally on failure |
+| Measured work window | 2026-10-22 18:09:04–18:27:20 Asia/Taipei through implementation push and handoff preparation: **18m16s**; final response includes remaining handoff commit time |
+| Human acceptance | **HUMAN_PENDING** |
+
+### 1. What changed
+
+- `ui-prototype/src/playable-l03/PlayableL03.tsx`: sort by actual animated
+  projected foot Y, then X/id; use 26-unit-high existing silhouettes and crop
+  transparent foot padding. Each tile owns the entire hit area; artwork and
+  landmarks cannot intercept it. Ally circles and enemy diamonds differ in
+  colour as well as shape. The name strip shows full name, side, coordinate
+  and action status on hover, focus or click.
+- Inspection is distinct from action selection: enemies and already-used
+  allies can be inspected but cannot move or Wait. Esc clears inspection;
+  Retry and commands clear transient name/selection state.
+- `playable.css`: names use 1rem text outside the SVG. Reserved placeholder
+  footprint prevents label wrapping from moving the tile under the pointer
+  at 200% text. Board height leaves the 720p controls visible.
+- Added `playable-l03-p1v2-browser.mjs`. Retained P1v assertions, updating four
+  sprite-click selectors to their owning tile and isolating new regression
+  output under `playable-l03-p1v2/p1v-regression/`.
+- Shared-file: `ui-prototype/PLAN.md`; Shared-file: `memory/01_active_task.md`.
+  Codex acquired its own locks, fetched and checked the branch, printed both
+  SHARED-EDIT lines and used both commit trailers. Owner's explicit no-pull
+  instruction superseded the default shared-file pull step. Own locks are
+  released after the failed push/local handoff; no other lock is touched.
+- `rules.ts`, source PNGs, `AnimatedActor.tsx`, `L03Preview.tsx`, `ArtGate.tsx`,
+  dependency files, original P0/P0b/P0c evidence and story files are unchanged.
+
+### 2. Verification and screenshot paths
+
+Full actual output, hashes, exact capture states and failed-attempt details:
+[verification](../../ui-prototype/docs/playable-l03-p1v2/VERIFICATION.md),
+[command results](../../ui-prototype/docs/playable-l03-p1v2/command-results.json),
+[readability report](../../ui-prototype/docs/playable-l03-p1v2/after-results.json),
+[P1v regression](../../ui-prototype/docs/playable-l03-p1v2/p1v-regression/browser-results.json).
+
+| Command from repo root | Exit | Result |
+| --- | --- | --- |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p0.mjs` | **0** | 8 checks |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p0b.mjs` | **0** | 9 checks |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p0c.mjs` | **0** | 9 checks |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p1v-browser.mjs --p1v2` | **0** | 26 checks |
+| `node --experimental-strip-types ui-prototype/tests/playable-l03-p1v2-browser.mjs` | **0** | 9 checks |
+| `npm run build --prefix ui-prototype` | **0** | TypeScript/Vite, 49 modules |
+| `& 'C:\Users\daish\AppData\Local\Programs\Python\Python312\python.exe' scripts/validate_ui_scope.py` | **0** | 13 protected planning files |
+| `git diff --check`, `git diff --cached --check` | **0**, **0** | Whitespace checks |
+| Protected-scope `git diff --quiet 63a1f11 -- …` | **0** | Rules, original screens/assets/fixtures/dependencies/story unchanged |
+| Implementation `git add`, `git commit` | **0**, **0** | Normal hooks; advisory `missing_canonical_memory`, `completion_claim_allowed=True` |
+| Pre-push `git fetch origin`, unknown-commit check | **0**, **0** | No unknown remote commits on this branch |
+| `git push origin codex/playable-l03-research` | **1** | Cannot connect to `github.com` port 443; commits retained locally |
+
+The 9 new cases include four overlap scenarios (two sizes × two arrangements),
+100 actual pointer checks (all five units × five tile points × four scenarios),
+name visibility/topmost/bounding-box checks, silhouette separation, foot
+anchors, draw order, keyboard/Esc, hover exit, 200% text stability and animated
+sorting. The P0 winch cluster is replayed from its real success commands;
+the column pair is the initial Lace (1,3)/Thoma (1,4) deployment. No injected
+state or force-click is used. The 26 original browser cases include animated
+and skipped wins/losses, Retry, input guards and both legacy story workflows.
+
+All screenshots are under `ui-prototype/docs/playable-l03-p1v2/`:
+
+| Scene | 1280×720 Before / After | 1920×1080 Before / After |
+| --- | --- | --- |
+| Winch cluster | `before-1280x720-winch.png` / `after-1280x720-winch.png` | `before-1920x1080-winch.png` / `after-1920x1080-winch.png` |
+| Column | `before-1280x720-column.png` / `after-1280x720-column.png` | `before-1920x1080-column.png` / `after-1920x1080-column.png` |
+| 200% name | `after-1280x720-text-200.png` | `after-1920x1080-text-200.png` |
+
+Before capture command (`--before`) exited **0** on the unchanged baseline
+source. Initial new-test exit **1** was an unclipped SVG atlas-bounds false
+positive; viewport measurement fixed it. Expanded 200% test exit **1** exposed
+a real name-wrap layout shift; the reserved footprint fixed it. Both failed
+reports are retained locally in scratch and documented in verification.
+Initial sandbox fetch and Python probe exited **1**; approved same-command
+retries exited **0**. The actual push failure above was not retried.
+
+### 3–6. Limits, risks, review questions and claims
+
+- **HUMAN_PENDING**: no uncoached 3–5 minute trial, recognition study or Owner
+  art approval. 26-unit figures preserve spacing but lose fine detail at
+  720p; the single name strip requires pointing/focusing/clicking to identify
+  a unit. Existing sprite-only stepping remains, with no skeletal animation.
+- A remains **THIN**, enabled only on this screen; no P0d integration, P2 AI,
+  new rules, new assets, engine, dependency, story, S4, main, PR, stash,
+  deployment, Actions or additional agents. No gamepad/screen-reader claim.
+- For Claude/GPT review when Owner requests: check tile hit ownership,
+  inspection/action separation, alpha-foot anchors and 200% footprint, and
+  judge whether the 720p figure size is an acceptable tradeoff.
+- For Gavin: human recognition and playability remain pending. Model checks
+  do not approve them. This handoff makes no new work request or authorization.
+- No remote-publication claim: the implementation and this handoff stay local.
+  Task DONE is not SessionEnd; no canonical daily record or native hook
+  callback was manufactured. No governance code was changed.
+
+### Resource self-check (RESOURCE-CHECKLIST A–D)
+
+Relevant cached `game-ui-ux` and `game-feel` SKILL.md were read this turn from
+the existing pinned `gamedev-skills/awesome-gamedev-agent-skills` snapshot
+`0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd`. SHA-256 respectively:
+`8a094c84a377503aa8f4c40df676d1c6b6fc07d36ff95554ce06467f1614397e` and
+`68fc818ad939151be2db9e358e4295a71830c19d61f3aff849f1599307f39f9d`.
+Local ui-design, typography-audit and external-executable-trust-audit were
+also read and applied; nothing installed or copied from reference projects.
+
+| Checklist item | Self-check and evidence |
+| --- | --- |
+| A: prototype-fast | **N/A new mechanic** — narrow readability change; 60-minute cap, keep criterion is correct tile targeting and clear labels |
+| A: level-design | **N/A new layout / PASS regression** — unchanged map/rules; P0 8 checks, original success trace replay; full sealed route remains outside this segment |
+| A: game-ai | **N/A new AI / PASS regression** — unchanged resolver and intents; P0b/P0c and P1v replay pass |
+| A: game-ui-ux | **PASS automated scoped fix** — full names scale, tile targeting, focus/Esc, both resolutions and 200%; human understanding pending |
+| A: game-feel | **PASS existing movement regression / N/A new hit feedback** — animation order and same rule result verified; full animation quality remains unaccepted |
+| B: Grid-Tactics separation | **PASS** — rendering/inspection only, pure rules unchanged; prior architectural reference retained, no unlicensed code copied |
+| B: HopeMetal licenses | **N/A new borrowing / PASS scope** — no external code/art introduced; existing repo-original PNGs unchanged |
+| B: no new engine/dependency | **PASS** — package/lockfiles unchanged |
+| C: full 3–5 minute solo battle | **FAIL (HUMAN_PENDING)** — automated six-turn completion is not a human trial; explicit retained gap, not Owner acceptance |
+| C: understandable enemy action | **PASS engineering / HUMAN_PENDING understanding** — existing intent/reason and paths remain, P1v full replay passes |
+| C: win or lose | **PASS** — animated and skipped success/failure in both sizes, P1v tests 4–6 and 11–13 |
+| C: tactical choices differ | **PASS minimum / THIN retained** — hold wins, idle loses; no claim of deeper tactical improvement |
+| C: restart/change strategy | **PASS** — P0 retry and P1v Retry state checks |
+| C: duplicate/stuck/invalid/interruption | **PASS tested scope** — P1v tests 15–18 plus original pure guards; no new simulation |
+| C: 720p/1080p/keyboard | **PASS automated** — 9 new cases + 26 regressions; Space/arrows/Esc/Enter, real captures |
+| C: automated vs human | **PASS** — HUMAN_PENDING throughout; no model review substituted for human playtest |
+| D: SRD/CC-BY/WotC/contract | **N/A new adaptation / PASS no new IP** — rules and original assets unchanged, no imported SRD or commercial material |
+| D: authorization | **PASS** — P1v2 only, own named branch/worktree, no pull, no main/PR/P2/story/stash/Actions/deploy, normal commit and failed push |
+
+The explained human-playtest FAIL remains open and prevents claiming full
+playable/Owner acceptance; the scoped readability engineering checks pass.
