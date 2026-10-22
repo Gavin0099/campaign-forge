@@ -94,8 +94,12 @@ native hook callback verification, or complete governance adoption claim.
 
 Only rules, P2 tests/evidence and the dedicated handoff are edited. Original
 P1v source, fixtures, packages, story, shared PLAN/memory and decisions remain
-unchanged. No other worktree was read or written; P0d reference files were read
-through `git show`, and its harness was copied rather than merged.
+unchanged. No other worktree source was manually read or edited; P0d reference
+files were read through `git show`, and its harness was copied rather than merged.
+The existing shared pre-push hook invoked its own framework self-smoke rooted
+at `D:/campaign-forge/ai-governance-framework`, naming this worktree as its target.
+It passed and the implementation push returned 0; this inherited hook invocation
+is not a claim of workspace-native lifecycle callbacks. See handoff for details.
 
 The handoff is the task-local milestone record. Shared PLAN/memory reconciliation
 is left to the coordinator because this task expressly restricts writes to P2
