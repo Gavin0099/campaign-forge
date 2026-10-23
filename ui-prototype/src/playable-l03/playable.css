@@ -157,10 +157,13 @@
 .p1v-winch-jerk { transform-origin:0 0; animation:p1v-winch-jerk .5s ease-out; }
 .p1v-winch-rope { filter:drop-shadow(0 1px 1px #101510); }
 .p1v-winch-rope.taut { animation:p1v-rope .5s ease-out; }
-.p1v-winch-frame { opacity:0; }
+.p1v-winch-frame { opacity:0; overflow:hidden; }
+[data-p1v-rope-state] { overflow:hidden; }
 [data-p1v-winch-painted][data-warning=false] .frame-0,
 [data-p1v-winch-painted][data-warning=true] .frame-3 { opacity:1; }
-.p1v-winch-alert { filter:drop-shadow(0 0 2px #c85d35); }
+/* Filter the painted pixels INSIDE the crop, never the SVG viewport itself:
+   Chrome otherwise exposes the atlas's other frames beyond that viewport. */
+.p1v-winch-alert image { filter:drop-shadow(0 0 2px #c85d35); }
 .p1v-winch-jerk .p1v-winch-frame { animation-duration:.56s; animation-timing-function:steps(1,end); animation-fill-mode:both; }
 .p1v-winch-jerk .frame-0 { animation-name:p1v-winch-frame-0; }
 .p1v-winch-jerk .frame-1 { animation-name:p1v-winch-frame-1; }
