@@ -1,7 +1,7 @@
 # GPT web review — godot spike-02 A2 (4b9cea4..98c735e)
 
 > Source: ChatGPT campaign-forge project, chat "Godot 修正段審查" (https://chatgpt.com/g/g-p-6ad7456d80a081919d343a5268d535c2-campaign-forge/c/6adb60f8-4c2c-83ee-964d-f6a75fabf747), Extra High thinking, 9 screenshots attached, sent once on 2026-10-23.
-> **INCOMPLETE:** ChatGPT stopped after "Worked for 4m 41s" with only this preamble. No per-item verdicts, no P0/P1/P2 list, no overall verdict, no Phase B recommendation. Not regenerated or re-sent. The text was extracted from the page, not taken with the Copy button.
+> **Status: INCOMPLETE — follow-up retry gave W1–W6 (W1 PARTIAL, W2 FIXED, W3 PARTIAL, W4–W6 FIXED), no P0, P1-01..P1-03 (cut off mid P1-03); no overall verdict, no Phase B recommendation.** (Original reply: ChatGPT stopped after "Worked for 4m 41s" with only the preamble; text extracted from the page, not via Copy button.)
 
 ---
 
@@ -16,3 +16,140 @@
 - **角色動畫：** 托瑪的揮擊姿勢已能表達抬槌、出擊與收勢的動作意圖；但素材對照表仍標示五個動作幀為 `PLACEHOLDER`，因此不能只憑這張對照表認定動畫已完成。
 
 我會把這輪審查分成兩個層次：一是視覺證據是否支持改善成立，二是程式、測試及交接文件是否足以證明修正沒有破壞原有戰鬥行為。後者尤其重要，因為 GUT 全通過不等於所有實際遊玩情境都已驗證。
+
+## Follow-up (2026-10-23 21:38 Taipei): asked GPT to complete the review; first attempt failed with "Error in message stream"; Retry produced the reply below, which stops mid-sentence in P1-03. INCOMPLETE: no P1-04+, no P2, no overall verdict, no Phase B recommendation.
+
+1. W1–W6 逐項審查
+
+審查範圍：4b9cea4..98c735e，分支 codex/godot-spike。以下以你提供的實際遊戲截圖、素材對照表，以及我核對的原始碼、manifest、測試日誌與交接文件為依據。
+
+W1｜托瑪武器與揮擊幀
+
+武器一致性、姿勢、角色風格
+
+PARTIAL
+
+已修正： 托瑪不再借用其他戰士的劍。待定的單手短柄連枷鎚（flanged mace）現在同時出現在待機與六個揮擊幀中，武器長度、持握位置、共用畫布與腳部 pivot 均有明確規格。manifest 也定義了接觸幀與縮減動態時的關鍵幀。
+
+仍未完成： 六個揮擊幀中，只有收勢幀與待機幀通過目前的風格自檢；其餘五幀仍標記 PLACEHOLDER，主要問題是披肩刺繡、袖口摺痕、衣襬輪廓與原始角色不一致。武器本身也仍是 PROPOSED，不能視為已確立的角色設定。
+
+判定理由： 原先的「借劍且武器消失」問題已在技術上改善，但揮擊動作的重量感與正式美術品質仍未被充分證實。截圖可以證明武器出現，不能單獨證明整段動畫自然、有力。
+
+證據：素材與逐幀審核 · 動畫 manifest
+
+W2｜戰術 RPG HUD
+
+資訊層級、預測、視覺一致性
+
+FIXED
+
+已修正： 預設畫面已移除常駐除錯資訊，加入托瑪的肖像、職業、生命值、狀態文字、單位血條、攻擊預測、回合橫幅與操作說明。攻擊預測由戰鬥規則事件產生，會顯示傷害、生命值變化、擊退結果，以及友軍或地形阻擋原因。
+
+銅金色邊框、苔綠底色、骨白文字與低飽和場景的搭配合理；文件記錄的文字對比最低為 5.344:1，符合一般文字 WCAG AA 對比要求。
+
+視覺判斷： 現在已具備戰棋 RPG 的基本介面語言，而不是單純的測試工具。不過，這裡的 FIXED 只代表本輪「測試工具式 HUD」問題已修正，不代表 UI 已達到正式產品完成度。
+
+證據：HUD 實作 · HUD 測試
+
+W3｜騎士辨識與鏡頭縮放
+
+剪影區別、遮擋、交戰焦點
+
+PARTIAL
+
+已修正： 騎士 B 的待機、受擊、踉蹌共七張影格，都加上相同設計語言的骨冠與淺色盾面；攻擊鏡頭採用 1.4× 縮放與 0.52 焦點權重。這比單純放大所有角色更合理，也保留了待機時的場景比例。
+
+提供的量測資料中，三種配置的待機畫面、灰階畫面與放大畫面，非參與者之間的透明度遮罩重疊均為 0 px。三種接觸情境中，托瑪與目標的重疊分別為 71、157、164 px，符合預期的近身接觸情況。
+
+仍未完成： 零重疊是有限測試畫面的幾何結果，不是所有攝影機位置、動畫影格、視窗比例下都能辨識的證明。騎士 B 仍然是從騎士 A 的素材衍生，主要差異集中在骨冠和盾面，而非完整不同的角色輪廓。縮放後能區別，不等於一般視角下已達到理想辨識度。
+
+證據：辨識與重疊量測 · 騎士編輯記錄
+
+W4｜測試
+
+回歸、事件、輸入與動畫
+
+FIXED
+
+GUT 33/33 tests、924 assertions 通過，包含既有的 24 項測試與九項 A2 測試。新增涵蓋：
+
+HUD 預設狀態、說明視窗與焦點處理。
+
+三種戰鬥配置的攻擊預測、傷害及阻擋原因。
+
+托瑪武器 manifest、共用素材雜湊一致性、騎士 B 的各動作影格。
+
+一次實際 Space 按下／放開只會準備一次攻擊，不會同時確認。
+
+一般與減少動態模式的交戰時間、接觸停頓及操作鎖定。
+
+測試日誌為乾淨的 exit 0，且文件有保留先前失敗及修正的記錄。
+
+限制： 33 項測試驗證的是一個攻擊流程與三種固定配置，不是完整戰鬥系統。通過測試不能外推為 AI、完整回合制、勝敗流程或正式遊戲品質都已完成。
+
+證據：最終測試日誌
+
+W5｜驗證證據
+
+實際執行、畫面與時序
+
+FIXED
+
+已修正： 文件列出實際執行的 Godot、GUT、素材同步、匯入、畫面擷取、鍵盤輸入及影片輸出指令，記錄退出碼和產物。720p、1080p 都有實際引擎畫面；原生 60 FPS 影片保留完整 60 幀，接觸停頓有五個相同畫格，合計約 83.3 ms，交戰由揮擊到重新可操作約 0.917 秒。
+
+驗證流程也有辨別「指令成功退出」與「畫面產物確實完成」，沒有把早期錯誤的執行紀錄混入最終通過結果。
+
+限制： 這些證據能支持引擎整合、時序與畫面擷取的可靠性，但尚未證明實際音訊設備的聽感、不同硬體的效能，或真人玩家對命中重量感的評價。
+
+證據：驗證紀錄 · 60 FPS 影片說明
+
+W6｜handoff
+
+範圍、限制與交接清晰度
+
+FIXED
+
+交接文件清楚記錄啟動方式、操作鍵、測試結果、素材來源與雜湊、五個 PLACEHOLDER 影格、武器的 PROPOSED 狀態，以及仍待 Owner 驗收的項目。
+
+也明確限制本輪只修改 shared-anim/ 和 godot-spike/，沒有推送、合併主分支或開始 Phase B。這對避免不同 worktree、原始素材和引擎版本互相污染很重要。
+
+限制： handoff 完整不代表所有產品決策都已完成；它正確地把美術、武器設定與引擎選型留給後續驗收。
+
+證據：A2 handoff
+
+2. 新增問題清單：P0 / P1 / P2
+
+我不會把所有未完成項目都列成阻擋，也不會因為測試全過就把美術與體驗問題降級。
+
+P0｜阻擋進入下一階段
+無新增 P0
+
+目前證據沒有顯示會立即造成資料損壞、核心規則錯誤，或讓這個單次交戰原型完全無法執行的重大缺陷。
+
+但這只適用於本次 spike 的有限範圍，不能解讀為完整遊戲已通過發布級品質審查。
+
+P1｜重要，應列為驗收條件
+
+P1-01｜托瑪五個揮擊幀仍未達美術驗收
+
+未解決
+
+swing/00–04 五幀仍是 PLACEHOLDER。目前已經有可辨識的動作序列，但服裝細節漂移會破壞連續播放時的角色一致性。
+
+處理方式： 保留現有候選作為比較基線；修正五幀的衣襬、袖口與披肩細節，並由 Owner 確認武器是否正式採用。若 Phase B 只比較引擎的動畫呈現，可以先使用同一組候選素材，但不能將它們宣稱為正式美術資產。
+
+P1-02｜揮擊重量感尚未完成真人驗收
+
+未解決
+
+60 FPS 影片、接觸停頓、受擊反應及鏡頭縮放提供了相當好的工程證據，但目前沒有真人對武器重量、接觸時機、動作連貫性與音效混合的驗收結果。
+
+處理方式： 在 A/B 比較中加入相同的真人試玩任務與評分方式，至少評估命中是否有重量、傷害是否容易理解，以及操作是否有明顯延遲。
+
+P1-03｜跨引擎同素材、同時序的比較契約尚未實作
+
+Phase B 前置
+
+Godot 已有共用 manifest、固定 pivot、接觸事件及 Reduced Motion 設定；但 handoff 明確指出 React 端的共用素材同步仍留待 Phase B。
+
+處理方式： 先定義兩個引擎必須共用的素材雜
