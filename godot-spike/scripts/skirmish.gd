@@ -200,6 +200,7 @@ func select_setup(index: int) -> void:
 		body.name = "Body"
 		var flash_material := ShaderMaterial.new()
 		flash_material.shader = preload("res://shaders/hit_flash.gdshader")
+		flash_material.set_shader_parameter("flash", 0.0)
 		body.material = flash_material
 		var ring := Polygon2D.new()
 		var points := PackedVector2Array()
@@ -316,8 +317,8 @@ func show_damage(at: Vector2, amount: int) -> void:
 	number.z_index = 1000
 	number.add_theme_constant_override("outline_size", 7)
 	var tween := create_tween().set_parallel(true)
-	tween.tween_property(number, "position:y", number.position.y - (0 if reduced_motion else 30), 0.52).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-	tween.tween_property(number, "modulate:a", 0.0, 0.20).set_delay(0.32)
+	tween.tween_property(number, "position:y", number.position.y - (0 if reduced_motion else 30), 0.38).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tween.tween_property(number, "modulate:a", 0.0, 0.20).set_delay(0.18)
 	tween.chain().tween_callback(number.queue_free)
 
 func emit_particles(at: Vector2, dust: bool) -> void:
