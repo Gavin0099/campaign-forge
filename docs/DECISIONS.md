@@ -23,6 +23,7 @@
 | P003 | 推薦優先選 A，B 作冒險隊伍方向的備選，C 作異族視角與巨獸旅程的選擇 | Gavin 決定；三案不自動合併 |
 | P004 | 未來用外部表格追蹤 flags、trust、items 與路線相依資訊 | S6；不假設第三方 CLI 會驗證這些內容 |
 | P005 | 未來文字試玩可評估 ink／Inky | S9 前另確認工具；目前不安裝、不定引擎 |
+| P010 | **PROPOSED** — Godot 4 (GDScript) as the battle presentation engine | Gavin 親自試玩本次隔離 hit-feel spike 並明確決策後才可採用；[PoC 交接](../godot-spike/docs/HANDOFF.md)。目前不授權完整遷移、不改 G005 或 S3／S4 狀態 |
 
 ## 等待 Gavin
 
