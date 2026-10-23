@@ -1,5 +1,8 @@
 extends Node2D
 
+signal phase_changed(phase: String)
+signal attack_finished(elapsed: float)
+
 const Rules = preload("res://scripts/rules/grid_rules.gd")
 const BONE = Color("eee7d6")
 const BRASS = Color("d2b777")
@@ -29,6 +32,13 @@ var action_button: Button
 var setup_buttons: Array[Button] = []
 var motion_button: CheckButton
 var grid_button: CheckButton
+var sound: AudioStreamPlayer
+var shake_left := 0.0
+var shake_strength := 0.0
+var shake_phase := 0.0
+var last_elapsed := 0.0
+var last_events: Array = []
+var phase := "ready"
 
 func project(x: float, y: float) -> Vector2:
 	return MAP_OFFSET + Vector2(550 + 44 * (x - y), 70 + 26 * (x + y)) * MAP_SCALE
@@ -65,16 +75,28 @@ func _ready() -> void:
 		bridge.flip_h = cell.x == 6
 	sprite(board, atlas("res://art/props.png", Rect2(1020, 290, 516, 510)), center(Vector2i(8, 4)) + Vector2(-34, -57) * MAP_SCALE, Vector2(68.8, 68) * MAP_SCALE)
 	build_hud()
+	sound = AudioStreamPlayer.new()
+	sound.stream = preload("res://audio/impact_synth.gd").make_hit()
+	sound.volume_db = -7
+	add_child(sound)
 	select_setup(0)
+	if "--smoke" in OS.get_cmdline_user_args():
+		for index in range(3):
+			select_setup(index)
+			await play_attack()
+		get_tree().quit()
 	if "--stage-capture" in OS.get_cmdline_user_args():
 		await get_tree().create_timer(0.3).timeout
 		await RenderingServer.frame_post_draw
 		get_viewport().get_texture().get_image().save_png("res://.godot/stage.png")
 		get_tree().quit()
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	for actor in actors.values():
 		actor.z_index = int(actor.position.y)
+	shake_left = maxf(0, shake_left - delta)
+	shake_phase += delta * 110.0
+	camera.offset = Vector2(sin(shake_phase), cos(shake_phase * 1.3)) * shake_strength * (shake_left / 0.2) if shake_left > 0 and not reduced_motion else Vector2.ZERO
 	queue_redraw()
 
 func _draw() -> void:
@@ -176,6 +198,9 @@ func select_setup(index: int) -> void:
 		var width := height * region.size.x / region.size.y
 		var body := sprite(actor, atlas("res://art/l03-party-v1.png" if ally else "res://art/l03-enemies-v1.png", region), Vector2(-width/2, -height), Vector2(width, height))
 		body.name = "Body"
+		var flash_material := ShaderMaterial.new()
+		flash_material.shader = preload("res://shaders/hit_flash.gdshader")
+		body.material = flash_material
 		var ring := Polygon2D.new()
 		var points := PackedVector2Array()
 		for j in range(24):
@@ -193,8 +218,131 @@ func select_setup(index: int) -> void:
 		setup_buttons[i].modulate = BONE if i == index else Color("a4a99b")
 
 func play_attack() -> void:
-	# Event-driven attack playback is introduced in step 4.
-	pass
+	if busy:
+		return
+	# Every replay starts from clean spike state. The pure result is resolved once.
+	select_setup(setup_index)
+	var result: Dictionary = Rules.attack(units, "thoma", "knight-1")
+	if not result.ok:
+		status_label.text = result.reason
+		return
+	set_busy(true)
+	last_events = result.events
+	var started := Time.get_ticks_usec()
+	var attacker: Node2D = actors[result.events[0].unit]
+	var target: Node2D = actors[result.events[0].target]
+	var start := attacker.position
+	var target_start := target.position
+	var direction := (target_start - start).normalized()
+	var target_material: ShaderMaterial = target.get_node("Body").material
+	set_phase("windup", "Thoma braces for the strike")
+	var windup := create_tween().set_parallel(true)
+	windup.tween_property(attacker, "position", start - direction * (0 if reduced_motion else 9), 0.18).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	windup.tween_property(attacker, "rotation", 0.0 if reduced_motion else -direction.x * 0.12, 0.18)
+	await windup.finished
+	set_phase("lunge", "Closing the distance")
+	var lunge := create_tween().set_parallel(true)
+	lunge.tween_property(attacker, "position", start + direction * (0 if reduced_motion else 25), 0.085).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN)
+	lunge.tween_property(attacker, "rotation", 0.0 if reduced_motion else direction.x * 0.18, 0.085)
+	await lunge.finished
+	# Damage is presented at contact, before the knockback event is played.
+	var damage: Dictionary = result.events[1]
+	hp_label.text = "KNIGHT I   %d / 6 HP" % damage.hp_after
+	target_material.set_shader_parameter("flash", 0.0 if reduced_motion else 1.0)
+	sound.play()
+	var contact := target_start + Vector2(0, -25)
+	if not reduced_motion:
+		emit_particles(contact, false)
+	set_phase("contact", "CONTACT   /   −%d HP" % damage.amount)
+	# Local hitstop: no actor tween is active during this real-time 80 ms hold.
+	# Engine.time_scale stays 1; HUD, audio and particles remain responsive.
+	await get_tree().create_timer(0.08, true, false, true).timeout
+	if not reduced_motion:
+		shake(3.4)
+		create_tween().tween_method(func(value: float): target_material.set_shader_parameter("flash", value), 1.0, 0.0, 0.035)
+	show_damage(contact, damage.amount)
+	var displacement: Dictionary = result.events[2]
+	var reaction := create_tween()
+	if displacement.type == "knockback":
+		set_phase("knockback", "The knight gives ground   /   1 tile")
+		reaction.tween_property(target, "position", center(displacement.to), 0.03 if reduced_motion else 0.22).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	else:
+		set_phase("blocked", "BLOCKED   /   %s holds the line" % ("Knight II" if displacement.blocker == "unit" else "Broken crossing"))
+		# Six pixels is < 1/4 tile step: feet never reach the blocker boundary.
+		reaction.tween_property(target, "position", target_start + direction * (0 if reduced_motion else 6), 0.015 if reduced_motion else 0.06).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		await reaction.finished
+		if not reduced_motion:
+			shake(5.0)
+			emit_particles(target_start + direction * 12, true)
+		set_phase("blocked_recoil", "BLOCKED   /   Recoil, no displacement")
+		reaction = create_tween()
+		reaction.tween_property(target, "position", target_start, 0.015 if reduced_motion else 0.16).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	await reaction.finished
+	set_phase("settled", "−2 HP   /   " + ("Knocked back one tile" if displacement.type == "knockback" else "Knockback blocked"))
+	var recovery := create_tween().set_parallel(true)
+	recovery.tween_property(attacker, "position", start, 0.18).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	recovery.tween_property(attacker, "rotation", 0.0, 0.18)
+	await recovery.finished
+	await get_tree().create_timer(0.22).timeout
+	units = result.units
+	target_material.set_shader_parameter("flash", 0.0)
+	camera.offset = Vector2.ZERO
+	last_elapsed = (Time.get_ticks_usec() - started) / 1000000.0
+	set_busy(false)
+	set_phase("ready", "%s   /   %.3f s   /   Space to replay" % [SETUP_NAMES[setup_index], last_elapsed])
+	print("SEQUENCE setup=%d reduced=%s elapsed_wall_s=%.4f limit=1.700 hp=%d cell=%s" % [setup_index+1, reduced_motion, last_elapsed, units[1].hp, units[1].cell])
+	attack_finished.emit(last_elapsed)
+
+func set_busy(value: bool) -> void:
+	busy = value
+	action_button.disabled = value
+	motion_button.disabled = value
+	for button in setup_buttons:
+		button.disabled = value
+	action_button.text = "STRIKING…" if value else "REPLAY  /  SPACE"
+
+func set_phase(value: String, text: String) -> void:
+	phase = value
+	status_label.text = text
+	phase_changed.emit(value)
+
+func shake(strength: float) -> void:
+	shake_strength = strength
+	shake_left = 0.2
+	shake_phase = 0
+
+func show_damage(at: Vector2, amount: int) -> void:
+	var number := label_at(self, "−%d" % amount, at + Vector2(-12, -25), 27, BRASS)
+	number.z_index = 1000
+	number.add_theme_constant_override("outline_size", 7)
+	var tween := create_tween().set_parallel(true)
+	tween.tween_property(number, "position:y", number.position.y - (0 if reduced_motion else 30), 0.52).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tween.tween_property(number, "modulate:a", 0.0, 0.20).set_delay(0.32)
+	tween.chain().tween_callback(number.queue_free)
+
+func emit_particles(at: Vector2, dust: bool) -> void:
+	var particles := CPUParticles2D.new()
+	particles.position = at
+	particles.z_index = 900
+	particles.amount = 18 if dust else 24
+	particles.lifetime = 0.30
+	particles.one_shot = true
+	particles.explosiveness = 1
+	particles.direction = Vector2(0, -1)
+	particles.spread = 100
+	particles.gravity = Vector2(0, 150)
+	particles.initial_velocity_min = 25 if dust else 55
+	particles.initial_velocity_max = 55 if dust else 125
+	particles.scale_amount_min = 1.4 if dust else 0.6
+	particles.scale_amount_max = 2.8 if dust else 1.5
+	particles.color = Color("aa956e") if dust else Color("f3dca0")
+	var gradient := Gradient.new()
+	gradient.set_color(0, particles.color)
+	gradient.set_color(1, Color(particles.color, 0))
+	particles.color_ramp = gradient
+	add_child(particles)
+	particles.finished.connect(particles.queue_free)
+	particles.emitting = true
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo:
