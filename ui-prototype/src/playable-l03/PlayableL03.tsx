@@ -4,7 +4,7 @@ import type { Playback } from "../combatPlayback";
 import { command, DEFAULT_CONFIG, initialState, key, MAP, resolve,
   type Cell, type Command, type Result } from "./rules";
 import { center, diamond as sceneDiamond, Figure, Portrait, Terrain, Landmarks } from "./presentation";
-import { buildFeedbackTimeline, type FeedbackCue } from "./feedback";
+import { buildFeedbackTimeline, confirmedContactBlocker, stateBeforeEvent, type FeedbackCue } from "./feedback";
 import "../l03.css";
 import "./playable.css";
 
@@ -16,7 +16,7 @@ const reasons = { "turn-winch": "已在絞盤旁，本回合干擾＋1", approac
 const cells = MAP.rows.flatMap((row, y) => [...row].map((tile, x) => ({ x, y, tile })));
 const initialMessage = "選擇我方單位，再點亮格移動。";
 type Frame = { unit: string; from: Cell; to: Cell; progress: number };
-type BlockFeedback = { unit: string; cell: Cell; ally?: Cell; dx: number; dy: number };
+type BlockFeedback = { unit: string; cell: Cell; ally?: Cell; allyId?: string; dx: number; dy: number };
 
 export function PlayableL03({ onExit }: { onExit: () => void }) {
   const [state, setState] = useState(start);
@@ -143,13 +143,13 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
       if (cue.kind === "winch") setWinchFeedback({ total: cue.total, delta: cue.delta, serial: ++feedbackSerial.current });
       if (cue.kind === "landing") setArrival({ unit: cue.unit, serial: ++feedbackSerial.current });
       if (cue.kind === "block") {
-        const unit = result.state.units.find(u => u.id === cue.unit)!;
-        const ally = result.state.units.find(u => u.alive && u.side === "ally" &&
-          Math.abs(u.cell.x-unit.cell.x)+Math.abs(u.cell.y-unit.cell.y) === 1);
+        const atEvent = stateBeforeEvent(stateRef.current, result.events, cue.eventIndex);
+        const unit = atEvent.units.find(u => u.id === cue.unit)!;
+        const ally = confirmedContactBlocker(atEvent, cue.unit);
         const from = center(unit.cell), toward = center(ally?.cell || MAP.winch);
         const length = Math.hypot(from.x-toward.x, from.y-toward.y) || 1;
-        const item = { unit: cue.unit, cell: unit.cell, ally: ally?.cell,
-          dx: (from.x-toward.x)/length*7, dy: (from.y-toward.y)/length*7 };
+        const item = { unit: cue.unit, cell: unit.cell, ally: ally?.cell, allyId: ally?.id,
+          dx: ally ? (from.x-toward.x)/length*7 : 0, dy: ally ? (from.y-toward.y)/length*7 : 0 };
         setBlocks(previous => ({ items: [...(previous?.items || []), item], serial: ++feedbackSerial.current }));
       }
     };
@@ -247,7 +247,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
               <path d="M0 0L10 5L0 10Z" fill="#ffd2a0" />
             </marker>
           </defs>
-          <g className={blockFx ? "p1v-impact-scene" : undefined}>
+          <g className={blockFx?.items.some(b => b.ally) ? "p1v-impact-scene" : undefined}>
             <Terrain uid={uid} />
             <Landmarks dev={dev} winchSerial={winchFx?.serial} warning={state.progress >= 2} />
           </g>
@@ -290,9 +290,9 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
             <polyline points={movePath.map(p => `${center(p).x},${center(p).y}`).join(" ")} />
             {movePath.slice(1).map((p,i) => <g key={key(p)} transform={`translate(${center(p).x} ${center(p).y})`}><circle r="7" /><text y="3" textAnchor="middle">{i+1}</text></g>)}
           </g>}
-          <g className={blockFx ? "p1v-impact-scene" : undefined}>
+          <g className={blockFx?.items.some(b => b.ally) ? "p1v-impact-scene" : undefined}>
           {actors.map(({u, moving, p}) => {
-            const block = blockFx?.items.find(b => b.unit === u.id);
+            const block = blockFx?.items.find(b => b.unit === u.id && b.ally);
             const clip: Playback | null = moving ? { kind:"physical", actor:u.id, target:"", from:moving.from, to:moving.to,
               committed:true, stage:"move", progress:moving.progress, elapsed:moving.progress*230, sequence:1 } : null;
             return <g key={u.id} transform={`translate(${p.x} ${p.y})`} className="p1v-unit" data-p1v-unit={u.id}
@@ -317,8 +317,8 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
             {blockFx.items.map(b => {
               const p = center(b.cell), ally = b.ally ? center(b.ally) : null;
               return <g key={b.unit} data-p1v-block-feedback={b.unit} transform={`translate(${p.x} ${p.y})`}>
-                <g className="p1v-impact-dust"><ellipse rx="15" ry="5" /><circle cx="-13" cy="-3" r="4" /><circle cx="12" cy="-4" r="3" /></g>
-                {ally && <g transform={`translate(${(ally.x-p.x)/2} ${(ally.y-p.y)/2-12})`}><path className="p1v-clash" data-p1v-clash d="M-11 0H11M0-11V11M-7-7 7 7M-7 7 7-7" /></g>}
+                {ally && <g className="p1v-impact-dust"><ellipse rx="15" ry="5" /><circle cx="-13" cy="-3" r="4" /><circle cx="12" cy="-4" r="3" /></g>}
+                {ally && <g transform={`translate(${(ally.x-p.x)/2} ${(ally.y-p.y)/2-12})`}><path className="p1v-clash" data-p1v-clash data-p1v-blocker={b.allyId} d="M-11 0H11M0-11V11M-7-7 7 7M-7 7 7-7" /></g>}
                 <text className="p1v-block-pop" y="-62" textAnchor="middle">{ally ? "阻擋" : "通道受阻"}</text>
               </g>;
             })}
