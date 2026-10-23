@@ -1,0 +1,1052 @@
+[
+  {
+    "frame": "thoma/swing/00.png",
+    "attempt": 1,
+    "tool": "image_gen",
+    "prompt": "Use case: identity-preserve / precise-object-edit. Repaint ONLY the garment details of image 4, Thoma anticipation swing frame 00. Image 1 original Thoma is costume ground truth. Images 2 (weapon idle) and 3 (recover) define passing costume, face, stroke, palette and approved weapon. Image 4 is the exact pose and registration to KEEP. Output one transparent 512x512 sprite, same framing, same foot pivot [256,464]. Preserve image 4's every joint, boots, face, hands, mace silhouette/length/head size/grip and all positions, keep weapon cocked high behind head and coiled torso. Change only stole/cape ivory band embroidery to sparse small sage leafy sprigs at lower ends as image 1, correct linen cuff folds and layered teal robe over ivory underskirt hem to match image 1/2/3, preserve brown medical satchel, round brass medallion holy symbol, grey beard. Match muted teal/ivory/brown, top-left light and weathered fine painted contours; no new trim or ornamental border, no new geometry. Do not enlarge body or auto-crop. No text, background, shadow, glow, blade, staff, book or other person. Genuine transparent alpha, generous unchanged canvas. This is a surgical costume repaint, exact A2 pose and mace must remain.",
+    "references": [
+      "shared-anim/references/thoma.png",
+      "shared-anim/thoma/idle/01.png",
+      "shared-anim/thoma/swing/05.png",
+      "godot-spike/docs/evidence/spike02-a3/baseline-a2/00.png"
+    ],
+    "raw": "raw/thoma-a3-swing-00-attempt1.png",
+    "raw_sha256": "e0f0159ed683807366afe3350b3944a147e6565e5b576b39a8dd9f0e6efd00e0",
+    "runtime_sha256": "8026a8871b1b72fc7e9846d564a1e689d8dbecb6605bebccd9911baa9ef43c17",
+    "reference_sha256": {
+      "shared-anim/references/thoma.png": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90",
+      "shared-anim/thoma/idle/01.png": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "shared-anim/thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "godot-spike/docs/evidence/spike02-a3/baseline-a2/00.png": "77a0b6857abd1be551fe3b2aec2783f84ab03253df4b09565606c2c5294cc5d4"
+    },
+    "accepted": "garment-patches-only; full generated figure not adopted",
+    "generated_size": [
+      1254,
+      1254
+    ],
+    "runtime_size": [
+      512,
+      512
+    ],
+    "pivot": [
+      256,
+      464
+    ],
+    "cleanup": "Perspective-warp interior cuff/hem patches; transplant original sprig; feather 0.65px; discard alpha <=240 at patch edges; quantize edited pixels to original 128-color palette; preserve entire A2 alpha and all unmasked pixels.",
+    "patch_quads": [
+      [
+        [
+          [
+            264,
+            313
+          ],
+          [
+            321,
+            286
+          ],
+          [
+            376,
+            394
+          ],
+          [
+            270,
+            411
+          ]
+        ],
+        [
+          [
+            116,
+            146
+          ],
+          [
+            134,
+            140
+          ],
+          [
+            155,
+            179
+          ],
+          [
+            121,
+            182
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            916,
+            503
+          ],
+          [
+            971,
+            522
+          ],
+          [
+            931,
+            628
+          ],
+          [
+            864,
+            590
+          ]
+        ],
+        [
+          [
+            338,
+            211
+          ],
+          [
+            356,
+            220
+          ],
+          [
+            341,
+            262
+          ],
+          [
+            319,
+            246
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            408,
+            1002
+          ],
+          [
+            641,
+            1074
+          ],
+          [
+            628,
+            1090
+          ],
+          [
+            411,
+            1020
+          ]
+        ],
+        [
+          [
+            161,
+            387
+          ],
+          [
+            238,
+            414
+          ],
+          [
+            235,
+            425
+          ],
+          [
+            157,
+            401
+          ]
+        ]
+      ]
+    ],
+    "motif_source": [
+      [
+        214,
+        446
+      ],
+      [
+        260,
+        446
+      ],
+      [
+        260,
+        529
+      ],
+      [
+        214,
+        529
+      ]
+    ],
+    "motif_targets": [
+      [
+        [
+          242,
+          324
+        ],
+        [
+          257,
+          320
+        ],
+        [
+          274,
+          366
+        ],
+        [
+          257,
+          373
+        ]
+      ],
+      [
+        [
+          310,
+          299
+        ],
+        [
+          322,
+          296
+        ],
+        [
+          341,
+          333
+        ],
+        [
+          329,
+          340
+        ]
+      ]
+    ],
+    "mask": "godot-spike/docs/evidence/spike02-a3/repaint-masks/00.png",
+    "weapon_status": "APPROVED",
+    "weapon_approval": "Owner, 2026-10-24"
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "attempt": 1,
+    "tool": "image_gen",
+    "prompt": "Use case: identity-preserve / precise-object-edit. Repaint ONLY the garment details of image 4, Thoma raise/start swing frame 01. Image 1 original Thoma is costume ground truth. Images 2 (weapon idle) and 3 (recover) define passing costume, face, stroke, palette and approved weapon. Image 4 is the exact pose and registration to KEEP. Output one transparent 512x512 sprite, same framing, same foot pivot [256,464]. Preserve image 4's every joint, boots, face, hands, mace silhouette/length/head size/grip and all positions, keep raised weapon nearly above forehead, chest rotating right, left hand near chest, exact A2 pose. Change only stole/cape ivory band embroidery to sparse small sage leafy sprigs at lower ends as image 1, correct linen cuff folds and layered teal robe over ivory underskirt hem to match image 1/2/3, preserve brown medical satchel, round brass medallion holy symbol, grey beard. Match muted teal/ivory/brown, top-left light and weathered fine painted contours; no new trim or ornamental border, no new geometry. Do not enlarge body or auto-crop. No text, background, shadow, glow, blade, staff, book or other person. Genuine transparent alpha, generous unchanged canvas. This is a surgical costume repaint, exact A2 pose and mace must remain.",
+    "references": [
+      "shared-anim/references/thoma.png",
+      "shared-anim/thoma/idle/01.png",
+      "shared-anim/thoma/swing/05.png",
+      "godot-spike/docs/evidence/spike02-a3/baseline-a2/01.png"
+    ],
+    "raw": "raw/thoma-a3-swing-01-attempt1.png",
+    "raw_sha256": "804668a246aeb3330726d7dca2f9f270d393cd70a30496efb49dc12a48ce51ca",
+    "runtime_sha256": "3722d0272e821c323ef913fd4cabe2a56a140b279fe07878c8db716c013d0acd",
+    "reference_sha256": {
+      "shared-anim/references/thoma.png": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90",
+      "shared-anim/thoma/idle/01.png": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "shared-anim/thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "godot-spike/docs/evidence/spike02-a3/baseline-a2/01.png": "1388d405ee128a78f6103d4fc233ff6692b86fe391d53a588f6ba1a307473985"
+    },
+    "accepted": "garment-patches-only; full generated figure not adopted",
+    "generated_size": [
+      1254,
+      1254
+    ],
+    "runtime_size": [
+      512,
+      512
+    ],
+    "pivot": [
+      256,
+      464
+    ],
+    "cleanup": "Perspective-warp interior cuff/hem patches; transplant original sprig; feather 0.65px; discard alpha <=240 at patch edges; quantize edited pixels to original 128-color palette; preserve entire A2 alpha and all unmasked pixels.",
+    "patch_quads": [
+      [
+        [
+          [
+            309,
+            261
+          ],
+          [
+            411,
+            233
+          ],
+          [
+            430,
+            324
+          ],
+          [
+            354,
+            336
+          ]
+        ],
+        [
+          [
+            149,
+            156
+          ],
+          [
+            178,
+            145
+          ],
+          [
+            184,
+            174
+          ],
+          [
+            160,
+            175
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            804,
+            459
+          ],
+          [
+            887,
+            461
+          ],
+          [
+            860,
+            564
+          ],
+          [
+            829,
+            545
+          ]
+        ],
+        [
+          [
+            301,
+            212
+          ],
+          [
+            328,
+            215
+          ],
+          [
+            317,
+            250
+          ],
+          [
+            307,
+            240
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            411,
+            1029
+          ],
+          [
+            640,
+            1091
+          ],
+          [
+            638,
+            1112
+          ],
+          [
+            408,
+            1050
+          ]
+        ],
+        [
+          [
+            165,
+            384
+          ],
+          [
+            235,
+            410
+          ],
+          [
+            235,
+            422
+          ],
+          [
+            161,
+            398
+          ]
+        ]
+      ]
+    ],
+    "motif_source": [
+      [
+        214,
+        446
+      ],
+      [
+        260,
+        446
+      ],
+      [
+        260,
+        529
+      ],
+      [
+        214,
+        529
+      ]
+    ],
+    "motif_targets": [
+      [
+        [
+          235,
+          322
+        ],
+        [
+          251,
+          323
+        ],
+        [
+          254,
+          364
+        ],
+        [
+          236,
+          365
+        ]
+      ],
+      [
+        [
+          297,
+          306
+        ],
+        [
+          309,
+          303
+        ],
+        [
+          324,
+          338
+        ],
+        [
+          311,
+          343
+        ]
+      ]
+    ],
+    "mask": "godot-spike/docs/evidence/spike02-a3/repaint-masks/01.png",
+    "weapon_status": "APPROVED",
+    "weapon_approval": "Owner, 2026-10-24"
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "attempt": 1,
+    "tool": "image_gen",
+    "prompt": "Use case: identity-preserve / precise-object-edit. Repaint ONLY the garment details of image 4, Thoma descending swing frame 02. Image 1 original Thoma is costume ground truth. Images 2 (weapon idle) and 3 (recover) define passing costume, face, stroke, palette and approved weapon. Image 4 is the exact pose and registration to KEEP. Output one transparent 512x512 sprite, same framing, same foot pivot [256,464]. Preserve image 4's every joint, boots, face, hands, mace silhouette/length/head size/grip and all positions, keep mace diagonally up-right, its short hand-painted iron-grey smear behind/above head, exact A2 articulated swing pose. Change only stole/cape ivory band embroidery to sparse small sage leafy sprigs at lower ends as image 1, correct linen cuff folds and layered teal robe over ivory underskirt hem to match image 1/2/3, preserve brown medical satchel, round brass medallion holy symbol, grey beard. Match muted teal/ivory/brown, top-left light and weathered fine painted contours; no new trim or ornamental border, no new geometry. Do not enlarge body or auto-crop. No text, background, shadow, glow, blade, staff, book or other person. Genuine transparent alpha, generous unchanged canvas. This is a surgical costume repaint, exact A2 pose and mace must remain.",
+    "references": [
+      "shared-anim/references/thoma.png",
+      "shared-anim/thoma/idle/01.png",
+      "shared-anim/thoma/swing/05.png",
+      "godot-spike/docs/evidence/spike02-a3/baseline-a2/02.png"
+    ],
+    "raw": "raw/thoma-a3-swing-02-attempt1.png",
+    "raw_sha256": "ba4fa98a9585520c21c9ab64dedd592578b7cd6bab75d2a700f5d64a52628525",
+    "runtime_sha256": "f38de24651841d855a4d14040838b9a33bd2050f7bffe4f5eb1ffdd206a9b7a2",
+    "reference_sha256": {
+      "shared-anim/references/thoma.png": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90",
+      "shared-anim/thoma/idle/01.png": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "shared-anim/thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "godot-spike/docs/evidence/spike02-a3/baseline-a2/02.png": "f13cb9690130b2b5ba3a49f2af5f16808122102e83b5bc4845809ef1e53fe96c"
+    },
+    "accepted": "garment-patches-only; full generated figure not adopted",
+    "generated_size": [
+      1254,
+      1254
+    ],
+    "runtime_size": [
+      512,
+      512
+    ],
+    "pivot": [
+      256,
+      464
+    ],
+    "cleanup": "Perspective-warp interior cuff/hem patches; transplant original sprig; feather 0.65px; discard alpha <=240 at patch edges; quantize edited pixels to original 128-color palette; preserve entire A2 alpha and all unmasked pixels.",
+    "patch_quads": [
+      [
+        [
+          [
+            758,
+            373
+          ],
+          [
+            856,
+            336
+          ],
+          [
+            856,
+            458
+          ],
+          [
+            716,
+            448
+          ]
+        ],
+        [
+          [
+            302,
+            183
+          ],
+          [
+            337,
+            173
+          ],
+          [
+            337,
+            214
+          ],
+          [
+            290,
+            211
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            843,
+            536
+          ],
+          [
+            912,
+            559
+          ],
+          [
+            868,
+            639
+          ],
+          [
+            824,
+            605
+          ]
+        ],
+        [
+          [
+            332,
+            236
+          ],
+          [
+            354,
+            246
+          ],
+          [
+            338,
+            273
+          ],
+          [
+            322,
+            259
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            308,
+            987
+          ],
+          [
+            529,
+            1079
+          ],
+          [
+            521,
+            1098
+          ],
+          [
+            292,
+            1008
+          ]
+        ],
+        [
+          [
+            145,
+            392
+          ],
+          [
+            215,
+            421
+          ],
+          [
+            208,
+            431
+          ],
+          [
+            136,
+            403
+          ]
+        ]
+      ]
+    ],
+    "motif_source": [
+      [
+        214,
+        446
+      ],
+      [
+        260,
+        446
+      ],
+      [
+        260,
+        529
+      ],
+      [
+        214,
+        529
+      ]
+    ],
+    "motif_targets": [
+      [
+        [
+          226,
+          331
+        ],
+        [
+          242,
+          338
+        ],
+        [
+          230,
+          373
+        ],
+        [
+          212,
+          368
+        ]
+      ],
+      [
+        [
+          328,
+          313
+        ],
+        [
+          340,
+          309
+        ],
+        [
+          352,
+          345
+        ],
+        [
+          340,
+          349
+        ]
+      ]
+    ],
+    "mask": "godot-spike/docs/evidence/spike02-a3/repaint-masks/02.png",
+    "weapon_status": "APPROVED",
+    "weapon_approval": "Owner, 2026-10-24"
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "attempt": 1,
+    "tool": "image_gen",
+    "prompt": "Use case: identity-preserve / precise-object-edit. Repaint ONLY the garment details of image 4, Thoma contact swing frame 03. Image 1 original Thoma is costume ground truth. Images 2 (weapon idle) and 3 (recover) define passing costume, face, stroke, palette and approved weapon. Image 4 is the exact pose and registration to KEEP. Output one transparent 512x512 sprite, same framing, same foot pivot [256,464]. Preserve image 4's every joint, boots, face, hands, mace silhouette/length/head size/grip and all positions, keep extended right arm and horizontal mace at chest height, mace head center exactly [455,196] on the 512x512 canvas, forward planted weight, exact A2 contact pose. Change only stole/cape ivory band embroidery to sparse small sage leafy sprigs at lower ends as image 1, correct linen cuff folds and layered teal robe over ivory underskirt hem to match image 1/2/3, preserve brown medical satchel, round brass medallion holy symbol, grey beard. Match muted teal/ivory/brown, top-left light and weathered fine painted contours; no new trim or ornamental border, no new geometry. Do not enlarge body or auto-crop. No text, background, shadow, glow, blade, staff, book or other person. Genuine transparent alpha, generous unchanged canvas. This is a surgical costume repaint, exact A2 pose and mace must remain.",
+    "references": [
+      "shared-anim/references/thoma.png",
+      "shared-anim/thoma/idle/01.png",
+      "shared-anim/thoma/swing/05.png",
+      "godot-spike/docs/evidence/spike02-a3/baseline-a2/03.png"
+    ],
+    "raw": "raw/thoma-a3-swing-03-attempt1.png",
+    "raw_sha256": "beb43bf73db79d2c91103c0550dc9ca92421f8bc0fa7fc255b8d31209aa883b6",
+    "runtime_sha256": "32034e392720ad04f2294ddc74f02b142050761a4adbed01bc7aa2d11de0b10a",
+    "reference_sha256": {
+      "shared-anim/references/thoma.png": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90",
+      "shared-anim/thoma/idle/01.png": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "shared-anim/thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "godot-spike/docs/evidence/spike02-a3/baseline-a2/03.png": "f0d75409967bd662469f80ad524d58e74f1eb87a3eb252ef01891a7b616d340c"
+    },
+    "accepted": "garment-patches-only; full generated figure not adopted",
+    "generated_size": [
+      1254,
+      1254
+    ],
+    "runtime_size": [
+      512,
+      512
+    ],
+    "pivot": [
+      256,
+      464
+    ],
+    "cleanup": "Perspective-warp interior cuff/hem patches; transplant original sprig; feather 0.65px; discard alpha <=240 at patch edges; quantize edited pixels to original 128-color palette; preserve entire A2 alpha and all unmasked pixels.",
+    "patch_quads": [
+      [
+        [
+          [
+            688,
+            340
+          ],
+          [
+            781,
+            337
+          ],
+          [
+            754,
+            440
+          ],
+          [
+            634,
+            417
+          ]
+        ],
+        [
+          [
+            300,
+            184
+          ],
+          [
+            331,
+            184
+          ],
+          [
+            320,
+            219
+          ],
+          [
+            282,
+            211
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            701,
+            507
+          ],
+          [
+            746,
+            524
+          ],
+          [
+            708,
+            602
+          ],
+          [
+            684,
+            578
+          ]
+        ],
+        [
+          [
+            313,
+            243
+          ],
+          [
+            328,
+            248
+          ],
+          [
+            316,
+            268
+          ],
+          [
+            304,
+            260
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            270,
+            969
+          ],
+          [
+            508,
+            1074
+          ],
+          [
+            496,
+            1092
+          ],
+          [
+            262,
+            997
+          ]
+        ],
+        [
+          [
+            155,
+            396
+          ],
+          [
+            227,
+            419
+          ],
+          [
+            222,
+            429
+          ],
+          [
+            147,
+            408
+          ]
+        ]
+      ]
+    ],
+    "motif_source": [
+      [
+        214,
+        446
+      ],
+      [
+        260,
+        446
+      ],
+      [
+        260,
+        529
+      ],
+      [
+        214,
+        529
+      ]
+    ],
+    "motif_targets": [
+      [
+        [
+          216,
+          332
+        ],
+        [
+          231,
+          338
+        ],
+        [
+          221,
+          367
+        ],
+        [
+          205,
+          363
+        ]
+      ],
+      [
+        [
+          313,
+          314
+        ],
+        [
+          326,
+          309
+        ],
+        [
+          341,
+          343
+        ],
+        [
+          328,
+          348
+        ]
+      ]
+    ],
+    "mask": "godot-spike/docs/evidence/spike02-a3/repaint-masks/03.png",
+    "weapon_status": "APPROVED",
+    "weapon_approval": "Owner, 2026-10-24"
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "attempt": 1,
+    "tool": "image_gen",
+    "prompt": "Use case: identity-preserve / precise-object-edit. Repaint ONLY the garment details of image 4, Thoma follow-through swing frame 04. Image 1 original Thoma is costume ground truth. Images 2 (weapon idle) and 3 (recover) define passing costume, face, stroke, palette and approved weapon. Image 4 is the exact pose and registration to KEEP. Output one transparent 512x512 sprite, same framing, same foot pivot [256,464]. Preserve image 4's every joint, boots, face, hands, mace silhouette/length/head size/grip and all positions, keep right hand lowering mace down-right below knee, torso forward, cloth trailing back-left, exact A2 follow-through pose. Change only stole/cape ivory band embroidery to sparse small sage leafy sprigs at lower ends as image 1, correct linen cuff folds and layered teal robe over ivory underskirt hem to match image 1/2/3, preserve brown medical satchel, round brass medallion holy symbol, grey beard. Match muted teal/ivory/brown, top-left light and weathered fine painted contours; no new trim or ornamental border, no new geometry. Do not enlarge body or auto-crop. No text, background, shadow, glow, blade, staff, book or other person. Genuine transparent alpha, generous unchanged canvas. This is a surgical costume repaint, exact A2 pose and mace must remain.",
+    "references": [
+      "shared-anim/references/thoma.png",
+      "shared-anim/thoma/idle/01.png",
+      "shared-anim/thoma/swing/05.png",
+      "godot-spike/docs/evidence/spike02-a3/baseline-a2/04.png"
+    ],
+    "raw": "raw/thoma-a3-swing-04-attempt1.png",
+    "raw_sha256": "5ebcce2dd61852d41056f79f86a625add621994cd5fff3a56a4526b1b6115738",
+    "runtime_sha256": "b2d64c00944131073dccde2c7399a3d638abd83d3101431d6f9d3bfbf23274ce",
+    "reference_sha256": {
+      "shared-anim/references/thoma.png": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90",
+      "shared-anim/thoma/idle/01.png": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "shared-anim/thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "godot-spike/docs/evidence/spike02-a3/baseline-a2/04.png": "2f51e1b2dbffb759874efd43af283e90d2d4116276e52056e8bc51745aea3d7c"
+    },
+    "accepted": "garment-patches-only; full generated figure not adopted",
+    "generated_size": [
+      1254,
+      1254
+    ],
+    "runtime_size": [
+      512,
+      512
+    ],
+    "pivot": [
+      256,
+      464
+    ],
+    "cleanup": "Perspective-warp interior cuff/hem patches; transplant original sprig; feather 0.65px; discard alpha <=240 at patch edges; quantize edited pixels to original 128-color palette; preserve entire A2 alpha and all unmasked pixels.",
+    "patch_quads": [
+      [
+        [
+          [
+            721,
+            560
+          ],
+          [
+            807,
+            560
+          ],
+          [
+            887,
+            631
+          ],
+          [
+            806,
+            668
+          ]
+        ],
+        [
+          [
+            275,
+            252
+          ],
+          [
+            300,
+            254
+          ],
+          [
+            330,
+            277
+          ],
+          [
+            294,
+            298
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            377,
+            402
+          ],
+          [
+            465,
+            405
+          ],
+          [
+            477,
+            460
+          ],
+          [
+            419,
+            450
+          ]
+        ],
+        [
+          [
+            176,
+            201
+          ],
+          [
+            200,
+            207
+          ],
+          [
+            203,
+            224
+          ],
+          [
+            186,
+            219
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            327,
+            952
+          ],
+          [
+            509,
+            1040
+          ],
+          [
+            497,
+            1060
+          ],
+          [
+            315,
+            975
+          ]
+        ],
+        [
+          [
+            151,
+            375
+          ],
+          [
+            208,
+            404
+          ],
+          [
+            201,
+            414
+          ],
+          [
+            143,
+            391
+          ]
+        ]
+      ]
+    ],
+    "motif_source": [
+      [
+        214,
+        446
+      ],
+      [
+        260,
+        446
+      ],
+      [
+        260,
+        529
+      ],
+      [
+        214,
+        529
+      ]
+    ],
+    "motif_targets": [
+      [
+        [
+          218,
+          323
+        ],
+        [
+          231,
+          331
+        ],
+        [
+          212,
+          358
+        ],
+        [
+          199,
+          351
+        ]
+      ],
+      [
+        [
+          126,
+          294
+        ],
+        [
+          130,
+          304
+        ],
+        [
+          157,
+          291
+        ],
+        [
+          152,
+          282
+        ]
+      ]
+    ],
+    "mask": "godot-spike/docs/evidence/spike02-a3/repaint-masks/04.png",
+    "weapon_status": "APPROVED",
+    "weapon_approval": "Owner, 2026-10-24"
+  }
+]

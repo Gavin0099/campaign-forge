@@ -54,7 +54,7 @@ def main():
             im=Image.open(path).convert('RGBA').resize((256,256),Image.Resampling.LANCZOS)
             before_after.paste(im,(i*256,row*298+30),im)
             draw.text((i*256+8,row*298+280),f'swing/{i:02}',fill='#eee7d6')
-    before_after.save(OUT/'contact-sheet-old-vs-new.png',optimize=True)
+    before_after.save(OUT/'asset-sheet-old-vs-new.png',optimize=True)
     reference=Image.open(ROOT/'references/thoma.png').convert('RGBA')
     colors=[p[:3] for p in reference.getdata() if p[3]>200]
     strip=Image.new('RGB',(len(colors),1));strip.putdata(colors)

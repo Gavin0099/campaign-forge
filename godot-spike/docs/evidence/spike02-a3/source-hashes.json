@@ -1,0 +1,197 @@
+[
+  {
+    "path": "godot-spike/project.godot",
+    "sha256_working_tree": "b52226cd0e48d69c6763aae6d3defb2dbf2d9bbb0690074b90750051d071bdcd",
+    "sha256_git_lf": "b52226cd0e48d69c6763aae6d3defb2dbf2d9bbb0690074b90750051d071bdcd"
+  },
+  {
+    "path": "godot-spike/scripts/anim/anim_manifest.gd",
+    "sha256_working_tree": "098478742de8091238e706ea4545403eb482280ae1036ef1e543948f7fd8f724",
+    "sha256_git_lf": "098478742de8091238e706ea4545403eb482280ae1036ef1e543948f7fd8f724"
+  },
+  {
+    "path": "godot-spike/scripts/anim/frame_player.gd",
+    "sha256_working_tree": "f9932bdb740309c21755c1d6b764d822646d1d2dd25d1c70c06bd115bcf8b369",
+    "sha256_git_lf": "f9932bdb740309c21755c1d6b764d822646d1d2dd25d1c70c06bd115bcf8b369"
+  },
+  {
+    "path": "godot-spike/scripts/anim/world_particles.gd",
+    "sha256_working_tree": "05f1a8cd50f76509272ed67fe1afcfd1a5631cf235e3f834b293c060af140be3",
+    "sha256_git_lf": "05f1a8cd50f76509272ed67fe1afcfd1a5631cf235e3f834b293c060af140be3"
+  },
+  {
+    "path": "godot-spike/scripts/battle_hud.gd",
+    "sha256_working_tree": "6155c463a59d8140802771347c92979cab1f1d3fd380652b2c5a362879bd351d",
+    "sha256_git_lf": "6155c463a59d8140802771347c92979cab1f1d3fd380652b2c5a362879bd351d"
+  },
+  {
+    "path": "godot-spike/scripts/capture_a2.gd",
+    "sha256_working_tree": "c35d41c7dd77f497e85316727a9e5403c8a8b5eda5778d2662665864d256ae77",
+    "sha256_git_lf": "c35d41c7dd77f497e85316727a9e5403c8a8b5eda5778d2662665864d256ae77"
+  },
+  {
+    "path": "godot-spike/scripts/capture_run.gd",
+    "sha256_working_tree": "7b58da46d7a70dd6c5e3a21c98f2de76881358273f6c27f7388a74e18f94905c",
+    "sha256_git_lf": "7b58da46d7a70dd6c5e3a21c98f2de76881358273f6c27f7388a74e18f94905c"
+  },
+  {
+    "path": "godot-spike/scripts/capture_spike02.gd",
+    "sha256_working_tree": "2025c807894ace8dc28a5114d05930baec0d536fc1a16c8efe57922f8c413350",
+    "sha256_git_lf": "2025c807894ace8dc28a5114d05930baec0d536fc1a16c8efe57922f8c413350"
+  },
+  {
+    "path": "godot-spike/scripts/readability_a2.gd",
+    "sha256_working_tree": "10d0fffc64f2fc4e2ba20f292b1425a437e447cf6df9cbbc25d0bb7895ae2cd9",
+    "sha256_git_lf": "10d0fffc64f2fc4e2ba20f292b1425a437e447cf6df9cbbc25d0bb7895ae2cd9"
+  },
+  {
+    "path": "godot-spike/scripts/readability_run.gd",
+    "sha256_working_tree": "3e55b41159ebc0846971f72eb07de4749f25499737afea2fbbac7244bcb84bc6",
+    "sha256_git_lf": "3e55b41159ebc0846971f72eb07de4749f25499737afea2fbbac7244bcb84bc6"
+  },
+  {
+    "path": "godot-spike/scripts/rules/grid_rules.gd",
+    "sha256_working_tree": "c3d539e3cbfafc8db11262c9fb23ee9345e127cdde0966b363287ae0ca9b59b6",
+    "sha256_git_lf": "c3d539e3cbfafc8db11262c9fb23ee9345e127cdde0966b363287ae0ca9b59b6"
+  },
+  {
+    "path": "godot-spike/scripts/skirmish.gd",
+    "sha256_working_tree": "c8f0c49c2f0dd87a8d30a90ef7ac75313e04d0681fa30a67907477f4f5518d88",
+    "sha256_git_lf": "181a91c999c84d523edf7839b28bf35d425bd802aafb65d36bcc71a632e56eaf"
+  },
+  {
+    "path": "godot-spike/shaders/hit_flash.gdshader",
+    "sha256_working_tree": "c6af138bbfec4fcc1990712b9acc3286ef8f67f7ffdcc8a241b74f59a788db9c",
+    "sha256_git_lf": "49a5cae7a6153043ae0ee632dd5deae95962e00555cd08acff9af63118c3eb72"
+  },
+  {
+    "path": "godot-spike/tests/test_a2_hud.gd",
+    "sha256_working_tree": "de95a599835e1b77312603fc53dfa278091bc2a2a9343651f2a606c53dcc0e6b",
+    "sha256_git_lf": "37d294e89fd247d6881c06a6e9a573bcce4fb8ae8850fed864b5d6e303d54132"
+  },
+  {
+    "path": "godot-spike/tests/test_a3_contract.gd",
+    "sha256_working_tree": "77b09a70f6d52ea831020e3b59960e47f7ce990de9c543be8f3a99fd346caf3b",
+    "sha256_git_lf": "77b09a70f6d52ea831020e3b59960e47f7ce990de9c543be8f3a99fd346caf3b"
+  },
+  {
+    "path": "godot-spike/tests/test_grid_rules.gd",
+    "sha256_working_tree": "f3daf37e1905fe8bf4e7bb160aeb760743d2a25e8f9c8159038c2fd4936fab5c",
+    "sha256_git_lf": "f3daf37e1905fe8bf4e7bb160aeb760743d2a25e8f9c8159038c2fd4936fab5c"
+  },
+  {
+    "path": "godot-spike/tests/test_manifest.gd",
+    "sha256_working_tree": "fc4d1408601ef5d3d51151daec5d89862ef3004b1da11e5ee93b3be3d260b585",
+    "sha256_git_lf": "fc4d1408601ef5d3d51151daec5d89862ef3004b1da11e5ee93b3be3d260b585"
+  },
+  {
+    "path": "godot-spike/tests/test_playback.gd",
+    "sha256_working_tree": "2df10d5061bba6f8c7fe0a8b3b976a45160ed89739ac87992c51c6b59cecf9bf",
+    "sha256_git_lf": "2df10d5061bba6f8c7fe0a8b3b976a45160ed89739ac87992c51c6b59cecf9bf"
+  },
+  {
+    "path": "godot-spike/tests/test_shared_hashes.gd",
+    "sha256_working_tree": "d6f2cd903a48a65efb0d8d6adade749a7e683cf87d2debec8159252252ebcec4",
+    "sha256_git_lf": "d6f2cd903a48a65efb0d8d6adade749a7e683cf87d2debec8159252252ebcec4"
+  },
+  {
+    "path": "godot-spike/tests/test_spike02.gd",
+    "sha256_working_tree": "895516e82a49c946ef75475a1dc769688ed5a7f6781e79bef0876578c110f292",
+    "sha256_git_lf": "895516e82a49c946ef75475a1dc769688ed5a7f6781e79bef0876578c110f292"
+  },
+  {
+    "path": "godot-spike/tools/a3_style_check.py",
+    "sha256_working_tree": "7c2db32b4b68f93b6ab47a22423b0fb92ce3e5807d72c2a80df1f50454c81f9c",
+    "sha256_git_lf": "7c2db32b4b68f93b6ab47a22423b0fb92ce3e5807d72c2a80df1f50454c81f9c"
+  },
+  {
+    "path": "godot-spike/tools/build_a2_ui.py",
+    "sha256_working_tree": "5be806c1a5815a13b99a288ca51e5e4b3d619df7f9f4bd868cafeea77caebb3e",
+    "sha256_git_lf": "5be806c1a5815a13b99a288ca51e5e4b3d619df7f9f4bd868cafeea77caebb3e"
+  },
+  {
+    "path": "godot-spike/tools/build_manifest.py",
+    "sha256_working_tree": "148a11aef452332be8917d38b1ff424127166cf15101092145db1ac2507da1e5",
+    "sha256_git_lf": "b954e07ce8e5a7fb52a846781cf4d68054fc201168f25152f6790ad33dc0d455"
+  },
+  {
+    "path": "godot-spike/tools/capture_a3.gd",
+    "sha256_working_tree": "86698e29478aeb99030a54631364476644cbab002e5fb89d3e925fbfe7c22d2a",
+    "sha256_git_lf": "86698e29478aeb99030a54631364476644cbab002e5fb89d3e925fbfe7c22d2a"
+  },
+  {
+    "path": "godot-spike/tools/measure_a3_readability.py",
+    "sha256_working_tree": "09962c1eb225801490aff5d4ea31aa8e7e90680dc14dc78a9a86b83498c05328",
+    "sha256_git_lf": "09962c1eb225801490aff5d4ea31aa8e7e90680dc14dc78a9a86b83498c05328"
+  },
+  {
+    "path": "godot-spike/tools/measure_readability.py",
+    "sha256_working_tree": "83eae6a59bec587ec7da3ca088da1dd06d098a173f5d08e1addb4037df0cb397",
+    "sha256_git_lf": "83eae6a59bec587ec7da3ca088da1dd06d098a173f5d08e1addb4037df0cb397"
+  },
+  {
+    "path": "godot-spike/tools/package_a2_evidence.py",
+    "sha256_working_tree": "716a8e5a83cbbb98e6c43d5ed4cc24ee68b3efc127ba99079856bc325904f18e",
+    "sha256_git_lf": "716a8e5a83cbbb98e6c43d5ed4cc24ee68b3efc127ba99079856bc325904f18e"
+  },
+  {
+    "path": "godot-spike/tools/package_a3_evidence.py",
+    "sha256_working_tree": "ace86d8c969abca966e2afea586473e9c563cc71bd7f5c501848a08084b674ba",
+    "sha256_git_lf": "ace86d8c969abca966e2afea586473e9c563cc71bd7f5c501848a08084b674ba"
+  },
+  {
+    "path": "godot-spike/tools/package_spike02_evidence.py",
+    "sha256_working_tree": "237a0e9f3e20512983864b83c88ad53ea50a01fe954c65fd00178d97b8ad4a95",
+    "sha256_git_lf": "237a0e9f3e20512983864b83c88ad53ea50a01fe954c65fd00178d97b8ad4a95"
+  },
+  {
+    "path": "godot-spike/tools/prepare_a2_frames.py",
+    "sha256_working_tree": "ab2d8de573dd62b2c350edb1080617703e9616a139f552deb1b88e0f109c0016",
+    "sha256_git_lf": "a64c9d388afd1ed7fcf0d988cf54a6d5576a5627f05dc5964f6f96f148774734"
+  },
+  {
+    "path": "godot-spike/tools/prepare_a2_knight.py",
+    "sha256_working_tree": "477dff33e33aaebb9ee2ebdec6e39d6b09f604157938bc508924018289303cc9",
+    "sha256_git_lf": "477dff33e33aaebb9ee2ebdec6e39d6b09f604157938bc508924018289303cc9"
+  },
+  {
+    "path": "godot-spike/tools/prepare_a3_frames.py",
+    "sha256_working_tree": "9cf6afb73e1d640cb38f682eba3237538956529c05ea658b8d39a324d26dc7a0",
+    "sha256_git_lf": "9cf6afb73e1d640cb38f682eba3237538956529c05ea658b8d39a324d26dc7a0"
+  },
+  {
+    "path": "godot-spike/tools/prepare_frames.py",
+    "sha256_working_tree": "760d355c0e8ac96d0e4ff0e77d6af9d841441eb09d43a7e4db82c6d1d1ae8a5c",
+    "sha256_git_lf": "760d355c0e8ac96d0e4ff0e77d6af9d841441eb09d43a7e4db82c6d1d1ae8a5c"
+  },
+  {
+    "path": "godot-spike/tools/readability_a3.gd",
+    "sha256_working_tree": "f6dfb2b09b21bbaa2f8bc9fe78442c8287bf7394511ec702c46c9cff5c9dafe9",
+    "sha256_git_lf": "f6dfb2b09b21bbaa2f8bc9fe78442c8287bf7394511ec702c46c9cff5c9dafe9"
+  },
+  {
+    "path": "godot-spike/tools/sync_shared_anim.gd",
+    "sha256_working_tree": "66dd8a4ca8cf168a567e16d46109820fdef9eeb5428cf466c51ae2798a381a45",
+    "sha256_git_lf": "66dd8a4ca8cf168a567e16d46109820fdef9eeb5428cf466c51ae2798a381a45"
+  },
+  {
+    "path": "shared-anim/a3-swing-prompts.json",
+    "sha256_working_tree": "43c9643628994824299714c49abe658ce46c49afd243f195664540bbc9e2830a",
+    "sha256_git_lf": "43c9643628994824299714c49abe658ce46c49afd243f195664540bbc9e2830a"
+  },
+  {
+    "path": "shared-anim/frame-audit.json",
+    "sha256_working_tree": "9f14a00fd007e55804e1a6ab79cec4d2d2ce0932c0a24b7341799aecc4f25404",
+    "sha256_git_lf": "9f14a00fd007e55804e1a6ab79cec4d2d2ce0932c0a24b7341799aecc4f25404"
+  },
+  {
+    "path": "shared-anim/manifest.json",
+    "sha256_working_tree": "ac9f0a10b3ca7556ee04336cbb81d6c660bfa2406e1b5282b7802d8fc68a3eea",
+    "sha256_git_lf": "f754e21d12fb771e34faf882953a4910556da7bbc9868b9e364572d05b9b150b"
+  },
+  {
+    "path": "shared-anim/manifest.schema.json",
+    "sha256_working_tree": "fe64327043a5a4cf24b4501af2107abcdacc359b7da66f644c638cabe603690c",
+    "sha256_git_lf": "fb408d7e549ba7a68f131334bae1536bc13ea95b2145891142e221fcc35ce377"
+  }
+]

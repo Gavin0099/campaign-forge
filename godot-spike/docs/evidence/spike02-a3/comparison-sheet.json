@@ -1,0 +1,29 @@
+{
+  "kind": "native-size crops from rendered 1280x720 viewport screenshots",
+  "crop_xyxy": [
+    260,
+    160,
+    580,
+    480
+  ],
+  "resized": false,
+  "source_rows": [
+    [
+      "rendered-baseline-a2/swing-anticipation.png",
+      "rendered-baseline-a2/swing-raised.png",
+      "rendered-baseline-a2/swing-smear.png",
+      "rendered-baseline-a2/contact.png",
+      "rendered-baseline-a2/follow-through.png",
+      "rendered-baseline-a2/recover.png"
+    ],
+    [
+      "swing-anticipation.png",
+      "swing-raised.png",
+      "swing-smear.png",
+      "contact.png",
+      "follow-through.png",
+      "recover.png"
+    ]
+  ],
+  "limits": "Separate real attacks at matching pose indices, so camera/tween sampling can vary slightly. Asset comparison at exactly fixed sprite scale is asset-sheet-old-vs-new.png."
+}

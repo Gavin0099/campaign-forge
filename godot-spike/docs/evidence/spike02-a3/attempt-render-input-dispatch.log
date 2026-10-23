@@ -1,0 +1,27 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 Core Profile Context 26.10.1.261008 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon 780M Graphics
+
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9467 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.9419 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.9493 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.7579 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=true elapsed_wall_s=0.7473 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=true elapsed_wall_s=0.7571 limit=1.700 hp=4 cell=(3, 4)
+CAPTURE_A3 idle.png frame=0 phase=ready hold=false
+CAPTURE_A3 swing-anticipation.png frame=0 phase=windup hold=false
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9295 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9215 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9406 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_A3 contact.png frame=3 phase=contact hold=true
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9321 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9168 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9275 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_A3 swing-anticipation.png frame=0 phase=windup hold=false
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9636 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9470 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9476 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_A3 contact.png frame=3 phase=contact hold=true
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8971 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9462 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9506 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_COMPLETE A3 movie=false runs=6 shots=5 pass=false

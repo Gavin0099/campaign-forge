@@ -103,22 +103,32 @@
     ],
     "status": "PASS",
     "weapon_status": "APPROVED",
-    "reason": "Identity and near-idle silhouette retained at review scale; not Owner art approval.",
+    "reason": "Recognizable original face, paired ivory leafy stole, layered cuffs/hem and equipment continuity at review and runtime scale; not Owner art approval.",
     "style_review": {
-      "face": "PASS: recognizable aged face and grey beard",
-      "costume": "PASS: Identity and near-idle silhouette retained at review scale; not Owner art approval.",
-      "proportions": "PASS: fixed body-height registration, natural joint poses",
-      "palette": "PASS: mapped to original 128-color palette",
-      "light": "PASS: top-left highlight direction",
-      "stroke": "PASS at runtime scale; detailed painted contours vary"
+      "face": "PASS: A2 face retained, original grey hair/beard and aged features recognizable",
+      "stole_cape_embroidery": "PASS: paired ivory band and sparse leafy lower ends retained",
+      "cuffs": "PASS: layered linen cuffs consistent at review scale",
+      "hem_silhouette": "PASS: near-idle layered ivory underskirt/teal hem",
+      "palette": "PASS: original muted teal/ivory/brown palette; see numerical distance",
+      "proportions": "PASS: fixed A2 registration and body proportions retained",
+      "light_direction": "PASS: original top-left light retained",
+      "stroke": "PASS at runtime scale; exact brush identity not claimed",
+      "satchel_medallion": "PASS: retained A2 pixels; holy medallion remains separate from mace"
     },
-    "weapon_approval": "Owner, 2026-10-24"
+    "weapon_approval": "Owner, 2026-10-24",
+    "review_segment": "spike-02 A3",
+    "review_authority": "model visual inspection; Owner art approval not claimed",
+    "palette_distance": {
+      "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
+      "value": 0.0,
+      "not_a_perceptual_quality_score": true
+    }
   },
   {
     "path": "thoma/swing/00.png",
-    "sha256": "77a0b6857abd1be551fe3b2aec2783f84ab03253df4b09565606c2c5294cc5d4",
-    "source": "raw/thoma-mace-swing-00.png",
-    "raw_sha256": "3bc1b5ef510e6b24ebd9625becd39c8370293fa23747c082a29e380e3997ff20",
+    "sha256": "8026a8871b1b72fc7e9846d564a1e689d8dbecb6605bebccd9911baa9ef43c17",
+    "source": "raw/thoma-a3-swing-00-attempt1.png",
+    "raw_sha256": "e0f0159ed683807366afe3350b3944a147e6565e5b576b39a8dd9f0e6efd00e0",
     "registration": [
       685,
       1218,
@@ -127,22 +137,33 @@
     ],
     "status": "PLACEHOLDER",
     "weapon_status": "APPROVED",
-    "reason": "Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
+    "reason": "Leaf sprigs now come from the original, but doubled border/leaf density remains at patch edges; raised cuff transition and broad fan hem still differ from idle/recover.",
     "style_review": {
-      "face": "PASS: recognizable aged face and grey beard",
-      "costume": "PLACEHOLDER: Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
-      "proportions": "PASS: fixed body-height registration, natural joint poses",
-      "palette": "PASS: mapped to original 128-color palette",
-      "light": "PASS: top-left highlight direction",
-      "stroke": "PASS at runtime scale; detailed painted contours vary"
+      "face": "PASS: A2 face retained, original grey hair/beard and aged features recognizable",
+      "stole_cape_embroidery": "FAIL: original sprigs transferred but seam/density/shape consistency remains unresolved",
+      "cuffs": "FAIL: new cloth patches do not fully resolve fold/edge transitions",
+      "hem_silhouette": "FAIL: A2 motion contour deliberately retained to preserve geometry; broader fan/trailing silhouette remains",
+      "palette": "PASS: original muted teal/ivory/brown palette; see numerical distance",
+      "proportions": "PASS: fixed A2 registration and body proportions retained",
+      "light_direction": "PASS: original top-left light retained",
+      "stroke": "FAIL: local composite texture/seams remain apparent at enlarged detail scale",
+      "satchel_medallion": "PASS: retained A2 pixels; holy medallion remains separate from mace"
     },
-    "weapon_approval": "Owner, 2026-10-24"
+    "weapon_approval": "Owner, 2026-10-24",
+    "cleanup": "Perspective-warp interior cuff/hem patches; transplant original sprig; feather 0.65px; discard alpha <=240 at patch edges; quantize edited pixels to original 128-color palette; preserve entire A2 alpha and all unmasked pixels.",
+    "review_segment": "spike-02 A3",
+    "review_authority": "model visual inspection; Owner art approval not claimed",
+    "palette_distance": {
+      "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
+      "value": 0.0,
+      "not_a_perceptual_quality_score": true
+    }
   },
   {
     "path": "thoma/swing/01.png",
-    "sha256": "1388d405ee128a78f6103d4fc233ff6692b86fe391d53a588f6ba1a307473985",
-    "source": "raw/thoma-mace-swing-01.png",
-    "raw_sha256": "0e138449eaa3634f1af7ee8944b6b2273921d12b58452b7cf7f112d93e8fd8ba",
+    "sha256": "3722d0272e821c323ef913fd4cabe2a56a140b279fe07878c8db716c013d0acd",
+    "source": "raw/thoma-a3-swing-01-attempt1.png",
+    "raw_sha256": "804668a246aeb3330726d7dca2f9f270d393cd70a30496efb49dc12a48ce51ca",
     "registration": [
       665,
       1220,
@@ -151,22 +172,33 @@
     ],
     "status": "PLACEHOLDER",
     "weapon_status": "APPROVED",
-    "reason": "Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
+    "reason": "Original sprigs improve identity, but stole border blending and raised cuff folds still differ; the bell-shaped hem is retained from A2.",
     "style_review": {
-      "face": "PASS: recognizable aged face and grey beard",
-      "costume": "PLACEHOLDER: Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
-      "proportions": "PASS: fixed body-height registration, natural joint poses",
-      "palette": "PASS: mapped to original 128-color palette",
-      "light": "PASS: top-left highlight direction",
-      "stroke": "PASS at runtime scale; detailed painted contours vary"
+      "face": "PASS: A2 face retained, original grey hair/beard and aged features recognizable",
+      "stole_cape_embroidery": "FAIL: original sprigs transferred but seam/density/shape consistency remains unresolved",
+      "cuffs": "FAIL: new cloth patches do not fully resolve fold/edge transitions",
+      "hem_silhouette": "FAIL: A2 motion contour deliberately retained to preserve geometry; broader fan/trailing silhouette remains",
+      "palette": "PASS: original muted teal/ivory/brown palette; see numerical distance",
+      "proportions": "PASS: fixed A2 registration and body proportions retained",
+      "light_direction": "PASS: original top-left light retained",
+      "stroke": "FAIL: local composite texture/seams remain apparent at enlarged detail scale",
+      "satchel_medallion": "PASS: retained A2 pixels; holy medallion remains separate from mace"
     },
-    "weapon_approval": "Owner, 2026-10-24"
+    "weapon_approval": "Owner, 2026-10-24",
+    "cleanup": "Perspective-warp interior cuff/hem patches; transplant original sprig; feather 0.65px; discard alpha <=240 at patch edges; quantize edited pixels to original 128-color palette; preserve entire A2 alpha and all unmasked pixels.",
+    "review_segment": "spike-02 A3",
+    "review_authority": "model visual inspection; Owner art approval not claimed",
+    "palette_distance": {
+      "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
+      "value": 0.0,
+      "not_a_perceptual_quality_score": true
+    }
   },
   {
     "path": "thoma/swing/03.png",
-    "sha256": "f0d75409967bd662469f80ad524d58e74f1eb87a3eb252ef01891a7b616d340c",
-    "source": "raw/thoma-mace-swing-03.png",
-    "raw_sha256": "aca010f6472a7aff8b164ee9ea0ae92e12f2f62b44eb19d286b1ba5ca5380ea8",
+    "sha256": "32034e392720ad04f2294ddc74f02b142050761a4adbed01bc7aa2d11de0b10a",
+    "source": "raw/thoma-a3-swing-03-attempt1.png",
+    "raw_sha256": "beb43bf73db79d2c91103c0550dc9ca92421f8bc0fa7fc255b8d31209aa883b6",
     "registration": [
       545,
       1190,
@@ -175,22 +207,33 @@
     ],
     "status": "PLACEHOLDER",
     "weapon_status": "APPROVED",
-    "reason": "Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
+    "reason": "Contact geometry is byte-preserved; stole seam/leaf density and broad underskirt hem remain inconsistent at detail scale.",
     "style_review": {
-      "face": "PASS: recognizable aged face and grey beard",
-      "costume": "PLACEHOLDER: Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
-      "proportions": "PASS: fixed body-height registration, natural joint poses",
-      "palette": "PASS: mapped to original 128-color palette",
-      "light": "PASS: top-left highlight direction",
-      "stroke": "PASS at runtime scale; detailed painted contours vary"
+      "face": "PASS: A2 face retained, original grey hair/beard and aged features recognizable",
+      "stole_cape_embroidery": "FAIL: original sprigs transferred but seam/density/shape consistency remains unresolved",
+      "cuffs": "FAIL: new cloth patches do not fully resolve fold/edge transitions",
+      "hem_silhouette": "FAIL: A2 motion contour deliberately retained to preserve geometry; broader fan/trailing silhouette remains",
+      "palette": "PASS: original muted teal/ivory/brown palette; see numerical distance",
+      "proportions": "PASS: fixed A2 registration and body proportions retained",
+      "light_direction": "PASS: original top-left light retained",
+      "stroke": "FAIL: local composite texture/seams remain apparent at enlarged detail scale",
+      "satchel_medallion": "PASS: retained A2 pixels; holy medallion remains separate from mace"
     },
-    "weapon_approval": "Owner, 2026-10-24"
+    "weapon_approval": "Owner, 2026-10-24",
+    "cleanup": "Perspective-warp interior cuff/hem patches; transplant original sprig; feather 0.65px; discard alpha <=240 at patch edges; quantize edited pixels to original 128-color palette; preserve entire A2 alpha and all unmasked pixels.",
+    "review_segment": "spike-02 A3",
+    "review_authority": "model visual inspection; Owner art approval not claimed",
+    "palette_distance": {
+      "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
+      "value": 0.0,
+      "not_a_perceptual_quality_score": true
+    }
   },
   {
     "path": "thoma/swing/04.png",
-    "sha256": "2f51e1b2dbffb759874efd43af283e90d2d4116276e52056e8bc51745aea3d7c",
-    "source": "raw/thoma-mace-swing-04.png",
-    "raw_sha256": "eacc1d40c1b6e70d14d265ec57b81a9bcfcc44406f19afa1e84e44029a89a7bf",
+    "sha256": "b2d64c00944131073dccde2c7399a3d638abd83d3101431d6f9d3bfbf23274ce",
+    "source": "raw/thoma-a3-swing-04-attempt1.png",
+    "raw_sha256": "5ebcce2dd61852d41056f79f86a625add621994cd5fff3a56a4526b1b6115738",
     "registration": [
       607,
       1167,
@@ -199,16 +242,27 @@
     ],
     "status": "PLACEHOLDER",
     "weapon_status": "APPROVED",
-    "reason": "Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
+    "reason": "Trailing sprigs reuse original pixels, but stretched diagonal embroidery, front cuff transition and trailing hem remain visibly different.",
     "style_review": {
-      "face": "PASS: recognizable aged face and grey beard",
-      "costume": "PLACEHOLDER: Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
-      "proportions": "PASS: fixed body-height registration, natural joint poses",
-      "palette": "PASS: mapped to original 128-color palette",
-      "light": "PASS: top-left highlight direction",
-      "stroke": "PASS at runtime scale; detailed painted contours vary"
+      "face": "PASS: A2 face retained, original grey hair/beard and aged features recognizable",
+      "stole_cape_embroidery": "FAIL: original sprigs transferred but seam/density/shape consistency remains unresolved",
+      "cuffs": "FAIL: new cloth patches do not fully resolve fold/edge transitions",
+      "hem_silhouette": "FAIL: A2 motion contour deliberately retained to preserve geometry; broader fan/trailing silhouette remains",
+      "palette": "PASS: original muted teal/ivory/brown palette; see numerical distance",
+      "proportions": "PASS: fixed A2 registration and body proportions retained",
+      "light_direction": "PASS: original top-left light retained",
+      "stroke": "FAIL: local composite texture/seams remain apparent at enlarged detail scale",
+      "satchel_medallion": "PASS: retained A2 pixels; holy medallion remains separate from mace"
     },
-    "weapon_approval": "Owner, 2026-10-24"
+    "weapon_approval": "Owner, 2026-10-24",
+    "cleanup": "Perspective-warp interior cuff/hem patches; transplant original sprig; feather 0.65px; discard alpha <=240 at patch edges; quantize edited pixels to original 128-color palette; preserve entire A2 alpha and all unmasked pixels.",
+    "review_segment": "spike-02 A3",
+    "review_authority": "model visual inspection; Owner art approval not claimed",
+    "palette_distance": {
+      "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
+      "value": 0.0,
+      "not_a_perceptual_quality_score": true
+    }
   },
   {
     "path": "thoma/swing/05.png",
@@ -223,22 +277,32 @@
     ],
     "status": "PASS",
     "weapon_status": "APPROVED",
-    "reason": "Identity and near-idle silhouette retained at review scale; not Owner art approval.",
+    "reason": "Recognizable original face, paired ivory leafy stole, layered cuffs/hem and equipment continuity at review and runtime scale; not Owner art approval.",
     "style_review": {
-      "face": "PASS: recognizable aged face and grey beard",
-      "costume": "PASS: Identity and near-idle silhouette retained at review scale; not Owner art approval.",
-      "proportions": "PASS: fixed body-height registration, natural joint poses",
-      "palette": "PASS: mapped to original 128-color palette",
-      "light": "PASS: top-left highlight direction",
-      "stroke": "PASS at runtime scale; detailed painted contours vary"
+      "face": "PASS: A2 face retained, original grey hair/beard and aged features recognizable",
+      "stole_cape_embroidery": "PASS: paired ivory band and sparse leafy lower ends retained",
+      "cuffs": "PASS: layered linen cuffs consistent at review scale",
+      "hem_silhouette": "PASS: near-idle layered ivory underskirt/teal hem",
+      "palette": "PASS: original muted teal/ivory/brown palette; see numerical distance",
+      "proportions": "PASS: fixed A2 registration and body proportions retained",
+      "light_direction": "PASS: original top-left light retained",
+      "stroke": "PASS at runtime scale; exact brush identity not claimed",
+      "satchel_medallion": "PASS: retained A2 pixels; holy medallion remains separate from mace"
     },
-    "weapon_approval": "Owner, 2026-10-24"
+    "weapon_approval": "Owner, 2026-10-24",
+    "review_segment": "spike-02 A3",
+    "review_authority": "model visual inspection; Owner art approval not claimed",
+    "palette_distance": {
+      "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
+      "value": 0.0,
+      "not_a_perceptual_quality_score": true
+    }
   },
   {
     "path": "thoma/swing/02.png",
-    "sha256": "f13cb9690130b2b5ba3a49f2af5f16808122102e83b5bc4845809ef1e53fe96c",
-    "source": "raw/thoma-mace-swing-02-attempt2.png",
-    "raw_sha256": "274edae4742a67aedd787cb20e6e8b6ff12dce900a2797ac11d22300608b0551",
+    "sha256": "f38de24651841d855a4d14040838b9a33bd2050f7bffe4f5eb1ffdd206a9b7a2",
+    "source": "raw/thoma-a3-swing-02-attempt1.png",
+    "raw_sha256": "ba4fa98a9585520c21c9ab64dedd592578b7cd6bab75d2a700f5d64a52628525",
     "registration": [
       575,
       1205,
@@ -247,16 +311,27 @@
     ],
     "status": "PLACEHOLDER",
     "weapon_status": "APPROVED",
-    "reason": "Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
+    "reason": "Original sprigs and cuff cloth improve continuity, but compressed leaf detail, cuff patch boundary and swept underskirt contour still drift.",
     "style_review": {
-      "face": "PASS: recognizable aged face and grey beard",
-      "costume": "PLACEHOLDER: Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
-      "proportions": "PASS: fixed body-height registration, natural joint poses",
-      "palette": "PASS: mapped to original 128-color palette",
-      "light": "PASS: top-left highlight direction",
-      "stroke": "PASS at runtime scale; detailed painted contours vary"
+      "face": "PASS: A2 face retained, original grey hair/beard and aged features recognizable",
+      "stole_cape_embroidery": "FAIL: original sprigs transferred but seam/density/shape consistency remains unresolved",
+      "cuffs": "FAIL: new cloth patches do not fully resolve fold/edge transitions",
+      "hem_silhouette": "FAIL: A2 motion contour deliberately retained to preserve geometry; broader fan/trailing silhouette remains",
+      "palette": "PASS: original muted teal/ivory/brown palette; see numerical distance",
+      "proportions": "PASS: fixed A2 registration and body proportions retained",
+      "light_direction": "PASS: original top-left light retained",
+      "stroke": "FAIL: local composite texture/seams remain apparent at enlarged detail scale",
+      "satchel_medallion": "PASS: retained A2 pixels; holy medallion remains separate from mace"
     },
-    "weapon_approval": "Owner, 2026-10-24"
+    "weapon_approval": "Owner, 2026-10-24",
+    "cleanup": "Perspective-warp interior cuff/hem patches; transplant original sprig; feather 0.65px; discard alpha <=240 at patch edges; quantize edited pixels to original 128-color palette; preserve entire A2 alpha and all unmasked pixels.",
+    "review_segment": "spike-02 A3",
+    "review_authority": "model visual inspection; Owner art approval not claimed",
+    "palette_distance": {
+      "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
+      "value": 0.0,
+      "not_a_perceptual_quality_score": true
+    }
   },
   {
     "path": "knight-b/idle/00.png",

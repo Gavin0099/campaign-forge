@@ -413,3 +413,118 @@ No original atlas, battlefield, props, ui-prototype file, rules, G005/P010, stor
 or other worktree content changed. No push, main merge, PR, Actions, dependency,
 deployment or Phase B work. Normal hooks ran; missing-canonical-memory is an
 advisory, not an actual session-end event or claim of complete governance closeout.
+
+## spike-02 A3
+
+Engineering verification passes; the five repainted motion frames still fail
+detailed costume consistency and remain **PLACEHOLDER**. Weapon identity is
+**APPROVED (Owner, 2026-10-24)**. Owner art approval is not claimed; human hit-feel
+playtest stays **HUMAN_PENDING** and P010 stays **PROPOSED**. Phase B is unstarted.
+
+Commands below ran from `D:\campaign-forge\scratch\godot-spike` on
+`codex/godot-spike`, Godot **4.7.2.stable.official.ed1daf0bf**, AMD Radeon 780M
+OpenGL Compatibility renderer. `GODOT` below denotes the actual executable:
+`C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe`.
+`PYTHON` denotes `C:\Users\daish\AppData\Local\Programs\Python\Python312\python.exe`.
+These explicit installed paths were executed through approved sandbox escalation;
+no installer, credentials, trust bypass or global setting was changed.
+
+| Actual command (executable aliases expanded above) | Exit | Evidence / result |
+| --- | --- | --- |
+| `git fetch origin review/gpt-godot-spike` | 0 | Read GPT A2 review with `git show origin/review/gpt-godot-spike:docs/review/gpt-godot-spike-02a2.md` (0) |
+| `PYTHON godot-spike/tools/prepare_a3_frames.py` | 0 | Five garment-only repaints; source sprigs, masks, exact A2 alpha and protected geometry |
+| `PYTHON godot-spike/tools/a3_style_check.py` | 0 | Seven-frame full/detail/native-size sheet; two PASS, five PLACEHOLDER |
+| `GODOT --path godot-spike --resolution 1280x720 --audio-driver Dummy -s res://tools/readability_a3.gd` | 0 | 12 captures, `CAPTURE_COMPLETE A3 readability shots=12 pass=true`; [log](evidence/spike02-a3/readability-run.log) |
+| `PYTHON godot-spike/tools/measure_a3_readability.py` | 0 | Per-image verdicts, projected region area/luminance; [JSON](evidence/spike02-a3/knight-readability.json) |
+| `GODOT --headless --path godot-spike -s res://tools/sync_shared_anim.gd` | 0 | 63 source/synced files byte-equal; [log](evidence/spike02-a3/sync-run.log) |
+| `GODOT --headless --path godot-spike --import` | 0 | [Headless import log](evidence/spike02-a3/import-run.log) |
+| `GODOT --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gdir=res://tests -gexit` | 0 | **37 tests / 1162 assertions**, no engine errors or GUT warnings; [log](evidence/spike02-a3/test-run.log) |
+| `GODOT --path godot-spike --resolution 1280x720 --max-fps 60 --audio-driver Dummy -s res://tools/capture_a3.gd` | 0 | `CAPTURE_COMPLETE A3 movie=false runs=6 shots=13 pass=true`; [log](evidence/spike02-a3/rendered-run.log) |
+| `GODOT --path godot-spike --resolution 1280x720 --audio-driver Dummy --fixed-fps 60 --write-movie res://.godot/spike02-a3-movie/attack.avi -s res://tools/capture_a3.gd -- --movie-a3` | 0 | Complete native AVI, `CAPTURE_COMPLETE A3 movie=true runs=1 shots=0 pass=true`; [log](evidence/spike02-a3/movie-run.log) |
+| `PYTHON godot-spike/tools/package_a3_evidence.py` | 0 | Validates logs, actual pixels, PNG provenance/parity, timing and decoded movie hashes; [audit](evidence/spike02-a3/evidence-audit.json) |
+
+An inline Pillow contact-sheet regeneration and handoff-table preparation command
+also exited 0 before sync/import. The table is retained as
+[frame-status-table.md](evidence/spike02-a3/frame-status-table.md). W5 tests compare
+its exact rows with the audit; W6 embeds those rows and reruns the targeted test
+against the final A3 handoff section. This distinguishes W5 preparation from W6
+handoff completion, rather than claiming a future section was already tested.
+
+### Timing, actual pixels and invariant checks
+
+| Setup | Normal wall time | Reduced Motion wall time |
+| --- | --- | --- |
+| 1 — open | 0.936505 s | 0.752470 s |
+| 2 — unit-blocked | 0.948820 s | 0.747849 s |
+| 3 — terrain-blocked | 0.927993 s | 0.729133 s |
+
+All six ordinary runs exclude GPU readbacks, include hitstop and end with input
+unlocked, below **1.7 s**. Full manifest equality against the A2 baseline proves
+no timing, camera, offsets, canvas **512×512**, pivot **[256,464]**, contact index
+**3** or anchor **[455,196]** changed. Swing durations stay
+**180/70/40/80/100/150 ms**; Reduced Motion still omits smear frame 2. A2's recorded
+ordinary normal times were 0.911700–0.915426 s: this run has small scheduler
+variation, not a changed timing contract. [Timing JSON](evidence/spike02-a3/timing.json).
+
+[Movie](evidence/spike02-a3/attack-60fps.avi): **59 complete 1280×720 frames**,
+**7,272,134 bytes**, no subsampling. Strike frame 2 to input-ready frame 57 is
+**0.916667 s**; frames 20–24 have identical decoded RGB hashes, **83.333 ms** of
+held contact, with visible resume at frame 25. Offline encoding wall time is
+not gameplay latency. [Movie notes](evidence/spike02-a3/MOVIE.md) and
+[frame hashes](evidence/spike02-a3/movie-index.json).
+
+Rendered evidence: [anticipation](evidence/spike02-a3/swing-anticipation.png),
+[smear](evidence/spike02-a3/swing-smear.png),
+[contact during hold](evidence/spike02-a3/contact.png),
+[follow-through](evidence/spike02-a3/follow-through.png),
+[idle](evidence/spike02-a3/idle.png). The
+[old/new comparison](evidence/spike02-a3/contact-sheet-old-vs-new.png) uses native
+320×320 crops of actual rendered captures; separate replay camera sampling may
+vary slightly. The [asset sheet](evidence/spike02-a3/asset-sheet-old-vs-new.png)
+compares exactly equal sprite scale and is explicitly not a runtime screenshot.
+
+Knight inspection: all 12 native 720p unlabeled color/grayscale samples received
+model PASS; no clear failure requiring a silhouette proposal was observed.
+Shield B-minus-A screen-luma difference is **50.337–69.548 / 255**. Same-pose helm
+silhouette differences are **16 px** at rest and **34 px** at 1.4×. These proxies
+do not measure human recognition speed. W4 ran before the Thoma W5 sync; knight
+and environment bytes are unchanged. No knight art, scale or gameplay was edited.
+
+Four original PNGs match their read-only React sources byte for byte. The A2
+baseline is archived with hashes; its five old motion frames are not live.
+Tests verify each repaint differs, all alpha and unmasked pixels remain exact,
+and the contact grip/haft/head region is unchanged. Source/code fingerprints:
+[source-hashes.json](evidence/spike02-a3/source-hashes.json). Raw generated images,
+full prompts, four reference hashes per attempt and cleanup are in
+[A3 prompts](../../shared-anim/a3-swing-prompts.json) and
+[SOURCES](../../shared-anim/SOURCES.md). One attempt per frame; full generated
+figures were not adopted because they moved geometry. Costume patches only.
+
+### Preserved failed or rejected attempts
+
+- W4 initial capture exited **1**, six rest images only: subscription was attached
+  to a player subsequently replaced by fixture reset. Observer now subscribes
+  after `play_attack`; [log](evidence/spike02-a3/attempt-readability-old-player.log).
+- First GUT run exited **1**, 36/37: new raw-pixel test used `Image.load_from_file`
+  on imported resources, triggering warnings. It now decodes explicit PNG bytes;
+  [log](evidence/spike02-a3/attempt-test-image-loader.log). No warnings suppressed.
+- First W5 capture exited **1**, five shots: physical key dispatch rebuilt the
+  player after subscription. Observer now waits for dispatch;
+  [log](evidence/spike02-a3/attempt-render-input-dispatch.log).
+- Next capture exited **0** and printed pass, but **was rejected on visual
+  inspection**: `force_draw` inside a frame signal could show the previous canvas
+  state. Final observer waits for `RenderingServer.frame_post_draw`; final smear,
+  contact and follow-through images were re-inspected. The rejected
+  [log](evidence/spike02-a3/attempt-render-stale-canvas.log) is retained.
+- Initial environment attempts could not resolve `python` or access the installed
+  Godot inside the sandbox. Installed explicit paths succeeded under escalation.
+  A library probe found Pillow installed and NumPy absent; cleanup uses Pillow and
+  a small local perspective solver, with no dependency installed. Log packaging
+  normalizes UTF-16/CRLF and strips ANSI colors without dropping diagnostic lines.
+- One packaging invocation exited **1** because stdout was redirected into a log
+  the package tool was normalizing, causing a Windows open-file lock. The rerun
+  buffers output until the tool exits and passed; the
+  [failed log](evidence/spike02-a3/attempt-package-open-log.log) is retained.
+
+No React edits, formal story/engine decision, Phase B, push, merge or PR. No
+physical audio-device audition, human playtest or commercial art approval.
