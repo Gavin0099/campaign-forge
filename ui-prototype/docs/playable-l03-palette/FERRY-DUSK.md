@@ -56,6 +56,17 @@ Directional lighting: weak warm upper-left source; cold green-slate lower-right 
 
 **Caveat:** browser CSS filter changes displayed pixels, not files. Browsers can differ for nested SVG filters/clips; verify in browser. The POC does not create a 3D LUT or prove assets have converged.
 
+## Screenshot automation (not executed here)
+
+Use two terminals after installing the existing UI dependencies and obtaining the repository's existing audited Chromium binding file (.codex/visual-browser-binding.json):
+
+1. In ui-prototype run: npm run dev -- --port 5183
+2. In ui-prototype run: node tests/playable-l03-palette-browser.mjs
+
+The script captures **8 PNG screenshots**: original/Ferry Dusk at 1280×720 and 1920×1080, each both at start and with Karen selected, using Reduced Motion. It writes report.json and SHA-256 for every screenshot under docs/playable-l03-palette/captures/. Assertions check state/selected-unit parity, battlefield filter difference, and no unit/map geometry movement. It cannot judge painterly quality; Owner still must review the captures.
+
+This script assumes that the existing project's audited browser binding points to a local executable; it will fail closed otherwise. It does **not** launch the Vite server or alter game logic.
+
 ## Repeatable review procedure
 
 1. Same commit: open original and experiment in 1280×720 with identical turn, selected unit, progress, and animation fully settled. Repeat at 1920×1080.
