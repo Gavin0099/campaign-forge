@@ -257,11 +257,11 @@
     "reduced_knockback_ms": 30
   },
   "camera": {
-    "zoom": 1.5,
+    "zoom": 1.4,
     "in_ms": 240,
     "out_ms": 180,
     "focus": "attacker_target_midpoint",
-    "focus_weight": 0.4
+    "focus_weight": 0.52
   },
   "scenarios": {
     "open": {

@@ -4,9 +4,9 @@ Full viewport transforms include reflection, rotation and camera zoom.
 """
 from pathlib import Path
 from PIL import Image,ImageChops
-import json
+import json,sys
 root=Path(__file__).resolve().parents[1]
-folder=root/'docs/evidence/spike02'
+folder=root/'docs/evidence'/('spike02-a2' if '--a2' in sys.argv else 'spike02')
 shots=json.loads((folder/'readability.json').read_text(encoding='utf-8-sig'))
 out=[]
 for shot in shots:

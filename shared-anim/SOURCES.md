@@ -191,3 +191,17 @@ Runtime SHA-256: f13cb9690130b2b5ba3a49f2af5f16808122102e83b5bc4845809ef1e53fe96
 | thoma/swing/02.png | PLACEHOLDER: Stole embroidery, cuff folds and hem contour drift from original; motion candidate only. | `f13cb9690130b2b5ba3a49f2af5f16808122102e83b5bc4845809ef1e53fe96c` |
 
 Weapon identity stays PROPOSED regardless of style PASS. Detailed frame review: frame-audit.json. Style sheet SHA-256 `d41b38e02fea3ddda07be31cdb2a82fa201a581bf686cede8913c622018c80ad`. Contact sheet SHA-256 `31f921ca4801a6bc3f1e26587e1ef8fc4167003e6f3f5b616f647938de2e74bd`.
+
+## A2 knight B
+
+Scripted edit preferred by the brief, one pass per frame, no image generation. Reproducible script: godot-spike/tools/prepare_a2_knight.py. Identical short bone horsehair crest and light shield field across idle/hit/stagger. Original atlases and knight A unchanged. Detailed anchors, input/output SHA-256 and exact edit instruction: knight-a2-edits.json. Model inspection is not Owner art approval.
+
+| Frame | Input SHA-256 | Output SHA-256 |
+| --- | --- | --- |
+| knight-b/idle/00.png | `0ca4807cc16f63dba0b3a15bfaaa1d1a534892151db7dfb339e6c5c2b6edf791` | `e71644dfef36fcb0cc1babd3db63ab9791ade1d1fbd7445601b77f51612e97b5` |
+| knight-b/hit/00.png | `6ebef74b6cf9520b5f5a243fb4d9bf669bf78bc6c52f9d6b99ce8202619d2b41` | `cc853f78528c4c8391d70606eb4e4da39565ea5d73e568664620ba06c39ab5bd` |
+| knight-b/hit/01.png | `9fbf4a41ffcc16d7c0e75a1f74a182ef33eed4c869f934341cf81e2692b85179` | `2b54bc88debb009b1a15164a6c40e07f1438eb5be33cb7bb0b0c632e85a7ae9e` |
+| knight-b/hit/02.png | `0465fee5877109acb6723c56ebe71134f0d3fcc9ab6e6b9505d7be534f4523bb` | `e14b7ba82c075fef7a4f94d14c0309fec15316c73eddd0c3437e0d39b8e4a7cd` |
+| knight-b/stagger/00.png | `2cfe6ceb5de5380888937e1ec790102372b4efe5a2f7126a711780915f2948b6` | `e5164c1a931d13ffdfcabffb345a2c2ff57f6f6f87e115aae3bc19c1fc7538e6` |
+| knight-b/stagger/01.png | `b4ec94ff31941285ebd450a706d0565c23745ad2757bcd9229c55797a4b1773b` | `aaea5183f82ec03d531770331835530bfb841d3909bcf88875d2f2301d8a49cf` |
+| knight-b/stagger/02.png | `62594f3aaef1f3a70fdae0a1965c7649f8badf0a112afced863cf85b44e24dd6` | `4c2dc1cad19b6a6f11a6727d689e53ea124d0644e698925311db4fdb6290e138` |

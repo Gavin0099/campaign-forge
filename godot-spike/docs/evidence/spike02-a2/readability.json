@@ -1,0 +1,434 @@
+[
+	{
+		"bodies": [
+			{
+				"frame": 0,
+				"id": "thoma",
+				"screen_transform": [
+					-0.133062228560448,
+					0.0,
+					0.0,
+					0.133062228560448,
+					406.983947753906,
+					192.699127197266
+				],
+				"texture": "res://art/anim-shared/thoma/idle/01.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-1",
+				"screen_transform": [
+					-0.133062228560448,
+					0.0,
+					0.0,
+					0.133062228560448,
+					365.623931884766,
+					217.139129638672
+				],
+				"texture": "res://art/anim-shared/knight-a/idle/00.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-2",
+				"screen_transform": [
+					-0.133062228560448,
+					0.0,
+					0.0,
+					0.133062228560448,
+					324.263946533203,
+					339.339111328125
+				],
+				"texture": "res://art/anim-shared/knight-b/idle/00.png"
+			}
+		],
+		"file": "overlap-setup1-rest.png",
+		"option": "a2",
+		"phase": "ready",
+		"setup": 0,
+		"zoom": 1.0
+	},
+	{
+		"bodies": [
+			{
+				"frame": 3,
+				"id": "thoma",
+				"screen_transform": [
+					-0.186287134885788,
+					0.0,
+					0.0,
+					0.186287134885788,
+					499.878173828125,
+					237.093475341797
+				],
+				"texture": "res://art/anim-shared/thoma/swing/03.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-1",
+				"screen_transform": [
+					-0.186287134885788,
+					0.0,
+					0.0,
+					0.186287134885788,
+					460.602844238281,
+					230.326324462891
+				],
+				"texture": "res://art/anim-shared/knight-a/hit/00.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-2",
+				"screen_transform": [
+					-0.186287134885788,
+					0.0,
+					0.0,
+					0.186287134885788,
+					402.698852539063,
+					401.406311035156
+				],
+				"texture": "res://art/anim-shared/knight-b/idle/00.png"
+			}
+		],
+		"file": "overlap-setup1-contact.png",
+		"option": "a2",
+		"phase": "contact",
+		"setup": 0,
+		"zoom": 1.39999997615814
+	},
+	{
+		"bodies": [
+			{
+				"frame": 0,
+				"id": "thoma",
+				"screen_transform": [
+					-0.133062228560448,
+					0.0,
+					0.0,
+					0.133062228560448,
+					406.983947753906,
+					192.699127197266
+				],
+				"texture": "res://art/anim-shared/thoma/idle/01.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-1",
+				"screen_transform": [
+					-0.133062228560448,
+					0.0,
+					0.0,
+					0.133062228560448,
+					365.623931884766,
+					217.139129638672
+				],
+				"texture": "res://art/anim-shared/knight-a/idle/00.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-2",
+				"screen_transform": [
+					-0.133062228560448,
+					0.0,
+					0.0,
+					0.133062228560448,
+					324.263946533203,
+					241.579132080078
+				],
+				"texture": "res://art/anim-shared/knight-b/idle/00.png"
+			}
+		],
+		"file": "overlap-setup2-rest.png",
+		"option": "a2",
+		"phase": "ready",
+		"setup": 1,
+		"zoom": 1.0
+	},
+	{
+		"bodies": [
+			{
+				"frame": 3,
+				"id": "thoma",
+				"screen_transform": [
+					-0.186287134885788,
+					0.0,
+					0.0,
+					0.186287134885788,
+					499.878173828125,
+					237.093475341797
+				],
+				"texture": "res://art/anim-shared/thoma/swing/03.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-1",
+				"screen_transform": [
+					-0.186287134885788,
+					0.0,
+					0.0,
+					0.186287134885788,
+					460.602844238281,
+					230.326324462891
+				],
+				"texture": "res://art/anim-shared/knight-a/stagger/00.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-2",
+				"screen_transform": [
+					-0.186287134885788,
+					0.0,
+					0.0,
+					0.186287134885788,
+					402.698852539063,
+					264.542327880859
+				],
+				"texture": "res://art/anim-shared/knight-b/idle/00.png"
+			}
+		],
+		"file": "overlap-setup2-contact.png",
+		"option": "a2",
+		"phase": "contact",
+		"setup": 1,
+		"zoom": 1.39999997615814
+	},
+	{
+		"bodies": [
+			{
+				"frame": 0,
+				"id": "thoma",
+				"screen_transform": [
+					0.133062228560448,
+					0.0,
+					0.0,
+					0.133062228560448,
+					380.216064453125,
+					217.139129638672
+				],
+				"texture": "res://art/anim-shared/thoma/idle/01.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-1",
+				"screen_transform": [
+					0.133062228560448,
+					0.0,
+					0.0,
+					0.133062228560448,
+					421.576049804688,
+					241.579132080078
+				],
+				"texture": "res://art/anim-shared/knight-a/idle/00.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-2",
+				"screen_transform": [
+					0.133062228560448,
+					0.0,
+					0.0,
+					0.133062228560448,
+					256.136077880859,
+					339.339111328125
+				],
+				"texture": "res://art/anim-shared/knight-b/idle/00.png"
+			}
+		],
+		"file": "overlap-setup3-rest.png",
+		"option": "a2",
+		"phase": "ready",
+		"setup": 2,
+		"zoom": 1.0
+	},
+	{
+		"bodies": [
+			{
+				"frame": 3,
+				"id": "thoma",
+				"screen_transform": [
+					0.186287134885788,
+					0.0,
+					0.0,
+					0.186287134885788,
+					439.440338134766,
+					253.517150878906
+				],
+				"texture": "res://art/anim-shared/thoma/swing/03.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-1",
+				"screen_transform": [
+					0.186287134885788,
+					0.0,
+					0.0,
+					0.186287134885788,
+					478.715606689453,
+					246.75
+				],
+				"texture": "res://art/anim-shared/knight-a/stagger/00.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-2",
+				"screen_transform": [
+					0.186287134885788,
+					0.0,
+					0.0,
+					0.186287134885788,
+					247.099670410156,
+					383.613983154297
+				],
+				"texture": "res://art/anim-shared/knight-b/idle/00.png"
+			}
+		],
+		"file": "overlap-setup3-contact.png",
+		"option": "a2",
+		"phase": "contact",
+		"setup": 2,
+		"zoom": 1.39999997615814
+	},
+	{
+		"bodies": [
+			{
+				"frame": 0,
+				"id": "thoma",
+				"screen_transform": [
+					-0.133062228560448,
+					0.0,
+					0.0,
+					0.133062228560448,
+					406.983947753906,
+					192.699127197266
+				],
+				"texture": "res://art/anim-shared/thoma/idle/01.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-1",
+				"screen_transform": [
+					-0.133062228560448,
+					0.0,
+					0.0,
+					0.133062228560448,
+					365.623931884766,
+					217.139129638672
+				],
+				"texture": "res://art/anim-shared/knight-a/idle/00.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-2",
+				"screen_transform": [
+					-0.133062228560448,
+					0.0,
+					0.0,
+					0.133062228560448,
+					324.263946533203,
+					241.579132080078
+				],
+				"texture": "res://art/anim-shared/knight-b/idle/00.png"
+			}
+		],
+		"file": "knights-default-view.png",
+		"option": "a2",
+		"phase": "ready",
+		"setup": 1,
+		"zoom": 1.0
+	},
+	{
+		"bodies": [
+			{
+				"frame": 0,
+				"id": "thoma",
+				"screen_transform": [
+					-0.133062228560448,
+					0.0,
+					0.0,
+					0.133062228560448,
+					406.983947753906,
+					192.699127197266
+				],
+				"texture": "res://art/anim-shared/thoma/idle/01.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-1",
+				"screen_transform": [
+					-0.133062228560448,
+					0.0,
+					0.0,
+					0.133062228560448,
+					365.623931884766,
+					217.139129638672
+				],
+				"texture": "res://art/anim-shared/knight-a/idle/00.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-2",
+				"screen_transform": [
+					-0.133062228560448,
+					0.0,
+					0.0,
+					0.133062228560448,
+					324.263946533203,
+					241.579132080078
+				],
+				"texture": "res://art/anim-shared/knight-b/idle/00.png"
+			}
+		],
+		"file": "knights-grayscale.png",
+		"option": "a2",
+		"phase": "ready",
+		"setup": 1,
+		"zoom": 1.0
+	},
+	{
+		"bodies": [
+			{
+				"frame": 0,
+				"id": "thoma",
+				"screen_transform": [
+					-0.186287134885788,
+					0.0,
+					0.0,
+					0.186287134885788,
+					523.266906738281,
+					193.730316162109
+				],
+				"texture": "res://art/anim-shared/thoma/idle/01.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-1",
+				"screen_transform": [
+					-0.186287134885788,
+					0.0,
+					0.0,
+					0.186287134885788,
+					465.362854003906,
+					227.946319580078
+				],
+				"texture": "res://art/anim-shared/knight-a/idle/00.png"
+			},
+			{
+				"frame": 0,
+				"id": "knight-2",
+				"screen_transform": [
+					-0.186287134885788,
+					0.0,
+					0.0,
+					0.186287134885788,
+					407.458862304688,
+					262.162322998047
+				],
+				"texture": "res://art/anim-shared/knight-b/idle/00.png"
+			}
+		],
+		"file": "knights-zoomed.png",
+		"option": "a2",
+		"phase": "ready",
+		"setup": 1,
+		"zoom": 1.39999997615814
+	}
+]

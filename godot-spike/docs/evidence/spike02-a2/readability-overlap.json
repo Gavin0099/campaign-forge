@@ -1,0 +1,101 @@
+[
+  {
+    "file": "overlap-setup1-rest.png",
+    "option": "a2",
+    "setup": 0,
+    "phase": "ready",
+    "opaque_overlap_px": {
+      "thoma/knight-1": 0,
+      "thoma/knight-2": 0,
+      "knight-1/knight-2": 0
+    }
+  },
+  {
+    "file": "overlap-setup1-contact.png",
+    "option": "a2",
+    "setup": 0,
+    "phase": "contact",
+    "opaque_overlap_px": {
+      "thoma/knight-1": 71,
+      "thoma/knight-2": 0,
+      "knight-1/knight-2": 0
+    }
+  },
+  {
+    "file": "overlap-setup2-rest.png",
+    "option": "a2",
+    "setup": 1,
+    "phase": "ready",
+    "opaque_overlap_px": {
+      "thoma/knight-1": 0,
+      "thoma/knight-2": 0,
+      "knight-1/knight-2": 0
+    }
+  },
+  {
+    "file": "overlap-setup2-contact.png",
+    "option": "a2",
+    "setup": 1,
+    "phase": "contact",
+    "opaque_overlap_px": {
+      "thoma/knight-1": 157,
+      "thoma/knight-2": 0,
+      "knight-1/knight-2": 0
+    }
+  },
+  {
+    "file": "overlap-setup3-rest.png",
+    "option": "a2",
+    "setup": 2,
+    "phase": "ready",
+    "opaque_overlap_px": {
+      "thoma/knight-1": 0,
+      "thoma/knight-2": 0,
+      "knight-1/knight-2": 0
+    }
+  },
+  {
+    "file": "overlap-setup3-contact.png",
+    "option": "a2",
+    "setup": 2,
+    "phase": "contact",
+    "opaque_overlap_px": {
+      "thoma/knight-1": 164,
+      "thoma/knight-2": 0,
+      "knight-1/knight-2": 0
+    }
+  },
+  {
+    "file": "knights-default-view.png",
+    "option": "a2",
+    "setup": 1,
+    "phase": "ready",
+    "opaque_overlap_px": {
+      "thoma/knight-1": 0,
+      "thoma/knight-2": 0,
+      "knight-1/knight-2": 0
+    }
+  },
+  {
+    "file": "knights-grayscale.png",
+    "option": "a2",
+    "setup": 1,
+    "phase": "ready",
+    "opaque_overlap_px": {
+      "thoma/knight-1": 0,
+      "thoma/knight-2": 0,
+      "knight-1/knight-2": 0
+    }
+  },
+  {
+    "file": "knights-zoomed.png",
+    "option": "a2",
+    "setup": 1,
+    "phase": "ready",
+    "opaque_overlap_px": {
+      "thoma/knight-1": 0,
+      "thoma/knight-2": 0,
+      "knight-1/knight-2": 0
+    }
+  }
+]

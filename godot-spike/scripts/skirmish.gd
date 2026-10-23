@@ -123,6 +123,8 @@ func _ready() -> void:
 		await capture.run(self,"--movie02" in OS.get_cmdline_user_args())
 	if "--readability" in OS.get_cmdline_user_args():
 		await preload("res://scripts/readability_run.gd").new().run(self)
+	if "--readability-a2" in OS.get_cmdline_user_args():
+		await preload("res://scripts/readability_a2.gd").new().run(self)
 	if "--overview" in OS.get_cmdline_user_args() or "--overview02" in OS.get_cmdline_user_args():
 		# Windows startup clamps oversized windows to the work area; request the
 		# validation render size explicitly, without changing the display mode.

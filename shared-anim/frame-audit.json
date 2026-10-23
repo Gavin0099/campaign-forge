@@ -91,62 +91,6 @@
     "reason": "automated palette match; Owner art review pending"
   },
   {
-    "path": "knight-b/idle/00.png",
-    "sha256": "a25d3f08eec7fc8fea555b0b1388dd7f9fe5788af4cb97a468fbb1c512192710",
-    "source": "knight-a/idle/00.png",
-    "status": "SOURCE_DERIVED",
-    "cleanup": "manual shield-field ellipse mask, bone value remap; preserve alpha, texture, armor, boss and pivot",
-    "recolored_pixels": 3294
-  },
-  {
-    "path": "knight-b/hit/00.png",
-    "sha256": "fb744efd3bc1d810b35a487c516f211fefacb886c68d6e2308b41166ddec99cc",
-    "source": "knight-a/hit/00.png",
-    "status": "SOURCE_DERIVED",
-    "cleanup": "manual shield-field ellipse mask, bone value remap; preserve alpha, texture, armor, boss and pivot",
-    "recolored_pixels": 4678
-  },
-  {
-    "path": "knight-b/hit/01.png",
-    "sha256": "d588a836cec46b2d47bf0cc8d35f66cab05fd49073bca07d53778e2a1b808e29",
-    "source": "knight-a/hit/01.png",
-    "status": "SOURCE_DERIVED",
-    "cleanup": "manual shield-field ellipse mask, bone value remap; preserve alpha, texture, armor, boss and pivot",
-    "recolored_pixels": 4400
-  },
-  {
-    "path": "knight-b/hit/02.png",
-    "sha256": "221cdfcc637317754223e077eb8f7fab3aa9921cec8bfe17b93ca2ff383ebc0e",
-    "source": "knight-a/hit/02.png",
-    "status": "SOURCE_DERIVED",
-    "cleanup": "manual shield-field ellipse mask, bone value remap; preserve alpha, texture, armor, boss and pivot",
-    "recolored_pixels": 3652
-  },
-  {
-    "path": "knight-b/stagger/00.png",
-    "sha256": "e1e189506fc35b8ed51e4b9e4e38c9b4b9c3c75519936a0294cdf348ff674a61",
-    "source": "knight-a/stagger/00.png",
-    "status": "SOURCE_DERIVED",
-    "cleanup": "manual shield-field ellipse mask, bone value remap; preserve alpha, texture, armor, boss and pivot",
-    "recolored_pixels": 3504
-  },
-  {
-    "path": "knight-b/stagger/01.png",
-    "sha256": "c0c766976ec43f3f82f194348f95bb41f2b6d66d590d4366d542ff4087aa2374",
-    "source": "knight-a/stagger/01.png",
-    "status": "SOURCE_DERIVED",
-    "cleanup": "manual shield-field ellipse mask, bone value remap; preserve alpha, texture, armor, boss and pivot",
-    "recolored_pixels": 3832
-  },
-  {
-    "path": "knight-b/stagger/02.png",
-    "sha256": "dd1b809d33a596f673b0454910e6ed6d5cd0e8306c83ae8aae0d549ff4154b42",
-    "source": "knight-a/stagger/02.png",
-    "status": "SOURCE_DERIVED",
-    "cleanup": "manual shield-field ellipse mask, bone value remap; preserve alpha, texture, armor, boss and pivot",
-    "recolored_pixels": 3642
-  },
-  {
     "path": "thoma/idle/01.png",
     "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
     "source": "raw/thoma-mace-idle-01.png",
@@ -306,5 +250,159 @@
       "light": "PASS: top-left highlight direction",
       "stroke": "PASS at runtime scale; detailed painted contours vary"
     }
+  },
+  {
+    "path": "knight-b/idle/00.png",
+    "source": "knight-a/idle/00.png",
+    "source_sha256": "0ca4807cc16f63dba0b3a15bfaaa1d1a534892151db7dfb339e6c5c2b6edf791",
+    "sha256": "e71644dfef36fcb0cc1babd3db63ab9791ade1d1fbd7445601b77f51612e97b5",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      298,
+      109
+    ],
+    "shield_mask": [
+      371,
+      272,
+      28,
+      43
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/hit/00.png",
+    "source": "knight-a/hit/00.png",
+    "source_sha256": "6ebef74b6cf9520b5f5a243fb4d9bf669bf78bc6c52f9d6b99ce8202619d2b41",
+    "sha256": "cc853f78528c4c8391d70606eb4e4da39565ea5d73e568664620ba06c39ab5bd",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      330,
+      107
+    ],
+    "shield_mask": [
+      319,
+      244,
+      33,
+      50
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/hit/01.png",
+    "source": "knight-a/hit/01.png",
+    "source_sha256": "9fbf4a41ffcc16d7c0e75a1f74a182ef33eed4c869f934341cf81e2692b85179",
+    "sha256": "2b54bc88debb009b1a15164a6c40e07f1438eb5be33cb7bb0b0c632e85a7ae9e",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      353,
+      117
+    ],
+    "shield_mask": [
+      276,
+      229,
+      30,
+      52
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/hit/02.png",
+    "source": "knight-a/hit/02.png",
+    "source_sha256": "0465fee5877109acb6723c56ebe71134f0d3fcc9ab6e6b9505d7be534f4523bb",
+    "sha256": "e14b7ba82c075fef7a4f94d14c0309fec15316c73eddd0c3437e0d39b8e4a7cd",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      211,
+      108
+    ],
+    "shield_mask": [
+      313,
+      270,
+      30,
+      44
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/stagger/00.png",
+    "source": "knight-a/stagger/00.png",
+    "source_sha256": "2cfe6ceb5de5380888937e1ec790102372b4efe5a2f7126a711780915f2948b6",
+    "sha256": "e5164c1a931d13ffdfcabffb345a2c2ff57f6f6f87e115aae3bc19c1fc7538e6",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      311,
+      137
+    ],
+    "shield_mask": [
+      204,
+      219,
+      25,
+      51
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/stagger/01.png",
+    "source": "knight-a/stagger/01.png",
+    "source_sha256": "b4ec94ff31941285ebd450a706d0565c23745ad2757bcd9229c55797a4b1773b",
+    "sha256": "aaea5183f82ec03d531770331835530bfb841d3909bcf88875d2f2301d8a49cf",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      192,
+      160
+    ],
+    "shield_mask": [
+      335,
+      296,
+      30,
+      46
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/stagger/02.png",
+    "source": "knight-a/stagger/02.png",
+    "source_sha256": "62594f3aaef1f3a70fdae0a1965c7649f8badf0a112afced863cf85b44e24dd6",
+    "sha256": "4c2dc1cad19b6a6f11a6727d689e53ea124d0644e698925311db4fdb6290e138",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      243,
+      137
+    ],
+    "shield_mask": [
+      364,
+      275,
+      28,
+      47
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
   }
 ]

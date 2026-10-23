@@ -24,6 +24,8 @@ var unit_bars: Dictionary = {}
 var forecast: Dictionary = {}
 var armed := false
 var banner_tween: Tween
+var hover_tag: Panel
+var hover_name: Label
 
 func frame() -> StyleBoxTexture:
 	var style := StyleBoxTexture.new()
@@ -73,6 +75,7 @@ func portrait(parent: Control, id: String, at: Vector2, dimensions: Vector2) -> 
 	parent.add_child(back)
 	var image := TextureRect.new()
 	image.texture = scene.atlas("res://art/l03-party-v1.png",Rect2(1718,0,220,245)) if id=="thoma" else scene.atlas("res://art/l03-enemies-v1.png",Rect2(270,8,265,300))
+	if id=="knight-2": image.texture = scene.atlas("res://art/anim-shared/knight-b/idle/00.png",Rect2(255,55,100,140))
 	image.position = Vector2(4,4)
 	image.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
@@ -170,6 +173,10 @@ func build(owner_scene) -> void:
 	scene.grid_button.toggled.connect(func(value: bool): scene.diagnostic = value)
 	debug_panel.add_child(scene.grid_button)
 	debug_panel.hide()
+	hover_tag = panel(Vector2.ZERO,Vector2(170,36))
+	hover_tag.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	hover_name = text(hover_tag,"",Vector2(10,5),16)
+	hover_tag.hide()
 	show_turn_banner()
 
 func show_turn_banner() -> void:
@@ -242,6 +249,21 @@ func toggle_help(value: bool) -> void:
 func _process(_delta: float) -> void:
 	if not is_instance_valid(scene): return
 	for id in unit_bars:
-		var actor: Node2D = scene.actors[id]
-		var pos: Vector2 = actor.get_global_transform_with_canvas().origin
-		unit_bars[id].position = pos+Vector2(-18,-60*scene.camera.zoom.x)
+		var body: Sprite2D = scene.actors[id].get_node("Body")
+		var pos: Vector2 = body.get_global_transform_with_canvas()*Vector2(256,70 if id=="knight-2" else 100)
+		unit_bars[id].position = pos+Vector2(-18,-10)
+	# Names are transient inspection labels; no permanent identity/debug text.
+	if scene.busy or help_panel.visible:
+		hover_tag.hide()
+		return
+	var pointer := root.get_local_mouse_position()
+	hover_tag.hide()
+	for id in scene.actors:
+		if id=="thoma": continue
+		var body: Sprite2D = scene.actors[id].get_node("Body")
+		var local: Vector2 = body.get_global_transform_with_canvas().affine_inverse()*pointer
+		if Rect2(80,50,340,420).has_point(local):
+			hover_name.text = NAMES[id]
+			hover_tag.position = pointer+Vector2(14,-42)
+			hover_tag.show()
+			break
