@@ -1,0 +1,28 @@
+{
+  "pass_result": true,
+  "hud_screenshots": 9,
+  "readability_screenshots": 9,
+  "original_assets_unchanged": 4,
+  "minimum_text_contrast": 5.344,
+  "normal_seconds": [
+    0.914639,
+    0.915426,
+    0.9117
+  ],
+  "reduced_seconds": [
+    0.72916,
+    0.730027,
+    0.730169
+  ],
+  "frozen_movie_frames": 5,
+  "movie_strike_seconds": 0.9166666666666666,
+  "avi": {
+    "bytes": 7365366,
+    "sha256": "aa7641cfba5cbfd716ca10597644f4f48cc5ebac2f6d67e580ee7dab93e91a4b",
+    "microseconds_per_frame": 16666,
+    "frames": 60,
+    "width": 1280,
+    "height": 720
+  },
+  "scope": "Actual pixels/files/schema/parity/timing; not human playtest, equipment confirmation or Owner art approval"
+}

@@ -73,3 +73,36 @@ Contact spokes are immediate world-space geometry, so the spark onset is visible
 before CPUParticles2D's first simulation tick; the secondary emitter and spokes
 both pause. Flash blends 65% white, retaining pose detail, and the damage number
 uses an 18px reference font to avoid covering the weapon.
+
+## spike-02 A2 overrides
+
+The earlier sections are Phase A history. A2 uses `thoma/idle/01.png` and six
+mace frames; the weapon is **PROPOSED**, not canon or equipment approval.
+Durations are 180/70/40/80/100/150 ms (620 total), contact remains index 3,
+and the registered mace head anchor is [455,196]. Fixed pivot and offsets are
+unchanged, preserving the existing mirror/foot tests. Reduced Motion still
+omits smear frame 2 and retains poses 0/3/5; its stationary spatial contact
+limitation remains disclosed.
+
+Camera zoom is now **1.4×**, focus weight **0.52**, with existing timing and
+unchanged rule positions. Opaque-mask measurements at all three rest/contact
+setups find zero nonparticipant overlap; intended attacker/target contact
+intersections are **71/157/164 pixels**. The label-free grayscale/zoom/rest
+captures also have no silhouette overlap. These are measured sampled poses,
+not proof of every possible battle placement.
+
+Knight B carries a textured short bone crest and light shield across all seven
+frames. Frame source hashes and edit coordinates are in the shared sources.
+HP bars follow the current sprite transform in the always-processing CanvasLayer;
+they remain visible during hitstop. Damage numbers sit above the bars.
+
+The HUD previews the pure rules result before contact and updates HP on damage
+events. Space arms first and confirms on the next physical press. `_input`
+consumes both Space edges for the attack action to prevent global press plus
+focused Button release from performing both actions. Help/debug/forecast unwind
+with Escape before exit. Scene/setup/reduced-motion mutations remain locked
+during playback; help still responds during the world pause. All default
+player-facing labels are Traditional Chinese; technical English is debug-only.
+
+Final evidence and limits: [spike02-a2](evidence/spike02-a2/),
+[verification](VERIFICATION.md#spike-02-a2), [handoff](HANDOFF.md#spike-02-a2).

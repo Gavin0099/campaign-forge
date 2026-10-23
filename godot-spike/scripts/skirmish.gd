@@ -117,6 +117,10 @@ func _ready() -> void:
 	sound.volume_db = -7
 	add_child(sound)
 	select_setup(0)
+	if "--capture-a2" in OS.get_cmdline_user_args() or "--movie-a2" in OS.get_cmdline_user_args() or "--overview-a2" in OS.get_cmdline_user_args():
+		var capture_a2 := preload("res://scripts/capture_a2.gd").new()
+		add_child(capture_a2)
+		await capture_a2.run(self,"--movie-a2" in OS.get_cmdline_user_args())
 	if "--capture02" in OS.get_cmdline_user_args() or "--movie02" in OS.get_cmdline_user_args():
 		var capture := preload("res://scripts/capture_spike02.gd").new()
 		add_child(capture)
@@ -428,7 +432,7 @@ func shake(strength: float) -> void:
 	camera.offset = Vector2(strength, -strength * 0.5) if not reduced_motion else Vector2.ZERO
 
 func show_damage(at: Vector2, amount: int) -> void:
-	var number := label_at(world, "−%d" % amount, at + Vector2(-8, -36), 18, BRASS)
+	var number := label_at(world, "−%d" % amount, at + Vector2(-8, -58), 18, BRASS)
 	var backing := StyleBoxFlat.new()
 	backing.bg_color = Color("101a19")
 	backing.content_margin_left = 3
@@ -483,8 +487,20 @@ func emit_particles(at: Vector2, dust: bool) -> void:
 	particles.finished.connect(particles.queue_free)
 	particles.emitting = true
 
+func _input(event: InputEvent) -> void:
+	# Consume BOTH edges when Space belongs to the attack action. Otherwise the
+	# global key path arms on press and Button confirms on release of one press.
+	if event is InputEventKey and event.keycode==KEY_SPACE:
+		var focused := get_viewport().gui_get_focus_owner()
+		if focused==action_button or focused==null:
+			get_viewport().set_input_as_handled()
+			if event.pressed and not event.echo and not hud.help_panel.visible:
+				hud.activate_attack()
+
 func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo:
+		return
+	if hud.help_panel.visible and event.keycode not in [KEY_H,KEY_QUESTION,KEY_SLASH,KEY_ESCAPE]:
 		return
 	match event.keycode:
 		KEY_F1, KEY_QUOTELEFT:

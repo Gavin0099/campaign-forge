@@ -289,3 +289,127 @@ All Phase A edits are under `shared-anim/` and `godot-spike/`. The diff from
 `docs/tasks/`; this run did not edit it. Scope is checked against `9345b0e`.
 No main/other worktree edit, push, merge, PR, Actions, deployment, new addon,
 formal rules/story change or Phase B work. Task completion is not SessionEnd.
+
+## spike-02 A2
+
+2026-10-23 Owner brief `4b9cea4` on Phase A `46edbc6`, worktree
+`D:\campaign-forge\scratch\godot-spike`, branch `codex/godot-spike`.
+Final engineering checks pass; human playtest and Owner art acceptance remain
+**HUMAN_PENDING**. Weapon and engine decision P010 remain **PROPOSED**.
+
+Final headless GUT: **33/33 tests, 924 assertions, zero failures, no script
+errors or GUT warnings**, exit 0. All 24 existing tests remain; nine A2 tests
+cover HUD visibility, help/focus, event-derived forecasts (including lethal
+1-HP input), arm/confirm/contact transitions, manifest/schema-required fields,
+weapon idle, source/copy parity, every knight frame, six timing cases, CJK
+glyphs and banner expiry, plus physical Space press/release. The package checker
+rejects error-bearing logs even when GUT's aggregate summary says pass.
+
+### Actual commands and exits
+
+Run from the worktree root with the existing Owner Godot wrapper and Python.
+No dependency/addon installed. Restricted-shell PATH could not resolve these
+tools (exit 1); approved escalated calls used the existing Godot/Python install.
+Initial fetch also could not write the linked worktree Git metadata (exit 1);
+the authorized fetch then succeeded outside that restriction. No main-checkout
+source or other worktree was read or written.
+
+| Command actually run | Exit | Evidence / result |
+| --- | --- | --- |
+| `git fetch origin review/gpt-godot-spike` | 0 | Requested review branch fetched with existing auth; no push |
+| `git show origin/review/gpt-godot-spike:docs/review/gpt-godot-spike-02a.md` | 0 | Read the specified independent GPT review |
+| `godot --version`; `python --version` | 0 | `4.7.2.stable.official.ed1daf0bf`; Python 3.12.10 |
+| `python godot-spike/tools/prepare_a2_frames.py` | 0 | Seven fixed-pivot Thoma frames, attempt records, style sheet; source PNGs untouched |
+| `python godot-spike/tools/build_a2_ui.py` | 0 | Original 9-slice texture; minimum text contrast 5.344:1 |
+| `python godot-spike/tools/prepare_a2_knight.py` | 0 | Seven consistent knight-B scripted edits, per-input/output SHA-256 |
+| `godot --headless --path godot-spike -s res://tools/sync_shared_anim.gd` | 0 | Final `SYNC_SHARED_ANIM files=57 pass=true`; hash parity independently tested |
+| `godot --headless --path godot-spike --import` | 0 | [Import log](evidence/spike02-a2/import-run.log); no script errors |
+| `godot --headless --path godot-spike -- --smoke` | 0 | W2: all three existing attacks completed |
+| `godot --path godot-spike --resolution 1280x720 --audio-driver Dummy -- --stage-capture` | 0 | W2 rendered iteration: fixed portrait minimum-size overflow and thick HP bars |
+| `godot --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gdir=res://tests -gexit` | 0 | Final **33 / 924**, [clean test log](evidence/spike02-a2/test-run.log) |
+| `godot --path godot-spike --resolution 1280x720 --audio-driver Dummy -- --capture-a2` | 0 | [Rendered log](evidence/spike02-a2/rendered-run.log): `CAPTURE_COMPLETE A2 movie=false runs=6 shots=9 pass=true` |
+| `godot --path godot-spike --resolution 1280x720 --audio-driver Dummy -- --readability-a2` | 0 | [Readability log](evidence/spike02-a2/readability-run.log): nine actual images, pass marker |
+| `python godot-spike/tools/measure_readability.py --a2` | 0 | [Full-affine alpha-mask overlap](evidence/spike02-a2/readability-overlap.json) |
+| `godot --path godot-spike --resolution 1280x720 --audio-driver Dummy --fixed-fps 60 --write-movie D:\campaign-forge\scratch\godot-spike\godot-spike\.godot\spike02-a2-movie\attack.avi -- --movie-a2` | 0 | 60-frame native AVI, 7,365,366 bytes; [log](evidence/spike02-a2/movie-avi-run.log), pass marker |
+| Same native movie command with destination `D:\campaign-forge\scratch\godot-spike\godot-spike\.godot\spike02-a2-movie\frame.png` | 0 | 60 native PNG frames; [log](evidence/spike02-a2/movie-png-run.log), pass marker |
+| `godot --path godot-spike --resolution 1920x1080 --position 0,0 --borderless --audio-driver Dummy -- --overview-a2` | 0 | Actual [1080p forecast](evidence/spike02-a2/overview-1080.png); [pass marker](evidence/spike02-a2/overview-run.log) |
+| `python godot-spike/tools/package_a2_evidence.py` | 0 | Actual screenshots, AVI header, hold hashes, JSON Schema, all shared file hashes, original PNG parity; `EVIDENCE_PACKAGE_COMPLETE ... pass=true` |
+| `git diff --exit-code 46edbc6 -- ui-prototype docs/DECISIONS.md godot-spike/scripts/rules godot-spike/art/battlefield.png godot-spike/art/props.png godot-spike/art/l03-party-v1.png godot-spike/art/l03-enemies-v1.png` | 0 | Web, rules, decision file and all four original copied PNGs unchanged |
+| `git diff --check` | 0 | No whitespace errors |
+
+### Measurements and visual inspection
+
+Normal rendered attacks: **0.914639 / 0.915426 / 0.911700 s** (open / unit-blocked /
+terrain-blocked). Reduced Motion: **0.729160 / 0.730027 / 0.730169 s**. All six
+include real hitstop and satisfy ≤1.7 s. [Timing JSON](evidence/spike02-a2/timing.json)
+separates ordinary playback from GPU-readback screenshot runs. Movie timing is
+**0.916667 s** with **five identical frames / 83.333 ms** at contact; movie wall
+times measure encoding throughput. [Movie, retained samples and full index](evidence/spike02-a2/MOVIE.md).
+
+[Default](evidence/spike02-a2/default-view.png),
+[selected unit](evidence/spike02-a2/selected-unit.png),
+[open forecast](evidence/spike02-a2/attack-forecast.png),
+[unit-blocked forecast](evidence/spike02-a2/forecast-blocked-unit.png),
+[terrain-blocked forecast](evidence/spike02-a2/forecast-blocked-terrain.png),
+[contact during hitstop](evidence/spike02-a2/contact.png),
+[actual stagger frame 1](evidence/spike02-a2/blocked-stagger.png),
+[help](evidence/spike02-a2/help-overlay.png),
+[F1](evidence/spike02-a2/debug-f1.png) are real 1280×720 captures.
+The first two show the same selected state, captured separately; they are not
+distinct modes. No scenario/hotkey/technical status appears by default.
+Help/debug are off initially, and attack forecast is visible while armed until
+contact. HP remains visible through hitstop. CJK glyph tests and actual renders
+verify the available Windows system font; no font was redistributed.
+
+[Contrast](evidence/spike02-a2/contrast.json) covers all six text-role colors on
+the three opaque backings: minimum **5.344:1**, all normal-text WCAG AA pass.
+Transient damage numbers have a dark backplate; their intentional fade is not
+a claim of sustained readability. Layout is a fixed 1280×720 reference canvas
+scaled/letterboxed to 16:9; other aspect ratios, enlarged text and gamepad remain
+outside this small acceptance pass.
+
+[Knight default](evidence/spike02-a2/knights-default-view.png),
+[zoomed](evidence/spike02-a2/knights-zoomed.png),
+[grayscale](evidence/spike02-a2/knights-grayscale.png) are label-free real renders;
+grayscale is an in-engine shader, not screenshot editing. Bone crest/light shield
+distinguish B at both scales in model inspection. All three rest/contact
+measurements have **0 nonparticipant opaque overlapping pixels**; intended
+attacker/target contact is **71 / 157 / 164 pixels**, threshold alpha ≥128,
+including weapons, excluding rings, HUD and VFX. These sampled transforms do
+not prove all possible positions/frames in a full battle.
+
+[Style sheet](evidence/spike02-a2/thoma-weapon-style-check.png) is explicitly an
+asset sheet (not a game screenshot). Weapon identity is PROPOSED; idle and
+recover pass the model style check, five articulated motion frames remain
+PLACEHOLDER for costume-detail drift. [Prompt/attempt/hash provenance](../../shared-anim/SOURCES.md),
+[per-frame audit](../../shared-anim/frame-audit.json),
+[original PNG parity](evidence/spike02-a2/original-assets.json),
+[first-party source hashes](evidence/spike02-a2/source-hashes.json),
+[artifact audit](evidence/spike02-a2/evidence-audit.json).
+
+### Retained failures and corrections
+
+- Swing 02 attempt 1 already put the weapon below the waist before horizontal
+  contact. Rejected copy and full prompt/hash remain in shared-anim/rejected
+  and SOURCES; attempt 2 supplies the descending upper-right smear. Other
+  frames used one attempt. No rejected attempt is a runtime sequence frame.
+- First rendered capture exited **0 but failed acceptance**: physical Space
+  armed on global press and confirmed on focused Button release, then Escape
+  exited before the completion marker. [Original log](evidence/spike02-a2/attempt-space-double-dispatch.log).
+  Both Space edges now have one owner, with real press/release regression coverage.
+- W4's 32/918 summary and the first 33/924 rerun both exited **0 but included
+  an error during GUT cleanup**. The test freed the scene while its signal was
+  still emitting. The earlier W4 log remains in commit `229a820`; the later
+  [error-bearing log](evidence/spike02-a2/attempt-test-signal-teardown.log) is retained.
+  Tests now await the next process frame before teardown. Final 33/924 log has
+  no ERROR or GUT WARNING; the package checker rejects those strings.
+- First 1080p observer sampled immediately after rebuilding HP widgets, before
+  their process callback placed them. The observer now waits two frames; final
+  image was inspected. This was capture scheduling, not a claimed runtime fix.
+- W2 render iteration found TextureRect/ProgressBar minimum sizes applied before
+  size policies; final code applies requested dimensions after configuring them.
+
+No original atlas, battlefield, props, ui-prototype file, rules, G005/P010, story
+or other worktree content changed. No push, main merge, PR, Actions, dependency,
+deployment or Phase B work. Normal hooks ran; missing-canonical-memory is an
+advisory, not an actual session-end event or claim of complete governance closeout.

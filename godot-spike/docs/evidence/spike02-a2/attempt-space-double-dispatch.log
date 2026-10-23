@@ -1,0 +1,18 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 Core Profile Context 26.10.1.261008 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon 780M Graphics
+
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9136 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.9137 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.9100 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.7318 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=true elapsed_wall_s=0.7332 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=true elapsed_wall_s=0.7303 limit=1.700 hp=4 cell=(3, 4)
+CAPTURE_A2 default-view.png phase=ready hold=false frame=0
+CAPTURE_A2 selected-unit.png phase=ready hold=false frame=0
+CAPTURE_A2 attack-forecast.png phase=windup hold=false frame=0
+CAPTURE_A2 contact.png phase=contact hold=true frame=3
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9473 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_A2 forecast-blocked-unit.png phase=windup hold=false frame=0
+CAPTURE_A2 blocked-stagger.png phase=blocked_recoil hold=false frame=4
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.9193 limit=1.700 hp=4 cell=(1, 5)
+CAPTURE_A2 forecast-blocked-terrain.png phase=windup hold=false frame=0

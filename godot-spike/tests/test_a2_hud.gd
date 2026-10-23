@@ -71,6 +71,7 @@ func test_forecast_matches_each_rules_result_and_rendered_labels() -> void:
 		assert_eq(scene.hud.outcome_label.text,expected)
 		assert_eq(scene.hud.reason_label.text,reason)
 		assert_true(visible_text(scene.hud.forecast_panel).contains("議會騎士・甲"))
+		if index==1: assert_true(visible_text(scene.hud.forecast_panel).contains("議會騎士・乙"))
 		key(KEY_ESCAPE)
 		assert_false(scene.hud.forecast_panel.visible)
 		assert_false(scene.hud.armed)
@@ -95,6 +96,7 @@ func test_armed_confirmation_locks_and_forecast_hides_at_contact() -> void:
 	assert_true(scene.hud.help_panel.visible,"HUD responds inside hitstop")
 	key(KEY_H)
 	await scene.attack_finished
+	await get_tree().process_frame
 	assert_false(scene.hud.armed)
 	assert_eq(scene.hp_bars["knight-1"].value,4.0)
 
@@ -153,3 +155,25 @@ func test_cjk_glyphs_and_transient_banner() -> void:
 	assert_true(scene.hud.banner.visible)
 	await get_tree().create_timer(1.2).timeout
 	assert_false(scene.hud.banner.visible,"turn banner must not persist")
+
+func test_real_space_press_release_arms_once_then_confirms_once() -> void:
+	scene.action_button.grab_focus()
+	for pressed in [true,false]:
+		var event := InputEventKey.new()
+		event.keycode = KEY_SPACE
+		event.pressed = pressed
+		Input.parse_input_event(event)
+	await get_tree().process_frame
+	assert_true(scene.hud.armed)
+	assert_false(scene.busy,"one physical press must not arm AND confirm")
+	assert_true(scene.hud.forecast_panel.visible)
+	for pressed in [true,false]:
+		var event := InputEventKey.new()
+		event.keycode = KEY_SPACE
+		event.pressed = pressed
+		Input.parse_input_event(event)
+	await get_tree().process_frame
+	assert_true(scene.busy)
+	await scene.attack_finished
+	await get_tree().process_frame
+	assert_eq(scene.units[1].hp,4)

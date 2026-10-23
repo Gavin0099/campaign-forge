@@ -17,6 +17,7 @@ var damage_label: Label
 var forecast_hp: Label
 var outcome_label: Label
 var reason_label: Label
+var blocker_label: Label
 var selected_hp: Label
 var selected_bar: ProgressBar
 var selected_status: Label
@@ -126,7 +127,7 @@ func build(owner_scene) -> void:
 	scene.action_button = button(root,"準備攻擊",Vector2(1046,632),Vector2(202,56))
 	scene.action_button.pressed.connect(activate_attack)
 	scene.action_button.grab_focus.call_deferred()
-	forecast_panel = panel(Vector2(878,104),Vector2(370,328))
+	forecast_panel = panel(Vector2(878,104),Vector2(370,348))
 	forecast_panel.name = "AttackForecast"
 	text(forecast_panel,"攻擊預測",Vector2(20,14),20,BRASS)
 	portrait(forecast_panel,"thoma",Vector2(22,52),Vector2(90,90))
@@ -138,6 +139,7 @@ func build(owner_scene) -> void:
 	forecast_hp = text(forecast_panel,"",Vector2(158,191),18)
 	outcome_label = text(forecast_panel,"",Vector2(20,235),22)
 	reason_label = text(forecast_panel,"",Vector2(20,277),16,SAGE)
+	blocker_label = text(forecast_panel,"",Vector2(20,308),16,SAGE)
 	forecast_panel.hide()
 	banner = panel(Vector2(510,-70),Vector2(260,60))
 	text(banner,"我方回合",Vector2(67,11),26,BRASS)
@@ -205,6 +207,7 @@ func reset_units() -> void:
 
 func refresh_forecast(result: Dictionary) -> void:
 	forecast.clear()
+	blocker_label.text = ""
 	if not result.ok: return
 	for event in result.events:
 		match event.type:
@@ -218,6 +221,7 @@ func refresh_forecast(result: Dictionary) -> void:
 			"knockback_blocked":
 				forecast.outcome = "受阻"
 				forecast.reason = "被友軍阻擋" if event.blocker=="unit" else "被斷橋阻擋"
+				if event.blocker=="unit": blocker_label.text = "阻擋者："+NAMES[event.blocker_id]
 	damage_label.text = "傷害　%d" % forecast.damage
 	forecast_hp.text = "生命　%d → %d" % [forecast.hp_before,forecast.hp_after]
 	outcome_label.text = forecast.outcome
@@ -237,7 +241,7 @@ func disarm() -> void:
 	if is_instance_valid(scene.action_button): scene.action_button.text = "準備攻擊"
 
 func activate_attack() -> void:
-	if scene.busy: return
+	if scene.busy or help_panel.visible: return
 	if armed: scene.play_attack()
 	else: arm_attack()
 

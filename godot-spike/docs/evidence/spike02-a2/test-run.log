@@ -11,38 +11,20 @@ res://tests/test_a2_hud.gd
 * test_help_hidden_and_h_question_shift_slash_escape_toggle
 * test_forecast_matches_each_rules_result_and_rendered_labels
 * test_armed_confirmation_locks_and_forecast_hides_at_contact
-SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8153 limit=1.700 hp=4 cell=(1, 6)
-godot : ERROR: Object is locked and can't be freed.
-At line:2 char:1
-+ godot --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd  ...
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (ERROR: Object i...can't be freed.:String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
- 
-   at: callp (core/object/object.cpp:787)
-   GDScript backtrace (most recent call first):
-       [0] free_all (res://addons/gut/autofree.gd:70)
-       [1] _run_test (res://addons/gut/gut.gd:642)
-       [2] test_armed_confirmation_locks_and_forecast_hides_at_contact (res://tests/test_a2_hud.gd:99)
-       [3] play_attack (res://scripts/skirmish.gd:313)
-SCRIPT ERROR: Attempted to free a locked object (calling or emitting).
-   at: free_all (res://addons/gut/autofree.gd:70)
-   GDScript backtrace (most recent call first):
-       [0] free_all (res://addons/gut/autofree.gd:70)
-       [1] _run_test (res://addons/gut/gut.gd:642)
-       [2] test_armed_confirmation_locks_and_forecast_hides_at_contact (res://tests/test_a2_hud.gd:99)
-       [3] play_attack (res://scripts/skirmish.gd:313)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8222 limit=1.700 hp=4 cell=(1, 6)
 * test_weapon_manifest_schema_fields_hashes_and_no_smear_in_reduced
 * test_knight_textures_differ_in_every_idle_hit_and_stagger_frame
 * test_a2_timing_all_setups_normal_and_reduced_under_budget
-SEQUENCE setup=1 reduced=false elapsed_wall_s=0.7986 limit=1.700 hp=4 cell=(1, 6)
-SEQUENCE setup=2 reduced=false elapsed_wall_s=0.7855 limit=1.700 hp=4 cell=(1, 5)
-SEQUENCE setup=3 reduced=false elapsed_wall_s=0.8014 limit=1.700 hp=4 cell=(3, 4)
-SEQUENCE setup=1 reduced=true elapsed_wall_s=0.6414 limit=1.700 hp=4 cell=(1, 6)
-SEQUENCE setup=2 reduced=true elapsed_wall_s=0.6299 limit=1.700 hp=4 cell=(1, 5)
-SEQUENCE setup=3 reduced=true elapsed_wall_s=0.6303 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8138 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.7712 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.7836 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.6364 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=true elapsed_wall_s=0.6288 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=true elapsed_wall_s=0.6268 limit=1.700 hp=4 cell=(3, 4)
 * test_cjk_glyphs_and_transient_banner
-[1m8/8 passed.
+* test_real_space_press_release_arms_once_then_confirms_once
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9314 limit=1.700 hp=4 cell=(1, 6)
+[1m9/9 passed.
 [0m[4m
 
 res://tests/test_grid_rules.gd
@@ -68,16 +50,16 @@ res://tests/test_manifest.gd
 
 res://tests/test_playback.gd
 [0m* test_all_three_normal_sequences_and_replay
-SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8212 limit=1.700 hp=4 cell=(1, 6)
-SEQUENCE setup=2 reduced=false elapsed_wall_s=0.7849 limit=1.700 hp=4 cell=(1, 5)
-SEQUENCE setup=3 reduced=false elapsed_wall_s=0.7818 limit=1.700 hp=4 cell=(3, 4)
-SEQUENCE setup=3 reduced=false elapsed_wall_s=0.7855 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.7926 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.7954 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.7879 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.7718 limit=1.700 hp=4 cell=(3, 4)
 * test_all_three_reduced_motion_sequences
-SEQUENCE setup=1 reduced=true elapsed_wall_s=0.6189 limit=1.700 hp=4 cell=(1, 6)
-SEQUENCE setup=2 reduced=true elapsed_wall_s=0.6264 limit=1.700 hp=4 cell=(1, 5)
-SEQUENCE setup=3 reduced=true elapsed_wall_s=0.6299 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.6322 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=true elapsed_wall_s=0.6205 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=true elapsed_wall_s=0.6136 limit=1.700 hp=4 cell=(3, 4)
 * test_keyboard_controls_and_diagnostic_default
-SEQUENCE setup=2 reduced=true elapsed_wall_s=0.6349 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=2 reduced=true elapsed_wall_s=0.6168 limit=1.700 hp=4 cell=(1, 5)
 * test_procedural_audio_is_deterministic_non_silent_pcm
 [1m4/4 passed.
 [0m[4m
@@ -89,12 +71,12 @@ res://tests/test_shared_hashes.gd
 
 res://tests/test_spike02.gd
 [0m* test_whole_frame_hitstop_and_ui_progress_over_real_hold
-SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8246 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8280 limit=1.700 hp=4 cell=(1, 6)
 * test_contact_triggers_share_exact_process_frame
-SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8248 limit=1.700 hp=4 cell=(1, 6)
-SEQUENCE setup=1 reduced=true elapsed_wall_s=0.6449 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8345 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.6399 limit=1.700 hp=4 cell=(1, 6)
 * test_generic_event_dispatch_reordered_and_unknown_event
-SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8418 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8243 limit=1.700 hp=4 cell=(1, 6)
 * test_knight_identity_and_debug_visibility
 * test_frame_player_offsets_and_mirror_are_pivot_relative
 * test_first_frame_uses_only_time_after_play
@@ -110,10 +92,10 @@ SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8418 limit=1.700 hp=4 cell=(1, 6
 Totals
 ------
 Scripts               6
-Tests                32
-Passing Tests        32
-Asserts             918
-Time              23.546s
+Tests                33
+Passing Tests        33
+Asserts             924
+Time              24.996s
 
 
 [32m---- All tests passed! ----

@@ -1,0 +1,71 @@
+{
+	"complete": true,
+	"engine": "4.7.2-stable (official)",
+	"fixed_fps": 60,
+	"movie_path": "D:\\campaign-forge\\scratch\\godot-spike\\godot-spike\\.godot\\spike02-a2-movie\\frame.png",
+	"renderer": "AMD Radeon 780M Graphics",
+	"runs": [
+		{
+			"fixed_fps_seconds": 0.916666666666667,
+			"hitstop_process_ms": 83.3333333333333,
+			"hitstop_wall_ms": 1714.372,
+			"phases": [
+				{
+					"frame": 2,
+					"phase": "windup",
+					"wall_ms": 256.441
+				},
+				{
+					"frame": 13,
+					"phase": "lunge",
+					"wall_ms": 2951.051
+				},
+				{
+					"frame": 20,
+					"phase": "contact",
+					"wall_ms": 5002.496
+				},
+				{
+					"frame": 25,
+					"phase": "knockback",
+					"wall_ms": 6716.98
+				},
+				{
+					"frame": 47,
+					"phase": "settled",
+					"wall_ms": 14363.356
+				},
+				{
+					"frame": 57,
+					"phase": "ready",
+					"wall_ms": 17291.952
+				}
+			],
+			"ready_frame": 57,
+			"reduced_motion": false,
+			"same_frame_contact": true,
+			"setup": 1,
+			"strike_frame": 2,
+			"triggers": [
+				{
+					"frame": 20,
+					"suppressed": false,
+					"type": "spark"
+				},
+				{
+					"frame": 20,
+					"type": "sfx"
+				},
+				{
+					"frame": 20,
+					"suppressed": false,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 17.035495
+		}
+	],
+	"screenshot_runs": [],
+	"screenshots": [],
+	"timing_definition": "ordinary runs exclude GPU readback; screenshot_runs preserve perturbed wall times; movie duration uses process-frame differences at fixed 60 fps, never encoding wall time"
+}
