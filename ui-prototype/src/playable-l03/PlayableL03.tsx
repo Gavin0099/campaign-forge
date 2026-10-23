@@ -16,6 +16,7 @@ const reasons = { "turn-winch": "已在絞盤旁，本回合干擾＋1", approac
 const cells = MAP.rows.flatMap((row, y) => [...row].map((tile, x) => ({ x, y, tile })));
 const initialMessage = "選擇我方單位，再點亮格移動。";
 type Frame = { unit: string; from: Cell; to: Cell; progress: number };
+type Arrival = { unit: string; cell: Cell; serial: number; expiresAt: number };
 type BlockFeedback = { unit: string; cell: Cell; ally?: Cell; allyId?: string; dx: number; dy: number };
 
 export function PlayableL03({ onExit }: { onExit: () => void }) {
@@ -28,7 +29,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
   const [dev, setDev] = useState(false);
   const [phase, setPhase] = useState<"ally" | "enemy">("ally");
   const [banner, setBanner] = useState<{ phase: "ally" | "enemy"; serial: number } | null>(null);
-  const [arrival, setArrival] = useState<{ unit: string; serial: number } | null>(null);
+  const [arrivals, setArrivals] = useState<Arrival[]>([]);
   const [winchFeedback, setWinchFeedback] = useState<{ total: number; delta: number; serial: number } | null>(null);
   const [blocks, setBlocks] = useState<{ items: BlockFeedback[]; serial: number } | null>(null);
   const [confirmed, setConfirmed] = useState<{ cell: Cell; serial: number } | null>(null);
@@ -80,10 +81,11 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     return () => window.clearTimeout(timer);
   }, [banner]);
   useEffect(() => {
-    if (!arrival) return;
-    const timer = window.setTimeout(() => setArrival(null), 180);
+    if (!arrivals.length) return;
+    const timer = window.setTimeout(() => setArrivals(items => items.filter(item => item.expiresAt > performance.now())),
+      Math.max(1, Math.min(...arrivals.map(item => item.expiresAt)) - performance.now()));
     return () => window.clearTimeout(timer);
-  }, [arrival]);
+  }, [arrivals]);
   useEffect(() => {
     if (!winchFeedback) return;
     const timer = window.setTimeout(() => setWinchFeedback(null), 700);
@@ -100,7 +102,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     return () => window.clearTimeout(timer);
   }, [confirmed]);
   useEffect(() => {
-    if (skip || reduced) { setWinchFeedback(null); setArrival(null); setBlocks(null); setConfirmed(null); }
+    if (skip || reduced) { setWinchFeedback(null); setArrivals([]); setBlocks(null); setConfirmed(null); }
   }, [skip, reduced]);
 
   // Both legal highlights and intent are pure queries against the SAME state.
@@ -120,7 +122,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     if (busyRef.current) return;
     const result = command(stateRef.current, input);
     if (!result.ok) { setMessage("無法執行；請選擇亮格或可行動的我方。" ); return; }
-    setSelected(null); setInspected(null); setHovered(null); setHoverCell(null); setArrival(null); setWinchFeedback(null); setBlocks(null);
+    setSelected(null); setInspected(null); setHovered(null); setHoverCell(null); setArrivals([]); setWinchFeedback(null); setBlocks(null);
     setConfirmed(input.type === "move" && !skipRef.current && !reducedRef.current
       ? { cell: input.to, serial: ++feedbackSerial.current } : null);
     if (input.type === "resolve" || input.type === "retry") setWaited([]);
@@ -141,7 +143,10 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     const playCue = (cue: FeedbackCue) => {
       if (skipRef.current || reducedRef.current) return;
       if (cue.kind === "winch") setWinchFeedback({ total: cue.total, delta: cue.delta, serial: ++feedbackSerial.current });
-      if (cue.kind === "landing") setArrival({ unit: cue.unit, serial: ++feedbackSerial.current });
+      if (cue.kind === "landing") {
+        const arrival = { unit: cue.unit, cell: cue.cell, serial: ++feedbackSerial.current, expiresAt: performance.now() + 180 };
+        setArrivals(items => [...items, arrival]);
+      }
       if (cue.kind === "block") {
         const atEvent = stateBeforeEvent(stateRef.current, result.events, cue.eventIndex);
         const unit = atEvent.units.find(u => u.id === cue.unit)!;
@@ -291,16 +296,20 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
             {movePath.slice(1).map((p,i) => <g key={key(p)} transform={`translate(${center(p).x} ${center(p).y})`}><circle r="7" /><text y="3" textAnchor="middle">{i+1}</text></g>)}
           </g>}
           <g className={blockFx?.items.some(b => b.ally) ? "p1v-impact-scene" : undefined}>
+          {!skip && !reduced && arrivals.map(arrival => <g key={`dust-${arrival.serial}`} className="p1v-feedback-layer"
+            transform={`translate(${center(arrival.cell).x} ${center(arrival.cell).y})`} aria-hidden="true">
+            <g className="p1v-footstep-dust" data-p1v-footstep={arrival.unit} data-p1v-landing-cell={key(arrival.cell)}>
+              <ellipse rx="11" ry="3" cy="2" /><circle cx="-10" cy="0" r="2.5" /><circle cx="9" cy="1" r="2" />
+            </g>
+          </g>)}
           {actors.map(({u, moving, p}) => {
+            const arrival = arrivals.find(item => item.unit === u.id);
             const block = blockFx?.items.find(b => b.unit === u.id && b.ally);
             const clip: Playback | null = moving ? { kind:"physical", actor:u.id, target:"", from:moving.from, to:moving.to,
               committed:true, stage:"move", progress:moving.progress, elapsed:moving.progress*230, sequence:1 } : null;
             return <g key={u.id} transform={`translate(${p.x} ${p.y})`} className="p1v-unit" data-p1v-unit={u.id}
               data-cell={key(u.cell)} data-moving={!!moving} aria-hidden="true">
               <ellipse className="p1v-shadow" rx="21" ry="7" cy="2" />
-              {arrival?.unit === u.id && !skip && !reduced && <g key={`dust-${arrival.serial}`} className="p1v-footstep-dust" data-p1v-footstep={u.id}>
-                <ellipse rx="11" ry="3" cy="2" /><circle cx="-10" cy="0" r="2.5" /><circle cx="9" cy="1" r="2" />
-              </g>}
               <g className={u.id === selected ? "p1v-selection-ring" : ""} data-p1v-base={u.side} fill={u.side === "ally" ? "#183c3966" : "#532d2b66"}
                 stroke={u.id === (inspected || selected) ? "#ffe0a4" : u.side === "ally" ? "#a6e2d3" : "#ffbd9c"} strokeWidth="2">
                 {u.side === "ally" ? <ellipse rx="17" ry="6" /> : <path d="M-19 0 0-7 19 0 0 7Z" />}
