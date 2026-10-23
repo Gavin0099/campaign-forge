@@ -207,6 +207,8 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
         units = units.map(u => u.id === step.unit ? { ...u, cell: step.to } : u);
         setVisualUnits(units);
         playThrough((index + 1) * 230);
+        // Owner-accepted P1v7 limit: final landing shares finish(); never add
+        // a dust pause or extra frame to the existing movement input lock.
         if (++index >= steps.length) { finish(); return; }
         began = now;
       }
