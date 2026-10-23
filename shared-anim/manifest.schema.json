@@ -1,0 +1,298 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Shared impact animation v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "characters",
+    "sequences",
+    "impact",
+    "camera",
+    "scenarios"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "characters": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "canvas_size",
+          "pivot",
+          "reference_height_px",
+          "facing"
+        ],
+        "properties": {
+          "canvas_size": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "pivot": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "reference_height_px": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "facing": {
+            "enum": [
+              "right"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "sequences": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "character",
+          "frames",
+          "loop"
+        ],
+        "properties": {
+          "character": {
+            "type": "string"
+          },
+          "loop": {
+            "const": false
+          },
+          "contact_frame_index": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "reduced_frame_indices": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "reduced_duration_ms": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "frames": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "path",
+                "duration_ms"
+              ],
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "pattern": "^[a-z-]+/[a-z-]+/[0-9]{2}\\.png$"
+                },
+                "duration_ms": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "offset": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "frame",
+                "type",
+                "anchor"
+              ],
+              "properties": {
+                "frame": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "type": {
+                  "enum": [
+                    "sfx",
+                    "spark",
+                    "dust"
+                  ]
+                },
+                "anchor": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "impact": {
+      "type": "object",
+      "required": [
+        "hitstop_ms",
+        "shake",
+        "flash_ms",
+        "knockback_ms",
+        "blocked_shove_ms",
+        "blocked_recoil_ms",
+        "blocked_shove_px",
+        "settle_ms",
+        "reduced_knockback_ms"
+      ],
+      "properties": {
+        "hitstop_ms": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "shake": {
+          "type": "object",
+          "required": [
+            "strength_px",
+            "duration_ms",
+            "decay"
+          ],
+          "properties": {
+            "strength_px": {
+              "type": "number",
+              "minimum": 0
+            },
+            "duration_ms": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "decay": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false
+        },
+        "flash_ms": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "knockback_ms": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "blocked_shove_ms": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "blocked_recoil_ms": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "blocked_shove_px": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "settle_ms": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "reduced_knockback_ms": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "camera": {
+      "type": "object",
+      "required": [
+        "zoom",
+        "in_ms",
+        "out_ms",
+        "focus"
+      ],
+      "properties": {
+        "zoom": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 2
+        },
+        "in_ms": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "out_ms": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "focus": {
+          "const": "attacker_target_midpoint"
+        }
+      },
+      "additionalProperties": false
+    },
+    "scenarios": {
+      "type": "object",
+      "required": [
+        "open",
+        "unit-blocked",
+        "terrain-blocked"
+      ],
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "setup_index",
+          "reaction",
+          "movement"
+        ],
+        "properties": {
+          "setup_index": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2
+          },
+          "reaction": {
+            "enum": [
+              "hit",
+              "stagger"
+            ]
+          },
+          "movement": {
+            "enum": [
+              "knockback",
+              "knockback_blocked"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
