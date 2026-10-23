@@ -1,0 +1,28 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 Core Profile Context 26.10.1.261008 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon 780M Graphics
+
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9179 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.9127 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.9114 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.7302 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=true elapsed_wall_s=0.7300 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=true elapsed_wall_s=0.7302 limit=1.700 hp=4 cell=(3, 4)
+CAPTURE anticipation.png phase=windup hold=false frame=0 1280x720
+CAPTURE contact.png phase=contact hold=true frame=3 1280x720
+CAPTURE recoil.png phase=knockback hold=false frame=4 1280x720
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9497 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE blocked-unit-stagger.png phase=blocked_recoil hold=false frame=4 1280x720
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.9446 limit=1.700 hp=4 cell=(1, 5)
+CAPTURE blocked-terrain-stagger.png phase=blocked_recoil hold=false frame=4 1280x720
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.9148 limit=1.700 hp=4 cell=(3, 4)
+CAPTURE reduced-motion-contact.png phase=contact hold=true frame=3 1280x720
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.7621 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE hud-minimal.png phase=ready hold=false frame=0 1280x720
+CAPTURE hud-debug.png phase=ready hold=false frame=0 1280x720
+CAPTURE knights-grayscale.png phase=ready hold=false frame=0 1280x720
+CAPTURE readability-option-a.png phase=contact hold=true frame=3 1280x720
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.8235 limit=1.700 hp=4 cell=(1, 5)
+CAPTURE readability-option-b.png phase=contact hold=true frame=3 1280x720
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.8238 limit=1.700 hp=4 cell=(1, 5)
+CAPTURE_COMPLETE spike02 movie=false runs=6 screenshots=11 pass=true
+KEYBOARD_EXIT_REQUESTED key=Escape

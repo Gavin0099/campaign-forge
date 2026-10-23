@@ -1,6 +1,6 @@
 """Opaque-silhouette overlap from rendered-run sprite transforms (not screenshots).
 Counts include weapons, exclude UI/rings/flash. Conservative mask threshold 128.
-Camera zoom is common to all actors; world-space overlap is the comparison.
+Full viewport transforms include reflection, rotation and camera zoom.
 """
 from pathlib import Path
 from PIL import Image,ImageChops
@@ -13,12 +13,13 @@ for shot in shots:
     masks={}
     for b in shot['bodies']:
         im=Image.open(root/b['texture'].removeprefix('res://')).convert('RGBA')
-        sx,sy=b['scale']; x,y=b['origin']
-        # A negative global X means reflection about the fixed foot pivot.
-        if sx<0: im=im.transpose(Image.Transpose.FLIP_LEFT_RIGHT);x+=im.width*sx
-        im=im.resize((round(im.width*abs(sx)),round(im.height*abs(sy))),Image.Resampling.LANCZOS)
-        canvas=Image.new('L',(1280,720));canvas.paste(im.getchannel('A').point(lambda a:255 if a>=128 else 0),(round(x),round(y)))
-        masks[b['id']]=canvas
+        a,basis_y,c,d,tx,ty=b['screen_transform']
+        determinant=a*d-basis_y*c
+        assert abs(determinant)>1e-9
+        inverse=(d/determinant,-c/determinant,(c*ty-d*tx)/determinant,
+                 -basis_y/determinant,a/determinant,(basis_y*tx-a*ty)/determinant)
+        alpha=im.getchannel('A').transform((1280,720),Image.Transform.AFFINE,inverse,Image.Resampling.BICUBIC)
+        masks[b['id']]=alpha.point(lambda value:255 if value>=128 else 0)
     pairs={}
     keys=list(masks)
     for i,a in enumerate(keys):

@@ -1,0 +1,72 @@
+{
+	"complete": false,
+	"engine": "4.7.2-stable (official)",
+	"fixed_fps": 60,
+	"movie_destination": "",
+	"movie_frames_written_before_final_frame": 0,
+	"renderer": "AMD Radeon 780M Graphics",
+	"runs": [
+		{
+			"all_process_seconds": 0.933333333333335,
+			"contact_triggers": [
+				{
+					"frame": 34,
+					"suppressed": false,
+					"type": "spark"
+				},
+				{
+					"frame": 34,
+					"type": "sfx"
+				},
+				{
+					"frame": 34,
+					"suppressed": false,
+					"type": "flash"
+				}
+			],
+			"game_seconds_including_nominal_hitstop": 0.930000000000001,
+			"hitstop_observed_process_ms": 83.3333333333333,
+			"hitstop_observed_wall_ms": 82.658,
+			"hitstop_requested_ms": 80.0,
+			"phases": [
+				{
+					"phase": "windup",
+					"process_frame": 16,
+					"wall_ms": 66.835
+				},
+				{
+					"phase": "lunge",
+					"process_frame": 26,
+					"wall_ms": 233.611
+				},
+				{
+					"phase": "contact",
+					"process_frame": 34,
+					"wall_ms": 367.993
+				},
+				{
+					"phase": "knockback",
+					"process_frame": 39,
+					"wall_ms": 450.784
+				},
+				{
+					"phase": "settled",
+					"process_frame": 61,
+					"wall_ms": 823.301
+				},
+				{
+					"phase": "ready",
+					"process_frame": 71,
+					"wall_ms": 987.011
+				}
+			],
+			"reduced_motion": false,
+			"same_frame_contact": true,
+			"setup": 1,
+			"wall_seconds": 0.920165,
+			"world_process_seconds_excluding_hold": 0.850000000000001
+		}
+	],
+	"screenshots": [],
+	"timing_definition": "Wall includes actual hitstop and GPU readback. World process delta excludes paused frames; game total adds nominal 80ms hold. PNG encoding happens after playback. Movie wall clock is capture throughput, not playback duration."
+}

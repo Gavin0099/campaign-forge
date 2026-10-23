@@ -1,0 +1,15 @@
+{
+  "pass_result": true,
+  "screenshots": 11,
+  "original_assets_identical": 4,
+  "frozen_rendered_frames": 5,
+  "native_avi": {
+    "bytes": 7660658,
+    "sha256": "1d9d3a0a1f464da69dc0f6b3719358dcefac87dbecf92f24e67b2dbfcb6c532b",
+    "microseconds_per_frame": 16666,
+    "frames": 60,
+    "width": 1280,
+    "height": 720
+  },
+  "scope": "actual files and timing, not Owner playtest or art approval"
+}

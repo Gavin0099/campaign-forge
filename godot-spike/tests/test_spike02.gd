@@ -65,6 +65,7 @@ func test_whole_frame_hitstop_and_ui_progress_over_real_hold() -> void:
 	assert_false(samples[0].damage_numbers.is_empty(),"real damage number is included in freeze comparison")
 	assert_false(samples[1].particle_can_process,"native emitter inherits world pause")
 	assert_gte((stamps[1]-stamps[0])/1000.0,79.9,"two snapshots span entire >=80ms hold")
+	assert_gte(scene.hold_process_ms,80.0,"pause also covers at least 80ms of process time")
 	assert_gt(ui_ticks[1],ui_ticks[0],"always-process UI/root clock advances")
 	await get_tree().process_frame
 	await get_tree().process_frame

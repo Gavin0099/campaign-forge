@@ -1,0 +1,72 @@
+{
+	"complete": true,
+	"engine": "4.7.2-stable (official)",
+	"fixed_fps": 60,
+	"movie_destination": "D:\\campaign-forge\\scratch\\godot-spike\\godot-spike\\.godot\\spike02-movie\\attack.avi",
+	"movie_frames_written_before_final_frame": 0,
+	"renderer": "AMD Radeon 780M Graphics",
+	"runs": [
+		{
+			"all_process_seconds": 0.933333333333335,
+			"contact_triggers": [
+				{
+					"frame": 20,
+					"suppressed": false,
+					"type": "spark"
+				},
+				{
+					"frame": 20,
+					"type": "sfx"
+				},
+				{
+					"frame": 20,
+					"suppressed": false,
+					"type": "flash"
+				}
+			],
+			"game_seconds_including_nominal_hitstop": 0.930000000000001,
+			"hitstop_observed_process_ms": 83.3333333333333,
+			"hitstop_observed_wall_ms": 83.451,
+			"hitstop_requested_ms": 80.0,
+			"phases": [
+				{
+					"phase": "windup",
+					"process_frame": 2,
+					"wall_ms": 70.392
+				},
+				{
+					"phase": "lunge",
+					"process_frame": 12,
+					"wall_ms": 222.224
+				},
+				{
+					"phase": "contact",
+					"process_frame": 20,
+					"wall_ms": 357.342
+				},
+				{
+					"phase": "knockback",
+					"process_frame": 25,
+					"wall_ms": 440.894
+				},
+				{
+					"phase": "settled",
+					"process_frame": 47,
+					"wall_ms": 806.626
+				},
+				{
+					"phase": "ready",
+					"process_frame": 57,
+					"wall_ms": 976.025
+				}
+			],
+			"reduced_motion": false,
+			"same_frame_contact": true,
+			"setup": 1,
+			"wall_seconds": 0.90562,
+			"world_process_seconds_excluding_hold": 0.850000000000001
+		}
+	],
+	"screenshots": [],
+	"timing_definition": "Wall includes actual hitstop and GPU readback. World process delta excludes paused frames; game total adds nominal 80ms hold. PNG encoding happens after playback. Movie wall clock is capture throughput, not playback duration."
+}

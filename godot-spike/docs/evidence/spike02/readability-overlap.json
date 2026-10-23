@@ -16,7 +16,7 @@
     "setup": 0,
     "phase": "contact",
     "opaque_overlap_px": {
-      "thoma/knight-1": 63,
+      "thoma/knight-1": 80,
       "thoma/knight-2": 0,
       "knight-1/knight-2": 0
     }
@@ -38,7 +38,7 @@
     "setup": 1,
     "phase": "contact",
     "opaque_overlap_px": {
-      "thoma/knight-1": 29,
+      "thoma/knight-1": 166,
       "thoma/knight-2": 0,
       "knight-1/knight-2": 0
     }
@@ -60,7 +60,7 @@
     "setup": 2,
     "phase": "contact",
     "opaque_overlap_px": {
-      "thoma/knight-1": 81,
+      "thoma/knight-1": 171,
       "thoma/knight-2": 0,
       "knight-1/knight-2": 0
     }
@@ -82,7 +82,7 @@
     "setup": 0,
     "phase": "contact",
     "opaque_overlap_px": {
-      "thoma/knight-1": 399,
+      "thoma/knight-1": 170,
       "thoma/knight-2": 0,
       "knight-1/knight-2": 0
     }
@@ -95,7 +95,7 @@
     "opaque_overlap_px": {
       "thoma/knight-1": 0,
       "thoma/knight-2": 0,
-      "knight-1/knight-2": 0
+      "knight-1/knight-2": 16
     }
   },
   {
@@ -104,9 +104,9 @@
     "setup": 1,
     "phase": "contact",
     "opaque_overlap_px": {
-      "thoma/knight-1": 278,
+      "thoma/knight-1": 282,
       "thoma/knight-2": 0,
-      "knight-1/knight-2": 92
+      "knight-1/knight-2": 0
     }
   },
   {
@@ -126,7 +126,7 @@
     "setup": 2,
     "phase": "contact",
     "opaque_overlap_px": {
-      "thoma/knight-1": 276,
+      "thoma/knight-1": 296,
       "thoma/knight-2": 0,
       "knight-1/knight-2": 0
     }

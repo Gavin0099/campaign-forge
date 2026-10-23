@@ -13,7 +13,8 @@ func shot(name: String) -> void:
 	var bodies: Array = []
 	for id in scene.actors:
 		var body: Sprite2D = scene.actors[id].get_node("Body")
-		bodies.append({"id":id, "texture":body.texture.resource_path, "origin":[body.global_position.x,body.global_position.y], "scale":[body.global_scale.x,body.global_scale.y], "frame":scene.players[id].frame_index})
+		var transform := body.get_global_transform_with_canvas()
+		bodies.append({"id":id, "texture":body.texture.resource_path, "screen_transform":[transform.x.x,transform.x.y,transform.y.x,transform.y.y,transform.origin.x,transform.origin.y], "frame":scene.players[id].frame_index})
 	shots.append({"file":name,"image":image,"bodies":bodies,"option":scene.readability_option,"setup":scene.setup_index,"phase":scene.phase,"zoom":scene.camera.zoom.x})
 	pending -= 1
 

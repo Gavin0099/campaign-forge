@@ -23,7 +23,9 @@ Frame entry swaps the contact texture, emits manifest spark and SFX events, then
 starts flash, reaction frame zero, damage number and initial shake offset on the
 same process frame. `get_tree().paused = true` freezes the complete world. A
 process-always, ignore-time-scale SceneTreeTimer releases the pause; a monotonic
-clock guard prevents early release. Sound starts at contact and is allowed to
+clock guard prevents early release. A second guard counts subsequent process
+frame deltas, excluding the timer's creation frame; fixed-60-fps capture therefore
+holds five frames (83.33ms), rather than four. Sound starts at contact and is allowed to
 ring out, while visual world motion is frozen. UI remains live and attack/setup/
 motion preference mutations remain locked. This does not claim audible audition.
 
@@ -41,19 +43,33 @@ Keep option **a**: 0.98 × baseline 48.88px body height, with 1.5× attack zoom
 attacker/target midpoint to avoid exposing blank space outside the painting.
 Reduced Motion leaves the camera unchanged.
 
-Option b, 1.3× persistent unit scale without zoom, has no idle overlap in these
-three setups, but the unit-blocked contact has **92 opaque overlapping pixels
-between the two knights**. Chosen option a has zero nonparticipant overlap in
-all six rest/contact checks. A preliminary 1.0× candidate had a single edge
-pixel collision, removed with the 2% reduction. Deliberate attacker/target
-contact still overlaps 63 / 29 / 81 world pixels in setups a / b / c; no zero
-contact-intersection claim is made. Source alpha threshold is 128, counting
-weapons as part of the silhouette, excluding rings, labels, flash and VFX.
+Option b, 1.3× persistent unit scale without zoom, has **16 opaque overlapping
+screen pixels between the two knights at rest in the unit-blocked setup**.
+Chosen option a has zero nonparticipant overlap in all six rest/contact checks.
+Deliberate attacker/target contact overlaps 80 / 166 / 171 screen pixels in
+setups a / b / c; no zero contact-intersection claim is made. Source alpha
+threshold is 128, counting weapons as part of the silhouette, excluding rings,
+labels, flash and VFX. Full viewport transforms include mirroring and camera
+zoom; these are silhouette estimates, not a segmentation of the final VFX image.
+
+A8 corrected an A5 measurement error: decomposed global_scale omitted the
+rotation that Godot uses to represent a negative X scale. The earlier 92px,
+63/29/81px and preliminary 1px claims are invalid and superseded here. The
+selected 0.98 scale is retained; no claim is made that exactly 2% reduction is
+necessary. The corrected evidence still supports the camera choice.
 
 [Twelve actual 720p captures and transforms](evidence/spike02/readability.json),
 [opaque-mask measurements](evidence/spike02/readability-overlap.json),
 [camera contact](evidence/spike02/readability-a-setup2-contact.png),
-[large-unit contact](evidence/spike02/readability-b-setup2-contact.png).
-These images predate the A6 HUD trim; the art, poses and camera are the same.
+[large-unit rest](evidence/spike02/readability-b-setup2-rest.png).
+These twelve captures were refreshed during A8 with the final HUD and complete
+viewport transforms; earlier versions remain in the A5 commit history.
 Knight B's light shield field supplies value contrast independently of labels;
 the final grayscale, label-free runtime proof is part of A8.
+
+The A8 capture also measures source frame 1 for blocked stagger (the actual
+buckled pose), rather than sampling the phase label before the next texture swap.
+Contact spokes are immediate world-space geometry, so the spark onset is visible
+before CPUParticles2D's first simulation tick; the secondary emitter and spokes
+both pause. Flash blends 65% white, retaining pose detail, and the damage number
+uses an 18px reference font to avoid covering the weapon.

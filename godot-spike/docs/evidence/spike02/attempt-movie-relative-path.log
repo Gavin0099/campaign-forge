@@ -1,0 +1,167 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 Core Profile Context 26.10.1.261008 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon 780M Graphics
+
+Movie Maker mode enabled, recording movie in 1280×720 @ 60 FPS...
+godot : ERROR: Condition "d.is_null()" is true. Returning: FAILED
+At line:3 char:1
++ godot --path godot-spike --resolution 1280x720 --audio-driver Dummy - ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ERROR: Conditio...turning: FAILED:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+   at: write_begin (servers/movie_writer/movie_writer_pngwav.cpp:75)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9086 limit=1.700 hp=4 cell=(1, 6)
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+CAPTURE_COMPLETE spike02 movie=true runs=1 screenshots=0 pass=true
+ERROR: Condition "f_wav.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (servers/movie_writer/movie_writer_pngwav.cpp:145)
+--------------------------------------------------------------------------------
+Done recording movie at path: D:/campaign-forge/scratch/godot-spike/godot-spike/godot-spike/.godot/spike02-movie/frame.png
+73 frames at 60 FPS (movie length: 00:00:01:13), recorded in 00:00:03 (33% of real-time speed).
+CPU render time: 0.02 seconds (average: 0.21 ms/frame)
+GPU render time: 0.03 seconds (average: 0.40 ms/frame)
+Encoding time: 0.01 seconds (average: 0.19 ms/frame)
+--------------------------------------------------------------------------------

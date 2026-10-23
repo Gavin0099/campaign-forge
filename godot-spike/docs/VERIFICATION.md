@@ -130,3 +130,162 @@ checkout was read or edited. Git operations use this worktree's necessary shared
 Git metadata. Hooks ran normally and emitted only the existing report-only
 `missing_canonical_memory` advisory. No hook bypass or lifecycle completion claim.
 The latest restricted task scope takes precedence over older PLAN/memory updates.
+
+## spike-02 Phase A
+
+2026-10-23. Continued from Owner brief commit `9345b0e` on `codex/godot-spike`.
+**Engineering checks pass; exact art/weapon identity is not fully satisfied.**
+Thoma's specified original crop is empty-handed, so the six generated swing
+frames are explicitly PLACEHOLDER for equipment identity and minor costume
+variation. Human playtest is **HUMAN_PENDING**, and P010 remains **PROPOSED**.
+
+### Commands actually run
+
+Run from `D:\campaign-forge\scratch\godot-spike`. `godot` is the existing
+Owner-provided console wrapper. Tools were run outside the restricted PATH
+sandbox where needed; no tool install, credentials, trust change or other
+worktree edit. Real exit codes were read immediately after each engine call.
+Logs were normalized to UTF-8/LF with trailing whitespace trimmed; outcomes,
+errors and assertions are retained. An exit 0 without actual files and a
+`CAPTURE_COMPLETE ... pass=true` marker is not accepted.
+
+| Command | Exit | Result |
+| --- | ---: | --- |
+| `godot --version` | 0 | `4.7.2.stable.official.ed1daf0bf` |
+| `git fetch origin` | 0 | No incoming commits on the existing task branch; no pull, branch switch or push |
+| `python godot-spike/tools/build_manifest.py` | 0 | Manifest and JSON Schema authored |
+| `python godot-spike/tools/prepare_frames.py` | 0 | 21 fixed-pivot runtime frames, source records and contact sheet |
+| `godot --headless --path godot-spike -s res://tools/sync_shared_anim.gd` | 0 | 44 files, `SYNC_SHARED_ANIM ... pass=true` |
+| `godot --headless --path godot-spike --import` | 0 | [Import log](evidence/spike02/import-run.log) |
+| `godot --headless --path godot-spike -- --smoke` | 0 | All three setups completed during A3/A4/A6 implementation |
+| `godot --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gdir=res://tests -gexit` | 0 | **24 tests / 624 assertions**, [final log](evidence/spike02/test-run.log) |
+| `godot --path godot-spike --resolution 1280x720 --audio-driver Dummy -- --readability` | 0 | Twelve rest/contact captures, refreshed in A8 with complete viewport transforms; marker passes |
+| `python godot-spike/tools/measure_readability.py` | 0 | [Overlap measurements](evidence/spike02/readability-overlap.json) |
+| `godot --path godot-spike --resolution 1280x720 --audio-driver Dummy -- --capture02` | 0 | Six measured runs, four separately timed screenshot runs, eleven screenshots; [marker and Escape input](evidence/spike02/rendered-run.log) |
+| `godot --path godot-spike --resolution 1280x720 --audio-driver Dummy --fixed-fps 60 --write-movie D:\campaign-forge\scratch\godot-spike\godot-spike\.godot\spike02-movie\frame.png -- --movie02` | 0 | 73 actual PNG frames, pass marker; [log](evidence/spike02/movie-run.log) |
+| Same movie command with destination `...\spike02-movie\attack.avi` | 0 | 60 frames, 7,660,658 bytes, pass marker and Escape exit; [log](evidence/spike02/movie-avi-run.log) |
+| `godot --path godot-spike --resolution 1920x1080 --position 0,0 --borderless --audio-driver Dummy -- --overview02` | 0 | `OVERVIEW 1920x1080 error=0`; [image](evidence/spike02/overview-1080.png) |
+| `python godot-spike/tools/package_spike02_evidence.py` | 0 | Actual screenshot dimensions, five identical movie frames, AVI header, timing and original PNG parity checked |
+| `jsonschema.Draft202012Validator.check_schema(schema)` and `jsonschema.validate(manifest, schema)` via installed Python package | 0 | `JSON_SCHEMA_VALIDATION pass=true`; no dependency installed |
+| `git diff --exit-code 9345b0e -- ui-prototype docs/DECISIONS.md godot-spike/scripts/rules` plus the four original Godot art PNG paths | 0 | Web, rules, P010 and original artwork unchanged |
+
+### Measured timing and whole-world freeze
+
+The ordinary-playback rows below use a rendered window **without synchronous
+GPU screenshot readback**. Wall time is from swing start to input-ready and
+includes the real hold. The process-delta accumulator excludes paused frames,
+then adds the nominal 80ms hold; scheduler/frame boundaries make it slightly
+different from wall time. Both measures are under 1.7 seconds.
+
+| Setup | Normal wall / process+hold (s) | Reduced wall / process+hold (s) |
+| --- | --- | --- |
+| Open | 0.9179 / 0.9529 | 0.7302 / 0.7846 |
+| Unit blocked | 0.9127 / 0.9642 | 0.7300 / 0.7934 |
+| Terrain blocked | 0.9114 / 0.9613 | 0.7302 / 0.7817 |
+
+Ordinary rendered hitstop: **90.239–91.271ms wall**, requested 80ms; subsequent
+process deltas: 90.859–92.130ms. This includes frame quantization. The separate
+fixed-60-fps movie holds **five byte-identical frames (83.33ms)** and visibly
+resumes on the next frame. Details and every trigger frame are in
+[timing.json](evidence/spike02/timing.json) and [movie index](evidence/spike02/movie-index.json).
+
+The screenshot run for open contact measured **122.301ms** during synchronous
+GPU readback; it is kept in `screenshot_runs`, not represented as normal playback.
+The other screenshot runs were 89.394–91.482ms. Screenshot capture can therefore
+perturb the apparent hold on this machine. The unchanged ordinary-playback
+acceptance tolerance is 80–107ms; no universal frame-time guarantee is claimed.
+
+The implementation pauses a dedicated World subtree through `SceneTree.paused`.
+HUD/root are ALWAYS. All world tweens are bound to world nodes. An always-process,
+unscaled timer plus monotonic and subsequent-process-frame guards releases the
+pause. The tests compare both frame clocks, a real world tween, actual particle
+node processing, camera position/offset/zoom and damage-number position/alpha
+across the complete hold, while an ALWAYS HUD probe advances. The movie proves
+the rendered world also stays unchanged. Audio starts on contact and rings out.
+No Engine.time_scale mutation; audible output remains unverified with Dummy audio.
+
+Spark, SFX and flash are logged on exactly the same process frame as the contact
+pose. Reduced Motion records suppressed spark/flash triggers, plays only 0/3/5
+swing key poses, has no smear, shake, flash, particles or closing-step offset,
+and retains a stationary damage number. Its weapon pose does not spatially
+close the full normal-attack gap; that is an explicit reduced-motion limitation.
+
+### Visual evidence and test coverage
+
+[Anticipation](evidence/spike02/anticipation.png),
+[held contact](evidence/spike02/contact.png), [recoil](evidence/spike02/recoil.png),
+[unit stagger](evidence/spike02/blocked-unit-stagger.png),
+[terrain stagger](evidence/spike02/blocked-terrain-stagger.png),
+[reduced contact](evidence/spike02/reduced-motion-contact.png),
+[camera option](evidence/spike02/readability-option-a.png),
+[large units](evidence/spike02/readability-option-b.png),
+[label-free runtime grayscale](evidence/spike02/knights-grayscale.png),
+[minimal HUD](evidence/spike02/hud-minimal.png),
+[debug HUD](evidence/spike02/hud-debug.png).
+All eleven are actual 1280×720 viewport captures. Grayscale uses a runtime
+screen shader with HUD hidden; no screenshot repainting. Both blocked images
+capture reaction frame 1, the buckled pose. [Full AVI and selected movie PNGs](evidence/spike02/MOVIE.md).
+
+The 24 tests retain all ten pure-rule cases and four prior playback/audio cases
+(G now requires F1 first), plus manifest/schema contract, existence and dimensions,
+invalid duration/contact/path rejection, fixed pivot/mirroring, reduced key poses,
+source/copy hashes, world pause, contact synchronization, reordered/unknown event
+playback, distinct knight textures and first-frame clock regression. They do not
+constitute human input, feel or commercial-art approval. Rendered automated input
+uses 1/2/3, R, Space, M, F1, G and Escape; full gamepad/localization/text-size
+coverage remains outside this spike.
+
+### Failures retained and corrections
+
+- A3 import initially printed a type-inference parse error despite exit 0;
+  an explicit Node2D annotation corrected it. A3's first parity run exited 1
+  because virtual `res://../` traversal cannot read the source folder. Resolve
+  an absolute source path first; the rerun passed 89 checks.
+- [Existing tests](evidence/spike02/attempt-existing-tests.log), exit 1: the old
+  G-only diagnostic expectation was updated to the authorized F1 → G behavior.
+- [Image loading](evidence/spike02/attempt-image-load-warning.log), exit 1:
+  GUT rejected export warnings from Image.load_from_file; tests now load the
+  imported Texture2D and inspect its image. No warning suppression added.
+- [Pause-clock mutation](evidence/spike02/attempt-pause-clock-mutation.log),
+  exit 1: contact residue was reset after the pause began. Move that update
+  before contact entry, and prevent pre-start frame delta from skipping wind-up.
+- [Relative movie path](evidence/spike02/attempt-movie-relative-path.log),
+  exit 0 **but rejected**: Godot interpreted the path relative to its project,
+  could not create the WAV/frames, and emitted errors. Absolute paths and actual
+  file checks replace exit-code-only acceptance.
+- [Movie wall clock](evidence/spike02/attempt-movie-wall-clock.log), exit 1:
+  PNG encoding throughput was mistakenly tested as gameplay duration. Fixed-step
+  timing is now separate. The same recording exposed a four-frame hold; count
+  subsequent process deltas to guarantee at least five frames at 60 fps.
+- [Movie path discovery](evidence/spike02/attempt-movie-path-discovery.log),
+  exit 1: consumed engine arguments were absent from OS.get_cmdline_args. Use
+  [Engine.get_write_movie_path](https://docs.godotengine.org/en/4.4/classes/class_engine.html#class-engine-method-get-write-movie-path), then verify the produced file/header.
+- [Readback jitter](evidence/spike02/attempt-rendered-hold-jitter.json) and
+  [repeat](evidence/spike02/attempt-rendered-hold-jitter-repeat.json), both exit 1:
+  first contact measured 123.804 / 122.042ms while reading GPU pixels. The capture
+  runner now separates six ordinary timing runs from four screenshot runs and
+  retains both. Thresholds for ordinary playback were not relaxed.
+- Evidence logs initially had doubled CR/newline and trailing spaces after
+  PowerShell encoding conversion (`git diff --check` exit 2). Normalize only
+  encoding/line endings/trailing whitespace; failure messages remain intact.
+- Final audit caught an A5 measurement error: global_scale alone loses the
+  rotation used to represent a mirrored sprite. Re-record all twelve images
+  and use get_global_transform_with_canvas plus inverse affine mask sampling.
+  Corrected option b has 16px knight/knight overlap at unit-blocked rest;
+  option a has no nonparticipant overlap. Earlier 92px contact and 63/29/81px
+  contact claims are invalid. See [corrected comparison](ANIMATION-ADAPTER.md).
+
+### Scope and provenance
+
+[Original PNG hashes](evidence/spike02/original-assets.json),
+[executable-source hashes](evidence/spike02/source-hashes.json),
+[asset prompts/references/output hashes](../../shared-anim/SOURCES.md),
+[contact sheet](../../shared-anim/contact-sheet.png).
+Source frames live at repo-root `shared-anim/`; Godot holds byte-identical copies.
+Executable-source hashes include both actual working-tree bytes and the LF
+normalization used by this repo's Git text attributes.
+All Phase A edits are under `shared-anim/` and `godot-spike/`. The diff from
+`be9a398` also includes the **pre-existing** Owner brief commit `9345b0e` in
+`docs/tasks/`; this run did not edit it. Scope is checked against `9345b0e`.
+No main/other worktree edit, push, merge, PR, Actions, deployment, new addon,
+formal rules/story change or Phase B work. Task completion is not SessionEnd.

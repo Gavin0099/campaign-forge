@@ -49,6 +49,7 @@ var manifest: Dictionary = {}
 var players: Dictionary = {}
 var contact_triggers: Array = []
 var last_hold_ms := 0.0
+var hold_process_ms := 0.0
 var contact_point := Vector2.ZERO
 var current_plan: Dictionary = {}
 var world: Node2D
@@ -116,9 +117,13 @@ func _ready() -> void:
 	sound.volume_db = -7
 	add_child(sound)
 	select_setup(0)
+	if "--capture02" in OS.get_cmdline_user_args() or "--movie02" in OS.get_cmdline_user_args():
+		var capture := preload("res://scripts/capture_spike02.gd").new()
+		add_child(capture)
+		await capture.run(self,"--movie02" in OS.get_cmdline_user_args())
 	if "--readability" in OS.get_cmdline_user_args():
 		await preload("res://scripts/readability_run.gd").new().run(self)
-	if "--overview" in OS.get_cmdline_user_args():
+	if "--overview" in OS.get_cmdline_user_args() or "--overview02" in OS.get_cmdline_user_args():
 		# Windows startup clamps oversized windows to the work area; request the
 		# validation render size explicitly, without changing the display mode.
 		get_window().min_size = Vector2i(1920, 1080)
@@ -126,7 +131,8 @@ func _ready() -> void:
 		await get_tree().create_timer(0.3).timeout
 		await RenderingServer.frame_post_draw
 		var overview_image: Image = get_viewport().get_texture().get_image()
-		var overview_error := overview_image.save_png("res://docs/evidence/overview-1080.png")
+		var overview_path := "res://docs/evidence/spike02/overview-1080.png" if "--overview02" in OS.get_cmdline_user_args() else "res://docs/evidence/overview-1080.png"
+		var overview_error := overview_image.save_png(overview_path)
 		print("OVERVIEW %dx%d error=%d" % [overview_image.get_width(), overview_image.get_height(), overview_error])
 		get_tree().quit(0 if overview_error == OK else 1)
 	if "--capture" in OS.get_cmdline_user_args():
@@ -450,17 +456,26 @@ func on_swing_frame(index: int, attack: Dictionary) -> void:
 func hold_contact() -> void:
 	var began := Time.get_ticks_usec()
 	hold_active = true
+	hold_process_ms = 0
 	get_tree().paused = true
 	hitstop_started.emit()
+	count_hold_frames()
 	await get_tree().create_timer(manifest.impact.hitstop_ms / 1000.0, true, false, true).timeout
 	# SceneTreeTimer can be one scheduler quantum early. Never resume before the
 	# specified real-time minimum, including on a fast headless runner.
-	while Time.get_ticks_usec() - began < manifest.impact.hitstop_ms * 1000:
+	while Time.get_ticks_usec() - began < manifest.impact.hitstop_ms * 1000 or hold_process_ms < manifest.impact.hitstop_ms:
 		await get_tree().process_frame
 	last_hold_ms = (Time.get_ticks_usec() - began) / 1000.0
 	hitstop_finished.emit()
 	get_tree().paused = false
 	hold_active = false
+
+func count_hold_frames() -> void:
+	# Timer creation occurs mid-frame; explicitly count subsequent frame deltas
+	# so movie capture cannot shorten an 80ms hold to four frames at 60 FPS.
+	while hold_active:
+		await get_tree().process_frame
+		if hold_active: hold_process_ms += get_process_delta_time() * 1000.0
 
 func play_movement(event: Dictionary, attack: Dictionary) -> void:
 	var target: Node2D = actors[event.unit]
