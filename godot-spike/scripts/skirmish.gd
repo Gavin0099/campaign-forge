@@ -49,6 +49,9 @@ var contact_triggers: Array = []
 var last_hold_ms := 0.0
 var contact_point := Vector2.ZERO
 var current_plan: Dictionary = {}
+var world: Node2D
+var ui_process_ticks := 0
+var hold_active := false
 
 func project(x: float, y: float) -> Vector2:
 	return MAP_OFFSET + Vector2(550 + 44 * (x - y), 70 + 26 * (x + y)) * MAP_SCALE
@@ -73,6 +76,11 @@ func sprite(parent: Node, texture: Texture2D, at: Vector2, size: Vector2) -> Spr
 	return node
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	world = Node2D.new()
+	world.name = "World"
+	world.process_mode = Node.PROCESS_MODE_PAUSABLE
+	add_child(world)
 	var loader := Manifest.new()
 	if not loader.read():
 		get_tree().quit(1)
@@ -80,9 +88,9 @@ func _ready() -> void:
 	manifest = loader.data
 	camera = Camera2D.new()
 	camera.position = Vector2(640, 360)
-	add_child(camera)
+	world.add_child(camera)
 	board = Node2D.new()
-	add_child(board)
+	world.add_child(board)
 	sprite(board, load("res://art/battlefield.png"), MAP_OFFSET + Vector2(130, 13.666667) * MAP_SCALE, Vector2(940, 626.666667) * MAP_SCALE)
 	# Runtime crops match the web's preserveAspectRatio meet / foot anchoring.
 	for cell in [Vector2i(3, 4), Vector2i(6, 4)]:
@@ -91,7 +99,7 @@ func _ready() -> void:
 	sprite(board, atlas("res://art/props.png", Rect2(1020, 290, 516, 510)), center(Vector2i(8, 4)) + Vector2(-34, -57) * MAP_SCALE, Vector2(68.8, 68) * MAP_SCALE)
 	grid_overlay = Node2D.new()
 	grid_overlay.z_index = 1
-	add_child(grid_overlay)
+	world.add_child(grid_overlay)
 	grid_overlay.draw.connect(draw_grid)
 	build_hud()
 	sound = AudioStreamPlayer.new()
@@ -124,11 +132,14 @@ func _ready() -> void:
 		get_tree().quit()
 
 func _process(delta: float) -> void:
+	ui_process_ticks += 1
+	if get_tree().paused: return
 	for actor in actors.values():
 		actor.z_index = int(actor.position.y)
 	shake_left = maxf(0, shake_left - delta)
 	shake_phase += delta * 110.0
-	camera.offset = Vector2(sin(shake_phase), cos(shake_phase * 1.3)) * shake_strength * (shake_left / 0.2) if shake_left > 0 and not reduced_motion else Vector2.ZERO
+	var duration: float = manifest.impact.shake.duration_ms / 1000.0
+	camera.offset = Vector2(sin(shake_phase), cos(shake_phase * 1.3)) * shake_strength * pow(shake_left / duration, manifest.impact.shake.decay) if shake_left > 0 and not reduced_motion else Vector2.ZERO
 	grid_overlay.queue_redraw()
 
 func draw_grid() -> void:
@@ -163,6 +174,7 @@ func panel_style(color: Color, border: Color) -> StyleBoxFlat:
 
 func build_hud() -> void:
 	hud = CanvasLayer.new()
+	hud.process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(hud)
 	var frame := Panel.new()
 	frame.position = Vector2(1000, 104)
@@ -225,7 +237,7 @@ func select_setup(index: int) -> void:
 		var actor := Node2D.new()
 		actor.name = unit.id
 		actor.position = center(unit.cell)
-		add_child(actor)
+		world.add_child(actor)
 		var ally: bool = unit.side == "ally"
 		var body := Sprite2D.new()
 		actor.add_child(body)
@@ -342,10 +354,16 @@ func on_swing_frame(index: int, attack: Dictionary) -> void:
 
 func hold_contact() -> void:
 	var began := Time.get_ticks_usec()
-	for player in players.values(): player.held = true
+	hold_active = true
+	get_tree().paused = true
 	await get_tree().create_timer(manifest.impact.hitstop_ms / 1000.0, true, false, true).timeout
-	for player in players.values(): player.held = false
+	# SceneTreeTimer can be one scheduler quantum early. Never resume before the
+	# specified real-time minimum, including on a fast headless runner.
+	while Time.get_ticks_usec() - began < manifest.impact.hitstop_ms * 1000:
+		await get_tree().process_frame
 	last_hold_ms = (Time.get_ticks_usec() - began) / 1000.0
+	get_tree().paused = false
+	hold_active = false
 
 func play_movement(event: Dictionary, attack: Dictionary) -> void:
 	var target: Node2D = actors[event.unit]
@@ -383,20 +401,22 @@ func set_phase(value: String, text: String) -> void:
 
 func shake(strength: float) -> void:
 	shake_strength = strength
-	shake_left = 0.2
+	shake_left = manifest.impact.shake.duration_ms / 1000.0
 	shake_phase = 0
+	# First offset is visible on the contact frame, then held during hitstop.
+	camera.offset = Vector2(strength, -strength * 0.5) if not reduced_motion else Vector2.ZERO
 
 func show_damage(at: Vector2, amount: int) -> void:
-	var number := label_at(self, "−%d" % amount, at + Vector2(-12, -25), 27, BRASS)
+	var number := label_at(world, "−%d" % amount, at + Vector2(-12, -25), 27, BRASS)
 	number.z_index = 1000
 	number.add_theme_constant_override("outline_size", 7)
-	var tween := create_tween().set_parallel(true)
+	var tween := number.create_tween().set_parallel(true)
 	tween.tween_property(number, "position:y", number.position.y - (0 if reduced_motion else 30), 0.38).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	tween.tween_property(number, "modulate:a", 0.0, 0.20).set_delay(0.18)
 	tween.chain().tween_callback(number.queue_free)
 
 func emit_particles(at: Vector2, dust: bool) -> void:
-	var particles := CPUParticles2D.new()
+	var particles := preload("res://scripts/anim/world_particles.gd").new()
 	particles.position = at
 	particles.z_index = 900
 	particles.amount = 18 if dust else 24
@@ -415,7 +435,8 @@ func emit_particles(at: Vector2, dust: bool) -> void:
 	gradient.set_color(0, particles.color)
 	gradient.set_color(1, Color(particles.color, 0))
 	particles.color_ramp = gradient
-	add_child(particles)
+	particles.preprocess = 0.016
+	world.add_child(particles)
 	particles.finished.connect(particles.queue_free)
 	particles.emitting = true
 
