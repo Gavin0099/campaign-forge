@@ -7,6 +7,7 @@ import { center, diamond as sceneDiamond, Figure, Portrait, Terrain, Landmarks, 
 import { blockedAtEventIndex, buildFeedbackTimeline, confirmedContactBlocker, stateBeforeEvent, type FeedbackCue } from "./feedback";
 import "../l03.css";
 import "./playable.css";
+import "./palette-ferry-dusk.css";
 
 // A is opt-in here only. rules.ts and the P0/P0b/P0c fixtures remain untouched.
 const start = () => initialState("open", { ...DEFAULT_CONFIG, p0c: { survivalTurns: 6 } });
@@ -30,6 +31,9 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
   const [hovered, setHovered] = useState<string | null>(null);
   const [hoverCell, setHoverCell] = useState<Cell | null>(null);
   const [dev, setDev] = useState(false);
+  const [palette, setPalette] = useState<"original" | "ferry-dusk">(() =>
+    new URLSearchParams(window.location.search).get("palette") === "ferry-dusk" ? "ferry-dusk" : "original");
+  const paletteLab = new URLSearchParams(window.location.search).get("palette-lab") === "1";
   const [phase, setPhase] = useState<"ally" | "enemy">("ally");
   const [banner, setBanner] = useState<{ phase: "ally" | "enemy"; serial: number } | null>(null);
   const [arrivals, setArrivals] = useState<Arrival[]>([]);
@@ -243,7 +247,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     const p = moving ? center({x:moving.from.x+(moving.to.x-moving.from.x)*f,y:moving.from.y+(moving.to.y-moving.from.y)*f}) : center(u.cell);
     return { u, moving, p };
   }).sort((a,b) => a.p.y-b.p.y || a.p.x-b.p.x || a.u.id.localeCompare(b.u.id));
-  return <main className="l03-app p1v" ref={root} tabIndex={-1} data-p1v-status={state.status} data-p1v-dev={dev}
+  return <main className="l03-app p1v" ref={root} tabIndex={-1} data-p1v-status={state.status} data-p1v-dev={dev} data-p1v-palette={palette}
     data-p1v-motion={!skip && !reduced}
     data-p1v-settled-cue={!skip && !reduced && settledCue ? settledCue.serial : undefined}
     data-p1v-turn={state.turn} data-p1v-progress={state.progress} data-p1v-busy={busy}
@@ -394,6 +398,8 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
           onClick={() => pick(u.cell)}><Portrait id={u.id} /><strong>{names[u.id]}</strong><span className="p1v-ready-icon" aria-hidden="true">{state.moved.includes(u.id) || waited.includes(u.id) ? "✓" : "◇"}</span></button>)}</div>
         <label className="p1v-skip"><input type="checkbox" checked={skip} onChange={e => { skipRef.current=e.target.checked; setSkip(e.target.checked); if (e.target.checked) finish(); }} />跳過動畫</label>
         <label className="p1v-dev"><input type="checkbox" checked={dev} onChange={e => setDev(e.target.checked)} />開發資訊</label>
+        {dev && paletteLab && <label className="p1v-palette-choice"><input type="checkbox" checked={palette === "ferry-dusk"}
+          onChange={e => setPalette(e.target.checked ? "ferry-dusk" : "original")} />渡口暮色（調色實驗）</label>}
       </aside>
     </div>
     <footer className="p1v-controls">
