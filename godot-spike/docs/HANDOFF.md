@@ -221,3 +221,202 @@ which pinned GDScript Ink route and battle parity slice should be investigated?
 These are review decisions, not work automatically continued by this handoff.
 
 Stop here after the handoff commit. No push; wait for Owner review.
+
+## spike-02 Phase A
+
+2026-10-23, branch `codex/godot-spike`, starting at brief commit `9345b0e`.
+**A1–A9 delivered for review. Engineering checks pass; exact art and weapon
+identity remain incomplete.** Human playtest is **HUMAN_PENDING** and P010 is
+**PROPOSED**. This section supersedes spike-01's controls, animation and evidence
+claims for the current build. Phase B has not started. All nine commits are local.
+
+### Run and inspect
+
+From this worktree's root, with the Owner's existing Godot 4.7.2 console wrapper:
+
+```powershell
+godot --headless --path godot-spike -s res://tools/sync_shared_anim.gd
+godot --headless --path godot-spike --import
+godot --path godot-spike --resolution 1280x720
+godot --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gdir=res://tests -gexit
+```
+
+Use **1/2/3** for open / unit-blocked / terrain-blocked, **Space or R** to strike
+from reset state, **M** for Reduced Motion, **Esc** to exit. **F1 or backtick**
+reveals diagnostics; **G** toggles the grid while diagnostics are open. Debug is
+off by default. Strike regains keyboard focus after completion; attack/setup/
+motion changes remain locked during playback. HUD/debug processing stays live
+during hitstop. Normal runs use the available audio device; audition is pending.
+
+To reproduce rendered evidence, use `--audio-driver Dummy -- --capture02`
+after the 1280×720 run command, or `-- --readability` for the twelve-image
+comparison. Both require their `CAPTURE_COMPLETE ... pass=true` marker and
+actual files. Do not use spike-01's `--capture` for this evidence. The native
+movie command, absolute output path, packaging commands, real exit codes and
+retained failed attempts are in [VERIFICATION](VERIFICATION.md#spike-02-phase-a).
+[Watch the 60 fps AVI](evidence/spike02/attack-60fps.avi), or inspect the
+[six retained native movie frames](evidence/spike02/MOVIE.md).
+
+### What changed against the four P1 findings
+
+| Finding | Phase A change and evidence |
+| --- | --- |
+| Sliding paper / no swing | Six articulated sword poses, fixed foot pivot, manifest-driven texture swaps and a small diagonal closing step; three hit and three blocked-stagger poses per knight. [Anticipation](evidence/spike02/anticipation.png), [contact](evidence/spike02/contact.png), [buckled stagger](evidence/spike02/blocked-unit-stagger.png), [contact sheet](../../shared-anim/contact-sheet.png). Thoma's weapon identity is PLACEHOLDER. |
+| Local hitstop | Dedicated pausable World subtree, node-bound world tweens and always-processing HUD; same-frame contact, flash, immediate spark geometry and SFX. [24-test log](evidence/spike02/test-run.log), [timing](evidence/spike02/timing.json), [five identical held movie frames](evidence/spike02/movie-index.json). |
+| Small / identical units | Attack zoom selected over permanent enlargement; knight B has a lighter shield field across all seven frames. [Camera contact](evidence/spike02/readability-a-setup2-contact.png), [label-free grayscale](evidence/spike02/knights-grayscale.png). |
+| Test-tool UI | Scenario title, bone/brass HP bars, small key line and one strike control. Phase/timing/grid/identity diagnostics require F1/backtick. [Default](evidence/spike02/hud-minimal.png), [debug](evidence/spike02/hud-debug.png), [1080p](evidence/spike02/overview-1080.png). ASH SHIELD / PALE SHIELD are temporary UI descriptors, not setting names. |
+
+### Shared assets and frame status
+
+The canonical root is **`shared-anim/`**, outside either engine. The committed
+sync script copies 44 files into `godot-spike/art/anim-shared/`, with source/copy
+SHA-256 parity checked by GUT. Godot loads only its local copy. The web copy is
+deferred to Phase B; `ui-prototype/` is unchanged. All four original PNGs retain
+their original bytes ([proof](evidence/spike02/original-assets.json)).
+
+| Runtime sequence | Frames | Status |
+| --- | --- | --- |
+| `thoma/idle` | `00` | Original specified crop, normalized to the shared canvas |
+| `thoma/swing` | `00` anticipation, `01` raised blade, `02` sweep, `03` contact, `04` follow-through, `05` recover | **All six PLACEHOLDER**: weapon identity and minor costume variation |
+| `knight-a/idle` | `00` | Original specified crop, normalized |
+| `knight-a/hit` | `00` flinch, `01` recoil, `02` settle | Generated candidates, awaiting art judgment |
+| `knight-a/stagger` | `00` brace, `01` buckle, `02` recover | Generated candidates, awaiting art judgment |
+| `knight-b/idle`, `hit`, `stagger` | `00`; `00–02`; `00–02` | Same seven A frames with consistent light shield-field edit; candidates |
+
+Total **21 RGBA PNGs**, each 512×512, pivot `[256,464]`, reference body height
+360 frame pixels. Native facing is right for Thoma and left for knights;
+opposite facing mirrors the image, offsets and anchors about that pivot.
+There were twelve generated outputs, one attempt each, then scripted alpha
+cleanup, registration, source-derived palette mapping and B's shield edit.
+No additional characters, battlefield or props were generated. Every full
+prompt, reference, raw/runtime hash and cleanup is in
+[SOURCES](../../shared-anim/SOURCES.md); raw images remain available for audit.
+
+**Style self-assessment:** the muted robe/metal colors, top-left illumination
+and dark painted edges broadly follow the original crops. Palette mapping
+and fixed registration improve consistency; they cannot prove exact stroke,
+garment folds, armor contours or proportions. Some detail drifts between poses.
+The specified Thoma crop is visibly empty-handed. The demonstration therefore
+references the sword of the first warrior in the same original party atlas;
+it cannot satisfy “the sword Thoma carries” literally. The sword appears during
+the swing and disappears on returning to the original idle. This is a disclosed
+placeholder, not approved equipment or story. No Ferry Dusk palette was adopted.
+The [contact sheet](../../shared-anim/contact-sheet.png) supports model inspection,
+not Owner commercial-art acceptance.
+
+### Readability and impact decision
+
+Keep **option a**, baseline body height `48.88 × 0.98 = 47.9024px`, with **1.5×**
+attack zoom (71.85px reference body at contact). Enter over 240ms, return over
+180ms; move camera focus 40% toward the attacker/target midpoint. Reduced Motion
+keeps the camera still. Option b uses permanent 1.3× units without attack zoom.
+
+The corrected [twelve-capture matrix](evidence/spike02/readability.json) and
+[silhouette measurements](evidence/spike02/readability-overlap.json) show no
+nonparticipant overlap for option a. Option b has **16 screen pixels of
+knight/knight overlap at unit-blocked rest**. Intended attacker/target contact
+overlap in a is 80 / 166 / 171 screen pixels across the setups. Thus a improves
+attack readability while preserving separation; it does not eliminate intended
+contact overlap or make small idle details large. These measurements use alpha
+≥128 and full viewport transforms, not final-image VFX segmentation.
+
+A8 corrected A5's use of decomposed global_scale, which omitted the rotation
+Godot uses for mirrored sprites. Earlier 92px and 63/29/81px claims are invalid.
+All twelve screenshots/transform records were refreshed. The 0.98 scale remains,
+but the earlier claim that a specific 2% reduction was necessary is withdrawn.
+See [adapter details](ANIMATION-ADAPTER.md).
+
+Hitstop sets `SceneTree.paused` with World PAUSABLE and HUD/root ALWAYS. Every
+world tween is node-bound. An always-processing, unscaled 80ms timer plus wall
+clock and subsequent-process-delta guards prevents early resume. Both frame
+players, world tweens, particles, camera and damage number are tested across the
+complete hold while a HUD probe advances. Contact pose, flash, spark and SFX
+share a process-frame index. Audio rings out during the visual hold.
+
+Normal rendered attacks measured **0.9114–0.9179s**; Reduced Motion
+**0.7300–0.7302s**, including real hitstop. Ordinary holds were 90.239–91.271ms
+on this runner. The fixed-60-fps PNG movie proves **five identical frames,
+83.33ms**, then visible resume; strike-to-ready is 55/60 = 0.9167s. Synchronous
+screenshot readback can stall rendering: one separate capture hold was 122.301ms.
+This is retained separately, not hidden in ordinary-playback measurements.
+
+### Limits and Phase B requirements
+
+Reduced Motion uses swing poses 0/3/5 at 100ms each, no closing offsets, smear,
+shake, flash, particles or zoom, and minimal displacement. The stationary
+contact pose does not close the full weapon-to-target gap. Hitstop and the
+stationary damage number remain. Normal audio triggering/PCM are tested, but
+the audible mix was not heard. Generated art and hit feel need human review.
+
+This remains one scripted attack with three fixture setups: no turn loop,
+enemy AI, win/lose, persistence, export or Ink integration. The pure rules and
+G005 are unchanged. Type-based event dispatch preserves order within attack,
+damage and movement queues and stages their causal presentation; it handles
+reordered/unknown events, but is not a general multi-attack scheduler. Fixed
+16:9 layouts were rendered at 720p/1080p; localization, enlarged text, gamepad
+and other aspect ratios remain unverified.
+
+**For a separately authorized Phase B**, copy the exact shared files into the
+web public folder and enforce SHA-256 parity. Honor version, character canvas,
+pivot, native facing, frame paths/durations/offsets, loop behavior, contact index,
+events and anchors, scenario reactions, all impact/recovery durations, camera
+zoom/focus/timing and reduced-motion fields. Use the same 47.9024px body scale,
+battlefield projection and fixtures. Canvas frame swaps or a Web Animations
+adapter can implement the player; pause every world animation/particle/camera/
+damage-label clock for hitstop while DOM HUD/focus stays live. Verify actual
+frame timings and same-frame triggers in both engines. Preserve existing web
+scenes/rules and use the isolated `?scene=anim-ab` route specified in the brief.
+No engine-comparison verdict is justified before that equivalent implementation.
+
+### Resource self-check and review state
+
+Against [RESOURCE-CHECKLIST](../../docs/review/RESOURCE-CHECKLIST.md). Relevant
+prototype-fast, game-feel and game-ui-ux methods were read at the pinned URLs
+listed in spike-01 above; nothing was installed or copied. The imagegen and
+external-executable-trust-audit skills informed asset provenance and use of the
+existing tools. This is not a full executable trust attestation.
+
+| Checklist item | Status | Evidence / scoped exception |
+| --- | --- | --- |
+| A — prototype-fast | PASS | Isolated one-attack study; shared README states keep/reject criteria; stop before Phase B. |
+| A — level-design | N/A | No routes, objectives, placements or level changes; existing rules tests retained. |
+| A — game-ai | N/A | No enemy AI in the authorized spike. |
+| A — game-ui-ux | PASS (scope) | Minimal HUD, keyboard/focus locks, explicit debug state, reduced motion and two rendered sizes; no full-battle intent/objective UI claimed. |
+| A — game-feel | PASS (engineering) / HUMAN_PENDING | Articulated poses, contact sync, tested whole-world pause, measured pacing; exact weapon/style match remains incomplete as disclosed above. |
+| B — Grid-Tactics separation | PASS (criterion) | Untouched pure model emits events; presentation consumes typed events. No borrowed code/art. |
+| B — HopeMetal attribution | N/A | No code or assets borrowed. |
+| B — new engine/dependency | PASS | Owner-authorized isolated Godot continuation; existing vendored GUT only, no new addon. |
+| C — full 3–5 minute battle | N/A | One-attack brief; no complete battle claim. |
+| C — understandable enemy actions | N/A | Staged targets, no AI. |
+| C — win/lose | N/A | No terminal battle states authorized. |
+| C — two tactical choices | N/A | Three demonstration setups, not a strategy loop. |
+| C — restart/change strategy | PASS (replay) / N/A (strategy) | Reset/replay and setup switching tested; no strategy system. |
+| C — no duplicate/stuck/invalid resolution | PASS (covered paths) | Existing rules/replay/input-lock tests retained; reordered/unknown events and complete captures pass. |
+| C — 720p/1080p/keyboard | PASS (automated) | Actual captures at both sizes; synthetic input for 1/2/3, R, Space, M, F1, G and Esc; human keyboard play remains pending. |
+| C — automation vs human | PASS | 24 tests / 624 assertions, exit 0, separately recorded from HUMAN_PENDING; model inspection is not approval. |
+| D — SRD/rule sources | N/A (new SRD content) / PASS (scope) | No new rules or WotC content; original spike-only constants and G005 untouched. |
+| D — authorization | PASS | Only shared-anim/ and godot-spike/ changed after 9345b0e; no ui-prototype, original PNG, story, main, other-worktree, push, PR, merge, Actions or deployment work. |
+
+| Step | Commit |
+| --- | --- |
+| A1 — spec/schema | `140c612` |
+| A2 — original-reference frames | `ec55e17` |
+| A3 — sync/manifest/event player | `64d4f8e` |
+| A4 — world pause / live HUD | `7d14a5e` |
+| A5 — readability candidates | `9c3961b` (measurement corrected in A8) |
+| A6 — minimal HUD | `f066b11` |
+| A7 — GUT tests | `8ae855c` |
+| A8 — final verification/evidence | `5eea140` |
+| A9 — Phase A handoff | This commit |
+
+No shared PLAN/memory/DECISIONS edits were made under this brief's narrow write
+scope. The diff from `be9a398` includes the pre-existing brief commit in
+`docs/tasks/`; the Phase A implementation scope is checked against `9345b0e`.
+Normal commit hooks ran and reported only the nonblocking
+`missing_canonical_memory` advisory; no hook bypass. No independent agent review
+was launched. Review should decide whether the candidate swing/reactions and
+camera improve the feel, and how to resolve the empty-handed source/weapon gap.
+Those are review inputs, not model approval or authorization to continue.
+
+**Stop after this handoff commit. No push. Await Owner review. Task DONE is not
+SessionEnd; Phase B remains unstarted.**
