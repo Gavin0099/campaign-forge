@@ -3,7 +3,7 @@ import { AnimatedActor } from "../AnimatedActor";
 import type { Playback } from "../combatPlayback";
 import { command, DEFAULT_CONFIG, initialState, key, MAP, resolve,
   type Cell, type Command, type Result } from "./rules";
-import { center, diamond as sceneDiamond, Figure, Portrait, Terrain, Landmarks } from "./presentation";
+import { center, diamond as sceneDiamond, Figure, Portrait, Terrain, Landmarks, BlockedMarker } from "./presentation";
 import { buildFeedbackTimeline, confirmedContactBlocker, stateBeforeEvent, type FeedbackCue } from "./feedback";
 import "../l03.css";
 import "./playable.css";
@@ -322,6 +322,8 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
             </g>;
           })}
           </g>
+          {active && intents.filter(e => e.reason === "blocked").map(e => <BlockedMarker key={e.unit}
+            unit={e.unit} cell={visualUnits.find(u => u.id === e.unit)!.cell} label={names[e.unit]} />)}
           {blockFx && <g key={blockFx.serial} className="p1v-feedback-layer" aria-hidden="true">
             {blockFx.items.map(b => {
               const p = center(b.cell), ally = b.ally ? center(b.ally) : null;

@@ -192,3 +192,10 @@
 @keyframes p1v-clash { 0%,20% { opacity:1; } 100% { opacity:0; } }
 .p1v[data-p1v-motion=false] *, .p1v[data-p1v-motion=false] *::before, .p1v[data-p1v-motion=false] *::after { animation:none !important; }
 @media (prefers-reduced-motion:reduce) { .p1v * { animation:none !important; } }
+
+/* P1v6: a painted broken-chain state sign remains with skip/reduced motion. */
+.p1v-blocked-marker { pointer-events:none; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.p1v-chain-shadow { stroke:#17201b; stroke-width:9; }
+.p1v-chain-paint { stroke:#dca982; stroke-width:5; }
+.p1v-chain-highlight { stroke:#ffdfab; stroke-width:1.7; }
+.p1v-blocked-marker text { fill:#ffe0b3; font:700 12px "Microsoft JhengHei",sans-serif; paint-order:stroke; stroke:#17201b; stroke-width:4px; }

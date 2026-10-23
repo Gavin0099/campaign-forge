@@ -33,6 +33,19 @@ export function Portrait({ id }: { id: string }) {
   </svg>;
 }
 
+export function BlockedMarker({ unit, cell, label }: { unit: string; cell: Cell; label: string }) {
+  const p = center(cell);
+  // Uneven, layered strokes read like a weathered painted broken chain.
+  // Static state: deliberately independent of every motion preference.
+  return <g className="p1v-blocked-marker" data-p1v-blocked-marker={unit} data-cell={cell.x+","+cell.y}
+    transform={`translate(${p.x} ${p.y+12})`} role="img" aria-label={`${label}：通道受阻`}>
+    <path className="p1v-chain-shadow" d="M-2-3-7-5Q-16-9-20-3T-14 6L-6 8M3 4 8 7Q17 10 20 3T14-5L7-7" />
+    <path className="p1v-chain-paint" d="M-3-4-9-6Q-18-8-20-1T-13 6L-7 7M4 4 10 7Q18 8 20 1T13-6L8-7" />
+    <path className="p1v-chain-highlight" d="M-18-2Q-15-7-10-5M10 5Q16 7 18 2M-3-9-1-13M3 10 6 13" />
+    <text y="28" textAnchor="middle">受阻</text>
+  </g>;
+}
+
 function Prop({ crop, x, y, width, height, kind }: { crop: string; x: number; y: number; width: number; height: number; kind: string }) {
   return <svg x={x} y={y} width={width} height={height} viewBox={crop} preserveAspectRatio="xMidYMax meet" data-p1v-prop={kind}>
     <image href="/art/l03-p1v4/props.png" width="1536" height="1024" />
