@@ -1,0 +1,153 @@
+/* Ferry Dusk / 渡口暮色 — OPT-IN art-direction probe for the playable L03.
+   Source artwork is not modified. Default P1v7 appearance stays unchanged.
+   Activate with ?scene=playable-l03&palette=ferry-dusk, or dev checkbox. */
+.p1v[data-p1v-palette="ferry-dusk"] {
+  /* Semantic colors are shared between the battlefield and combat HUD. */
+  --cf-void: #101b1e;
+  --cf-surface: #1d2929;
+  --cf-panel: #293832;
+  --cf-metal: #3e504b;
+  --cf-water: #355259;
+  --cf-stone: #596b68;
+  --cf-wood: #816954;
+  --cf-bone: #eee4ce;
+  --cf-muted: #b9bdad;
+  --cf-brass: #c5a873;
+  --cf-ally: #9dbcb0;
+  --cf-enemy: #d28a73;
+  --cf-focus: #efcf8e;
+  --p-ink: var(--cf-bone);
+  --p-muted: var(--cf-muted);
+  --p-gold: var(--cf-brass);
+  --p-line: #74735f;
+  --p-ally: var(--cf-ally);
+  --p-enemy: var(--cf-enemy);
+  background: var(--cf-void);
+}
+
+/* World and panel framing: one cool-shadow family, brass used sparingly. */
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-header {
+  border-top-color: var(--cf-brass);
+  background: linear-gradient(112deg, var(--cf-panel), var(--cf-surface) 68%, var(--cf-void));
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-objective {
+  background: #152124;
+  border-bottom-color: #746c52;
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-board {
+  background: #172528;
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-board::before {
+  opacity: .34;
+  filter: blur(18px) saturate(.68) sepia(.10) brightness(.79);
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-board::after {
+  background: radial-gradient(ellipse at 47% 42%, #19262b00 24%, #0c171bd2 100%);
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-sidebar {
+  background: linear-gradient(125deg, var(--cf-panel), #172326 75%);
+  border-color: #74705c;
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-sidebar h2 {
+  color: #d9c39a;
+  border-bottom-color: #ac925450;
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-controls {
+  background: linear-gradient(#26342e, var(--cf-surface));
+  border-top-color: #7d7359;
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v button {
+  background: linear-gradient(#34443d, #222f2a);
+  border-color: #7c745e;
+  color: var(--cf-bone);
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v button:hover:not(:disabled) {
+  background: #45564a;
+  border-color: var(--cf-focus);
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v button.p1v-primary {
+  background: linear-gradient(#d8bf8b, #ad8e5b);
+  color: #172322;
+  border-color: #e2ca96;
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v button.p1v-primary:hover:not(:disabled) {
+  background: linear-gradient(#ecd5a4, #c4a873);
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-result > div {
+  background: radial-gradient(ellipse at top, #3b4940, #192729 76%);
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-result[data-p1v-result="failure"] > div {
+  background: radial-gradient(ellipse at top, #503c35, #202429 76%);
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-map-caption {
+  color: #d4c8af;
+}
+
+/* Source sprites remain original files. Only background is darkened;
+   characters remain brighter to preserve unit readability at 720p. */
+.p1v[data-p1v-palette="ferry-dusk"] [data-p1v-battlefield] {
+  filter: saturate(.73) sepia(.09) brightness(.89) contrast(1.10) hue-rotate(-5deg);
+}
+.p1v[data-p1v-palette="ferry-dusk"] [data-p1v-figure] image {
+  filter: saturate(.83) sepia(.055) brightness(1.05) contrast(1.07);
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-portrait image {
+  filter: saturate(.83) sepia(.055) brightness(1.04) contrast(1.06);
+}
+.p1v[data-p1v-palette="ferry-dusk"] [data-p1v-prop] image,
+.p1v[data-p1v-palette="ferry-dusk"] [data-p1v-winch-frame] image,
+.p1v[data-p1v-palette="ferry-dusk"] [data-p1v-rope-state] image {
+  filter: saturate(.76) sepia(.09) brightness(.96) contrast(1.08);
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-winch-alert image {
+  filter: saturate(.84) brightness(1.06) contrast(1.09) drop-shadow(0 0 2px #bf664c);
+}
+
+/* Gameplay signals do NOT inherit the desaturation used for painted assets. */
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-cell.legal {
+  fill: #9dbcb022;
+  stroke: var(--cf-ally);
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-cell.selected {
+  fill: #e5bc722e;
+  stroke: var(--cf-focus);
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-cell:hover,
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-cell:focus-visible {
+  fill: #e5bc723c;
+  stroke: #f8dda3;
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-intent-path,
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-intent-path.knight-1 {
+  stroke: var(--cf-enemy);
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-move-path polyline {
+  stroke: #f6dda5;
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-move-path circle {
+  fill: #f3d59a;
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-winch-warning,
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-winch-warning strong {
+  color: #ffb999;
+}
+
+/* A/B control appears only when existing 開發資訊 is enabled. */
+.p1v .p1v-palette-choice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 7px 9px;
+  border-left: 2px solid var(--p-gold);
+  background: #182622;
+  font-size: .75rem;
+}
+.p1v .p1v-palette-choice input {
+  accent-color: var(--p-gold);
+}
+.p1v[data-p1v-palette="ferry-dusk"] .p1v-palette-choice {
+  background: #24352e;
+}
+
+/* No animation/position/pointer changes; Reduced Motion works as before. */
