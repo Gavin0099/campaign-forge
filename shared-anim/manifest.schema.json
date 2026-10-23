@@ -50,6 +50,7 @@
           },
           "facing": {
             "enum": [
+              "left",
               "right"
             ]
           }

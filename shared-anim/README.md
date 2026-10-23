@@ -16,7 +16,8 @@ No per-frame auto-fit: a character's head-to-ground reference height is 360 px.
 Thoma's original 711px crop scales by 360/711; knight's 863px crop by 360/863.
 Body board scale is 48.88/360 world pixels per frame pixel before A5's experiment.
 The extra canvas accommodates the weapon arc; it does not enlarge the body.
-Facing is screen-right; the opposite direction mirrors around the fixed pivot,
+Thoma faces screen-right; knight artwork faces screen-left, as recorded per
+character. The opposite direction mirrors around the fixed pivot,
 including offsets and contact anchors. No vertical mirroring or facing-dependent
 rule changes. Feet use the pivot, never an opaque bounding-box center.
 
@@ -40,6 +41,8 @@ and a 30ms logical knockback. `reduced_duration_ms` controls key-pose time.
 Camera and displacement are presentation in reference 1280×720 pixels; camera
 focus is attacker/target midpoint, zoom and return times are in the manifest.
 Camera selection and larger-unit candidates are engine adapter options.
+Swing frame offsets encode a short diagonal closing step (maximum 32.8 reference
+pixels), matching the isometric neighbor projection without rotating the body.
 `scenarios` bind the existing setups to reaction sequences; no new combat rules.
 
 ## Provenance caveat

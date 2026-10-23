@@ -2,8 +2,11 @@ extends Node2D
 
 signal phase_changed(phase: String)
 signal attack_finished(elapsed: float)
+signal contact_released
 
 const Rules = preload("res://scripts/rules/grid_rules.gd")
+const Manifest = preload("res://scripts/anim/anim_manifest.gd")
+const FramePlayer = preload("res://scripts/anim/frame_player.gd")
 const BONE = Color("eee7d6")
 const BRASS = Color("d2b777")
 const TEAL = Color("98c9be")
@@ -40,6 +43,12 @@ var shake_phase := 0.0
 var last_elapsed := 0.0
 var last_events: Array = []
 var phase := "ready"
+var manifest: Dictionary = {}
+var players: Dictionary = {}
+var contact_triggers: Array = []
+var last_hold_ms := 0.0
+var contact_point := Vector2.ZERO
+var current_plan: Dictionary = {}
 
 func project(x: float, y: float) -> Vector2:
 	return MAP_OFFSET + Vector2(550 + 44 * (x - y), 70 + 26 * (x + y)) * MAP_SCALE
@@ -64,6 +73,11 @@ func sprite(parent: Node, texture: Texture2D, at: Vector2, size: Vector2) -> Spr
 	return node
 
 func _ready() -> void:
+	var loader := Manifest.new()
+	if not loader.read():
+		get_tree().quit(1)
+		return
+	manifest = loader.data
 	camera = Camera2D.new()
 	camera.position = Vector2(640, 360)
 	add_child(camera)
@@ -206,17 +220,22 @@ func select_setup(index: int) -> void:
 	for actor in actors.values():
 		actor.free()
 	actors.clear()
+	players.clear()
 	for unit in units:
 		var actor := Node2D.new()
 		actor.name = unit.id
 		actor.position = center(unit.cell)
 		add_child(actor)
 		var ally: bool = unit.side == "ally"
-		var region := Rect2(1558, 0, 520, 711) if ally else Rect2(15, 8, 745, 863)
-		var height := 52.0 * MAP_SCALE
-		var width := height * region.size.x / region.size.y
-		var body := sprite(actor, atlas("res://art/l03-party-v1.png" if ally else "res://art/l03-enemies-v1.png", region), Vector2(-width/2, -height), Vector2(width, height))
+		var body := Sprite2D.new()
+		actor.add_child(body)
 		body.name = "Body"
+		var player := FramePlayer.new()
+		actor.add_child(player)
+		var character: String = "thoma" if ally else ("knight-a" if unit.id == "knight-1" else "knight-b")
+		player.facing_right = index == 2 if ally else index != 2
+		player.configure(manifest, character, body)
+		players[unit.id] = player
 		var flash_material := ShaderMaterial.new()
 		flash_material.shader = preload("res://shaders/hit_flash.gdshader")
 		flash_material.set_shader_parameter("flash", 0.0)
@@ -237,81 +256,115 @@ func select_setup(index: int) -> void:
 	for i in range(3):
 		setup_buttons[i].modulate = BONE if i == index else Color("a4a99b")
 
-func play_attack() -> void:
-	if busy:
-		return
-	# Every replay starts from clean spike state. The pure result is resolved once.
+func event_plan(events: Array) -> Dictionary:
+	# Group by causal role, retaining order within each group; unknown events are
+	# ignored. Transport ordering never supplies magic [0]/[1]/[2] positions.
+	var plan := {"attacks": [], "damage": [], "movement": [], "unknown": []}
+	for event in events:
+		match event.get("type", ""):
+			"attack": plan.attacks.append(event)
+			"damage": plan.damage.append(event)
+			"knockback", "knockback_blocked": plan.movement.append(event)
+			_: plan.unknown.append(event)
+	return plan
+
+func play_attack(event_override: Array = []) -> void:
+	if busy: return
 	select_setup(setup_index)
 	var result: Dictionary = Rules.attack(units, "thoma", "knight-1")
 	if not result.ok:
 		status_label.text = result.reason
 		return
+	last_events = result.events if event_override.is_empty() else event_override
+	current_plan = event_plan(last_events)
+	if current_plan.attacks.is_empty(): return
 	set_busy(true)
-	last_events = result.events
+	contact_triggers.clear()
 	var started := Time.get_ticks_usec()
-	var attacker: Node2D = actors[result.events[0].unit]
-	var target: Node2D = actors[result.events[0].target]
-	var start := attacker.position
-	var target_start := target.position
-	var direction := (target_start - start).normalized()
-	var target_material: ShaderMaterial = target.get_node("Body").material
-	set_phase("windup", "Thoma braces for the strike")
-	var windup := create_tween().set_parallel(true)
-	windup.tween_property(attacker, "position", start - direction * (0 if reduced_motion else 9), 0.18).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
-	windup.tween_property(attacker, "rotation", 0.0 if reduced_motion else -direction.x * 0.12, 0.18)
-	await windup.finished
-	set_phase("lunge", "Closing the distance")
-	var lunge := create_tween().set_parallel(true)
-	lunge.tween_property(attacker, "position", start + direction * (0 if reduced_motion else 25), 0.085).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN)
-	lunge.tween_property(attacker, "rotation", 0.0 if reduced_motion else direction.x * 0.18, 0.085)
-	await lunge.finished
-	# Damage is presented at contact, before the knockback event is played.
-	var damage: Dictionary = result.events[1]
-	hp_label.text = "KNIGHT I   %d / 6 HP" % damage.hp_after
-	target_material.set_shader_parameter("flash", 0.0 if reduced_motion else 1.0)
-	sound.play()
-	var contact := target_start + Vector2(0, -25)
-	if not reduced_motion:
-		emit_particles(contact, false)
-	set_phase("contact", "CONTACT   /   −%d HP" % damage.amount)
-	# Local hitstop: no actor tween is active during this real-time 80 ms hold.
-	# Engine.time_scale stays 1; HUD, audio and particles remain responsive.
-	await get_tree().create_timer(0.08, true, false, true).timeout
-	if not reduced_motion:
-		shake(3.4)
-		create_tween().tween_method(func(value: float): target_material.set_shader_parameter("flash", value), 1.0, 0.0, 0.035)
-	show_damage(contact, damage.amount)
-	var displacement: Dictionary = result.events[2]
-	var reaction := create_tween()
-	if displacement.type == "knockback":
-		set_phase("knockback", "The knight gives ground   /   1 tile")
-		reaction.tween_property(target, "position", center(displacement.to), 0.03 if reduced_motion else 0.22).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
-	else:
-		set_phase("blocked", "BLOCKED   /   %s holds the line" % ("Knight II" if displacement.blocker == "unit" else "Broken crossing"))
-		# Six pixels is < 1/4 tile step: feet never reach the blocker boundary.
-		reaction.tween_property(target, "position", target_start + direction * (0 if reduced_motion else 6), 0.015 if reduced_motion else 0.06).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-		await reaction.finished
-		if not reduced_motion:
-			shake(5.0)
-			emit_particles(target_start + direction * 12, true)
-		set_phase("blocked_recoil", "BLOCKED   /   Recoil, no displacement")
-		reaction = create_tween()
-		reaction.tween_property(target, "position", target_start, 0.015 if reduced_motion else 0.16).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-	await reaction.finished
-	set_phase("settled", "−2 HP   /   " + ("Knocked back one tile" if displacement.type == "knockback" else "Knockback blocked"))
-	var recovery := create_tween().set_parallel(true)
-	recovery.tween_property(attacker, "position", start, 0.18).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-	recovery.tween_property(attacker, "rotation", 0.0, 0.18)
-	await recovery.finished
-	await get_tree().create_timer(0.22).timeout
+	for attack in current_plan.attacks:
+		var attacker_player = players[attack.unit]
+		var listener := on_swing_frame.bind(attack)
+		attacker_player.frame_entered.connect(listener)
+		attacker_player.animation_event.connect(on_animation_event)
+		set_phase("windup", "Anticipation")
+		attacker_player.play("thoma.swing", reduced_motion)
+		await contact_released
+		for event in current_plan.movement:
+			await play_movement(event, attack)
+		# Both the weapon recovery and reaction must finish before input returns.
+		while attacker_player.playing or players[attack.target].playing:
+			await get_tree().process_frame
+		attacker_player.frame_entered.disconnect(listener)
+		attacker_player.animation_event.disconnect(on_animation_event)
+	set_phase("settled", "Settled")
+	await get_tree().create_timer(manifest.impact.settle_ms / 1000.0, false).timeout
+	for player in players.values(): player.show_idle()
 	units = result.units
-	target_material.set_shader_parameter("flash", 0.0)
+	for actor in actors.values(): actor.get_node("Body").material.set_shader_parameter("flash", 0.0)
 	camera.offset = Vector2.ZERO
 	last_elapsed = (Time.get_ticks_usec() - started) / 1000000.0
 	set_busy(false)
-	set_phase("ready", "%s   /   %.3f s   /   Space to replay" % [SETUP_NAMES[setup_index], last_elapsed])
+	set_phase("ready", "%s / %.3f s" % [SETUP_NAMES[setup_index], last_elapsed])
 	print("SEQUENCE setup=%d reduced=%s elapsed_wall_s=%.4f limit=1.700 hp=%d cell=%s" % [setup_index+1, reduced_motion, last_elapsed, units[1].hp, units[1].cell])
 	attack_finished.emit(last_elapsed)
+
+func on_animation_event(event: Dictionary, at: Vector2) -> void:
+	contact_point = at
+	match event.type:
+		"sfx":
+			sound.play()
+			contact_triggers.append({"type": "sfx", "frame": Engine.get_process_frames()})
+		"spark":
+			if not reduced_motion: emit_particles(at, false)
+			contact_triggers.append({"type": "spark", "frame": Engine.get_process_frames(), "suppressed": reduced_motion})
+		"dust":
+			if not reduced_motion: emit_particles(at, true)
+
+func on_swing_frame(index: int, attack: Dictionary) -> void:
+	if index == 1 or (reduced_motion and index == 3): set_phase("lunge", "Swing")
+	if index != int(manifest.sequences["thoma.swing"].contact_frame_index): return
+	var target: Node2D = actors[attack.target]
+	var material: ShaderMaterial = target.get_node("Body").material
+	material.set_shader_parameter("flash", 0.0 if reduced_motion else 1.0)
+	contact_triggers.append({"type": "flash", "frame": Engine.get_process_frames(), "suppressed": reduced_motion})
+	for damage in current_plan.damage:
+		hp_label.text = "KNIGHT I   %d / 6 HP" % damage.hp_after
+		show_damage(contact_point, damage.amount)
+	var scenario: Dictionary = manifest.scenarios[["open", "unit-blocked", "terrain-blocked"][setup_index]]
+	players[attack.target].play(players[attack.target].character + "." + scenario.reaction, reduced_motion)
+	if not reduced_motion: shake(manifest.impact.shake.strength_px)
+	set_phase("contact", "Contact")
+	await hold_contact()
+	if not reduced_motion:
+		var fade := target.create_tween()
+		fade.tween_method(func(value: float): material.set_shader_parameter("flash", value), 1.0, 0.0, manifest.impact.flash_ms / 1000.0)
+	contact_released.emit()
+
+func hold_contact() -> void:
+	var began := Time.get_ticks_usec()
+	for player in players.values(): player.held = true
+	await get_tree().create_timer(manifest.impact.hitstop_ms / 1000.0, true, false, true).timeout
+	for player in players.values(): player.held = false
+	last_hold_ms = (Time.get_ticks_usec() - began) / 1000.0
+
+func play_movement(event: Dictionary, attack: Dictionary) -> void:
+	var target: Node2D = actors[event.unit]
+	var origin := target.position
+	var direction: Vector2 = (origin - actors[attack.unit].position).normalized()
+	var reaction := target.create_tween()
+	if event.type == "knockback":
+		set_phase("knockback", "Giving ground")
+		var duration: float = manifest.impact.reduced_knockback_ms if reduced_motion else manifest.impact.knockback_ms
+		reaction.tween_property(target, "position", center(event.to), duration / 1000.0).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	else:
+		set_phase("blocked", "Blocked")
+		reaction.tween_property(target, "position", origin + direction * (0 if reduced_motion else manifest.impact.blocked_shove_px), manifest.impact.blocked_shove_ms / 1000.0).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		await reaction.finished
+		set_phase("blocked_recoil", "Stagger")
+		if not reduced_motion: emit_particles(origin + direction * 12, true)
+		reaction = target.create_tween()
+		reaction.tween_property(target, "position", origin, manifest.impact.blocked_recoil_ms / 1000.0).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	await reaction.finished
 
 func set_busy(value: bool) -> void:
 	busy = value
