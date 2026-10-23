@@ -39,5 +39,31 @@
         "reason": "Geometry-guide regeneration; single continuous painting, no repeated tile textures."
       }
     ]
+  },
+  "p1v6": {
+    "date": "2026-10-23",
+    "mode": "built-in image_gen",
+    "status": "Original presentation proposals; Owner art approval pending",
+    "attempts": [
+      {
+        "file": "l03-p1v6/winch-frames.png",
+        "prompt": "Create one original production sprite sheet of a hand-painted medieval ferry winch, FOUR animation frames in FOUR equal-width columns, common baseline and IDENTICAL camera, scale, position and silhouette of the timber frame and stone footing. Transparent alpha background. Ideally 2048x512; each frame centered within its square slot with generous padding. Reference images are style/prop references only: match the LEFT winch in props.png and the brushwork/palette of battlefield.png. Keep that same worn timber A-frame, rope-wrapped horizontal drum, dark oxidized iron banded spoked wheel on the left, stone footing, isometric view above with ground axes +/-31 degrees. Simplify readable brush planes for 64px-high game rendering, restrained dark fantasy gouache/oil brushwork, matte earthy desaturated olive/ochre/brown, soft warm upper-left light. Frame 1 REST: wheel spoke angled 0 degrees, rope drum at rest. Frame 2 TURN A: wheel spokes rotate 35 degrees around the same axle, drum rope winds, all foundation and supports perfectly fixed. Frame 3 TURN B: wheel spokes rotate 75 degrees around the SAME axle, drum rope wound tighter, supports perfectly fixed. Frame 4 JERK/WARNING: wheel turns to 95 degrees, same position, a restrained hand-painted red ember glimmer only along the rope drum and axle metal, localized copper-red brush accents, no circular halo or UI. Do NOT add a rope trailing beyond the winch: a separate rope strip will be composited. Exactly four separate full winches, one per slot, no overlaps, no text, no numbers, no labels, no borders, no scenery, no floor outside small stone footing, no cast shadow outside object. Genuine transparent empty pixels. No glossy 3D, no vector geometry or SVG look, no commercial game material, no existing IP.",
+        "reference": [
+          "ui-prototype/public/art/l03-p1v4/props.png",
+          "ui-prototype/public/art/l03-p1v4/battlefield.png"
+        ],
+        "status": "USED",
+        "reason": "Four transparent painted animation frames; fourth frame carries painted ember warning."
+      },
+      {
+        "file": "l03-p1v6/rope-states.png",
+        "prompt": "Create ONE original hand-painted rope animation atlas on a truly transparent alpha background, two wide horizontal rows with generous empty space and no overlap. Match the frayed ochre hemp rope, mature dark fantasy gouache/oil brushwork, muted earthy low saturation palette and warm upper-left light in the attached winch prop reference. Each row is the SAME thick braided hemp rope segment, endpoints LEFT near x100,y100 and RIGHT near x1400,y750 in its own equal 1536x900 row (approximately 28 degrees descending to the right). Prefer 1536x1800 image, two equal rows. TOP ROW SLACK: a gentle downward hanging catenary curve between endpoints. BOTTOM ROW TAUT: a straight pulled diagonal segment with short frayed fibres and brighter upper-left facing braid ridges. Both exactly matching endpoints relative to their row, identical thickness, roughly 26px at full size so it reads as a 2-3px rope when composited small. No winch, no wheel, no hardware, no scenery, no floor or shadows outside rope, no text/labels, no vector line appearance, no commercial game materials or existing IP. A painted texture object with natural irregular edges, not a flat geometric stroke. Every empty pixel genuinely transparent.",
+        "reference": [
+          "ui-prototype/public/art/l03-p1v4/props.png"
+        ],
+        "status": "USED",
+        "reason": "Two transparent painted rope states, independently framed to common game endpoints."
+      }
+    ]
   }
 }

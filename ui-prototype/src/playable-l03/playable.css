@@ -155,17 +155,26 @@
 .p1v-gauge > .p1v-winch-pop { position:absolute; top:100%; right:0; white-space:nowrap; pointer-events:none; padding:4px 9px; border:1px solid #d99c7c; background:#301f19; color:#ffe2bb; font:700 .875rem "Microsoft JhengHei",sans-serif; animation:p1v-number-pop .7s ease-out both; }
 .p1v-pip-flash { animation:p1v-pip-flash .7s ease-out; }
 .p1v-winch-jerk { transform-origin:0 0; animation:p1v-winch-jerk .5s ease-out; }
-.p1v-winch-wheel { fill:#493a27; stroke:#e0c18a; stroke-width:1.6; transform-box:fill-box; transform-origin:center; animation:p1v-wheel .5s ease-out; }
-.p1v-winch-rope { fill:none; stroke:#c0a16c; stroke-width:2; filter:drop-shadow(0 1px 1px #101510); }
-.p1v-winch-rope.taut { stroke:#f1d5a0; animation:p1v-rope .5s ease-out; }
-.p1v-winch-alert { fill:#ab433322; stroke:#e58c72; stroke-width:2; animation:p1v-warning 1.2s ease-in-out infinite; }
+.p1v-winch-rope { filter:drop-shadow(0 1px 1px #101510); }
+.p1v-winch-rope.taut { animation:p1v-rope .5s ease-out; }
+.p1v-winch-frame { opacity:0; }
+[data-p1v-winch-painted][data-warning=false] .frame-0,
+[data-p1v-winch-painted][data-warning=true] .frame-3 { opacity:1; }
+.p1v-winch-alert { filter:drop-shadow(0 0 2px #c85d35); }
+.p1v-winch-jerk .p1v-winch-frame { animation-duration:.56s; animation-timing-function:steps(1,end); animation-fill-mode:both; }
+.p1v-winch-jerk .frame-0 { animation-name:p1v-winch-frame-0; }
+.p1v-winch-jerk .frame-1 { animation-name:p1v-winch-frame-1; }
+.p1v-winch-jerk .frame-2 { animation-name:p1v-winch-frame-2; }
+.p1v-winch-jerk .frame-3 { animation-name:p1v-winch-frame-3; }
+@keyframes p1v-winch-frame-0 { 0% { opacity:1; } 20%,100% { opacity:0; } }
+@keyframes p1v-winch-frame-1 { 0% { opacity:0; } 20% { opacity:1; } 45%,100% { opacity:0; } }
+@keyframes p1v-winch-frame-2 { 0% { opacity:0; } 45% { opacity:1; } 70%,100% { opacity:0; } }
+@keyframes p1v-winch-frame-3 { 0% { opacity:0; } 70%,100% { opacity:1; } }
 .p1v-result[data-p1v-result=failure] { animation:p1v-defeat .45s ease-out; }
 @keyframes p1v-winch-jerk { 15% { transform:rotate(-6deg) translateX(-2px); } 35% { transform:rotate(4deg); } 65% { transform:rotate(-2deg); } 100% { transform:none; } }
-@keyframes p1v-wheel { from { rotate:0deg; } to { rotate:100deg; } }
 @keyframes p1v-rope { 15%,45% { transform:translateY(-2px); } 30%,60% { transform:translateY(1px); } 100% { transform:none; } }
 @keyframes p1v-pip-flash { 20% { background:#fff2c9; box-shadow:0 0 12px #ffe4a5; } }
 @keyframes p1v-number-pop { 0% { opacity:0; transform:translateY(6px); } 20%,70% { opacity:1; } 100% { opacity:0; transform:translateY(-8px); } }
-@keyframes p1v-warning { 50% { stroke:#ffb298; fill:#ab433355; } }
 @keyframes p1v-defeat { from { opacity:0; backdrop-filter:blur(0); } to { opacity:1; backdrop-filter:blur(3px); } }
 .p1v-feedback-layer { pointer-events:none; }
 .p1v-hover-glow,.p1v-confirm-pulse { pointer-events:none; fill:#f3d59816; stroke:#f3d598; stroke-width:2; }

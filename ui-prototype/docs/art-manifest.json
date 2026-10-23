@@ -58,5 +58,23 @@
     "color_type": 6,
     "source": "built-in image_gen, 2026-10-22",
     "status": "original generated visual proposal; not owner-approved final game art"
+  },
+  "l03-p1v6/rope-states.png": {
+    "sha256": "698c5677290091807e2ce28d658bfc7127a213789383e2a163c45d65b73e929d",
+    "bytes": 534842,
+    "width": 1159,
+    "height": 1358,
+    "color_type": 6,
+    "source": "built-in image_gen, 2026-10-23",
+    "status": "original generated visual proposal; not owner-approved final game art"
+  },
+  "l03-p1v6/winch-frames.png": {
+    "sha256": "d7c8a208aa9f3e73865f5633c4a336446c79e1ebaa956e82f031751b1b015c25",
+    "bytes": 1604943,
+    "width": 2172,
+    "height": 724,
+    "color_type": 6,
+    "source": "built-in image_gen, 2026-10-23",
+    "status": "original generated visual proposal; not owner-approved final game art"
   }
 }

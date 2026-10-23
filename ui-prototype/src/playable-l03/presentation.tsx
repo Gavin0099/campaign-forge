@@ -78,12 +78,22 @@ export function Landmarks({ dev, winchSerial, warning = false }: { dev: boolean;
     <text x={center({x:5,y:4}).x} y={center({x:5,y:4}).y+18} textAnchor="middle">斷橋</text>
     <g transform={`translate(${winch.x} ${winch.y})`}>
       <ellipse rx="24" ry="8" cy="4" fill="#0b1411" opacity=".45" />
-      <g key={winchSerial || "rest"} className={winchSerial ? "p1v-winch-jerk" : undefined}>
-        <Prop kind="winch" crop="0 280 536 540" x={-32} y={-49} width={64} height={58} />
-        {winchSerial && <g className="p1v-winch-wheel" transform="translate(0 -22)"><circle r="9" /><path d="M-9 0H9M0-9V9M-6-6 6 6M-6 6 6-6" /></g>}
+      <g key={winchSerial || "rest"} className={winchSerial ? "p1v-winch-jerk" : undefined}
+        data-p1v-prop="winch" data-p1v-winch-painted data-warning={warning}>
+        {/* Non-destructive crops normalize the generated frame padding/footing. */}
+        {["48 104 526 540", "605 104 512 540", "1155 104 505 540", "1698 104 474 540"].map((crop,i) =>
+          <svg key={i} x="-32" y="-49" width="64" height="58" viewBox={crop} preserveAspectRatio="none"
+            className={`p1v-winch-frame frame-${i} ${warning && i === 3 ? "p1v-winch-alert" : ""}`}
+            data-p1v-winch-frame={i}>
+            <image href="/art/l03-p1v6/winch-frames.png" width="2172" height="724" />
+          </svg>)}
       </g>
-      <path key={`rope-${winchSerial || 0}`} className={`p1v-winch-rope ${winchSerial ? "taut" : ""}`} d={winchSerial ? "M8-18 65 12" : "M8-18Q34 6 65 12"} />
-      {warning && <ellipse className="p1v-winch-alert" rx="29" ry="11" cy="4" />}
+      <g key={`rope-${winchSerial || 0}`} className={`p1v-winch-rope ${winchSerial ? "taut" : ""}`}>
+        <svg x="8" y="-18" width="58" height="34" viewBox={winchSerial ? "40 780 1080 560" : "40 90 1080 530"}
+          preserveAspectRatio="none" data-p1v-rope-state={winchSerial ? "taut" : "slack"}>
+          <image href="/art/l03-p1v6/rope-states.png" width="1159" height="1358" />
+        </svg>
+      </g>
       <text y="-56" textAnchor="middle" data-p1v-landmark="winch">絞盤{dev ? " (2,1)" : ""}</text>
       <path className="p1v-objective-pin" d="M-4-70L0-74 4-70 0-66Z" fill="#e5cd91" />
     </g>
