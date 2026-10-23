@@ -4,6 +4,7 @@ import type { Playback } from "../combatPlayback";
 import { command, DEFAULT_CONFIG, initialState, key, MAP, resolve,
   type Cell, type Command, type Result } from "./rules";
 import { center, diamond as sceneDiamond, Figure, Portrait, Terrain, Landmarks } from "./presentation";
+import { buildFeedbackTimeline, type FeedbackCue } from "./feedback";
 import "../l03.css";
 import "./playable.css";
 
@@ -57,26 +58,6 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     stateRef.current = result.state;
     setState(result.state); setVisualUnits(result.state.units); setFrame(null);
     busyRef.current = false; setBusy(false);
-    const interference = result.events.find(e => e.type === "progress" && e.delta > 0);
-    if (interference?.type === "progress" && !skipRef.current && !reducedRef.current)
-      setWinchFeedback({ total: interference.total, delta: interference.delta, serial: ++feedbackSerial.current });
-    if (!skipRef.current && !reducedRef.current) {
-      // A blocked intent is the existing rule event. Only a genuinely adjacent
-      // ally earns a clash spark; no invented hit, damage, or displaced cell.
-      const items = result.events.flatMap(e => {
-        if (e.type !== "intent" || e.reason !== "blocked") return [];
-        const unit = result.state.units.find(u => u.id === e.unit)!;
-        const ally = result.state.units.find(u => u.alive && u.side === "ally" &&
-          Math.abs(u.cell.x-unit.cell.x)+Math.abs(u.cell.y-unit.cell.y) === 1);
-        const from = center(unit.cell), toward = center(ally?.cell || MAP.winch);
-        const length = Math.hypot(from.x-toward.x, from.y-toward.y) || 1;
-        return [{ unit: e.unit, cell: unit.cell, ally: ally?.cell,
-          dx: (from.x-toward.x)/length*7, dy: (from.y-toward.y)/length*7 }];
-      });
-      if (items.length) setBlocks({ items, serial: ++feedbackSerial.current });
-    }
-    const lastMove = [...result.events].reverse().find(e => e.type === "move");
-    if (lastMove && !skipRef.current && !reducedRef.current) setArrival({ unit: lastMove.unit, serial: ++feedbackSerial.current });
     if (resolving.current) {
       setPhase("ally");
       setBanner(result.state.status === "playing" ? { phase: "ally", serial: ++feedbackSerial.current } : null);
@@ -155,9 +136,31 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
       setBanner({ phase: "enemy", serial: ++feedbackSerial.current });
     } else setBanner(null);
     setMessage(input.type === "resolve" ? "敵方行動中…" : "移動中…");
+    const timeline = buildFeedbackTimeline(result.events, 230);
+    let nextCue = 0;
+    const playCue = (cue: FeedbackCue) => {
+      if (skipRef.current || reducedRef.current) return;
+      if (cue.kind === "winch") setWinchFeedback({ total: cue.total, delta: cue.delta, serial: ++feedbackSerial.current });
+      if (cue.kind === "landing") setArrival({ unit: cue.unit, serial: ++feedbackSerial.current });
+      if (cue.kind === "block") {
+        const unit = result.state.units.find(u => u.id === cue.unit)!;
+        const ally = result.state.units.find(u => u.alive && u.side === "ally" &&
+          Math.abs(u.cell.x-unit.cell.x)+Math.abs(u.cell.y-unit.cell.y) === 1);
+        const from = center(unit.cell), toward = center(ally?.cell || MAP.winch);
+        const length = Math.hypot(from.x-toward.x, from.y-toward.y) || 1;
+        const item = { unit: cue.unit, cell: unit.cell, ally: ally?.cell,
+          dx: (from.x-toward.x)/length*7, dy: (from.y-toward.y)/length*7 };
+        setBlocks(previous => ({ items: [...(previous?.items || []), item], serial: ++feedbackSerial.current }));
+      }
+    };
+    const playThrough = (atMs: number) => {
+      while (nextCue < timeline.length && timeline[nextCue].atMs <= atMs) playCue(timeline[nextCue++]);
+    };
     const steps = result.events.flatMap(e => e.type === "move" ? e.path.slice(1).map((to, i) =>
       ({ unit: e.unit, from: e.path[i], to })) : []);
-    if (skipRef.current || reducedRef.current || !steps.length) { finish(); return; }
+    if (skipRef.current || reducedRef.current) { finish(); return; }
+    playThrough(0);
+    if (!steps.length) { finish(); return; }
     let index = 0, began = performance.now(), units = stateRef.current.units;
     const tick = (now: number) => {
       if (!pending.current) return;
@@ -166,6 +169,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
       if (progress >= 1) {
         units = units.map(u => u.id === step.unit ? { ...u, cell: step.to } : u);
         setVisualUnits(units);
+        playThrough((index + 1) * 230);
         if (++index >= steps.length) { finish(); return; }
         began = now;
       }
