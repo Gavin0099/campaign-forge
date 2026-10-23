@@ -1,7 +1,7 @@
 # GPT web review — godot spike-02 A2 (4b9cea4..98c735e)
 
 > Source: ChatGPT campaign-forge project, chat "Godot 修正段審查" (https://chatgpt.com/g/g-p-6ad7456d80a081919d343a5268d535c2-campaign-forge/c/6adb60f8-4c2c-83ee-964d-f6a75fabf747), Extra High thinking, 9 screenshots attached, sent once on 2026-10-23.
-> **Status: INCOMPLETE — follow-up retry gave W1–W6 (W1 PARTIAL, W2 FIXED, W3 PARTIAL, W4–W6 FIXED), no P0, P1-01..P1-03 (cut off mid P1-03); no overall verdict, no Phase B recommendation.** (Original reply: ChatGPT stopped after "Worked for 4m 41s" with only the preamble; text extracted from the page, not via Copy button.)
+> **Status: COMPLETE (via new summary chat) — overall verdict CONDITIONAL ACCEPT; no P0, no P2; Phase B NOT recommended yet: first finish 5 placeholder swing frames + Owner approval of mace (P1-01), wire React to shared assets/timing (P1-03), verify knight B at 720p/no labels/grayscale, and make human hit-feel playtest (P1-02/P1-04) a Phase B gate.** (Original reply: ChatGPT stopped after "Worked for 4m 41s" with only the preamble; text extracted from the page, not via Copy button.)
 
 ---
 
@@ -153,3 +153,31 @@ Phase B 前置
 Godot 已有共用 manifest、固定 pivot、接觸事件及 Reduced Motion 設定；但 handoff 明確指出 React 端的共用素材同步仍留待 Phase B。
 
 處理方式： 先定義兩個引擎必須共用的素材雜
+
+## Follow-up 2 (2026-10-23 21:55 Taipei): asked GPT to continue from P1-03. Reply again cut off mid-sentence. INCOMPLETE: no P2, no overall verdict, no Phase B recommendation.
+
+處理方式（續）： 保留目前骨冠＋淺盾的騎士 B 設計，但不能把「重疊 0 px」當作辨識度已通過。應在 720p 原生尺寸、無名稱標籤、灰階及三種交戰配置下確認玩家能否快速區分兩名騎士；若仍不明顯，優先增加頭盔、盾牌或盔甲剪影差異，而不是繼續放大角色。現有資料足以支持技術改善，尚不足以判定美術驗收完成。
+
+其餘 P1
+
+- P1-04｜真人打擊感驗收未完成。 HUMAN_PENDING 仍是正式
+
+## Final verdict (2026-10-23 23:40 Taipei): new chat "Phase B 進入條件" in the campaign-forge project (https://chatgpt.com/g/g-p-6ad7456d80a081919d343a5268d535c2-campaign-forge/c/6adb7fec-710c-83ee-b226-0fe996f6069d), thinking High, given a summary of the findings above and asked only for P2, verdict and Phase B. Complete reply:
+
+1. P2 清單：無。 目前已知未解項目均列為 P1，不應降級為 P2。
+
+2. 整體 Verdict：CONDITIONAL ACCEPT。 Godot 整合、測試與驗證證據已達標，但揮擊素材、武器核准及真人打擊感驗收尚未完成。
+
+3. Phase B：目前不建議進入。
+
+進入前必須完成：
+
+P1-01： 完成五個 placeholder 揮擊幀的正式美術，確認服裝一致性，並由 Owner 核准短釘頭錘。
+
+P1-03： React 端接入共用素材與時序，建立可重現的跨引擎比較契約，確保兩端使用相同素材、動畫時序及測試條件。
+
+騎士辨識： 在 720p、無名稱、灰階條件下確認騎士 B 可快速辨識；若不行，優先修改剪影，不再單純放大。
+
+真人打擊感驗收（P1-02、P1-04）仍須完成，建議列為 Phase B 的必要驗收關卡。
+
+建議順序：先完成素材與 Owner 核准，再接通 React 比較契約，最後進入 Phase B。 不要以測試全過取代美術與實際遊玩驗收。
