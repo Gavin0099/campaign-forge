@@ -1398,3 +1398,173 @@ The final handoff commit/push and exact total elapsed time are reported in the
 final response; this handoff does not pretend to know its own future SHA.
 Recorded implementation-delivery window: 2026-10-23 00:57:41–01:19:16
 Asia/Taipei, **21m35s**. This is actual elapsed time, not the 60-minute budget.
+
+## P1v6 feedback and winch
+
+| Field | Value |
+| --- | --- |
+| Branch / worktree | `codex/playable-l03-research` / `D:\campaign-forge` |
+| Owner-named base | `fc266cb`; continuing this branch as explicitly instructed |
+| Verified implementation head | `1e6cb4d` before this handoff commit; **pushed: NO** |
+| Owner instruction | Execute P1v6 in priority order, commit each step, verify, then commit handoff and stop; no push |
+| Time window | Owner start confirmation 2026-10-23 13:49; handoff preparation 14:31 Asia/Taipei, about 42 minutes elapsed within the 90-minute budget |
+
+### 1. What changed
+
+Each numbered priority has its own commit:
+
+| Step | Commit | Result |
+| --- | --- | --- |
+| 1 | `5d282ca` | Pure event feedback timeline; cues follow the existing movement clock instead of all firing in `finish()` |
+| 2 | `261d14c` | Pure counterfactual query confirms a unique adjacent contact blocker; incidental allies earn no spark |
+| 3 | `dfb82d0` | Independent dust cell/serial/expiry for every movement event |
+| 4 | `b8b6ef4` | Painted-style broken-chain marker and redundant 受阻 label at enemy feet, including skip/reduced mode |
+| 5 | `1550c8a` | Generated painted four-frame winch and slack/taut rope replace the geometric wheel/path; painted ember warning retained |
+
+`eefce15` fixes a warning-filter atlas leak found by actual visual inspection.
+`6d87c20` records the broad tests/build but was mistakenly committed after a
+stricter screenshot verifier failed. **Its final verification evidence is
+superseded by `1e6cb4d`**, which binds actual compositor PNG timestamps to live
+animation intervals. No history was rewritten and no failing evidence hidden.
+
+Implementation is in `ui-prototype/src/playable-l03/{feedback.ts,PlayableL03.tsx,
+presentation.tsx,playable.css}`. Rules still resolve once, and `finish()` commits
+the result once without an extra effect lock. `rules.ts`, rule outcomes,
+dependencies, story text and protected planning documents are unchanged.
+
+Shared files edited: `ui-prototype/PLAN.md`, `memory/01_active_task.md`.
+Also updated `memory/03_knowledge_base.md` with the observed root causes and
+refreshed the existing exported governance replay receipt. The shared-file
+commit has trailers. Own PLAN/active-task locks were taken before editing;
+only those own locks are released after the last local shared-file commit.
+Latest Owner **commit-only** instruction overrides the earlier push-before-
+release procedure. No other worktree was read or changed.
+
+### 2. How to verify
+
+Full commands, real exits, logs and limitations are in
+`ui-prototype/docs/playable-l03-p1v6/VERIFICATION.md` and `command-results.json`.
+
+| Verification | Exit / observed result |
+| --- | --- |
+| Original P0 / P0b / P0c pure suites | 0 / 0 / 0; 8 + 9 + 9 original checks |
+| New `playable-l03-p1v6-feedback.mjs` | 0; 2 assertion groups for ordered timeline and real/incidental contact |
+| Original P1v through P1v5 browser suites, P1v6 evidence routing flags | All 0; 26 + 9 + 9 + 9 + 14 original checks; behavior assertions retained |
+| New `playable-l03-p1v6-browser.mjs` | 0; 12 checks, including uninterrupted two-mover trace, painted motion, marker, skip/reduce and cancellation |
+| `npm run build --prefix ui-prototype` | 0; TypeScript + Vite, 51 modules |
+| `python scripts/validate_ui_scope.py` | 0; 13 protected planning files |
+| `python scripts/record_governance_checks.py` | 0; 13 isolated lifecycle replay tests; scope/typecheck/build all 0 |
+| `node ui-prototype/tests/verify-p1v6-evidence.mjs` | 0; 79 browser checks, 50 actual capture hashes, 66 source bindings, 2 original art hashes |
+| Protected-path diff against `fc266cb`; `git diff --check` | Both 0 |
+
+**107 game checks** = 26 existing pure checks + 2 new pure assertion groups +
+79 browser checks. Governance's 13 tests are counted separately. No native
+platform callback is claimed by that isolated replay. No governance program,
+global trust setting or lifecycle wiring was changed.
+
+Execution screenshots are under `ui-prototype/docs/playable-l03-p1v6/`:
+`1280x720-winch-turn-00.png` through `-03.png`, `1280x720-warning-2-of-3.png`,
+`1280x720-confirmed-block-spark.png`, `1280x720-landing-1-knight-1.png`,
+`1280x720-landing-2-knight-2.png`, and `1280x720-blocked-marker-preview.png`.
+These are unmodified running-browser PNGs. The winch sequence uses continuous
+Chrome compositor output at production speed, with timestamps inside each
+measured CSS frame interval. Existing regression directories also contain
+1920×1080, 720p, text zoom, keyboard and outcome evidence.
+
+### 3. Not done / known limits; assets and attempts
+
+The first mover lands during the enemy phase with the old rule state still
+committed. **The final mover's landing shares the `finish()` boundary**, rather
+than occurring strictly earlier. This preserves the existing lock duration and
+single commit. The request's literal “both before the turn finishes” wording
+is therefore not claimed; the new trace and verification document expose this
+boundary explicitly. No arbitrary extra frame or pause was introduced.
+
+Built-in image_gen produced accepted original RGBA atlases:
+
+- `ui-prototype/public/art/l03-p1v6/winch-frames.png` — 2172×724, four frames.
+- `ui-prototype/public/art/l03-p1v6/rope-states.png` — 1159×1358, slack/taut.
+
+Exact generation prompts, date, supplied original P1v4 reference images,
+dimensions and SHA-256 are in `ui-prototype/docs/art-prompts.json` and
+`art-manifest.json`. No commercial imagery was supplied. Both first generation
+outputs were retained; no rejected generated art or omitted art attempts.
+
+Three **execution/evidence** attempts remain in `attempts/attempt-01` through
+`attempt-03`: missed short dust during concurrent screenshot work (test exit1),
+SVG warning filter exposing adjacent atlas frames (visual FAIL despite report
+exit0), and sequential screenshot metadata crossing a frame boundary (strict
+verifier exit1). Reports and relevant defective screenshots/logs are preserved.
+The fixes respectively separate uninterrupted timing observation from replay
+captures, clip the filter inside its crop, and capture live compositor frames.
+No production animation timing was stretched to obtain passing screenshots.
+
+The prop remains small (64×58 scene units), with four painted frames and a
+restrained ember warning. Human readability, weight and commercial art quality
+are **HUMAN_PENDING**. No additional scope was skipped beyond these explicit
+acceptance limits; no sound, skeletal animation or deeper tactical redesign
+was part of this task.
+
+### 4. Risks
+
+Counterfactual contact intentionally requires a uniquely confirmed adjacent
+ally. Ambiguous or distant obstructions receive the static marker and 通道受阻
+label, without an invented contact spark/recoil. Resolver ordering is handled
+by reconstructing prior move endpoints and querying this enemy first on a
+copy; tests cover purity and prior-enemy movement. Future event schema changes
+must preserve the presentation clock assumptions. No new game outcome is
+introduced. SVG atlas crops require clipping inside the effect filter; the
+regression checks now cover the observed leak.
+
+### 5. Open questions
+
+- Claude / GPT review: check the timeline's shared final boundary, the unique
+  contact counterfactual, independent dust lifetime, and whether the 720p chain
+  marker and four captured winch frames communicate the intended states.
+- Gavin: judge the actual 720p motion/ember warning and perform the uncoached
+  human playtest. Accepting the current shared finish boundary needs no rule
+  or lock change; a requirement for strictly earlier final dust would need a
+  separate presentation timing decision. No further change is undertaken here.
+
+### 6. Not claimed
+
+No Owner acceptance, human playtest, commercial art approval, formal story
+choice, S4, complete engine, native hook callback, push, PR, merge, Actions or
+deployment. This local handoff is task DONE and **not SessionEnd**. No daily
+memory journal was hand-edited and no closeout is triggered by this document.
+The existing hook ran on every commit, reporting a nonblocking
+`missing_canonical_memory` advisory; it is not native callback acceptance.
+
+### Resource self-check
+
+Applied imagegen and frontend-design, plus a scoped typography review of the
+new map annotation. Read cached game-feel and game-ui-ux skills from
+`gamedev-skills/awesome-gamedev-agent-skills` pinned at
+`0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd`:
+game-feel SHA-256 `68fc818ad939151be2db9e358e4295a71830c19d61f3aff849f1599307f39f9d`;
+game-ui-ux SHA-256 `8a094c84a377503aa8f4c40df676d1c6b6fc07d36ff95554ce06467f1614397e`.
+No skill was installed and no third-party game code or assets were copied.
+
+| Resource checklist item | Result and evidence |
+| --- | --- |
+| A: prototype-fast | N/A new prototype work; existing mechanic retained, task keep conditions are the five feedback/art checks |
+| A: level-design | N/A new level design; original map, routes, placements and rule checks unchanged |
+| A: game-ai | N/A new AI policy; existing resolver unchanged, regression traces retained |
+| A: game-ui-ux | PASS scoped implementation — map marker plus label, objective warning and existing ranges/intents/hints; 720p/1080p/200% browser checks and actual captures |
+| A: game-feel | PASS scoped implementation — ordered cues, per-mover dust, real-contact spark, painted winch, no extra lock; timeline/unit/browser evidence above; human feel remains pending |
+| B: Grid-Tactics | PASS architectural separation only — unchanged pure rule resolver, separate pure feedback module and view playback; no unlicensed code/art borrowed |
+| B: 2DTacticalRPGDemo | N/A new borrowed pattern/code/assets; no new license obligations |
+| B: engine/dependencies | PASS — package and lockfile unchanged; no installation |
+| C: independent 3–5 minute human battle | FAIL / HUMAN_PENDING — automated complete routes are not an uncoached human session; duration and independent comprehension unverified |
+| C: understandable enemy action | PASS automated state/intent scope — original traces plus confirmed contact and persistent map marker; human comprehension pending |
+| C: win and lose | PASS — original success/failure suites and outcome captures |
+| C: two tactical outcomes | PASS minimum / THIN retained — existing hold versus idle outcomes; no deeper tactics claim |
+| C: restart and change strategy | PASS automated — original Retry/state/focus assertions retained |
+| C: duplicate/stuck/invalid/interruption | PASS tested scope — original guards plus single commit and midphase skip/reduce cancellation |
+| C: 720p/1080p/keyboard | PASS automated — original size, zoom, overlap, keyboard and pointer checks; both-size captures retained |
+| C: automated versus human | PASS — evidence and human acceptance explicitly separate throughout |
+| D: SRD/CC-BY/WotC/contract | N/A new rule adaptation; PASS original art and unchanged rules, no copied IP or new third-party assets |
+| D: authorization | PASS — Owner-named branch/base/worktree, five priorities, commit-only; no other worktree, main/PR/push/stash/S4/Actions/deploy/dependency change |
+
+The human-playtest FAIL is explained and open. These checks support the
+scoped implementation; they do not grant Owner or commercial art approval.
