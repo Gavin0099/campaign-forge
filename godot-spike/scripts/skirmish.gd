@@ -54,6 +54,11 @@ var ui_process_ticks := 0
 var hold_active := false
 var readability_option := "a"
 var camera_home := Vector2(640,360)
+var debug_visible := false
+var debug_panel: Control
+var scenario_label: Label
+var hint_label: Label
+var hp_bars: Dictionary = {}
 
 func project(x: float, y: float) -> Vector2:
 	return MAP_OFFSET + Vector2(550 + 44 * (x - y), 70 + 26 * (x + y)) * MAP_SCALE
@@ -180,53 +185,112 @@ func build_hud() -> void:
 	hud = CanvasLayer.new()
 	hud.process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(hud)
-	var frame := Panel.new()
-	frame.position = Vector2(1000, 104)
-	frame.size = Vector2(248, 490)
-	frame.add_theme_stylebox_override("panel", panel_style(Color("1b2421"), Color("776746")))
-	hud.add_child(frame)
-	label_at(hud, "C A M P A I G N   F O R G E", Vector2(32, 18), 15, BRASS)
-	label_at(hud, "The weight of a single blow", Vector2(32, 40), 28)
-	label_at(hud, "ISOLATED GODOT STUDY   /   SPIKE RULES ONLY", Vector2(820, 36), 14, BRASS)
-	label_at(hud, "THOMA  /  IMPACT STUDY", Vector2(1016, 122), 16, BRASS)
-	for i in range(3):
-		var button := Button.new()
-		button.text = "%d   %s" % [i+1, SETUP_NAMES[i]]
-		button.position = Vector2(1016, 160 + i*50)
-		button.size = Vector2(216, 42)
-		button.alignment = HORIZONTAL_ALIGNMENT_LEFT
-		button.add_theme_font_size_override("font_size", 15)
-		button.add_theme_stylebox_override("normal", panel_style(Color("25312b"), Color("776746")))
-		button.add_theme_stylebox_override("focus", panel_style(Color(0,0,0,0), BRASS))
-		button.pressed.connect(select_setup.bind(i))
-		hud.add_child(button)
-		setup_buttons.append(button)
-	detail_label = label_at(hud, "", Vector2(1016, 320), 15)
-	hp_label = label_at(hud, "", Vector2(1016, 382), 16, CLAY)
-	action_button = Button.new()
-	action_button.text = "STRIKE  /  SPACE"
-	action_button.position = Vector2(1016, 422)
-	action_button.size = Vector2(216, 48)
-	action_button.add_theme_stylebox_override("normal", panel_style(Color("514931"), BRASS))
+	var root := Control.new()
+	hud.add_child(root)
+	root.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var top := VBoxContainer.new()
+	root.add_child(top)
+	top.position = Vector2(32,24)
+	top.add_theme_constant_override("separation",6)
+	var eyebrow := Label.new()
+	eyebrow.text = "C A M P A I G N   F O R G E"
+	eyebrow.add_theme_color_override("font_color",BRASS)
+	eyebrow.add_theme_font_size_override("font_size",12)
+	top.add_child(eyebrow)
+	scenario_label = Label.new()
+	scenario_label.add_theme_color_override("font_color",BONE)
+	scenario_label.add_theme_font_size_override("font_size",23)
+	top.add_child(scenario_label)
+	var roster := VBoxContainer.new()
+	root.add_child(roster)
+	roster.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
+	roster.position = Vector2(1030,130)
+	roster.add_theme_constant_override("separation",18)
+	for unit in Rules.setup(0):
+		var row := VBoxContainer.new()
+		row.custom_minimum_size = Vector2(210,42)
+		roster.add_child(row)
+		var name_label := Label.new()
+		name_label.text = {"thoma":"THOMA", "knight-1":"ASH SHIELD", "knight-2":"PALE SHIELD"}[unit.id]
+		name_label.add_theme_font_size_override("font_size",13)
+		name_label.add_theme_color_override("font_color",BONE)
+		row.add_child(name_label)
+		var bar := ProgressBar.new()
+		bar.show_percentage = false
+		bar.max_value = unit.max_hp
+		bar.value = unit.hp
+		bar.custom_minimum_size = Vector2(210,7)
+		var bg := StyleBoxFlat.new()
+		bg.bg_color = Color("30372c")
+		var fill := StyleBoxFlat.new()
+		fill.bg_color = BRASS if unit.side == "ally" else Color("b9aa83")
+		bar.add_theme_stylebox_override("background",bg)
+		bar.add_theme_stylebox_override("fill",fill)
+		row.add_child(bar)
+		hp_bars[unit.id] = bar
+	var bottom := HBoxContainer.new()
+	root.add_child(bottom)
+	bottom.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
+	bottom.offset_left=32
+	bottom.offset_right=-32
+	bottom.offset_top=-54
+	bottom.offset_bottom=-18
+	bottom.add_theme_constant_override("separation",20)
+	hint_label=Label.new()
+	hint_label.text="1 / 2 / 3  SCENARIO    SPACE / R  STRIKE    M  REDUCED MOTION    ESC  EXIT    F1  DEBUG"
+	hint_label.add_theme_font_size_override("font_size",12)
+	hint_label.add_theme_color_override("font_color",BONE)
+	hint_label.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+	bottom.add_child(hint_label)
+	action_button=Button.new()
+	action_button.text="STRIKE  /  SPACE"
+	action_button.custom_minimum_size=Vector2(180,36)
+	action_button.add_theme_font_size_override("font_size",13)
+	action_button.add_theme_stylebox_override("normal",panel_style(Color("1b2421"),Color("776746")))
+	action_button.add_theme_stylebox_override("focus",panel_style(Color(0,0,0,0),BRASS))
 	action_button.pressed.connect(play_attack)
-	hud.add_child(action_button)
+	bottom.add_child(action_button)
 	action_button.grab_focus.call_deferred()
-	motion_button = CheckButton.new()
-	motion_button.text = "Reduced motion  [M]"
-	motion_button.position = Vector2(1010, 484)
-	motion_button.add_theme_font_size_override("font_size", 15)
-	motion_button.toggled.connect(func(value: bool): reduced_motion = value)
-	hud.add_child(motion_button)
-	grid_button = CheckButton.new()
-	grid_button.text = "Grid diagnostic  [G]"
-	grid_button.position = Vector2(1010, 532)
-	grid_button.add_theme_font_size_override("font_size", 15)
-	grid_button.toggled.connect(func(value: bool): diagnostic = value)
-	hud.add_child(grid_button)
-	status_label = label_at(hud, "Ready", Vector2(32, 636), 22, BRASS)
-	label_at(hud, "1–3  SETUP     SPACE / R  REPLAY     M  MOTION     G  GRID     ESC  QUIT", Vector2(32, 680), 15)
-	label_at(hud, "Damage 2   •   Knight HP 6   •   No impact bonus", Vector2(690, 640), 15, CLAY)
-	label_at(hud, "Original demonstration art. Engine choice remains proposed.", Vector2(690, 664), 13)
+	debug_panel=PanelContainer.new()
+	root.add_child(debug_panel)
+	debug_panel.position=Vector2(1008,332)
+	debug_panel.custom_minimum_size=Vector2(240,290)
+	debug_panel.add_theme_stylebox_override("panel",panel_style(Color("1b2421"),Color("776746")))
+	var debug_column:=VBoxContainer.new()
+	debug_panel.add_child(debug_column)
+	for i in range(3):
+		var button:=Button.new()
+		button.text="%d  %s" % [i+1,SETUP_NAMES[i]]
+		button.pressed.connect(select_setup.bind(i))
+		debug_column.add_child(button)
+		setup_buttons.append(button)
+	detail_label=Label.new()
+	debug_column.add_child(detail_label)
+	hp_label=Label.new()
+	debug_column.add_child(hp_label)
+	status_label=Label.new()
+	status_label.add_theme_font_size_override("font_size",12)
+	debug_column.add_child(status_label)
+	motion_button=CheckButton.new()
+	motion_button.text="Reduced motion [M]"
+	motion_button.toggled.connect(func(value:bool):
+		reduced_motion=value
+		hint_label.modulate = TEAL if value else BONE)
+	debug_column.add_child(motion_button)
+	grid_button=CheckButton.new()
+	grid_button.text="Grid [G]"
+	grid_button.toggled.connect(func(value:bool): diagnostic=value)
+	debug_column.add_child(grid_button)
+	debug_panel.hide()
+
+func set_debug_visible(value: bool) -> void:
+	debug_visible=value
+	debug_panel.visible=value
+	for actor in actors.values(): actor.get_node("DebugLabel").visible=value
+	if not value:
+		grid_button.button_pressed=false
+		action_button.grab_focus()
 
 func select_setup(index: int) -> void:
 	if busy:
@@ -265,11 +329,15 @@ func select_setup(index: int) -> void:
 		ring.color = Color(TEAL if ally else CLAY, 0.35)
 		ring.z_index = -1
 		actor.add_child(ring)
-		label_at(actor, "THOMA" if ally else ("I" if unit.id == "knight-1" else "II"), Vector2(-20, 10), 12, TEAL if ally else CLAY)
+		var debug_label := label_at(actor, "THOMA" if ally else ("I" if unit.id == "knight-1" else "II"), Vector2(-20, 10), 12, TEAL if ally else CLAY)
+		debug_label.name = "DebugLabel"
+		debug_label.visible = debug_visible
 		actors[unit.id] = actor
 	detail_label.text = SETUP_DETAILS[index]
 	hp_label.text = "KNIGHT I   6 / 6 HP"
 	status_label.text = SETUP_NAMES[index] + "   /   Ready"
+	scenario_label.text = SETUP_NAMES[index]
+	for unit in units: hp_bars[unit.id].value = unit.hp
 	for i in range(3):
 		setup_buttons[i].modulate = BONE if i == index else Color("a4a99b")
 
@@ -365,6 +433,7 @@ func on_swing_frame(index: int, attack: Dictionary) -> void:
 	contact_triggers.append({"type": "flash", "frame": Engine.get_process_frames(), "suppressed": reduced_motion})
 	for damage in current_plan.damage:
 		hp_label.text = "KNIGHT I   %d / 6 HP" % damage.hp_after
+		hp_bars[damage.unit].value = damage.hp_after
 		show_damage(contact_point, damage.amount)
 	var scenario: Dictionary = manifest.scenarios[["open", "unit-blocked", "terrain-blocked"][setup_index]]
 	players[attack.target].play(players[attack.target].character + "." + scenario.reaction, reduced_motion)
@@ -431,15 +500,32 @@ func shake(strength: float) -> void:
 	camera.offset = Vector2(strength, -strength * 0.5) if not reduced_motion else Vector2.ZERO
 
 func show_damage(at: Vector2, amount: int) -> void:
-	var number := label_at(world, "−%d" % amount, at + Vector2(-12, -25), 27, BRASS)
+	var number := label_at(world, "−%d" % amount, at + Vector2(-8, -36), 18, BRASS)
 	number.z_index = 1000
-	number.add_theme_constant_override("outline_size", 7)
+	number.add_theme_constant_override("outline_size", 3)
 	var tween := number.create_tween().set_parallel(true)
 	tween.tween_property(number, "position:y", number.position.y - (0 if reduced_motion else 30), 0.38).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	tween.tween_property(number, "modulate:a", 0.0, 0.20).set_delay(0.18)
 	tween.chain().tween_callback(number.queue_free)
 
 func emit_particles(at: Vector2, dust: bool) -> void:
+	# Static contact spokes are visible immediately, including before the CPU
+	# emitter's first simulation tick. Their world tween also freezes in hitstop.
+	if not dust:
+		var burst := Node2D.new()
+		burst.position = at
+		burst.z_index = 901
+		world.add_child(burst)
+		for i in range(7):
+			var line := Line2D.new()
+			var direction := Vector2.from_angle(i * TAU / 7.0 + 0.2)
+			line.points = PackedVector2Array([direction * 3, direction * (8 + i % 3 * 2)])
+			line.width = 1.2
+			line.default_color = BRASS
+			burst.add_child(line)
+		var fade := burst.create_tween()
+		fade.tween_property(burst, "modulate:a", 0.0, 0.12)
+		fade.tween_callback(burst.queue_free)
 	var particles := preload("res://scripts/anim/world_particles.gd").new()
 	particles.position = at
 	particles.z_index = 900
@@ -468,10 +554,12 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo:
 		return
 	match event.keycode:
+		KEY_F1, KEY_QUOTELEFT:
+			set_debug_visible(not debug_visible)
 		KEY_1, KEY_2, KEY_3:
 			select_setup(event.keycode - KEY_1)
 		KEY_G:
-			grid_button.button_pressed = not grid_button.button_pressed
+			if debug_visible: grid_button.button_pressed = not grid_button.button_pressed
 		KEY_M:
 			if not busy:
 				motion_button.button_pressed = not motion_button.button_pressed
