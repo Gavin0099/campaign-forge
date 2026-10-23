@@ -620,3 +620,199 @@ mean a SessionEnd callback or canonical closeout occurred.
 
 **Stop after this W6 handoff commit and wait for review. No push. Phase B remains
 unstarted. Task DONE is not SessionEnd.**
+
+## spike-02 A3
+
+**W1–W6 delivered for review; art completion is PARTIAL.** Thoma's short mace is
+now Owner-approved. Five swing frames received garment repaints while retaining
+A2 weapon/hand/foot geometry, but all five still have visible costume-detail
+problems and remain **PLACEHOLDER**. Idle and recover retain model PASS. The
+engineering checks and sampled knight readability checks pass; neither is a
+human art or hit-feel verdict. **Human playtest: HUMAN_PENDING. P010: PROPOSED.**
+
+Owner confirmation (Gavin, 2026-10-24) authorized this session/worktree and this
+segment only. Started clean at brief `33e38d3` over A2 handoff `98c735e`, on
+`codex/godot-spike` in `D:\campaign-forge\scratch\godot-spike`. No other checkout
+was touched. **Commit only, no push. Phase B remains unstarted.**
+
+### Run and review
+
+From this worktree, Godot 4.7.2 standard / GDScript:
+
+```powershell
+godot --headless --path godot-spike -s res://tools/sync_shared_anim.gd
+godot --headless --path godot-spike --import
+godot --path godot-spike --resolution 1280x720
+```
+
+If `godot` is absent from PATH, use the Owner-specified console executable at
+`C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe`.
+Alternatively open `godot-spike/project.godot` and press F5. **Space** arms then
+confirms; **R** replays; **1/2/3** select open/unit-blocked/terrain-blocked;
+**M** toggles Reduced Motion; **H/?** opens help; **F1** opens debug; **Esc** closes
+an overlay/forecast before exiting. Existing controls and rules are unchanged.
+
+See [A3 verification](VERIFICATION.md#spike-02-a3) for exact commands, real exit
+codes, retained failures, current source hashes and rendered evidence. The
+[full 60fps movie](evidence/spike02-a3/attack-60fps.avi) is under 8 MiB and contains
+all 59 frames; no subsampling. [Movie notes](evidence/spike02-a3/MOVIE.md).
+
+### Thoma's weapon: APPROVED (Owner, 2026-10-24)
+
+Gavin: 「就用單手短釘頭錘，開始補 5 格揮擊」. Canon weapon is a **short one-handed
+flanged mace**, dark iron flanged head, worn oak haft, small brass collar echoing
+the medallion, about forearm length, carried in his right hand. The brass
+medallion stays his **holy symbol (聖徽)**, not a weapon. No staff, blade, book or
+magic glow. This approval supersedes A2's weapon-pending status; it does not
+approve the five motion drawings, combat rules, engine choice or other story.
+
+W1 updated source and synced metadata, tests and A2 status notes. No confirmed
+art/equipment section exists in `docs/DECISIONS.md`, so it was left untouched;
+no D-row was invented and P010 remains PROPOSED. Historical equipment proposals
+in the A2 narrative remain history under this explicit superseding decision.
+
+### Frame audit and repaint limits
+
+| Frame | Status | Reason |
+| --- | --- | --- |
+| `thoma/idle/01.png` | PASS | Recognizable original face, paired ivory leafy stole, layered cuffs/hem and equipment continuity at review and runtime scale; not Owner art approval. |
+| `thoma/swing/00.png` | PLACEHOLDER | Leaf sprigs now come from the original, but doubled border/leaf density remains at patch edges; raised cuff transition and broad fan hem still differ from idle/recover. |
+| `thoma/swing/01.png` | PLACEHOLDER | Original sprigs improve identity, but stole border blending and raised cuff folds still differ; the bell-shaped hem is retained from A2. |
+| `thoma/swing/02.png` | PLACEHOLDER | Original sprigs and cuff cloth improve continuity, but compressed leaf detail, cuff patch boundary and swept underskirt contour still drift. |
+| `thoma/swing/03.png` | PLACEHOLDER | Contact geometry is byte-preserved; stole seam/leaf density and broad underskirt hem remain inconsistent at detail scale. |
+| `thoma/swing/04.png` | PLACEHOLDER | Trailing sprigs reuse original pixels, but stretched diagonal embroidery, front cuff transition and trailing hem remain visibly different. |
+| `thoma/swing/05.png` | PASS | Recognizable original face, paired ivory leafy stole, layered cuffs/hem and equipment continuity at review and runtime scale; not Owner art approval. |
+
+[New style check](../../shared-anim/thoma-weapon-style-check.png) includes original,
+idle and all six swing frames, enlarged stole/cuff/hem rows and native-720p-size
+row. [A2 style sheet](evidence/spike02-a3/style-check-a2.png) remains archived.
+[Rendered old/new comparison](evidence/spike02-a3/contact-sheet-old-vs-new.png)
+uses unscaled crops of actual 720p captures; camera sampling varies slightly
+between separate replays. [Exact-scale asset comparison](evidence/spike02-a3/asset-sheet-old-vs-new.png)
+is explicitly an asset sheet. [Per-criterion audit](../../shared-anim/frame-audit.json)
+records palette-distance measurements and model findings separately from Owner
+approval. All five repaints have FAIL criteria, so none was promoted to PASS.
+
+Built-in image_gen was used once for each allowed frame 00–04, with all four
+required references: original Thoma, weapon idle, recover and same-index A2
+pose. Generated full figures changed proportions, so only cuff/hem cloth patches
+were adopted, with original leafy sprigs transplanted into the stole. A2 alpha
+and every unmasked pixel were preserved. This protects the pose, mace length,
+head size/grip, feet and contact anchor but leaves the old motion-hem contour
+unresolved. Further whole-figure regeneration was not adopted; one attempt per
+frame is below the three-attempt cap. No idle/recover regeneration was needed.
+
+All generated originals are immutable under `shared-anim/raw/`; no completely
+rejected attempt was discarded. [Full prompts/reference/raw/runtime SHA-256](../../shared-anim/a3-swing-prompts.json),
+[source record](../../shared-anim/SOURCES.md),
+[cleanup implementation](../tools/prepare_a3_frames.py),
+[exact masks](evidence/spike02-a3/repaint-masks/) and
+[A2 byte-copy baseline/hashes](evidence/spike02-a3/baseline-a2/) support review.
+Baseline frames are evidence-only; the manifest references the new live paths.
+No original PNG was moved or edited, and no other character/environment was
+generated. No Ferry Dusk palette was adopted.
+
+### Knight B readability
+
+All captures are rendered at native **1280×720**, with the HUD, name/role labels,
+debug labels and damage text hidden. Grayscale is a live screen shader. Zoom
+captures are actual attacks at follow-through after flash, at **1.4×**, not a
+larger character-scale substitution. No knight art was changed.
+
+| Setup | Rest color | Rest gray | Attack zoom color | Attack zoom gray | Model observation |
+| --- | --- | --- | --- | --- | --- |
+| 1 — open | PASS | PASS | PASS | PASS | B's pale shield and raised pale crest distinguish it from A's dark shield/plain helm even across separated positions |
+| 2 — unit-blocked | PASS | PASS | PASS | PASS | Adjacent B remains distinct by shield value and crest while A reacts; labels are unnecessary in these samples |
+| 3 — terrain-blocked | PASS | PASS | PASS | PASS | B remains identifiable on the lower bank; A's dark shield/plain helm remains different near the crossing |
+
+[Per-image reasons, filenames, hashes and measured proxies](evidence/spike02-a3/knight-readability.json).
+Shield B-minus-A screenshot luma difference: **50.337–69.548 / 255**. Same-pose
+helm-mask difference: **16 px** at rest, **34 px** at attack zoom. The crest is
+small at rest and shield value is the strongest cue. These are supporting
+measurements, not human glance-latency evidence. **No clear sampled failure was
+observed, so no silhouette-change proposal is made.** W4 preceded the W5 Thoma
+sync; knight/environment bytes were unchanged. The result is limited to these
+12 images and does not prove recognition across every animation or future map.
+
+### Timing and engineering result
+
+| Setup | Normal, strike to input-ready | Reduced Motion |
+| --- | --- | --- |
+| 1 — open | 0.936505 s | 0.752470 s |
+| 2 — unit-blocked | 0.948820 s | 0.747849 s |
+| 3 — terrain-blocked | 0.927993 s | 0.729133 s |
+
+All are below **1.7 s**, including hitstop. Ordinary timing runs contain no GPU
+readback. Movie strike-to-ready is **0.916667 s**, with five identical decoded
+contact frames (**83.333 ms**). The offline encoder's wall time is not gameplay
+latency. [Timing](evidence/spike02-a3/timing.json),
+[movie hashes](evidence/spike02-a3/movie-index.json).
+
+Full manifest equality against A2 is tested: canvas **512×512**, pivot
+**[256,464]**, contact index **3**, anchor **[455,196]**, durations
+**180/70/40/80/100/150 ms**, Reduced Motion keyframes, offsets and camera settings
+remain unchanged. Tests also compare source/synced bytes, A2 baseline hashes,
+approved weapon metadata, attempt bounds, exact alpha/unmasked pixels and the
+protected contact grip/haft/head region. **37/37 GUT tests, 1162 assertions,
+exit 0**; [test log](evidence/spike02-a3/test-run.log). After adding this section,
+`godot --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gtest=res://tests/test_a3_contract.gd -gexit`
+passed **4/4 tests, 220 assertions, exit 0**, including the final handoff rows.
+Its separate log is
+[handoff-table-check.log](evidence/spike02-a3/handoff-table-check.log).
+
+### Open items for Phase B and limits
+
+- **HUMAN_PENDING:** actual human assessment of weapon weight, contact timing,
+  continuity, input responsiveness and sound. Model review and automation do not
+  substitute for it; Dummy audio does not verify physical-device audition.
+- Shared **React/Godot asset-and-timing comparison rule** and React integration
+  remain unimplemented and outside this segment. No React file was edited.
+- Five motion frames still need costume/seam/hem cleanup before art completion
+  can be claimed. Weapon approval is complete; frame-art approval is not.
+- This remains one attack and three fixed setups, with no new AI, win/lose loop,
+  formal battle rules, deployment, persistence, story or engine adoption. A3
+  captures are 720p; A2's 1080p evidence is historical, not a new A3 1080p check.
+
+### Resource self-check
+
+Against [RESOURCE-CHECKLIST](../../docs/review/RESOURCE-CHECKLIST.md):
+
+| Item | Status | Evidence / scoped exception |
+| --- | --- | --- |
+| A — prototype-fast | PASS (criterion) | Bounded five-frame correction; unchanged one-attack mechanic; keep/partial criteria are explicit |
+| A — level-design | N/A | No map, route, placement or objective edits; existing rule tests retained |
+| A — game-ai | N/A | No enemy AI work authorized |
+| A — game-ui-ux | PASS (scoped check) | Read pinned [skill](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/skills/disciplines/game-ui-ux/SKILL.md); actual native-resolution evidence and existing focus/Space/overlay tests retained; no HUD redesign |
+| A — game-feel | PASS (engineering), HUMAN_PENDING | Read pinned [skill](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/skills/disciplines/game-feel/SKILL.md); event/hold/recovery/Reduced Motion verified, human feel untested |
+| B — Grid-Tactics separation | PASS (criterion) | No rule/view coupling changes; no reference-repo code or art copied |
+| B — HopeMetal attribution | N/A | Nothing newly borrowed |
+| B — new engine/dependency | PASS | Existing authorized Godot/GDScript/GUT only; no addon or dependency installed |
+| C — full 3–5 minute battle | N/A, explicit exception | One-attack spike, no complete battle claim |
+| C — understandable enemy actions | N/A, explicit exception | Fixed targets, no autonomous turns |
+| C — win/lose | N/A, explicit exception | Not authorized in this spike |
+| C — two tactical choices | N/A, explicit exception | Three fixtures are not a tactical choice loop |
+| C — restart/change strategy | PASS (replay), N/A (strategy) | Real R replay captures and existing fixture-reset tests |
+| C — no duplicate/stuck/invalid resolution | PASS (tested paths) | Existing rules/input tests plus complete captures, ready-state and geometry checks |
+| C — 720p/1080p/keyboard | PASS (A3 720p/keyboard); A3 1080p N/A | A3 scope requires native 720p; prior A2 1080p is not represented as new evidence |
+| C — automation vs human | PASS | Model results, 37-test suite and HUMAN_PENDING are separately identified |
+| D — SRD/rule sources | N/A (new rules), PASS (scope) | No new SRD/WotC content; no G005/formal rule changes |
+| D — authorization | PASS | Only shared-anim/ and godot-spike/ implementation/evidence; Owner's brief already present; no React/shared story edits, other worktree, push, main merge, PR, Actions, deployment or Phase B |
+
+Imagegen skill used for the five permitted raster edits; cleanup and evidence
+sheets use Pillow. No commercial assets or reference-repo code copied. Shared
+PLAN/memory files were intentionally not edited under this narrow task scope;
+this handoff records the milestone. No additional agent was spawned. Normal
+commit hooks ran with only the nonblocking `missing_canonical_memory` advisory;
+this is not evidence of a SessionEnd callback or canonical closeout.
+
+| Step | Commit |
+| --- | --- |
+| W1 — mace APPROVED | `66665c1` |
+| W2 — five repaints / A2 baseline | `e860b1e` |
+| W3 — detailed style check / honest flags | `def261a` |
+| W4 — knight readability evidence | `542e08b` |
+| W5 — sync / tests / rendered verification | `a039a04` |
+| W6 — A3 handoff | This commit |
+
+**Stop after this W6 handoff commit and wait for review. No push. Phase B
+remains unstarted. Task completion is not SessionEnd.**
