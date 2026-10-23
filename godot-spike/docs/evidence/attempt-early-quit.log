@@ -1,0 +1,11 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 Core Profile Context 26.10.1.261008 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon 780M Graphics
+
+CAPTURE sequence-anticipation.png 1280x720 buffered
+CAPTURE hit-frame.png 1280x720 buffered
+CAPTURE knockback-end.png 1280x720 buffered
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9577 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE sequence-recovered.png 1280x720 buffered
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.8481 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.9249 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.7257 limit=1.700 hp=4 cell=(1, 6)

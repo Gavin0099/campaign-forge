@@ -1,0 +1,314 @@
+{
+	"capture": "rendered viewport PNG, forced GPU redraw, no postprocessing",
+	"captured_at": "2026-10-23T09:55:29",
+	"complete": true,
+	"engine": "4.7.2-stable (official)",
+	"grid_toggle": true,
+	"reduced_toggle": true,
+	"renderer": "AMD Radeon 780M Graphics",
+	"runs": [
+		{
+			"elapsed_wall_s": 0.926972,
+			"phases": [
+				{
+					"phase": "windup",
+					"target_position": [
+						331.559997558594,
+						278.880004882813
+					],
+					"wall_ms": 29.361
+				},
+				{
+					"phase": "lunge",
+					"target_position": [
+						331.559997558594,
+						278.880004882813
+					],
+					"wall_ms": 188.779
+				},
+				{
+					"phase": "contact",
+					"target_position": [
+						331.559997558594,
+						278.880004882813
+					],
+					"wall_ms": 272.592
+				},
+				{
+					"phase": "knockback",
+					"target_position": [
+						331.559997558594,
+						278.880004882813
+					],
+					"wall_ms": 357.734
+				},
+				{
+					"phase": "settled",
+					"target_position": [
+						290.200012207031,
+						303.320007324219
+					],
+					"wall_ms": 539.555
+				},
+				{
+					"phase": "ready",
+					"target_position": [
+						290.200012207031,
+						303.320007324219
+					],
+					"wall_ms": 956.393
+				}
+			],
+			"reduced": false,
+			"setup": 1
+		},
+		{
+			"elapsed_wall_s": 0.950153,
+			"phases": [
+				{
+					"phase": "windup",
+					"target_position": [
+						331.559997558594,
+						278.880004882813
+					],
+					"wall_ms": 33.908
+				},
+				{
+					"phase": "lunge",
+					"target_position": [
+						331.559997558594,
+						278.880004882813
+					],
+					"wall_ms": 167.0
+				},
+				{
+					"phase": "contact",
+					"target_position": [
+						331.559997558594,
+						278.880004882813
+					],
+					"wall_ms": 267.278
+				},
+				{
+					"phase": "blocked",
+					"target_position": [
+						331.559997558594,
+						278.880004882813
+					],
+					"wall_ms": 350.918
+				},
+				{
+					"phase": "blocked_recoil",
+					"target_position": [
+						326.394439697266,
+						281.932373046875
+					],
+					"wall_ms": 400.979
+				},
+				{
+					"phase": "settled",
+					"target_position": [
+						331.559997558594,
+						278.880004882813
+					],
+					"wall_ms": 566.966
+				},
+				{
+					"phase": "ready",
+					"target_position": [
+						331.559997558594,
+						278.880004882813
+					],
+					"wall_ms": 984.103
+				}
+			],
+			"reduced": false,
+			"setup": 2
+		},
+		{
+			"elapsed_wall_s": 0.966293,
+			"phases": [
+				{
+					"phase": "windup",
+					"target_position": [
+						455.639984130859,
+						303.320007324219
+					],
+					"wall_ms": 33.242
+				},
+				{
+					"phase": "lunge",
+					"target_position": [
+						455.639984130859,
+						303.320007324219
+					],
+					"wall_ms": 181.588
+				},
+				{
+					"phase": "contact",
+					"target_position": [
+						455.639984130859,
+						303.320007324219
+					],
+					"wall_ms": 283.069
+				},
+				{
+					"phase": "blocked",
+					"target_position": [
+						455.639984130859,
+						303.320007324219
+					],
+					"wall_ms": 365.396
+				},
+				{
+					"phase": "blocked_recoil",
+					"target_position": [
+						460.805541992188,
+						306.372375488281
+					],
+					"wall_ms": 416.576
+				},
+				{
+					"phase": "settled",
+					"target_position": [
+						455.639984130859,
+						303.320007324219
+					],
+					"wall_ms": 566.637
+				},
+				{
+					"phase": "ready",
+					"target_position": [
+						455.639984130859,
+						303.320007324219
+					],
+					"wall_ms": 999.597
+				}
+			],
+			"reduced": false,
+			"setup": 3
+		},
+		{
+			"elapsed_wall_s": 0.844379,
+			"phases": [
+				{
+					"phase": "windup",
+					"target_position": [
+						331.559997558594,
+						278.880004882813
+					],
+					"wall_ms": 34.258
+				},
+				{
+					"phase": "lunge",
+					"target_position": [
+						331.559997558594,
+						278.880004882813
+					],
+					"wall_ms": 273.407
+				},
+				{
+					"phase": "contact",
+					"target_position": [
+						331.559997558594,
+						278.880004882813
+					],
+					"wall_ms": 364.26
+				},
+				{
+					"phase": "knockback",
+					"target_position": [
+						331.559997558594,
+						278.880004882813
+					],
+					"wall_ms": 459.084
+				},
+				{
+					"phase": "settled",
+					"target_position": [
+						290.200012207031,
+						303.320007324219
+					],
+					"wall_ms": 473.65
+				},
+				{
+					"phase": "ready",
+					"target_position": [
+						290.200012207031,
+						303.320007324219
+					],
+					"wall_ms": 878.703
+				}
+			],
+			"reduced": true,
+			"setup": 1
+		}
+	],
+	"screenshots": [
+		{
+			"error": 0,
+			"file": "sequence-anticipation.png",
+			"height": 720,
+			"phase": "lunge",
+			"wall_ms": 239.552,
+			"width": 1280
+		},
+		{
+			"error": 0,
+			"file": "hit-frame.png",
+			"height": 720,
+			"phase": "contact",
+			"wall_ms": 356.743,
+			"width": 1280
+		},
+		{
+			"error": 0,
+			"file": "knockback-end.png",
+			"height": 720,
+			"phase": "settled",
+			"wall_ms": 589.626,
+			"width": 1280
+		},
+		{
+			"error": 0,
+			"file": "sequence-recovered.png",
+			"height": 720,
+			"phase": "ready",
+			"wall_ms": 1007.102,
+			"width": 1280
+		},
+		{
+			"error": 0,
+			"file": "knockback-blocked-unit.png",
+			"height": 720,
+			"phase": "blocked_recoil",
+			"wall_ms": 450.99,
+			"width": 1280
+		},
+		{
+			"error": 0,
+			"file": "knockback-blocked.png",
+			"height": 720,
+			"phase": "blocked_recoil",
+			"wall_ms": 467.618,
+			"width": 1280
+		},
+		{
+			"error": 0,
+			"file": "reduced-motion.png",
+			"height": 720,
+			"phase": "settled",
+			"wall_ms": 492.42,
+			"width": 1280
+		},
+		{
+			"error": 0,
+			"file": "grid-diagnostic.png",
+			"height": 720,
+			"phase": "ready",
+			"wall_ms": 903.209,
+			"width": 1280
+		}
+	],
+	"timing": "wall clock includes local hitstop and GPU image readback; PNG encoding occurs after playback"
+}

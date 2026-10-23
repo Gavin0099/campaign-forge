@@ -11,6 +11,14 @@ This license covers GUT, not the project's story, original art or other files.
 The editor plugin is not enabled; the headless CLI loads it for tests only.
 The download succeeded, so no fallback runner was needed.
 
+Bundled fonts are separately licensed under SIL OFL 1.1, not GUT's MIT:
+Anonymous Pro's upstream notice is retained at `gut/fonts/OFL.txt`. Additional
+unmodified notices were retrieved on 2026-10-23 from the Google Fonts repository:
+[Courier Prime](https://github.com/google/fonts/blob/main/ofl/courierprime/OFL.txt),
+[Lobster Two](https://github.com/google/fonts/blob/main/ofl/lobstertwo/OFL.txt), and
+[Source Code Pro](https://github.com/google/fonts/blob/main/ofl/sourcecodepro/OFL.txt).
+Copies are in `notices/`. No font binaries were added beyond the GUT release.
+
 Run an import before tests to regenerate class/import caches:
 
 ```powershell

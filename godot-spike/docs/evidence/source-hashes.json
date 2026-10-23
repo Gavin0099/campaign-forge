@@ -1,0 +1,38 @@
+﻿[
+    {
+        "path":  "audio/impact_synth.gd",
+        "sha256":  "68162fd556558eae0e9f7d4c43b8245e371988399b9ff2785c845f83021b421e"
+    },
+    {
+        "path":  "project.godot",
+        "sha256":  "b52226cd0e48d69c6763aae6d3defb2dbf2d9bbb0690074b90750051d071bdcd"
+    },
+    {
+        "path":  "scenes/Skirmish.tscn",
+        "sha256":  "9ab889b6fa9f42a4305cb51b178efafc00b155be9237c7aa93d905ec8ed5ab14"
+    },
+    {
+        "path":  "scripts/capture_run.gd",
+        "sha256":  "7b58da46d7a70dd6c5e3a21c98f2de76881358273f6c27f7388a74e18f94905c"
+    },
+    {
+        "path":  "scripts/rules/grid_rules.gd",
+        "sha256":  "c3d539e3cbfafc8db11262c9fb23ee9345e127cdde0966b363287ae0ca9b59b6"
+    },
+    {
+        "path":  "scripts/skirmish.gd",
+        "sha256":  "a2112842be8c6d624f715b7f7038024b877deb562c4547fbcc5c5f2e0437d69d"
+    },
+    {
+        "path":  "shaders/hit_flash.gdshader",
+        "sha256":  "ecd84fff4810cb0ca77b7b56e900d4fdc9bb753e51b112d3b2b51aab92835bff"
+    },
+    {
+        "path":  "tests/test_grid_rules.gd",
+        "sha256":  "f3daf37e1905fe8bf4e7bb160aeb760743d2a25e8f9c8159038c2fd4936fab5c"
+    },
+    {
+        "path":  "tests/test_playback.gd",
+        "sha256":  "237176102b913a8f59637ac26c0e98153527130ba163b2851bae46b4d621a87a"
+    }
+]

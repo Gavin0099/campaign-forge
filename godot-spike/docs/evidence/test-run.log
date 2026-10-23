@@ -1,0 +1,55 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+---  GUT  ---
+[1m[INFO]:  [0musing [C:/Users/daish/AppData/Roaming/Godot/app_userdata/Campaign Forge — Impact Study] for temporary output.
+Godot version:  4.7.2
+GUT version:  9.7.1
+[4m
+
+res://tests/test_grid_rules.gd
+[0m* test_adjacent_attack_event_order_hp_and_immutability
+* test_nonadjacent_and_diagonal_attacks_are_rejected
+* test_destroyed_crossing_blocks_knockback
+* test_water_blocks_knockback
+* test_unit_blocker_preserves_both_positions
+* test_all_four_map_edges_block_knockback
+* test_open_route_terrain_matches_source_contract
+* test_bfs_detours_without_passing_through_units
+* test_invalid_moves_and_disconnected_bank_rejected
+* test_invalid_combatants_and_lethal_damage_are_bounded
+[1m10/10 passed.
+[0m[4m
+
+res://tests/test_playback.gd
+[0m* test_all_three_normal_sequences_and_replay
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8018 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.9254 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.9195 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.8949 limit=1.700 hp=4 cell=(3, 4)
+* test_all_three_reduced_motion_sequences
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.5970 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=true elapsed_wall_s=0.6976 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=true elapsed_wall_s=0.6925 limit=1.700 hp=4 cell=(3, 4)
+* test_keyboard_controls_and_diagnostic_default
+SEQUENCE setup=2 reduced=true elapsed_wall_s=0.6027 limit=1.700 hp=4 cell=(1, 5)
+* test_procedural_audio_is_deterministic_non_silent_pcm
+[1m4/4 passed.
+[0m
+
+
+
+[33m==============================================
+[0m[33m= Run Summary
+[0m[33m==============================================
+[0m
+Totals
+------
+Scripts               2
+Tests                14
+Passing Tests        14
+Asserts             344
+Time              7.798s
+
+
+[32m---- All tests passed! ----
+[0m

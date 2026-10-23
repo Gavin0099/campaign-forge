@@ -24,6 +24,7 @@ var reduced_motion := false
 var busy := false
 var camera: Camera2D
 var board: Node2D
+var grid_overlay: Node2D
 var hud: CanvasLayer
 var status_label: Label
 var detail_label: Label
@@ -74,12 +75,29 @@ func _ready() -> void:
 		var bridge := sprite(board, atlas("res://art/props.png", Rect2(530, 310, 490, 510)), center(cell) + Vector2(-23, -31) * MAP_SCALE, Vector2(46.12, 48) * MAP_SCALE)
 		bridge.flip_h = cell.x == 6
 	sprite(board, atlas("res://art/props.png", Rect2(1020, 290, 516, 510)), center(Vector2i(8, 4)) + Vector2(-34, -57) * MAP_SCALE, Vector2(68.8, 68) * MAP_SCALE)
+	grid_overlay = Node2D.new()
+	grid_overlay.z_index = 1
+	add_child(grid_overlay)
+	grid_overlay.draw.connect(draw_grid)
 	build_hud()
 	sound = AudioStreamPlayer.new()
 	sound.stream = preload("res://audio/impact_synth.gd").make_hit()
 	sound.volume_db = -7
 	add_child(sound)
 	select_setup(0)
+	if "--overview" in OS.get_cmdline_user_args():
+		# Windows startup clamps oversized windows to the work area; request the
+		# validation render size explicitly, without changing the display mode.
+		get_window().min_size = Vector2i(1920, 1080)
+		get_window().size = Vector2i(1920, 1080)
+		await get_tree().create_timer(0.3).timeout
+		await RenderingServer.frame_post_draw
+		var overview_image: Image = get_viewport().get_texture().get_image()
+		var overview_error := overview_image.save_png("res://docs/evidence/overview-1080.png")
+		print("OVERVIEW %dx%d error=%d" % [overview_image.get_width(), overview_image.get_height(), overview_error])
+		get_tree().quit(0 if overview_error == OK else 1)
+	if "--capture" in OS.get_cmdline_user_args():
+		await preload("res://scripts/capture_run.gd").new().run(self)
 	if "--smoke" in OS.get_cmdline_user_args():
 		for index in range(3):
 			select_setup(index)
@@ -97,15 +115,15 @@ func _process(delta: float) -> void:
 	shake_left = maxf(0, shake_left - delta)
 	shake_phase += delta * 110.0
 	camera.offset = Vector2(sin(shake_phase), cos(shake_phase * 1.3)) * shake_strength * (shake_left / 0.2) if shake_left > 0 and not reduced_motion else Vector2.ZERO
-	queue_redraw()
+	grid_overlay.queue_redraw()
 
-func _draw() -> void:
+func draw_grid() -> void:
 	if diagnostic:
 		for y in range(9):
 			for x in range(11):
 				var points := PackedVector2Array([project(x,y), project(x+1,y), project(x+1,y+1), project(x,y+1), project(x,y)])
 				var color := Color(0.6, 0.79, 0.74, 0.45) if Rules.walkable(Vector2i(x,y)) else Color(0.9, 0.48, 0.35, 0.65)
-				draw_polyline(points, color, 1.0, true)
+				grid_overlay.draw_polyline(points, color, 1.0, true)
 
 func label_at(parent: Node, text: String, at: Vector2, font_size: int, color: Color = BONE) -> Label:
 	var label := Label.new()
@@ -162,6 +180,7 @@ func build_hud() -> void:
 	action_button.add_theme_stylebox_override("normal", panel_style(Color("514931"), BRASS))
 	action_button.pressed.connect(play_attack)
 	hud.add_child(action_button)
+	action_button.grab_focus.call_deferred()
 	motion_button = CheckButton.new()
 	motion_button.text = "Reduced motion  [M]"
 	motion_button.position = Vector2(1010, 484)
@@ -301,6 +320,8 @@ func set_busy(value: bool) -> void:
 	for button in setup_buttons:
 		button.disabled = value
 	action_button.text = "STRIKING…" if value else "REPLAY  /  SPACE"
+	if not value:
+		action_button.grab_focus()
 
 func set_phase(value: String, text: String) -> void:
 	phase = value

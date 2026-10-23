@@ -1,0 +1,50 @@
+﻿[
+    {
+        "file":  "sequence-anticipation.png",
+        "width":  1280,
+        "height":  720,
+        "sha256":  "00e7de0c6a1cc9b205bb2a1d74773db7f8b117b7adaa6c7481acddbfe87c2f14"
+    },
+    {
+        "file":  "hit-frame.png",
+        "width":  1280,
+        "height":  720,
+        "sha256":  "725bf402855ba2e9d9017b11b246fda5240d61bf868eeac9230d91720389ad34"
+    },
+    {
+        "file":  "knockback-end.png",
+        "width":  1280,
+        "height":  720,
+        "sha256":  "84c766433db0804ac4336d2e03de7653dfbd47d34d4dee76efac621a38bc1e44"
+    },
+    {
+        "file":  "sequence-recovered.png",
+        "width":  1280,
+        "height":  720,
+        "sha256":  "667f43e3e9a020073127e17451f2a08a6b34c92f46417aa833e261ef785b4b5b"
+    },
+    {
+        "file":  "knockback-blocked-unit.png",
+        "width":  1280,
+        "height":  720,
+        "sha256":  "8439466c98c93016e77c6b555541c29ab439ee5a8290de3cf93b10f7c94905fc"
+    },
+    {
+        "file":  "knockback-blocked.png",
+        "width":  1280,
+        "height":  720,
+        "sha256":  "9c901affea0467447be6d6bac8c1ec327fd7e490b5fd2eeb1ea25f2a5ee56e9f"
+    },
+    {
+        "file":  "reduced-motion.png",
+        "width":  1280,
+        "height":  720,
+        "sha256":  "fcfe2e83abdfb8e247002b4a2d8758e95c364c74db879cd83c200f5f3b301d9f"
+    },
+    {
+        "file":  "grid-diagnostic.png",
+        "width":  1280,
+        "height":  720,
+        "sha256":  "8c0bbf32cffe59b5b920f09bdb8b3bc92d46f5a098e35f24e6dbdddd2551f1fd"
+    }
+]

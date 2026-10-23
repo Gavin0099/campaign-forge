@@ -1,6 +1,7 @@
 shader_type canvas_item;
 uniform float flash : hint_range(0.0, 1.0) = 0.0;
 void fragment() {
-	vec4 source = texture(TEXTURE, UV) * COLOR;
+	// Fragment COLOR already includes the texture and vertex modulation.
+	vec4 source = COLOR;
 	COLOR = vec4(mix(source.rgb, vec3(1.0), flash), source.a);
 }

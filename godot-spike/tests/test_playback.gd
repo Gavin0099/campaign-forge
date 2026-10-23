@@ -28,11 +28,14 @@ func run_and_observe(index: int, reduced: bool) -> Dictionary:
 	var max_displacement := 0.0
 	var max_shake := 0.0
 	var max_flash := 0.0
+	var sound_at_contact := false
 	var deadline := Time.get_ticks_msec() + 2400
 	while scene.busy and Time.get_ticks_msec() < deadline:
 		max_displacement = maxf(max_displacement, scene.actors["knight-1"].position.distance_to(target_start))
 		max_shake = maxf(max_shake, scene.camera.offset.length())
 		max_flash = maxf(max_flash, scene.actors["knight-1"].get_node("Body").material.get_shader_parameter("flash"))
+		if scene.phase == "contact":
+			sound_at_contact = sound_at_contact or scene.sound.playing
 		await get_tree().process_frame
 	assert_false(scene.busy, "Sequence has a watchdog; no stuck lock")
 	assert_lt(scene.last_elapsed, 1.7, "Measured wall time INCLUDES 80ms local hitstop")
@@ -42,6 +45,7 @@ func run_and_observe(index: int, reduced: bool) -> Dictionary:
 	assert_eq(scene.actors.thoma.rotation, 0.0)
 	assert_eq(scene.camera.offset, Vector2.ZERO)
 	assert_eq(Engine.time_scale, 1.0)
+	assert_true(sound_at_contact, "Sound starts at contact; not a claim of audible-device verification")
 	assert_false(scene.action_button.disabled)
 	assert_eq(phases, ["windup", "lunge", "contact", "knockback", "settled", "ready"] if index == 0 else ["windup", "lunge", "contact", "blocked", "blocked_recoil", "settled", "ready"])
 	var reaction_phase := "knockback" if index == 0 else "blocked"
@@ -84,6 +88,24 @@ func test_keyboard_controls_and_diagnostic_default() -> void:
 	replay.pressed = true
 	scene._unhandled_key_input(replay)
 	assert_true(scene.busy)
+	var motion := InputEventKey.new()
+	motion.keycode = KEY_M
+	motion.pressed = true
+	scene._unhandled_key_input(motion)
+	assert_true(scene.reduced_motion, "Preference changes are locked during playback")
 	await scene.attack_finished
 	await get_tree().process_frame
 	assert_eq(scene.units[1].hp, 4)
+
+func test_procedural_audio_is_deterministic_non_silent_pcm() -> void:
+	var synth = preload("res://audio/impact_synth.gd")
+	var first: AudioStreamWAV = synth.make_hit()
+	var second: AudioStreamWAV = synth.make_hit()
+	assert_eq(first.data, second.data)
+	assert_eq(first.mix_rate, 22050)
+	assert_almost_eq(first.get_length(), 0.24, 0.001)
+	var peak := 0
+	for i in range(first.data.size()/2):
+		peak = maxi(peak, absi(first.data.decode_s16(i*2)))
+	assert_gt(peak, 1000)
+	assert_lt(peak, 32767, "PCM does not clip")
