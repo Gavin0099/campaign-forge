@@ -25,6 +25,18 @@ export function buildFeedbackTimeline(events: readonly Event[], stepMs: number):
   });
 }
 
+// A resolution marker describes only intents already reached by playback.
+// The preview for a future turn must never leak into an earlier visual moment.
+export function blockedAtEventIndex(events: readonly Event[], playedIndex: number): Set<string> {
+  const blocked = new Set<string>();
+  for (const event of events.slice(0, Math.max(0, playedIndex + 1))) {
+    if (event.type !== "intent") continue;
+    if (event.reason === "blocked") blocked.add(event.unit);
+    else blocked.delete(event.unit);
+  }
+  return blocked;
+}
+
 // Reconstruct only presentation positions preceding this event. No turn,
 // progress or rule state is committed by a feedback query.
 export function stateBeforeEvent(state: State, events: readonly Event[], eventIndex: number): State {

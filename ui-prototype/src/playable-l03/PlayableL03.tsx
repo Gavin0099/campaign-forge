@@ -4,7 +4,7 @@ import type { Playback } from "../combatPlayback";
 import { command, DEFAULT_CONFIG, initialState, key, MAP, resolve,
   type Cell, type Command, type Result } from "./rules";
 import { center, diamond as sceneDiamond, Figure, Portrait, Terrain, Landmarks, BlockedMarker } from "./presentation";
-import { buildFeedbackTimeline, confirmedContactBlocker, stateBeforeEvent, type FeedbackCue } from "./feedback";
+import { blockedAtEventIndex, buildFeedbackTimeline, confirmedContactBlocker, stateBeforeEvent, type FeedbackCue } from "./feedback";
 import "../l03.css";
 import "./playable.css";
 
@@ -51,6 +51,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
   const [visualUnits, setVisualUnits] = useState(state.units);
   const raf = useRef(0);
   const pending = useRef<Result | null>(null);
+  const [playback, setPlayback] = useState<{ events: Result["events"]; playedIndex: number } | null>(null);
   const root = useRef<HTMLElement>(null);
   const retryButton = useRef<HTMLButtonElement>(null);
   const uid = useId().replace(/:/g, "");
@@ -60,6 +61,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     const result = pending.current;
     if (!result) return;
     pending.current = null;
+    setPlayback(null);
     stateRef.current = result.state;
     setState(result.state); setVisualUnits(result.state.units); setFrame(null);
     busyRef.current = false; setBusy(false);
@@ -144,6 +146,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
       root.current?.focus(); return;
     }
     pending.current = result; busyRef.current = true; setBusy(true);
+    setPlayback({ events: result.events, playedIndex: -1 });
     if (input.type === "resolve") {
       resolving.current = true; setPhase("enemy");
       setBanner({ phase: "enemy", serial: ++feedbackSerial.current });
@@ -163,6 +166,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     };
     const playCue = (cue: FeedbackCue) => {
       if (skipRef.current || reducedRef.current) return;
+      setPlayback(current => current ? { ...current, playedIndex: cue.eventIndex } : null);
       if (cue.kind === "winch") setWinchFeedback({ total: cue.total, delta: cue.delta, serial: ++feedbackSerial.current });
       if (cue.kind === "landing") {
         const arrival = { unit: cue.unit, cell: cue.cell, serial: ++feedbackSerial.current, expiresAt: performance.now() + 180 };
@@ -225,6 +229,8 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
   }
   const endTurn = () => apply({ type: "resolve", turn: stateRef.current.turn });
   const active = state.status === "playing";
+  const blockedUnits = playback ? blockedAtEventIndex(playback.events, playback.playedIndex)
+    : new Set(intents.filter(e => e.reason === "blocked").map(e => e.unit));
   const winchFx = !skip && !reduced ? settledCue?.winch || winchFeedback : null;
   const blockFx = !skip && !reduced ? settledCue?.blocks || blocks : null;
   const inspectedUnit = state.units.find(u => u.id === (hovered || inspected));
@@ -352,8 +358,8 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
             </g>;
           })}
           </g>
-          {active && intents.filter(e => e.reason === "blocked").map(e => <BlockedMarker key={e.unit}
-            unit={e.unit} cell={visualUnits.find(u => u.id === e.unit)!.cell} label={names[e.unit]} />)}
+          {active && [...blockedUnits].map(unit => <BlockedMarker key={unit}
+            unit={unit} cell={visualUnits.find(u => u.id === unit)!.cell} label={names[unit]} />)}
           {blockFx && <g key={blockFx.serial} className="p1v-feedback-layer" aria-hidden="true">
             {blockFx.items.map(b => {
               const p = center(b.cell), ally = b.ally ? center(b.ally) : null;
