@@ -18,6 +18,9 @@ const initialMessage = "選擇我方單位，再點亮格移動。";
 type Frame = { unit: string; from: Cell; to: Cell; progress: number };
 type Arrival = { unit: string; cell: Cell; serial: number; expiresAt: number };
 type BlockFeedback = { unit: string; cell: Cell; ally?: Cell; allyId?: string; dx: number; dy: number };
+type WinchFeedback = { total: number; delta: number; serial: number };
+type BlockBundle = { items: BlockFeedback[]; serial: number };
+type SettledCue = { serial: number; expiresAt: number; blocks: BlockBundle | null; winch: WinchFeedback | null };
 
 export function PlayableL03({ onExit }: { onExit: () => void }) {
   const [state, setState] = useState(start);
@@ -30,8 +33,9 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
   const [phase, setPhase] = useState<"ally" | "enemy">("ally");
   const [banner, setBanner] = useState<{ phase: "ally" | "enemy"; serial: number } | null>(null);
   const [arrivals, setArrivals] = useState<Arrival[]>([]);
-  const [winchFeedback, setWinchFeedback] = useState<{ total: number; delta: number; serial: number } | null>(null);
-  const [blocks, setBlocks] = useState<{ items: BlockFeedback[]; serial: number } | null>(null);
+  const [winchFeedback, setWinchFeedback] = useState<WinchFeedback | null>(null);
+  const [blocks, setBlocks] = useState<BlockBundle | null>(null);
+  const [settledCue, setSettledCue] = useState<SettledCue | null>(null);
   const [confirmed, setConfirmed] = useState<{ cell: Cell; serial: number } | null>(null);
   const feedbackSerial = useRef(0);
   const resolving = useRef(false);
@@ -102,7 +106,14 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     return () => window.clearTimeout(timer);
   }, [confirmed]);
   useEffect(() => {
-    if (skip || reduced) { setWinchFeedback(null); setArrivals([]); setBlocks(null); setConfirmed(null); }
+    if (!settledCue) return;
+    const { serial, expiresAt } = settledCue;
+    const timer = window.setTimeout(() => setSettledCue(current => current?.serial === serial ? null : current),
+      Math.max(1, expiresAt - performance.now()));
+    return () => window.clearTimeout(timer);
+  }, [settledCue]);
+  useEffect(() => {
+    if (skip || reduced) { setWinchFeedback(null); setArrivals([]); setBlocks(null); setConfirmed(null); setSettledCue(null); }
   }, [skip, reduced]);
 
   // Both legal highlights and intent are pure queries against the SAME state.
@@ -122,7 +133,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     if (busyRef.current) return;
     const result = command(stateRef.current, input);
     if (!result.ok) { setMessage("無法執行；請選擇亮格或可行動的我方。" ); return; }
-    setSelected(null); setInspected(null); setHovered(null); setHoverCell(null); setArrivals([]); setWinchFeedback(null); setBlocks(null);
+    setSelected(null); setInspected(null); setHovered(null); setHoverCell(null); setArrivals([]); setWinchFeedback(null); setBlocks(null); setSettledCue(null);
     setConfirmed(input.type === "move" && !skipRef.current && !reducedRef.current
       ? { cell: input.to, serial: ++feedbackSerial.current } : null);
     if (input.type === "resolve" || input.type === "retry") setWaited([]);
@@ -139,7 +150,17 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     } else setBanner(null);
     setMessage(input.type === "resolve" ? "敵方行動中…" : "移動中…");
     const timeline = buildFeedbackTimeline(result.events, 230);
+    const presentationStart = stateRef.current;
     let nextCue = 0;
+    const blockFor = (cue: FeedbackCue & { kind: "block" }): BlockFeedback => {
+      const atEvent = stateBeforeEvent(presentationStart, result.events, cue.eventIndex);
+      const unit = atEvent.units.find(u => u.id === cue.unit)!;
+      const ally = confirmedContactBlocker(atEvent, cue.unit);
+      const from = center(unit.cell), toward = center(ally?.cell || MAP.winch);
+      const length = Math.hypot(from.x-toward.x, from.y-toward.y) || 1;
+      return { unit: cue.unit, cell: unit.cell, ally: ally?.cell, allyId: ally?.id,
+        dx: ally ? (from.x-toward.x)/length*7 : 0, dy: ally ? (from.y-toward.y)/length*7 : 0 };
+    };
     const playCue = (cue: FeedbackCue) => {
       if (skipRef.current || reducedRef.current) return;
       if (cue.kind === "winch") setWinchFeedback({ total: cue.total, delta: cue.delta, serial: ++feedbackSerial.current });
@@ -148,13 +169,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
         setArrivals(items => [...items, arrival]);
       }
       if (cue.kind === "block") {
-        const atEvent = stateBeforeEvent(stateRef.current, result.events, cue.eventIndex);
-        const unit = atEvent.units.find(u => u.id === cue.unit)!;
-        const ally = confirmedContactBlocker(atEvent, cue.unit);
-        const from = center(unit.cell), toward = center(ally?.cell || MAP.winch);
-        const length = Math.hypot(from.x-toward.x, from.y-toward.y) || 1;
-        const item = { unit: cue.unit, cell: unit.cell, ally: ally?.cell, allyId: ally?.id,
-          dx: ally ? (from.x-toward.x)/length*7 : 0, dy: ally ? (from.y-toward.y)/length*7 : 0 };
+        const item = blockFor(cue);
         setBlocks(previous => ({ items: [...(previous?.items || []), item], serial: ++feedbackSerial.current }));
       }
     };
@@ -164,8 +179,21 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     const steps = result.events.flatMap(e => e.type === "move" ? e.path.slice(1).map((to, i) =>
       ({ unit: e.unit, from: e.path[i], to })) : []);
     if (skipRef.current || reducedRef.current) { finish(); return; }
+    if (!steps.length) {
+      // Zero-step feedback has its own lifetime AFTER settlement; it never owns
+      // pending/busy or schedules another rule commit, RAF or input delay.
+      finish();
+      const items = timeline.flatMap(cue => cue.kind === "block" ? [blockFor(cue)] : []);
+      const winch = timeline.find(cue => cue.kind === "winch");
+      if (items.length || winch?.kind === "winch") {
+        const serial = ++feedbackSerial.current;
+        setSettledCue({ serial, expiresAt: performance.now() + 750,
+          blocks: items.length ? { items, serial } : null,
+          winch: winch?.kind === "winch" ? { total: winch.total, delta: winch.delta, serial } : null });
+      }
+      return;
+    }
     playThrough(0);
-    if (!steps.length) { finish(); return; }
     let index = 0, began = performance.now(), units = stateRef.current.units;
     const tick = (now: number) => {
       if (!pending.current) return;
@@ -184,6 +212,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
   }
   function pick(p: Cell) {
     if (busyRef.current || stateRef.current.status !== "playing") return;
+    setSettledCue(null);
     const occupant = state.units.find(u => u.alive && key(u.cell) === key(p));
     setInspected(occupant?.id || null);
     if (occupant?.side === "ally") {
@@ -196,8 +225,8 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
   }
   const endTurn = () => apply({ type: "resolve", turn: stateRef.current.turn });
   const active = state.status === "playing";
-  const winchFx = !skip && !reduced ? winchFeedback : null;
-  const blockFx = !skip && !reduced ? blocks : null;
+  const winchFx = !skip && !reduced ? settledCue?.winch || winchFeedback : null;
+  const blockFx = !skip && !reduced ? settledCue?.blocks || blocks : null;
   const inspectedUnit = state.units.find(u => u.id === (hovered || inspected));
   // Sort actual animated foot positions, including a stable column tie-breaker.
   const actors = visualUnits.filter(u => u.alive).map(u => {
@@ -208,6 +237,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
   }).sort((a,b) => a.p.y-b.p.y || a.p.x-b.p.x || a.u.id.localeCompare(b.u.id));
   return <main className="l03-app p1v" ref={root} tabIndex={-1} data-p1v-status={state.status} data-p1v-dev={dev}
     data-p1v-motion={!skip && !reduced}
+    data-p1v-settled-cue={!skip && !reduced && settledCue ? settledCue.serial : undefined}
     data-p1v-turn={state.turn} data-p1v-progress={state.progress} data-p1v-busy={busy}
     data-p1v-selected={selected || ""} data-p1v-state={JSON.stringify(state)} data-p1v-waited={waited.join(",")}
     data-p1v-inspected={inspected || ""}
@@ -360,7 +390,7 @@ export function PlayableL03({ onExit }: { onExit: () => void }) {
     </div>
     <footer className="p1v-controls">
       <div><p role="status" data-p1v-message>{message}</p><span>點選／空白鍵：選格　方向鍵：焦點　Esc：取消　Enter：結束回合</span></div>
-      <button disabled={!selected || busy || !active} onClick={() => { if (!selected) return; setWaited(w => [...w,selected]); setSelected(null); setMessage("已等待，本回合不再移動。" ); }}>等待</button>
+      <button disabled={!selected || busy || !active} onClick={() => { if (!selected) return; setSettledCue(null); setWaited(w => [...w,selected]); setSelected(null); setMessage("已等待，本回合不再移動。" ); }}>等待</button>
       <button className="p1v-primary" disabled={busy || !active} data-p1v-end onClick={e => { if (e.detail < 2) endTurn(); }}>{busy ? "行動中…" : "結束回合"}</button>
     </footer>
     </div>
