@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-23T06:18:13.862Z",
+  "started_at": "2026-10-23T06:26:19.247Z",
   "browser": {
     "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
     "bytes": 4586648,
@@ -12,7 +12,7 @@
     "ui-prototype/src/playable-l03/presentation.tsx": "4fe324a93c441541b4fbe18c06e407810b88b35aad99aa6eb025dd97e843a2bf",
     "ui-prototype/src/playable-l03/playable.css": "8c46eb4a90530e410268d9c2fdcf17941038dbc5e0d4276abae704a00bccf3a3",
     "ui-prototype/src/playable-l03/rules.ts": "42f70baac448476dca3dd0abcb766b867cb692b448d951e08404482700592d76",
-    "ui-prototype/tests/playable-l03-p1v6-browser.mjs": "83f3f9136bedff31a8bb76a3c8f6756e181e8422503049310af08b1b11c66752",
+    "ui-prototype/tests/playable-l03-p1v6-browser.mjs": "37830e067398c2264ad55c8d338463f7336fe90d26490ea13702405d744ce6f4",
     "ui-prototype/docs/art-prompts.json": "ac560c1031cf52872a8cc0cb55346e1680e9a716d25b234e22e23d90371a9af3",
     "ui-prototype/docs/art-manifest.json": "8925ee8ac305769c2b6d015fc3573f195d1eeaaa2279fa022c539877d4a4cdd7",
     "ui-prototype/public/art/l03-p1v6/winch-frames.png": "d7c8a208aa9f3e73865f5633c4a336446c79e1ebaa956e82f031751b1b015c25",
@@ -28,13 +28,13 @@
         {
           "kind": "busy",
           "busy": "true",
-          "time": 511.2000000476837
+          "time": 456.5
         },
         {
           "kind": "landing",
           "unit": "knight-1",
           "cell": "1,5",
-          "time": 1215,
+          "time": 1172.8999999761581,
           "busy": "true",
           "turn": "1",
           "state": {
@@ -102,7 +102,7 @@
           "kind": "landing",
           "unit": "knight-2",
           "cell": "3,5",
-          "time": 1928.2000000476837,
+          "time": 1866.1000000238419,
           "busy": "false",
           "turn": "2",
           "state": {
@@ -169,7 +169,7 @@
         {
           "kind": "busy",
           "busy": "false",
-          "time": 1928.3000000715256
+          "time": 1866.1000000238419
         }
       ]
     },
@@ -177,7 +177,40 @@
       "name": "independent landing effects expire without extending the existing input lock"
     },
     {
-      "name": "actual 720p sequence plays rest, turn A, turn B and jerk frames with painted taut rope and no extra lock"
+      "name": "actual 720p compositor sequence plays rest, turn A, turn B and jerk frames with painted taut rope and no extra lock",
+      "phases": [
+        {
+          "frame": null,
+          "time": 1792736786416.0999,
+          "rope": null
+        },
+        {
+          "frame": "0",
+          "time": 1792736786470.2,
+          "rope": "/art/l03-p1v6/rope-states.png"
+        },
+        {
+          "frame": "1",
+          "time": 1792736786594.9,
+          "rope": "/art/l03-p1v6/rope-states.png"
+        },
+        {
+          "frame": "2",
+          "time": 1792736786736.0999,
+          "rope": "/art/l03-p1v6/rope-states.png"
+        },
+        {
+          "frame": "3",
+          "time": 1792736786876.9,
+          "rope": "/art/l03-p1v6/rope-states.png"
+        },
+        {
+          "frame": null,
+          "time": 1792736787179.2,
+          "rope": null
+        }
+      ],
+      "compositor_frames": 44
     },
     {
       "name": "2/3 warning rests on the painted ember drum; rope returns to slack after transient feedback"
@@ -207,13 +240,13 @@
   "captures": [
     {
       "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-landing-1-knight-1.png",
-      "sha256": "fb4349f64d9052b112ec7b54059cbb70f898a447bb76de3bb4ee47853a02b6fb",
+      "sha256": "434cd729446161315087dc7aae33e4071bfaad0380ffc25c0b5f5f5a4b4446e0",
       "viewport": {
         "width": 1280,
         "height": 720
       },
       "before": {
-        "time": 1028.6999999284744,
+        "time": 1025.1000000238419,
         "busy": "true",
         "frames": [
           "0"
@@ -282,13 +315,13 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-landing-2-knight-2.png",
-      "sha256": "83bc33882efdd5309bc1d5500c560283d02b57b72326f7aea4b3261bb17bc4c8",
+      "sha256": "e6996d972688ad638b264824788433ee8eff01bafb02799c55a24387479d2385",
       "viewport": {
         "width": 1280,
         "height": 720
       },
       "before": {
-        "time": 1750.8999999761581,
+        "time": 1718.2000000476837,
         "busy": "false",
         "frames": [
           "0"
@@ -357,18 +390,18 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-winch-turn-00.png",
-      "sha256": "7b20f8a1dbbb33df7753ba27354d376b73adc9eaea925d6d07af3ced4772bea1",
+      "sha256": "ec1f878b6ee3bc84ceed630d29fe3293ba1d1da78e124002bd52762fa2fa69c8",
       "viewport": {
         "width": 1280,
         "height": 720
       },
-      "before": {
-        "time": 526.1999999284744,
-        "busy": "false",
-        "frames": [
-          "0"
-        ]
-      },
+      "frame_index": "0",
+      "compositor_timestamp": 1792736786531.038,
+      "phase_interval": [
+        1792736786470.2,
+        1792736786594.9
+      ],
+      "provenance": "Unmodified Chrome screencast PNG selected inside recorded live CSS frame interval",
       "state": {
         "route": "open",
         "config": {
@@ -432,18 +465,18 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-winch-turn-01.png",
-      "sha256": "4a0f8cfd7407ff7b192b161f188706b3f8a16a8481d020fd8afb31a10646a418",
+      "sha256": "bc8ac255401a90716c907388a17f39a5fe29547c14e0603151806d30a1657500",
       "viewport": {
         "width": 1280,
         "height": 720
       },
-      "before": {
-        "time": 731.2999999523163,
-        "busy": "false",
-        "frames": [
-          "1"
-        ]
-      },
+      "frame_index": "1",
+      "compositor_timestamp": 1792736786668.509,
+      "phase_interval": [
+        1792736786594.9,
+        1792736786736.0999
+      ],
+      "provenance": "Unmodified Chrome screencast PNG selected inside recorded live CSS frame interval",
       "state": {
         "route": "open",
         "config": {
@@ -507,18 +540,18 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-winch-turn-02.png",
-      "sha256": "0896b0b2db368e66c56855829b27218b21ec814376cc34d5682c8d2e2214ccff",
+      "sha256": "aa5594e960413a520524a39d8d511db233f49696d8dacdc240e0e727bd6f10da",
       "viewport": {
         "width": 1280,
         "height": 720
       },
-      "before": {
-        "time": 926.8999999761581,
-        "busy": "false",
-        "frames": [
-          "3"
-        ]
-      },
+      "frame_index": "2",
+      "compositor_timestamp": 1792736786809.905,
+      "phase_interval": [
+        1792736786736.0999,
+        1792736786876.9
+      ],
+      "provenance": "Unmodified Chrome screencast PNG selected inside recorded live CSS frame interval",
       "state": {
         "route": "open",
         "config": {
@@ -582,18 +615,18 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-winch-turn-03.png",
-      "sha256": "d93cb5a561f3951784b345aa0608aacb62fe867fe6b7b4576da8b69706ae7ca8",
+      "sha256": "c5a68f8579b796fcafd73bb57dc209f60fe575875fb32c81ad2aa820321d8356",
       "viewport": {
         "width": 1280,
         "height": 720
       },
-      "before": {
-        "time": 1121.2999999523163,
-        "busy": "false",
-        "frames": [
-          "3"
-        ]
-      },
+      "frame_index": "3",
+      "compositor_timestamp": 1792736787021.7842,
+      "phase_interval": [
+        1792736786876.9,
+        1792736787179.2
+      ],
+      "provenance": "Unmodified Chrome screencast PNG selected inside recorded live CSS frame interval",
       "state": {
         "route": "open",
         "config": {
@@ -657,13 +690,13 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-warning-2-of-3.png",
-      "sha256": "e780bc692880b3b187e1217323e23904bdecfeff2f66557bdff76661ddbe0b26",
+      "sha256": "b5d168099a5be66470ba833fb3696e6cd2cc38319a35a09c1c5d88484ccf04e1",
       "viewport": {
         "width": 1280,
         "height": 720
       },
       "before": {
-        "time": 2169.2999999523163,
+        "time": 2196.6999999284744,
         "busy": "false",
         "frames": [
           "3"
@@ -732,13 +765,13 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-blocked-marker-preview.png",
-      "sha256": "37fc22f6277960f078276f398edb9a7254f440bb927ae2b8c175bc5d050b39ee",
+      "sha256": "a0c16268b74057993f1162e876240cb8d228a1ce70b44c377f0e9309742844c4",
       "viewport": {
         "width": 1280,
         "height": 720
       },
       "before": {
-        "time": 910.2000000476837,
+        "time": 952.7999999523163,
         "busy": "false",
         "frames": [
           "0"
@@ -807,13 +840,13 @@
     },
     {
       "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-confirmed-block-spark.png",
-      "sha256": "230d5245a40574e673e7813b30faac8e1d9865e8da0c37a09f006a94ac2f34b3",
+      "sha256": "d6532f0df433e9747efe9936f8eb6599ab3089e090972332dfbddcb997925b86",
       "viewport": {
         "width": 1280,
         "height": 720
       },
       "before": {
-        "time": 2002.3999999761581,
+        "time": 2061.5,
         "busy": "false",
         "frames": [
           "0"
@@ -884,5 +917,5 @@
   "errors": [],
   "human_playtest": "HUMAN_PENDING",
   "exit_code": 0,
-  "finished_at": "2026-10-23T06:18:32.720Z"
+  "finished_at": "2026-10-23T06:26:38.202Z"
 }

@@ -15,7 +15,11 @@ for(const file of reports){
 }
 assert.equal(checks,79);
 const feedback=JSON.parse(fs.readFileSync(path.join(dir,'feedback-results.json')));
-for(let i=0;i<4;i++)assert.deepEqual(feedback.captures.find(c=>c.path.endsWith(`winch-turn-0${i}.png`)).before.frames,[String(i)]);
+for(let i=0;i<4;i++){
+  const frame=feedback.captures.find(c=>c.path.endsWith(`winch-turn-0${i}.png`));
+  assert.equal(frame.frame_index,String(i));
+  assert(frame.compositor_timestamp>=frame.phase_interval[0] && frame.compositor_timestamp<frame.phase_interval[1]);
+}
 const original=JSON.parse(fs.readFileSync(path.join(root,'ui-prototype/docs/playable-l03-p1v5/feedback-results.json')));
 assert.equal(hash(fs.readFileSync(path.join(root,'ui-prototype/src/playable-l03/rules.ts'))),original.source_sha256['ui-prototype/src/playable-l03/rules.ts']);
 for(const name of ['landing-1-knight-1','landing-2-knight-2','winch-turn-00','winch-turn-01','winch-turn-02','winch-turn-03','warning-2-of-3','blocked-marker-preview','confirmed-block-spark'])

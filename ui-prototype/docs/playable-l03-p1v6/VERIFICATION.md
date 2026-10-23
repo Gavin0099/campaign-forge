@@ -91,9 +91,11 @@ These are unmodified browser PNGs at **1280×720**, not generated mockups:
 - `1280x720-blocked-marker-preview.png`
 - `1280x720-confirmed-block-spark.png`
 
-The four winch images are a short continuous live frame sequence; capture
-metadata records visible frame indices 0, 1, 2, 3. Production timing was not
-slowed. Each dust screenshot uses a separate real replay so screenshot
+The four winch images are a short continuous live compositor sequence. Chrome
+streams PNGs while requestAnimationFrame records the actual CSS frame intervals
+and painted taut-rope source. Each selected PNG's frame-swap timestamp lies
+inside its recorded interval for index 0, 1, 2 or 3; the PNG bytes are unchanged.
+Production timing was not slowed. Each dust screenshot uses a separate real replay so screenshot
 encoding cannot obscure observation of the next 180ms event. The complete
 two-mover timing assertion uses one uninterrupted enemy phase, independently
 of screenshot timing. Both-size regression captures are in the five
@@ -117,7 +119,7 @@ Only the existing original P1v4 props and battlefield were supplied as visual
 references. Non-destructive SVG crops align generated padding and footings.
 No generated art was rejected for style; no `*-attempt-NN.png` art is omitted.
 
-Two verification attempts are deliberately retained:
+Three verification attempts are deliberately retained:
 
 1. `attempts/attempt-01/`: test exit 1, missed second short dust while parallel
    browser suites were capturing. The original report, first screenshot and
@@ -130,6 +132,15 @@ Two verification attempts are deliberately retained:
    here. `eefce15` moves the filter to the image inside an explicitly clipped
    viewport. New assertions cover clip overflow and filter placement; actual
    replacement screenshots show one winch. All affected suites were rerun.
+3. `attempts/attempt-03/`: browser report exit 0, stricter evidence verifier
+   exit **1** because sequential screenshot encoding crossed from turn-B to
+   jerk before its metadata read. `6d87c20` was mistakenly committed after
+   that failed check and is **superseded as verification evidence** by the
+   following correction commit. The original report, mismatched turn image,
+   stale audit and actual verifier exit/log are preserved. The harness now
+   streams compositor PNGs continuously and selects by frame-swap timestamps
+   inside measured live CSS intervals. The frame-index assertion stays strict;
+   no animation speed or rule code was changed. The corrected audit passes.
 
 Early shell probes also encountered sandbox Python lookup and PowerShell
 native-string quoting failures; the final file-based recorder used the

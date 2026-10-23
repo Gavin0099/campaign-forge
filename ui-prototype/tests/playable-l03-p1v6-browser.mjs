@@ -104,15 +104,44 @@ try {
   }
 
   await load();await prime();
-  const frameSeen=page.waitForFunction(()=>!!document.querySelector('.p1v-winch-jerk'));
-  await page.locator('[data-p1v-end]').click();await frameSeen;
+  // Capture compositor frames continuously. Sequential screenshot calls may
+  // cross a short sprite interval while encoding a previous PNG.
+  const cdp=await context.newCDPSession(page),film=[];
+  const onFrame=frame=>{film.push(frame);void cdp.send('Page.screencastFrameAck',{sessionId:frame.sessionId});};
+  cdp.on('Page.screencastFrame',onFrame);
+  await page.evaluate(()=>{
+    window.winchPhases=[];window.recordWinch=true;
+    const sample=()=>{
+      const frame=document.querySelector('.p1v-winch-jerk [data-p1v-winch-frame]');
+      const visible=frame?[...document.querySelectorAll('[data-p1v-winch-frame]')].find(n=>getComputedStyle(n).opacity==='1')?.dataset.p1vWinchFrame:null;
+      if(visible!==window.winchPhases.at(-1)?.frame)window.winchPhases.push({frame:visible,time:performance.timeOrigin+performance.now(),
+        rope:document.querySelector('[data-p1v-rope-state="taut"] image')?.getAttribute('href') || null});
+      if(window.recordWinch)requestAnimationFrame(sample);
+    };requestAnimationFrame(sample);
+  });
+  await cdp.send('Page.startScreencast',{format:'png',maxWidth:1280,maxHeight:720,everyNthFrame:1});
+  await page.locator('[data-p1v-end]').click();
+  await page.waitForTimeout(750);
+  await cdp.send('Page.stopScreencast');cdp.off('Page.screencastFrame',onFrame);await cdp.detach();
+  const phases=await page.evaluate(()=>{window.recordWinch=false;return window.winchPhases;});
+  assert.deepEqual(phases.filter(p=>p.frame!=null).map(p=>p.frame),['0','1','2','3']);
+  assert(phases.filter(p=>p.frame!=null).every(p=>p.rope==='/art/l03-p1v6/rope-states.png'));
+  const winning=film.map(f=>({...f,time:f.metadata.timestamp*1000})).filter(f=>Number.isFinite(f.time));
   for(let i=0;i<4;i++){
-    await page.waitForFunction(index=>{const n=document.querySelector(`[data-p1v-winch-frame="${index}"]`);return n && getComputedStyle(n).opacity==='1';},i,{polling:'raf',timeout:1800});
-    assert.equal(await page.locator('[data-p1v-rope-state="taut"] image').getAttribute('href'),'/art/l03-p1v6/rope-states.png');
-    await capture(`winch-turn-0${i}`);
+    const index=phases.findIndex(p=>p.frame===String(i)),begin=phases[index].time,end=phases[index+1]?.time;
+    assert(Number.isFinite(end));
+    const candidates=winning.filter(f=>f.time>=begin && f.time<end);
+    assert(candidates.length,`no compositor frame for phase ${i}`);
+    const chosen=candidates.sort((a,b)=>Math.abs(a.time-(begin+end)/2)-Math.abs(b.time-(begin+end)/2))[0];
+    const file=`1280x720-winch-turn-0${i}.png`,bytes=Buffer.from(chosen.data,'base64');
+    assert.equal(bytes.readUInt32BE(16),1280);assert.equal(bytes.readUInt32BE(20),720);
+    fs.writeFileSync(path.join(output,file),bytes);
+    captures.push({path:`${evidenceDir}/${file}`,sha256:hash(bytes),viewport:page.viewportSize(),
+      frame_index:String(i),compositor_timestamp:chosen.time,phase_interval:[begin,end],
+      provenance:'Unmodified Chrome screencast PNG selected inside recorded live CSS frame interval',state:await state()});
   }
   await settled();assert.equal((await state()).progress,2);assert.equal(await page.locator('[data-p1v-end]').isEnabled(),true);
-  pass('actual 720p sequence plays rest, turn A, turn B and jerk frames with painted taut rope and no extra lock');
+  pass('actual 720p compositor sequence plays rest, turn A, turn B and jerk frames with painted taut rope and no extra lock',{phases,compositor_frames:film.length});
   await page.waitForTimeout(800);assert.equal(await page.locator('[data-p1v-rope-state="slack"]').count(),1);
   assert.equal(await page.locator('[data-p1v-winch-painted][data-warning="true"] .frame-3.p1v-winch-alert').evaluate(n=>getComputedStyle(n).opacity),'1');
   assert.equal(await page.locator('.p1v-winch-alert').evaluate(n=>getComputedStyle(n).filter),'none');
