@@ -1,4 +1,10 @@
-## 最新使用者指示：僅P1v5戰場互動回饋（2026-10-23）
+## 最新使用者指示：P1v6 feedback and winch（2026-10-23）
+
+使用者：Gavin 13:49 確認只有本 Codex session 使用此 worktree；在既有 codex/playable-l03-research@fc266cb 執行 P1v6 五步，逐步小 commit，再驗證與 handoff commit 後停等 review。只 commit、不 push／main／PR／stash；不改 rules.ts、規則結果或 npm 依賴。內建 image_gen 生成手繪絞盤／繩索並保留提示與雜湊。
+
+代理觀察：五步已分別保存 5d282ca／261d14c／dfb82d0／b8b6ef4／1550c8a；eefce15 修正實機截圖發現的警告濾鏡漏出圖集問題。回饋在事件位置播放，最後落地與原本 finish 同一邊界，規則仍只提交一次；移除相鄰同伴的反事實 resolve 查詢確認接觸者，沒有唯一接觸者則只顯示受阻狀態。落塵各自到期；靜態斷鏈標記不受 Reduced Motion／skip 影響。兩份生成原稿沒有風格退件；截圖時序初次逾時與漏出圖集的執行畫面另存 attempts。新驗收與原斷言回歸分開記錄於 ui-prototype/docs/playable-l03-p1v6/VERIFICATION.md；真人試玩／Owner 美術 HUMAN_PENDING。共享 PLAN 與本檔持自有鎖；本輪最新 commit-only 指示優先於舊 push 流程。任務 DONE 非 SessionEnd，不自行寫 canonical 日記。
+
+## 歷史使用者指示：僅P1v5戰場互動回饋（2026-10-23）
 
 使用者：3c95f0e已同步、不pull；60分鐘只做P1v5四步，每步commit以保留部分成果。Owner確認同worktree無另一代理。presentation only，不改rules.ts、不碰scratch worktrees、不加npm依賴；commit後嘗試push，失敗留本機，不main／PR／stash。
 

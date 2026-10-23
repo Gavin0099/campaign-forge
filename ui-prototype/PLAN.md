@@ -10,6 +10,13 @@
 
 ## Slices
 
+### Authorized P1v6: per-event feedback and painted winch — 2026-10-23
+
+See the P1v6 milestone at the end of this file and
+`docs/playable-l03-p1v6/VERIFICATION.md`. Latest Owner authority is commit only;
+the older push instructions below are historical. Five priorities implemented;
+engineering evidence and human acceptance remain separate.
+
 ### Authorized P1v5: battlefield interaction feedback — 2026-10-23
 
 使用者：以乾淨且同步的 `codex/playable-l03-research@3c95f0e` 接續，只做四項P1v5互動回饋，60分鐘上限，依序每步commit；不pull、不改rules.ts、不碰scratch worktrees、不加依賴。Owner確認本worktree無其他代理。commit後嘗試正常push，失敗留本機。
@@ -165,3 +172,25 @@ Visual Sprint已知限制：平面沙盤／河岸方格感、材質重複、靜�
 2026-10-20 Windows 工作副本：恢復固定框架並安裝本機 hooks；UI 治理 smoke 改用 repo runtime root 與明確的 UI 計畫，不再依賴符號連結。readiness 17/17、drift、hook 安裝檢查與 UI runtime smoke 通過；證據及本機交付界線見 governance/ADOPTION-STATUS.md。本輪僅處理治理，未修改 UI 行為或重新宣稱瀏覽器驗收。
 
 2026-10-20 治理補線：SessionStart／UserPromptSubmit／Stop／SessionEnd 分工、故事保護的 hard stop、執行證據及完整導入宣稱檢查已實作。Stop 不作正式收尾，SessionEnd 經 canonical entry 執行；設定為本機產生，須由使用者檢閱信任。本輪不改故事、UI 行為或 S4 狀態。
+
+## P1v6 feedback and winch — 2026-10-23
+
+Owner instruction: execute the five P1v6 presentation priorities on the existing
+`codex/playable-l03-research` branch, commit each step, then verification and
+handoff; **commit only, no push**. Gavin confirmed this is the only session in
+this worktree. Rules, outcomes, dependencies and story remain outside this change.
+
+Implemented per-event feedback on the existing path-step clock, counterfactual
+contact checks using the unchanged resolver, independent landing lifetimes,
+static broken-chain markers, and two built-in image_gen atlases (four painted
+winch frames and slack/taut rope). The rule state still settles once in finish;
+the final landing shares that boundary rather than adding an animation lock.
+Skip and Reduced Motion cancel transient cues; static blocked state remains.
+
+Actual screenshot review found the warning filter exposing adjacent atlas
+frames. The correction filters pixels inside explicit SVG viewport clipping.
+The failed timing capture and visually defective first verification remain in
+`docs/playable-l03-p1v6/attempts/`; generation itself had no rejected attempts.
+Current commands, source-bound execution evidence and actual 720p / 1080p
+captures are documented in `docs/playable-l03-p1v6/VERIFICATION.md`.
+Human playtest remains HUMAN_PENDING; no Owner art acceptance is claimed.

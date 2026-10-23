@@ -10,7 +10,8 @@ const binding=JSON.parse(fs.readFileSync(path.join(root,'.codex/visual-browser-b
 assert(path.isAbsolute(binding.path)); assert.equal(fs.realpathSync(binding.path),binding.path);
 assert.equal(fs.statSync(binding.path).size,binding.bytes); assert.equal(hash(fs.readFileSync(binding.path)),binding.sha256);
 const {chromium}=await import('playwright');
-const output=path.join(root,'ui-prototype/docs/playable-l03-p1v5');
+const evidenceDir=process.argv.includes('--p1v6') ? 'ui-prototype/docs/playable-l03-p1v6/p1v5-regression' : 'ui-prototype/docs/playable-l03-p1v5';
+const output=path.join(root,evidenceDir);
 const scratch=path.join(root,'scratch/playable-l03-p1v5-browser');
 fs.mkdirSync(output,{recursive:true});fs.mkdirSync(scratch,{recursive:true});
 const env=Object.fromEntries(['SystemRoot','WINDIR','SystemDrive'].filter(k=>process.env[k]).map(k=>[k,process.env[k]]));
@@ -20,14 +21,14 @@ const url='http://127.0.0.1:5183/?scene=playable-l03';
 await context.route('**/*',r=>new URL(r.request().url()).origin===new URL(url).origin?r.continue():r.abort());
 const page=context.pages()[0],checks=[],captures=[],errors=[];
 page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
-const sources=['PlayableL03.tsx','presentation.tsx','playable.css','rules.ts'].map(f=>`ui-prototype/src/playable-l03/${f}`).concat('ui-prototype/tests/playable-l03-p1v5-browser.mjs');
+const sources=['feedback.ts','PlayableL03.tsx','presentation.tsx','playable.css','rules.ts'].map(f=>`ui-prototype/src/playable-l03/${f}`).concat('ui-prototype/tests/playable-l03-p1v5-browser.mjs');
 const report={started_at:new Date().toISOString(),browser:binding,source_sha256:Object.fromEntries(sources.map(f=>[f,hash(fs.readFileSync(path.join(root,f)))])),checks,captures,errors,human_playtest:'HUMAN_PENDING'};
 const initial=()=>initialState('open',{...DEFAULT_CONFIG,p0c:{survivalTurns:6}});
 const state=()=>page.locator('[data-p1v-state]').getAttribute('data-p1v-state').then(JSON.parse);
 const settled=()=>page.waitForSelector('[data-p1v-busy="false"]');
 function pass(name,details={}){checks.push({name,...details});console.log(`PASS ${checks.length}: ${name}`);}
 async function load(){await page.goto(url);await settled();await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...new Set([...document.querySelectorAll('svg image')].map(n=>n.getAttribute('href')))].map(async src=>{const i=new Image();i.src=src;await i.decode();}));});assert.deepEqual(await state(),initial());}
-async function capture(name){const file=`1280x720-${name}.png`;await page.screenshot({path:path.join(output,file)});captures.push({path:`ui-prototype/docs/playable-l03-p1v5/${file}`,sha256:hash(fs.readFileSync(path.join(output,file))),state:await state()});}
+async function capture(name){const file=`1280x720-${name}.png`;await page.screenshot({path:path.join(output,file)});captures.push({path:`${evidenceDir}/${file}`,sha256:hash(fs.readFileSync(path.join(output,file))),state:await state()});}
 async function turn(){const before=await state(),expected=resolve(before,before.turn);await page.locator('[data-p1v-end]').click();await settled();assert.deepEqual(await state(),expected.state);return expected;}
 async function prime(){await page.getByLabel('跳過動畫').check();for(let i=0;i<3;i++)await turn();await page.getByLabel('跳過動畫').uncheck();}
 async function blockSetup(){

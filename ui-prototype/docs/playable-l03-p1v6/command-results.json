@@ -1,0 +1,34 @@
+{
+  "finished_at": "2026-10-23T14:16:05.8661143+08:00",
+  "checks": [
+    {
+      "command": "node --experimental-strip-types ui-prototype/tests/playable-l03-p0.mjs",
+      "exit_code": 0
+    },
+    {
+      "command": "node --experimental-strip-types ui-prototype/tests/playable-l03-p0b.mjs",
+      "exit_code": 0
+    },
+    {
+      "command": "node --experimental-strip-types ui-prototype/tests/playable-l03-p0c.mjs",
+      "exit_code": 0
+    },
+    {
+      "command": "node --experimental-strip-types ui-prototype/tests/playable-l03-p1v6-feedback.mjs",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run build --prefix ui-prototype",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/validate_ui_scope.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/record_governance_checks.py",
+      "exit_code": 0
+    }
+  ],
+  "human_playtest": "HUMAN_PENDING"
+}

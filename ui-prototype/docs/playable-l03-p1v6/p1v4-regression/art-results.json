@@ -1,0 +1,1898 @@
+{
+  "started_at": "2026-10-23T06:18:08.714Z",
+  "browser": {
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "bytes": 4586648,
+    "sha256": "f76f0234efb271041dc84f9f38fb858e01859d5da6f775f5108668eb3ae80975",
+    "scope": "local UI browser acceptance only"
+  },
+  "source_sha256": {
+    "ui-prototype/src/playable-l03/feedback.ts": "a5d33b1f7f9ff3306ff2215ddf0d4b2aea321e0d8467adaa95f78ff6397f6788",
+    "ui-prototype/src/playable-l03/PlayableL03.tsx": "a10c42b192260e3614b3ce54c2ea370ee52e32e7493eac3456589161df8b76dc",
+    "ui-prototype/src/playable-l03/presentation.tsx": "4fe324a93c441541b4fbe18c06e407810b88b35aad99aa6eb025dd97e843a2bf",
+    "ui-prototype/src/playable-l03/playable.css": "8c46eb4a90530e410268d9c2fdcf17941038dbc5e0d4276abae704a00bccf3a3",
+    "ui-prototype/src/playable-l03/rules.ts": "42f70baac448476dca3dd0abcb766b867cb692b448d951e08404482700592d76",
+    "ui-prototype/tests/playable-l03-p1v4-browser.mjs": "6492f1efb9e727af267eebe98b27e4b4d6ef44bfbd628c1d0dabb08abdd29487",
+    "ui-prototype/docs/art-prompts.json": "ac560c1031cf52872a8cc0cb55346e1680e9a716d25b234e22e23d90371a9af3",
+    "ui-prototype/docs/art-manifest.json": "8925ee8ac305769c2b6d015fc3573f195d1eeaaa2279fa022c539877d4a4cdd7",
+    "ui-prototype/public/art/l03-p1v4/battlefield-attempt-01.png": "dceaf33a86eda498f3a44c82be53bc5c1d1347c8a7e69bfcc3bd6bf792f4530b",
+    "ui-prototype/public/art/l03-p1v4/battlefield.png": "8c42a5e46952a85db4bce232ac8b3463090a1ddc0f3bf65b25bcea6031e713c5",
+    "ui-prototype/public/art/l03-p1v4/knight-2-portrait.png": "419984a8c18c6a25341857a61ca29e3cc15137c88a0eae2368bc7717dde58019",
+    "ui-prototype/public/art/l03-p1v4/props.png": "8f9e678bd048cffe67c9d1f384b6cb0a3ae53cf4d306fa5262019787ac0d16cf"
+  },
+  "checks": [
+    {
+      "name": "every generated original, including the rejected battlefield, matches the recorded SHA-256"
+    },
+    {
+      "name": "1280: one painted battlefield, no terrain patterns, four painted prop instances, five distinct portraits, idle grid hidden",
+      "portraits": [
+        {
+          "id": "knight-1",
+          "signature": "185 30 390 390|/art/l03-enemies-v1.png"
+        },
+        {
+          "id": "knight-2",
+          "signature": "0 0 1254 1254|/art/l03-p1v4/knight-2-portrait.png"
+        },
+        {
+          "id": "karen",
+          "signature": "240 0 300 300|/art/l03-party-v1.png"
+        },
+        {
+          "id": "lace",
+          "signature": "964 0 300 300|/art/l03-party-v1.png"
+        },
+        {
+          "id": "thoma",
+          "signature": "1688 0 300 300|/art/l03-party-v1.png"
+        }
+      ]
+    },
+    {
+      "name": "1280: all 99 exact rule-grid centres receive their own hit; all 18 river cells remain impassable",
+      "hits": [
+        {
+          "cell": "0,0",
+          "hit": "0,0",
+          "error": 0.000009842690200207381
+        },
+        {
+          "cell": "1,0",
+          "hit": "1,0",
+          "error": 0.000008708972607336664
+        },
+        {
+          "cell": "2,0",
+          "hit": "2,0",
+          "error": 0.00001097246770699319
+        },
+        {
+          "cell": "3,0",
+          "hit": "3,0",
+          "error": 0.000021346205128265704
+        },
+        {
+          "cell": "4,0",
+          "hit": "4,0",
+          "error": 0.000009709927907093848
+        },
+        {
+          "cell": "5,0",
+          "hit": "5,0",
+          "error": 0.00002122755827452481
+        },
+        {
+          "cell": "6,0",
+          "hit": "6,0",
+          "error": 0.000009221516092416828
+        },
+        {
+          "cell": "7,0",
+          "hit": "7,0",
+          "error": 0.000021504046025641732
+        },
+        {
+          "cell": "8,0",
+          "hit": "8,0",
+          "error": 0.000009625800155662252
+        },
+        {
+          "cell": "9,0",
+          "hit": "9,0",
+          "error": 0.00002216088388062398
+        },
+        {
+          "cell": "10,0",
+          "hit": "10,0",
+          "error": 0.000010823202226060902
+        },
+        {
+          "cell": "0,1",
+          "hit": "0,1",
+          "error": 0.000011993442013807094
+        },
+        {
+          "cell": "1,1",
+          "hit": "1,1",
+          "error": 0.000011154322831519201
+        },
+        {
+          "cell": "2,1",
+          "hit": "2,1",
+          "error": 0.000006729183797878719
+        },
+        {
+          "cell": "3,1",
+          "hit": "3,1",
+          "error": 0.000009910648559710912
+        },
+        {
+          "cell": "4,1",
+          "hit": "4,1",
+          "error": 0.00002102086054670905
+        },
+        {
+          "cell": "5,1",
+          "hit": "5,1",
+          "error": 0.000009428096405475976
+        },
+        {
+          "cell": "6,1",
+          "hit": "6,1",
+          "error": 0.000021298021717531367
+        },
+        {
+          "cell": "7,1",
+          "hit": "7,1",
+          "error": 0.0000098195241771788
+        },
+        {
+          "cell": "8,1",
+          "hit": "8,1",
+          "error": 0.000021959073041539513
+        },
+        {
+          "cell": "9,1",
+          "hit": "9,1",
+          "error": 0.000010991956997611421
+        },
+        {
+          "cell": "10,1",
+          "hit": "10,1",
+          "error": 0.000022970895948387158
+        },
+        {
+          "cell": "0,2",
+          "hit": "0,2",
+          "error": 0.000011337036753219893
+        },
+        {
+          "cell": "1,2",
+          "hit": "1,2",
+          "error": 0.000010643230808774479
+        },
+        {
+          "cell": "2,2",
+          "hit": "2,2",
+          "error": 0.00001011161832363357
+        },
+        {
+          "cell": "3,2",
+          "hit": "3,2",
+          "error": 0.000005612309625441698
+        },
+        {
+          "cell": "4,2",
+          "hit": "4,2",
+          "error": 0.0000096346902775382
+        },
+        {
+          "cell": "5,2",
+          "hit": "5,2",
+          "error": 0.000021092014529349258
+        },
+        {
+          "cell": "6,2",
+          "hit": "6,2",
+          "error": 0.000010013775404633635
+        },
+        {
+          "cell": "7,2",
+          "hit": "7,2",
+          "error": 0.00002175735789224388
+        },
+        {
+          "cell": "8,2",
+          "hit": "8,2",
+          "error": 0.000011161995568301855
+        },
+        {
+          "cell": "9,2",
+          "hit": "9,2",
+          "error": 0.00002277626341489747
+        },
+        {
+          "cell": "10,2",
+          "hit": "10,2",
+          "error": 0.000012875193306270357
+        },
+        {
+          "cell": "0,3",
+          "hit": "0,3",
+          "error": 0.000010836542515206427
+        },
+        {
+          "cell": "1,3",
+          "hit": "1,3",
+          "error": 0.000010312822583412857
+        },
+        {
+          "cell": "2,3",
+          "hit": "2,3",
+          "error": 0.000009974691313270717
+        },
+        {
+          "cell": "3,3",
+          "hit": "3,3",
+          "error": 0.000009841297017813825
+        },
+        {
+          "cell": "4,3",
+          "hit": "4,3",
+          "error": 0.000005873203394563875
+        },
+        {
+          "cell": "5,3",
+          "hit": "5,3",
+          "error": 0.000010208523535143834
+        },
+        {
+          "cell": "6,3",
+          "hit": "6,3",
+          "error": 0.00002155574100505547
+        },
+        {
+          "cell": "7,3",
+          "hit": "7,3",
+          "error": 0.000011333260248270875
+        },
+        {
+          "cell": "8,3",
+          "hit": "8,3",
+          "error": 0.00002258184909949398
+        },
+        {
+          "cell": "9,3",
+          "hit": "9,3",
+          "error": 0.000013020661623100442
+        },
+        {
+          "cell": "10,3",
+          "hit": "10,3",
+          "error": 0.000033616962130875565
+        },
+        {
+          "cell": "0,4",
+          "hit": "0,4",
+          "error": 0.000010514247821508745
+        },
+        {
+          "cell": "1,4",
+          "hit": "1,4",
+          "error": 0.00001018070520298415
+        },
+        {
+          "cell": "2,4",
+          "hit": "2,4",
+          "error": 0.000010047915779251902
+        },
+        {
+          "cell": "3,4",
+          "hit": "3,4",
+          "error": 0.000010123782177483344
+        },
+        {
+          "cell": "4,4",
+          "hit": "4,4",
+          "error": 0.000010403740818394495
+        },
+        {
+          "cell": "5,4",
+          "hit": "5,4",
+          "error": 0.000007366913294227512
+        },
+        {
+          "cell": "6,4",
+          "hit": "6,4",
+          "error": 0.000011505696100983064
+        },
+        {
+          "cell": "7,4",
+          "hit": "7,4",
+          "error": 0.00002238765857739838
+        },
+        {
+          "cell": "8,4",
+          "hit": "8,4",
+          "error": 0.000013167773991511515
+        },
+        {
+          "cell": "9,4",
+          "hit": "9,4",
+          "error": 0.00003348554727813541
+        },
+        {
+          "cell": "10,4",
+          "hit": "10,4",
+          "error": 0.000009732633097013112
+        },
+        {
+          "cell": "0,5",
+          "hit": "0,5",
+          "error": 0.000010386754216519275
+        },
+        {
+          "cell": "1,5",
+          "hit": "1,5",
+          "error": 0.000010254545778438482
+        },
+        {
+          "cell": "2,5",
+          "hit": "2,5",
+          "error": 0.000010326822222356673
+        },
+        {
+          "cell": "3,5",
+          "hit": "3,5",
+          "error": 0.000010599401281696802
+        },
+        {
+          "cell": "4,5",
+          "hit": "4,5",
+          "error": 0.000011057479773794697
+        },
+        {
+          "cell": "5,5",
+          "hit": "5,5",
+          "error": 0.000011679251389405018
+        },
+        {
+          "cell": "6,5",
+          "hit": "6,5",
+          "error": 0.000009530409109046462
+        },
+        {
+          "cell": "7,5",
+          "hit": "7,5",
+          "error": 0.000013316475765181536
+        },
+        {
+          "cell": "8,5",
+          "hit": "8,5",
+          "error": 0.000033354898056238816
+        },
+        {
+          "cell": "9,5",
+          "hit": "9,5",
+          "error": 0.000009928584480645847
+        },
+        {
+          "cell": "10,5",
+          "hit": "10,5",
+          "error": 0.00004890663516489686
+        },
+        {
+          "cell": "0,6",
+          "hit": "0,6",
+          "error": 0.000002866057646907408
+        },
+        {
+          "cell": "1,6",
+          "hit": "1,6",
+          "error": 0.000010530012437621905
+        },
+        {
+          "cell": "2,6",
+          "hit": "2,6",
+          "error": 0.000010795480774175228
+        },
+        {
+          "cell": "3,6",
+          "hit": "3,6",
+          "error": 0.000011243671579288903
+        },
+        {
+          "cell": "4,6",
+          "hit": "4,6",
+          "error": 0.000011853876898763
+        },
+        {
+          "cell": "5,6",
+          "hit": "5,6",
+          "error": 0.000012602584863789197
+        },
+        {
+          "cell": "6,6",
+          "hit": "6,6",
+          "error": 0.000013466714411964387
+        },
+        {
+          "cell": "7,6",
+          "hit": "7,6",
+          "error": 0.00002649850308130103
+        },
+        {
+          "cell": "8,6",
+          "hit": "8,6",
+          "error": 0.000010124971343290884
+        },
+        {
+          "cell": "9,6",
+          "hit": "9,6",
+          "error": 0.000048817274718875575
+        },
+        {
+          "cell": "10,6",
+          "hit": "10,6",
+          "error": 0.00001814969840574888
+        },
+        {
+          "cell": "0,7",
+          "hit": "0,7",
+          "error": 0.0000035219361212967895
+        },
+        {
+          "cell": "1,7",
+          "hit": "1,7",
+          "error": 0.000004427299680267071
+        },
+        {
+          "cell": "2,7",
+          "hit": "2,7",
+          "error": 0.000011430575458270746
+        },
+        {
+          "cell": "3,7",
+          "hit": "3,7",
+          "error": 0.000012029525973461226
+        },
+        {
+          "cell": "4,7",
+          "hit": "4,7",
+          "error": 0.000012766261664404297
+        },
+        {
+          "cell": "5,7",
+          "hit": "5,7",
+          "error": 0.000013618439028299735
+        },
+        {
+          "cell": "6,7",
+          "hit": "6,7",
+          "error": 0.00002775188485513971
+        },
+        {
+          "cell": "7,7",
+          "hit": "7,7",
+          "error": 0.000010321768983619223
+        },
+        {
+          "cell": "8,7",
+          "hit": "8,7",
+          "error": 0.000044415625090567
+        },
+        {
+          "cell": "9,7",
+          "hit": "9,7",
+          "error": 0.00001825786973150985
+        },
+        {
+          "cell": "10,7",
+          "hit": "10,7",
+          "error": 0.000026675109807181558
+        },
+        {
+          "cell": "0,8",
+          "hit": "0,8",
+          "error": 0.0000057311817413574284
+        },
+        {
+          "cell": "1,8",
+          "hit": "1,8",
+          "error": 0.000005672823583828824
+        },
+        {
+          "cell": "2,8",
+          "hit": "2,8",
+          "error": 0.000006911445034107138
+        },
+        {
+          "cell": "3,8",
+          "hit": "3,8",
+          "error": 0.000012931177116115577
+        },
+        {
+          "cell": "4,8",
+          "hit": "4,8",
+          "error": 0.000013771600458286196
+        },
+        {
+          "cell": "5,8",
+          "hit": "5,8",
+          "error": 0.00002782659527588604
+        },
+        {
+          "cell": "6,8",
+          "hit": "6,8",
+          "error": 0.000010518954295238282
+        },
+        {
+          "cell": "7,8",
+          "hit": "7,8",
+          "error": 0.00004517459683991676
+        },
+        {
+          "cell": "8,8",
+          "hit": "8,8",
+          "error": 0.000018367734682903217
+        },
+        {
+          "cell": "9,8",
+          "hit": "9,8",
+          "error": 0.00001735462256670626
+        },
+        {
+          "cell": "10,8",
+          "hit": "10,8",
+          "error": 0.00001586962624585945
+        }
+      ],
+      "river": [
+        "4,0",
+        "5,0",
+        "4,1",
+        "5,1",
+        "4,2",
+        "5,2",
+        "4,3",
+        "5,3",
+        "4,4",
+        "5,4",
+        "4,5",
+        "5,5",
+        "4,6",
+        "5,6",
+        "4,7",
+        "5,7",
+        "4,8",
+        "5,8"
+      ]
+    },
+    {
+      "name": "1280: geometric maximum 1.00 tile-high viewports; actual opaque figure height measured separately",
+      "geometry": [
+        {
+          "id": "lace",
+          "viewport_height": 52,
+          "tile_height": 52,
+          "viewport_ratio": 1,
+          "visible_alpha_height": 50.608450704225355,
+          "visible_alpha_ratio": 0.9732394366197183,
+          "screen_viewport_height": 39.30847457627119,
+          "screen_tile_height": 39.30847457627119,
+          "crop": {
+            "x": 834,
+            "y": 0,
+            "width": 520,
+            "height": 710
+          }
+        },
+        {
+          "id": "thoma",
+          "viewport_height": 52,
+          "tile_height": 52,
+          "viewport_ratio": 1,
+          "visible_alpha_height": 50.90295358649789,
+          "visible_alpha_ratio": 0.9789029535864978,
+          "screen_viewport_height": 39.30847457627119,
+          "screen_tile_height": 39.30847457627119,
+          "crop": {
+            "x": 1558,
+            "y": 0,
+            "width": 520,
+            "height": 711
+          }
+        },
+        {
+          "id": "karen",
+          "viewport_height": 52,
+          "tile_height": 52,
+          "viewport_ratio": 1,
+          "visible_alpha_height": 50.901408450704224,
+          "visible_alpha_ratio": 0.9788732394366197,
+          "screen_viewport_height": 39.30847457627119,
+          "screen_tile_height": 39.30847457627119,
+          "crop": {
+            "x": 110,
+            "y": 0,
+            "width": 520,
+            "height": 710
+          }
+        },
+        {
+          "id": "knight-1",
+          "viewport_height": 52,
+          "tile_height": 52,
+          "viewport_ratio": 1,
+          "visible_alpha_height": 49.90604026845637,
+          "visible_alpha_ratio": 0.959731543624161,
+          "screen_viewport_height": 39.30847457627119,
+          "screen_tile_height": 39.30847457627119,
+          "crop": {
+            "x": 15,
+            "y": 8,
+            "width": 745,
+            "height": 863
+          }
+        },
+        {
+          "id": "knight-2",
+          "viewport_height": 52,
+          "tile_height": 52,
+          "viewport_ratio": 1,
+          "visible_alpha_height": 49.90604026845637,
+          "visible_alpha_ratio": 0.959731543624161,
+          "screen_viewport_height": 39.30847457627119,
+          "screen_tile_height": 39.30847457627119,
+          "crop": {
+            "x": 15,
+            "y": 8,
+            "width": 745,
+            "height": 863
+          }
+        }
+      ]
+    },
+    {
+      "name": "1280: prop atlas has true transparent empty space",
+      "alpha": [
+        {
+          "x": 0,
+          "y": 0,
+          "alpha": 0
+        },
+        {
+          "x": 300,
+          "y": 200,
+          "alpha": 0
+        },
+        {
+          "x": 600,
+          "y": 400,
+          "alpha": 0
+        },
+        {
+          "x": 1000,
+          "y": 300,
+          "alpha": 0
+        },
+        {
+          "x": 700,
+          "y": 900,
+          "alpha": 0
+        }
+      ]
+    },
+    {
+      "name": "1920: one painted battlefield, no terrain patterns, four painted prop instances, five distinct portraits, idle grid hidden",
+      "portraits": [
+        {
+          "id": "knight-1",
+          "signature": "185 30 390 390|/art/l03-enemies-v1.png"
+        },
+        {
+          "id": "knight-2",
+          "signature": "0 0 1254 1254|/art/l03-p1v4/knight-2-portrait.png"
+        },
+        {
+          "id": "karen",
+          "signature": "240 0 300 300|/art/l03-party-v1.png"
+        },
+        {
+          "id": "lace",
+          "signature": "964 0 300 300|/art/l03-party-v1.png"
+        },
+        {
+          "id": "thoma",
+          "signature": "1688 0 300 300|/art/l03-party-v1.png"
+        }
+      ]
+    },
+    {
+      "name": "1920: all 99 exact rule-grid centres receive their own hit; all 18 river cells remain impassable",
+      "hits": [
+        {
+          "cell": "0,0",
+          "hit": "0,0",
+          "error": 0.000011623682674497702
+        },
+        {
+          "cell": "1,0",
+          "hit": "1,0",
+          "error": 0.000015274123406499646
+        },
+        {
+          "cell": "2,0",
+          "hit": "2,0",
+          "error": 0.000009110746256251615
+        },
+        {
+          "cell": "3,0",
+          "hit": "3,0",
+          "error": 0.00001765472742406235
+        },
+        {
+          "cell": "4,0",
+          "hit": "4,0",
+          "error": 0.000004426922008441885
+        },
+        {
+          "cell": "5,0",
+          "hit": "5,0",
+          "error": 0.000015765433333035232
+        },
+        {
+          "cell": "6,0",
+          "hit": "6,0",
+          "error": 0.000006292582409490291
+        },
+        {
+          "cell": "7,0",
+          "hit": "7,0",
+          "error": 0.000023091476465465514
+        },
+        {
+          "cell": "8,0",
+          "hit": "8,0",
+          "error": 0.00002561287239404669
+        },
+        {
+          "cell": "9,0",
+          "hit": "9,0",
+          "error": 0.00004613658460199507
+        },
+        {
+          "cell": "10,0",
+          "hit": "10,0",
+          "error": 0.00005655760452821572
+        },
+        {
+          "cell": "0,1",
+          "hit": "0,1",
+          "error": 0.000013537651808274172
+        },
+        {
+          "cell": "1,1",
+          "hit": "1,1",
+          "error": 0.000013199938973686512
+        },
+        {
+          "cell": "2,1",
+          "hit": "2,1",
+          "error": 0.000007405851125946397
+        },
+        {
+          "cell": "3,1",
+          "hit": "3,1",
+          "error": 0.000006788560240617172
+        },
+        {
+          "cell": "4,1",
+          "hit": "4,1",
+          "error": 0.000020403414410144998
+        },
+        {
+          "cell": "5,1",
+          "hit": "5,1",
+          "error": 0.0000011565996241257382
+        },
+        {
+          "cell": "6,1",
+          "hit": "6,1",
+          "error": 0.000025223420434314742
+        },
+        {
+          "cell": "7,1",
+          "hit": "7,1",
+          "error": 0.00001864960886527196
+        },
+        {
+          "cell": "8,1",
+          "hit": "8,1",
+          "error": 0.0000346979894864066
+        },
+        {
+          "cell": "9,1",
+          "hit": "9,1",
+          "error": 0.00004071493611366233
+        },
+        {
+          "cell": "10,1",
+          "hit": "10,1",
+          "error": 0.000034697989486406605
+        },
+        {
+          "cell": "0,2",
+          "hit": "0,2",
+          "error": 0.000018171870026121946
+        },
+        {
+          "cell": "1,2",
+          "hit": "1,2",
+          "error": 0.000002194493459723684
+        },
+        {
+          "cell": "2,2",
+          "hit": "2,2",
+          "error": 0.000011718243968433734
+        },
+        {
+          "cell": "3,2",
+          "hit": "3,2",
+          "error": 0.000012627610624098885
+        },
+        {
+          "cell": "4,2",
+          "hit": "4,2",
+          "error": 0.0000052749060998456585
+        },
+        {
+          "cell": "5,2",
+          "hit": "5,2",
+          "error": 0.000028354388898721498
+        },
+        {
+          "cell": "6,2",
+          "hit": "6,2",
+          "error": 0.000017594005801349836
+        },
+        {
+          "cell": "7,2",
+          "hit": "7,2",
+          "error": 0.00003615183435802175
+        },
+        {
+          "cell": "8,2",
+          "hit": "8,2",
+          "error": 0.00003673546925375416
+        },
+        {
+          "cell": "9,2",
+          "hit": "9,2",
+          "error": 0.000016712764883780237
+        },
+        {
+          "cell": "10,2",
+          "hit": "10,2",
+          "error": 0.00003062260022463674
+        },
+        {
+          "cell": "0,3",
+          "hit": "0,3",
+          "error": 0.000004419361035696719
+        },
+        {
+          "cell": "1,3",
+          "hit": "1,3",
+          "error": 0.000017125878460416408
+        },
+        {
+          "cell": "2,3",
+          "hit": "2,3",
+          "error": 0.000010460674964788052
+        },
+        {
+          "cell": "3,3",
+          "hit": "3,3",
+          "error": 0.000010911339327755979
+        },
+        {
+          "cell": "4,3",
+          "hit": "4,3",
+          "error": 0.000023390780241404585
+        },
+        {
+          "cell": "5,3",
+          "hit": "5,3",
+          "error": 0.000018331283419597024
+        },
+        {
+          "cell": "6,3",
+          "hit": "6,3",
+          "error": 0.0000384018952509323
+        },
+        {
+          "cell": "7,3",
+          "hit": "7,3",
+          "error": 0.00003621099046703664
+        },
+        {
+          "cell": "8,3",
+          "hit": "8,3",
+          "error": 0.00001955303462666541
+        },
+        {
+          "cell": "9,3",
+          "hit": "9,3",
+          "error": 0.000025090482718987966
+        },
+        {
+          "cell": "10,3",
+          "hit": "10,3",
+          "error": 0.0000069395978972813216
+        },
+        {
+          "cell": "0,4",
+          "hit": "0,4",
+          "error": 0.000008251671818121912
+        },
+        {
+          "cell": "1,4",
+          "hit": "1,4",
+          "error": 0.000011141843255853491
+        },
+        {
+          "cell": "2,4",
+          "hit": "2,4",
+          "error": 0.00001658420324473429
+        },
+        {
+          "cell": "3,4",
+          "hit": "3,4",
+          "error": 0.000022295689514943727
+        },
+        {
+          "cell": "4,4",
+          "hit": "4,4",
+          "error": 0.00002067047757969898
+        },
+        {
+          "cell": "5,4",
+          "hit": "5,4",
+          "error": 0.00003489789090110345
+        },
+        {
+          "cell": "6,4",
+          "hit": "6,4",
+          "error": 0.00003657489223874049
+        },
+        {
+          "cell": "7,4",
+          "hit": "7,4",
+          "error": 0.000023453605149855123
+        },
+        {
+          "cell": "8,4",
+          "hit": "8,4",
+          "error": 0.000024316115075853193
+        },
+        {
+          "cell": "9,4",
+          "hit": "9,4",
+          "error": 0.000012294822976643877
+        },
+        {
+          "cell": "10,4",
+          "hit": "10,4",
+          "error": 0.000013879195692878042
+        },
+        {
+          "cell": "0,5",
+          "hit": "0,5",
+          "error": 0.000011683946519075081
+        },
+        {
+          "cell": "1,5",
+          "hit": "1,5",
+          "error": 0.0000070590489455512385
+        },
+        {
+          "cell": "2,5",
+          "hit": "2,5",
+          "error": 0.000022623278307217902
+        },
+        {
+          "cell": "3,5",
+          "hit": "3,5",
+          "error": 0.000024150509615949294
+        },
+        {
+          "cell": "4,5",
+          "hit": "4,5",
+          "error": 0.00003417355644340236
+        },
+        {
+          "cell": "5,5",
+          "hit": "5,5",
+          "error": 0.00003780152687179083
+        },
+        {
+          "cell": "6,5",
+          "hit": "6,5",
+          "error": 0.000017123925513942566
+        },
+        {
+          "cell": "7,5",
+          "hit": "7,5",
+          "error": 0.00002485478553626637
+        },
+        {
+          "cell": "8,5",
+          "hit": "8,5",
+          "error": 0.000017858138297167047
+        },
+        {
+          "cell": "9,5",
+          "hit": "9,5",
+          "error": 0.000012424701299890698
+        },
+        {
+          "cell": "10,5",
+          "hit": "10,5",
+          "error": 0.000014793628498204203
+        },
+        {
+          "cell": "0,6",
+          "hit": "0,6",
+          "error": 0.000002785460813963373
+        },
+        {
+          "cell": "1,6",
+          "hit": "1,6",
+          "error": 0.0000228951229847851
+        },
+        {
+          "cell": "2,6",
+          "hit": "2,6",
+          "error": 0.000018921984289790855
+        },
+        {
+          "cell": "3,6",
+          "hit": "3,6",
+          "error": 0.00003438817980657702
+        },
+        {
+          "cell": "4,6",
+          "hit": "4,6",
+          "error": 0.0000398112283806459
+        },
+        {
+          "cell": "5,6",
+          "hit": "5,6",
+          "error": 0.000015594806688514663
+        },
+        {
+          "cell": "6,6",
+          "hit": "6,6",
+          "error": 0.00002662692351018122
+        },
+        {
+          "cell": "7,6",
+          "hit": "7,6",
+          "error": 0.000007878472816636912
+        },
+        {
+          "cell": "8,6",
+          "hit": "8,6",
+          "error": 0.00001344842422230823
+        },
+        {
+          "cell": "9,6",
+          "hit": "9,6",
+          "error": 0.000019662194067718227
+        },
+        {
+          "cell": "10,6",
+          "hit": "10,6",
+          "error": 7.314977663154055e-7
+        },
+        {
+          "cell": "0,7",
+          "hit": "0,7",
+          "error": 0.00002224312829386083
+        },
+        {
+          "cell": "1,7",
+          "hit": "1,7",
+          "error": 0.000017775548075756466
+        },
+        {
+          "cell": "2,7",
+          "hit": "2,7",
+          "error": 0.00003456762713192895
+        },
+        {
+          "cell": "3,7",
+          "hit": "3,7",
+          "error": 0.00003687449362267878
+        },
+        {
+          "cell": "4,7",
+          "hit": "4,7",
+          "error": 0.000016059668305142732
+        },
+        {
+          "cell": "5,7",
+          "hit": "5,7",
+          "error": 0.000029410398279422573
+        },
+        {
+          "cell": "6,7",
+          "hit": "6,7",
+          "error": 0.0000034697989232195114
+        },
+        {
+          "cell": "7,7",
+          "hit": "7,7",
+          "error": 0.00001649523584634097
+        },
+        {
+          "cell": "8,7",
+          "hit": "8,7",
+          "error": 0.000011391185453602104
+        },
+        {
+          "cell": "9,7",
+          "hit": "9,7",
+          "error": 0.000005198269005523432
+        },
+        {
+          "cell": "10,7",
+          "hit": "10,7",
+          "error": 0.000027154240542349698
+        },
+        {
+          "cell": "0,8",
+          "hit": "0,8",
+          "error": 0.000018159443138967155
+        },
+        {
+          "cell": "1,8",
+          "hit": "1,8",
+          "error": 0.0000341392874170037
+        },
+        {
+          "cell": "2,8",
+          "hit": "2,8",
+          "error": 0.00003629954407233534
+        },
+        {
+          "cell": "3,8",
+          "hit": "3,8",
+          "error": 0.00001644040392428984
+        },
+        {
+          "cell": "4,8",
+          "hit": "4,8",
+          "error": 0.0000252935940844178
+        },
+        {
+          "cell": "5,8",
+          "hit": "5,8",
+          "error": 0.0000051724708782785456
+        },
+        {
+          "cell": "6,8",
+          "hit": "6,8",
+          "error": 0.00002068988344490208
+        },
+        {
+          "cell": "7,8",
+          "hit": "7,8",
+          "error": 0.000008929069194683436
+        },
+        {
+          "cell": "8,8",
+          "hit": "8,8",
+          "error": 0.000010874497331694503
+        },
+        {
+          "cell": "9,8",
+          "hit": "9,8",
+          "error": 0.000021920538540682125
+        },
+        {
+          "cell": "10,8",
+          "hit": "10,8",
+          "error": 0.000012499840730907701
+        }
+      ],
+      "river": [
+        "4,0",
+        "5,0",
+        "4,1",
+        "5,1",
+        "4,2",
+        "5,2",
+        "4,3",
+        "5,3",
+        "4,4",
+        "5,4",
+        "4,5",
+        "5,5",
+        "4,6",
+        "5,6",
+        "4,7",
+        "5,7",
+        "4,8",
+        "5,8"
+      ]
+    },
+    {
+      "name": "1920: geometric maximum 1.00 tile-high viewports; actual opaque figure height measured separately",
+      "geometry": [
+        {
+          "id": "lace",
+          "viewport_height": 52,
+          "tile_height": 52,
+          "viewport_ratio": 1,
+          "visible_alpha_height": 50.608450704225355,
+          "visible_alpha_ratio": 0.9732394366197183,
+          "screen_viewport_height": 66.98305084745762,
+          "screen_tile_height": 66.98305084745762,
+          "crop": {
+            "x": 834,
+            "y": 0,
+            "width": 520,
+            "height": 710
+          }
+        },
+        {
+          "id": "thoma",
+          "viewport_height": 52,
+          "tile_height": 52,
+          "viewport_ratio": 1,
+          "visible_alpha_height": 50.90295358649789,
+          "visible_alpha_ratio": 0.9789029535864978,
+          "screen_viewport_height": 66.98305084745762,
+          "screen_tile_height": 66.98305084745762,
+          "crop": {
+            "x": 1558,
+            "y": 0,
+            "width": 520,
+            "height": 711
+          }
+        },
+        {
+          "id": "karen",
+          "viewport_height": 52,
+          "tile_height": 52,
+          "viewport_ratio": 1,
+          "visible_alpha_height": 50.901408450704224,
+          "visible_alpha_ratio": 0.9788732394366197,
+          "screen_viewport_height": 66.98305084745762,
+          "screen_tile_height": 66.98305084745762,
+          "crop": {
+            "x": 110,
+            "y": 0,
+            "width": 520,
+            "height": 710
+          }
+        },
+        {
+          "id": "knight-1",
+          "viewport_height": 52,
+          "tile_height": 52,
+          "viewport_ratio": 1,
+          "visible_alpha_height": 49.90604026845637,
+          "visible_alpha_ratio": 0.959731543624161,
+          "screen_viewport_height": 66.98305084745762,
+          "screen_tile_height": 66.98305084745762,
+          "crop": {
+            "x": 15,
+            "y": 8,
+            "width": 745,
+            "height": 863
+          }
+        },
+        {
+          "id": "knight-2",
+          "viewport_height": 52,
+          "tile_height": 52,
+          "viewport_ratio": 1,
+          "visible_alpha_height": 49.90604026845637,
+          "visible_alpha_ratio": 0.959731543624161,
+          "screen_viewport_height": 66.98305084745762,
+          "screen_tile_height": 66.98305084745762,
+          "crop": {
+            "x": 15,
+            "y": 8,
+            "width": 745,
+            "height": 863
+          }
+        }
+      ]
+    },
+    {
+      "name": "1920: prop atlas has true transparent empty space",
+      "alpha": [
+        {
+          "x": 0,
+          "y": 0,
+          "alpha": 0
+        },
+        {
+          "x": 300,
+          "y": 200,
+          "alpha": 0
+        },
+        {
+          "x": 600,
+          "y": 400,
+          "alpha": 0
+        },
+        {
+          "x": 1000,
+          "y": 300,
+          "alpha": 0
+        },
+        {
+          "x": 700,
+          "y": 900,
+          "alpha": 0
+        }
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/p1v4-regression/after-1280x720-start.png",
+      "sha256": "229726b755677150792b90100217b162ed820a85745124b9eb3691a7fa73fa34",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/p1v4-regression/after-1280x720-selected-path-preview.png",
+      "sha256": "d4709297527ee7b6e249ff6deec00fae129f3567c2af0ed783c6b719281c2781",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/p1v4-regression/after-1280x720-enemy-intent.png",
+      "sha256": "2935c3dfcb9317b92bc2072a8f652a68855fd8f73c819a7d3ea4d236b6da52f4",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/p1v4-regression/after-1280x720-DIAGNOSTIC-grid-alignment.png",
+      "sha256": "8c1597755191785bf4df39f8db76468c894fc2e6336b047790fb4c1ee8b21d6e",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/p1v4-regression/after-1920x1080-start.png",
+      "sha256": "99b68b029d561ecff373b55dac7844a84b22e7272af6a1ad3dff612b53d3f85e",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/p1v4-regression/after-1920x1080-selected-path-preview.png",
+      "sha256": "5b8faff78bd6563ac1e63f102ca7a6bb43052c2c82e63cbc4aeab3e3c93aaa5a",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/p1v4-regression/after-1920x1080-enemy-intent.png",
+      "sha256": "159e3b3ce5af8eb8ed672749acc2c30b6c97093393238ef438799d245693962d",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/p1v4-regression/after-1920x1080-DIAGNOSTIC-grid-alignment.png",
+      "sha256": "7f5b6793f9d789792694d892a1f2938d867f7b53a9f2baa200e89b038cf3ef1b",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    }
+  ],
+  "errors": [],
+  "human_playtest": "HUMAN_PENDING",
+  "exit_code": 0,
+  "finished_at": "2026-10-23T06:18:12.670Z"
+}

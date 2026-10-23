@@ -11,7 +11,7 @@ const binding=JSON.parse(fs.readFileSync(path.join(root,'.codex/visual-browser-b
 assert(path.isAbsolute(binding.path)); assert.equal(fs.realpathSync(binding.path),binding.path);
 assert.equal(fs.statSync(binding.path).size,binding.bytes); assert.equal(hash(fs.readFileSync(binding.path)),binding.sha256);
 const {chromium}=await import('playwright');
-const evidenceDir=process.argv.includes('--p1v5') ? 'ui-prototype/docs/playable-l03-p1v5/p1v3-regression' : process.argv.includes('--p1v4') ? 'ui-prototype/docs/playable-l03-p1v4/p1v3-regression' : 'ui-prototype/docs/playable-l03-p1v3';
+const evidenceDir=process.argv.includes('--p1v6') ? 'ui-prototype/docs/playable-l03-p1v6/p1v3-regression' : process.argv.includes('--p1v5') ? 'ui-prototype/docs/playable-l03-p1v5/p1v3-regression' : process.argv.includes('--p1v4') ? 'ui-prototype/docs/playable-l03-p1v4/p1v3-regression' : 'ui-prototype/docs/playable-l03-p1v3';
 const output=path.join(root,evidenceDir);
 fs.mkdirSync(output,{recursive:true});
 const scratch=path.join(root,'scratch/playable-l03-p1v3-browser');
@@ -24,7 +24,7 @@ await context.route('**/*',route=>new URL(route.request().url()).origin===new UR
 const page=context.pages()[0],checks=[],captures=[],errors=[];
 page.on('pageerror',e=>errors.push(e.message));
 page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
-const sourceFiles=['PlayableL03.tsx','playable.css','presentation.tsx','rules.ts'].map(f=>`ui-prototype/src/playable-l03/${f}`)
+const sourceFiles=['feedback.ts','PlayableL03.tsx','playable.css','presentation.tsx','rules.ts'].map(f=>`ui-prototype/src/playable-l03/${f}`)
   .concat(['ui-prototype/tests/playable-l03-p1v3-browser.mjs'],['terrain-v2.png','props-v2.png','ferry-scene-v2.png','l03-party-v1.png','l03-enemies-v1.png'].map(f=>`ui-prototype/public/art/${f}`));
 const report={started_at:new Date().toISOString(),browser:binding,source_sha256:Object.fromEntries(sourceFiles.map(f=>[f,hash(fs.readFileSync(path.join(root,f)))])),checks,captures,errors,human_playtest:'HUMAN_PENDING'};
 const state=()=>page.locator('[data-p1v-state]').getAttribute('data-p1v-state').then(JSON.parse);

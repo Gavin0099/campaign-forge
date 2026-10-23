@@ -1,0 +1,888 @@
+{
+  "started_at": "2026-10-23T06:08:06.702Z",
+  "browser": {
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "bytes": 4586648,
+    "sha256": "f76f0234efb271041dc84f9f38fb858e01859d5da6f775f5108668eb3ae80975",
+    "scope": "local UI browser acceptance only"
+  },
+  "source_sha256": {
+    "ui-prototype/src/playable-l03/feedback.ts": "a5d33b1f7f9ff3306ff2215ddf0d4b2aea321e0d8467adaa95f78ff6397f6788",
+    "ui-prototype/src/playable-l03/PlayableL03.tsx": "a10c42b192260e3614b3ce54c2ea370ee52e32e7493eac3456589161df8b76dc",
+    "ui-prototype/src/playable-l03/presentation.tsx": "4fe324a93c441541b4fbe18c06e407810b88b35aad99aa6eb025dd97e843a2bf",
+    "ui-prototype/src/playable-l03/playable.css": "7a24bed7e400ab4b45671b3b7a27e926cfa4d2ac67127469b56e743b2562e700",
+    "ui-prototype/src/playable-l03/rules.ts": "42f70baac448476dca3dd0abcb766b867cb692b448d951e08404482700592d76",
+    "ui-prototype/tests/playable-l03-p1v6-browser.mjs": "980980fcef86c2a407a404f9b4c4c0fe9d32553de3bf1e6f21bdadaf6abf96cd",
+    "ui-prototype/docs/art-prompts.json": "2abdaa71b9f5f230b28117e1e089190536f8c40a1cc6e35dbae93b4a1499a31f",
+    "ui-prototype/docs/art-manifest.json": "9ec5638e59a9b905ac63a6ca356d0d16d47fa7b4e044b42f2fbecacd32a9650a",
+    "ui-prototype/public/art/l03-p1v6/winch-frames.png": "d7c8a208aa9f3e73865f5633c4a336446c79e1ebaa956e82f031751b1b015c25",
+    "ui-prototype/public/art/l03-p1v6/rope-states.png": "698c5677290091807e2ce28d658bfc7127a213789383e2a163c45d65b73e929d"
+  },
+  "checks": [
+    {
+      "name": "four painted winch frames and slack rope load with exact provenance; geometric wheel, rope path and warning ellipse absent"
+    },
+    {
+      "name": "two movers land separately at their own endpoints; first landing precedes atomic state commit, final landing shares finish boundary, no delayed settlement dust",
+      "trace": [
+        {
+          "kind": "busy",
+          "busy": "true",
+          "time": 398.40000009536743
+        },
+        {
+          "kind": "landing",
+          "unit": "knight-1",
+          "cell": "1,5",
+          "time": 1095.3000000715256,
+          "busy": "true",
+          "turn": "1",
+          "state": {
+            "route": "open",
+            "config": {
+              "blockAlliedPassage": true,
+              "p0c": {
+                "survivalTurns": 6
+              }
+            },
+            "turn": 1,
+            "status": "playing",
+            "progress": 0,
+            "units": [
+              {
+                "id": "karen",
+                "side": "ally",
+                "cell": {
+                  "x": 2,
+                  "y": 5
+                },
+                "alive": true
+              },
+              {
+                "id": "lace",
+                "side": "ally",
+                "cell": {
+                  "x": 1,
+                  "y": 3
+                },
+                "alive": true
+              },
+              {
+                "id": "thoma",
+                "side": "ally",
+                "cell": {
+                  "x": 1,
+                  "y": 4
+                },
+                "alive": true
+              },
+              {
+                "id": "knight-1",
+                "side": "enemy",
+                "cell": {
+                  "x": 1,
+                  "y": 8
+                },
+                "alive": true
+              },
+              {
+                "id": "knight-2",
+                "side": "enemy",
+                "cell": {
+                  "x": 3,
+                  "y": 8
+                },
+                "alive": true
+              }
+            ],
+            "moved": []
+          }
+        },
+        {
+          "kind": "landing",
+          "unit": "knight-2",
+          "cell": "3,5",
+          "time": 1820.5,
+          "busy": "false",
+          "turn": "2",
+          "state": {
+            "route": "open",
+            "config": {
+              "blockAlliedPassage": true,
+              "p0c": {
+                "survivalTurns": 6
+              }
+            },
+            "turn": 2,
+            "status": "playing",
+            "progress": 0,
+            "units": [
+              {
+                "id": "karen",
+                "side": "ally",
+                "cell": {
+                  "x": 2,
+                  "y": 5
+                },
+                "alive": true
+              },
+              {
+                "id": "lace",
+                "side": "ally",
+                "cell": {
+                  "x": 1,
+                  "y": 3
+                },
+                "alive": true
+              },
+              {
+                "id": "thoma",
+                "side": "ally",
+                "cell": {
+                  "x": 1,
+                  "y": 4
+                },
+                "alive": true
+              },
+              {
+                "id": "knight-1",
+                "side": "enemy",
+                "cell": {
+                  "x": 1,
+                  "y": 5
+                },
+                "alive": true
+              },
+              {
+                "id": "knight-2",
+                "side": "enemy",
+                "cell": {
+                  "x": 3,
+                  "y": 5
+                },
+                "alive": true
+              }
+            ],
+            "moved": []
+          }
+        },
+        {
+          "kind": "busy",
+          "busy": "false",
+          "time": 1820.5
+        }
+      ]
+    },
+    {
+      "name": "independent landing effects expire without extending the existing input lock"
+    },
+    {
+      "name": "actual 720p sequence plays rest, turn A, turn B and jerk frames with painted taut rope and no extra lock"
+    },
+    {
+      "name": "2/3 warning rests on the painted ember drum; rope returns to slack after transient feedback"
+    },
+    {
+      "name": "broken-chain marker stays at the blocked enemy feet in preview, resolution and rest; clash targets counterfactually confirmed Thoma"
+    },
+    {
+      "name": "skip: blocked marker remains static and real block resolution mounts no transient feedback"
+    },
+    {
+      "name": "skip: all moves and winch progress preserve exact outcomes without ever mounting transient effects"
+    },
+    {
+      "name": "reduce: blocked marker remains static and real block resolution mounts no transient feedback"
+    },
+    {
+      "name": "reduce: all moves and winch progress preserve exact outcomes without ever mounting transient effects"
+    },
+    {
+      "name": "skip: changing preference between two landings commits once and permanently cancels future cues"
+    },
+    {
+      "name": "reduce: changing preference between two landings commits once and permanently cancels future cues"
+    }
+  ],
+  "captures": [
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-landing-1-knight-1.png",
+      "sha256": "2571562c206b355edb930a697a693437293a5c902a013b21ee6cc536326562bc",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "before": {
+        "time": 960.5,
+        "busy": "true",
+        "frames": [
+          "0"
+        ]
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-landing-2-knight-2.png",
+      "sha256": "4973d6dfe7ecb64b4a0b28d3b657c3c0c7397010c7379f7537cf41f0d3475c5f",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "before": {
+        "time": 1651,
+        "busy": "false",
+        "frames": [
+          "0"
+        ]
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 2,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 5
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-winch-turn-00.png",
+      "sha256": "333fb4cd9ec602310d37b77668f77d0bf06c078dca409b9240667200b4362324",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "before": {
+        "time": 485.89999997615814,
+        "busy": "false",
+        "frames": [
+          "0"
+        ]
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 5,
+        "status": "playing",
+        "progress": 2,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-winch-turn-01.png",
+      "sha256": "6337e2122ca932d2112e582af47d8c0691720e9c03f71bed4ac829bc14a8f40c",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "before": {
+        "time": 689.7999999523163,
+        "busy": "false",
+        "frames": [
+          "1"
+        ]
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 5,
+        "status": "playing",
+        "progress": 2,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-winch-turn-02.png",
+      "sha256": "646cef40a33f5f37164e8f10daff608ad6ede5440f7c8c3d707587c99fcc827f",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "before": {
+        "time": 877.3999999761581,
+        "busy": "false",
+        "frames": [
+          "2"
+        ]
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 5,
+        "status": "playing",
+        "progress": 2,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-winch-turn-03.png",
+      "sha256": "c68023eeb55a025c2ebb863afbe9d63bdcb4fbad2dead94ec3fb8af2ef689588",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "before": {
+        "time": 1059.8999999761581,
+        "busy": "false",
+        "frames": [
+          "3"
+        ]
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 5,
+        "status": "playing",
+        "progress": 2,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-warning-2-of-3.png",
+      "sha256": "c0c2d1e5c6440b75fccf016d6ec240fabe65ee50e3502fa4cb8f1003cd077634",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "before": {
+        "time": 2094,
+        "busy": "false",
+        "frames": [
+          "3"
+        ]
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 5,
+        "status": "playing",
+        "progress": 2,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-blocked-marker-preview.png",
+      "sha256": "ae76a208f8ffbe121dd14b06f046956bd4183e25ea7759e6d5ef21998d4ff519",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "before": {
+        "time": 1104.5,
+        "busy": "false",
+        "frames": [
+          "0"
+        ]
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 3,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 2
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 2
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 2,
+              "y": 3
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v6/1280x720-confirmed-block-spark.png",
+      "sha256": "13a9188b73313b6e6dc0d478bbab3ae670b61aded0ca3e56c65ff5830808cc67",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "before": {
+        "time": 2158.899999976158,
+        "busy": "false",
+        "frames": [
+          "0"
+        ]
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 4,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 2
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 0,
+              "y": 0
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 2,
+              "y": 3
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    }
+  ],
+  "errors": [],
+  "human_playtest": "HUMAN_PENDING",
+  "exit_code": 0,
+  "finished_at": "2026-10-23T06:08:24.729Z"
+}

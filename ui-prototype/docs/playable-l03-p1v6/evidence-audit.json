@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-23T06:17:09.976Z",
+  "exit_code": 0,
+  "browser_checks": 79,
+  "capture_hashes_checked": 50,
+  "source_bindings_checked": 66,
+  "rules_unchanged": true,
+  "painted_originals": 2,
+  "command_results_sha256": "805169b2dc54cccdfd639409259bfbbb488e622b664b3e550622e05fd897d19b",
+  "governance_receipt_sha256": "a37e0b14e2c1839d2cfb9330b374dae4847e841511ea7dd1507f57ea34aebc1b",
+  "log_sha256": {
+    "p0.log": "f3b91ced586bd46a83e873c5b07750b72a08d4831a895e08a3b73e25465dcc15",
+    "p0b.log": "0ee81138822e187cff8a8c97d6696eaa2f69796e877a0429e5afacfd48c904c3",
+    "p0c.log": "d0a638e28ae85c6d9876f6553265b1c37b99a0999bb9cbb243958bce94a218c4",
+    "p1v6-feedback.log": "f717ecf4896af000ca0ab736c5ada14ea6be2b5409377c5705b9d233a60bd74a",
+    "build.log": "a7917fbd6e7289ae2688296d08e69145a2a25b0e2ff7e52f08957b7b1edb0c75",
+    "scope.log": "0f3a30b1d53562850528e235eaf7ef77ca4b7e938c7b0bc517b868ee33891f93",
+    "governance.log": "ae8ef49aa2ee1f3431c7eb3d1d54630628f1a0ae26caea555c4254360eb73f3b"
+  },
+  "scope": "Current-source reports and unmodified execution screenshots; attempts retained as historical failures, excluded from passing totals.",
+  "human_playtest": "HUMAN_PENDING"
+}

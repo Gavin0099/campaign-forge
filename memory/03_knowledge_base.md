@@ -1,6 +1,8 @@
 # Decisions and observations
 
 - 2026-10-23 P1v5觀察：同一單位的落腳塵土與arrival動畫若共用相鄰React key，timeout移除後可能殘留舊SVG；以dust-序號與角色動畫序號分開，瀏覽器斷言短效DOM歸零。表現讀取既有progress／blocked事件，效果timer不持有busy；沒有hit／shove事件就不顯示假傷害或改格位。
+- 2026-10-23 P1v6：逐事件回饋必須與相同 path-step clock 共用邊界，不能在 finish 才一次補播。最後一步落地可與原子提交同一邊界，不為落塵增加 busy。反事實查詢要先重建該 intent 前的位置，將被查詢敵人排首避免較早敵人再移一次；只有移除相鄰同伴確實打開路徑、且接觸者唯一才出火花。
+- 2026-10-23 P1v6：Chrome 對 nested SVG viewport 本身做 drop-shadow，會露出原 PNG 圖集中裁切外的幀；顯式 overflow:hidden 並改為在 viewport 內 image 做濾鏡。DOM 幀數與建置不會發現漏圖，必須看實機截圖；180ms 效果時序用 MutationObserver 留存，截圖另行重播，避免截圖編碼錯過下一事件。
 - 2026-10-20：UI 計畫放 ui-prototype/PLAN.md，保護原始故事 PLAN。基線 plan_path 指向 UI 計畫。
 - 人物概念圖和戰場小人分開生成；CSS atlas 呈現，沒有聲稱已有動作動畫。
 - 早期v1立繪需保留3:8欄位比例；v2已改為透明四等欄2:1圖集，按新原檔比例呈現，不能拉伸填滿人物面板。
