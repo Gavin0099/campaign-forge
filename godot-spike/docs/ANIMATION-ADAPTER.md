@@ -32,3 +32,28 @@ offset closing step, camera shake, flash or particle emission. Logical knockback
 uses 30ms and blocked shove is zero; the damage number is stationary and fades.
 Hitstop is unchanged. Sequence events still record suppressed visual triggers,
 so contact scheduling can be compared without claiming an emitted effect.
+
+## Readability choice (A5)
+
+Keep option **a**: 0.98 × baseline 48.88px body height, with 1.5× attack zoom
+(71.85px reference body at contact). Zoom enters over 240ms and returns over
+180ms, concurrent with swing and settle. Camera focus moves 40% toward the
+attacker/target midpoint to avoid exposing blank space outside the painting.
+Reduced Motion leaves the camera unchanged.
+
+Option b, 1.3× persistent unit scale without zoom, has no idle overlap in these
+three setups, but the unit-blocked contact has **92 opaque overlapping pixels
+between the two knights**. Chosen option a has zero nonparticipant overlap in
+all six rest/contact checks. A preliminary 1.0× candidate had a single edge
+pixel collision, removed with the 2% reduction. Deliberate attacker/target
+contact still overlaps 63 / 29 / 81 world pixels in setups a / b / c; no zero
+contact-intersection claim is made. Source alpha threshold is 128, counting
+weapons as part of the silhouette, excluding rings, labels, flash and VFX.
+
+[Twelve actual 720p captures and transforms](evidence/spike02/readability.json),
+[opaque-mask measurements](evidence/spike02/readability-overlap.json),
+[camera contact](evidence/spike02/readability-a-setup2-contact.png),
+[large-unit contact](evidence/spike02/readability-b-setup2-contact.png).
+These images predate the A6 HUD trim; the art, poses and camera are the same.
+Knight B's light shield field supplies value contrast independently of labels;
+the final grayscale, label-free runtime proof is part of A8.

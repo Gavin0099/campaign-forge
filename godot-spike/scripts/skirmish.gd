@@ -52,6 +52,8 @@ var current_plan: Dictionary = {}
 var world: Node2D
 var ui_process_ticks := 0
 var hold_active := false
+var readability_option := "a"
+var camera_home := Vector2(640,360)
 
 func project(x: float, y: float) -> Vector2:
 	return MAP_OFFSET + Vector2(550 + 44 * (x - y), 70 + 26 * (x + y)) * MAP_SCALE
@@ -107,6 +109,8 @@ func _ready() -> void:
 	sound.volume_db = -7
 	add_child(sound)
 	select_setup(0)
+	if "--readability" in OS.get_cmdline_user_args():
+		await preload("res://scripts/readability_run.gd").new().run(self)
 	if "--overview" in OS.get_cmdline_user_args():
 		# Windows startup clamps oversized windows to the work area; request the
 		# validation render size explicitly, without changing the display mode.
@@ -246,6 +250,7 @@ func select_setup(index: int) -> void:
 		actor.add_child(player)
 		var character: String = "thoma" if ally else ("knight-a" if unit.id == "knight-1" else "knight-b")
 		player.facing_right = index == 2 if ally else index != 2
+		player.pixels_per_frame_pixel *= 1.3 if readability_option == "b" else 0.98
 		player.configure(manifest, character, body)
 		players[unit.id] = player
 		var flash_material := ShaderMaterial.new()
@@ -294,6 +299,7 @@ func play_attack(event_override: Array = []) -> void:
 	contact_triggers.clear()
 	var started := Time.get_ticks_usec()
 	for attack in current_plan.attacks:
+		attack_camera_in(attack)
 		var attacker_player = players[attack.unit]
 		var listener := on_swing_frame.bind(attack)
 		attacker_player.frame_entered.connect(listener)
@@ -309,16 +315,34 @@ func play_attack(event_override: Array = []) -> void:
 		attacker_player.frame_entered.disconnect(listener)
 		attacker_player.animation_event.disconnect(on_animation_event)
 	set_phase("settled", "Settled")
+	attack_camera_out()
 	await get_tree().create_timer(manifest.impact.settle_ms / 1000.0, false).timeout
 	for player in players.values(): player.show_idle()
 	units = result.units
 	for actor in actors.values(): actor.get_node("Body").material.set_shader_parameter("flash", 0.0)
 	camera.offset = Vector2.ZERO
+	camera.zoom = Vector2.ONE
+	camera.position = camera_home
 	last_elapsed = (Time.get_ticks_usec() - started) / 1000000.0
 	set_busy(false)
 	set_phase("ready", "%s / %.3f s" % [SETUP_NAMES[setup_index], last_elapsed])
 	print("SEQUENCE setup=%d reduced=%s elapsed_wall_s=%.4f limit=1.700 hp=%d cell=%s" % [setup_index+1, reduced_motion, last_elapsed, units[1].hp, units[1].cell])
 	attack_finished.emit(last_elapsed)
+
+func attack_camera_in(attack: Dictionary) -> void:
+	if readability_option != "a" or reduced_motion: return
+	var midpoint: Vector2 = (actors[attack.unit].position + actors[attack.target].position) / 2.0
+	var tween := camera.create_tween().set_parallel(true)
+	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(camera, "zoom", Vector2.ONE * manifest.camera.zoom, manifest.camera.in_ms / 1000.0)
+	tween.tween_property(camera, "position", camera_home.lerp(midpoint, manifest.camera.focus_weight), manifest.camera.in_ms / 1000.0)
+
+func attack_camera_out() -> void:
+	if readability_option != "a" or reduced_motion: return
+	var tween := camera.create_tween().set_parallel(true)
+	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(camera, "zoom", Vector2.ONE, manifest.camera.out_ms / 1000.0)
+	tween.tween_property(camera, "position", camera_home, manifest.camera.out_ms / 1000.0)
 
 func on_animation_event(event: Dictionary, at: Vector2) -> void:
 	contact_point = at

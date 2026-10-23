@@ -237,7 +237,8 @@
         "zoom",
         "in_ms",
         "out_ms",
-        "focus"
+        "focus",
+        "focus_weight"
       ],
       "properties": {
         "zoom": {
@@ -255,6 +256,11 @@
         },
         "focus": {
           "const": "attacker_target_midpoint"
+        },
+        "focus_weight": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
         }
       },
       "additionalProperties": false
