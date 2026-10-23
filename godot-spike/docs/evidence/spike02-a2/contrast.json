@@ -1,0 +1,150 @@
+{
+  "method": "WCAG relative sRGB luminance; all HUD labels backed by opaque panel colors; world numbers use opaque dark backplate. No alpha text colors. CJK normal text >=16px.",
+  "pairs": [
+    {
+      "role": "primary",
+      "foreground": "#eee7d6",
+      "background": "#1b2421",
+      "ratio": 12.898,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "primary",
+      "foreground": "#eee7d6",
+      "background": "#30372c",
+      "ratio": 9.972,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "primary",
+      "foreground": "#eee7d6",
+      "background": "#101a19",
+      "ratio": 14.391,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "secondary",
+      "foreground": "#b9bbab",
+      "background": "#1b2421",
+      "ratio": 8.145,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "secondary",
+      "foreground": "#b9bbab",
+      "background": "#30372c",
+      "ratio": 6.297,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "secondary",
+      "foreground": "#b9bbab",
+      "background": "#101a19",
+      "ratio": 9.088,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "heading/action",
+      "foreground": "#d2b777",
+      "background": "#1b2421",
+      "ratio": 8.161,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "heading/action",
+      "foreground": "#d2b777",
+      "background": "#30372c",
+      "ratio": 6.31,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "heading/action",
+      "foreground": "#d2b777",
+      "background": "#101a19",
+      "ratio": 9.106,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "ally",
+      "foreground": "#98c9be",
+      "background": "#1b2421",
+      "ratio": 8.656,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "ally",
+      "foreground": "#98c9be",
+      "background": "#30372c",
+      "ratio": 6.692,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "ally",
+      "foreground": "#98c9be",
+      "background": "#101a19",
+      "ratio": 9.658,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "enemy",
+      "foreground": "#dd9c7e",
+      "background": "#1b2421",
+      "ratio": 6.913,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "enemy",
+      "foreground": "#dd9c7e",
+      "background": "#30372c",
+      "ratio": 5.344,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "enemy",
+      "foreground": "#dd9c7e",
+      "background": "#101a19",
+      "ratio": 7.713,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "disabled",
+      "foreground": "#b9bbab",
+      "background": "#1b2421",
+      "ratio": 8.145,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "disabled",
+      "foreground": "#b9bbab",
+      "background": "#30372c",
+      "ratio": 6.297,
+      "normal_AA": true,
+      "large_AA": true
+    },
+    {
+      "role": "disabled",
+      "foreground": "#b9bbab",
+      "background": "#101a19",
+      "ratio": 9.088,
+      "normal_AA": true,
+      "large_AA": true
+    }
+  ],
+  "all_normal_AA": true
+}

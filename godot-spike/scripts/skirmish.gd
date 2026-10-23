@@ -190,107 +190,9 @@ func panel_style(color: Color, border: Color) -> StyleBoxFlat:
 	return style
 
 func build_hud() -> void:
-	hud = CanvasLayer.new()
-	hud.process_mode = Node.PROCESS_MODE_ALWAYS
+	hud = preload("res://scripts/battle_hud.gd").new()
 	add_child(hud)
-	var root := Control.new()
-	hud.add_child(root)
-	root.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var top := VBoxContainer.new()
-	root.add_child(top)
-	top.position = Vector2(32,24)
-	top.add_theme_constant_override("separation",6)
-	var eyebrow := Label.new()
-	eyebrow.text = "C A M P A I G N   F O R G E"
-	eyebrow.add_theme_color_override("font_color",BRASS)
-	eyebrow.add_theme_font_size_override("font_size",12)
-	top.add_child(eyebrow)
-	scenario_label = Label.new()
-	scenario_label.add_theme_color_override("font_color",BONE)
-	scenario_label.add_theme_font_size_override("font_size",23)
-	top.add_child(scenario_label)
-	var roster := VBoxContainer.new()
-	root.add_child(roster)
-	roster.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
-	roster.position = Vector2(1030,130)
-	roster.add_theme_constant_override("separation",18)
-	for unit in Rules.setup(0):
-		var row := VBoxContainer.new()
-		row.custom_minimum_size = Vector2(210,42)
-		roster.add_child(row)
-		var name_label := Label.new()
-		name_label.text = {"thoma":"THOMA", "knight-1":"ASH SHIELD", "knight-2":"PALE SHIELD"}[unit.id]
-		name_label.add_theme_font_size_override("font_size",13)
-		name_label.add_theme_color_override("font_color",BONE)
-		row.add_child(name_label)
-		var bar := ProgressBar.new()
-		bar.show_percentage = false
-		bar.max_value = unit.max_hp
-		bar.value = unit.hp
-		bar.custom_minimum_size = Vector2(210,7)
-		var bg := StyleBoxFlat.new()
-		bg.bg_color = Color("30372c")
-		var fill := StyleBoxFlat.new()
-		fill.bg_color = BRASS if unit.side == "ally" else Color("b9aa83")
-		bar.add_theme_stylebox_override("background",bg)
-		bar.add_theme_stylebox_override("fill",fill)
-		row.add_child(bar)
-		hp_bars[unit.id] = bar
-	var bottom := HBoxContainer.new()
-	root.add_child(bottom)
-	bottom.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
-	bottom.offset_left=32
-	bottom.offset_right=-32
-	bottom.offset_top=-54
-	bottom.offset_bottom=-18
-	bottom.add_theme_constant_override("separation",20)
-	hint_label=Label.new()
-	hint_label.text="1 / 2 / 3  SCENARIO    SPACE / R  STRIKE    M  REDUCED MOTION    ESC  EXIT    F1  DEBUG"
-	hint_label.add_theme_font_size_override("font_size",12)
-	hint_label.add_theme_color_override("font_color",BONE)
-	hint_label.size_flags_horizontal=Control.SIZE_EXPAND_FILL
-	bottom.add_child(hint_label)
-	action_button=Button.new()
-	action_button.text="STRIKE  /  SPACE"
-	action_button.custom_minimum_size=Vector2(180,36)
-	action_button.add_theme_font_size_override("font_size",13)
-	action_button.add_theme_stylebox_override("normal",panel_style(Color("1b2421"),Color("776746")))
-	action_button.add_theme_stylebox_override("focus",panel_style(Color(0,0,0,0),BRASS))
-	action_button.pressed.connect(play_attack)
-	bottom.add_child(action_button)
-	action_button.grab_focus.call_deferred()
-	debug_panel=PanelContainer.new()
-	root.add_child(debug_panel)
-	debug_panel.position=Vector2(1008,332)
-	debug_panel.custom_minimum_size=Vector2(240,290)
-	debug_panel.add_theme_stylebox_override("panel",panel_style(Color("1b2421"),Color("776746")))
-	var debug_column:=VBoxContainer.new()
-	debug_panel.add_child(debug_column)
-	for i in range(3):
-		var button:=Button.new()
-		button.text="%d  %s" % [i+1,SETUP_NAMES[i]]
-		button.pressed.connect(select_setup.bind(i))
-		debug_column.add_child(button)
-		setup_buttons.append(button)
-	detail_label=Label.new()
-	debug_column.add_child(detail_label)
-	hp_label=Label.new()
-	debug_column.add_child(hp_label)
-	status_label=Label.new()
-	status_label.add_theme_font_size_override("font_size",12)
-	debug_column.add_child(status_label)
-	motion_button=CheckButton.new()
-	motion_button.text="Reduced motion [M]"
-	motion_button.toggled.connect(func(value:bool):
-		reduced_motion=value
-		hint_label.modulate = TEAL if value else BONE)
-	debug_column.add_child(motion_button)
-	grid_button=CheckButton.new()
-	grid_button.text="Grid [G]"
-	grid_button.toggled.connect(func(value:bool): diagnostic=value)
-	debug_column.add_child(grid_button)
-	debug_panel.hide()
+	hud.build(self)
 
 func set_debug_visible(value: bool) -> void:
 	debug_visible=value
@@ -345,6 +247,7 @@ func select_setup(index: int) -> void:
 	hp_label.text = "KNIGHT I   6 / 6 HP"
 	status_label.text = SETUP_NAMES[index] + "   /   Ready"
 	scenario_label.text = SETUP_NAMES[index]
+	hud.reset_units()
 	for unit in units: hp_bars[unit.id].value = unit.hp
 	for i in range(3):
 		setup_buttons[i].modulate = BONE if i == index else Color("a4a99b")
@@ -369,6 +272,8 @@ func play_attack(event_override: Array = []) -> void:
 		status_label.text = result.reason
 		return
 	last_events = result.events if event_override.is_empty() else event_override
+	hud.refresh_forecast(result)
+	hud.forecast_panel.show()
 	current_plan = event_plan(last_events)
 	if current_plan.attacks.is_empty(): return
 	set_busy(true)
@@ -435,6 +340,7 @@ func on_animation_event(event: Dictionary, at: Vector2) -> void:
 func on_swing_frame(index: int, attack: Dictionary) -> void:
 	if index == 1 or (reduced_motion and index == 3): set_phase("lunge", "Swing")
 	if index != int(manifest.sequences["thoma.swing"].contact_frame_index): return
+	hud.forecast_panel.hide()
 	var target: Node2D = actors[attack.target]
 	var material: ShaderMaterial = target.get_node("Body").material
 	material.set_shader_parameter("flash", 0.0 if reduced_motion else 1.0)
@@ -502,7 +408,8 @@ func set_busy(value: bool) -> void:
 	motion_button.disabled = value
 	for button in setup_buttons:
 		button.disabled = value
-	action_button.text = "STRIKING…" if value else "REPLAY  /  SPACE"
+	action_button.text = "交鋒中…" if value else "準備攻擊"
+	if not value: hud.armed = false
 	if not value:
 		action_button.grab_focus()
 
@@ -520,6 +427,11 @@ func shake(strength: float) -> void:
 
 func show_damage(at: Vector2, amount: int) -> void:
 	var number := label_at(world, "−%d" % amount, at + Vector2(-8, -36), 18, BRASS)
+	var backing := StyleBoxFlat.new()
+	backing.bg_color = Color("101a19")
+	backing.content_margin_left = 3
+	backing.content_margin_right = 3
+	number.add_theme_stylebox_override("normal",backing)
 	number.z_index = 1000
 	number.add_theme_constant_override("outline_size", 3)
 	var tween := number.create_tween().set_parallel(true)
@@ -575,6 +487,10 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	match event.keycode:
 		KEY_F1, KEY_QUOTELEFT:
 			set_debug_visible(not debug_visible)
+		KEY_H, KEY_QUESTION:
+			hud.toggle_help(not hud.help_panel.visible)
+		KEY_SLASH:
+			if event.shift_pressed: hud.toggle_help(not hud.help_panel.visible)
 		KEY_1, KEY_2, KEY_3:
 			select_setup(event.keycode - KEY_1)
 		KEY_G:
@@ -582,7 +498,12 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		KEY_M:
 			if not busy:
 				motion_button.button_pressed = not motion_button.button_pressed
-		KEY_SPACE, KEY_R:
+		KEY_SPACE:
+			if not hud.help_panel.visible: hud.activate_attack()
+		KEY_R:
 			play_attack()
 		KEY_ESCAPE:
-			get_tree().quit()
+			if hud.help_panel.visible: hud.toggle_help(false)
+			elif debug_visible: set_debug_visible(false)
+			elif hud.armed and not busy: hud.disarm()
+			else: get_tree().quit()
