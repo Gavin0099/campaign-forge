@@ -39,11 +39,11 @@ for path,e in active.items():
  e['runtime_sha256']=sha(ROOT/path)
  status='PASS' if '/idle/' in path or path.endswith('05.png') else 'PLACEHOLDER'
  reason='Identity and near-idle silhouette retained at review scale; not Owner art approval.' if status=='PASS' else 'Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.'
- audit.append(dict(path=path,sha256=e['runtime_sha256'],source=e['raw'],raw_sha256=sha(ROOT/e['raw']),registration=registration[path],status=status,weapon_status='PROPOSED',reason=reason,style_review={'face':'PASS: recognizable aged face and grey beard','costume':status+': '+reason,'proportions':'PASS: fixed body-height registration, natural joint poses','palette':'PASS: mapped to original 128-color palette','light':'PASS: top-left highlight direction','stroke':'PASS at runtime scale; detailed painted contours vary'}))
+ audit.append(dict(path=path,sha256=e['runtime_sha256'],source=e['raw'],raw_sha256=sha(ROOT/e['raw']),registration=registration[path],status=status,weapon_status='APPROVED',reason=reason,style_review={'face':'PASS: recognizable aged face and grey beard','costume':status+': '+reason,'proportions':'PASS: fixed body-height registration, natural joint poses','palette':'PASS: mapped to original 128-color palette','light':'PASS: top-left highlight direction','stroke':'PASS at runtime scale; detailed painted contours vary'}))
 for e in entries:
  e['raw_sha256']=sha(ROOT/e['raw'])
  e['reference_sha256']={p:sha(ROOT/p) for p in e['references']}
- e['weapon_status']='PROPOSED; Owner confirmation pending'
+ e['weapon_status']='APPROVED'
  e['cleanup']='alpha <24 cleared; uniform Lanczos resize; manual feet to [256,464]; original Thoma 128-color palette, no dithering'
  e['output']=e['raw']
 historical=[e for e in read('generation-prompts.json') if e.get('segment')!='spike-02 A2']
@@ -71,12 +71,12 @@ for row,c in enumerate(m['characters']):
 contact.save(ROOT/'contact-sheet.png',optimize=True)
 
 source=(ROOT/'SOURCES.md').read_text(encoding='utf-8').split('\n## spike-02 A2')[0]
-lines=['','## spike-02 A2','', '**Weapon PROPOSED — Owner confirmation pending:** short one-handed flanged mace, dark iron head, worn oak haft and brass collar. Canon names no weapon. It fits a medical friar silhouette, provides blunt impact and is too short to read as a staff. Historical Phase A sword records above are superseded, not runtime provenance for A2. Original PNGs are untouched; original empty-handed idle remains reference-only.','', 'Evidence: character-prompt.txt:1 (empty hands, no staff/book/glow); ART-DIRECTION.md:9 (medical satchel/teal); l03Scene.ts:51–54 (medical/support); DEMO-CONTRACT.md:17 (melee 3, heal 3); narrative branch STORY.md:56 and COMPANION-ARCS.md:28,34 (friar, holy medallion), ch01.ink:306 / ch02.ink:250 and CREATIVE-BIBLE.md:74; DECISIONS U003 (class frame). These are brief-cited source facts, not a new canon claim.','', 'Tool: built-in image_gen; 1 attempt each except swing 02 (2). Rejected 02 attempt 1 is archived under rejected/ because it passes below the waist before chest-high contact. No rejected output is a runtime frame. Full reproducible cleanup: godot-spike/tools/prepare_a2_frames.py. No other character, prop or battlefield generation.','']
+lines=['','## spike-02 A2','', '**Weapon APPROVED (Owner, 2026-10-24):** short one-handed flanged mace, dark iron head, worn oak haft and brass collar. Owner approved the mace on 2026-10-24. It fits a medical friar silhouette, provides blunt impact and is too short to read as a staff. Historical Phase A sword records above are superseded, not runtime provenance for A2. Original PNGs are untouched; original empty-handed idle remains reference-only.','', 'Evidence: character-prompt.txt:1 (empty hands, no staff/book/glow); ART-DIRECTION.md:9 (medical satchel/teal); l03Scene.ts:51–54 (medical/support); DEMO-CONTRACT.md:17 (melee 3, heal 3); narrative branch STORY.md:56 and COMPANION-ARCS.md:28,34 (friar, holy medallion), ch01.ink:306 / ch02.ink:250 and CREATIVE-BIBLE.md:74; DECISIONS U003 (class frame). These are brief-cited source facts, not a new canon claim.','', 'Tool: built-in image_gen; 1 attempt each except swing 02 (2). Rejected 02 attempt 1 is archived under rejected/ because it passes below the waist before chest-high contact. No rejected output is a runtime frame. Full reproducible cleanup: godot-spike/tools/prepare_a2_frames.py. No other character, prop or battlefield generation.','']
 for e in entries:
  lines += [f"### {e['frame']} attempt {e['attempt']}",f"Raw: {e['raw']} SHA-256 `{e['raw_sha256']}`",'References: '+json.dumps(e['reference_sha256']),e['prompt'],'Cleanup: '+e['cleanup'],'Runtime SHA-256: '+e.get('runtime_sha256','REJECTED (no runtime output)'), '']
 lines+=['| Frame | Style verdict | SHA-256 |','| --- | --- | --- |']
 for r in audit:
  if r['path'].startswith('thoma/'):lines.append(f"| {r['path']} | {r['status']}: {r['reason']} | `{r['sha256']}` |")
-lines+=['','Weapon identity stays PROPOSED regardless of style PASS. Detailed frame review: frame-audit.json. Style sheet SHA-256 `'+sha(ROOT/'thoma-weapon-style-check.png')+'`. Contact sheet SHA-256 `'+sha(ROOT/'contact-sheet.png')+'`.']
+lines+=['','Weapon identity is APPROVED (Owner, 2026-10-24); style approval is separate. Detailed frame review: frame-audit.json. Style sheet SHA-256 `'+sha(ROOT/'thoma-weapon-style-check.png')+'`. Contact sheet SHA-256 `'+sha(ROOT/'contact-sheet.png')+'`.']
 (ROOT/'SOURCES.md').write_text(source+'\n'.join(lines)+'\n',encoding='utf-8')
-print('A2_FRAMES 7 weapon=PROPOSED original_PNGs_unchanged=true')
+print('A2_FRAMES 7 weapon=APPROVED original_PNGs_unchanged=true')

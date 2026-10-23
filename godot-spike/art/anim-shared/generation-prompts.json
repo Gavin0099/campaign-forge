@@ -73,10 +73,11 @@
     "reference_sha256": {
       "references/thoma.png": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90"
     },
-    "weapon_status": "PROPOSED; Owner confirmation pending",
+    "weapon_status": "APPROVED",
     "cleanup": "alpha <24 cleared; uniform Lanczos resize; manual feet to [256,464]; original Thoma 128-color palette, no dithering",
     "output": "raw/thoma-mace-idle-01.png",
-    "segment": "spike-02 A2"
+    "segment": "spike-02 A2",
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "frame": "thoma/swing/00.png",
@@ -94,10 +95,11 @@
       "references/thoma.png": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90",
       "raw/thoma-mace-idle-01.png": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5"
     },
-    "weapon_status": "PROPOSED; Owner confirmation pending",
+    "weapon_status": "APPROVED",
     "cleanup": "alpha <24 cleared; uniform Lanczos resize; manual feet to [256,464]; original Thoma 128-color palette, no dithering",
     "output": "raw/thoma-mace-swing-00.png",
-    "segment": "spike-02 A2"
+    "segment": "spike-02 A2",
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "frame": "thoma/swing/01.png",
@@ -115,10 +117,11 @@
       "references/thoma.png": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90",
       "raw/thoma-mace-idle-01.png": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5"
     },
-    "weapon_status": "PROPOSED; Owner confirmation pending",
+    "weapon_status": "APPROVED",
     "cleanup": "alpha <24 cleared; uniform Lanczos resize; manual feet to [256,464]; original Thoma 128-color palette, no dithering",
     "output": "raw/thoma-mace-swing-01.png",
-    "segment": "spike-02 A2"
+    "segment": "spike-02 A2",
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "frame": "thoma/swing/02.png",
@@ -138,10 +141,11 @@
       "references/thoma.png": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90",
       "raw/thoma-mace-idle-01.png": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5"
     },
-    "weapon_status": "PROPOSED; Owner confirmation pending",
+    "weapon_status": "APPROVED",
     "cleanup": "alpha <24 cleared; uniform Lanczos resize; manual feet to [256,464]; original Thoma 128-color palette, no dithering",
     "output": "rejected/thoma-mace-swing-02-attempt1.png",
-    "segment": "spike-02 A2"
+    "segment": "spike-02 A2",
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "frame": "thoma/swing/03.png",
@@ -159,10 +163,11 @@
       "references/thoma.png": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90",
       "raw/thoma-mace-idle-01.png": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5"
     },
-    "weapon_status": "PROPOSED; Owner confirmation pending",
+    "weapon_status": "APPROVED",
     "cleanup": "alpha <24 cleared; uniform Lanczos resize; manual feet to [256,464]; original Thoma 128-color palette, no dithering",
     "output": "raw/thoma-mace-swing-03.png",
-    "segment": "spike-02 A2"
+    "segment": "spike-02 A2",
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "frame": "thoma/swing/04.png",
@@ -180,10 +185,11 @@
       "references/thoma.png": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90",
       "raw/thoma-mace-idle-01.png": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5"
     },
-    "weapon_status": "PROPOSED; Owner confirmation pending",
+    "weapon_status": "APPROVED",
     "cleanup": "alpha <24 cleared; uniform Lanczos resize; manual feet to [256,464]; original Thoma 128-color palette, no dithering",
     "output": "raw/thoma-mace-swing-04.png",
-    "segment": "spike-02 A2"
+    "segment": "spike-02 A2",
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "frame": "thoma/swing/05.png",
@@ -201,10 +207,11 @@
       "references/thoma.png": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90",
       "raw/thoma-mace-idle-01.png": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5"
     },
-    "weapon_status": "PROPOSED; Owner confirmation pending",
+    "weapon_status": "APPROVED",
     "cleanup": "alpha <24 cleared; uniform Lanczos resize; manual feet to [256,464]; original Thoma 128-color palette, no dithering",
     "output": "raw/thoma-mace-swing-05.png",
-    "segment": "spike-02 A2"
+    "segment": "spike-02 A2",
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "frame": "thoma/swing/02.png",
@@ -224,9 +231,10 @@
       "raw/thoma-mace-idle-01.png": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5",
       "raw/thoma-mace-swing-03.png": "aca010f6472a7aff8b164ee9ea0ae92e12f2f62b44eb19d286b1ba5ca5380ea8"
     },
-    "weapon_status": "PROPOSED; Owner confirmation pending",
+    "weapon_status": "APPROVED",
     "cleanup": "alpha <24 cleared; uniform Lanczos resize; manual feet to [256,464]; original Thoma 128-color palette, no dithering",
     "output": "raw/thoma-mace-swing-02-attempt2.png",
-    "segment": "spike-02 A2"
+    "segment": "spike-02 A2",
+    "weapon_approval": "Owner, 2026-10-24"
   }
 ]

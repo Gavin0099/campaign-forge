@@ -8,5 +8,7 @@
     "raw/thoma-mace-idle-01.png",
     "raw/thoma-mace-swing-03.png"
   ],
-  "raw": "raw/thoma-mace-swing-02-attempt2.png"
+  "raw": "raw/thoma-mace-swing-02-attempt2.png",
+  "weapon_status": "APPROVED",
+  "weapon_approval": "Owner, 2026-10-24"
 }

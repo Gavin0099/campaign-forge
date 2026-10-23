@@ -121,7 +121,7 @@ func test_weapon_manifest_schema_fields_hashes_and_no_smear_in_reduced() -> void
 	for record in audit:
 		if record.path.begins_with("thoma/"):
 			count += 1
-			assert_eq(record.weapon_status,"PROPOSED")
+			assert_eq(record.weapon_status,"APPROVED")
 			assert_eq(record.sha256,FileAccess.get_sha256("res://art/anim-shared/"+record.path))
 	assert_eq(count,7)
 

@@ -8,7 +8,9 @@
       "references/thoma.png",
       "raw/thoma-mace-idle-01.png"
     ],
-    "raw": "raw/thoma-mace-swing-00.png"
+    "raw": "raw/thoma-mace-swing-00.png",
+    "weapon_status": "APPROVED",
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "frame": "thoma/swing/01.png",
@@ -19,7 +21,9 @@
       "references/thoma.png",
       "raw/thoma-mace-idle-01.png"
     ],
-    "raw": "raw/thoma-mace-swing-01.png"
+    "raw": "raw/thoma-mace-swing-01.png",
+    "weapon_status": "APPROVED",
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "frame": "thoma/swing/02.png",
@@ -30,7 +34,9 @@
       "references/thoma.png",
       "raw/thoma-mace-idle-01.png"
     ],
-    "raw": "raw/thoma-mace-swing-02.png"
+    "raw": "raw/thoma-mace-swing-02.png",
+    "weapon_status": "APPROVED",
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "frame": "thoma/swing/03.png",
@@ -41,7 +47,9 @@
       "references/thoma.png",
       "raw/thoma-mace-idle-01.png"
     ],
-    "raw": "raw/thoma-mace-swing-03.png"
+    "raw": "raw/thoma-mace-swing-03.png",
+    "weapon_status": "APPROVED",
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "frame": "thoma/swing/04.png",
@@ -52,7 +60,9 @@
       "references/thoma.png",
       "raw/thoma-mace-idle-01.png"
     ],
-    "raw": "raw/thoma-mace-swing-04.png"
+    "raw": "raw/thoma-mace-swing-04.png",
+    "weapon_status": "APPROVED",
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "frame": "thoma/swing/05.png",
@@ -63,6 +73,8 @@
       "references/thoma.png",
       "raw/thoma-mace-idle-01.png"
     ],
-    "raw": "raw/thoma-mace-swing-05.png"
+    "raw": "raw/thoma-mace-swing-05.png",
+    "weapon_status": "APPROVED",
+    "weapon_approval": "Owner, 2026-10-24"
   }
 ]

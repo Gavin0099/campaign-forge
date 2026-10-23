@@ -1,7 +1,6 @@
 # Shared impact animation — spike 02 Phase A
 
-Engine-neutral demonstration assets; no engine adoption or character equipment
-decision. P010 remains PROPOSED. Question: do actual weapon poses and distinct
+Engine-neutral demonstration assets; no engine adoption decision. P010 remains PROPOSED. Question: do actual weapon poses and distinct
 reactions make this one hit readable? Keep for comparison only if the Owner can
 recognize the swing, contact and blocked recoil without explanation; reject or
 retune if it still reads as sliding paper. Human playtest is HUMAN_PENDING.
@@ -45,9 +44,9 @@ Swing frame offsets encode a short diagonal closing step (maximum 32.8 reference
 pixels), matching the isometric neighbor projection without rotating the body.
 `scenarios` bind the existing setups to reaction sequences; no new combat rules.
 
-## Weapon proposal — spike-02 A2
+## Owner decision — 2026-10-24
 
-**PROPOSED, Owner confirmation pending:** a short one-handed flanged mace,
+**APPROVED (Owner, 2026-10-24).** Gavin: 「就用單手短釘頭錘，開始補 5 格揮擊」. Canon weapon: a short one-handed flanged mace,
 dark iron head, worn oak haft and small brass collar, carried in the right hand.
 Its blunt head fits the medical friar role and gives a readable weighty impact;
 forearm length avoids a staff silhouette, brass echoes the existing medallion.
@@ -60,15 +59,15 @@ satchel/teal; `ui-prototype/src/l03Scene.ts:51–54` names medical/support;
 On `origin/story/strengthen-narrative`, `docs/story/STORY.md:56` and
 `COMPANION-ARCS.md:28,34` describe the friar/holy symbol; `ch01.ink:306`,
 `ch02.ink:250` and `CREATIVE-BIBLE.md:74` reinforce that symbol, not a weapon.
-`docs/DECISIONS.md` U003 is only a class frame. Canon names no weapon.
+`docs/DECISIONS.md` U003 is only a class frame. Earlier source material did not name a weapon; the Owner decision above supersedes that status.
 
 Manifest rest pose is `thoma/idle/01.png`; `idle/00.png` is the unchanged
 original empty-handed crop for reference only. All six runtime swings now use
-the proposed mace. Historical Phase A sword prompts remain provenance history,
+the approved mace. Historical Phase A sword prompts remain provenance history,
 and were NOT references for A2. Full attempts/hashes are in SOURCES.md and
 generation-prompts.json. Review `thoma-weapon-style-check.png` and frame-audit.json:
 idle/recover pass the model style check; five motion poses retain PLACEHOLDER
-for costume-detail drift. Neither style PASS nor weapon PROPOSED is Owner approval.
+for costume-detail drift. Weapon approval does not constitute Owner approval of frame art.
 Use `godot-spike/tools/prepare_a2_frames.py` for A2 cleanup, not the historical
 Phase A `prepare_frames.py` / `build_manifest.py` which recreate the old candidates.
 

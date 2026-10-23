@@ -7,6 +7,8 @@
     "references": [
       "references/thoma.png"
     ],
-    "raw": "raw/thoma-mace-idle-01.png"
+    "raw": "raw/thoma-mace-idle-01.png",
+    "weapon_status": "APPROVED",
+    "weapon_approval": "Owner, 2026-10-24"
   }
 ]

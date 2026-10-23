@@ -77,7 +77,7 @@ uses an 18px reference font to avoid covering the weapon.
 ## spike-02 A2 overrides
 
 The earlier sections are Phase A history. A2 uses `thoma/idle/01.png` and six
-mace frames; the weapon is **PROPOSED**, not canon or equipment approval.
+mace frames; the weapon is **APPROVED (Owner, 2026-10-24)**; art approval is separate.
 Durations are 180/70/40/80/100/150 ms (620 total), contact remains index 3,
 and the registered mace head anchor is [455,196]. Fixed pivot and offsets are
 unchanged, preserving the existing mirror/foot tests. Reduced Motion still

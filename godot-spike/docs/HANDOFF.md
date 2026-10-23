@@ -423,10 +423,10 @@ SessionEnd; Phase B remains unstarted.**
 
 ## spike-02 A2
 
-**Ready for review of this fix segment.** Thoma now carries the same proposed
+**Ready for review of this fix segment.** Thoma now carries the same approved
 short mace in idle and all six swing poses; the default screen has a Traditional
 Chinese battle HUD; knight B has a consistent bone crest/light shield. Final
-engineering checks pass. **Human playtest is HUMAN_PENDING; weapon and P010 are
+engineering checks pass. **Human playtest is HUMAN_PENDING; weapon is APPROVED (Owner, 2026-10-24); P010 remains
 PROPOSED.** Five motion frames remain PLACEHOLDER for detailed costume drift.
 These results do not grant equipment, story, commercial-art or engine approval.
 
@@ -473,7 +473,7 @@ The GPT review's separate concern about human attack-weight validation remains
 **HUMAN_PENDING**. The complete movie is supplied as review material, not as a
 replacement for human playtest. No Phase B comparison or engine verdict follows.
 
-### Thoma weapon — PROPOSED, Owner confirmation pending
+### Thoma weapon — APPROVED (Owner, 2026-10-24) — superseded by Owner decision 2026-10-24
 
 **Short one-handed flanged mace:** blunt dark iron head, worn oak haft, small
 brass collar echoing the medallion; forearm length, carried in his right hand.
@@ -481,7 +481,7 @@ It provides a compact, weighty blunt silhouette suitable for the medical friar
 proposal without becoming a staff. The medallion remains a holy symbol, never
 the weapon. No sword/blade/staff/book/glow or borrowed party-member equipment.
 
-Canon names no weapon; the brief's evidence is retained without silently turning
+Historically, canon named no weapon (superseded by Owner decision 2026-10-24); the brief's evidence is retained without silently turning
 the proposal into canon:
 
 - `ui-prototype/docs/l03/character-prompt.txt:1`: older medical friar, teal robe,
@@ -522,7 +522,7 @@ Complete prompts, references, raw/runtime SHA-256 and cleanup are in
 [Per-frame face/costume/proportion/palette/light/stroke audit](../../shared-anim/frame-audit.json).
 The [same-scale and native-720p-size sheet](../../shared-anim/thoma-weapon-style-check.png)
 is an asset review sheet, explicitly not a runtime screenshot. PASS is a model
-check, not Owner/commercial approval. **Weapon stays PROPOSED for every frame.**
+check, not Owner/commercial approval. **Weapon is APPROVED (Owner, 2026-10-24) for every frame; superseded by Owner decision 2026-10-24.**
 Knight B edits are deterministic source-derived candidates, not a new named
 story character; original A and source atlases remain unchanged.
 

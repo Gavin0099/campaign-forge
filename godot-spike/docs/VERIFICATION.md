@@ -295,7 +295,7 @@ formal rules/story change or Phase B work. Task completion is not SessionEnd.
 2026-10-23 Owner brief `4b9cea4` on Phase A `46edbc6`, worktree
 `D:\campaign-forge\scratch\godot-spike`, branch `codex/godot-spike`.
 Final engineering checks pass; human playtest and Owner art acceptance remain
-**HUMAN_PENDING**. Weapon and engine decision P010 remain **PROPOSED**.
+**HUMAN_PENDING**. Weapon is APPROVED (Owner, 2026-10-24), superseding the A2 pending status; engine decision P010 remains **PROPOSED**.
 
 Final headless GUT: **33/33 tests, 924 assertions, zero failures, no script
 errors or GUT warnings**, exit 0. All 24 existing tests remain; nine A2 tests
@@ -379,7 +379,7 @@ including weapons, excluding rings, HUD and VFX. These sampled transforms do
 not prove all possible positions/frames in a full battle.
 
 [Style sheet](evidence/spike02-a2/thoma-weapon-style-check.png) is explicitly an
-asset sheet (not a game screenshot). Weapon identity is PROPOSED; idle and
+asset sheet (not a game screenshot). Weapon identity is APPROVED (Owner, 2026-10-24), superseding A2 pending status; idle and
 recover pass the model style check, five articulated motion frames remain
 PLACEHOLDER for costume-detail drift. [Prompt/attempt/hash provenance](../../shared-anim/SOURCES.md),
 [per-frame audit](../../shared-anim/frame-audit.json),

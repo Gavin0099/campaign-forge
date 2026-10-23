@@ -102,7 +102,7 @@
       360
     ],
     "status": "PASS",
-    "weapon_status": "PROPOSED",
+    "weapon_status": "APPROVED",
     "reason": "Identity and near-idle silhouette retained at review scale; not Owner art approval.",
     "style_review": {
       "face": "PASS: recognizable aged face and grey beard",
@@ -111,7 +111,8 @@
       "palette": "PASS: mapped to original 128-color palette",
       "light": "PASS: top-left highlight direction",
       "stroke": "PASS at runtime scale; detailed painted contours vary"
-    }
+    },
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "path": "thoma/swing/00.png",
@@ -125,7 +126,7 @@
       350
     ],
     "status": "PLACEHOLDER",
-    "weapon_status": "PROPOSED",
+    "weapon_status": "APPROVED",
     "reason": "Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
     "style_review": {
       "face": "PASS: recognizable aged face and grey beard",
@@ -134,7 +135,8 @@
       "palette": "PASS: mapped to original 128-color palette",
       "light": "PASS: top-left highlight direction",
       "stroke": "PASS at runtime scale; detailed painted contours vary"
-    }
+    },
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "path": "thoma/swing/01.png",
@@ -148,7 +150,7 @@
       354
     ],
     "status": "PLACEHOLDER",
-    "weapon_status": "PROPOSED",
+    "weapon_status": "APPROVED",
     "reason": "Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
     "style_review": {
       "face": "PASS: recognizable aged face and grey beard",
@@ -157,7 +159,8 @@
       "palette": "PASS: mapped to original 128-color palette",
       "light": "PASS: top-left highlight direction",
       "stroke": "PASS at runtime scale; detailed painted contours vary"
-    }
+    },
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "path": "thoma/swing/03.png",
@@ -171,7 +174,7 @@
       350
     ],
     "status": "PLACEHOLDER",
-    "weapon_status": "PROPOSED",
+    "weapon_status": "APPROVED",
     "reason": "Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
     "style_review": {
       "face": "PASS: recognizable aged face and grey beard",
@@ -180,7 +183,8 @@
       "palette": "PASS: mapped to original 128-color palette",
       "light": "PASS: top-left highlight direction",
       "stroke": "PASS at runtime scale; detailed painted contours vary"
-    }
+    },
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "path": "thoma/swing/04.png",
@@ -194,7 +198,7 @@
       342
     ],
     "status": "PLACEHOLDER",
-    "weapon_status": "PROPOSED",
+    "weapon_status": "APPROVED",
     "reason": "Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
     "style_review": {
       "face": "PASS: recognizable aged face and grey beard",
@@ -203,7 +207,8 @@
       "palette": "PASS: mapped to original 128-color palette",
       "light": "PASS: top-left highlight direction",
       "stroke": "PASS at runtime scale; detailed painted contours vary"
-    }
+    },
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "path": "thoma/swing/05.png",
@@ -217,7 +222,7 @@
       360
     ],
     "status": "PASS",
-    "weapon_status": "PROPOSED",
+    "weapon_status": "APPROVED",
     "reason": "Identity and near-idle silhouette retained at review scale; not Owner art approval.",
     "style_review": {
       "face": "PASS: recognizable aged face and grey beard",
@@ -226,7 +231,8 @@
       "palette": "PASS: mapped to original 128-color palette",
       "light": "PASS: top-left highlight direction",
       "stroke": "PASS at runtime scale; detailed painted contours vary"
-    }
+    },
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "path": "thoma/swing/02.png",
@@ -240,7 +246,7 @@
       350
     ],
     "status": "PLACEHOLDER",
-    "weapon_status": "PROPOSED",
+    "weapon_status": "APPROVED",
     "reason": "Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
     "style_review": {
       "face": "PASS: recognizable aged face and grey beard",
@@ -249,7 +255,8 @@
       "palette": "PASS: mapped to original 128-color palette",
       "light": "PASS: top-left highlight direction",
       "stroke": "PASS at runtime scale; detailed painted contours vary"
-    }
+    },
+    "weapon_approval": "Owner, 2026-10-24"
   },
   {
     "path": "knight-b/idle/00.png",
