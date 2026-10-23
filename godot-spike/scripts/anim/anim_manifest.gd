@@ -21,6 +21,9 @@ func positive_int(value: Variant) -> bool:
 func point(value: Variant) -> bool:
 	return value is Array and value.size() == 2 and (value[0] is float or value[0] is int) and (value[1] is float or value[1] is int)
 
+func number_between(value: Variant, low: float, high: float) -> bool:
+	return (value is int or value is float) and value >= low and value <= high
+
 func validate(candidate: Dictionary, check_files: bool = true) -> bool:
 	errors.clear()
 	data = {}
@@ -61,7 +64,7 @@ func validate(candidate: Dictionary, check_files: bool = true) -> bool:
 	var shake = candidate.impact.get("shake", {})
 	if not shake is Dictionary or not positive_int(shake.get("duration_ms")) or not (shake.get("strength_px") is float or shake.get("strength_px") is int) or not positive_int(shake.get("decay")):
 		errors.append("invalid shake")
-	if not positive_int(candidate.camera.get("in_ms")) or not positive_int(candidate.camera.get("out_ms")) or candidate.camera.get("focus") != "attacker_target_midpoint" or not candidate.camera.get("zoom") is float:
+	if not positive_int(candidate.camera.get("in_ms")) or not positive_int(candidate.camera.get("out_ms")) or candidate.camera.get("focus") != "attacker_target_midpoint" or not number_between(candidate.camera.get("zoom"),1,2) or not number_between(candidate.camera.get("focus_weight"),0,1):
 		errors.append("invalid camera")
 	for key in ["open", "unit-blocked", "terrain-blocked"]:
 		var scenario = candidate.scenarios.get(key, {})

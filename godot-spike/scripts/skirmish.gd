@@ -3,6 +3,8 @@ extends Node2D
 signal phase_changed(phase: String)
 signal attack_finished(elapsed: float)
 signal contact_released
+signal hitstop_started
+signal hitstop_finished
 
 const Rules = preload("res://scripts/rules/grid_rules.gd")
 const Manifest = preload("res://scripts/anim/anim_manifest.gd")
@@ -449,12 +451,14 @@ func hold_contact() -> void:
 	var began := Time.get_ticks_usec()
 	hold_active = true
 	get_tree().paused = true
+	hitstop_started.emit()
 	await get_tree().create_timer(manifest.impact.hitstop_ms / 1000.0, true, false, true).timeout
 	# SceneTreeTimer can be one scheduler quantum early. Never resume before the
 	# specified real-time minimum, including on a fast headless runner.
 	while Time.get_ticks_usec() - began < manifest.impact.hitstop_ms * 1000:
 		await get_tree().process_frame
 	last_hold_ms = (Time.get_ticks_usec() - began) / 1000.0
+	hitstop_finished.emit()
 	get_tree().paused = false
 	hold_active = false
 

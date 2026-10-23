@@ -6,6 +6,9 @@ func test_shared_copy_hash_parity() -> void:
 	compare_tree(source, "res://art/anim-shared")
 
 func compare_tree(source: String, destination: String) -> void:
+	for copied in DirAccess.get_files_at(destination):
+		if copied.ends_with(".import") or copied.ends_with(".uid"): continue
+		assert_true(FileAccess.file_exists(source.path_join(copied)), "no stale copied file " + copied)
 	for name in DirAccess.get_files_at(source):
 		if name.ends_with(".import") or name.ends_with(".uid"): continue
 		assert_true(FileAccess.file_exists(destination.path_join(name)), name)

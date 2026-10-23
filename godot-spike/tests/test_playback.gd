@@ -38,7 +38,7 @@ func run_and_observe(index: int, reduced: bool) -> Dictionary:
 			sound_at_contact = sound_at_contact or scene.sound.playing
 		await get_tree().process_frame
 	assert_false(scene.busy, "Sequence has a watchdog; no stuck lock")
-	assert_lt(scene.last_elapsed, 1.7, "Measured wall time INCLUDES 80ms local hitstop")
+	assert_lt(scene.last_elapsed, 1.7, "Measured wall time INCLUDES 80ms whole-world hitstop")
 	assert_eq(scene.units[1].hp, 4, "Exactly one resolution despite spam")
 	assert_eq(scene.actors["knight-1"].position, scene.center(scene.units[1].cell))
 	assert_eq(scene.actors.thoma.position, scene.center(scene.units[0].cell))
@@ -50,7 +50,7 @@ func run_and_observe(index: int, reduced: bool) -> Dictionary:
 	assert_eq(phases, ["windup", "lunge", "contact", "knockback", "settled", "ready"] if index == 0 else ["windup", "lunge", "contact", "blocked", "blocked_recoil", "settled", "ready"])
 	var reaction_phase := "knockback" if index == 0 else "blocked"
 	var hold: float = (times[reaction_phase] - times.contact) / 1000000.0
-	assert_gte(hold, 0.07, "Real-time local contact hold is about 80ms")
+	assert_gte(hold, 0.08, "Real-time whole-world contact hold is at least 80ms")
 	assert_lt(hold, 0.16)
 	if index != 0:
 		assert_lte(max_displacement, 6.01, "Blocked target never crosses into blocker")
@@ -75,7 +75,8 @@ func test_all_three_reduced_motion_sequences() -> void:
 
 func test_keyboard_controls_and_diagnostic_default() -> void:
 	assert_false(scene.diagnostic)
-	for key in [KEY_2, KEY_G, KEY_M]:
+	assert_false(scene.debug_visible)
+	for key in [KEY_2, KEY_F1, KEY_G, KEY_M]:
 		var event := InputEventKey.new()
 		event.keycode = key
 		event.pressed = true

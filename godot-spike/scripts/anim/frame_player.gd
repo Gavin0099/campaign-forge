@@ -18,6 +18,7 @@ var pixels_per_frame_pixel := 48.88 / 360.0
 var indices: Array = []
 var cursor := 0
 var textures: Dictionary = {}
+var started_process_frame := -1
 
 func configure(source: Dictionary, id: String, sprite: Sprite2D) -> void:
 	manifest = source
@@ -35,6 +36,7 @@ func play(key: String, low_motion: bool = false) -> void:
 	cursor = 0
 	frame_time_ms = 0
 	playing = true
+	started_process_frame = Engine.get_process_frames()
 	enter_frame(int(indices[0]))
 
 func show_idle() -> void:
@@ -45,7 +47,7 @@ func show_idle() -> void:
 	apply_frame()
 
 func _process(delta: float) -> void:
-	if not playing or held: return
+	if not playing or held or Engine.get_process_frames() == started_process_frame: return
 	frame_time_ms += delta * 1000.0
 	while playing and frame_time_ms >= duration_ms():
 		frame_time_ms -= duration_ms()
@@ -54,9 +56,12 @@ func _process(delta: float) -> void:
 			playing = false
 			finished.emit()
 		else:
+			if int(indices[cursor]) == int(sequence.get("contact_frame_index", -1)):
+				frame_time_ms = 0
 			enter_frame(int(indices[cursor]))
 			# Contact can pause the tree synchronously from a frame signal.
-			if held or get_tree().paused: break
+			if held or get_tree().paused:
+				break
 
 func duration_ms() -> float:
 	return sequence.get("reduced_duration_ms", sequence.frames[frame_index].duration_ms) if reduced else sequence.frames[frame_index].duration_ms
