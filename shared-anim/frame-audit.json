@@ -1,0 +1,240 @@
+[
+  {
+    "path": "thoma/idle/00.png",
+    "sha256": "4214584c64eb57e3d63bdbb9975a2a0d41ee76cd4c6087b61485e795abe23400",
+    "source": "references/thoma.png",
+    "cleanup": "original crop uniformly scaled, alpha debris threshold 24, fixed pivot",
+    "status": "SOURCE_DERIVED"
+  },
+  {
+    "path": "knight-a/idle/00.png",
+    "sha256": "0ca4807cc16f63dba0b3a15bfaaa1d1a534892151db7dfb339e6c5c2b6edf791",
+    "source": "references/knight-a.png",
+    "cleanup": "original crop uniformly scaled, alpha debris threshold 24, fixed pivot",
+    "status": "SOURCE_DERIVED"
+  },
+  {
+    "path": "thoma/swing/00.png",
+    "sha256": "d0740fdd74e8b05ca82b1a5c01347cfb87427a696579776e20b528d152062a7c",
+    "source": "raw/thoma-swing-00.png",
+    "raw_sha256": "9b9abc677d83bdb671515bf64953acb3d85eddac73b7d96118aba20862a7ca97",
+    "registration": [
+      690,
+      1196,
+      150,
+      360
+    ],
+    "status": "PLACEHOLDER",
+    "reason": "weapon absent in original Thoma crop; generated sleeve/hem detail differs"
+  },
+  {
+    "path": "thoma/swing/01.png",
+    "sha256": "d918c3338afd97fc1c4661fc6b2bcf3a2d5dc6c70e4c9ae8686da81ff124807e",
+    "source": "raw/thoma-swing-01.png",
+    "raw_sha256": "fb72c1459e526cfbdfe93555edbcf1e626fd00d28cc7c7a1702d01ba753ae788",
+    "registration": [
+      735,
+      1216,
+      302,
+      320
+    ],
+    "status": "PLACEHOLDER",
+    "reason": "weapon absent in original Thoma crop; generated sleeve/hem detail differs"
+  },
+  {
+    "path": "thoma/swing/02.png",
+    "sha256": "e12435f7ddb3c2e16476d4499c0f6038444c511c05251aaa0f2e601b9637fe48",
+    "source": "raw/thoma-swing-02.png",
+    "raw_sha256": "8a94a4e381d89005669c9200f925054a8e1aa53d7bbca76d4f0aadb22aff50ae",
+    "registration": [
+      615,
+      1177,
+      163,
+      348
+    ],
+    "status": "PLACEHOLDER",
+    "reason": "weapon absent in original Thoma crop; generated sleeve/hem detail differs"
+  },
+  {
+    "path": "thoma/swing/03.png",
+    "sha256": "78b273af36cfd0ae8078544ff616537b58afeea09e074f79e6096d9c7b32e6d6",
+    "source": "raw/thoma-swing-03.png",
+    "raw_sha256": "e1007e646772e9b5b3d7f56aa8cb4e770249724b0e4699ff864e1d2f46747c06",
+    "registration": [
+      550,
+      1192,
+      78,
+      360
+    ],
+    "status": "PLACEHOLDER",
+    "reason": "weapon absent in original Thoma crop; generated sleeve/hem detail differs"
+  },
+  {
+    "path": "thoma/swing/04.png",
+    "sha256": "ff3347dcdb411e6e11d54c6e8e295ddd4cc86a7c0d4011edf97ce29fea757140",
+    "source": "raw/thoma-swing-04.png",
+    "raw_sha256": "c4bf92b69f8bee4bc8dd4dccdc9bed90fcf00ac17806b76d0155d8f1a28b827c",
+    "registration": [
+      635,
+      1200,
+      85,
+      352
+    ],
+    "status": "PLACEHOLDER",
+    "reason": "weapon absent in original Thoma crop; generated sleeve/hem detail differs"
+  },
+  {
+    "path": "thoma/swing/05.png",
+    "sha256": "8d264eebae4e67133337d31194b13d036c9a0a1ef4e30a6566e5ef6bec2c8828",
+    "source": "raw/thoma-swing-05.png",
+    "raw_sha256": "9a8e01df6a7e3273664fc9536f5a0dd74ef43180bba69c684ba3061eac998851",
+    "registration": [
+      640,
+      1221,
+      35,
+      360
+    ],
+    "status": "PLACEHOLDER",
+    "reason": "weapon absent in original Thoma crop; generated sleeve/hem detail differs"
+  },
+  {
+    "path": "knight-a/hit/00.png",
+    "sha256": "6ebef74b6cf9520b5f5a243fb4d9bf669bf78bc6c52f9d6b99ce8202619d2b41",
+    "source": "raw/knight-a-hit-00.png",
+    "raw_sha256": "10260a5c1dd3cfdc7ed5eb70da250e74c7f7d1b36543bfee56d078eaff900a79",
+    "registration": [
+      775,
+      1206,
+      68,
+      360
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "knight-a/hit/01.png",
+    "sha256": "9fbf4a41ffcc16d7c0e75a1f74a182ef33eed4c869f934341cf81e2692b85179",
+    "source": "raw/knight-a-hit-01.png",
+    "raw_sha256": "f528b4c5b14bd1dbc5eeba2e6a3e0c8e889c4bce684b0cab16ec3a506cfb592b",
+    "registration": [
+      775,
+      1168,
+      70,
+      350
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "knight-a/hit/02.png",
+    "sha256": "0465fee5877109acb6723c56ebe71134f0d3fcc9ab6e6b9505d7be534f4523bb",
+    "source": "raw/knight-a-hit-02.png",
+    "raw_sha256": "1596e1e438609947b652f20302c8735233247bd400c495125b18eb7743cce376",
+    "registration": [
+      795,
+      1221,
+      33,
+      360
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "knight-a/stagger/00.png",
+    "sha256": "2cfe6ceb5de5380888937e1ec790102372b4efe5a2f7126a711780915f2948b6",
+    "source": "raw/knight-a-stagger-00.png",
+    "raw_sha256": "2f32cc1dc5d47df2f0e40df3bc7790e38c26a2f5dd86ec778f52ee5559a9d299",
+    "registration": [
+      785,
+      1138,
+      151,
+      332
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "knight-a/stagger/01.png",
+    "sha256": "b4ec94ff31941285ebd450a706d0565c23745ad2757bcd9229c55797a4b1773b",
+    "source": "raw/knight-a-stagger-01.png",
+    "raw_sha256": "b7bc8fd69682eda80f00c74a26d7993726add31bf1b678323bc968b55399bbc2",
+    "registration": [
+      795,
+      1149,
+      136,
+      310
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "knight-a/stagger/02.png",
+    "sha256": "62594f3aaef1f3a70fdae0a1965c7649f8badf0a112afced863cf85b44e24dd6",
+    "source": "raw/knight-a-stagger-02.png",
+    "raw_sha256": "7fa1a592fce21df8a5b08076f666b5e77db0cc29fc02b1521ffc931729cfc2cf",
+    "registration": [
+      795,
+      1147,
+      128,
+      335
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "knight-b/idle/00.png",
+    "sha256": "a25d3f08eec7fc8fea555b0b1388dd7f9fe5788af4cb97a468fbb1c512192710",
+    "source": "knight-a/idle/00.png",
+    "status": "SOURCE_DERIVED",
+    "cleanup": "manual shield-field ellipse mask, bone value remap; preserve alpha, texture, armor, boss and pivot",
+    "recolored_pixels": 3294
+  },
+  {
+    "path": "knight-b/hit/00.png",
+    "sha256": "fb744efd3bc1d810b35a487c516f211fefacb886c68d6e2308b41166ddec99cc",
+    "source": "knight-a/hit/00.png",
+    "status": "SOURCE_DERIVED",
+    "cleanup": "manual shield-field ellipse mask, bone value remap; preserve alpha, texture, armor, boss and pivot",
+    "recolored_pixels": 4678
+  },
+  {
+    "path": "knight-b/hit/01.png",
+    "sha256": "d588a836cec46b2d47bf0cc8d35f66cab05fd49073bca07d53778e2a1b808e29",
+    "source": "knight-a/hit/01.png",
+    "status": "SOURCE_DERIVED",
+    "cleanup": "manual shield-field ellipse mask, bone value remap; preserve alpha, texture, armor, boss and pivot",
+    "recolored_pixels": 4400
+  },
+  {
+    "path": "knight-b/hit/02.png",
+    "sha256": "221cdfcc637317754223e077eb8f7fab3aa9921cec8bfe17b93ca2ff383ebc0e",
+    "source": "knight-a/hit/02.png",
+    "status": "SOURCE_DERIVED",
+    "cleanup": "manual shield-field ellipse mask, bone value remap; preserve alpha, texture, armor, boss and pivot",
+    "recolored_pixels": 3652
+  },
+  {
+    "path": "knight-b/stagger/00.png",
+    "sha256": "e1e189506fc35b8ed51e4b9e4e38c9b4b9c3c75519936a0294cdf348ff674a61",
+    "source": "knight-a/stagger/00.png",
+    "status": "SOURCE_DERIVED",
+    "cleanup": "manual shield-field ellipse mask, bone value remap; preserve alpha, texture, armor, boss and pivot",
+    "recolored_pixels": 3504
+  },
+  {
+    "path": "knight-b/stagger/01.png",
+    "sha256": "c0c766976ec43f3f82f194348f95bb41f2b6d66d590d4366d542ff4087aa2374",
+    "source": "knight-a/stagger/01.png",
+    "status": "SOURCE_DERIVED",
+    "cleanup": "manual shield-field ellipse mask, bone value remap; preserve alpha, texture, armor, boss and pivot",
+    "recolored_pixels": 3832
+  },
+  {
+    "path": "knight-b/stagger/02.png",
+    "sha256": "dd1b809d33a596f673b0454910e6ed6d5cd0e8306c83ae8aae0d549ff4154b42",
+    "source": "knight-a/stagger/02.png",
+    "status": "SOURCE_DERIVED",
+    "cleanup": "manual shield-field ellipse mask, bone value remap; preserve alpha, texture, armor, boss and pivot",
+    "recolored_pixels": 3642
+  }
+]

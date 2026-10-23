@@ -23,7 +23,8 @@ rule changes. Feet use the pivot, never an opaque bounding-box center.
 Sequences: Thoma idle (original crop) + six swing poses (anticipation, raised
 blade, sweep, contact, follow-through, recover); each knight idle + three hit
 poses (flinch, recoil, settle) + three stagger poses (brace, buckle, recover).
-Knight B has a pale shield field and a crest silhouette, retained in all poses.
+Knight B has a pale shield field, retained in all poses; its value
+contrast is intended to remain visible in grayscale without identity labels.
 Every sequence is non-looping. Returning to idle is the adapter's responsibility.
 `offset` is a frame-pixel visual offset and defaults to [0,0]. Durations are
 positive integer milliseconds; indices start at zero. `events.anchor` belongs
