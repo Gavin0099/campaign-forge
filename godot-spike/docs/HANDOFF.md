@@ -420,3 +420,203 @@ Those are review inputs, not model approval or authorization to continue.
 
 **Stop after this handoff commit. No push. Await Owner review. Task DONE is not
 SessionEnd; Phase B remains unstarted.**
+
+## spike-02 A2
+
+**Ready for review of this fix segment.** Thoma now carries the same proposed
+short mace in idle and all six swing poses; the default screen has a Traditional
+Chinese battle HUD; knight B has a consistent bone crest/light shield. Final
+engineering checks pass. **Human playtest is HUMAN_PENDING; weapon and P010 are
+PROPOSED.** Five motion frames remain PLACEHOLDER for detailed costume drift.
+These results do not grant equipment, story, commercial-art or engine approval.
+
+Owner's 2026-10-23 confirmation authorized this worktree/session and W1–W6 only,
+starting clean at `4b9cea4` over Phase A `46edbc6`. Branch: `codex/godot-spike`.
+Commit only; **no push**. The earlier Phase A sections describe historical states
+and are superseded by this section where A2 changes them. **Phase B unstarted.**
+
+### Run and inspect
+
+From `D:\campaign-forge\scratch\godot-spike`, using the installed Godot 4.7.2
+standard build and its existing console wrapper:
+
+```powershell
+godot --headless --path godot-spike -s res://tools/sync_shared_anim.gd
+godot --headless --path godot-spike --import
+godot --path godot-spike --resolution 1280x720
+```
+
+Or open `godot-spike/project.godot` and press F5. **Space** first prepares the
+attack/forecast, then a second press confirms; the focused action button also
+works with the mouse. **R** directly replays the current fixture. **1 / 2 / 3**
+select open / unit-blocked / terrain-blocked setups. **M** toggles Reduced Motion
+while idle. **F1 / backtick** toggles debug; **G** toggles its grid only while
+debug is open. **H / ?** opens the dismissable Chinese controls overlay. **Tab**
+moves focus; **Esc** closes help, debug or armed forecast before exiting.
+Attack/setup/motion changes remain locked during playback. Help responds during
+hitstop. Knight names appear in forecast/hover inspection, not permanent labels.
+
+SystemFont uses the installed Microsoft JhengHei with Noto Sans TC / PingFang TC
+fallbacks. No font file is bundled or redistributed. Other PCs need a suitable
+CJK system font. Test and capture commands with actual exits are in
+[VERIFICATION — spike-02 A2](VERIFICATION.md#spike-02-a2).
+
+### GPT P1 responses
+
+| Review issue | Change | Evidence and remaining limit |
+| --- | --- | --- |
+| Weapon identity / weak swing | Replaced borrowed sword with proposed own mace; persistent weapon idle; 180 ms wind-up, 40 ms swing, articulated contact and recovery; head anchor [455,196] | [Style sheet](evidence/spike02-a2/thoma-weapon-style-check.png), [movie](evidence/spike02-a2/attack-60fps.avi), [prompts/hashes](../../shared-anim/SOURCES.md). Identity gap is resolved as a proposal; five detailed costume checks remain PLACEHOLDER and human weight/readability judgement is pending. |
+| UI NOT FIXED / tool appearance | Selected portrait/name/role/HP/status at bottom-left; event-driven paired-portrait forecast while armed; transient turn banner; unit HP bars; brass/moss nine-slice frames; debug/help off initially | [Default](evidence/spike02-a2/default-view.png), [forecast](evidence/spike02-a2/attack-forecast.png), [blocked unit](evidence/spike02-a2/forecast-blocked-unit.png), [blocked terrain](evidence/spike02-a2/forecast-blocked-terrain.png), [help](evidence/spike02-a2/help-overlay.png), [F1](evidence/spike02-a2/debug-f1.png). Model visual inspection, not Owner approval. |
+| Knight readability / zoom overlap | Bone crest and light shield across every B pose; 1.4× zoom with 0.52 focus weight; current-frame HP anchors and separated damage numbers | [Unlabeled default](evidence/spike02-a2/knights-default-view.png), [zoom](evidence/spike02-a2/knights-zoomed.png), [grayscale](evidence/spike02-a2/knights-grayscale.png), [overlap JSON](evidence/spike02-a2/readability-overlap.json). Zero measured nonparticipant overlap; finite sampled poses, human distance recognition pending. |
+
+The GPT review's separate concern about human attack-weight validation remains
+**HUMAN_PENDING**. The complete movie is supplied as review material, not as a
+replacement for human playtest. No Phase B comparison or engine verdict follows.
+
+### Thoma weapon — PROPOSED, Owner confirmation pending
+
+**Short one-handed flanged mace:** blunt dark iron head, worn oak haft, small
+brass collar echoing the medallion; forearm length, carried in his right hand.
+It provides a compact, weighty blunt silhouette suitable for the medical friar
+proposal without becoming a staff. The medallion remains a holy symbol, never
+the weapon. No sword/blade/staff/book/glow or borrowed party-member equipment.
+
+Canon names no weapon; the brief's evidence is retained without silently turning
+the proposal into canon:
+
+- `ui-prototype/docs/l03/character-prompt.txt:1`: older medical friar, teal robe,
+  ivory stole, medical satchel, brass medallion; explicitly empty hands and no
+  staff/book/glow. Original crop remains unedited.
+- `ui-prototype/docs/l03/ART-DIRECTION.md:9` and `ui-prototype/src/l03Scene.ts:51–54`:
+  medical satchel/teal, medical and support role.
+- `ui-prototype/docs/playable-l03-research/DEMO-CONTRACT.md:17`: melee 3 and heal 3
+  in a proposed demo kit. This segment leaves actual spike damage 2 untouched.
+- On `origin/story/strengthen-narrative`, `docs/story/STORY.md:56` and
+  `COMPANION-ARCS.md:28` describe the medical friar/cleric. `COMPANION-ARCS.md:34`,
+  `docs/story/script/ch01.ink:306` / `ch02.ink:250` describe his held holy symbol;
+  `CREATIVE-BIBLE.md:74` calls out age, robes and symbol for separate review.
+  These are source locations cited in the brief, not newly authored story.
+- Brief-cited `docs/DECISIONS.md` U003 concerns the original class frame, not
+  weapon assignment. Phase A README explicitly identified the borrowed sword
+  as placeholder rather than an equipment/story decision.
+
+Manifest uses **`thoma/idle/01.png`**; `idle/00.png` remains reference-only. All
+runtime frames are 512×512 with pivot [256,464]. The original crop and new weapon
+idle constrain generation; no Karen/sword reference was used for A2. One attempt
+per frame except swing 02: attempt 1 descended too far before contact, attempt 2
+replaced it. The rejected original is archived outside runtime sequences.
+Complete prompts, references, raw/runtime SHA-256 and cleanup are in
+[SOURCES](../../shared-anim/SOURCES.md) and
+[generation-prompts.json](../../shared-anim/generation-prompts.json).
+
+| Frame | Pose | Model style check |
+| --- | --- | --- |
+| `thoma/idle/01.png` | Weapon at rest | **PASS** — face/costume/near-idle silhouette retained at review scale |
+| `thoma/swing/00.png` | Anticipation | **PLACEHOLDER** — stole motif, cuffs and hem drift |
+| `thoma/swing/01.png` | Raise/start | **PLACEHOLDER** — same costume-detail mismatch |
+| `thoma/swing/02.png` | Descending swing / painted smear | **PLACEHOLDER** — corrected arc, costume-detail mismatch remains |
+| `thoma/swing/03.png` | Forward-weight contact | **PLACEHOLDER** — own mace/head anchor, costume-detail mismatch remains |
+| `thoma/swing/04.png` | Follow-through | **PLACEHOLDER** — trailing stole/hem differs from source |
+| `thoma/swing/05.png` | Recover | **PASS** — near-idle shape and equipment continuity at review scale |
+
+[Per-frame face/costume/proportion/palette/light/stroke audit](../../shared-anim/frame-audit.json).
+The [same-scale and native-720p-size sheet](../../shared-anim/thoma-weapon-style-check.png)
+is an asset review sheet, explicitly not a runtime screenshot. PASS is a model
+check, not Owner/commercial approval. **Weapon stays PROPOSED for every frame.**
+Knight B edits are deterministic source-derived candidates, not a new named
+story character; original A and source atlases remain unchanged.
+
+### HUD, readability and timing
+
+Selected panel shows 托瑪 / 修士／醫療, portrait, numeric HP/bar and the short
+status line. Forecast shows attacker/target portraits, damage, target HP before
+→ after and event outcome: 擊退一格 or 受阻 + 被友軍阻擋 / 被斷橋阻擋. The unit-blocked
+forecast names 議會騎士・乙 as blocker. Damage/HP/blocker data comes from pure rule
+events; a changed 1-HP input is tested to rule out fixed-number copy.
+
+The HUD is an always-processing CanvasLayer. HP bars remain visible at hitstop;
+the world, camera, animation clocks, damage-number tween and VFX stay paused.
+All player-facing labels are Traditional Chinese. Default hides technical
+scenario/phase/timing/hotkey text; F1 contains those diagnostics. Text uses the
+P1v3/P1v4 bone/brass/sage/teal/clay colors over opaque moss/iron backings.
+[Contrast table](evidence/spike02-a2/contrast.json): minimum **5.344:1**, all normal
+text pairs pass WCAG AA. Original procedural frame provenance is in
+[art/SOURCES](../art/SOURCES.md). No new portrait generation or Ferry Dusk palette.
+
+At alpha ≥128, with full affine viewport transforms including mirroring and
+weapons, all three rest/contact setups have **0** nonparticipant overlap. At rest,
+attacker/target overlap is also **0**; intended contact intersections are
+**71 / 157 / 164 px**. Zoom/grayscale/default label-free samples are separate.
+These are sampled setup measurements, not proof across unimplemented battles.
+Camera tuning changes presentation only; rule cells and outcomes remain fixed.
+
+| Setup | Normal rendered | Reduced Motion |
+| --- | --- | --- |
+| Open | 0.914639 s | 0.729160 s |
+| Unit-blocked | 0.915426 s | 0.730027 s |
+| Terrain-blocked | 0.911700 s | 0.730169 s |
+
+All are below **1.7 s**, close to Phase A's normal 0.91–0.92 s. Fixed-60-fps
+movie strike→input-ready is **0.916667 s**, with **5 identical held frames /
+83.333 ms**, then visible resume. [AVI](evidence/spike02-a2/attack-60fps.avi)
+is 60 frames / 7,365,366 bytes. [Movie notes and samples](evidence/spike02-a2/MOVIE.md)
+separate encoding time from gameplay timing. Reduced Motion omits smear frame 2,
+zoom/shake/flash/particles/closing offsets; its stationary weapon-to-target gap
+remains a known Phase A limitation, with damage/HP feedback still delivered.
+
+Final **33 tests / 924 assertions**, clean exit 0. W5 found and fixed physical
+Space double dispatch; a separate test-teardown-on-signal error also required
+correction. Earlier exit-0/error-bearing runs are preserved and rejected in
+[VERIFICATION](VERIFICATION.md#spike-02-a2), not hidden behind pass summaries.
+
+### Limits and resource self-check
+
+This is still one scripted attack with three fixtures, not a complete battle,
+turn loop, AI, win/lose system, formal equipment design or engine migration.
+Actual 720p and 1080p renders plus synthetic keyboard input are verified;
+other aspect ratios, enlarged text, gamepad and audible-device audition remain
+unverified. All human playtest, hit feel, commercial art and Owner judgement
+are **HUMAN_PENDING**. No independent agent was launched in this segment.
+
+Against [RESOURCE-CHECKLIST](../../docs/review/RESOURCE-CHECKLIST.md):
+
+| Item | Status | Evidence / scoped exception |
+| --- | --- | --- |
+| A — prototype-fast | PASS (criterion) | Same one-attack scope and keep/reject readability question in shared README; no Phase B or new mechanics |
+| A — level-design | N/A | No map, routes, objective or placement changes; original rule tests retained |
+| A — game-ai | N/A | No AI authorized in this segment |
+| A — game-ui-ux | PASS (scope) | Read pinned [skill](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/skills/disciplines/game-ui-ux/SKILL.md); event-driven values, confirmation, focus, overlay exit and reference-canvas scaling; actual 720p/1080p evidence. Full movement/threat/objective systems are N/A to this spike |
+| A — game-feel | PASS (engineering) / HUMAN_PENDING | Read pinned [skill](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/skills/disciplines/game-feel/SKILL.md); same-event feedback, articulated poses, measured hold/recovery and Reduced Motion; human weight judgement pending |
+| B — Grid-Tactics separation | PASS (criterion) | Rules unchanged; HUD/playback consume event dictionaries. No reference-repo code or art copied |
+| B — HopeMetal attribution | N/A | No patterns/code/assets borrowed in this segment |
+| B — new engine/dependency | PASS | Already-authorized isolated Godot 4.7.2/GDScript/GUT; no new addon/dependency |
+| C — full 3–5 minute battle | N/A | Explicit one-attack spike; no complete battle claim |
+| C — understandable enemy actions | N/A | Fixture targets; no autonomous enemy turns |
+| C — win/lose | N/A | No terminal battle states authorized |
+| C — two tactical choices | N/A | Three demonstration fixtures, not a tactical decision loop |
+| C — restart/change strategy | PASS (replay) / N/A (strategy) | Clean fixture reset/replay and setup-switch locks; no strategy system |
+| C — no duplicate/stuck/invalid resolution | PASS (tested paths) | 24 old tests retained plus A2 coverage; real Space regression and capture pass markers |
+| C — 720p/1080p/keyboard | PASS (automated scope) | Real [720p](evidence/spike02-a2/default-view.png), [1080p](evidence/spike02-a2/overview-1080.png), synthetic input and focus tests; not human playtest |
+| C — automation vs human | PASS | Clean 33/924 result and model visual checks explicitly separate from HUMAN_PENDING |
+| D — SRD/rule sources | N/A (new SRD content) / PASS (scope) | No rule change, no new SRD/WotC content, G005 unchanged |
+| D — authorization | PASS | Only shared-anim/ and godot-spike/ implementation changes; base diff also contains pre-existing brief. No original PNG/web/story/shared-memory edits, other worktree, push, main merge, PR, Actions, deployment or Phase B |
+
+The built-in imagegen skill was used for the seven permitted Thoma frames;
+knight edits and the nine-slice frame are deterministic scripts. No commercial
+art, reference-repo code, original source modification or new licensed font.
+No shared PLAN/memory edits were made under this narrow authorization; this
+handoff and verification record the milestone. Normal commit hooks ran and
+reported the nonblocking `missing_canonical_memory` advisory. That does not
+mean a SessionEnd callback or canonical closeout occurred.
+
+| Step | Commit |
+| --- | --- |
+| W1 — own weapon / frames | `d64ef92` |
+| W2 — battle HUD | `03d2ca3` |
+| W3 — knight identity / overlap | `2eb3165` |
+| W4 — tests | `229a820` (error-bearing cleanup log superseded by W5) |
+| W5 — final verification / evidence | `9ce03b8` |
+| W6 — A2 handoff | This commit |
+
+**Stop after this W6 handoff commit and wait for review. No push. Phase B remains
+unstarted. Task DONE is not SessionEnd.**
