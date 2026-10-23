@@ -1,0 +1,1063 @@
+{
+  "started_at": "2026-10-23T08:40:22.782Z",
+  "url": "http://127.0.0.1:5183/",
+  "browser": {
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "bytes": 4586648,
+    "sha256": "f76f0234efb271041dc84f9f38fb858e01859d5da6f775f5108668eb3ae80975",
+    "scope": "local UI browser acceptance only"
+  },
+  "source_sha256": {
+    "ui-prototype/src/playable-l03/feedback.ts": "f028a8ede129edc8fd3092575d719fb43413616b0d934086a9cd434ed5a99b67",
+    "ui-prototype/src/main.tsx": "2cb0735790eb1eb700669467066d904aeb6d506c596bca8d3776ed9a8cb88346",
+    "ui-prototype/src/AnimatedActor.tsx": "fc4b5446f16f78efeccc0958858ebf8ae791d5c1deb5b635a53df73804b38a93",
+    "ui-prototype/src/playable-l03/presentation.tsx": "4fe324a93c441541b4fbe18c06e407810b88b35aad99aa6eb025dd97e843a2bf",
+    "ui-prototype/src/playable-l03/PlayableL03.tsx": "b806c72e11f56fe9fdc7bf804e9cc8ff0a0bcf119a72c22b37535e3d9043ccbf",
+    "ui-prototype/src/playable-l03/playable.css": "8c46eb4a90530e410268d9c2fdcf17941038dbc5e0d4276abae704a00bccf3a3",
+    "ui-prototype/src/playable-l03/rules.ts": "42f70baac448476dca3dd0abcb766b867cb692b448d951e08404482700592d76",
+    "ui-prototype/src/l03Scene.ts": "08780782ab51ef026e001c75f9959f65cdc33eb7d7b5d5a9fdd704eb65ae340d",
+    "ui-prototype/src/l03.css": "4711831275025200ac7041ebd06461da23b6f9cbffe23df084526cbcbe57dec0",
+    "ui-prototype/tests/playable-l03-p1v-browser.mjs": "00e8cd95e0839ab1de3b8f278d5bdbe4d482355397a2035e37d51744d308a58f",
+    "ui-prototype/package.json": "7be910ce26e797587a3b94144e811635023e7b08fb20111301d5ce7310a058ad",
+    "ui-prototype/package-lock.json": "403d0966ac1504e643402352e5db5d95464c8ba890b25a10a2cc19a1f2b5e4cb",
+    "ui-prototype/public/art/l03-party-v1.png": "f67086afa5919d17872ceb8c22c4e6eefd5513dc6e14d8637f38cf90abd4bb08",
+    "ui-prototype/public/art/l03-enemies-v1.png": "2cdaba9f74dc384ec262a71f9ec1b814949a4325c52b93836b2da50669ddea8c",
+    "ui-prototype/public/art/terrain-v2.png": "c1aa5dd10c2476fa8fbcb3059842d11d92066bebb3f504ac2080d36fcf18ceaf",
+    "ui-prototype/docs/playable-l03-p0/success.jsonl": "8618965d532ea1e9ed9ef00fc768f1d367883baeb66375b7f31e5873cbf74622",
+    "ui-prototype/docs/playable-l03-p0/failure.jsonl": "bb940ac62ef909d041d44fd0d0e0bc621d0433d990ec93350c2d0ab3ce3ab9b9"
+  },
+  "checks": [
+    {
+      "name": "1280x720: new menu entry, 99 cells, five units, winch, counters, two intent paths; controls fit viewport"
+    },
+    {
+      "name": "1280x720: illegal water/enemy clicks rejected; occupied ally selects, no state mutation; Esc clears range"
+    },
+    {
+      "name": "1280x720: highlighted destination behind selected portrait accepts a real pointer click"
+    },
+    {
+      "name": "1280x720: original P0 hold trace + sixth turn wins under A; legal ranges match rules; retry clears all state"
+    },
+    {
+      "name": "1280x720: skipped victory equals animated victory exactly"
+    },
+    {
+      "name": "1280x720: original P0 idle trace loses; animated/skip states identical; retry clears defeat"
+    },
+    {
+      "name": "1280x720: keyboard Space/arrows move; repeat move rejected; Wait consumes only local action; Enter ends one turn"
+    },
+    {
+      "name": "1920x1080: new menu entry, 99 cells, five units, winch, counters, two intent paths; controls fit viewport"
+    },
+    {
+      "name": "1920x1080: illegal water/enemy clicks rejected; occupied ally selects, no state mutation; Esc clears range"
+    },
+    {
+      "name": "1920x1080: highlighted destination behind selected portrait accepts a real pointer click"
+    },
+    {
+      "name": "1920x1080: original P0 hold trace + sixth turn wins under A; legal ranges match rules; retry clears all state"
+    },
+    {
+      "name": "1920x1080: skipped victory equals animated victory exactly"
+    },
+    {
+      "name": "1920x1080: original P0 idle trace loses; animated/skip states identical; retry clears defeat"
+    },
+    {
+      "name": "1920x1080: keyboard Space/arrows move; repeat move rejected; Wait consumes only local action; Enter ends one turn"
+    },
+    {
+      "name": "mid-animation skip settles once; cancelled RAF cannot apply another result"
+    },
+    {
+      "name": "reduced-motion change settles pending result; subsequent turns use no walking animation"
+    },
+    {
+      "name": "skip enabled: double-click resolves once; held Enter auto-repeat cannot advance another turn"
+    },
+    {
+      "name": "exit during animation cancels playback; focus returns to entry; reopen starts clean"
+    },
+    {
+      "name": "200% text remains operable with vertical scrolling and no horizontal overflow"
+    },
+    {
+      "name": "390px fallback stacks panels; End Turn reachable without horizontal scrolling"
+    },
+    {
+      "name": "direct ?scene=playable-l03 entry starts A without changing the menu default"
+    },
+    {
+      "name": "existing L03 preview still opens independently with its original grid"
+    },
+    {
+      "name": "legacy residents: story choice, dialogue log, move/skill preview, Esc cancel, confirm, result to campaign"
+    },
+    {
+      "name": "legacy grain: story choice, absent allies / solo deployment, move/skill preview, Esc cancel, confirm, result to campaign"
+    },
+    {
+      "name": "source and art hashes unchanged for the complete browser run"
+    },
+    {
+      "name": "no page errors or failed HTTP responses"
+    }
+  ],
+  "captures": [
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/p1v-regression/1280x720-start.png",
+      "sha256": "b195b0d278a4470fe4f9731fc348532000f58f67780d1578a253990fae1a0574",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      },
+      "busy": "false",
+      "frame": null
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/p1v-regression/1280x720-move-range.png",
+      "sha256": "b663ff3b3380a2d82b126e93ce2ec04f2975f3b02d9076871425fc46776623f2",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      },
+      "busy": "false",
+      "frame": null
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/p1v-regression/1280x720-intent.png",
+      "sha256": "3534e220122c42b76a4fcb5e236fd0b188aea8ddbb91ae65a9e30dd5902e1660",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 3,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 2
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": [
+          "lace",
+          "thoma",
+          "karen"
+        ]
+      },
+      "busy": "false",
+      "frame": null
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/p1v-regression/1280x720-mid-animation.png",
+      "sha256": "d7215cc2c84571160021306b5cfe3277f5e97e9384f98662c53d56c55527479b",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 3,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 2
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": [
+          "lace",
+          "thoma",
+          "karen"
+        ]
+      },
+      "busy": "true",
+      "frame": {
+        "unit": "knight-1",
+        "from": {
+          "x": 1,
+          "y": 7
+        },
+        "to": {
+          "x": 1,
+          "y": 6
+        },
+        "progress": 0.38826086956521816
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/p1v-regression/1280x720-victory.png",
+      "sha256": "00bed88f02f3299d3ce401ce0696deec40f7ae5cd9d7951508d062fd963335e9",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 6,
+        "status": "success",
+        "progress": 2,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 2
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 2,
+              "y": 0
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 2,
+              "y": 3
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      },
+      "busy": "false",
+      "frame": null
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/p1v-regression/1280x720-defeat.png",
+      "sha256": "8ea3cadf321a0e0d015a8d8107b24c30d9a34d475375057ece209b9bfc565b12",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 5,
+        "status": "failure",
+        "progress": 4,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      },
+      "busy": "false",
+      "frame": null
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/p1v-regression/1920x1080-start.png",
+      "sha256": "d93bd4663388512de31cbbde7afae014caa5fc68e84ff2effa3444406e74c4f7",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      },
+      "busy": "false",
+      "frame": null
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/p1v-regression/1920x1080-move-range.png",
+      "sha256": "da9054cae71cb3a25770937d26a2a76715834d8df597231972b2bdf010f09eb9",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      },
+      "busy": "false",
+      "frame": null
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/p1v-regression/1920x1080-intent.png",
+      "sha256": "a764ec57e722bfbb537fc49a33e69fb792eef2845fe83e49224414fe3d01f3d0",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 3,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 2
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": [
+          "lace",
+          "thoma",
+          "karen"
+        ]
+      },
+      "busy": "false",
+      "frame": null
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/p1v-regression/1920x1080-mid-animation.png",
+      "sha256": "6180889d4824ea7f883ced79ec94aea7788fe32d35e4a85c6ca3f381b4b63772",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 1,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 3,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 2
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 8
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 8
+            },
+            "alive": true
+          }
+        ],
+        "moved": [
+          "lace",
+          "thoma",
+          "karen"
+        ]
+      },
+      "busy": "true",
+      "frame": {
+        "unit": "knight-1",
+        "from": {
+          "x": 1,
+          "y": 6
+        },
+        "to": {
+          "x": 1,
+          "y": 5
+        },
+        "progress": 0.3108695652173913
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/p1v-regression/1920x1080-victory.png",
+      "sha256": "eda09a04ffb120d6c56b831fc5cd10c22d11e23c31f9abde22c08b1e17bb2197",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 6,
+        "status": "success",
+        "progress": 2,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 2
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 2,
+              "y": 0
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 2,
+              "y": 3
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      },
+      "busy": "false",
+      "frame": null
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/p1v-regression/1920x1080-defeat.png",
+      "sha256": "3b6e05a3e98736dbbdd8ada447d569c111cbe4a4876e50329a879e5ffc89f909",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 5,
+        "status": "failure",
+        "progress": 4,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      },
+      "busy": "false",
+      "frame": null
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/p1v-regression/1280x720-text-200.png",
+      "sha256": "ef45b983852c2f07f617e0856e6bb9bcff000e949b831101b720d3911d04b92d",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 2,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 5
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      },
+      "busy": "false",
+      "frame": null
+    }
+  ],
+  "errors": [],
+  "human_playtest": "HUMAN_PENDING",
+  "finished_at": "2026-10-23T08:41:22.594Z",
+  "exit_code": 0
+}

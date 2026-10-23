@@ -10,7 +10,7 @@ const binding=JSON.parse(fs.readFileSync(path.join(root,'.codex/visual-browser-b
 assert(path.isAbsolute(binding.path)); assert.equal(fs.realpathSync(binding.path),binding.path);
 assert.equal(fs.statSync(binding.path).size,binding.bytes); assert.equal(hash(fs.readFileSync(binding.path)),binding.sha256);
 const {chromium}=await import('playwright');
-const evidenceDir=process.argv.includes('--p1v6') ? 'ui-prototype/docs/playable-l03-p1v6/p1v5-regression' : 'ui-prototype/docs/playable-l03-p1v5';
+const evidenceDir=process.argv.includes('--p1v7') ? 'ui-prototype/docs/playable-l03-p1v7/p1v5-regression' : process.argv.includes('--p1v6') ? 'ui-prototype/docs/playable-l03-p1v6/p1v5-regression' : 'ui-prototype/docs/playable-l03-p1v5';
 const output=path.join(root,evidenceDir);
 const scratch=path.join(root,'scratch/playable-l03-p1v5-browser');
 fs.mkdirSync(output,{recursive:true});fs.mkdirSync(scratch,{recursive:true});

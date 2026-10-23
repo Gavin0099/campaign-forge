@@ -11,7 +11,7 @@ const binding=JSON.parse(fs.readFileSync(path.join(root,'.codex/visual-browser-b
 assert(path.isAbsolute(binding.path)); assert.equal(fs.realpathSync(binding.path),binding.path);
 assert.equal(fs.statSync(binding.path).size,binding.bytes); assert.equal(hash(fs.readFileSync(binding.path)),binding.sha256);
 const {chromium}=await import('playwright');
-const evidenceDir='ui-prototype/docs/playable-l03-p1v6';
+const evidenceDir=process.argv.includes('--p1v7') ? 'ui-prototype/docs/playable-l03-p1v7/p1v6-regression' : 'ui-prototype/docs/playable-l03-p1v6';
 const output=path.join(root,evidenceDir),scratch=path.join(root,'scratch/playable-l03-p1v6-browser');
 fs.mkdirSync(output,{recursive:true});fs.mkdirSync(scratch,{recursive:true});
 const env=Object.fromEntries(['SystemRoot','WINDIR','SystemDrive'].filter(k=>process.env[k]).map(k=>[k,process.env[k]]));
@@ -153,14 +153,16 @@ try {
   assert.equal(await page.locator('[data-p1v-blocked-marker="knight-2"]').getAttribute('data-cell'),'2,3');
   await capture('blocked-marker-preview');
   const beforeBlock=await state(),expectedBlock=resolve(beforeBlock,beforeBlock.turn);
-  await page.locator('[data-p1v-end]').click();
+  // Preview still has the marker; during playback P1v7 reveals it at the
+  // blocked intent, after the preceding move rather than at phase start.
   assert.equal(await page.locator('[data-p1v-blocked-marker="knight-2"]').count(),1);
+  await page.locator('[data-p1v-end]').click();
   assert.equal(await page.locator('.p1v').getAttribute('data-p1v-busy'),'true');
   await page.waitForSelector('[data-p1v-clash][data-p1v-blocker="thoma"]');await capture('confirmed-block-spark');
   await settled();assert.deepEqual(await state(),expectedBlock.state);
   await page.waitForTimeout(700);assert.equal(await page.locator('[data-p1v-clash]').count(),0);
   assert.equal(await page.locator('[data-p1v-blocked-marker="knight-2"]').count(),1);
-  pass('broken-chain marker stays at the blocked enemy feet in preview, resolution and rest; clash targets counterfactually confirmed Thoma');
+  pass('broken-chain marker stays at the blocked enemy feet in preview and after its resolution event; clash targets counterfactually confirmed Thoma');
   for(const mode of ['skip','reduce']){
     await load();await blockSetup();
     if(mode==='skip')await page.getByLabel('跳過動畫').check();else await page.emulateMedia({reducedMotion:'reduce'});

@@ -1,0 +1,26 @@
+[
+    {
+        "command":  "node --experimental-strip-types ui-prototype/tests/playable-l03-p1v2-browser.mjs --p1v4 --p1v5 --p1v6 --p1v7",
+        "exit_code":  0
+    },
+    {
+        "command":  "node --experimental-strip-types ui-prototype/tests/playable-l03-p1v3-browser.mjs --p1v5 --p1v6 --p1v7",
+        "exit_code":  0
+    },
+    {
+        "command":  "node --experimental-strip-types ui-prototype/tests/playable-l03-p1v4-browser.mjs --p1v5 --p1v6 --p1v7",
+        "exit_code":  0
+    },
+    {
+        "command":  "node --experimental-strip-types ui-prototype/tests/playable-l03-p1v5-browser.mjs --p1v6 --p1v7",
+        "exit_code":  0
+    },
+    {
+        "command":  "node --experimental-strip-types ui-prototype/tests/playable-l03-p1v6-browser.mjs --p1v7",
+        "exit_code":  0
+    },
+    {
+        "command":  "node --experimental-strip-types ui-prototype/tests/playable-l03-p1v7-browser.mjs",
+        "exit_code":  0
+    }
+]

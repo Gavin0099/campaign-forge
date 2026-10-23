@@ -1,0 +1,4 @@
+{
+    "command":  "python scripts/validate_ui_scope.py (bound Python 3.12)",
+    "exit_code":  0
+}

@@ -1,0 +1,4 @@
+{
+    "command":  "npm run build --prefix ui-prototype",
+    "exit_code":  0
+}

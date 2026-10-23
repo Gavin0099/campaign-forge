@@ -1,0 +1,1206 @@
+{
+  "started_at": "2026-10-23T08:43:22.722Z",
+  "browser": {
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "bytes": 4586648,
+    "sha256": "f76f0234efb271041dc84f9f38fb858e01859d5da6f775f5108668eb3ae80975",
+    "scope": "local UI browser acceptance only"
+  },
+  "source_sha256": {
+    "ui-prototype/src/playable-l03/feedback.ts": "f028a8ede129edc8fd3092575d719fb43413616b0d934086a9cd434ed5a99b67",
+    "ui-prototype/src/playable-l03/PlayableL03.tsx": "b806c72e11f56fe9fdc7bf804e9cc8ff0a0bcf119a72c22b37535e3d9043ccbf",
+    "ui-prototype/src/playable-l03/presentation.tsx": "4fe324a93c441541b4fbe18c06e407810b88b35aad99aa6eb025dd97e843a2bf",
+    "ui-prototype/src/playable-l03/playable.css": "8c46eb4a90530e410268d9c2fdcf17941038dbc5e0d4276abae704a00bccf3a3",
+    "ui-prototype/src/playable-l03/rules.ts": "42f70baac448476dca3dd0abcb766b867cb692b448d951e08404482700592d76",
+    "ui-prototype/tests/playable-l03-p1v7-browser.mjs": "a77274f41d0bbadd85243534903b2585c022559e6ddea76ee66b30fa3315346c",
+    "ui-prototype/tests/playable-l03-p1v7-feedback.mjs": "c8e93e56917a8d86e272060f09969c497e796d6b733ad1fdd7dda1491e392eea"
+  },
+  "checks": [
+    {
+      "name": "normal six-step turns preserve measured P1v6 lock duration (3 baseline and 3 current replays)",
+      "durations": {
+        "baseline": [
+          1412.8999999761581,
+          1398,
+          1393
+        ],
+        "current": [
+          1407.8000000715256,
+          1425.7000000476837,
+          1387.3999999761581
+        ]
+      }
+    },
+    {
+      "name": "zero-step winch remains visibly painted 300ms after immediate commit, with end-turn enabled",
+      "commit": {
+        "time": 557.7999999523163,
+        "turn": "5",
+        "busy": "false",
+        "cue": "9",
+        "selected": "",
+        "markers": [],
+        "blocks": [],
+        "winch": true
+      },
+      "visible": {
+        "opacity": 1,
+        "text": "絞盤干擾 2/3"
+      },
+      "elapsedAfterCommit": 366,
+      "trace": [
+        {
+          "time": 553.2999999523163,
+          "turn": "4",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 557.7999999523163,
+          "turn": "5",
+          "busy": "false",
+          "cue": "9",
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": true
+        }
+      ]
+    },
+    {
+      "name": "independent zero-step expiry removes all feedback without a second state commit"
+    },
+    {
+      "name": "zero-step confirmed block remains visible after commit with original rule outcome",
+      "commit": {
+        "time": 1054.8999999761581,
+        "turn": "6",
+        "busy": "false",
+        "cue": "11",
+        "selected": "",
+        "markers": [
+          [
+            "knight-2",
+            "2,3"
+          ]
+        ],
+        "blocks": [
+          "knight-2"
+        ],
+        "winch": true
+      },
+      "visible": {
+        "opacity": 1,
+        "text": "阻擋"
+      },
+      "elapsedAfterCommit": 355.7000000476837,
+      "trace": [
+        {
+          "time": 1050.8999999761581,
+          "turn": "5",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [
+            [
+              "knight-2",
+              "2,3"
+            ]
+          ],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1054.8999999761581,
+          "turn": "6",
+          "busy": "false",
+          "cue": "11",
+          "selected": "",
+          "markers": [
+            [
+              "knight-2",
+              "2,3"
+            ]
+          ],
+          "blocks": [
+            "knight-2"
+          ],
+          "winch": true
+        }
+      ]
+    },
+    {
+      "name": "a new selection clears the settled cue immediately"
+    },
+    {
+      "name": "real input dispatched at the committed DOM is accepted immediately; no cue-owned lock",
+      "commitToDispatchMs": 0.10000002384185791,
+      "commitToAcceptedMs": 4.700000047683716
+    },
+    {
+      "name": "new resolution replaces the cue; Retry cancels it with no stale effects or double commit"
+    },
+    {
+      "name": "skip: zero-step winch commits without transient mounts; static markers remain",
+      "trace": [
+        {
+          "time": 555.6000000238419,
+          "turn": "4",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 602.9000000953674,
+          "turn": "5",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        }
+      ]
+    },
+    {
+      "name": "skip: zero-step block commits without transient mounts; static markers remain",
+      "trace": [
+        {
+          "time": 988.8999999761581,
+          "turn": "5",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [
+            [
+              "knight-2",
+              "2,3"
+            ]
+          ],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1037.7000000476837,
+          "turn": "6",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [
+            [
+              "knight-2",
+              "2,3"
+            ]
+          ],
+          "blocks": [],
+          "winch": false
+        }
+      ]
+    },
+    {
+      "name": "reduce: zero-step winch commits without transient mounts; static markers remain",
+      "trace": [
+        {
+          "time": 490.60000002384186,
+          "turn": "4",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 500,
+          "turn": "4",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 538.8999999761581,
+          "turn": "5",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        }
+      ]
+    },
+    {
+      "name": "reduce: zero-step block commits without transient mounts; static markers remain",
+      "trace": [
+        {
+          "time": 1043.2999999523163,
+          "turn": "5",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [
+            [
+              "knight-2",
+              "2,3"
+            ]
+          ],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1053.3999999761581,
+          "turn": "5",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [
+            [
+              "knight-2",
+              "2,3"
+            ]
+          ],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1091,
+          "turn": "6",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [
+            [
+              "knight-2",
+              "2,3"
+            ]
+          ],
+          "blocks": [],
+          "winch": false
+        }
+      ]
+    },
+    {
+      "name": "skip: toggling during settled feedback cancels it permanently"
+    },
+    {
+      "name": "reduce: toggling during settled feedback cancels it permanently"
+    },
+    {
+      "name": "late blocked intent stays absent throughout the earlier move and appears at its event/current cell; preview and committed prediction retained",
+      "blockIndex": 2,
+      "trace": [
+        {
+          "time": 869.1999999284744,
+          "turn": "3",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [
+            [
+              "knight-2",
+              "2,3"
+            ]
+          ],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 874.3999999761581,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 881.6000000238419,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 888.6999999284744,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 907.2999999523163,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 925.3999999761581,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 943.3999999761581,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 962.1000000238419,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 978.6999999284744,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 996.6000000238419,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1014.1000000238419,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1032.1999999284744,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1049.6999999284744,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1067.5,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1084,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1084.1999999284744,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1103.6000000238419,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1120.3999999761581,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1138.3999999761581,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1156.1000000238419,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1174,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1192.5,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1209.6000000238419,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1228.3999999761581,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1246.1999999284744,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1264,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1282.2999999523163,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1300.1999999284744,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1317.1999999284744,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1334.6999999284744,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1352.6999999284744,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1370.1999999284744,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1389,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1406.6999999284744,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1424.3999999761581,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1441.6000000238419,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1459.7999999523163,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1477.1000000238419,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1495.3999999761581,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1513.6000000238419,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1530.5,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1547.7999999523163,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1565.7999999523163,
+          "turn": "3",
+          "busy": "true",
+          "cue": null,
+          "selected": "",
+          "markers": [],
+          "blocks": [],
+          "winch": false
+        },
+        {
+          "time": 1585.6999999284744,
+          "turn": "4",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [
+            [
+              "knight-2",
+              "2,3"
+            ]
+          ],
+          "blocks": [
+            "knight-2"
+          ],
+          "winch": false
+        },
+        {
+          "time": 1769.2999999523163,
+          "turn": "4",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [
+            [
+              "knight-2",
+              "2,3"
+            ]
+          ],
+          "blocks": [
+            "knight-2"
+          ],
+          "winch": false
+        },
+        {
+          "time": 1918.1999999284744,
+          "turn": "4",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [
+            [
+              "knight-2",
+              "2,3"
+            ]
+          ],
+          "blocks": [
+            "knight-2"
+          ],
+          "winch": false
+        },
+        {
+          "time": 2104.6999999284744,
+          "turn": "4",
+          "busy": "false",
+          "cue": null,
+          "selected": "",
+          "markers": [
+            [
+              "knight-2",
+              "2,3"
+            ]
+          ],
+          "blocks": [
+            "knight-2"
+          ],
+          "winch": false
+        }
+      ]
+    },
+    {
+      "name": "reached block stays at its visual cell during a later enemy move, then resets to the new-state prediction on finish"
+    }
+  ],
+  "captures": [
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/1280x720-zero-step-winch-after-commit.png",
+      "sha256": "3a7fced28323c3a9d069ed1e22ea825c91b12931660203339b70e64971371baa",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "before": {
+        "time": 925.3999999761581,
+        "busy": "false",
+        "cue": "9",
+        "markers": []
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 5,
+        "status": "playing",
+        "progress": 2,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/1280x720-zero-step-block-after-commit.png",
+      "sha256": "b7fab4d064a57f9bf344c5272738822fc8f3674a3b5d793d3c767f17366c13de",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "before": {
+        "time": 1414.1000000238419,
+        "busy": "false",
+        "cue": "11",
+        "markers": [
+          [
+            "knight-2",
+            "2,3"
+          ]
+        ]
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 6,
+        "status": "playing",
+        "progress": 1,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 2
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 2,
+              "y": 0
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 2,
+              "y": 3
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/1280x720-synced-marker-before-event.png",
+      "sha256": "a2d102262c0e51215caa792d592044649390b173bd299fadc46a8da8931f02f8",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "before": {
+        "time": 880.2999999523163,
+        "busy": "true",
+        "cue": null,
+        "markers": []
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 3,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 2
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 2
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 2,
+              "y": 3
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/1280x720-synced-marker-after-event.png",
+      "sha256": "98f0e4c1273ac66af44582d7d65436e0d9abdbb998315862823162c89d9cabd1",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "before": {
+        "time": 1916.3999999761581,
+        "busy": "false",
+        "cue": null,
+        "markers": [
+          [
+            "knight-2",
+            "2,3"
+          ]
+        ]
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 4,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 3,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 1
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 2
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 0,
+              "y": 0
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 2,
+              "y": 3
+            },
+            "alive": true
+          }
+        ],
+        "moved": []
+      }
+    },
+    {
+      "path": "ui-prototype/docs/playable-l03-p1v7/1280x720-synced-marker-during-later-move.png",
+      "sha256": "6be848c5af81222a914d81f5251a835a8fc982d4402b408786ade5fcc43db9e6",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "before": {
+        "time": 561.1000000238419,
+        "busy": "true",
+        "cue": null,
+        "markers": [
+          [
+            "knight-1",
+            "1,5"
+          ]
+        ]
+      },
+      "state": {
+        "route": "open",
+        "config": {
+          "blockAlliedPassage": true,
+          "p0c": {
+            "survivalTurns": 6
+          }
+        },
+        "turn": 2,
+        "status": "playing",
+        "progress": 0,
+        "units": [
+          {
+            "id": "karen",
+            "side": "ally",
+            "cell": {
+              "x": 2,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "lace",
+            "side": "ally",
+            "cell": {
+              "x": 0,
+              "y": 3
+            },
+            "alive": true
+          },
+          {
+            "id": "thoma",
+            "side": "ally",
+            "cell": {
+              "x": 1,
+              "y": 4
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-1",
+            "side": "enemy",
+            "cell": {
+              "x": 1,
+              "y": 5
+            },
+            "alive": true
+          },
+          {
+            "id": "knight-2",
+            "side": "enemy",
+            "cell": {
+              "x": 3,
+              "y": 5
+            },
+            "alive": true
+          }
+        ],
+        "moved": [
+          "lace"
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "human_playtest": "HUMAN_PENDING",
+  "baseline_component_sha256": "91b975e6f8048faf8cfed18e89ec80dba490bd0e8f532dc7791a8faf89d040be",
+  "baseline_commit": "c980e5a",
+  "exit_code": 0,
+  "finished_at": "2026-10-23T08:43:51.475Z"
+}

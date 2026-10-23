@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-23T08:47:35.001Z",
+  "exit_code": 0,
+  "original_game_checks": 107,
+  "new_game_checks": 18,
+  "game_checks": 125,
+  "browser_checks": 94,
+  "pure_checks": 31,
+  "capture_hashes_checked": 55,
+  "source_bindings_checked": 73,
+  "command_result_sha256": {
+    "pure-command-results.json": "76d3a78dd7199af8248a3e4fa581963b9a4c616a129ffb2c0dbbad40c6ed2d3f",
+    "browser-command-results.json": "afb827211b0ce15bb73d8cf0b64ae1f526782556cb2cfdfd8ee09a890a24b332",
+    "build-command-result.json": "480679047d197a5a5a86ce4182203099d7ef51e353741e9272b6a6aca1a91138",
+    "scope-command-result.json": "d6a80151f53d66aca9fcc2c5c99a47d1acb91ecc2ed3bc62ce21cdb1c5e7627b"
+  },
+  "rules_unchanged": true,
+  "accepted_limit": "Final landing shares finish; no added lock or wait",
+  "human_playtest": "HUMAN_PENDING",
+  "scope": "Current-source reports and unmodified Chrome screenshots; historical failed attempts excluded from passing totals"
+}

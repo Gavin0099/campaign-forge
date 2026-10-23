@@ -1,0 +1,43 @@
+{
+  "started_at": "2026-10-23T08:38:10.285Z",
+  "browser": {
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "bytes": 4586648,
+    "sha256": "f76f0234efb271041dc84f9f38fb858e01859d5da6f775f5108668eb3ae80975",
+    "scope": "local UI browser acceptance only"
+  },
+  "source_sha256": {
+    "ui-prototype/src/playable-l03/feedback.ts": "f028a8ede129edc8fd3092575d719fb43413616b0d934086a9cd434ed5a99b67",
+    "ui-prototype/src/playable-l03/PlayableL03.tsx": "b806c72e11f56fe9fdc7bf804e9cc8ff0a0bcf119a72c22b37535e3d9043ccbf",
+    "ui-prototype/src/playable-l03/presentation.tsx": "4fe324a93c441541b4fbe18c06e407810b88b35aad99aa6eb025dd97e843a2bf",
+    "ui-prototype/src/playable-l03/playable.css": "8c46eb4a90530e410268d9c2fdcf17941038dbc5e0d4276abae704a00bccf3a3",
+    "ui-prototype/src/playable-l03/rules.ts": "42f70baac448476dca3dd0abcb766b867cb692b448d951e08404482700592d76",
+    "ui-prototype/tests/playable-l03-p1v7-browser.mjs": "9194d1ca4f3ee8fc3744b96ad67388a6538e0ed858889ca41dd40e2d0c02c741",
+    "ui-prototype/tests/playable-l03-p1v7-feedback.mjs": "c8e93e56917a8d86e272060f09969c497e796d6b733ad1fdd7dda1491e392eea"
+  },
+  "checks": [
+    {
+      "name": "normal six-step turns preserve measured P1v6 lock duration (3 baseline and 3 current replays)",
+      "durations": {
+        "baseline": [
+          1403.7000000476837,
+          1420.5,
+          1428.0999999046326
+        ],
+        "current": [
+          1435.5,
+          1408.3999999761581,
+          1404.8000000715256
+        ]
+      }
+    }
+  ],
+  "captures": [],
+  "errors": [],
+  "human_playtest": "HUMAN_PENDING",
+  "baseline_component_sha256": "91b975e6f8048faf8cfed18e89ec80dba490bd0e8f532dc7791a8faf89d040be",
+  "baseline_commit": "c980e5a",
+  "exit_code": 1,
+  "failure": "page.evaluate: Execution context was destroyed, most likely because of a navigation.\n    at load (D:\\campaign-forge\\ui-prototype\\tests\\playable-l03-p1v7-browser.mjs:33:14)\n    at async file:///D:/campaign-forge/ui-prototype/tests/playable-l03-p1v7-browser.mjs:110:3",
+  "finished_at": "2026-10-23T08:38:23.341Z"
+}

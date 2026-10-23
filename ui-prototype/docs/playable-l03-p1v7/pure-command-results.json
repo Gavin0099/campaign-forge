@@ -1,0 +1,22 @@
+[
+    {
+        "command":  "node --experimental-strip-types ui-prototype/tests/playable-l03-p0.mjs",
+        "exit_code":  0
+    },
+    {
+        "command":  "node --experimental-strip-types ui-prototype/tests/playable-l03-p0b.mjs",
+        "exit_code":  0
+    },
+    {
+        "command":  "node --experimental-strip-types ui-prototype/tests/playable-l03-p0c.mjs",
+        "exit_code":  0
+    },
+    {
+        "command":  "node --experimental-strip-types ui-prototype/tests/playable-l03-p1v6-feedback.mjs",
+        "exit_code":  0
+    },
+    {
+        "command":  "node --experimental-strip-types ui-prototype/tests/playable-l03-p1v7-feedback.mjs",
+        "exit_code":  0
+    }
+]
