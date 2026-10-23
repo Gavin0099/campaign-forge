@@ -43,7 +43,7 @@
       "character": "thoma",
       "frames": [
         {
-          "path": "thoma/idle/00.png",
+          "path": "thoma/idle/01.png",
           "duration_ms": 100
         }
       ],
@@ -74,7 +74,7 @@
       "frames": [
         {
           "path": "thoma/swing/00.png",
-          "duration_ms": 160,
+          "duration_ms": 180,
           "offset": [
             0,
             0
@@ -82,7 +82,7 @@
         },
         {
           "path": "thoma/swing/01.png",
-          "duration_ms": 80,
+          "duration_ms": 70,
           "offset": [
             40,
             70
@@ -90,7 +90,7 @@
         },
         {
           "path": "thoma/swing/02.png",
-          "duration_ms": 50,
+          "duration_ms": 40,
           "offset": [
             70,
             160
@@ -98,7 +98,7 @@
         },
         {
           "path": "thoma/swing/03.png",
-          "duration_ms": 70,
+          "duration_ms": 80,
           "offset": [
             100,
             220
@@ -106,7 +106,7 @@
         },
         {
           "path": "thoma/swing/04.png",
-          "duration_ms": 110,
+          "duration_ms": 100,
           "offset": [
             80,
             160
@@ -134,16 +134,16 @@
           "frame": 3,
           "type": "spark",
           "anchor": [
-            480,
-            180
+            455,
+            196
           ]
         },
         {
           "frame": 3,
           "type": "sfx",
           "anchor": [
-            480,
-            180
+            455,
+            196
           ]
         }
       ]

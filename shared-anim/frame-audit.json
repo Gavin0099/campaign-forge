@@ -1,101 +1,10 @@
 [
   {
-    "path": "thoma/idle/00.png",
-    "sha256": "4214584c64eb57e3d63bdbb9975a2a0d41ee76cd4c6087b61485e795abe23400",
-    "source": "references/thoma.png",
-    "cleanup": "original crop uniformly scaled, alpha debris threshold 24, fixed pivot",
-    "status": "SOURCE_DERIVED"
-  },
-  {
     "path": "knight-a/idle/00.png",
     "sha256": "0ca4807cc16f63dba0b3a15bfaaa1d1a534892151db7dfb339e6c5c2b6edf791",
     "source": "references/knight-a.png",
     "cleanup": "original crop uniformly scaled, alpha debris threshold 24, fixed pivot",
     "status": "SOURCE_DERIVED"
-  },
-  {
-    "path": "thoma/swing/00.png",
-    "sha256": "d0740fdd74e8b05ca82b1a5c01347cfb87427a696579776e20b528d152062a7c",
-    "source": "raw/thoma-swing-00.png",
-    "raw_sha256": "9b9abc677d83bdb671515bf64953acb3d85eddac73b7d96118aba20862a7ca97",
-    "registration": [
-      690,
-      1196,
-      150,
-      360
-    ],
-    "status": "PLACEHOLDER",
-    "reason": "weapon absent in original Thoma crop; generated sleeve/hem detail differs"
-  },
-  {
-    "path": "thoma/swing/01.png",
-    "sha256": "d918c3338afd97fc1c4661fc6b2bcf3a2d5dc6c70e4c9ae8686da81ff124807e",
-    "source": "raw/thoma-swing-01.png",
-    "raw_sha256": "fb72c1459e526cfbdfe93555edbcf1e626fd00d28cc7c7a1702d01ba753ae788",
-    "registration": [
-      735,
-      1216,
-      302,
-      320
-    ],
-    "status": "PLACEHOLDER",
-    "reason": "weapon absent in original Thoma crop; generated sleeve/hem detail differs"
-  },
-  {
-    "path": "thoma/swing/02.png",
-    "sha256": "e12435f7ddb3c2e16476d4499c0f6038444c511c05251aaa0f2e601b9637fe48",
-    "source": "raw/thoma-swing-02.png",
-    "raw_sha256": "8a94a4e381d89005669c9200f925054a8e1aa53d7bbca76d4f0aadb22aff50ae",
-    "registration": [
-      615,
-      1177,
-      163,
-      348
-    ],
-    "status": "PLACEHOLDER",
-    "reason": "weapon absent in original Thoma crop; generated sleeve/hem detail differs"
-  },
-  {
-    "path": "thoma/swing/03.png",
-    "sha256": "78b273af36cfd0ae8078544ff616537b58afeea09e074f79e6096d9c7b32e6d6",
-    "source": "raw/thoma-swing-03.png",
-    "raw_sha256": "e1007e646772e9b5b3d7f56aa8cb4e770249724b0e4699ff864e1d2f46747c06",
-    "registration": [
-      550,
-      1192,
-      78,
-      360
-    ],
-    "status": "PLACEHOLDER",
-    "reason": "weapon absent in original Thoma crop; generated sleeve/hem detail differs"
-  },
-  {
-    "path": "thoma/swing/04.png",
-    "sha256": "ff3347dcdb411e6e11d54c6e8e295ddd4cc86a7c0d4011edf97ce29fea757140",
-    "source": "raw/thoma-swing-04.png",
-    "raw_sha256": "c4bf92b69f8bee4bc8dd4dccdc9bed90fcf00ac17806b76d0155d8f1a28b827c",
-    "registration": [
-      635,
-      1200,
-      85,
-      352
-    ],
-    "status": "PLACEHOLDER",
-    "reason": "weapon absent in original Thoma crop; generated sleeve/hem detail differs"
-  },
-  {
-    "path": "thoma/swing/05.png",
-    "sha256": "8d264eebae4e67133337d31194b13d036c9a0a1ef4e30a6566e5ef6bec2c8828",
-    "source": "raw/thoma-swing-05.png",
-    "raw_sha256": "9a8e01df6a7e3273664fc9536f5a0dd74ef43180bba69c684ba3061eac998851",
-    "registration": [
-      640,
-      1221,
-      35,
-      360
-    ],
-    "status": "PLACEHOLDER",
-    "reason": "weapon absent in original Thoma crop; generated sleeve/hem detail differs"
   },
   {
     "path": "knight-a/hit/00.png",
@@ -236,5 +145,166 @@
     "status": "SOURCE_DERIVED",
     "cleanup": "manual shield-field ellipse mask, bone value remap; preserve alpha, texture, armor, boss and pivot",
     "recolored_pixels": 3642
+  },
+  {
+    "path": "thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "source": "raw/thoma-mace-idle-01.png",
+    "raw_sha256": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5",
+    "registration": [
+      665,
+      1219,
+      58,
+      360
+    ],
+    "status": "PASS",
+    "weapon_status": "PROPOSED",
+    "reason": "Identity and near-idle silhouette retained at review scale; not Owner art approval.",
+    "style_review": {
+      "face": "PASS: recognizable aged face and grey beard",
+      "costume": "PASS: Identity and near-idle silhouette retained at review scale; not Owner art approval.",
+      "proportions": "PASS: fixed body-height registration, natural joint poses",
+      "palette": "PASS: mapped to original 128-color palette",
+      "light": "PASS: top-left highlight direction",
+      "stroke": "PASS at runtime scale; detailed painted contours vary"
+    }
+  },
+  {
+    "path": "thoma/swing/00.png",
+    "sha256": "77a0b6857abd1be551fe3b2aec2783f84ab03253df4b09565606c2c5294cc5d4",
+    "source": "raw/thoma-mace-swing-00.png",
+    "raw_sha256": "3bc1b5ef510e6b24ebd9625becd39c8370293fa23747c082a29e380e3997ff20",
+    "registration": [
+      685,
+      1218,
+      144,
+      350
+    ],
+    "status": "PLACEHOLDER",
+    "weapon_status": "PROPOSED",
+    "reason": "Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
+    "style_review": {
+      "face": "PASS: recognizable aged face and grey beard",
+      "costume": "PLACEHOLDER: Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
+      "proportions": "PASS: fixed body-height registration, natural joint poses",
+      "palette": "PASS: mapped to original 128-color palette",
+      "light": "PASS: top-left highlight direction",
+      "stroke": "PASS at runtime scale; detailed painted contours vary"
+    }
+  },
+  {
+    "path": "thoma/swing/01.png",
+    "sha256": "1388d405ee128a78f6103d4fc233ff6692b86fe391d53a588f6ba1a307473985",
+    "source": "raw/thoma-mace-swing-01.png",
+    "raw_sha256": "0e138449eaa3634f1af7ee8944b6b2273921d12b58452b7cf7f112d93e8fd8ba",
+    "registration": [
+      665,
+      1220,
+      132,
+      354
+    ],
+    "status": "PLACEHOLDER",
+    "weapon_status": "PROPOSED",
+    "reason": "Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
+    "style_review": {
+      "face": "PASS: recognizable aged face and grey beard",
+      "costume": "PLACEHOLDER: Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
+      "proportions": "PASS: fixed body-height registration, natural joint poses",
+      "palette": "PASS: mapped to original 128-color palette",
+      "light": "PASS: top-left highlight direction",
+      "stroke": "PASS at runtime scale; detailed painted contours vary"
+    }
+  },
+  {
+    "path": "thoma/swing/03.png",
+    "sha256": "f0d75409967bd662469f80ad524d58e74f1eb87a3eb252ef01891a7b616d340c",
+    "source": "raw/thoma-mace-swing-03.png",
+    "raw_sha256": "aca010f6472a7aff8b164ee9ea0ae92e12f2f62b44eb19d286b1ba5ca5380ea8",
+    "registration": [
+      545,
+      1190,
+      81,
+      350
+    ],
+    "status": "PLACEHOLDER",
+    "weapon_status": "PROPOSED",
+    "reason": "Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
+    "style_review": {
+      "face": "PASS: recognizable aged face and grey beard",
+      "costume": "PLACEHOLDER: Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
+      "proportions": "PASS: fixed body-height registration, natural joint poses",
+      "palette": "PASS: mapped to original 128-color palette",
+      "light": "PASS: top-left highlight direction",
+      "stroke": "PASS at runtime scale; detailed painted contours vary"
+    }
+  },
+  {
+    "path": "thoma/swing/04.png",
+    "sha256": "2f51e1b2dbffb759874efd43af283e90d2d4116276e52056e8bc51745aea3d7c",
+    "source": "raw/thoma-mace-swing-04.png",
+    "raw_sha256": "eacc1d40c1b6e70d14d265ec57b81a9bcfcc44406f19afa1e84e44029a89a7bf",
+    "registration": [
+      607,
+      1167,
+      110,
+      342
+    ],
+    "status": "PLACEHOLDER",
+    "weapon_status": "PROPOSED",
+    "reason": "Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
+    "style_review": {
+      "face": "PASS: recognizable aged face and grey beard",
+      "costume": "PLACEHOLDER: Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
+      "proportions": "PASS: fixed body-height registration, natural joint poses",
+      "palette": "PASS: mapped to original 128-color palette",
+      "light": "PASS: top-left highlight direction",
+      "stroke": "PASS at runtime scale; detailed painted contours vary"
+    }
+  },
+  {
+    "path": "thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "source": "raw/thoma-mace-swing-05.png",
+    "raw_sha256": "e89296c8cd0a799e8d5302caf1f611aaa241e84f2a2c4ff56f8b77f4153f31dd",
+    "registration": [
+      673,
+      1217,
+      85,
+      360
+    ],
+    "status": "PASS",
+    "weapon_status": "PROPOSED",
+    "reason": "Identity and near-idle silhouette retained at review scale; not Owner art approval.",
+    "style_review": {
+      "face": "PASS: recognizable aged face and grey beard",
+      "costume": "PASS: Identity and near-idle silhouette retained at review scale; not Owner art approval.",
+      "proportions": "PASS: fixed body-height registration, natural joint poses",
+      "palette": "PASS: mapped to original 128-color palette",
+      "light": "PASS: top-left highlight direction",
+      "stroke": "PASS at runtime scale; detailed painted contours vary"
+    }
+  },
+  {
+    "path": "thoma/swing/02.png",
+    "sha256": "f13cb9690130b2b5ba3a49f2af5f16808122102e83b5bc4845809ef1e53fe96c",
+    "source": "raw/thoma-mace-swing-02-attempt2.png",
+    "raw_sha256": "274edae4742a67aedd787cb20e6e8b6ff12dce900a2797ac11d22300608b0551",
+    "registration": [
+      575,
+      1205,
+      133,
+      350
+    ],
+    "status": "PLACEHOLDER",
+    "weapon_status": "PROPOSED",
+    "reason": "Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
+    "style_review": {
+      "face": "PASS: recognizable aged face and grey beard",
+      "costume": "PLACEHOLDER: Stole embroidery, cuff folds and hem contour drift from original; motion candidate only.",
+      "proportions": "PASS: fixed body-height registration, natural joint poses",
+      "palette": "PASS: mapped to original 128-color palette",
+      "light": "PASS: top-left highlight direction",
+      "stroke": "PASS at runtime scale; detailed painted contours vary"
+    }
   }
 ]

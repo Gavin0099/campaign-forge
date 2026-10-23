@@ -21,8 +21,8 @@ character. The opposite direction mirrors around the fixed pivot,
 including offsets and contact anchors. No vertical mirroring or facing-dependent
 rule changes. Feet use the pivot, never an opaque bounding-box center.
 
-Sequences: Thoma idle (original crop) + six swing poses (anticipation, raised
-blade, sweep, contact, follow-through, recover); each knight idle + three hit
+Sequences: Thoma weapon idle + six swing poses (anticipation, raised
+mace, sweep, contact, follow-through, recover); each knight idle + three hit
 poses (flinch, recoil, settle) + three stagger poses (brace, buckle, recover).
 Knight B has a pale shield field, retained in all poses; its value
 contrast is intended to remain visible in grayscale without identity labels.
@@ -45,13 +45,32 @@ Swing frame offsets encode a short diagonal closing step (maximum 32.8 reference
 pixels), matching the isometric neighbor projection without rotating the body.
 `scenarios` bind the existing setups to reaction sequences; no new combat rules.
 
-## Provenance caveat
+## Weapon proposal — spike-02 A2
 
-The specified Thoma crop (1558,0,520,711) is empty-handed. The brief's reference
-to his existing sword cannot be satisfied literally. The demonstration uses the
-straight sword visible on the first figure of the SAME original party atlas as
-a weapon reference, while preserving Thoma's identity. **Weapon identity is
-PLACEHOLDER**, not an equipment or story decision. No source PNG is edited.
+**PROPOSED, Owner confirmation pending:** a short one-handed flanged mace,
+dark iron head, worn oak haft and small brass collar, carried in the right hand.
+Its blunt head fits the medical friar role and gives a readable weighty impact;
+forearm length avoids a staff silhouette, brass echoes the existing medallion.
+The holy symbol remains a medallion. No sword, blade, staff, book or magic glow.
+
+Evidence cited by the Owner brief: `ui-prototype/docs/l03/character-prompt.txt:1`
+specifies empty hands/no staff/book/glow; `ART-DIRECTION.md:9` names medical
+satchel/teal; `ui-prototype/src/l03Scene.ts:51–54` names medical/support;
+`playable-l03-research/DEMO-CONTRACT.md:17` permits melee 3 and heal 3.
+On `origin/story/strengthen-narrative`, `docs/story/STORY.md:56` and
+`COMPANION-ARCS.md:28,34` describe the friar/holy symbol; `ch01.ink:306`,
+`ch02.ink:250` and `CREATIVE-BIBLE.md:74` reinforce that symbol, not a weapon.
+`docs/DECISIONS.md` U003 is only a class frame. Canon names no weapon.
+
+Manifest rest pose is `thoma/idle/01.png`; `idle/00.png` is the unchanged
+original empty-handed crop for reference only. All six runtime swings now use
+the proposed mace. Historical Phase A sword prompts remain provenance history,
+and were NOT references for A2. Full attempts/hashes are in SOURCES.md and
+generation-prompts.json. Review `thoma-weapon-style-check.png` and frame-audit.json:
+idle/recover pass the model style check; five motion poses retain PLACEHOLDER
+for costume-detail drift. Neither style PASS nor weapon PROPOSED is Owner approval.
+Use `godot-spike/tools/prepare_a2_frames.py` for A2 cleanup, not the historical
+Phase A `prepare_frames.py` / `build_manifest.py` which recreate the old candidates.
 
 ## Distribution
 

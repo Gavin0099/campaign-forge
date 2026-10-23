@@ -1,0 +1,12 @@
+[
+  {
+    "frame": "thoma/idle/01.png",
+    "attempt": 1,
+    "tool": "image_gen",
+    "prompt": "Use case: identity-preserve. Edit target: attached original Thoma crop. Create ONE transparent full-body idle sprite of EXACTLY this elderly medical friar, facing screen right in the identical three-quarter stance. Change ONLY his right hand to hold at rest a short ONE-HANDED FLANGED MACE, forearm length, dark iron blunt flanged head, worn oak haft, small brass collar. No blade, sword, staff, book or magic. Preserve identical weathered face, grey short hair/beard, muted teal robe, ivory embroidered stole, satchel with linen rolls, brass medallion, brown boots, proportions, top-left lighting, painted ink edges, textured brushwork and source palette. Mace head beside his right hip, visible silhouette, hand wraps haft naturally. Whole body and mace inside transparent square canvas with generous margins; no floor/shadow/text. Body top approximately y=200, soles y=900 on 1024 square. Do not redesign or add costume. This is weapon idle for a fixed-pivot 512x512 tactics sprite; retain source body proportions.",
+    "references": [
+      "references/thoma.png"
+    ],
+    "raw": "raw/thoma-mace-idle-01.png"
+  }
+]

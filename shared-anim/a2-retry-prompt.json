@@ -1,0 +1,12 @@
+{
+  "frame": "thoma/swing/02.png",
+  "attempt": 2,
+  "tool": "image_gen",
+  "prompt": "Use case: identity-preserve. Create ONE corrected SWING frame of Thoma for transparent tactics sprite animation. Ref1 original Thoma identity/costume/palette; ref2 weapon idle defines SAME short flanged iron mace, oak haft, brass collar; ref3 is CONTACT which this frame must PRECEDE. IMPORTANT swing weapon head is ABOVE contact, at UPPER RIGHT of face (around x=1030 y=240), NOT below waist. Right shoulder drives forward, right elbow partly straight, hand around x=830 y=400, short mace angled 40 degrees UP-RIGHT toward head at x=1030 y=240, descending next into ref3 horizontal contact. Weight transitioning forward; torso not yet as leaned as ref3. Add short subtle dry-brush iron grey smear ABOVE/BEHIND mace head from overhead to upper-right; not below it. Preserve EXACT elderly face grey hair/beard, teal robe, ivory embroidered stole, linen satchel, brass medallion, boots, original proportions, muted palette, top-left lighting and painted ink texture. Anatomical right hand holds mace. No blades/sword/staff/book/magic/glow, scenery, shadow or text. Full figure and weapon entirely visible with margins on transparent square canvas.",
+  "references": [
+    "references/thoma.png",
+    "raw/thoma-mace-idle-01.png",
+    "raw/thoma-mace-swing-03.png"
+  ],
+  "raw": "raw/thoma-mace-swing-02-attempt2.png"
+}
