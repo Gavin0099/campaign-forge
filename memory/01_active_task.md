@@ -1,4 +1,12 @@
-## 最新使用者指示：P1v6 feedback and winch（2026-10-23）
+## 最新使用者指示：P1v7 zero-step marker（2026-10-23）
+
+使用者陳述：Gavin 確認本 Codex session 是 D:\campaign-forge 唯一 session；指定既有 codex/playable-l03-research@67c4dd8（brief 在 c980e5a 之上），依 P1v7 三步各 commit，再 verification、handoff commit 後停止等 review。只 commit，不 push／main／PR／stash；不得改 rules.ts、結果或依賴、不生新圖、不加任何回合等待。最後落地與 finish 同邊界為 Owner 已接受限制。
+
+代理觀察：2008260／23756b8／32ac71a 分別保存三步；6b4b17d 保存驗證。依 brief 指出的同步結算邊界，零步提示另存序號與750ms到期，與pending／busy分開；播放標記改讀已到達事件，不洩漏稍後才受阻的預告。原始提示消失是 brief 的風險描述，未把它宣稱為本次重現結果。本次實測提示在commit後366.0／355.7ms仍opacity1，立即輸入4.7ms內反映；正常六步平均P1v6 1401.3ms、本版1407.0ms，沒有新增等待。107既有＋18新增＝125 checks、build／scope及55張截圖／73份來源綁定稽核均exit0。保留兩個驗證環境失敗；P1v6過早標記的count斷言移回preview時點，保留數量／busy／最終狀態等斷言，另加事件前嚴格缺席檢查，詳VERIFICATION。
+
+治理／交付：共享ui-prototype/PLAN.md與本檔持自有鎖，fetch／pull --ff-only確認無新遠端內容；最新commit-only授權優先於舊push流程，handoff提交後僅釋放自有鎖。真人試玩、商業美術、Owner驗收HUMAN_PENDING。未寫故事／Ink／每日記錄、未改治理程式或信任，任務DONE非SessionEnd。交接見docs/handoff/codex-playable-l03-research.md的P1v7。
+
+## 歷史使用者指示：P1v6 feedback and winch（2026-10-23）
 
 使用者：Gavin 13:49 確認只有本 Codex session 使用此 worktree；在既有 codex/playable-l03-research@fc266cb 執行 P1v6 五步，逐步小 commit，再驗證與 handoff commit 後停等 review。只 commit、不 push／main／PR／stash；不改 rules.ts、規則結果或 npm 依賴。內建 image_gen 生成手繪絞盤／繩索並保留提示與雜湊。
 

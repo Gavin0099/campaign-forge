@@ -10,6 +10,25 @@
 
 ## Slices
 
+### Authorized P1v7: zero-step feedback and synced marker — 2026-10-23
+
+Gavin confirmed sole use of this Codex worktree and directed the three P1v7
+priorities on `codex/playable-l03-research@67c4dd8`, then verification and
+handoff commits; commit only, stop for review. Zero-step cues now live for
+750 ms independently of settlement/input. Playback markers read only reached
+intent events and current visual cells; preview/new-state predictions remain.
+Final landing sharing finish is Owner-accepted, with no extra turn wait.
+
+Step commits: `2008260`, `23756b8`, `32ac71a`; verification: `6b4b17d`.
+All 107 existing checks plus 18 new checks pass (125), build/scope exit 0;
+five new actual 720p captures and all six browser regression reports are in
+`docs/playable-l03-p1v7/`. Baseline/current six-step lock means are 1401.3 /
+1407.0 ms, with immediate post-commit selection accepted in 4.7 ms.
+Read `docs/playable-l03-p1v7/VERIFICATION.md` for exact commands, two retained
+harness failures, the explicitly retimed legacy marker assertion and the
+accepted final boundary. Rules, outcomes, dependencies, story and art unchanged.
+Human playtest/art judgment remains HUMAN_PENDING; no push/PR/main/deployment.
+
 ### Authorized P1v6: per-event feedback and painted winch — 2026-10-23
 
 See the P1v6 milestone at the end of this file and

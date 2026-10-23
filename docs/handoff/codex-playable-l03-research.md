@@ -1568,3 +1568,165 @@ No skill was installed and no third-party game code or assets were copied.
 
 The human-playtest FAIL is explained and open. These checks support the
 scoped implementation; they do not grant Owner or commercial art approval.
+
+## P1v7
+
+| Field | Value |
+| --- | --- |
+| Branch / worktree | `codex/playable-l03-research` / `D:\campaign-forge` |
+| Owner-named base | `67c4dd8`, P1v7 brief on top of P1v6 `c980e5a` |
+| Verified implementation | `32ac71a`; verification commit `6b4b17d`; this section is delivered by the following handoff commit |
+| Pushed | No — explicit commit-only instruction; Owner's agent handles later delivery |
+| Owner instruction | Execute `docs/tasks/playable-l03-P1v7-zero-step-marker.md` in priority order, commit every step, verification, handoff, then stop for review |
+| Time (Asia/Taipei) | 2026-10-23: step commits 16:31–16:33; final browser run 16:43:22–16:43:51; verification commit 16:46, sealed 16:47; handoff follows within the 60-minute timebox |
+
+### 1. What changed
+
+1. `2008260` — zero-step block / 通道受阻 / painted winch feedback uses an
+   independent serial and 750 ms expiry after `finish()`. Input is available
+   as soon as the original settlement runs. Selection/action clears the cue,
+   a subsequent resolution replaces it, and Retry cancels it without stale
+   timers or another state commit. No added RAF, pause or wait for any turn.
+2. `23756b8` — pure `blockedAtEventIndex` and the view's played-event cursor
+   reveal markers only after their blocked intents. They sit at current visual
+   cells. Preview and post-finish prediction still use the rule query; skip
+   and Reduced Motion settle directly to static markers without transients.
+3. `32ac71a` — documents Gavin's accepted final-landing / finish boundary
+   beside the code and in verification; timing is unchanged.
+4. `6b4b17d` — tests, real exits, current-source/capture audit, five new 720p
+   screenshots, and all six legacy browser suites' new regression evidence.
+
+Production files: `ui-prototype/src/playable-l03/PlayableL03.tsx` and
+`feedback.ts`. No `rules.ts`, result, event-order, dependency, art or story
+change. Shared files edited: **`ui-prototype/PLAN.md`** and
+**`memory/01_active_task.md`**. Both used Codex-owned locks plus fetch and
+`pull --ff-only`; remote had no unseen commits. Latest commit-only authority
+overrides the older push-before-lock-release procedure. Only these own locks
+are released after the handoff commit. No other agent was spawned.
+
+### 2. How to verify
+
+All commands and real exits are in
+`ui-prototype/docs/playable-l03-p1v7/VERIFICATION.md`, command receipts/logs,
+and source-bound browser reports. The local Vite URL was
+`http://127.0.0.1:5183/?scene=playable-l03`; verified existing Chrome was used,
+with repo-local profiles and remote-origin requests blocked.
+
+| Verification | Actual result |
+| --- | --- |
+| P0 / P0b / P0c pure suites | Exit 0, 8 + 9 + 9 original checks |
+| P1v6 feedback pure suite | Exit 0, 2 original groups |
+| P1v through P1v6 browser suites | Exit 0, 26 + 9 + 9 + 9 + 14 + 12 = 79 original checks |
+| P1v7 pure helper suite | Exit 0, 3 new groups |
+| P1v7 browser suite | Exit 0, 15 new checks |
+| `npm run build --prefix ui-prototype` | Exit 0, TypeScript / Vite, 51 modules |
+| `python scripts/validate_ui_scope.py` (bound interpreter) | Exit 0, 13 protected planning files |
+| `node ui-prototype/tests/verify-p1v7-evidence.mjs` | Exit 0, **125 game checks**, 55 capture hashes, 73 source bindings |
+| Protected-file diff from `67c4dd8`; whitespace check | Exit 0; rules, npm packages, story/planning protected files unchanged |
+
+Measured three actual P1v6 and three current six-step turns in the same browser:
+mean input locks **1401.3 ms / 1407.0 ms**. The step clock remains 230 ms,
+without a new pause. Zero-step winch / block labels remain at opacity 1 at
+**366.0 / 355.7 ms after commit**. Input sent **0.1 ms after observing commit**
+is accepted **4.7 ms after commit**. Expiry does not mutate rule state.
+
+New execution screenshots, all **1280×720**, in that directory:
+
+- `1280x720-zero-step-winch-after-commit.png`
+- `1280x720-zero-step-block-after-commit.png`
+- `1280x720-synced-marker-before-event.png`
+- `1280x720-synced-marker-after-event.png`
+- `1280x720-synced-marker-during-later-move.png`
+
+All five were inspected at actual size: painted feedback and broken-chain
+markers remain legible, controls stay reachable, and feedback receives no
+pointer input. The late-block case reaches the event at the final movement
+boundary; its after-event image is therefore also after commit. The converse
+case shows an already-reached block while a later enemy is still moving;
+after finish it returns to the new prediction, which no longer says blocked.
+Both orders are tested without inserting any wait. Legacy regression images
+also cover 1080p, 200% text, narrow fallback, keyboard, outcomes and winch frames.
+
+### 3. Not done / accepted known limit
+
+**Owner-accepted:** the last landing starts at the same `finish()` boundary
+as state settlement. Earlier landings can occur while the old state is still
+committed. No 180 ms dust pause or extra turn wait is added; a claim that every
+landing precedes commit is not made. The existing dust lifetime can outlive
+finish, but it never owns the input lock.
+
+No requested implementation is skipped. Human playtest, independent
+comprehension, animation weight and commercial art judgment remain
+**HUMAN_PENDING**. This segment generates no art and has no rejected art
+attempts. The two retained **harness** failures (wrong Vite root, then baseline
+cleanup triggering page reload) are explained in verification; both final
+replays pass. This is engineering evidence, not Owner art approval.
+
+### 4. Risks / reviewer-visible test change
+
+The original P1v6 count assertion immediately after End Turn required a
+premature marker, contradicting P1v7's explicit absence-until-event contract.
+Its unchanged count assertion now runs immediately before End Turn, preserving
+preview coverage. The original busy/clash/final-marker/exact-state assertions
+remain; P1v7 adds strict earlier-move absence and reached-event/current-cell
+checks. No assertion is removed or relaxed to make a wrong result pass.
+Other old harness changes only route evidence into the P1v7 directory.
+
+The event cursor assumes the unchanged resolver's one intent per enemy and
+sequential 230 ms path-step playback. The zero-step cue reads the original
+presentation snapshot even though finish has already committed the new state.
+Future event-schema/timing work should retain these invariants and the serial
+expiry / skip / Retry tests. No new rule or outcome is implied by feedback.
+
+### 5. Open questions
+
+- Claude / GPT review: inspect the independent cue expiry/cancellation, both
+  marker order witnesses, unchanged normal-turn timing, and the explicitly
+  retimed legacy assertion. Findings await Owner direction; no automatic fix
+  or further slice is started after this handoff.
+- Gavin: human playtest and visual acceptance remain pending. The last-landing
+  timing limit is already accepted; no repeat approval is requested here.
+
+### 6. Not claimed
+
+No human playtest, Owner art acceptance, commercial quality approval, formal
+story choice, S4, complete engine, new native governance callback, push, main
+merge, PR, Actions or deployment. No global trust or governance program was
+modified. Existing pre-commit hooks ran normally with the nonblocking
+`missing_canonical_memory` advisory; no hook was bypassed. Task DONE is not
+SessionEnd, and no daily canonical memory file is hand-edited or generated.
+Stop after this local handoff commit and await review.
+
+### Resource self-check (P1v7)
+
+Read the cached, pinned game-feel and game-ui-ux SKILL.md files from
+`gamedev-skills/awesome-gamedev-agent-skills@0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd`;
+SHA-256 respectively `68fc818ad939151be2db9e358e4295a71830c19d61f3aff849f1599307f39f9d`
+and `8a094c84a377503aa8f4c40df676d1c6b6fc07d36ff95554ce06467f1614397e`.
+Applied discrete event feedback, visual-only lifetimes, nonblocking input,
+event-driven HUD and existing keyboard/layout verification. No installation,
+engine APIs, reference code or third-party art was imported.
+
+| Resource checklist item | Result and evidence |
+| --- | --- |
+| A: prototype-fast | N/A new mechanic; smallest presentation fix, keep conditions are the P1v7 cue/marker/no-wait checks |
+| A: level-design | N/A new level work; original routes/map/placements unchanged, P0/P0b/P0c all pass |
+| A: game-ai | N/A new policy; original resolver and deterministic outcomes retained |
+| A: game-ui-ux | PASS scoped implementation — preview/reached/static marker, objective cues and input hints; five new 720p screenshots, legacy 1080p/keyboard/zoom checks |
+| A: game-feel | PASS scoped implementation — visible post-commit cue with immediate input, playback event alignment, 3+3 measured turns, skip/reduce/expiry/Retry coverage |
+| B: Grid-Tactics architecture | PASS existing separation — pure resolver unchanged, separate pure feedback query and presentation playback; no borrowed unlicensed code or art |
+| B: 2DTacticalRPGDemo | N/A new borrowed pattern/code/asset; no new attribution obligation |
+| B: engine/dependency gate | PASS — npm package and lockfile unchanged, no engine or dependency added |
+| C: independent 3–5 minute battle | FAIL / HUMAN_PENDING — no uncoached human playtest or duration evidence; automated routes do not establish human independence |
+| C: understandable enemy actions | PASS automated state/intent scope — both playback ordering witnesses and exact-state assertions; human comprehension pending |
+| C: win/lose | PASS — all original success/failure routes and browser assertions |
+| C: two tactical outcomes | PASS minimum / THIN retained — hold versus idle differs; no claim of deeper tactics |
+| C: restart/change strategy | PASS automated — legacy Retry plus settled-cue cancellation and later unchanged initial state |
+| C: duplicate/stuck/invalid/interruption | PASS tested scope — original guards plus immediate input, cue expiry, new serial, Retry and preference changes |
+| C: 720p/1080p/keyboard | PASS automated — original six browser suites and current screenshots/size/focus/text checks |
+| C: automated versus human | PASS — all reports retain HUMAN_PENDING separately from engineering results |
+| D: SRD / CC-BY / WotC / adaptation contract | N/A new adaptation; PASS unchanged rules/art and no new third-party material |
+| D: authorization | PASS — Owner-named branch/base, implementation role, normal local commits, own shared locks; no push/main/PR/stash/S4/deployment/Actions |
+
+The human-playtest FAIL is explained and remains open. This self-check supports
+review of this presentation segment and grants no Owner acceptance.
