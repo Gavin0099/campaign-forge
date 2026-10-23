@@ -1,0 +1,485 @@
+{
+	"complete": true,
+	"shots": [
+		{
+			"bodies": [
+				{
+					"frame": 0,
+					"id": "knight-1",
+					"screen_transform": [
+						-0.133062228560448,
+						0.0,
+						0.0,
+						0.133062228560448,
+						365.623931884766,
+						217.139129638672
+					],
+					"texture": "res://art/anim-shared/knight-a/idle/00.png"
+				},
+				{
+					"frame": 0,
+					"id": "knight-2",
+					"screen_transform": [
+						-0.133062228560448,
+						0.0,
+						0.0,
+						0.133062228560448,
+						324.263946533203,
+						339.339111328125
+					],
+					"texture": "res://art/anim-shared/knight-b/idle/00.png"
+				}
+			],
+			"camera_zoom": 1.0,
+			"capture": "rendered viewport; grayscale via screen shader",
+			"file": "knights-720p-setup1-rest-color.png",
+			"grayscale": false,
+			"hud_hidden": true,
+			"name_role_labels_hidden": true,
+			"phase": "ready",
+			"setup": 1,
+			"thoma_frame": 0,
+			"view": "rest"
+		},
+		{
+			"bodies": [
+				{
+					"frame": 1,
+					"id": "knight-1",
+					"screen_transform": [
+						-0.186287134885788,
+						0.0,
+						0.0,
+						0.186287134885788,
+						419.51904296875,
+						254.671890258789
+					],
+					"texture": "res://art/anim-shared/knight-a/hit/01.png"
+				},
+				{
+					"frame": 0,
+					"id": "knight-2",
+					"screen_transform": [
+						-0.186287134885788,
+						0.0,
+						0.0,
+						0.186287134885788,
+						408.469390869141,
+						398.065246582031
+					],
+					"texture": "res://art/anim-shared/knight-b/idle/00.png"
+				}
+			],
+			"camera_zoom": 1.39999997615814,
+			"capture": "rendered viewport; grayscale via screen shader",
+			"file": "knights-720p-setup1-zoom-color.png",
+			"grayscale": false,
+			"hud_hidden": true,
+			"name_role_labels_hidden": true,
+			"phase": "knockback",
+			"setup": 1,
+			"thoma_frame": 4,
+			"view": "zoom"
+		},
+		{
+			"bodies": [
+				{
+					"frame": 0,
+					"id": "knight-1",
+					"screen_transform": [
+						-0.133062228560448,
+						0.0,
+						0.0,
+						0.133062228560448,
+						365.623931884766,
+						217.139129638672
+					],
+					"texture": "res://art/anim-shared/knight-a/idle/00.png"
+				},
+				{
+					"frame": 0,
+					"id": "knight-2",
+					"screen_transform": [
+						-0.133062228560448,
+						0.0,
+						0.0,
+						0.133062228560448,
+						324.263946533203,
+						241.579132080078
+					],
+					"texture": "res://art/anim-shared/knight-b/idle/00.png"
+				}
+			],
+			"camera_zoom": 1.0,
+			"capture": "rendered viewport; grayscale via screen shader",
+			"file": "knights-720p-setup2-rest-color.png",
+			"grayscale": false,
+			"hud_hidden": true,
+			"name_role_labels_hidden": true,
+			"phase": "ready",
+			"setup": 2,
+			"thoma_frame": 0,
+			"view": "rest"
+		},
+		{
+			"bodies": [
+				{
+					"frame": 1,
+					"id": "knight-1",
+					"screen_transform": [
+						-0.186287134885788,
+						0.0,
+						0.0,
+						0.186287134885788,
+						461.582061767578,
+						229.762573242188
+					],
+					"texture": "res://art/anim-shared/knight-a/stagger/01.png"
+				},
+				{
+					"frame": 0,
+					"id": "knight-2",
+					"screen_transform": [
+						-0.186287134885788,
+						0.0,
+						0.0,
+						0.186287134885788,
+						408.447326660156,
+						261.160400390625
+					],
+					"texture": "res://art/anim-shared/knight-b/idle/00.png"
+				}
+			],
+			"camera_zoom": 1.39999997615814,
+			"capture": "rendered viewport; grayscale via screen shader",
+			"file": "knights-720p-setup2-zoom-color.png",
+			"grayscale": false,
+			"hud_hidden": true,
+			"name_role_labels_hidden": true,
+			"phase": "blocked_recoil",
+			"setup": 2,
+			"thoma_frame": 4,
+			"view": "zoom"
+		},
+		{
+			"bodies": [
+				{
+					"frame": 0,
+					"id": "knight-1",
+					"screen_transform": [
+						0.133062228560448,
+						0.0,
+						0.0,
+						0.133062228560448,
+						421.576049804688,
+						241.579132080078
+					],
+					"texture": "res://art/anim-shared/knight-a/idle/00.png"
+				},
+				{
+					"frame": 0,
+					"id": "knight-2",
+					"screen_transform": [
+						0.133062228560448,
+						0.0,
+						0.0,
+						0.133062228560448,
+						256.136077880859,
+						339.339111328125
+					],
+					"texture": "res://art/anim-shared/knight-b/idle/00.png"
+				}
+			],
+			"camera_zoom": 1.0,
+			"capture": "rendered viewport; grayscale via screen shader",
+			"file": "knights-720p-setup3-rest-color.png",
+			"grayscale": false,
+			"hud_hidden": true,
+			"name_role_labels_hidden": true,
+			"phase": "ready",
+			"setup": 3,
+			"thoma_frame": 0,
+			"view": "rest"
+		},
+		{
+			"bodies": [
+				{
+					"frame": 1,
+					"id": "knight-1",
+					"screen_transform": [
+						0.186287134885788,
+						0.0,
+						0.0,
+						0.186287134885788,
+						489.294738769531,
+						246.468719482422
+					],
+					"texture": "res://art/anim-shared/knight-a/stagger/01.png"
+				},
+				{
+					"frame": 0,
+					"id": "knight-2",
+					"screen_transform": [
+						0.186287134885788,
+						0.0,
+						0.0,
+						0.186287134885788,
+						252.985321044922,
+						380.559326171875
+					],
+					"texture": "res://art/anim-shared/knight-b/idle/00.png"
+				}
+			],
+			"camera_zoom": 1.39999997615814,
+			"capture": "rendered viewport; grayscale via screen shader",
+			"file": "knights-720p-setup3-zoom-color.png",
+			"grayscale": false,
+			"hud_hidden": true,
+			"name_role_labels_hidden": true,
+			"phase": "blocked_recoil",
+			"setup": 3,
+			"thoma_frame": 4,
+			"view": "zoom"
+		},
+		{
+			"bodies": [
+				{
+					"frame": 0,
+					"id": "knight-1",
+					"screen_transform": [
+						-0.133062228560448,
+						0.0,
+						0.0,
+						0.133062228560448,
+						365.623931884766,
+						217.139129638672
+					],
+					"texture": "res://art/anim-shared/knight-a/idle/00.png"
+				},
+				{
+					"frame": 0,
+					"id": "knight-2",
+					"screen_transform": [
+						-0.133062228560448,
+						0.0,
+						0.0,
+						0.133062228560448,
+						324.263946533203,
+						339.339111328125
+					],
+					"texture": "res://art/anim-shared/knight-b/idle/00.png"
+				}
+			],
+			"camera_zoom": 1.0,
+			"capture": "rendered viewport; grayscale via screen shader",
+			"file": "knights-720p-setup1-rest-gray.png",
+			"grayscale": true,
+			"hud_hidden": true,
+			"name_role_labels_hidden": true,
+			"phase": "ready",
+			"setup": 1,
+			"thoma_frame": 0,
+			"view": "rest"
+		},
+		{
+			"bodies": [
+				{
+					"frame": 1,
+					"id": "knight-1",
+					"screen_transform": [
+						-0.186287134885788,
+						0.0,
+						0.0,
+						0.186287134885788,
+						419.493682861328,
+						254.714965820313
+					],
+					"texture": "res://art/anim-shared/knight-a/hit/01.png"
+				},
+				{
+					"frame": 0,
+					"id": "knight-2",
+					"screen_transform": [
+						-0.186287134885788,
+						0.0,
+						0.0,
+						0.186287134885788,
+						408.480377197266,
+						398.086822509766
+					],
+					"texture": "res://art/anim-shared/knight-b/idle/00.png"
+				}
+			],
+			"camera_zoom": 1.39999997615814,
+			"capture": "rendered viewport; grayscale via screen shader",
+			"file": "knights-720p-setup1-zoom-gray.png",
+			"grayscale": true,
+			"hud_hidden": true,
+			"name_role_labels_hidden": true,
+			"phase": "knockback",
+			"setup": 1,
+			"thoma_frame": 4,
+			"view": "zoom"
+		},
+		{
+			"bodies": [
+				{
+					"frame": 0,
+					"id": "knight-1",
+					"screen_transform": [
+						-0.133062228560448,
+						0.0,
+						0.0,
+						0.133062228560448,
+						365.623931884766,
+						217.139129638672
+					],
+					"texture": "res://art/anim-shared/knight-a/idle/00.png"
+				},
+				{
+					"frame": 0,
+					"id": "knight-2",
+					"screen_transform": [
+						-0.133062228560448,
+						0.0,
+						0.0,
+						0.133062228560448,
+						324.263946533203,
+						241.579132080078
+					],
+					"texture": "res://art/anim-shared/knight-b/idle/00.png"
+				}
+			],
+			"camera_zoom": 1.0,
+			"capture": "rendered viewport; grayscale via screen shader",
+			"file": "knights-720p-setup2-rest-gray.png",
+			"grayscale": true,
+			"hud_hidden": true,
+			"name_role_labels_hidden": true,
+			"phase": "ready",
+			"setup": 2,
+			"thoma_frame": 0,
+			"view": "rest"
+		},
+		{
+			"bodies": [
+				{
+					"frame": 1,
+					"id": "knight-1",
+					"screen_transform": [
+						-0.186287134885788,
+						0.0,
+						0.0,
+						0.186287134885788,
+						462.040496826172,
+						230.498199462891
+					],
+					"texture": "res://art/anim-shared/knight-a/stagger/01.png"
+				},
+				{
+					"frame": 0,
+					"id": "knight-2",
+					"screen_transform": [
+						-0.186287134885788,
+						0.0,
+						0.0,
+						0.186287134885788,
+						408.668884277344,
+						262.035980224609
+					],
+					"texture": "res://art/anim-shared/knight-b/idle/00.png"
+				}
+			],
+			"camera_zoom": 1.39999997615814,
+			"capture": "rendered viewport; grayscale via screen shader",
+			"file": "knights-720p-setup2-zoom-gray.png",
+			"grayscale": true,
+			"hud_hidden": true,
+			"name_role_labels_hidden": true,
+			"phase": "blocked_recoil",
+			"setup": 2,
+			"thoma_frame": 4,
+			"view": "zoom"
+		},
+		{
+			"bodies": [
+				{
+					"frame": 0,
+					"id": "knight-1",
+					"screen_transform": [
+						0.133062228560448,
+						0.0,
+						0.0,
+						0.133062228560448,
+						421.576049804688,
+						241.579132080078
+					],
+					"texture": "res://art/anim-shared/knight-a/idle/00.png"
+				},
+				{
+					"frame": 0,
+					"id": "knight-2",
+					"screen_transform": [
+						0.133062228560448,
+						0.0,
+						0.0,
+						0.133062228560448,
+						256.136077880859,
+						339.339111328125
+					],
+					"texture": "res://art/anim-shared/knight-b/idle/00.png"
+				}
+			],
+			"camera_zoom": 1.0,
+			"capture": "rendered viewport; grayscale via screen shader",
+			"file": "knights-720p-setup3-rest-gray.png",
+			"grayscale": true,
+			"hud_hidden": true,
+			"name_role_labels_hidden": true,
+			"phase": "ready",
+			"setup": 3,
+			"thoma_frame": 0,
+			"view": "rest"
+		},
+		{
+			"bodies": [
+				{
+					"frame": 1,
+					"id": "knight-1",
+					"screen_transform": [
+						0.186287134885788,
+						0.0,
+						0.0,
+						0.186287134885788,
+						489.145050048828,
+						246.111022949219
+					],
+					"texture": "res://art/anim-shared/knight-a/stagger/01.png"
+				},
+				{
+					"frame": 0,
+					"id": "knight-2",
+					"screen_transform": [
+						0.186287134885788,
+						0.0,
+						0.0,
+						0.186287134885788,
+						252.827819824219,
+						380.197021484375
+					],
+					"texture": "res://art/anim-shared/knight-b/idle/00.png"
+				}
+			],
+			"camera_zoom": 1.39999997615814,
+			"capture": "rendered viewport; grayscale via screen shader",
+			"file": "knights-720p-setup3-zoom-gray.png",
+			"grayscale": true,
+			"hud_hidden": true,
+			"name_role_labels_hidden": true,
+			"phase": "blocked_recoil",
+			"setup": 3,
+			"thoma_frame": 4,
+			"view": "zoom"
+		}
+	]
+}

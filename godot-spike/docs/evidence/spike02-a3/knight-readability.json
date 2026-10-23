@@ -1,0 +1,538 @@
+{
+  "resolution": [
+    1280,
+    720
+  ],
+  "all_name_role_and_hud_tags_hidden": true,
+  "images": [
+    {
+      "file": "knights-720p-setup1-rest-color.png",
+      "setup": 1,
+      "view": "rest",
+      "grayscale": false,
+      "verdict": "PASS",
+      "reason": "B has a visibly pale shield field and raised pale crest; A has a darker shield and plain pointed helm.",
+      "reviewer": "model visual inspection at native 1280x720; not measured human glance latency",
+      "sha256": "1d2ac36b2b2ac25d596e6182265b7a44ac19368a03f712109b6c63891bd8bcc2",
+      "regions": {
+        "knight-1": {
+          "helm": {
+            "opaque_screen_area_px": 42,
+            "mean_screenshot_luminance_0_255": 92.595
+          },
+          "shield": {
+            "opaque_screen_area_px": 87,
+            "mean_screenshot_luminance_0_255": 73.793
+          }
+        },
+        "knight-2": {
+          "helm": {
+            "opaque_screen_area_px": 49,
+            "mean_screenshot_luminance_0_255": 112.347
+          },
+          "shield": {
+            "opaque_screen_area_px": 88,
+            "mean_screenshot_luminance_0_255": 137.295
+          }
+        }
+      },
+      "differences": {
+        "helm": {
+          "B_minus_A_area_px": 7,
+          "B_minus_A_luminance": 19.752
+        },
+        "shield": {
+          "B_minus_A_area_px": 1,
+          "B_minus_A_luminance": 63.502
+        }
+      }
+    },
+    {
+      "file": "knights-720p-setup1-zoom-color.png",
+      "setup": 1,
+      "view": "zoom",
+      "grayscale": false,
+      "verdict": "PASS",
+      "reason": "At actual 1.4x attack follow-through, B pale shield/crest remain distinct from A dark shield and reacting plain helm.",
+      "reviewer": "model visual inspection at native 1280x720; not measured human glance latency",
+      "sha256": "009e8120e1522348c4eb1a51b0d593501ea4bd51fa8794ea2c7cc21607b4f81d",
+      "regions": {
+        "knight-1": {
+          "helm": {
+            "opaque_screen_area_px": 84,
+            "mean_screenshot_luminance_0_255": 103.786
+          },
+          "shield": {
+            "opaque_screen_area_px": 228,
+            "mean_screenshot_luminance_0_255": 86.789
+          }
+        },
+        "knight-2": {
+          "helm": {
+            "opaque_screen_area_px": 99,
+            "mean_screenshot_luminance_0_255": 117.596
+          },
+          "shield": {
+            "opaque_screen_area_px": 174,
+            "mean_screenshot_luminance_0_255": 137.126
+          }
+        }
+      },
+      "differences": {
+        "helm": {
+          "B_minus_A_area_px": 15,
+          "B_minus_A_luminance": 13.81
+        },
+        "shield": {
+          "B_minus_A_area_px": -54,
+          "B_minus_A_luminance": 50.337
+        }
+      }
+    },
+    {
+      "file": "knights-720p-setup2-rest-color.png",
+      "setup": 2,
+      "view": "rest",
+      "grayscale": false,
+      "verdict": "PASS",
+      "reason": "B has a visibly pale shield field and raised pale crest; A has a darker shield and plain pointed helm.",
+      "reviewer": "model visual inspection at native 1280x720; not measured human glance latency",
+      "sha256": "19a7c7c913b3774db505b15032670f3e94be7e84b873e928cc9bf4c13cf68a3c",
+      "regions": {
+        "knight-1": {
+          "helm": {
+            "opaque_screen_area_px": 42,
+            "mean_screenshot_luminance_0_255": 92.595
+          },
+          "shield": {
+            "opaque_screen_area_px": 87,
+            "mean_screenshot_luminance_0_255": 73.793
+          }
+        },
+        "knight-2": {
+          "helm": {
+            "opaque_screen_area_px": 51,
+            "mean_screenshot_luminance_0_255": 119.275
+          },
+          "shield": {
+            "opaque_screen_area_px": 94,
+            "mean_screenshot_luminance_0_255": 134.436
+          }
+        }
+      },
+      "differences": {
+        "helm": {
+          "B_minus_A_area_px": 9,
+          "B_minus_A_luminance": 26.68
+        },
+        "shield": {
+          "B_minus_A_area_px": 7,
+          "B_minus_A_luminance": 60.643
+        }
+      }
+    },
+    {
+      "file": "knights-720p-setup2-zoom-color.png",
+      "setup": 2,
+      "view": "zoom",
+      "grayscale": false,
+      "verdict": "PASS",
+      "reason": "At actual 1.4x attack follow-through, B pale shield/crest remain distinct from A dark shield and reacting plain helm.",
+      "reviewer": "model visual inspection at native 1280x720; not measured human glance latency",
+      "sha256": "e870b048933d9db7afec6c950f6ce0c8b03bd9806add9603fa224c9dc7df1f4f",
+      "regions": {
+        "knight-1": {
+          "helm": {
+            "opaque_screen_area_px": 83,
+            "mean_screenshot_luminance_0_255": 102.349
+          },
+          "shield": {
+            "opaque_screen_area_px": 214,
+            "mean_screenshot_luminance_0_255": 85.15
+          }
+        },
+        "knight-2": {
+          "helm": {
+            "opaque_screen_area_px": 100,
+            "mean_screenshot_luminance_0_255": 120.99
+          },
+          "shield": {
+            "opaque_screen_area_px": 174,
+            "mean_screenshot_luminance_0_255": 138.385
+          }
+        }
+      },
+      "differences": {
+        "helm": {
+          "B_minus_A_area_px": 17,
+          "B_minus_A_luminance": 18.641
+        },
+        "shield": {
+          "B_minus_A_area_px": -40,
+          "B_minus_A_luminance": 53.235
+        }
+      }
+    },
+    {
+      "file": "knights-720p-setup3-rest-color.png",
+      "setup": 3,
+      "view": "rest",
+      "grayscale": false,
+      "verdict": "PASS",
+      "reason": "B has a visibly pale shield field and raised pale crest; A has a darker shield and plain pointed helm.",
+      "reviewer": "model visual inspection at native 1280x720; not measured human glance latency",
+      "sha256": "ebd12de982bdb7035e96a857af6048b48ce1682ff5e6d16e7356555e9cb9516e",
+      "regions": {
+        "knight-1": {
+          "helm": {
+            "opaque_screen_area_px": 37,
+            "mean_screenshot_luminance_0_255": 94.054
+          },
+          "shield": {
+            "opaque_screen_area_px": 94,
+            "mean_screenshot_luminance_0_255": 74.862
+          }
+        },
+        "knight-2": {
+          "helm": {
+            "opaque_screen_area_px": 54,
+            "mean_screenshot_luminance_0_255": 114.0
+          },
+          "shield": {
+            "opaque_screen_area_px": 77,
+            "mean_screenshot_luminance_0_255": 144.377
+          }
+        }
+      },
+      "differences": {
+        "helm": {
+          "B_minus_A_area_px": 17,
+          "B_minus_A_luminance": 19.946
+        },
+        "shield": {
+          "B_minus_A_area_px": -17,
+          "B_minus_A_luminance": 69.515
+        }
+      }
+    },
+    {
+      "file": "knights-720p-setup3-zoom-color.png",
+      "setup": 3,
+      "view": "zoom",
+      "grayscale": false,
+      "verdict": "PASS",
+      "reason": "At actual 1.4x attack follow-through, B pale shield/crest remain distinct from A dark shield and reacting plain helm.",
+      "reviewer": "model visual inspection at native 1280x720; not measured human glance latency",
+      "sha256": "0ed2145ace9e059799d52c6ed59011e9912a5183efc3677ccb03457449c332e8",
+      "regions": {
+        "knight-1": {
+          "helm": {
+            "opaque_screen_area_px": 86,
+            "mean_screenshot_luminance_0_255": 111.686
+          },
+          "shield": {
+            "opaque_screen_area_px": 187,
+            "mean_screenshot_luminance_0_255": 84.449
+          }
+        },
+        "knight-2": {
+          "helm": {
+            "opaque_screen_area_px": 102,
+            "mean_screenshot_luminance_0_255": 116.539
+          },
+          "shield": {
+            "opaque_screen_area_px": 160,
+            "mean_screenshot_luminance_0_255": 142.044
+          }
+        }
+      },
+      "differences": {
+        "helm": {
+          "B_minus_A_area_px": 16,
+          "B_minus_A_luminance": 4.853
+        },
+        "shield": {
+          "B_minus_A_area_px": -27,
+          "B_minus_A_luminance": 57.595
+        }
+      }
+    },
+    {
+      "file": "knights-720p-setup1-rest-gray.png",
+      "setup": 1,
+      "view": "rest",
+      "grayscale": true,
+      "verdict": "PASS",
+      "reason": "B has a visibly pale shield field and raised pale crest; A has a darker shield and plain pointed helm. Value difference survives in-engine grayscale; no hue or label is needed.",
+      "reviewer": "model visual inspection at native 1280x720; not measured human glance latency",
+      "sha256": "deda63f1c19a84e233d5e480772342bdaf6c2e506705c9652ae6fb75e123ef53",
+      "regions": {
+        "knight-1": {
+          "helm": {
+            "opaque_screen_area_px": 42,
+            "mean_screenshot_luminance_0_255": 92.571
+          },
+          "shield": {
+            "opaque_screen_area_px": 87,
+            "mean_screenshot_luminance_0_255": 73.782
+          }
+        },
+        "knight-2": {
+          "helm": {
+            "opaque_screen_area_px": 49,
+            "mean_screenshot_luminance_0_255": 112.184
+          },
+          "shield": {
+            "opaque_screen_area_px": 88,
+            "mean_screenshot_luminance_0_255": 137.239
+          }
+        }
+      },
+      "differences": {
+        "helm": {
+          "B_minus_A_area_px": 7,
+          "B_minus_A_luminance": 19.613
+        },
+        "shield": {
+          "B_minus_A_area_px": 1,
+          "B_minus_A_luminance": 63.457
+        }
+      }
+    },
+    {
+      "file": "knights-720p-setup1-zoom-gray.png",
+      "setup": 1,
+      "view": "zoom",
+      "grayscale": true,
+      "verdict": "PASS",
+      "reason": "At actual 1.4x attack follow-through, B pale shield/crest remain distinct from A dark shield and reacting plain helm. Value difference survives in-engine grayscale; no hue or label is needed.",
+      "reviewer": "model visual inspection at native 1280x720; not measured human glance latency",
+      "sha256": "9257ed341aa272b7aefc7ca87444f9cc4a2671e8da8a2a2cca025ba73d48dbbc",
+      "regions": {
+        "knight-1": {
+          "helm": {
+            "opaque_screen_area_px": 85,
+            "mean_screenshot_luminance_0_255": 103.071
+          },
+          "shield": {
+            "opaque_screen_area_px": 228,
+            "mean_screenshot_luminance_0_255": 86.671
+          }
+        },
+        "knight-2": {
+          "helm": {
+            "opaque_screen_area_px": 99,
+            "mean_screenshot_luminance_0_255": 118.051
+          },
+          "shield": {
+            "opaque_screen_area_px": 174,
+            "mean_screenshot_luminance_0_255": 137.115
+          }
+        }
+      },
+      "differences": {
+        "helm": {
+          "B_minus_A_area_px": 14,
+          "B_minus_A_luminance": 14.98
+        },
+        "shield": {
+          "B_minus_A_area_px": -54,
+          "B_minus_A_luminance": 50.444
+        }
+      }
+    },
+    {
+      "file": "knights-720p-setup2-rest-gray.png",
+      "setup": 2,
+      "view": "rest",
+      "grayscale": true,
+      "verdict": "PASS",
+      "reason": "B has a visibly pale shield field and raised pale crest; A has a darker shield and plain pointed helm. Value difference survives in-engine grayscale; no hue or label is needed.",
+      "reviewer": "model visual inspection at native 1280x720; not measured human glance latency",
+      "sha256": "997fa422f3cebb3f500c453f34d6e99f1aea70433f65d9adc8128ba1ddabafa6",
+      "regions": {
+        "knight-1": {
+          "helm": {
+            "opaque_screen_area_px": 42,
+            "mean_screenshot_luminance_0_255": 92.571
+          },
+          "shield": {
+            "opaque_screen_area_px": 87,
+            "mean_screenshot_luminance_0_255": 73.782
+          }
+        },
+        "knight-2": {
+          "helm": {
+            "opaque_screen_area_px": 51,
+            "mean_screenshot_luminance_0_255": 119.176
+          },
+          "shield": {
+            "opaque_screen_area_px": 94,
+            "mean_screenshot_luminance_0_255": 134.404
+          }
+        }
+      },
+      "differences": {
+        "helm": {
+          "B_minus_A_area_px": 9,
+          "B_minus_A_luminance": 26.605
+        },
+        "shield": {
+          "B_minus_A_area_px": 7,
+          "B_minus_A_luminance": 60.622
+        }
+      }
+    },
+    {
+      "file": "knights-720p-setup2-zoom-gray.png",
+      "setup": 2,
+      "view": "zoom",
+      "grayscale": true,
+      "verdict": "PASS",
+      "reason": "At actual 1.4x attack follow-through, B pale shield/crest remain distinct from A dark shield and reacting plain helm. Value difference survives in-engine grayscale; no hue or label is needed.",
+      "reviewer": "model visual inspection at native 1280x720; not measured human glance latency",
+      "sha256": "93b74057bf5f59b55f91fc7f61e3d17d85db682162758a3216efea7000b400ef",
+      "regions": {
+        "knight-1": {
+          "helm": {
+            "opaque_screen_area_px": 83,
+            "mean_screenshot_luminance_0_255": 109.663
+          },
+          "shield": {
+            "opaque_screen_area_px": 186,
+            "mean_screenshot_luminance_0_255": 83.495
+          }
+        },
+        "knight-2": {
+          "helm": {
+            "opaque_screen_area_px": 103,
+            "mean_screenshot_luminance_0_255": 116.641
+          },
+          "shield": {
+            "opaque_screen_area_px": 174,
+            "mean_screenshot_luminance_0_255": 138.224
+          }
+        }
+      },
+      "differences": {
+        "helm": {
+          "B_minus_A_area_px": 20,
+          "B_minus_A_luminance": 6.978
+        },
+        "shield": {
+          "B_minus_A_area_px": -12,
+          "B_minus_A_luminance": 54.729
+        }
+      }
+    },
+    {
+      "file": "knights-720p-setup3-rest-gray.png",
+      "setup": 3,
+      "view": "rest",
+      "grayscale": true,
+      "verdict": "PASS",
+      "reason": "B has a visibly pale shield field and raised pale crest; A has a darker shield and plain pointed helm. Value difference survives in-engine grayscale; no hue or label is needed.",
+      "reviewer": "model visual inspection at native 1280x720; not measured human glance latency",
+      "sha256": "98b4e858d4915cdb6633968f6766cefbb90a2b80ae91b6df9102b103c5107c8c",
+      "regions": {
+        "knight-1": {
+          "helm": {
+            "opaque_screen_area_px": 37,
+            "mean_screenshot_luminance_0_255": 94.081
+          },
+          "shield": {
+            "opaque_screen_area_px": 94,
+            "mean_screenshot_luminance_0_255": 74.777
+          }
+        },
+        "knight-2": {
+          "helm": {
+            "opaque_screen_area_px": 54,
+            "mean_screenshot_luminance_0_255": 114.074
+          },
+          "shield": {
+            "opaque_screen_area_px": 77,
+            "mean_screenshot_luminance_0_255": 144.325
+          }
+        }
+      },
+      "differences": {
+        "helm": {
+          "B_minus_A_area_px": 17,
+          "B_minus_A_luminance": 19.993
+        },
+        "shield": {
+          "B_minus_A_area_px": -17,
+          "B_minus_A_luminance": 69.548
+        }
+      }
+    },
+    {
+      "file": "knights-720p-setup3-zoom-gray.png",
+      "setup": 3,
+      "view": "zoom",
+      "grayscale": true,
+      "verdict": "PASS",
+      "reason": "At actual 1.4x attack follow-through, B pale shield/crest remain distinct from A dark shield and reacting plain helm. Value difference survives in-engine grayscale; no hue or label is needed.",
+      "reviewer": "model visual inspection at native 1280x720; not measured human glance latency",
+      "sha256": "4e3f5d09df9746ab3c2ede52dc1829d60dcf0fbab9f5a630b24e93f0ce935459",
+      "regions": {
+        "knight-1": {
+          "helm": {
+            "opaque_screen_area_px": 81,
+            "mean_screenshot_luminance_0_255": 107.716
+          },
+          "shield": {
+            "opaque_screen_area_px": 187,
+            "mean_screenshot_luminance_0_255": 84.155
+          }
+        },
+        "knight-2": {
+          "helm": {
+            "opaque_screen_area_px": 100,
+            "mean_screenshot_luminance_0_255": 119.37
+          },
+          "shield": {
+            "opaque_screen_area_px": 159,
+            "mean_screenshot_luminance_0_255": 142.597
+          }
+        }
+      },
+      "differences": {
+        "helm": {
+          "B_minus_A_area_px": 19,
+          "B_minus_A_luminance": 11.654
+        },
+        "shield": {
+          "B_minus_A_area_px": -28,
+          "B_minus_A_luminance": 58.442
+        }
+      }
+    }
+  ],
+  "method": "Actual rendered screenshots; grayscale is a live Rec.709 screen shader. Zoom is real attack frame 4 after impact flash; no freeze/reposition/rescale. Model inspected all 12 full-size images before recording verdicts.",
+  "proxy_method": "Opaque alpha>=128 in source-defined helm/shield ROIs, projected by captured full viewport transform. Mean Rec.709 screenshot luma is 0..255 (not linear radiometric luminance). Attack A and B have different poses; do not interpret area difference as identity alone.",
+  "same_pose_helm_control": [
+    {
+      "scale": 0.13306222222222222,
+      "A_helm_px": 43,
+      "B_helm_px": 59,
+      "helm_silhouette_xor_px": 16
+    },
+    {
+      "scale": 0.1862871111111111,
+      "A_helm_px": 94,
+      "B_helm_px": 128,
+      "helm_silhouette_xor_px": 34
+    }
+  ],
+  "overall": "PASS for these 12 sampled images; no clear silhouette failure observed",
+  "human_playtest": "HUMAN_PENDING",
+  "silhouette_proposal": "Not required: no clear failure in sampled images; no knight art changed.",
+  "limits": [
+    "No timed human recognition study",
+    "No claim for every motion frame or future battlefield",
+    "Rest crest is small; shield value is the main native-720p cue",
+    "W4 ran before W5 Thoma sync; knights/environment byte-unchanged"
+  ]
+}
