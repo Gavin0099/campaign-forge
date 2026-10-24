@@ -1,0 +1,901 @@
+{
+  "capture_complete": true,
+  "source_movie_sha256": "4aff60ba2e7abcdce084c783a4a86f16cd59dd21e8aaa207dd9f3d43cff55352",
+  "fps": 60,
+  "frames": 59,
+  "traced_frames": 58,
+  "untraced_terminal_frames": 1,
+  "terminal_pixels_equal_previous_ready": true,
+  "selected": [
+    {
+      "path": "thoma/idle/01.png",
+      "movie_frame": 1,
+      "file": "sequence-runtime/idle.png",
+      "decoded_rgb_sha256": "f4a091c395f90898f10517fa0e6127b0d6471fb42e34e07ff6e1a8700c7a1def",
+      "trace": {
+        "body_transform": [
+          -0.133062228560448,
+          0.133062228560448,
+          406.983947753906,
+          192.699127197266
+        ],
+        "hold": false,
+        "index": 0,
+        "path": "thoma/idle/01.png",
+        "phase": "ready",
+        "process_frame": 1
+      },
+      "region_masks": {
+        "head": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/head.png",
+          "source_mask_sha256": "db1796aa2abdb1a4e26bbfd2b5e8a4a0ee9ce593b3b27d9db6638007d4d75a55",
+          "viewport_bbox": [
+            369,
+            206,
+            377,
+            216
+          ],
+          "mean_rendered_rgb": [
+            127.76666666666667,
+            103.73333333333333,
+            74.48333333333333
+          ]
+        },
+        "stole": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/stole.png",
+          "source_mask_sha256": "5a6fe191fe9be4e54e11c27220848aa9b646cac2676001576ac9b1338d59ac59",
+          "viewport_bbox": [
+            365,
+            214,
+            381,
+            244
+          ],
+          "mean_rendered_rgb": [
+            137.84263959390864,
+            123.6243654822335,
+            108.34010152284264
+          ]
+        },
+        "embroidery": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/embroidery.png",
+          "source_mask_sha256": "a0782e700014826ed6c377b6c6b6ce786173de7c6ce1890674eaa977b9e31283",
+          "viewport_bbox": [
+            366,
+            233,
+            377,
+            242
+          ],
+          "mean_rendered_rgb": [
+            185.47058823529412,
+            173.64705882352942,
+            159.23529411764707
+          ]
+        },
+        "tassels": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/tassels.png",
+          "source_mask_sha256": "c9f61991c51cee785462f1c8578a8e407ab5fbf8f69c7501d8f6d7e3bafe32b9",
+          "viewport_bbox": [
+            365,
+            239,
+            378,
+            244
+          ],
+          "mean_rendered_rgb": [
+            112.95454545454545,
+            97.95454545454545,
+            81.5
+          ]
+        },
+        "mace": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/mace.png",
+          "source_mask_sha256": "39f92f2c29c54c2c752ba0c1f3e639a5cfd0b6493ab23a9eb100c81ccd43ebf6",
+          "viewport_bbox": [
+            375,
+            232,
+            384,
+            239
+          ],
+          "mean_rendered_rgb": [
+            71.72727272727273,
+            55.63636363636363,
+            39.31818181818182
+          ]
+        },
+        "legs_feet": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/legs_feet.png",
+          "source_mask_sha256": "c727d7ba1b9debbdeb6d7768e569c05b2f36fa72891d2a437e57dd02aeec4705",
+          "viewport_bbox": [
+            363,
+            244,
+            383,
+            254
+          ],
+          "mean_rendered_rgb": [
+            126.27184466019418,
+            112.41747572815534,
+            85.05825242718447
+          ]
+        }
+      }
+    },
+    {
+      "path": "thoma/swing/00.png",
+      "movie_frame": 7,
+      "file": "sequence-runtime/00.png",
+      "decoded_rgb_sha256": "0255f7739873462ddbe700b9a9cb81c361223c9b04dd974027d8f4565b8b1c82",
+      "trace": {
+        "body_transform": [
+          -0.151543080806732,
+          0.151543080806732,
+          433.79345703125,
+          188.656692504883
+        ],
+        "hold": false,
+        "index": 0,
+        "path": "thoma/swing/00.png",
+        "phase": "windup",
+        "process_frame": 7
+      },
+      "region_masks": {
+        "head": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/head.png",
+          "source_mask_sha256": "284158923f60ab8c9e3380f6d185af2e6b647a075f58c6a467dc2408008f6e74",
+          "viewport_bbox": [
+            389,
+            205,
+            400,
+            216
+          ],
+          "mean_rendered_rgb": [
+            117.11494252873563,
+            91.89655172413794,
+            66.52873563218391
+          ]
+        },
+        "stole": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/stole.png",
+          "source_mask_sha256": "01a1b626a071eb557c22adb41970ed4329e415ef41dc0ebc757f2d959d445897",
+          "viewport_bbox": [
+            382,
+            226,
+            401,
+            248
+          ],
+          "mean_rendered_rgb": [
+            161.5068493150685,
+            142.08904109589042,
+            120.57534246575342
+          ]
+        },
+        "embroidery": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/embroidery.png",
+          "source_mask_sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+          "viewport_bbox": [
+            381,
+            233,
+            412,
+            250
+          ],
+          "mean_rendered_rgb": [
+            118.06593406593407,
+            106.3010989010989,
+            90.31648351648352
+          ]
+        },
+        "tassels": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/tassels.png",
+          "source_mask_sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+          "viewport_bbox": [
+            381,
+            240,
+            412,
+            252
+          ],
+          "mean_rendered_rgb": [
+            125.43313953488372,
+            113.67441860465117,
+            98.09302325581395
+          ]
+        },
+        "mace": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/mace.png",
+          "source_mask_sha256": "5fbc4aaa1624b02339d3a08bc618f4723a5ad520944cddd7a17768fd0aa3df1b",
+          "viewport_bbox": [
+            390,
+            199,
+            416,
+            210
+          ],
+          "mean_rendered_rgb": [
+            123.3157894736842,
+            88.34736842105264,
+            52.93684210526316
+          ]
+        },
+        "legs_feet": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/legs_feet.png",
+          "source_mask_sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+          "viewport_bbox": [
+            376,
+            247,
+            413,
+            259
+          ],
+          "mean_rendered_rgb": [
+            133.2167300380228,
+            115.28897338403041,
+            94.26235741444867
+          ]
+        }
+      }
+    },
+    {
+      "path": "thoma/swing/01.png",
+      "movie_frame": 15,
+      "file": "sequence-runtime/01.png",
+      "decoded_rgb_sha256": "03b0b4440d97c0dd5102fa520be3996edb1b22b32b72b56559cb652a55125ae4",
+      "trace": {
+        "body_transform": [
+          -0.186204969882965,
+          0.186204969882965,
+          515.546936035156,
+          206.733154296875
+        ],
+        "hold": false,
+        "index": 1,
+        "path": "thoma/swing/01.png",
+        "phase": "lunge",
+        "process_frame": 15
+      },
+      "region_masks": {
+        "head": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/01/head.png",
+          "source_mask_sha256": "827eaae3d02ee457fea1d37052cf2fdfb5efb0092c5f98a1c45f82b457a0c9e5",
+          "viewport_bbox": [
+            459,
+            225,
+            474,
+            240
+          ],
+          "mean_rendered_rgb": [
+            121.90780141843972,
+            96.42553191489361,
+            74.73049645390071
+          ]
+        },
+        "stole": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/01/stole.png",
+          "source_mask_sha256": "1f5069c7af7e3ff0ea9200190d76061059c073286eaac8c5d4afd8e0e9bc55bf",
+          "viewport_bbox": [
+            451,
+            253,
+            474,
+            280
+          ],
+          "mean_rendered_rgb": [
+            172.61009174311926,
+            151.6559633027523,
+            132.04128440366972
+          ]
+        },
+        "embroidery": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/01/embroidery.png",
+          "source_mask_sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+          "viewport_bbox": [
+            450,
+            261,
+            488,
+            282
+          ],
+          "mean_rendered_rgb": [
+            114.59798270893371,
+            103.34870317002881,
+            88.47118155619597
+          ]
+        },
+        "tassels": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/01/tassels.png",
+          "source_mask_sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+          "viewport_bbox": [
+            450,
+            270,
+            488,
+            284
+          ],
+          "mean_rendered_rgb": [
+            117.78286852589642,
+            108.42430278884463,
+            94.08964143426294
+          ]
+        },
+        "mace": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/01/mace.png",
+          "source_mask_sha256": "20ad04ae39716f4f7d5bda265dcbbc4c75aad4b0dad6121123310a91e5927d4e",
+          "viewport_bbox": [
+            458,
+            218,
+            484,
+            229
+          ],
+          "mean_rendered_rgb": [
+            131.664,
+            102.552,
+            70.048
+          ]
+        },
+        "legs_feet": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/01/legs_feet.png",
+          "source_mask_sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+          "viewport_bbox": [
+            444,
+            278,
+            489,
+            294
+          ],
+          "mean_rendered_rgb": [
+            130.8251121076233,
+            112.94170403587444,
+            91.69730941704036
+          ]
+        }
+      }
+    },
+    {
+      "path": "thoma/swing/02.png",
+      "movie_frame": 19,
+      "file": "sequence-runtime/02.png",
+      "decoded_rgb_sha256": "f9c3da334b024fa284f12f01eebd562341d6aa218db3c84a7b8f470ef182ccaf",
+      "trace": {
+        "body_transform": [
+          -0.186287134885788,
+          0.186287134885788,
+          510.226806640625,
+          223.536254882813
+        ],
+        "hold": false,
+        "index": 2,
+        "path": "thoma/swing/02.png",
+        "phase": "lunge",
+        "process_frame": 19
+      },
+      "region_masks": {
+        "head": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/02/head.png",
+          "source_mask_sha256": "1dd534c32800fe881d10dc6de5850ab2dded427696d92fccd9758f609399a441",
+          "viewport_bbox": [
+            452,
+            244,
+            464,
+            257
+          ],
+          "mean_rendered_rgb": [
+            120.5702479338843,
+            94.78512396694215,
+            68.88429752066116
+          ]
+        },
+        "stole": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/02/stole.png",
+          "source_mask_sha256": "6d4d900782b31bbb9b1634314db8ef9b33bac09f4fe9dc771e61656126254387",
+          "viewport_bbox": [
+            449,
+            270,
+            474,
+            297
+          ],
+          "mean_rendered_rgb": [
+            140.45273631840797,
+            125.22388059701493,
+            107.5273631840796
+          ]
+        },
+        "embroidery": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/02/embroidery.png",
+          "source_mask_sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+          "viewport_bbox": [
+            445,
+            278,
+            486,
+            299
+          ],
+          "mean_rendered_rgb": [
+            116.24967989756722,
+            105.85659411011524,
+            90.06017925736235
+          ]
+        },
+        "tassels": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/02/tassels.png",
+          "source_mask_sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+          "viewport_bbox": [
+            445,
+            287,
+            486,
+            301
+          ],
+          "mean_rendered_rgb": [
+            124.63685152057245,
+            113.35599284436493,
+            97.37567084078712
+          ]
+        },
+        "mace": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/02/mace.png",
+          "source_mask_sha256": "2f53db4965ef3f3220e53866a2f3e152eabdb123f159ca42784b01c8cc85016c",
+          "viewport_bbox": [
+            423,
+            241,
+            445,
+            259
+          ],
+          "mean_rendered_rgb": [
+            121.5909090909091,
+            95.20454545454545,
+            58.69318181818182
+          ]
+        },
+        "legs_feet": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/02/legs_feet.png",
+          "source_mask_sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+          "viewport_bbox": [
+            440,
+            295,
+            495,
+            310
+          ],
+          "mean_rendered_rgb": [
+            136.7375745526839,
+            115.25049701789264,
+            92.40159045725646
+          ]
+        }
+      }
+    },
+    {
+      "path": "thoma/swing/03.png",
+      "movie_frame": 24,
+      "file": "sequence-runtime/03.png",
+      "decoded_rgb_sha256": "d68ff960e49b195166d125f868bd3111cd702e0b5df55b9c1937ce891c40a08f",
+      "trace": {
+        "body_transform": [
+          -0.186287134885788,
+          0.186287134885788,
+          499.878173828125,
+          237.093475341797
+        ],
+        "hold": true,
+        "index": 3,
+        "path": "thoma/swing/03.png",
+        "phase": "contact",
+        "process_frame": 24
+      },
+      "region_masks": {
+        "head": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/03/head.png",
+          "source_mask_sha256": "4259298b65e730077e7d96a8374842c54032312756ec5e701fddd27298b24b85",
+          "viewport_bbox": [
+            445,
+            256,
+            458,
+            270
+          ],
+          "mean_rendered_rgb": [
+            126.3969465648855,
+            108.3206106870229,
+            90.17557251908397
+          ]
+        },
+        "stole": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/03/stole.png",
+          "source_mask_sha256": "05db87433c1853c4c3f12c9361d526fa0be5e194f34c41b31420e068fa1348d1",
+          "viewport_bbox": [
+            448,
+            286,
+            474,
+            312
+          ],
+          "mean_rendered_rgb": [
+            171.23616236162363,
+            150.55350553505534,
+            130.8929889298893
+          ]
+        },
+        "embroidery": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/03/embroidery.png",
+          "source_mask_sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+          "viewport_bbox": [
+            441,
+            291,
+            476,
+            312
+          ],
+          "mean_rendered_rgb": [
+            118.5210449927431,
+            106.40058055152394,
+            90.26124818577648
+          ]
+        },
+        "tassels": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/03/tassels.png",
+          "source_mask_sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+          "viewport_bbox": [
+            441,
+            300,
+            476,
+            315
+          ],
+          "mean_rendered_rgb": [
+            126.26574803149606,
+            114.07874015748031,
+            96.80314960629921
+          ]
+        },
+        "mace": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/03/mace.png",
+          "source_mask_sha256": "958bc7aeaef37be893faaaa72e965debac82dcf81c1f7d7fcb3148c060e984a6",
+          "viewport_bbox": [
+            412,
+            268,
+            435,
+            277
+          ],
+          "mean_rendered_rgb": [
+            171.81333333333333,
+            154.77333333333334,
+            129.05333333333334
+          ]
+        },
+        "legs_feet": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/03/legs_feet.png",
+          "source_mask_sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+          "viewport_bbox": [
+            435,
+            309,
+            494,
+            324
+          ],
+          "mean_rendered_rgb": [
+            136.3560606060606,
+            114.98295454545455,
+            91.89583333333333
+          ]
+        }
+      }
+    },
+    {
+      "path": "thoma/swing/04.png",
+      "movie_frame": 32,
+      "file": "sequence-runtime/04.png",
+      "decoded_rgb_sha256": "9d4f1535725807fb00791e6a772af1094b29cc96a4ef90f3e918e0769f93939f",
+      "trace": {
+        "body_transform": [
+          -0.186287134885788,
+          0.186287134885788,
+          507.907409667969,
+          223.019790649414
+        ],
+        "hold": false,
+        "index": 4,
+        "path": "thoma/swing/04.png",
+        "phase": "knockback",
+        "process_frame": 32
+      },
+      "region_masks": {
+        "head": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/04/head.png",
+          "source_mask_sha256": "64d6e83ed2dd41a44d370412696f6d9088f3ab77b6364d8a733e51cbc491e222",
+          "viewport_bbox": [
+            444,
+            243,
+            456,
+            257
+          ],
+          "mean_rendered_rgb": [
+            122.94262295081967,
+            96.18852459016394,
+            70.87704918032787
+          ]
+        },
+        "stole": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/04/stole.png",
+          "source_mask_sha256": "e4f254e1a3e0fa9f05a3db20bc8bd4e0179b6eaa26d9d3df41a1d4094a5fb117",
+          "viewport_bbox": [
+            447,
+            270,
+            478,
+            296
+          ],
+          "mean_rendered_rgb": [
+            180.0,
+            162.08,
+            142.36666666666667
+          ]
+        },
+        "embroidery": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/04/embroidery.png",
+          "source_mask_sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+          "viewport_bbox": [
+            443,
+            277,
+            484,
+            298
+          ],
+          "mean_rendered_rgb": [
+            114.90389294403893,
+            106.4014598540146,
+            91.97323600973236
+          ]
+        },
+        "tassels": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/04/tassels.png",
+          "source_mask_sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+          "viewport_bbox": [
+            443,
+            286,
+            484,
+            301
+          ],
+          "mean_rendered_rgb": [
+            123.09640522875817,
+            113.38398692810458,
+            98.45915032679738
+          ]
+        },
+        "mace": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/04/mace.png",
+          "source_mask_sha256": "eacf65ecaca34e9ec6f0dedb7148f672ce531412731fa5b8bbabe9667d5bebcf",
+          "viewport_bbox": [
+            426,
+            279,
+            443,
+            297
+          ],
+          "mean_rendered_rgb": [
+            98.72058823529412,
+            75.11764705882354,
+            39.911764705882355
+          ]
+        },
+        "legs_feet": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/04/legs_feet.png",
+          "source_mask_sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+          "viewport_bbox": [
+            437,
+            295,
+            495,
+            310
+          ],
+          "mean_rendered_rgb": [
+            133.0718132854578,
+            112.22441651705566,
+            89.96768402154399
+          ]
+        }
+      }
+    },
+    {
+      "path": "thoma/swing/05.png",
+      "movie_frame": 46,
+      "file": "sequence-runtime/05.png",
+      "decoded_rgb_sha256": "46d45d9974029cb87cd0299d279ae8cee0a3e38ab411a6f1d602a395ed1cb8d4",
+      "trace": {
+        "body_transform": [
+          -0.186287134885788,
+          0.186287134885788,
+          523.266906738281,
+          193.730316162109
+        ],
+        "hold": false,
+        "index": 5,
+        "path": "thoma/swing/05.png",
+        "phase": "knockback",
+        "process_frame": 46
+      },
+      "region_masks": {
+        "head": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/swing-05/head.png",
+          "source_mask_sha256": "74e8a608f88c68bd9446173c88527fd2042b5e0d966bc4e1d6da5f562c496d39",
+          "viewport_bbox": [
+            471,
+            211,
+            482,
+            224
+          ],
+          "mean_rendered_rgb": [
+            136.66379310344828,
+            105.96551724137932,
+            80.15517241379311
+          ]
+        },
+        "stole": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/swing-05/stole.png",
+          "source_mask_sha256": "c99c2d911d6b38ca1c7c0455f7ffa921b00f1432157d0b88cdba636130f59d58",
+          "viewport_bbox": [
+            466,
+            221,
+            488,
+            263
+          ],
+          "mean_rendered_rgb": [
+            144.83423913043478,
+            130.44565217391303,
+            112.76358695652173
+          ]
+        },
+        "embroidery": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/swing-05/embroidery.png",
+          "source_mask_sha256": "5006799cbc1cc0ec05c424eb7b3512f33c5ea6bdfa9c149637bbc15ee59d6f7c",
+          "viewport_bbox": [
+            466,
+            248,
+            483,
+            262
+          ],
+          "mean_rendered_rgb": [
+            144.1494252873563,
+            133.8735632183908,
+            114.71264367816092
+          ]
+        },
+        "tassels": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/swing-05/tassels.png",
+          "source_mask_sha256": "738a8d714cdad1386560f9c7f8b8c88aafd0934bcdd2d79462405f402aef4cd0",
+          "viewport_bbox": [
+            466,
+            256,
+            483,
+            264
+          ],
+          "mean_rendered_rgb": [
+            137.92105263157896,
+            132.78947368421052,
+            117.71052631578948
+          ]
+        },
+        "mace": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/swing-05/mace.png",
+          "source_mask_sha256": "39f92f2c29c54c2c752ba0c1f3e639a5cfd0b6493ab23a9eb100c81ccd43ebf6",
+          "viewport_bbox": [
+            478,
+            248,
+            491,
+            259
+          ],
+          "mean_rendered_rgb": [
+            89.04545454545455,
+            73.18181818181819,
+            59.25
+          ]
+        },
+        "legs_feet": {
+          "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/swing-05/legs_feet.png",
+          "source_mask_sha256": "6552934d1af3b5e50aa780bed6099d1827adffe152133dc94263e52e1df4043c",
+          "viewport_bbox": [
+            461,
+            267,
+            490,
+            281
+          ],
+          "mean_rendered_rgb": [
+            128.7164948453608,
+            111.04639175257732,
+            85.58762886597938
+          ]
+        }
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "from": "thoma/idle/01.png",
+      "to": "thoma/swing/00.png",
+      "region_mean_rgb_delta": {
+        "head": 17.80012,
+        "stole": 32.41358,
+        "embroidery": 117.59536,
+        "tassels": 26.04147,
+        "mace": 62.58476,
+        "legs_feet": 11.88244
+      },
+      "garment_silhouette_iou": 0.665769,
+      "iou_source": "registered SOURCE alpha garment ROI (100,275)-(420,440), not segmentation of actual rendered RGB",
+      "character_height_delta_px": -6,
+      "result": "FAIL",
+      "reason": "Mixed head01 identity, broad retained cloth and A8 stance/feet jumps; proxy values do not establish no flicker."
+    },
+    {
+      "from": "thoma/swing/00.png",
+      "to": "thoma/swing/01.png",
+      "region_mean_rgb_delta": {
+        "head": 10.52388,
+        "stole": 18.60849,
+        "embroidery": 4.91411,
+        "tassels": 10.10532,
+        "mace": 23.75407,
+        "legs_feet": 4.22007
+      },
+      "garment_silhouette_iou": 0.914796,
+      "iou_source": "registered SOURCE alpha garment ROI (100,275)-(420,440), not segmentation of actual rendered RGB",
+      "character_height_delta_px": 6,
+      "result": "FAIL",
+      "reason": "Mixed head01 identity, broad retained cloth and A8 stance/feet jumps; proxy values do not establish no flicker."
+    },
+    {
+      "from": "thoma/swing/01.png",
+      "to": "thoma/swing/02.png",
+      "region_mean_rgb_delta": {
+        "head": 6.21756,
+        "stole": 48.30821,
+        "embroidery": 3.39743,
+        "tassels": 9.06072,
+        "mace": 16.86369,
+        "legs_feet": 6.38622
+      },
+      "garment_silhouette_iou": 0.773543,
+      "iou_source": "registered SOURCE alpha garment ROI (100,275)-(420,440), not segmentation of actual rendered RGB",
+      "character_height_delta_px": -8,
+      "result": "FAIL",
+      "reason": "Mixed head01 identity, broad retained cloth and A8 stance/feet jumps; proxy values do not establish no flicker."
+    },
+    {
+      "from": "thoma/swing/02.png",
+      "to": "thoma/swing/03.png",
+      "region_mean_rgb_delta": {
+        "head": 25.89359,
+        "stole": 46.20781,
+        "embroidery": 2.34424,
+        "tassels": 1.87175,
+        "mace": 104.9823,
+        "legs_feet": 0.68769
+      },
+      "garment_silhouette_iou": 0.690046,
+      "iou_source": "registered SOURCE alpha garment ROI (100,275)-(420,440), not segmentation of actual rendered RGB",
+      "character_height_delta_px": 5,
+      "result": "FAIL",
+      "reason": "Mixed head01 identity, broad retained cloth and A8 stance/feet jumps; proxy values do not establish no flicker."
+    },
+    {
+      "from": "thoma/swing/03.png",
+      "to": "thoma/swing/04.png",
+      "region_mean_rgb_delta": {
+        "head": 23.05543,
+        "stole": 18.47458,
+        "embroidery": 4.00184,
+        "tassels": 3.64277,
+        "mace": 140.12065,
+        "legs_feet": 4.70251
+      },
+      "garment_silhouette_iou": 0.720232,
+      "iou_source": "registered SOURCE alpha garment ROI (100,275)-(420,440), not segmentation of actual rendered RGB",
+      "character_height_delta_px": -1,
+      "result": "FAIL",
+      "reason": "Mixed head01 identity, broad retained cloth and A8 stance/feet jumps; proxy values do not establish no flicker."
+    },
+    {
+      "from": "thoma/swing/04.png",
+      "to": "thoma/swing/05.png",
+      "region_mean_rgb_delta": {
+        "head": 19.23392,
+        "stole": 55.80058,
+        "embroidery": 46.12048,
+        "tassels": 31.09596,
+        "mace": 21.70997,
+        "legs_feet": 6.2882
+      },
+      "garment_silhouette_iou": 0.546787,
+      "iou_source": "registered SOURCE alpha garment ROI (100,275)-(420,440), not segmentation of actual rendered RGB",
+      "character_height_delta_px": 14,
+      "result": "FAIL",
+      "reason": "Mixed head01 identity, broad retained cloth and A8 stance/feet jumps; proxy values do not establish no flicker."
+    }
+  ],
+  "result": "FAIL",
+  "observations": {
+    "face_hair": "Improved source identity on4 poses;01 retains A8, full transition FAIL.",
+    "cloth": "Stole/motifs/fringe unchanged; broad endpoints still jump.",
+    "mace": "00/01 uncompressed donor shape improves but grip/lighting seam visible at512px.",
+    "feet": "Connected/grounded;03 stance and04 placement remain A8 defects."
+  },
+  "authority": "Model inspection of actual consecutive rendered frames; HUMAN_PENDING; not Owner art approval",
+  "limits": "Region mask can include antialiasing/background, transient flash and camera interpolation; source IoU is not rendered segmentation; source heights are anatomical estimates. RGB proxies cannot prove absence of flicker."
+}

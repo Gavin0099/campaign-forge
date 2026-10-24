@@ -161,7 +161,7 @@
     },
     "thoma/swing/01.png": {
       "path": "thoma/swing/01.png",
-      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
       "source": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
       "raw_sha256": "5ba4a3fd04b9a87378d0978fe38737e5a9c5557ae1b7cec88fbfd33836755c18",
       "registration": [
@@ -319,7 +319,7 @@
     },
     "thoma/swing/04.png": {
       "path": "thoma/swing/04.png",
-      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
       "source": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
       "raw_sha256": "5ba4a3fd04b9a87378d0978fe38737e5a9c5557ae1b7cec88fbfd33836755c18",
       "registration": [
@@ -607,7 +607,7 @@
         190
       ],
       "scale": 1,
-      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
       "result": "FAIL: all three anchor-head trials produced old-face fragments or collar holes; A8 broad crown/softened beard retained.",
       "a8_to_a9_change": "same"
     },
@@ -649,7 +649,7 @@
         190
       ],
       "scale": 1,
-      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
       "result": "PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams.",
       "a8_to_a9_change": "improved"
     },
@@ -705,7 +705,7 @@
         415
       ],
       "scale": 0.8545454545454545,
-      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
       "result": "FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps.",
       "a8_to_a9_change": "same"
     },
@@ -747,7 +747,7 @@
         415
       ],
       "scale": 0.8545454545454545,
-      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
       "result": "FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps.",
       "a8_to_a9_change": "same"
     },
@@ -803,7 +803,7 @@
         415
       ],
       "scale": 1,
-      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
       "result": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
       "a8_to_a9_change": "same"
     },
@@ -845,7 +845,7 @@
         415
       ],
       "scale": 1,
-      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
       "result": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
       "a8_to_a9_change": "same"
     },
@@ -901,7 +901,7 @@
         420
       ],
       "scale": 1,
-      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
       "result": "FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established.",
       "a8_to_a9_change": "same"
     },
@@ -943,7 +943,7 @@
         420
       ],
       "scale": 1,
-      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
       "result": "FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established.",
       "a8_to_a9_change": "same"
     },
@@ -999,7 +999,7 @@
         330
       ],
       "scale": 0.8867924528301887,
-      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
       "result": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
       "a8_to_a9_change": "same"
     },
@@ -1041,7 +1041,7 @@
         330
       ],
       "scale": 0.8867924528301887,
-      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
       "result": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
       "a8_to_a9_change": "same"
     },
@@ -1097,7 +1097,7 @@
         450
       ],
       "scale": 1,
-      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
       "result": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
       "a8_to_a9_change": "same"
     },
@@ -1139,7 +1139,7 @@
         450
       ],
       "scale": 1,
-      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
       "result": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
       "a8_to_a9_change": "same"
     },
@@ -1195,7 +1195,7 @@
         430
       ],
       "scale": 0.9038461538461539,
-      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
       "result": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
       "a8_to_a9_change": "same"
     },
@@ -1237,7 +1237,7 @@
         430
       ],
       "scale": 0.9038461538461539,
-      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
       "result": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
       "a8_to_a9_change": "same"
     },
@@ -1293,7 +1293,7 @@
         425
       ],
       "scale": 0.6438356164383562,
-      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
       "result": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
       "a8_to_a9_change": "same"
     },
@@ -1335,7 +1335,7 @@
         425
       ],
       "scale": 0.6438356164383562,
-      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
       "result": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
       "a8_to_a9_change": "same"
     },
@@ -1391,7 +1391,7 @@
         340
       ],
       "scale": 1,
-      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
       "result": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
       "a8_to_a9_change": "same"
     },
@@ -1433,7 +1433,7 @@
         340
       ],
       "scale": 1,
-      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
       "result": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
       "a8_to_a9_change": "same"
     },
@@ -1489,7 +1489,7 @@
         470
       ],
       "scale": 1,
-      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
       "result": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
       "a8_to_a9_change": "same"
     },
@@ -1531,7 +1531,7 @@
         470
       ],
       "scale": 1,
-      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
       "result": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
       "a8_to_a9_change": "same"
     },
@@ -1587,7 +1587,7 @@
         410
       ],
       "scale": 0.6714285714285714,
-      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
       "result": "FAIL: rigid recover05 head/haft transplant removes compression and meets target; grip/head edge highlights and projected-length integration still differ.",
       "a8_to_a9_change": "improved"
     },
@@ -1629,7 +1629,7 @@
         410
       ],
       "scale": 0.6714285714285714,
-      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
       "result": "FAIL: A8 target/impact opacity pass, but reconstructed projected haft/head and brush joins still fail canon integration.",
       "a8_to_a9_change": "same"
     },
@@ -1685,7 +1685,7 @@
         470
       ],
       "scale": 0.573170731707317,
-      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
       "result": "FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression.",
       "a8_to_a9_change": "same"
     },
@@ -1727,7 +1727,7 @@
         470
       ],
       "scale": 0.573170731707317,
-      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
       "result": "FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression.",
       "a8_to_a9_change": "same"
     },
@@ -1783,7 +1783,7 @@
         470
       ],
       "scale": 0.573170731707317,
-      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
       "result": "FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints.",
       "a8_to_a9_change": "same"
     },
@@ -1825,7 +1825,7 @@
         470
       ],
       "scale": 0.573170731707317,
-      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
       "result": "FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints.",
       "a8_to_a9_change": "same"
     }

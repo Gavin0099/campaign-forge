@@ -65,3 +65,16 @@ Get-Process exposed no other Codex/Claude executable, which cannot certify
 absence of a desktop session. No other worktree was read or written. Python
 and Git required scoped sandbox escalation; ordinary commit hooks still run.
 No trust store/config changes, subprocess launcher or dependency was added.
+
+## W5 alpha regression correction
+
+Independent4-neighbour alpha>127 component scans found1 new isolated opaque
+pixel on01's mace edge and2 on04's old-head boundary. Tiny local erasure
+rectangles are recorded as mace01 attempt3 and head04 attempt3, with exact
+input/output/mask/permission hashes and identity matrices. They remove the
+fragments without repainting or rescaling.46 total operations, at most3 for
+any region. Original outputs and pre-cleanup audit/screenshots/AVI are retained
+under attempts/ and pre-alpha-cleanup/. Full GUT and actual rendered movie /
+720p/1080p evidence were rerun after cleanup. Final alpha-components.json
+compares small opaque clusters to A8;02's original diagonal edge pixels remain
+unchanged. It is a regression detector, not a universal halo proof.

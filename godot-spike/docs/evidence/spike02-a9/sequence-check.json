@@ -59,7 +59,7 @@
         "stole": 46.20781,
         "embroidery": 2.34424,
         "tassels": 1.87175,
-        "mace": 104.9823,
+        "mace": 105.55507,
         "legs_feet": 0.68769
       },
       "garment_silhouette_iou": 0.690046,
@@ -72,11 +72,11 @@
       "from": "thoma/swing/03.png",
       "to": "thoma/swing/04.png",
       "region_mean_rgb_delta": {
-        "head": 23.05543,
-        "stole": 18.47458,
-        "embroidery": 4.00184,
-        "tassels": 3.64277,
-        "mace": 140.12065,
+        "head": 22.99406,
+        "stole": 18.48869,
+        "embroidery": 3.97,
+        "tassels": 3.64102,
+        "mace": 139.47421,
         "legs_feet": 4.70251
       },
       "garment_silhouette_iou": 0.720232,
@@ -89,11 +89,11 @@
       "from": "thoma/swing/04.png",
       "to": "thoma/swing/05.png",
       "region_mean_rgb_delta": {
-        "head": 19.23392,
-        "stole": 55.80058,
-        "embroidery": 46.12048,
-        "tassels": 31.09596,
-        "mace": 21.70997,
+        "head": 19.142,
+        "stole": 55.81603,
+        "embroidery": 46.0749,
+        "tassels": 31.06002,
+        "mace": 19.96708,
         "legs_feet": 6.2882
       },
       "garment_silhouette_iou": 0.546787,

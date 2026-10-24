@@ -249,7 +249,7 @@
   },
   {
     "path": "thoma/swing/01.png",
-    "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+    "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
     "source": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
     "raw_sha256": "5ba4a3fd04b9a87378d0978fe38737e5a9c5557ae1b7cec88fbfd33836755c18",
     "registration": [
@@ -407,7 +407,7 @@
   },
   {
     "path": "thoma/swing/04.png",
-    "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+    "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
     "source": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
     "raw_sha256": "5ba4a3fd04b9a87378d0978fe38737e5a9c5557ae1b7cec88fbfd33836755c18",
     "registration": [

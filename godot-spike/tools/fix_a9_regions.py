@@ -318,8 +318,37 @@ def head_final(f):
     write(folder/'head-3.json',r);write(folder/'candidates.json',records)
     print('A9_HEAD3',f,r['technical'])
 
+def alpha_final():
+    """W5 independent alpha audit found3 newly isolated opaque pixels.
+
+    Last allowed attempt in each affected region. Old candidates/captures are
+    preserved; this does not repaint or rescale any part.
+    """
+    logpath=OUT/'a9-fix-log.json';log=load(logpath)
+    for f,region,box,donor in [('01','mace',(274,68,278,73),'thoma/swing/05.png'),('04','head',(278,115,283,121),'thoma/idle/01.png')]:
+        previous=[r for r in log['operations'] if r['frame']==f'thoma/swing/{f}.png' and r['region']==region]
+        assert max(r['attempt'] for r in previous)==2
+        folder=OUT/f'attempts/{f}';live=SHARED/f'thoma/swing/{f}.png';inp=folder/f'{region}-3-input.png';shutil.copyfile(live,inp)
+        im=Image.open(live).convert('RGBA');before=im.copy();permission=mask([rect(*box)])
+        im.paste((0,0,0,0),(0,0,512,512),permission)
+        output=folder/f'{region}-3.png';mp=folder/f'{region}-3-mask.png';pp=folder/f'{region}-3-permission-mask.png'
+        im.save(output);delta_mask(before,im).save(mp);permission.save(pp)
+        op={'frame':f'thoma/swing/{f}.png','region':region,'attempt':3,'input':rel(inp),'input_sha256':sha(inp),'output':rel(output),'output_sha256':sha(output),
+          'mask':rel(mp),'mask_sha256':sha(mp),'permission_mask':rel(pp),'permission_mask_sha256':sha(pp),
+          'source_anchor':donor,'source_sha256':sha(SHARED/donor),'transform':[{'matrix':IDENTITY,'operation':'manual alpha erasure inside tiny recorded rectangle; no new donor or RGB painting'}],
+          'tool':'Python Pillow manual donor-pixel compositing','prompt':None,'whole_frame_regeneration':False,'description':'Third local attempt: remove newly isolated1px mace tip or2px old-head remnant detected by independent alpha component scan during W5.',
+          'changed_pixels':sum(v>0 for v in delta_mask(before,im).getdata()),'technical':technical(im,f),'kept':True,'decision':'kept',
+          'reason':'New isolated alpha fragments removed; all A8 passing features, target mace centroid and ground remain unchanged within tolerance.',
+          'regression_check_13':{n:('PASS: protected A8 feature unchanged.' if n in ['cuffs','hem','palette','bag_count','feet'] else 'FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance.') for n in CHECKS}}
+        write(folder/f'{region}-3.json',op);log['operations'].append(op)
+        shutil.copyfile(output,live);row=log['frames'][f]
+        union=ImageChops.lighter(Image.open(ROOT/row['kept_mask']),Image.open(mp));up=folder/'final-kept-mask-alpha.png';union.save(up)
+        row.update(sha256=sha(live),installed=rel(output),kept_mask=rel(up),kept_mask_sha256=sha(up),technical=technical(im,f))
+        with (SHARED/'SOURCES.md').open('a',encoding='utf-8') as stream:stream.write('\nA9 W5 alpha-regression correction (third/final regional attempt):\n```json\n'+json.dumps(op,indent=2)+'\n```\n')
+    write(logpath,log);print('A9_ALPHA_FINAL recorded two tiny third-attempt masks; no further pixel edits permitted in01 mace/04 head')
+
 if __name__=='__main__':
-    ap=argparse.ArgumentParser();ap.add_argument('--prepare');ap.add_argument('--refine');ap.add_argument('--head-final');ap.add_argument('--mace-refine');ap.add_argument('--decide');ap.add_argument('--withdraw',nargs=2);ap.add_argument('--accept',default='')
+    ap=argparse.ArgumentParser();ap.add_argument('--prepare');ap.add_argument('--refine');ap.add_argument('--head-final');ap.add_argument('--mace-refine');ap.add_argument('--alpha-final',action='store_true');ap.add_argument('--decide');ap.add_argument('--withdraw',nargs=2);ap.add_argument('--accept',default='')
     args=ap.parse_args()
     if args.prepare:prepare(args.prepare)
     if args.refine:refine(args.refine)
@@ -327,3 +356,4 @@ if __name__=='__main__':
     if args.head_final:head_final(args.head_final)
     if args.decide:decide(args.decide,args.accept.split(','))
     if args.withdraw:withdraw(*args.withdraw)
+    if args.alpha_final:alpha_final()

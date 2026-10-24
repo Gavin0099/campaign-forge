@@ -1,0 +1,118 @@
+{
+  "03": {
+    "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+    "method": "4-neighbour connected components at alpha>127; tiny diagonal antialiasing clusters compared to exact A8, not an absolute halo detector",
+    "final_components": [
+      {
+        "pixels": 65741,
+        "bbox": [
+          34,
+          106,
+          473,
+          464
+        ]
+      }
+    ],
+    "unchanged_a8_tiny_pixels": [],
+    "new_tiny_pixels": []
+  },
+  "02": {
+    "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+    "method": "4-neighbour connected components at alpha>127; tiny diagonal antialiasing clusters compared to exact A8, not an absolute halo detector",
+    "final_components": [
+      {
+        "pixels": 58967,
+        "bbox": [
+          81,
+          93,
+          467,
+          464
+        ]
+      },
+      {
+        "pixels": 2,
+        "bbox": [
+          384,
+          145,
+          384,
+          146
+        ]
+      },
+      {
+        "pixels": 1,
+        "bbox": [
+          385,
+          144,
+          385,
+          144
+        ]
+      }
+    ],
+    "unchanged_a8_tiny_pixels": [
+      [
+        384,
+        145
+      ],
+      [
+        384,
+        146
+      ],
+      [
+        385,
+        144
+      ]
+    ],
+    "new_tiny_pixels": []
+  },
+  "04": {
+    "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
+    "method": "4-neighbour connected components at alpha>127; tiny diagonal antialiasing clusters compared to exact A8, not an absolute halo detector",
+    "final_components": [
+      {
+        "pixels": 72394,
+        "bbox": [
+          68,
+          107,
+          439,
+          464
+        ]
+      }
+    ],
+    "unchanged_a8_tiny_pixels": [],
+    "new_tiny_pixels": []
+  },
+  "00": {
+    "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+    "method": "4-neighbour connected components at alpha>127; tiny diagonal antialiasing clusters compared to exact A8, not an absolute halo detector",
+    "final_components": [
+      {
+        "pixels": 56841,
+        "bbox": [
+          119,
+          68,
+          408,
+          464
+        ]
+      }
+    ],
+    "unchanged_a8_tiny_pixels": [],
+    "new_tiny_pixels": []
+  },
+  "01": {
+    "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
+    "method": "4-neighbour connected components at alpha>127; tiny diagonal antialiasing clusters compared to exact A8, not an absolute halo detector",
+    "final_components": [
+      {
+        "pixels": 58012,
+        "bbox": [
+          142,
+          63,
+          385,
+          464
+        ]
+      }
+    ],
+    "unchanged_a8_tiny_pixels": [],
+    "new_tiny_pixels": []
+  }
+}

@@ -1,0 +1,756 @@
+[
+	{
+		"body_transform": [
+			-0.133062228560448,
+			0.133062228560448,
+			406.983947753906,
+			192.699127197266
+		],
+		"hold": false,
+		"index": 0,
+		"path": "thoma/idle/01.png",
+		"phase": "ready",
+		"process_frame": 0
+	},
+	{
+		"body_transform": [
+			-0.133062228560448,
+			0.133062228560448,
+			406.983947753906,
+			192.699127197266
+		],
+		"hold": false,
+		"index": 0,
+		"path": "thoma/idle/01.png",
+		"phase": "ready",
+		"process_frame": 1
+	},
+	{
+		"body_transform": [
+			-0.133575558662415,
+			0.133575558662415,
+			407.533752441406,
+			192.523635864258
+		],
+		"hold": false,
+		"index": 0,
+		"path": "thoma/swing/00.png",
+		"phase": "windup",
+		"process_frame": 2
+	},
+	{
+		"body_transform": [
+			-0.135115668177605,
+			0.135115668177605,
+			409.250091552734,
+			192.018783569336
+		],
+		"hold": false,
+		"index": 0,
+		"path": "thoma/swing/00.png",
+		"phase": "windup",
+		"process_frame": 3
+	},
+	{
+		"body_transform": [
+			-0.137682437896729,
+			0.137682437896729,
+			412.333312988281,
+			191.249618530273
+		],
+		"hold": false,
+		"index": 0,
+		"path": "thoma/swing/00.png",
+		"phase": "windup",
+		"process_frame": 4
+	},
+	{
+		"body_transform": [
+			-0.141275942325592,
+			0.141275942325592,
+			417.117492675781,
+			190.32453918457
+		],
+		"hold": false,
+		"index": 0,
+		"path": "thoma/swing/00.png",
+		"phase": "windup",
+		"process_frame": 5
+	},
+	{
+		"body_transform": [
+			-0.145896151661873,
+			0.145896151661873,
+			424.070465087891,
+			189.395172119141
+		],
+		"hold": false,
+		"index": 0,
+		"path": "thoma/swing/00.png",
+		"phase": "windup",
+		"process_frame": 6
+	},
+	{
+		"body_transform": [
+			-0.151543080806732,
+			0.151543080806732,
+			433.79345703125,
+			188.656692504883
+		],
+		"hold": false,
+		"index": 0,
+		"path": "thoma/swing/00.png",
+		"phase": "windup",
+		"process_frame": 7
+	},
+	{
+		"body_transform": [
+			-0.15821672976017,
+			0.15821672976017,
+			447.021575927734,
+			188.34733581543
+		],
+		"hold": false,
+		"index": 0,
+		"path": "thoma/swing/00.png",
+		"phase": "windup",
+		"process_frame": 8
+	},
+	{
+		"body_transform": [
+			-0.165260016918182,
+			0.165260016918182,
+			463.023559570313,
+			188.683074951172
+		],
+		"hold": false,
+		"index": 0,
+		"path": "thoma/swing/00.png",
+		"phase": "windup",
+		"process_frame": 9
+	},
+	{
+		"body_transform": [
+			-0.171317622065544,
+			0.171317622065544,
+			478.462829589844,
+			189.515625
+		],
+		"hold": false,
+		"index": 0,
+		"path": "thoma/swing/00.png",
+		"phase": "windup",
+		"process_frame": 10
+	},
+	{
+		"body_transform": [
+			-0.17634853720665,
+			0.17634853720665,
+			492.464080810547,
+			190.589416503906
+		],
+		"hold": false,
+		"index": 0,
+		"path": "thoma/swing/00.png",
+		"phase": "windup",
+		"process_frame": 11
+	},
+	{
+		"body_transform": [
+			-0.180352702736855,
+			0.180352702736855,
+			504.372131347656,
+			191.691986083984
+		],
+		"hold": false,
+		"index": 0,
+		"path": "thoma/swing/00.png",
+		"phase": "windup",
+		"process_frame": 12
+	},
+	{
+		"body_transform": [
+			-0.183330193161964,
+			0.183330193161964,
+			506.332977294922,
+			205.487487792969
+		],
+		"hold": false,
+		"index": 1,
+		"path": "thoma/swing/01.png",
+		"phase": "lunge",
+		"process_frame": 13
+	},
+	{
+		"body_transform": [
+			-0.185280919075012,
+			0.185280919075012,
+			512.547241210938,
+			206.320434570313
+		],
+		"hold": false,
+		"index": 1,
+		"path": "thoma/swing/01.png",
+		"phase": "lunge",
+		"process_frame": 14
+	},
+	{
+		"body_transform": [
+			-0.186204969882965,
+			0.186204969882965,
+			515.546936035156,
+			206.733154296875
+		],
+		"hold": false,
+		"index": 1,
+		"path": "thoma/swing/01.png",
+		"phase": "lunge",
+		"process_frame": 15
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			515.8154296875,
+			206.770416259766
+		],
+		"hold": false,
+		"index": 1,
+		"path": "thoma/swing/01.png",
+		"phase": "lunge",
+		"process_frame": 16
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			515.8154296875,
+			206.770416259766
+		],
+		"hold": false,
+		"index": 1,
+		"path": "thoma/swing/01.png",
+		"phase": "lunge",
+		"process_frame": 17
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			510.226806640625,
+			223.536254882813
+		],
+		"hold": false,
+		"index": 2,
+		"path": "thoma/swing/02.png",
+		"phase": "lunge",
+		"process_frame": 18
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			510.226806640625,
+			223.536254882813
+		],
+		"hold": false,
+		"index": 2,
+		"path": "thoma/swing/02.png",
+		"phase": "lunge",
+		"process_frame": 19
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			499.878173828125,
+			237.093475341797
+		],
+		"hold": true,
+		"index": 3,
+		"path": "thoma/swing/03.png",
+		"phase": "contact",
+		"process_frame": 20
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			499.878173828125,
+			237.093475341797
+		],
+		"hold": true,
+		"index": 3,
+		"path": "thoma/swing/03.png",
+		"phase": "contact",
+		"process_frame": 21
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			499.878173828125,
+			237.093475341797
+		],
+		"hold": true,
+		"index": 3,
+		"path": "thoma/swing/03.png",
+		"phase": "contact",
+		"process_frame": 22
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			499.878173828125,
+			237.093475341797
+		],
+		"hold": true,
+		"index": 3,
+		"path": "thoma/swing/03.png",
+		"phase": "contact",
+		"process_frame": 23
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			499.878173828125,
+			237.093475341797
+		],
+		"hold": true,
+		"index": 3,
+		"path": "thoma/swing/03.png",
+		"phase": "contact",
+		"process_frame": 24
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			500.775512695313,
+			237.617401123047
+		],
+		"hold": false,
+		"index": 3,
+		"path": "thoma/swing/03.png",
+		"phase": "knockback",
+		"process_frame": 25
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			506.295166015625,
+			234.534149169922
+		],
+		"hold": false,
+		"index": 3,
+		"path": "thoma/swing/03.png",
+		"phase": "knockback",
+		"process_frame": 26
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			506.527252197266,
+			232.980438232422
+		],
+		"hold": false,
+		"index": 3,
+		"path": "thoma/swing/03.png",
+		"phase": "knockback",
+		"process_frame": 27
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			502.802917480469,
+			236.816589355469
+		],
+		"hold": false,
+		"index": 3,
+		"path": "thoma/swing/03.png",
+		"phase": "knockback",
+		"process_frame": 28
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			507.950439453125,
+			222.246536254883
+		],
+		"hold": false,
+		"index": 4,
+		"path": "thoma/swing/04.png",
+		"phase": "knockback",
+		"process_frame": 29
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			509.553863525391,
+			223.729187011719
+		],
+		"hold": false,
+		"index": 4,
+		"path": "thoma/swing/04.png",
+		"phase": "knockback",
+		"process_frame": 30
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			508.145874023438,
+			223.999755859375
+		],
+		"hold": false,
+		"index": 4,
+		"path": "thoma/swing/04.png",
+		"phase": "knockback",
+		"process_frame": 31
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			507.907409667969,
+			223.019790649414
+		],
+		"hold": false,
+		"index": 4,
+		"path": "thoma/swing/04.png",
+		"phase": "knockback",
+		"process_frame": 32
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			508.575622558594,
+			223.791259765625
+		],
+		"hold": false,
+		"index": 4,
+		"path": "thoma/swing/04.png",
+		"phase": "knockback",
+		"process_frame": 33
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			508.429138183594,
+			223.500823974609
+		],
+		"hold": false,
+		"index": 4,
+		"path": "thoma/swing/04.png",
+		"phase": "knockback",
+		"process_frame": 34
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			523.234924316406,
+			193.714859008789
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "knockback",
+		"process_frame": 35
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			523.266906738281,
+			193.730316162109
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "knockback",
+		"process_frame": 36
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			523.266906738281,
+			193.730316162109
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "knockback",
+		"process_frame": 37
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			523.266906738281,
+			193.730316162109
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "knockback",
+		"process_frame": 38
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			523.266906738281,
+			193.730316162109
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "knockback",
+		"process_frame": 39
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			523.266906738281,
+			193.730316162109
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "knockback",
+		"process_frame": 40
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			523.266906738281,
+			193.730316162109
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "knockback",
+		"process_frame": 41
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			523.266906738281,
+			193.730316162109
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "knockback",
+		"process_frame": 42
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			523.266906738281,
+			193.730316162109
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "knockback",
+		"process_frame": 43
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			523.266906738281,
+			193.730316162109
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "knockback",
+		"process_frame": 44
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			523.266906738281,
+			193.730316162109
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "knockback",
+		"process_frame": 45
+	},
+	{
+		"body_transform": [
+			-0.186287134885788,
+			0.186287134885788,
+			523.266906738281,
+			193.730316162109
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "knockback",
+		"process_frame": 46
+	},
+	{
+		"body_transform": [
+			-0.185374483466148,
+			0.185374483466148,
+			520.264221191406,
+			193.385406494141
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "settled",
+		"process_frame": 47
+	},
+	{
+		"body_transform": [
+			-0.182636573910713,
+			0.182636573910713,
+			511.467681884766,
+			192.419311523438
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "settled",
+		"process_frame": 48
+	},
+	{
+		"body_transform": [
+			-0.178073406219482,
+			0.178073406219482,
+			497.510589599609,
+			191.037399291992
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "settled",
+		"process_frame": 49
+	},
+	{
+		"body_transform": [
+			-0.171684950590134,
+			0.171684950590134,
+			479.448974609375,
+			189.582260131836
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "settled",
+		"process_frame": 50
+	},
+	{
+		"body_transform": [
+			-0.163471236824989,
+			0.163471236824989,
+			458.760955810547,
+			188.533386230469
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "settled",
+		"process_frame": 51
+	},
+	{
+		"body_transform": [
+			-0.154089331626892,
+			0.154089331626892,
+			438.618469238281,
+			188.466613769531
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "settled",
+		"process_frame": 52
+	},
+	{
+		"body_transform": [
+			-0.146240681409836,
+			0.146240681409836,
+			424.625152587891,
+			189.337615966797
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "settled",
+		"process_frame": 53
+	},
+	{
+		"body_transform": [
+			-0.140217274427414,
+			0.140217274427414,
+			415.651336669922,
+			190.578704833984
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "settled",
+		"process_frame": 54
+	},
+	{
+		"body_transform": [
+			-0.13601915538311,
+			0.13601915538311,
+			410.303527832031,
+			191.737731933594
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "settled",
+		"process_frame": 55
+	},
+	{
+		"body_transform": [
+			-0.133646309375763,
+			0.133646309375763,
+			407.610443115234,
+			192.499740600586
+		],
+		"hold": false,
+		"index": 5,
+		"path": "thoma/swing/05.png",
+		"phase": "settled",
+		"process_frame": 56
+	},
+	{
+		"body_transform": [
+			-0.133062228560448,
+			0.133062228560448,
+			406.983947753906,
+			192.699127197266
+		],
+		"hold": false,
+		"index": 0,
+		"path": "thoma/idle/01.png",
+		"phase": "ready",
+		"process_frame": 57
+	}
+]

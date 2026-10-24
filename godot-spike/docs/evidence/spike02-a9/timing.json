@@ -1,0 +1,501 @@
+{
+	"complete": true,
+	"engine": "4.7.2-stable (official)",
+	"fixed_fps": 0,
+	"movie_path": "",
+	"renderer": "AMD Radeon 780M Graphics",
+	"resolution": [
+		1280,
+		720
+	],
+	"runs": [
+		{
+			"fixed_fps_seconds": null,
+			"hitstop_process_ms": 96.4506666666667,
+			"hitstop_wall_ms": 91.328,
+			"input_ready": true,
+			"phases": [
+				{
+					"frame": 35,
+					"phase": "windup",
+					"wall_ms": 90.458
+				},
+				{
+					"frame": 41,
+					"phase": "lunge",
+					"wall_ms": 288.766
+				},
+				{
+					"frame": 44,
+					"phase": "contact",
+					"wall_ms": 383.028
+				},
+				{
+					"frame": 47,
+					"phase": "knockback",
+					"wall_ms": 474.54
+				},
+				{
+					"frame": 59,
+					"phase": "settled",
+					"wall_ms": 844.691
+				},
+				{
+					"frame": 64,
+					"phase": "ready",
+					"wall_ms": 999.786
+				}
+			],
+			"reduced_motion": false,
+			"same_frame_contact": true,
+			"setup": 1,
+			"triggers": [
+				{
+					"frame": 44,
+					"suppressed": false,
+					"type": "spark"
+				},
+				{
+					"frame": 44,
+					"type": "sfx"
+				},
+				{
+					"frame": 44,
+					"suppressed": false,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 0.909355
+		},
+		{
+			"fixed_fps_seconds": null,
+			"hitstop_process_ms": 94.212962962963,
+			"hitstop_wall_ms": 96.305,
+			"input_ready": true,
+			"phases": [
+				{
+					"frame": 67,
+					"phase": "windup",
+					"wall_ms": 97.635
+				},
+				{
+					"frame": 74,
+					"phase": "lunge",
+					"wall_ms": 298.234
+				},
+				{
+					"frame": 77,
+					"phase": "contact",
+					"wall_ms": 391.083
+				},
+				{
+					"frame": 80,
+					"phase": "blocked",
+					"wall_ms": 487.533
+				},
+				{
+					"frame": 81,
+					"phase": "blocked_recoil",
+					"wall_ms": 527.931
+				},
+				{
+					"frame": 92,
+					"phase": "settled",
+					"wall_ms": 870.914
+				},
+				{
+					"frame": 97,
+					"phase": "ready",
+					"wall_ms": 1026.742
+				}
+			],
+			"reduced_motion": false,
+			"same_frame_contact": true,
+			"setup": 2,
+			"triggers": [
+				{
+					"frame": 77,
+					"suppressed": false,
+					"type": "spark"
+				},
+				{
+					"frame": 77,
+					"type": "sfx"
+				},
+				{
+					"frame": 77,
+					"suppressed": false,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 0.929085
+		},
+		{
+			"fixed_fps_seconds": null,
+			"hitstop_process_ms": 101.912888888889,
+			"hitstop_wall_ms": 90.716,
+			"input_ready": true,
+			"phases": [
+				{
+					"frame": 100,
+					"phase": "windup",
+					"wall_ms": 99.732
+				},
+				{
+					"frame": 106,
+					"phase": "lunge",
+					"wall_ms": 282.67
+				},
+				{
+					"frame": 110,
+					"phase": "contact",
+					"wall_ms": 423.944
+				},
+				{
+					"frame": 113,
+					"phase": "blocked",
+					"wall_ms": 514.764
+				},
+				{
+					"frame": 114,
+					"phase": "blocked_recoil",
+					"wall_ms": 546.157
+				},
+				{
+					"frame": 125,
+					"phase": "settled",
+					"wall_ms": 890.232
+				},
+				{
+					"frame": 130,
+					"phase": "ready",
+					"wall_ms": 1046.285
+				}
+			],
+			"reduced_motion": false,
+			"same_frame_contact": true,
+			"setup": 3,
+			"triggers": [
+				{
+					"frame": 110,
+					"suppressed": false,
+					"type": "spark"
+				},
+				{
+					"frame": 110,
+					"type": "sfx"
+				},
+				{
+					"frame": 110,
+					"suppressed": false,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 0.946548
+		},
+		{
+			"fixed_fps_seconds": null,
+			"hitstop_process_ms": 88.9132222222222,
+			"hitstop_wall_ms": 89.949,
+			"input_ready": true,
+			"phases": [
+				{
+					"frame": 134,
+					"phase": "windup",
+					"wall_ms": 99.721
+				},
+				{
+					"frame": 139,
+					"phase": "lunge",
+					"wall_ms": 228.414
+				},
+				{
+					"frame": 139,
+					"phase": "contact",
+					"wall_ms": 229.168
+				},
+				{
+					"frame": 142,
+					"phase": "knockback",
+					"wall_ms": 319.243
+				},
+				{
+					"frame": 154,
+					"phase": "settled",
+					"wall_ms": 692.553
+				},
+				{
+					"frame": 159,
+					"phase": "ready",
+					"wall_ms": 849.13
+				}
+			],
+			"reduced_motion": true,
+			"same_frame_contact": true,
+			"setup": 1,
+			"triggers": [
+				{
+					"frame": 139,
+					"suppressed": true,
+					"type": "spark"
+				},
+				{
+					"frame": 139,
+					"type": "sfx"
+				},
+				{
+					"frame": 139,
+					"suppressed": true,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 0.749362
+		},
+		{
+			"fixed_fps_seconds": null,
+			"hitstop_process_ms": 86.54,
+			"hitstop_wall_ms": 85.759,
+			"input_ready": true,
+			"phases": [
+				{
+					"frame": 162,
+					"phase": "windup",
+					"wall_ms": 93.99
+				},
+				{
+					"frame": 164,
+					"phase": "lunge",
+					"wall_ms": 209.673
+				},
+				{
+					"frame": 164,
+					"phase": "contact",
+					"wall_ms": 210.257
+				},
+				{
+					"frame": 165,
+					"phase": "blocked",
+					"wall_ms": 296.098
+				},
+				{
+					"frame": 165,
+					"phase": "blocked_recoil",
+					"wall_ms": 296.277
+				},
+				{
+					"frame": 185,
+					"phase": "settled",
+					"wall_ms": 607.95
+				},
+				{
+					"frame": 195,
+					"phase": "ready",
+					"wall_ms": 774.116
+				}
+			],
+			"reduced_motion": true,
+			"same_frame_contact": true,
+			"setup": 2,
+			"triggers": [
+				{
+					"frame": 164,
+					"suppressed": true,
+					"type": "spark"
+				},
+				{
+					"frame": 164,
+					"type": "sfx"
+				},
+				{
+					"frame": 164,
+					"suppressed": true,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 0.68009
+		},
+		{
+			"fixed_fps_seconds": null,
+			"hitstop_process_ms": 83.3333333333333,
+			"hitstop_wall_ms": 82.651,
+			"input_ready": true,
+			"phases": [
+				{
+					"frame": 198,
+					"phase": "windup",
+					"wall_ms": 101.568
+				},
+				{
+					"frame": 206,
+					"phase": "lunge",
+					"wall_ms": 202.712
+				},
+				{
+					"frame": 206,
+					"phase": "contact",
+					"wall_ms": 203.276
+				},
+				{
+					"frame": 211,
+					"phase": "blocked",
+					"wall_ms": 286.0
+				},
+				{
+					"frame": 214,
+					"phase": "blocked_recoil",
+					"wall_ms": 336.168
+				},
+				{
+					"frame": 233,
+					"phase": "settled",
+					"wall_ms": 652.64
+				},
+				{
+					"frame": 243,
+					"phase": "ready",
+					"wall_ms": 819.459
+				}
+			],
+			"reduced_motion": true,
+			"same_frame_contact": true,
+			"setup": 3,
+			"triggers": [
+				{
+					"frame": 206,
+					"suppressed": true,
+					"type": "spark"
+				},
+				{
+					"frame": 206,
+					"type": "sfx"
+				},
+				{
+					"frame": 206,
+					"suppressed": true,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 0.717853
+		}
+	],
+	"screenshots": [
+		{
+			"file": "idle.png",
+			"frame": 0,
+			"height": 720,
+			"hold": false,
+			"phase": "ready",
+			"process_frame": 246,
+			"width": 1280
+		},
+		{
+			"file": "swing-anticipation.png",
+			"frame": 0,
+			"height": 720,
+			"hold": false,
+			"phase": "windup",
+			"process_frame": 248,
+			"width": 1280
+		},
+		{
+			"file": "swing-raised.png",
+			"frame": 1,
+			"height": 720,
+			"hold": false,
+			"phase": "lunge",
+			"process_frame": 319,
+			"width": 1280
+		},
+		{
+			"file": "swing-smear.png",
+			"frame": 2,
+			"height": 720,
+			"hold": false,
+			"phase": "lunge",
+			"process_frame": 382,
+			"width": 1280
+		},
+		{
+			"file": "contact.png",
+			"frame": 3,
+			"height": 720,
+			"hold": true,
+			"phase": "contact",
+			"process_frame": 445,
+			"width": 1280
+		},
+		{
+			"file": "follow-through.png",
+			"frame": 4,
+			"height": 720,
+			"hold": false,
+			"phase": "knockback",
+			"process_frame": 512,
+			"width": 1280
+		},
+		{
+			"file": "recover.png",
+			"frame": 5,
+			"height": 720,
+			"hold": false,
+			"phase": "knockback",
+			"process_frame": 578,
+			"width": 1280
+		},
+		{
+			"file": "rendered-baseline-a8/swing-anticipation.png",
+			"frame": 0,
+			"height": 720,
+			"hold": false,
+			"phase": "windup",
+			"process_frame": 603,
+			"width": 1280
+		},
+		{
+			"file": "rendered-baseline-a8/swing-raised.png",
+			"frame": 1,
+			"height": 720,
+			"hold": false,
+			"phase": "lunge",
+			"process_frame": 660,
+			"width": 1280
+		},
+		{
+			"file": "rendered-baseline-a8/swing-smear.png",
+			"frame": 2,
+			"height": 720,
+			"hold": false,
+			"phase": "lunge",
+			"process_frame": 716,
+			"width": 1280
+		},
+		{
+			"file": "rendered-baseline-a8/contact.png",
+			"frame": 3,
+			"height": 720,
+			"hold": true,
+			"phase": "contact",
+			"process_frame": 777,
+			"width": 1280
+		},
+		{
+			"file": "rendered-baseline-a8/follow-through.png",
+			"frame": 4,
+			"height": 720,
+			"hold": false,
+			"phase": "knockback",
+			"process_frame": 843,
+			"width": 1280
+		},
+		{
+			"file": "rendered-baseline-a8/recover.png",
+			"frame": 5,
+			"height": 720,
+			"hold": false,
+			"phase": "knockback",
+			"process_frame": 907,
+			"width": 1280
+		}
+	],
+	"timing_definition": "Normal/reduced wall-time runs have no readback; screenshot replays are excluded. Movie uses process frames /60, never encoding wall time."
+}

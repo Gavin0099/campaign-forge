@@ -1,6 +1,6 @@
 {
   "capture_complete": true,
-  "source_movie_sha256": "4aff60ba2e7abcdce084c783a4a86f16cd59dd21e8aaa207dd9f3d43cff55352",
+  "source_movie_sha256": "d6aaaadedc7e600735a4404626d360b859581700fd06d3e02d8c5cfc55a86351",
   "fps": 60,
   "frames": 59,
   "traced_frames": 58,
@@ -455,7 +455,7 @@
       "path": "thoma/swing/03.png",
       "movie_frame": 24,
       "file": "sequence-runtime/03.png",
-      "decoded_rgb_sha256": "d68ff960e49b195166d125f868bd3111cd702e0b5df55b9c1937ce891c40a08f",
+      "decoded_rgb_sha256": "c98579bf268a69f1753a768ba8a7604a6e557e32e53778b054075ae5cfcaeeae",
       "trace": {
         "body_transform": [
           -0.186287134885788,
@@ -540,9 +540,9 @@
             277
           ],
           "mean_rendered_rgb": [
-            171.81333333333333,
-            154.77333333333334,
-            129.05333333333334
+            170.72,
+            155.02666666666667,
+            130.45333333333335
           ]
         },
         "legs_feet": {
@@ -566,7 +566,7 @@
       "path": "thoma/swing/04.png",
       "movie_frame": 32,
       "file": "sequence-runtime/04.png",
-      "decoded_rgb_sha256": "9d4f1535725807fb00791e6a772af1094b29cc96a4ef90f3e918e0769f93939f",
+      "decoded_rgb_sha256": "d6d9440b7cb1bca3379ee0428b232a9e55f9c6c95e3e716edabb49595c54f77b",
       "trace": {
         "body_transform": [
           -0.186287134885788,
@@ -591,9 +591,9 @@
             257
           ],
           "mean_rendered_rgb": [
-            122.94262295081967,
+            123.0327868852459,
             96.18852459016394,
-            70.87704918032787
+            70.93442622950819
           ]
         },
         "stole": {
@@ -606,9 +606,9 @@
             296
           ],
           "mean_rendered_rgb": [
-            180.0,
-            162.08,
-            142.36666666666667
+            180.01666666666668,
+            162.07,
+            142.38666666666666
           ]
         },
         "embroidery": {
@@ -621,9 +621,9 @@
             298
           ],
           "mean_rendered_rgb": [
-            114.90389294403893,
-            106.4014598540146,
-            91.97323600973236
+            114.95985401459853,
+            106.38321167883211,
+            92.01581508515815
           ]
         },
         "tassels": {
@@ -636,9 +636,9 @@
             301
           ],
           "mean_rendered_rgb": [
-            123.09640522875817,
-            113.38398692810458,
-            98.45915032679738
+            123.13398692810458,
+            113.3578431372549,
+            98.51470588235294
           ]
         },
         "mace": {
@@ -651,9 +651,9 @@
             297
           ],
           "mean_rendered_rgb": [
-            98.72058823529412,
-            75.11764705882354,
-            39.911764705882355
+            98.82352941176471,
+            74.75,
+            41.911764705882355
           ]
         },
         "legs_feet": {
@@ -845,7 +845,7 @@
         "stole": 46.20781,
         "embroidery": 2.34424,
         "tassels": 1.87175,
-        "mace": 104.9823,
+        "mace": 105.55507,
         "legs_feet": 0.68769
       },
       "garment_silhouette_iou": 0.690046,
@@ -858,11 +858,11 @@
       "from": "thoma/swing/03.png",
       "to": "thoma/swing/04.png",
       "region_mean_rgb_delta": {
-        "head": 23.05543,
-        "stole": 18.47458,
-        "embroidery": 4.00184,
-        "tassels": 3.64277,
-        "mace": 140.12065,
+        "head": 22.99406,
+        "stole": 18.48869,
+        "embroidery": 3.97,
+        "tassels": 3.64102,
+        "mace": 139.47421,
         "legs_feet": 4.70251
       },
       "garment_silhouette_iou": 0.720232,
@@ -875,11 +875,11 @@
       "from": "thoma/swing/04.png",
       "to": "thoma/swing/05.png",
       "region_mean_rgb_delta": {
-        "head": 19.23392,
-        "stole": 55.80058,
-        "embroidery": 46.12048,
-        "tassels": 31.09596,
-        "mace": 21.70997,
+        "head": 19.142,
+        "stole": 55.81603,
+        "embroidery": 46.0749,
+        "tassels": 31.06002,
+        "mace": 19.96708,
         "legs_feet": 6.2882
       },
       "garment_silhouette_iou": 0.546787,

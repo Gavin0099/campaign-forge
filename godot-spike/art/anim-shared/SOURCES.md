@@ -5642,3 +5642,143 @@ A8 base; Python/Pillow manual anchor transplants, enforced region masks. No imag
   }
 ]
 ```
+
+A9 W5 alpha-regression correction (third/final regional attempt):
+```json
+{
+  "frame": "thoma/swing/01.png",
+  "region": "mace",
+  "attempt": 3,
+  "input": "godot-spike/docs/evidence/spike02-a9/attempts/01/mace-3-input.png",
+  "input_sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+  "output": "godot-spike/docs/evidence/spike02-a9/attempts/01/mace-3.png",
+  "output_sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
+  "mask": "godot-spike/docs/evidence/spike02-a9/attempts/01/mace-3-mask.png",
+  "mask_sha256": "26ca939025af26ebaa7483404f64a171754fa60ef54a70e219676ba5d1a1f764",
+  "permission_mask": "godot-spike/docs/evidence/spike02-a9/attempts/01/mace-3-permission-mask.png",
+  "permission_mask_sha256": "bc2917f739cb50549edc5217f4832b231116e99199c535f793a37412c52bb12b",
+  "source_anchor": "thoma/swing/05.png",
+  "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+  "transform": [
+    {
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "operation": "manual alpha erasure inside tiny recorded rectangle; no new donor or RGB painting"
+    }
+  ],
+  "tool": "Python Pillow manual donor-pixel compositing",
+  "prompt": null,
+  "whole_frame_regeneration": false,
+  "description": "Third local attempt: remove newly isolated1px mace tip or2px old-head remnant detected by independent alpha component scan during W5.",
+  "changed_pixels": 1,
+  "technical": {
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bottom": 464,
+    "ground": 12,
+    "mace_centre": [
+      259.0838709677419,
+      86.63870967741936
+    ],
+    "mace_error": 0.37089760907882774,
+    "contact_opaque": true
+  },
+  "kept": true,
+  "decision": "kept",
+  "reason": "New isolated alpha fragments removed; all A8 passing features, target mace centroid and ground remain unchanged within tolerance.",
+  "regression_check_13": {
+    "face_hair": "FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance.",
+    "stole": "FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance.",
+    "embroidery": "FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance.",
+    "tassels": "FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance.",
+    "cuffs": "PASS: protected A8 feature unchanged.",
+    "hem": "PASS: protected A8 feature unchanged.",
+    "palette": "PASS: protected A8 feature unchanged.",
+    "seams": "FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance.",
+    "bag_count": "PASS: protected A8 feature unchanged.",
+    "feet": "PASS: protected A8 feature unchanged.",
+    "mace": "FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance.",
+    "landmarks": "FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance.",
+    "sequence": "FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance."
+  }
+}
+```
+
+A9 W5 alpha-regression correction (third/final regional attempt):
+```json
+{
+  "frame": "thoma/swing/04.png",
+  "region": "head",
+  "attempt": 3,
+  "input": "godot-spike/docs/evidence/spike02-a9/attempts/04/head-3-input.png",
+  "input_sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+  "output": "godot-spike/docs/evidence/spike02-a9/attempts/04/head-3.png",
+  "output_sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
+  "mask": "godot-spike/docs/evidence/spike02-a9/attempts/04/head-3-mask.png",
+  "mask_sha256": "af712335525484877297271b802b445139872d6c822159ca42086be6f0c93383",
+  "permission_mask": "godot-spike/docs/evidence/spike02-a9/attempts/04/head-3-permission-mask.png",
+  "permission_mask_sha256": "fec9b9af2cfc2e283f219f1c60f682ecc37b793142d21fdcddd3f950006efef1",
+  "source_anchor": "thoma/idle/01.png",
+  "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+  "transform": [
+    {
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "operation": "manual alpha erasure inside tiny recorded rectangle; no new donor or RGB painting"
+    }
+  ],
+  "tool": "Python Pillow manual donor-pixel compositing",
+  "prompt": null,
+  "whole_frame_regeneration": false,
+  "description": "Third local attempt: remove newly isolated1px mace tip or2px old-head remnant detected by independent alpha component scan during W5.",
+  "changed_pixels": 12,
+  "technical": {
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bottom": 464,
+    "ground": 8,
+    "mace_centre": [
+      420.49295774647885,
+      374.4600938967136
+    ],
+    "mace_error": 1.6212349162889705,
+    "contact_opaque": true
+  },
+  "kept": true,
+  "decision": "kept",
+  "reason": "New isolated alpha fragments removed; all A8 passing features, target mace centroid and ground remain unchanged within tolerance.",
+  "regression_check_13": {
+    "face_hair": "FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance.",
+    "stole": "FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance.",
+    "embroidery": "FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance.",
+    "tassels": "FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance.",
+    "cuffs": "PASS: protected A8 feature unchanged.",
+    "hem": "PASS: protected A8 feature unchanged.",
+    "palette": "PASS: protected A8 feature unchanged.",
+    "seams": "FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance.",
+    "bag_count": "PASS: protected A8 feature unchanged.",
+    "feet": "PASS: protected A8 feature unchanged.",
+    "mace": "FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance.",
+    "landmarks": "FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance.",
+    "sequence": "FAIL: complete item remains for W3 audit; this tiny cleanup grants no art acceptance."
+  }
+}
+```

@@ -12,38 +12,38 @@
 		{
 			"fixed_fps_seconds": 0.916666666666667,
 			"hitstop_process_ms": 83.3333333333333,
-			"hitstop_wall_ms": 292.255,
+			"hitstop_wall_ms": 310.438,
 			"input_ready": true,
 			"phases": [
 				{
 					"frame": 2,
 					"phase": "windup",
-					"wall_ms": 107.326
+					"wall_ms": 109.748
 				},
 				{
 					"frame": 13,
 					"phase": "lunge",
-					"wall_ms": 670.932
+					"wall_ms": 621.523
 				},
 				{
 					"frame": 20,
 					"phase": "contact",
-					"wall_ms": 1114.934
+					"wall_ms": 1027.1
 				},
 				{
 					"frame": 25,
 					"phase": "knockback",
-					"wall_ms": 1407.343
+					"wall_ms": 1337.659
 				},
 				{
 					"frame": 47,
 					"phase": "settled",
-					"wall_ms": 2758.86
+					"wall_ms": 2701.846
 				},
 				{
 					"frame": 57,
 					"phase": "ready",
-					"wall_ms": 3346.482
+					"wall_ms": 3294.902
 				}
 			],
 			"reduced_motion": false,
@@ -65,7 +65,7 @@
 					"type": "flash"
 				}
 			],
-			"wall_seconds": 3.239115
+			"wall_seconds": 3.185148
 		}
 	],
 	"screenshots": [],

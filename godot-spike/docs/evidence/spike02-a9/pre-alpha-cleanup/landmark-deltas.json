@@ -1,0 +1,1767 @@
+{
+  "measured": {
+    "thoma/idle/01.png": {
+      "head_centre": [
+        256,
+        138
+      ],
+      "hand_weapon": [
+        185,
+        297
+      ],
+      "hand_free": [
+        324,
+        266
+      ],
+      "elbow_left": [
+        181,
+        252
+      ],
+      "elbow_right": [
+        317,
+        233
+      ],
+      "knee_left": [
+        208,
+        389
+      ],
+      "knee_right": [
+        288,
+        379
+      ],
+      "foot_left": [
+        201,
+        462
+      ],
+      "foot_right": [
+        312,
+        414
+      ],
+      "mace_head": [
+        230,
+        328
+      ],
+      "character_height_px": 361,
+      "lowest_opaque_y": 463,
+      "uncertainty_px": {
+        "visible": 2,
+        "cloth_hidden_elbows_knees": 12,
+        "mace": "final translated donor-alpha centroid <1px; independent final crop check in A8 test"
+      },
+      "measurement": "Manual source1x landmarks; joints hidden by cloth are estimates, not exact measurements. Height from normalized manual headtop to464; endpoint proportions from appearance spec."
+    },
+    "thoma/swing/00.png": {
+      "head_centre": [
+        260,
+        143
+      ],
+      "hand_weapon": [
+        151,
+        110
+      ],
+      "hand_free": [
+        388,
+        251
+      ],
+      "elbow_left": [
+        137,
+        174
+      ],
+      "elbow_right": [
+        350,
+        230
+      ],
+      "knee_left": [
+        179,
+        384
+      ],
+      "knee_right": [
+        321,
+        378
+      ],
+      "foot_left": [
+        157,
+        464
+      ],
+      "foot_right": [
+        355,
+        442
+      ],
+      "mace_head": [
+        191.29245283018867,
+        85.33018867924528
+      ],
+      "character_height_px": 355,
+      "lowest_opaque_y": 464,
+      "uncertainty_px": {
+        "visible": 2,
+        "cloth_hidden_elbows_knees": 12,
+        "mace": "final translated donor-alpha centroid <1px; independent final crop check in A8 test"
+      },
+      "measurement": "Head centre transferred from manually picked anchor through kept rigid matrix; headtop scanned in local ROI; other landmarks retained A8 native manual observations because those pixels are identical. Mace is independent final alpha centroid. Hidden joints +/-12px, visible +/-2px."
+    },
+    "thoma/swing/01.png": {
+      "head_centre": [
+        260,
+        143
+      ],
+      "hand_weapon": [
+        218,
+        79
+      ],
+      "hand_free": [
+        375,
+        282
+      ],
+      "elbow_left": [
+        162,
+        122
+      ],
+      "elbow_right": [
+        348,
+        249
+      ],
+      "knee_left": [
+        189,
+        382
+      ],
+      "knee_right": [
+        318,
+        391
+      ],
+      "foot_left": [
+        161,
+        464
+      ],
+      "foot_right": [
+        361,
+        442
+      ],
+      "mace_head": [
+        259.1111111111111,
+        86.61191626409018
+      ],
+      "character_height_px": 361,
+      "lowest_opaque_y": 464,
+      "uncertainty_px": {
+        "visible": 2,
+        "cloth_hidden_elbows_knees": 12,
+        "mace": "final translated donor-alpha centroid <1px; independent final crop check in A8 test"
+      },
+      "measurement": "Head centre transferred from manually picked anchor through kept rigid matrix; headtop scanned in local ROI; other landmarks retained A8 native manual observations because those pixels are identical. Mace is independent final alpha centroid. Hidden joints +/-12px, visible +/-2px."
+    },
+    "thoma/swing/02.png": {
+      "head_centre": [
+        282,
+        145
+      ],
+      "hand_weapon": [
+        376,
+        170
+      ],
+      "hand_free": [
+        166,
+        260
+      ],
+      "elbow_left": [
+        265,
+        204
+      ],
+      "elbow_right": [
+        165,
+        226
+      ],
+      "knee_left": [
+        154,
+        391
+      ],
+      "knee_right": [
+        311,
+        396
+      ],
+      "foot_left": [
+        100,
+        464
+      ],
+      "foot_right": [
+        350,
+        438
+      ],
+      "mace_head": [
+        447.3775038520801,
+        111.56702619414484
+      ],
+      "character_height_px": 353,
+      "lowest_opaque_y": 464,
+      "uncertainty_px": {
+        "visible": 2,
+        "cloth_hidden_elbows_knees": 12,
+        "mace": "final translated donor-alpha centroid <1px; independent final crop check in A8 test"
+      },
+      "measurement": "Head centre transferred from manually picked anchor through kept rigid matrix; headtop scanned in local ROI; other landmarks retained A8 native manual observations because those pixels are identical. Mace is independent final alpha centroid. Hidden joints +/-12px, visible +/-2px."
+    },
+    "thoma/swing/03.png": {
+      "head_centre": [
+        264,
+        140
+      ],
+      "hand_weapon": [
+        365,
+        186
+      ],
+      "hand_free": [
+        110,
+        253
+      ],
+      "elbow_left": [
+        305,
+        199
+      ],
+      "elbow_right": [
+        135,
+        193
+      ],
+      "knee_left": [
+        129,
+        388
+      ],
+      "knee_right": [
+        263,
+        387
+      ],
+      "foot_left": [
+        59,
+        464
+      ],
+      "foot_right": [
+        319,
+        444
+      ],
+      "mace_head": [
+        454.50970873786406,
+        195.39320388349515
+      ],
+      "character_height_px": 358,
+      "lowest_opaque_y": 464,
+      "uncertainty_px": {
+        "visible": 2,
+        "cloth_hidden_elbows_knees": 12,
+        "mace": "final translated donor-alpha centroid <1px; independent final crop check in A8 test"
+      },
+      "measurement": "Head centre transferred from manually picked anchor through kept rigid matrix; headtop scanned in local ROI; other landmarks retained A8 native manual observations because those pixels are identical. Mace is independent final alpha centroid. Hidden joints +/-12px, visible +/-2px."
+    },
+    "thoma/swing/04.png": {
+      "head_centre": [
+        310,
+        141
+      ],
+      "hand_weapon": [
+        375,
+        314
+      ],
+      "hand_free": [
+        111,
+        222
+      ],
+      "elbow_left": [
+        340,
+        275
+      ],
+      "elbow_right": [
+        146,
+        180
+      ],
+      "knee_left": [
+        137,
+        390
+      ],
+      "knee_right": [
+        294,
+        410
+      ],
+      "foot_left": [
+        93,
+        464
+      ],
+      "foot_right": [
+        351,
+        464
+      ],
+      "mace_head": [
+        420.49295774647885,
+        374.4600938967136
+      ],
+      "character_height_px": 357,
+      "lowest_opaque_y": 464,
+      "uncertainty_px": {
+        "visible": 2,
+        "cloth_hidden_elbows_knees": 12,
+        "mace": "final translated donor-alpha centroid <1px; independent final crop check in A8 test"
+      },
+      "measurement": "Head centre transferred from manually picked anchor through kept rigid matrix; headtop scanned in local ROI; other landmarks retained A8 native manual observations because those pixels are identical. Mace is independent final alpha centroid. Hidden joints +/-12px, visible +/-2px."
+    },
+    "thoma/swing/05.png": {
+      "head_centre": [
+        251,
+        132
+      ],
+      "hand_weapon": [
+        183,
+        299
+      ],
+      "hand_free": [
+        320,
+        266
+      ],
+      "elbow_left": [
+        179,
+        247
+      ],
+      "elbow_right": [
+        314,
+        230
+      ],
+      "knee_left": [
+        204,
+        393
+      ],
+      "knee_right": [
+        287,
+        387
+      ],
+      "foot_left": [
+        198,
+        463
+      ],
+      "foot_right": [
+        311,
+        425
+      ],
+      "mace_head": [
+        223,
+        333
+      ],
+      "character_height_px": 371,
+      "lowest_opaque_y": 464,
+      "uncertainty_px": {
+        "visible": 2,
+        "cloth_hidden_elbows_knees": 12,
+        "mace": "final translated donor-alpha centroid <1px; independent final crop check in A8 test"
+      },
+      "measurement": "Manual source1x landmarks; joints hidden by cloth are estimates, not exact measurements. Height from normalized manual headtop to464; endpoint proportions from appearance spec."
+    }
+  },
+  "per_frame": {
+    "thoma/swing/00.png": {
+      "head_centre": {
+        "measured": [
+          260,
+          143
+        ],
+        "target": [
+          260,
+          143
+        ],
+        "delta": [
+          0,
+          0
+        ],
+        "error_px": 0.0,
+        "within4": true
+      },
+      "hand_weapon": {
+        "measured": [
+          151,
+          110
+        ],
+        "target": [
+          127,
+          117
+        ],
+        "delta": [
+          24,
+          -7
+        ],
+        "error_px": 25.0,
+        "within4": false
+      },
+      "hand_free": {
+        "measured": [
+          388,
+          251
+        ],
+        "target": [
+          358,
+          249
+        ],
+        "delta": [
+          30,
+          2
+        ],
+        "error_px": 30.0666,
+        "within4": false
+      },
+      "elbow_left": {
+        "measured": [
+          137,
+          174
+        ],
+        "target": [
+          140,
+          174
+        ],
+        "delta": [
+          -3,
+          0
+        ],
+        "error_px": 3.0,
+        "within4": true
+      },
+      "elbow_right": {
+        "measured": [
+          350,
+          230
+        ],
+        "target": [
+          331,
+          230
+        ],
+        "delta": [
+          19,
+          0
+        ],
+        "error_px": 19.0,
+        "within4": false
+      },
+      "knee_left": {
+        "measured": [
+          179,
+          384
+        ],
+        "target": [
+          201,
+          365
+        ],
+        "delta": [
+          -22,
+          19
+        ],
+        "error_px": 29.0689,
+        "within4": false
+      },
+      "knee_right": {
+        "measured": [
+          321,
+          378
+        ],
+        "target": [
+          289,
+          371
+        ],
+        "delta": [
+          32,
+          7
+        ],
+        "error_px": 32.7567,
+        "within4": false
+      },
+      "foot_left": {
+        "measured": [
+          157,
+          464
+        ],
+        "target": [
+          145,
+          464
+        ],
+        "delta": [
+          12,
+          0
+        ],
+        "error_px": 12.0,
+        "within4": false
+      },
+      "foot_right": {
+        "measured": [
+          355,
+          442
+        ],
+        "target": [
+          342,
+          439
+        ],
+        "delta": [
+          13,
+          3
+        ],
+        "error_px": 13.3417,
+        "within4": false
+      },
+      "mace_head": {
+        "measured": [
+          191.29245283018867,
+          85.33018867924528
+        ],
+        "target": [
+          192,
+          85
+        ],
+        "delta": [
+          -0.7075,
+          0.3302
+        ],
+        "error_px": 0.7808,
+        "within4": true
+      }
+    },
+    "thoma/swing/01.png": {
+      "head_centre": {
+        "measured": [
+          260,
+          143
+        ],
+        "target": [
+          260,
+          141
+        ],
+        "delta": [
+          0,
+          2
+        ],
+        "error_px": 2.0,
+        "within4": true
+      },
+      "hand_weapon": {
+        "measured": [
+          218,
+          79
+        ],
+        "target": [
+          194,
+          109
+        ],
+        "delta": [
+          24,
+          -30
+        ],
+        "error_px": 38.4187,
+        "within4": false
+      },
+      "hand_free": {
+        "measured": [
+          375,
+          282
+        ],
+        "target": [
+          295,
+          249
+        ],
+        "delta": [
+          80,
+          33
+        ],
+        "error_px": 86.539,
+        "within4": false
+      },
+      "elbow_left": {
+        "measured": [
+          162,
+          122
+        ],
+        "target": [
+          174,
+          140
+        ],
+        "delta": [
+          -12,
+          -18
+        ],
+        "error_px": 21.6333,
+        "within4": false
+      },
+      "elbow_right": {
+        "measured": [
+          348,
+          249
+        ],
+        "target": [
+          299,
+          225
+        ],
+        "delta": [
+          49,
+          24
+        ],
+        "error_px": 54.5619,
+        "within4": false
+      },
+      "knee_left": {
+        "measured": [
+          189,
+          382
+        ],
+        "target": [
+          214,
+          363
+        ],
+        "delta": [
+          -25,
+          19
+        ],
+        "error_px": 31.4006,
+        "within4": false
+      },
+      "knee_right": {
+        "measured": [
+          318,
+          391
+        ],
+        "target": [
+          284,
+          371
+        ],
+        "delta": [
+          34,
+          20
+        ],
+        "error_px": 39.4462,
+        "within4": false
+      },
+      "foot_left": {
+        "measured": [
+          161,
+          464
+        ],
+        "target": [
+          167,
+          464
+        ],
+        "delta": [
+          -6,
+          0
+        ],
+        "error_px": 6.0,
+        "within4": false
+      },
+      "foot_right": {
+        "measured": [
+          361,
+          442
+        ],
+        "target": [
+          326,
+          443
+        ],
+        "delta": [
+          35,
+          -1
+        ],
+        "error_px": 35.0143,
+        "within4": false
+      },
+      "mace_head": {
+        "measured": [
+          259.1111111111111,
+          86.61191626409018
+        ],
+        "target": [
+          259,
+          87
+        ],
+        "delta": [
+          0.1111,
+          -0.3881
+        ],
+        "error_px": 0.4037,
+        "within4": true
+      }
+    },
+    "thoma/swing/02.png": {
+      "head_centre": {
+        "measured": [
+          282,
+          145
+        ],
+        "target": [
+          282,
+          145
+        ],
+        "delta": [
+          0,
+          0
+        ],
+        "error_px": 0.0,
+        "within4": true
+      },
+      "hand_weapon": {
+        "measured": [
+          376,
+          170
+        ],
+        "target": [
+          372,
+          160
+        ],
+        "delta": [
+          4,
+          10
+        ],
+        "error_px": 10.7703,
+        "within4": false
+      },
+      "hand_free": {
+        "measured": [
+          166,
+          260
+        ],
+        "target": [
+          350,
+          266
+        ],
+        "delta": [
+          -184,
+          -6
+        ],
+        "error_px": 184.0978,
+        "within4": false
+      },
+      "elbow_left": {
+        "measured": [
+          265,
+          204
+        ],
+        "target": [
+          306,
+          193
+        ],
+        "delta": [
+          -41,
+          11
+        ],
+        "error_px": 42.45,
+        "within4": false
+      },
+      "elbow_right": {
+        "measured": [
+          165,
+          226
+        ],
+        "target": [
+          319,
+          242
+        ],
+        "delta": [
+          -154,
+          -16
+        ],
+        "error_px": 154.8289,
+        "within4": false
+      },
+      "knee_left": {
+        "measured": [
+          154,
+          391
+        ],
+        "target": [
+          213,
+          371
+        ],
+        "delta": [
+          -59,
+          20
+        ],
+        "error_px": 62.2977,
+        "within4": false
+      },
+      "knee_right": {
+        "measured": [
+          311,
+          396
+        ],
+        "target": [
+          307,
+          376
+        ],
+        "delta": [
+          4,
+          20
+        ],
+        "error_px": 20.3961,
+        "within4": false
+      },
+      "foot_left": {
+        "measured": [
+          100,
+          464
+        ],
+        "target": [
+          135,
+          464
+        ],
+        "delta": [
+          -35,
+          0
+        ],
+        "error_px": 35.0,
+        "within4": false
+      },
+      "foot_right": {
+        "measured": [
+          350,
+          438
+        ],
+        "target": [
+          372,
+          448
+        ],
+        "delta": [
+          -22,
+          -10
+        ],
+        "error_px": 24.1661,
+        "within4": false
+      },
+      "mace_head": {
+        "measured": [
+          447.3775038520801,
+          111.56702619414484
+        ],
+        "target": [
+          449,
+          110
+        ],
+        "delta": [
+          -1.6225,
+          1.567
+        ],
+        "error_px": 2.2557,
+        "within4": true
+      }
+    },
+    "thoma/swing/03.png": {
+      "head_centre": {
+        "measured": [
+          264,
+          140
+        ],
+        "target": [
+          264,
+          140
+        ],
+        "delta": [
+          0,
+          0
+        ],
+        "error_px": 0.0,
+        "within4": true
+      },
+      "hand_weapon": {
+        "measured": [
+          365,
+          186
+        ],
+        "target": [
+          358,
+          196
+        ],
+        "delta": [
+          7,
+          -10
+        ],
+        "error_px": 12.2066,
+        "within4": false
+      },
+      "hand_free": {
+        "measured": [
+          110,
+          253
+        ],
+        "target": [
+          305,
+          258
+        ],
+        "delta": [
+          -195,
+          -5
+        ],
+        "error_px": 195.0641,
+        "within4": false
+      },
+      "elbow_left": {
+        "measured": [
+          305,
+          199
+        ],
+        "target": [
+          294,
+          193
+        ],
+        "delta": [
+          11,
+          6
+        ],
+        "error_px": 12.53,
+        "within4": false
+      },
+      "elbow_right": {
+        "measured": [
+          135,
+          193
+        ],
+        "target": [
+          291,
+          240
+        ],
+        "delta": [
+          -156,
+          -47
+        ],
+        "error_px": 162.9264,
+        "within4": false
+      },
+      "knee_left": {
+        "measured": [
+          129,
+          388
+        ],
+        "target": [
+          197,
+          371
+        ],
+        "delta": [
+          -68,
+          17
+        ],
+        "error_px": 70.0928,
+        "within4": false
+      },
+      "knee_right": {
+        "measured": [
+          263,
+          387
+        ],
+        "target": [
+          297,
+          378
+        ],
+        "delta": [
+          -34,
+          9
+        ],
+        "error_px": 35.171,
+        "within4": false
+      },
+      "foot_left": {
+        "measured": [
+          59,
+          464
+        ],
+        "target": [
+          120,
+          464
+        ],
+        "delta": [
+          -61,
+          0
+        ],
+        "error_px": 61.0,
+        "within4": false
+      },
+      "foot_right": {
+        "measured": [
+          319,
+          444
+        ],
+        "target": [
+          354,
+          447
+        ],
+        "delta": [
+          -35,
+          -3
+        ],
+        "error_px": 35.1283,
+        "within4": false
+      },
+      "mace_head": {
+        "measured": [
+          454.50970873786406,
+          195.39320388349515
+        ],
+        "target": [
+          455,
+          196
+        ],
+        "delta": [
+          -0.4903,
+          -0.6068
+        ],
+        "error_px": 0.7801,
+        "within4": true
+      }
+    },
+    "thoma/swing/04.png": {
+      "head_centre": {
+        "measured": [
+          310,
+          141
+        ],
+        "target": [
+          310,
+          141
+        ],
+        "delta": [
+          0,
+          0
+        ],
+        "error_px": 0.0,
+        "within4": true
+      },
+      "hand_weapon": {
+        "measured": [
+          375,
+          314
+        ],
+        "target": [
+          347,
+          324
+        ],
+        "delta": [
+          28,
+          -10
+        ],
+        "error_px": 29.7321,
+        "within4": false
+      },
+      "hand_free": {
+        "measured": [
+          111,
+          222
+        ],
+        "target": [
+          213,
+          255
+        ],
+        "delta": [
+          -102,
+          -33
+        ],
+        "error_px": 107.2054,
+        "within4": false
+      },
+      "elbow_left": {
+        "measured": [
+          340,
+          275
+        ],
+        "target": [
+          320,
+          269
+        ],
+        "delta": [
+          20,
+          6
+        ],
+        "error_px": 20.8806,
+        "within4": false
+      },
+      "elbow_right": {
+        "measured": [
+          146,
+          180
+        ],
+        "target": [
+          231,
+          236
+        ],
+        "delta": [
+          -85,
+          -56
+        ],
+        "error_px": 101.789,
+        "within4": false
+      },
+      "knee_left": {
+        "measured": [
+          137,
+          390
+        ],
+        "target": [
+          230,
+          371
+        ],
+        "delta": [
+          -93,
+          19
+        ],
+        "error_px": 94.921,
+        "within4": false
+      },
+      "knee_right": {
+        "measured": [
+          294,
+          410
+        ],
+        "target": [
+          322,
+          384
+        ],
+        "delta": [
+          -28,
+          26
+        ],
+        "error_px": 38.2099,
+        "within4": false
+      },
+      "foot_left": {
+        "measured": [
+          93,
+          464
+        ],
+        "target": [
+          165,
+          455
+        ],
+        "delta": [
+          -72,
+          9
+        ],
+        "error_px": 72.5603,
+        "within4": false
+      },
+      "foot_right": {
+        "measured": [
+          351,
+          464
+        ],
+        "target": [
+          334,
+          464
+        ],
+        "delta": [
+          17,
+          0
+        ],
+        "error_px": 17.0,
+        "within4": false
+      },
+      "mace_head": {
+        "measured": [
+          420.49295774647885,
+          374.4600938967136
+        ],
+        "target": [
+          421,
+          376
+        ],
+        "delta": [
+          -0.507,
+          -1.5399
+        ],
+        "error_px": 1.6212,
+        "within4": true
+      }
+    }
+  },
+  "pairs": [
+    {
+      "from": "thoma/idle/01.png",
+      "to": "thoma/swing/00.png",
+      "actual_deltas": {
+        "head_centre": [
+          4,
+          5
+        ],
+        "hand_weapon": [
+          -34,
+          -187
+        ],
+        "hand_free": [
+          64,
+          -15
+        ],
+        "elbow_left": [
+          -44,
+          -78
+        ],
+        "elbow_right": [
+          33,
+          -3
+        ],
+        "knee_left": [
+          -29,
+          -5
+        ],
+        "knee_right": [
+          33,
+          -1
+        ],
+        "foot_left": [
+          -44,
+          2
+        ],
+        "foot_right": [
+          43,
+          28
+        ],
+        "mace_head": [
+          -38.7075,
+          -242.6698
+        ]
+      },
+      "target_deltas": {
+        "head_centre": [
+          4,
+          5
+        ],
+        "hand_weapon": [
+          -58,
+          -180
+        ],
+        "hand_free": [
+          34,
+          -17
+        ],
+        "elbow_left": [
+          -41,
+          -78
+        ],
+        "elbow_right": [
+          14,
+          -3
+        ],
+        "knee_left": [
+          -7,
+          -24
+        ],
+        "knee_right": [
+          1,
+          -8
+        ],
+        "foot_left": [
+          -56,
+          2
+        ],
+        "foot_right": [
+          30,
+          25
+        ],
+        "mace_head": [
+          -38,
+          -243
+        ]
+      },
+      "jump_flags": [
+        "hand_weapon",
+        "hand_free",
+        "elbow_right",
+        "knee_left",
+        "knee_right",
+        "foot_left",
+        "foot_right"
+      ],
+      "character_height_delta_px": -6,
+      "result": "FAIL"
+    },
+    {
+      "from": "thoma/swing/00.png",
+      "to": "thoma/swing/01.png",
+      "actual_deltas": {
+        "head_centre": [
+          0,
+          0
+        ],
+        "hand_weapon": [
+          67,
+          -31
+        ],
+        "hand_free": [
+          -13,
+          31
+        ],
+        "elbow_left": [
+          25,
+          -52
+        ],
+        "elbow_right": [
+          -2,
+          19
+        ],
+        "knee_left": [
+          10,
+          -2
+        ],
+        "knee_right": [
+          -3,
+          13
+        ],
+        "foot_left": [
+          4,
+          0
+        ],
+        "foot_right": [
+          6,
+          0
+        ],
+        "mace_head": [
+          67.8187,
+          1.2817
+        ]
+      },
+      "target_deltas": {
+        "head_centre": [
+          0,
+          -2
+        ],
+        "hand_weapon": [
+          67,
+          -8
+        ],
+        "hand_free": [
+          -63,
+          0
+        ],
+        "elbow_left": [
+          34,
+          -34
+        ],
+        "elbow_right": [
+          -32,
+          -5
+        ],
+        "knee_left": [
+          13,
+          -2
+        ],
+        "knee_right": [
+          -5,
+          0
+        ],
+        "foot_left": [
+          22,
+          0
+        ],
+        "foot_right": [
+          -16,
+          4
+        ],
+        "mace_head": [
+          67,
+          2
+        ]
+      },
+      "jump_flags": [
+        "hand_weapon",
+        "hand_free",
+        "elbow_left",
+        "elbow_right",
+        "knee_right",
+        "foot_left",
+        "foot_right"
+      ],
+      "character_height_delta_px": 6,
+      "result": "FAIL"
+    },
+    {
+      "from": "thoma/swing/01.png",
+      "to": "thoma/swing/02.png",
+      "actual_deltas": {
+        "head_centre": [
+          22,
+          2
+        ],
+        "hand_weapon": [
+          158,
+          91
+        ],
+        "hand_free": [
+          -209,
+          -22
+        ],
+        "elbow_left": [
+          103,
+          82
+        ],
+        "elbow_right": [
+          -183,
+          -23
+        ],
+        "knee_left": [
+          -35,
+          9
+        ],
+        "knee_right": [
+          -7,
+          5
+        ],
+        "foot_left": [
+          -61,
+          0
+        ],
+        "foot_right": [
+          -11,
+          -4
+        ],
+        "mace_head": [
+          188.2664,
+          24.9551
+        ]
+      },
+      "target_deltas": {
+        "head_centre": [
+          22,
+          4
+        ],
+        "hand_weapon": [
+          178,
+          51
+        ],
+        "hand_free": [
+          55,
+          17
+        ],
+        "elbow_left": [
+          132,
+          53
+        ],
+        "elbow_right": [
+          20,
+          17
+        ],
+        "knee_left": [
+          -1,
+          8
+        ],
+        "knee_right": [
+          23,
+          5
+        ],
+        "foot_left": [
+          -32,
+          0
+        ],
+        "foot_right": [
+          46,
+          5
+        ],
+        "mace_head": [
+          190,
+          23
+        ]
+      },
+      "jump_flags": [
+        "hand_weapon",
+        "hand_free",
+        "elbow_left",
+        "elbow_right",
+        "knee_left",
+        "knee_right",
+        "foot_left",
+        "foot_right"
+      ],
+      "character_height_delta_px": -8,
+      "result": "FAIL"
+    },
+    {
+      "from": "thoma/swing/02.png",
+      "to": "thoma/swing/03.png",
+      "actual_deltas": {
+        "head_centre": [
+          -18,
+          -5
+        ],
+        "hand_weapon": [
+          -11,
+          16
+        ],
+        "hand_free": [
+          -56,
+          -7
+        ],
+        "elbow_left": [
+          40,
+          -5
+        ],
+        "elbow_right": [
+          -30,
+          -33
+        ],
+        "knee_left": [
+          -25,
+          -3
+        ],
+        "knee_right": [
+          -48,
+          -9
+        ],
+        "foot_left": [
+          -41,
+          0
+        ],
+        "foot_right": [
+          -31,
+          6
+        ],
+        "mace_head": [
+          7.1322,
+          83.8262
+        ]
+      },
+      "target_deltas": {
+        "head_centre": [
+          -18,
+          -5
+        ],
+        "hand_weapon": [
+          -14,
+          36
+        ],
+        "hand_free": [
+          -45,
+          -8
+        ],
+        "elbow_left": [
+          -12,
+          0
+        ],
+        "elbow_right": [
+          -28,
+          -2
+        ],
+        "knee_left": [
+          -16,
+          0
+        ],
+        "knee_right": [
+          -10,
+          2
+        ],
+        "foot_left": [
+          -15,
+          0
+        ],
+        "foot_right": [
+          -18,
+          -1
+        ],
+        "mace_head": [
+          6,
+          86
+        ]
+      },
+      "jump_flags": [
+        "hand_weapon",
+        "hand_free",
+        "elbow_left",
+        "elbow_right",
+        "knee_left",
+        "knee_right",
+        "foot_left",
+        "foot_right"
+      ],
+      "character_height_delta_px": 5,
+      "result": "FAIL"
+    },
+    {
+      "from": "thoma/swing/03.png",
+      "to": "thoma/swing/04.png",
+      "actual_deltas": {
+        "head_centre": [
+          46,
+          1
+        ],
+        "hand_weapon": [
+          10,
+          128
+        ],
+        "hand_free": [
+          1,
+          -31
+        ],
+        "elbow_left": [
+          35,
+          76
+        ],
+        "elbow_right": [
+          11,
+          -13
+        ],
+        "knee_left": [
+          8,
+          2
+        ],
+        "knee_right": [
+          31,
+          23
+        ],
+        "foot_left": [
+          34,
+          0
+        ],
+        "foot_right": [
+          32,
+          20
+        ],
+        "mace_head": [
+          -34.0168,
+          179.0669
+        ]
+      },
+      "target_deltas": {
+        "head_centre": [
+          46,
+          1
+        ],
+        "hand_weapon": [
+          -11,
+          128
+        ],
+        "hand_free": [
+          -92,
+          -3
+        ],
+        "elbow_left": [
+          26,
+          76
+        ],
+        "elbow_right": [
+          -60,
+          -4
+        ],
+        "knee_left": [
+          33,
+          0
+        ],
+        "knee_right": [
+          25,
+          6
+        ],
+        "foot_left": [
+          45,
+          -9
+        ],
+        "foot_right": [
+          -20,
+          17
+        ],
+        "mace_head": [
+          -34,
+          180
+        ]
+      },
+      "jump_flags": [
+        "hand_weapon",
+        "hand_free",
+        "elbow_left",
+        "elbow_right",
+        "knee_left",
+        "knee_right",
+        "foot_left",
+        "foot_right"
+      ],
+      "character_height_delta_px": -1,
+      "result": "FAIL"
+    },
+    {
+      "from": "thoma/swing/04.png",
+      "to": "thoma/swing/05.png",
+      "actual_deltas": {
+        "head_centre": [
+          -59,
+          -9
+        ],
+        "hand_weapon": [
+          -192,
+          -15
+        ],
+        "hand_free": [
+          209,
+          44
+        ],
+        "elbow_left": [
+          -161,
+          -28
+        ],
+        "elbow_right": [
+          168,
+          50
+        ],
+        "knee_left": [
+          67,
+          3
+        ],
+        "knee_right": [
+          -7,
+          -23
+        ],
+        "foot_left": [
+          105,
+          -1
+        ],
+        "foot_right": [
+          -40,
+          -39
+        ],
+        "mace_head": [
+          -197.493,
+          -41.4601
+        ]
+      },
+      "target_deltas": {
+        "head_centre": [
+          -59,
+          -9
+        ],
+        "hand_weapon": [
+          -164,
+          -25
+        ],
+        "hand_free": [
+          107,
+          11
+        ],
+        "elbow_left": [
+          -141,
+          -22
+        ],
+        "elbow_right": [
+          83,
+          -6
+        ],
+        "knee_left": [
+          -26,
+          22
+        ],
+        "knee_right": [
+          -35,
+          3
+        ],
+        "foot_left": [
+          33,
+          8
+        ],
+        "foot_right": [
+          -23,
+          -39
+        ],
+        "mace_head": [
+          -198,
+          -43
+        ]
+      },
+      "jump_flags": [
+        "hand_weapon",
+        "hand_free",
+        "elbow_left",
+        "elbow_right",
+        "knee_left",
+        "knee_right",
+        "foot_left",
+        "foot_right"
+      ],
+      "character_height_delta_px": 14,
+      "result": "FAIL"
+    }
+  ],
+  "limits": "Visible manual +/-2px; hidden joints +/-12px. No Owner waiver. Exact unchanged A8 anatomy reused only where pixels are unchanged; head transfer is matrix-based, not independent automatic face detection."
+}
