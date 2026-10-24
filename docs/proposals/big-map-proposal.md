@@ -211,10 +211,23 @@ TileMapLayer、culling 或 production art pipeline 已完成。
 idle sprites；清楚標示 MOCKUP。只回答：「160 px 格／96 px 人物在大圖捲動時
 是否值得深入？」視覺不是可玩關卡，也沒有地形可通行性承諾。
 
-W5 將補全圖 overview、三個捲動位置，以及 128／160／192 px 格寬對照。
+W5 已補全圖 overview、三個捲動位置，以及 128／160／192 px 格寬對照。
 保留條件是可讀人物、可穩定定位與 clamp、不遮住核心戰術區；若遮擋嚴重，
 先縮小到 A 或另做 B 透視試作。模型檢查只驗證畫面與機制，人類選案仍待定。
 不讓 mockup 逐步變成未授權的正式大圖系統。
+
+![建議 C 的部署近景：實際 Godot 720p 畫面，非正式關卡](big-map/scroll-west.png)
+
+| 實機畫面 | 用途 |
+| --- | --- |
+| [全圖 overview](big-map/overview.png) | 768 格的外框與兩個裝飾渡口；縮小至 zoom 0.19，非操作尺度 |
+| [西側部署](big-map/scroll-west.png)／[中段渡口](big-map/scroll-crossing.png)／[東側](big-map/scroll-east.png) | 相同尺寸、相同地圖的三個不同鏡頭位置 |
+| [格寬 128](big-map/tile-128.png)／[160](big-map/tile-160.png)／[192](big-map/tile-192.png) | 相同部署格；人物參考高實為 76.8／96／115.2 px |
+| [擷取資料](big-map/capture.json)／[操作與限制](big-map/README.md) | 真實尺寸、camera/zoom、鍵鼠與 clamp 驗證 |
+
+模型檢視：人物比原 spike 大，三種尺度可比較；灰盒重複地面與簡單橋紋理顯然
+不是最終美術。總覽人物刻意很小，近景才是建議操作尺度。現有地形沒有高物件，
+因此尚未驗證樹木遮擋、完整威脅資訊或多單位交戰。人類閱讀與選案仍待 Gavin。
 
 ## 給 Gavin 的待決問題（每題可一行回答）
 

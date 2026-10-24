@@ -1,0 +1,164 @@
+{
+	"checks": {
+		"centre_key": true,
+		"drag_pan": true,
+		"edge_pan": true,
+		"edge_window_focused": true,
+		"keyboard_pan": true,
+		"overview_key": true,
+		"wheel_zoom": true
+	},
+	"engine": "4.7.2-stable (official)",
+	"pass": true,
+	"renderer": "AMD Radeon 780M Graphics",
+	"scope": "Throwaway decorative camera mockup; no rules, no level, no gameplay integration.",
+	"screenshots": [
+		{
+			"camera_position": [
+				2240.0,
+				1323.63635253906
+			],
+			"caption": "全圖總覽：32×24，並非主要操作尺度",
+			"clamped": true,
+			"file": "overview.png",
+			"native_resolution": [
+				1280,
+				720
+			],
+			"tile_height": 94.5454559326172,
+			"tile_width": 160.0,
+			"unit_reference_height": 96.0,
+			"world_bounds": [
+				4480.0,
+				2647.27270507813
+			],
+			"zoom": 0.188873633742332
+		},
+		{
+			"camera_position": [
+				1760.0,
+				898.181823730469
+			],
+			"caption": "西側部署：160×94.5 px 格，人物參考高 96 px",
+			"clamped": true,
+			"file": "scroll-west.png",
+			"native_resolution": [
+				1280,
+				720
+			],
+			"tile_height": 94.5454559326172,
+			"tile_width": 160.0,
+			"unit_reference_height": 96.0,
+			"world_bounds": [
+				4480.0,
+				2647.27270507813
+			],
+			"zoom": 1.0
+		},
+		{
+			"camera_position": [
+				2400.0,
+				1276.36364746094
+			],
+			"caption": "中段捲動畫面：道路、河流與橋皆為裝飾示意",
+			"clamped": true,
+			"file": "scroll-crossing.png",
+			"native_resolution": [
+				1280,
+				720
+			],
+			"tile_height": 94.5454559326172,
+			"tile_width": 160.0,
+			"unit_reference_height": 96.0,
+			"world_bounds": [
+				4480.0,
+				2647.27270507813
+			],
+			"zoom": 1.0
+		},
+		{
+			"camera_position": [
+				2640.0,
+				1796.36364746094
+			],
+			"caption": "東側捲動畫面：同一張地圖的另一片視野",
+			"clamped": true,
+			"file": "scroll-east.png",
+			"native_resolution": [
+				1280,
+				720
+			],
+			"tile_height": 94.5454559326172,
+			"tile_width": 160.0,
+			"unit_reference_height": 96.0,
+			"world_bounds": [
+				4480.0,
+				2647.27270507813
+			],
+			"zoom": 1.0
+		},
+		{
+			"camera_position": [
+				1408.0,
+				718.54541015625
+			],
+			"caption": "格寬 128 px／人物參考高 76.8 px；同一部署格",
+			"clamped": true,
+			"file": "tile-128.png",
+			"native_resolution": [
+				1280,
+				720
+			],
+			"tile_height": 75.636360168457,
+			"tile_width": 128.0,
+			"unit_reference_height": 76.8,
+			"world_bounds": [
+				3584.0,
+				2117.81811523438
+			],
+			"zoom": 1.0
+		},
+		{
+			"camera_position": [
+				1760.0,
+				898.181823730469
+			],
+			"caption": "格寬 160 px／人物參考高 96.0 px；同一部署格",
+			"clamped": true,
+			"file": "tile-160.png",
+			"native_resolution": [
+				1280,
+				720
+			],
+			"tile_height": 94.5454559326172,
+			"tile_width": 160.0,
+			"unit_reference_height": 96.0,
+			"world_bounds": [
+				4480.0,
+				2647.27270507813
+			],
+			"zoom": 1.0
+		},
+		{
+			"camera_position": [
+				2112.0,
+				1077.81811523438
+			],
+			"caption": "格寬 192 px／人物參考高 115.2 px；同一部署格",
+			"clamped": true,
+			"file": "tile-192.png",
+			"native_resolution": [
+				1280,
+				720
+			],
+			"tile_height": 113.454544067383,
+			"tile_width": 192.0,
+			"unit_reference_height": 115.2,
+			"world_bounds": [
+				5376.0,
+				3176.72729492188
+			],
+			"zoom": 1.0
+		}
+	]
+}
