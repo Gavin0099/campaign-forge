@@ -259,10 +259,12 @@ func set_actor_hp(id: String, hp: int) -> void:
 func play_events(events: Array) -> void:
 	for i in range(events.size()):
 		var event: Dictionary = events[i]
+		hud.on_event(event)
 		match event.type:
 			"phase":
 				state.phase=event.phase
 				hud.notice.text="敵方回合　B／Shift 加速 · X 略過移動" if event.phase=="enemy" else "我方回合"
+				hud.update_state()
 			"move":
 				if state.phase=="player": camera.follow(center(event.path.back()))
 				await animate_move(event.unit,event.path)
@@ -301,6 +303,7 @@ func restart() -> void:
 	preview_path.clear()
 	attack_timings.clear()
 	enemy_times.clear()
+	hud.warning.clear()
 	build_units()
 	pan_to(center(cursor_cell))
 	hud.notice.text="重新部署：主道路或北側森林淺灘"
@@ -348,6 +351,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		KEY_B: fast_forward=not fast_forward
 		KEY_X: skip_enemy_movement=not skip_enemy_movement
 		KEY_F1: debug_visible=not debug_visible
+		KEY_P: hud.toggle_minimap()
 	if busy: return
 	match event.keycode:
 		KEY_TAB:
@@ -378,7 +382,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _input(event: InputEvent) -> void:
 	# Tactical keys own both edges so a focused Button cannot also confirm them.
-	if event is InputEventKey and event.keycode in [KEY_TAB,KEY_I,KEY_J,KEY_K,KEY_L,KEY_T,KEY_ENTER,KEY_KP_ENTER,KEY_SPACE,KEY_N,KEY_ESCAPE,KEY_G,KEY_V,KEY_M,KEY_C,KEY_R,KEY_B,KEY_X,KEY_F1]:
+	if event is InputEventKey and event.keycode in [KEY_TAB,KEY_I,KEY_J,KEY_K,KEY_L,KEY_T,KEY_ENTER,KEY_KP_ENTER,KEY_SPACE,KEY_N,KEY_ESCAPE,KEY_G,KEY_V,KEY_M,KEY_C,KEY_R,KEY_B,KEY_X,KEY_F1,KEY_P]:
 		if state.status!="playing" and event.keycode not in [KEY_R,KEY_F1]: return
 		get_viewport().set_input_as_handled()
 		_unhandled_input(event)

@@ -12,6 +12,11 @@ var wait_button: Button
 var confirm_button: Button
 var result_panel: Panel
 var result_label: Label
+var minimap
+var minimap_panel: Panel
+var indicators
+var warning := {}
+var minimap_collapsed := false
 
 func panel(at: Vector2, dimensions: Vector2) -> Panel:
 	var p := Panel.new()
@@ -67,7 +72,33 @@ func _ready() -> void:
 	label(result_panel,"展示規則／美術均為 PLACEHOLDER\nR 或下方按鈕重新部署，改用另一條路線",Vector2(26,78),17)
 	button(result_panel,"重新部署 R",Vector2(120,154),Vector2(200,46),battle.restart)
 	result_panel.hide()
+	minimap_panel=panel(Vector2(1012,12),Vector2(250,206))
+	button(minimap_panel,"小地圖 P　□我方 △敵 ◆領袖",Vector2(8,6),Vector2(234,32),toggle_minimap)
+	minimap=preload("res://scripts/levels/field_minimap.gd").new()
+	minimap.battle=battle
+	minimap.position=Vector2(12,48)
+	minimap.size=Vector2(226,150)
+	minimap.clip_contents=true
+	minimap_panel.add_child(minimap)
+	indicators=preload("res://scripts/levels/field_indicators.gd").new()
+	indicators.battle=battle
+	indicators.mouse_filter=Control.MOUSE_FILTER_IGNORE
+	root.add_child(indicators)
+	label(root,"WASD／方向鍵 捲動 · 中鍵 拖曳 · 滾輪 縮放 · O 全圖 · F 定位 · E 邊緣 OFF",Vector2(34,548),14)
 	update_state()
+
+func toggle_minimap() -> void:
+	minimap_collapsed=not minimap_collapsed
+	minimap.visible=not minimap_collapsed
+	minimap_panel.size.y=44 if minimap_collapsed else 206
+
+func warning_entries() -> Array:
+	if battle.state.spawned: return []
+	if not warning.is_empty(): return warning.entries
+	return battle.state.level.entries if battle.state.warned else []
+
+func on_event(event: Dictionary) -> void:
+	if event.type=="reinforcement_warning": warning=event.duplicate(true)
 
 func update_state() -> void:
 	var s: Dictionary = battle.state
@@ -79,6 +110,8 @@ func update_state() -> void:
 	wait_button.disabled=battle.busy or u.is_empty() or u.get("acted",true) or u.get("side","")!="ally" or s.phase!="player" or s.status!="playing"
 	end_button.disabled=battle.busy or s.status!="playing"
 	result_panel.visible=s.status!="playing"
+	if s.warned and not s.spawned:
+		notice.text="增援：第 %d 回合，東北入口，3 名騎士（到場當回合休息）" % s.level.reinforcement_turn
 	if result_panel.visible:
 		result_label.text=("勝利・領袖已敗" if s.status=="win" else "敗北・重新整隊")+"\n第 %d 回合" % s.turn
 		result_panel.get_child(result_panel.get_child_count()-1).grab_focus()
@@ -90,4 +123,5 @@ func hover(cell: Vector2i) -> void:
 	var tile: String = battle.Rules.terrain(battle.state.level,cell)
 	inspect.text="%s (%d,%d)　成本 %d%s" % [battle.state.level.terrain[tile].name,cell.x,cell.y,battle.Rules.cost(battle.state.level,cell,"melee"),"／高機動森林3" if tile=="f" else ""]
 	if not u.is_empty():
-		inspect.text+="　｜%s・%s HP%d/%d　%s" % [battle.display_name(u),battle.kind_name(u.kind),u.hp,u.max_hp,"警戒4格／同群受擊會追擊" if u.side=="enemy" else "我方"]
+		var stats: Dictionary = battle.state.level.stats[u.kind]
+		inspect.text+="　｜%s・%s HP%d/%d　移%d／射程%d–%d　%s" % [battle.display_name(u),battle.kind_name(u.kind),u.hp,u.max_hp,stats.move,stats.min_range,stats.max_range,"警戒4格／同群受擊追擊" if u.side=="enemy" else "我方"]
