@@ -1,0 +1,235 @@
+{
+  "canvas": [
+    512,
+    512
+  ],
+  "pivot": [
+    256,
+    464
+  ],
+  "contact_frame_index": 3,
+  "contact_anchor": [
+    455,
+    196
+  ],
+  "mace_before_after_04": {
+    "before": [
+      420.72,
+      357.384
+    ],
+    "after": [
+      420.72,
+      376.384
+    ],
+    "target": [
+      421,
+      376
+    ],
+    "error_px": 0.475243
+  },
+  "frames": {
+    "thoma/idle/01.png": {
+      "head_centre": [
+        258,
+        142
+      ],
+      "hand_weapon": [
+        185,
+        297
+      ],
+      "hand_free": [
+        324,
+        266
+      ],
+      "mace_head": [
+        230,
+        328
+      ],
+      "foot_left": [
+        201,
+        462
+      ],
+      "foot_right": [
+        312,
+        414
+      ],
+      "character_height_px": 361,
+      "uncertainty_px": 2,
+      "measurement": "1x manual source landmarks; weapon centre inherited from A6 verified affine and exact19px translation; height from unchanged A6 silhouette"
+    },
+    "thoma/swing/00.png": {
+      "head_centre": [
+        260,
+        146
+      ],
+      "hand_weapon": [
+        128,
+        117
+      ],
+      "hand_free": [
+        392,
+        250
+      ],
+      "mace_head": [
+        191.967,
+        85.23
+      ],
+      "foot_left": [
+        145,
+        463
+      ],
+      "foot_right": [
+        351,
+        433
+      ],
+      "character_height_px": 348.369,
+      "uncertainty_px": 2,
+      "measurement": "1x manual source landmarks; weapon centre inherited from A6 verified affine and exact19px translation; height from unchanged A6 silhouette"
+    },
+    "thoma/swing/01.png": {
+      "head_centre": [
+        260,
+        145
+      ],
+      "hand_weapon": [
+        194,
+        109
+      ],
+      "hand_free": [
+        287,
+        214
+      ],
+      "mace_head": [
+        259.436,
+        87.4148
+      ],
+      "foot_left": [
+        167,
+        463
+      ],
+      "foot_right": [
+        335,
+        421
+      ],
+      "character_height_px": 349.9902,
+      "uncertainty_px": 2,
+      "measurement": "1x manual source landmarks; weapon centre inherited from A6 verified affine and exact19px translation; height from unchanged A6 silhouette"
+    },
+    "thoma/swing/02.png": {
+      "head_centre": [
+        284,
+        147
+      ],
+      "hand_weapon": [
+        372,
+        160
+      ],
+      "hand_free": [
+        384,
+        261
+      ],
+      "mace_head": [
+        448.567,
+        109.51
+      ],
+      "foot_left": [
+        135,
+        463
+      ],
+      "foot_right": [
+        371,
+        442
+      ],
+      "character_height_px": 349.6286,
+      "uncertainty_px": 2,
+      "measurement": "1x manual source landmarks; weapon centre inherited from A6 verified affine and exact19px translation; height from unchanged A6 silhouette"
+    },
+    "thoma/swing/03.png": {
+      "head_centre": [
+        266,
+        143
+      ],
+      "hand_weapon": [
+        358,
+        196
+      ],
+      "hand_free": [
+        313,
+        272
+      ],
+      "mace_head": [
+        455.0,
+        196.0
+      ],
+      "foot_left": [
+        120,
+        463
+      ],
+      "foot_right": [
+        342,
+        446
+      ],
+      "character_height_px": 354.8484,
+      "uncertainty_px": 2,
+      "measurement": "1x manual source landmarks; weapon centre inherited from A6 verified affine and exact19px translation; height from unchanged A6 silhouette"
+    },
+    "thoma/swing/04.png": {
+      "head_centre": [
+        311,
+        144
+      ],
+      "hand_weapon": [
+        347,
+        325
+      ],
+      "hand_free": [
+        136,
+        235
+      ],
+      "mace_head": [
+        420.72,
+        376.384
+      ],
+      "foot_left": [
+        125,
+        456
+      ],
+      "foot_right": [
+        334,
+        464
+      ],
+      "character_height_px": 356.224,
+      "uncertainty_px": 2,
+      "measurement": "1x manual source landmarks; weapon centre inherited from A6 verified affine and exact19px translation; height from unchanged A6 silhouette"
+    },
+    "thoma/swing/05.png": {
+      "head_centre": [
+        251,
+        132
+      ],
+      "hand_weapon": [
+        183,
+        299
+      ],
+      "hand_free": [
+        320,
+        266
+      ],
+      "mace_head": [
+        223,
+        333
+      ],
+      "foot_left": [
+        198,
+        463
+      ],
+      "foot_right": [
+        311,
+        425
+      ],
+      "character_height_px": 371,
+      "uncertainty_px": 2,
+      "measurement": "1x manual source landmarks; weapon centre inherited from A6 verified affine and exact19px translation; height from unchanged A6 silhouette"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+	"complete": true,
+	"engine": "4.7.2-stable (official)",
+	"fixed_fps": 60,
+	"movie_path": "res://.godot/spike02-a7-movie/attack.avi",
+	"renderer": "AMD Radeon 780M Graphics",
+	"resolution": [
+		1280,
+		720
+	],
+	"runs": [
+		{
+			"fixed_fps_seconds": 0.916666666666667,
+			"hitstop_process_ms": 83.3333333333333,
+			"hitstop_wall_ms": 236.168,
+			"input_ready": true,
+			"phases": [
+				{
+					"frame": 2,
+					"phase": "windup",
+					"wall_ms": 136.078
+				},
+				{
+					"frame": 13,
+					"phase": "lunge",
+					"wall_ms": 660.003
+				},
+				{
+					"frame": 20,
+					"phase": "contact",
+					"wall_ms": 993.126
+				},
+				{
+					"frame": 25,
+					"phase": "knockback",
+					"wall_ms": 1229.503
+				},
+				{
+					"frame": 47,
+					"phase": "settled",
+					"wall_ms": 2277.513
+				},
+				{
+					"frame": 57,
+					"phase": "ready",
+					"wall_ms": 2683.668
+				}
+			],
+			"reduced_motion": false,
+			"same_frame_contact": true,
+			"setup": 1,
+			"triggers": [
+				{
+					"frame": 20,
+					"suppressed": false,
+					"type": "spark"
+				},
+				{
+					"frame": 20,
+					"type": "sfx"
+				},
+				{
+					"frame": 20,
+					"suppressed": false,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 2.547558
+		}
+	],
+	"screenshots": [],
+	"timing_definition": "Normal/reduced wall-time runs have no readback; screenshot replays are excluded. Movie uses process frames /60, never encoding wall time."
+}

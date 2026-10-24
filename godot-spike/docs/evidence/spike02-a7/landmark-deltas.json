@@ -1,0 +1,633 @@
+{
+  "measured": {
+    "thoma/idle/01.png": {
+      "head_centre": [
+        258,
+        142
+      ],
+      "hand_weapon": [
+        185,
+        297
+      ],
+      "hand_free": [
+        324,
+        266
+      ],
+      "mace_head": [
+        230,
+        328
+      ],
+      "foot_left": [
+        201,
+        462
+      ],
+      "foot_right": [
+        312,
+        414
+      ],
+      "character_height_px": 361,
+      "uncertainty_px": 2,
+      "measurement": "1x manual source landmarks; weapon centre inherited from A6 verified affine and exact19px translation; height from unchanged A6 silhouette"
+    },
+    "thoma/swing/00.png": {
+      "head_centre": [
+        260,
+        146
+      ],
+      "hand_weapon": [
+        128,
+        117
+      ],
+      "hand_free": [
+        392,
+        250
+      ],
+      "mace_head": [
+        191.967,
+        85.23
+      ],
+      "foot_left": [
+        145,
+        463
+      ],
+      "foot_right": [
+        351,
+        433
+      ],
+      "character_height_px": 348.369,
+      "uncertainty_px": 2,
+      "measurement": "1x manual source landmarks; weapon centre inherited from A6 verified affine and exact19px translation; height from unchanged A6 silhouette"
+    },
+    "thoma/swing/01.png": {
+      "head_centre": [
+        260,
+        145
+      ],
+      "hand_weapon": [
+        194,
+        109
+      ],
+      "hand_free": [
+        287,
+        214
+      ],
+      "mace_head": [
+        259.436,
+        87.4148
+      ],
+      "foot_left": [
+        167,
+        463
+      ],
+      "foot_right": [
+        335,
+        421
+      ],
+      "character_height_px": 349.9902,
+      "uncertainty_px": 2,
+      "measurement": "1x manual source landmarks; weapon centre inherited from A6 verified affine and exact19px translation; height from unchanged A6 silhouette"
+    },
+    "thoma/swing/02.png": {
+      "head_centre": [
+        284,
+        147
+      ],
+      "hand_weapon": [
+        372,
+        160
+      ],
+      "hand_free": [
+        384,
+        261
+      ],
+      "mace_head": [
+        448.567,
+        109.51
+      ],
+      "foot_left": [
+        135,
+        463
+      ],
+      "foot_right": [
+        371,
+        442
+      ],
+      "character_height_px": 349.6286,
+      "uncertainty_px": 2,
+      "measurement": "1x manual source landmarks; weapon centre inherited from A6 verified affine and exact19px translation; height from unchanged A6 silhouette"
+    },
+    "thoma/swing/03.png": {
+      "head_centre": [
+        266,
+        143
+      ],
+      "hand_weapon": [
+        358,
+        196
+      ],
+      "hand_free": [
+        313,
+        272
+      ],
+      "mace_head": [
+        455.0,
+        196.0
+      ],
+      "foot_left": [
+        120,
+        463
+      ],
+      "foot_right": [
+        342,
+        446
+      ],
+      "character_height_px": 354.8484,
+      "uncertainty_px": 2,
+      "measurement": "1x manual source landmarks; weapon centre inherited from A6 verified affine and exact19px translation; height from unchanged A6 silhouette"
+    },
+    "thoma/swing/04.png": {
+      "head_centre": [
+        311,
+        144
+      ],
+      "hand_weapon": [
+        347,
+        325
+      ],
+      "hand_free": [
+        136,
+        235
+      ],
+      "mace_head": [
+        420.72,
+        376.384
+      ],
+      "foot_left": [
+        125,
+        456
+      ],
+      "foot_right": [
+        334,
+        464
+      ],
+      "character_height_px": 356.224,
+      "uncertainty_px": 2,
+      "measurement": "1x manual source landmarks; weapon centre inherited from A6 verified affine and exact19px translation; height from unchanged A6 silhouette"
+    },
+    "thoma/swing/05.png": {
+      "head_centre": [
+        251,
+        132
+      ],
+      "hand_weapon": [
+        183,
+        299
+      ],
+      "hand_free": [
+        320,
+        266
+      ],
+      "mace_head": [
+        223,
+        333
+      ],
+      "foot_left": [
+        198,
+        463
+      ],
+      "foot_right": [
+        311,
+        425
+      ],
+      "character_height_px": 371,
+      "uncertainty_px": 2,
+      "measurement": "1x manual source landmarks; weapon centre inherited from A6 verified affine and exact19px translation; height from unchanged A6 silhouette"
+    }
+  },
+  "pairs": [
+    {
+      "from": "thoma/idle/01.png",
+      "to": "thoma/swing/00.png",
+      "actual_deltas": {
+        "head_centre": [
+          2,
+          4
+        ],
+        "hand_weapon": [
+          -57,
+          -180
+        ],
+        "hand_free": [
+          68,
+          -16
+        ],
+        "mace_head": [
+          -38.033,
+          -242.77
+        ],
+        "foot_left": [
+          -56,
+          1
+        ],
+        "foot_right": [
+          39,
+          19
+        ]
+      },
+      "target_deltas": {
+        "head_centre": [
+          2,
+          1
+        ],
+        "hand_weapon": [
+          -58,
+          -180
+        ],
+        "hand_free": [
+          34,
+          -17
+        ],
+        "mace_head": [
+          -38,
+          -243
+        ],
+        "foot_left": [
+          -56,
+          2
+        ],
+        "foot_right": [
+          30,
+          25
+        ]
+      },
+      "target_error_px": {
+        "head_centre": 3.0,
+        "hand_weapon": 1.0,
+        "hand_free": 34.0147,
+        "mace_head": 0.2324,
+        "foot_left": 1.0,
+        "foot_right": 10.8167
+      },
+      "jump_flags": [
+        "hand_free delta differs from target >4px",
+        "foot_right delta differs from target >4px",
+        "character height changes >10px"
+      ],
+      "character_height_delta_px": -12.631,
+      "result": "FAIL"
+    },
+    {
+      "from": "thoma/swing/00.png",
+      "to": "thoma/swing/01.png",
+      "actual_deltas": {
+        "head_centre": [
+          0,
+          -1
+        ],
+        "hand_weapon": [
+          66,
+          -8
+        ],
+        "hand_free": [
+          -105,
+          -36
+        ],
+        "mace_head": [
+          67.469,
+          2.1848
+        ],
+        "foot_left": [
+          22,
+          0
+        ],
+        "foot_right": [
+          -16,
+          -12
+        ]
+      },
+      "target_deltas": {
+        "head_centre": [
+          0,
+          -2
+        ],
+        "hand_weapon": [
+          67,
+          -8
+        ],
+        "hand_free": [
+          -63,
+          0
+        ],
+        "mace_head": [
+          67,
+          2
+        ],
+        "foot_left": [
+          22,
+          0
+        ],
+        "foot_right": [
+          -16,
+          4
+        ]
+      },
+      "target_error_px": {
+        "head_centre": 1.0,
+        "hand_weapon": 1.0,
+        "hand_free": 55.3173,
+        "mace_head": 0.5041,
+        "foot_left": 0.0,
+        "foot_right": 16.0
+      },
+      "jump_flags": [
+        "hand_free delta differs from target >4px",
+        "foot_right delta differs from target >4px"
+      ],
+      "character_height_delta_px": 1.6212,
+      "result": "FAIL"
+    },
+    {
+      "from": "thoma/swing/01.png",
+      "to": "thoma/swing/02.png",
+      "actual_deltas": {
+        "head_centre": [
+          24,
+          2
+        ],
+        "hand_weapon": [
+          178,
+          51
+        ],
+        "hand_free": [
+          97,
+          47
+        ],
+        "mace_head": [
+          189.131,
+          22.0952
+        ],
+        "foot_left": [
+          -32,
+          0
+        ],
+        "foot_right": [
+          36,
+          21
+        ]
+      },
+      "target_deltas": {
+        "head_centre": [
+          22,
+          4
+        ],
+        "hand_weapon": [
+          178,
+          51
+        ],
+        "hand_free": [
+          55,
+          17
+        ],
+        "mace_head": [
+          190,
+          23
+        ],
+        "foot_left": [
+          -32,
+          0
+        ],
+        "foot_right": [
+          46,
+          5
+        ]
+      },
+      "target_error_px": {
+        "head_centre": 2.8284,
+        "hand_weapon": 0.0,
+        "hand_free": 51.614,
+        "mace_head": 1.2545,
+        "foot_left": 0.0,
+        "foot_right": 18.868
+      },
+      "jump_flags": [
+        "hand_free delta differs from target >4px",
+        "foot_right delta differs from target >4px"
+      ],
+      "character_height_delta_px": -0.3616,
+      "result": "FAIL"
+    },
+    {
+      "from": "thoma/swing/02.png",
+      "to": "thoma/swing/03.png",
+      "actual_deltas": {
+        "head_centre": [
+          -18,
+          -4
+        ],
+        "hand_weapon": [
+          -14,
+          36
+        ],
+        "hand_free": [
+          -71,
+          11
+        ],
+        "mace_head": [
+          6.433,
+          86.49
+        ],
+        "foot_left": [
+          -15,
+          0
+        ],
+        "foot_right": [
+          -29,
+          4
+        ]
+      },
+      "target_deltas": {
+        "head_centre": [
+          -18,
+          -5
+        ],
+        "hand_weapon": [
+          -14,
+          36
+        ],
+        "hand_free": [
+          -45,
+          -8
+        ],
+        "mace_head": [
+          6,
+          86
+        ],
+        "foot_left": [
+          -15,
+          0
+        ],
+        "foot_right": [
+          -18,
+          -1
+        ]
+      },
+      "target_error_px": {
+        "head_centre": 1.0,
+        "hand_weapon": 0.0,
+        "hand_free": 32.2025,
+        "mace_head": 0.6539,
+        "foot_left": 0.0,
+        "foot_right": 12.083
+      },
+      "jump_flags": [
+        "hand_free delta differs from target >4px",
+        "foot_right delta differs from target >4px"
+      ],
+      "character_height_delta_px": 5.2198,
+      "result": "FAIL"
+    },
+    {
+      "from": "thoma/swing/03.png",
+      "to": "thoma/swing/04.png",
+      "actual_deltas": {
+        "head_centre": [
+          45,
+          1
+        ],
+        "hand_weapon": [
+          -11,
+          129
+        ],
+        "hand_free": [
+          -177,
+          -37
+        ],
+        "mace_head": [
+          -34.28,
+          180.384
+        ],
+        "foot_left": [
+          5,
+          -7
+        ],
+        "foot_right": [
+          -8,
+          18
+        ]
+      },
+      "target_deltas": {
+        "head_centre": [
+          46,
+          1
+        ],
+        "hand_weapon": [
+          -11,
+          128
+        ],
+        "hand_free": [
+          -92,
+          -3
+        ],
+        "mace_head": [
+          -34,
+          180
+        ],
+        "foot_left": [
+          45,
+          -9
+        ],
+        "foot_right": [
+          -20,
+          17
+        ]
+      },
+      "target_error_px": {
+        "head_centre": 1.0,
+        "hand_weapon": 1.0,
+        "hand_free": 91.5478,
+        "mace_head": 0.4752,
+        "foot_left": 40.05,
+        "foot_right": 12.0416
+      },
+      "jump_flags": [
+        "hand_free delta differs from target >4px",
+        "foot_left delta differs from target >4px",
+        "foot_right delta differs from target >4px"
+      ],
+      "character_height_delta_px": 1.3756,
+      "result": "FAIL"
+    },
+    {
+      "from": "thoma/swing/04.png",
+      "to": "thoma/swing/05.png",
+      "actual_deltas": {
+        "head_centre": [
+          -60,
+          -12
+        ],
+        "hand_weapon": [
+          -164,
+          -26
+        ],
+        "hand_free": [
+          184,
+          31
+        ],
+        "mace_head": [
+          -197.72,
+          -43.384
+        ],
+        "foot_left": [
+          73,
+          7
+        ],
+        "foot_right": [
+          -23,
+          -39
+        ]
+      },
+      "target_deltas": {
+        "head_centre": [
+          -59,
+          -9
+        ],
+        "hand_weapon": [
+          -164,
+          -25
+        ],
+        "hand_free": [
+          107,
+          11
+        ],
+        "mace_head": [
+          -198,
+          -43
+        ],
+        "foot_left": [
+          33,
+          8
+        ],
+        "foot_right": [
+          -23,
+          -39
+        ]
+      },
+      "target_error_px": {
+        "head_centre": 3.1623,
+        "hand_weapon": 1.0,
+        "hand_free": 79.555,
+        "mace_head": 0.4752,
+        "foot_left": 40.0125,
+        "foot_right": 0.0
+      },
+      "jump_flags": [
+        "hand_free delta differs from target >4px",
+        "foot_left delta differs from target >4px",
+        "character height changes >10px"
+      ],
+      "character_height_delta_px": 14.776,
+      "result": "FAIL"
+    }
+  ],
+  "limits": "Targets are design targets, not observations. Manual landmarks +/-2px, large occlusion uncertainty on hidden joints. Do not equate a valid weapon arc with full pose compliance."
+}

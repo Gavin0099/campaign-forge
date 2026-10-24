@@ -1,0 +1,2218 @@
+{
+  "spec_sha256": "bb0c9ff5949c659f35a892ad4e2b38aa28bb645fd8b4a81fbdf6f76c01ddb163",
+  "crops": [
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "face_hair",
+      "box": [
+        233,
+        118,
+        284,
+        174
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "face_hair",
+      "box": [
+        227,
+        108,
+        279,
+        165
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "face_hair",
+      "box": [
+        210,
+        90,
+        350,
+        207
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "face_hair",
+      "box": [
+        210,
+        90,
+        350,
+        207
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "face_hair",
+      "box": [
+        210,
+        90,
+        350,
+        207
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "face_hair",
+      "box": [
+        210,
+        90,
+        350,
+        207
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "face_hair",
+      "box": [
+        210,
+        90,
+        350,
+        207
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "stole",
+      "box": [
+        187,
+        151,
+        312,
+        387
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "stole",
+      "box": [
+        183,
+        143,
+        310,
+        386
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "stole",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "FAIL: A6 panel widths/fall remain; small texture patches cannot establish anchor drape through the pose."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "stole",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "FAIL: A6 panel widths/fall remain; small texture patches cannot establish anchor drape through the pose."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "stole",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "FAIL: A6 panel widths/fall remain; small texture patches cannot establish anchor drape through the pose."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "stole",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "FAIL: A6 panel widths/fall remain; small texture patches cannot establish anchor drape through the pose."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "stole",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "FAIL: A6 panel widths/fall remain; small texture patches cannot establish anchor drape through the pose."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "embroidery",
+      "box": [
+        285,
+        300,
+        309,
+        350
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "embroidery",
+      "box": [
+        282,
+        292,
+        306,
+        343
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "embroidery",
+      "box": [
+        190,
+        295,
+        325,
+        395
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "FAIL: visible source sprig pixels transferred, but partial occlusion, alignment and residual A6 strokes do not establish the exact two motifs."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "embroidery",
+      "box": [
+        190,
+        295,
+        325,
+        395
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "FAIL: visible source sprig pixels transferred, but partial occlusion, alignment and residual A6 strokes do not establish the exact two motifs."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "embroidery",
+      "box": [
+        190,
+        295,
+        325,
+        395
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "FAIL: right donor is visibly misregistered and leaves a residual A6 sprig alongside the transferred patch; exact motif count/placement fails."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "embroidery",
+      "box": [
+        190,
+        295,
+        325,
+        395
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "FAIL: visible source sprig pixels transferred, but partial occlusion, alignment and residual A6 strokes do not establish the exact two motifs."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "embroidery",
+      "box": [
+        190,
+        295,
+        325,
+        395
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "FAIL: visible source sprig pixels transferred, but partial occlusion, alignment and residual A6 strokes do not establish the exact two motifs."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "tassels",
+      "box": [
+        285,
+        346,
+        313,
+        366
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "tassels",
+      "box": [
+        282,
+        339,
+        310,
+        359
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "tassels",
+      "box": [
+        190,
+        335,
+        325,
+        400
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "FAIL: source fringe interior does not replace every A6 panel-edge tip; attachment/edge count still varies."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "tassels",
+      "box": [
+        190,
+        335,
+        325,
+        400
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "FAIL: source fringe interior does not replace every A6 panel-edge tip; attachment/edge count still varies."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "tassels",
+      "box": [
+        190,
+        335,
+        325,
+        400
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "FAIL: source fringe interior does not replace every A6 panel-edge tip; attachment/edge count still varies."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "tassels",
+      "box": [
+        190,
+        335,
+        325,
+        400
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "FAIL: source fringe interior does not replace every A6 panel-edge tip; attachment/edge count still varies."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "tassels",
+      "box": [
+        190,
+        335,
+        325,
+        400
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "FAIL: source fringe interior does not replace every A6 panel-edge tip; attachment/edge count still varies."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "cuffs",
+      "box": [
+        154,
+        230,
+        332,
+        284
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "cuffs",
+      "box": [
+        151,
+        225,
+        329,
+        282
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "cuffs",
+      "box": [
+        100,
+        110,
+        410,
+        310
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "FAIL: retained A6 fold/edge shape differs from anchors; coherent structure alone does not meet exact appearance spec."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "cuffs",
+      "box": [
+        100,
+        110,
+        410,
+        310
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "FAIL: retained A6 fold/edge shape differs from anchors; coherent structure alone does not meet exact appearance spec."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "cuffs",
+      "box": [
+        100,
+        110,
+        410,
+        310
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "FAIL: retained A6 fold/edge shape differs from anchors; coherent structure alone does not meet exact appearance spec."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "cuffs",
+      "box": [
+        100,
+        110,
+        410,
+        310
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "FAIL: retained A6 fold/edge shape differs from anchors; coherent structure alone does not meet exact appearance spec."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "cuffs",
+      "box": [
+        100,
+        110,
+        410,
+        310
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "FAIL: local cloth bridge above lowered hand is visible; smooth arm/cuff continuity not achieved."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "hem",
+      "box": [
+        169,
+        351,
+        325,
+        423
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "hem",
+      "box": [
+        163,
+        347,
+        326,
+        427
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "hem",
+      "box": [
+        100,
+        345,
+        400,
+        445
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "FAIL: A6 silhouette is continuous, but width and inner pleats still pop relative to fixed endpoints."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "hem",
+      "box": [
+        100,
+        345,
+        400,
+        445
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "FAIL: A6 silhouette is continuous, but width and inner pleats still pop relative to fixed endpoints."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "hem",
+      "box": [
+        100,
+        345,
+        400,
+        445
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "FAIL: A6 silhouette is continuous, but width and inner pleats still pop relative to fixed endpoints."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "hem",
+      "box": [
+        100,
+        345,
+        400,
+        445
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "FAIL: A6 silhouette is continuous, but width and inner pleats still pop relative to fixed endpoints."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "hem",
+      "box": [
+        100,
+        345,
+        400,
+        445
+      ],
+      "scale": 1,
+      "result": "FAIL",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "FAIL: A6 silhouette is continuous, but width and inner pleats still pop relative to fixed endpoints."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "bag_count",
+      "box": [
+        181,
+        246,
+        241,
+        323
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "bag_count",
+      "box": [
+        178,
+        241,
+        239,
+        321
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "bag_count",
+      "box": [
+        160,
+        230,
+        255,
+        335
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "bag_count",
+      "box": [
+        160,
+        230,
+        255,
+        335
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "bag_count",
+      "box": [
+        160,
+        230,
+        255,
+        335
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "bag_count",
+      "box": [
+        160,
+        230,
+        255,
+        335
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "bag_count",
+      "box": [
+        160,
+        230,
+        255,
+        335
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "feet",
+      "box": [
+        181,
+        388,
+        332,
+        465
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "feet",
+      "box": [
+        179,
+        395,
+        331,
+        465
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "feet",
+      "box": [
+        100,
+        390,
+        400,
+        470
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "PASS: both connected A6 boots and lower leg pixels unchanged; no detached shoe or cropped ground."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "feet",
+      "box": [
+        100,
+        390,
+        400,
+        470
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "PASS: both connected A6 boots and lower leg pixels unchanged; no detached shoe or cropped ground."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "feet",
+      "box": [
+        100,
+        390,
+        400,
+        470
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "PASS: both connected A6 boots and lower leg pixels unchanged; no detached shoe or cropped ground."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "feet",
+      "box": [
+        100,
+        390,
+        400,
+        470
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "PASS: both connected A6 boots and lower leg pixels unchanged; no detached shoe or cropped ground."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "feet",
+      "box": [
+        100,
+        390,
+        400,
+        470
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "PASS: both connected A6 boots and lower leg pixels unchanged; no detached shoe or cropped ground."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "mace",
+      "box": [
+        170,
+        289,
+        252,
+        348
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "mace",
+      "box": [
+        170,
+        290,
+        246,
+        352
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "mace",
+      "box": [
+        95,
+        65,
+        480,
+        402
+      ],
+      "scale": 0.7270029673590505,
+      "result": "PASS",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "PASS: A6 mace/haft/collar/grip source pixels retained; 04 moves the connected hand/weapon19px without rescaling."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "mace",
+      "box": [
+        95,
+        65,
+        480,
+        402
+      ],
+      "scale": 0.7270029673590505,
+      "result": "PASS",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "PASS: A6 mace/haft/collar/grip source pixels retained; 04 moves the connected hand/weapon19px without rescaling."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "mace",
+      "box": [
+        95,
+        65,
+        480,
+        402
+      ],
+      "scale": 0.7270029673590505,
+      "result": "PASS",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "PASS: A6 mace/haft/collar/grip source pixels retained; 04 moves the connected hand/weapon19px without rescaling."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "mace",
+      "box": [
+        95,
+        65,
+        480,
+        402
+      ],
+      "scale": 0.7270029673590505,
+      "result": "PASS",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "PASS: A6 mace/haft/collar/grip source pixels retained; 04 moves the connected hand/weapon19px without rescaling."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "mace",
+      "box": [
+        95,
+        65,
+        480,
+        402
+      ],
+      "scale": 0.7270029673590505,
+      "result": "PASS",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "PASS: A6 mace/haft/collar/grip source pixels retained; 04 moves the connected hand/weapon19px without rescaling."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "palette",
+      "box": [
+        165,
+        175,
+        325,
+        400
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "palette",
+      "box": [
+        162,
+        167,
+        325,
+        406
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "palette",
+      "box": [
+        165,
+        165,
+        335,
+        430
+      ],
+      "scale": 0.9245283018867925,
+      "result": "PASS",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "PASS: only original A6 and anchor colours, no new grading; masked blends remain in original muted teal/ivory/leather families."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "palette",
+      "box": [
+        165,
+        165,
+        335,
+        430
+      ],
+      "scale": 0.9245283018867925,
+      "result": "PASS",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "PASS: only original A6 and anchor colours, no new grading; masked blends remain in original muted teal/ivory/leather families."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "palette",
+      "box": [
+        165,
+        165,
+        335,
+        430
+      ],
+      "scale": 0.9245283018867925,
+      "result": "PASS",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "PASS: only original A6 and anchor colours, no new grading; masked blends remain in original muted teal/ivory/leather families."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "palette",
+      "box": [
+        165,
+        165,
+        335,
+        430
+      ],
+      "scale": 0.9245283018867925,
+      "result": "PASS",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "PASS: only original A6 and anchor colours, no new grading; masked blends remain in original muted teal/ivory/leather families."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "palette",
+      "box": [
+        165,
+        165,
+        335,
+        430
+      ],
+      "scale": 0.9245283018867925,
+      "result": "PASS",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "PASS: only original A6 and anchor colours, no new grading; masked blends remain in original muted teal/ivory/leather families."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "seams",
+      "box": [
+        166,
+        339,
+        191,
+        380
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "seams",
+      "box": [
+        162,
+        339,
+        187,
+        380
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "seams",
+      "box": [
+        180,
+        140,
+        350,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "FAIL: local face/stole texture transitions remain visible at 1x; seam-free anchor transfer is not achieved."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "seams",
+      "box": [
+        180,
+        140,
+        350,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "FAIL: local face/stole texture transitions remain visible at 1x; seam-free anchor transfer is not achieved."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "seams",
+      "box": [
+        180,
+        140,
+        350,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "FAIL: local face/stole texture transitions remain visible at 1x; seam-free anchor transfer is not achieved."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "seams",
+      "box": [
+        180,
+        140,
+        350,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "FAIL: local face/stole texture transitions remain visible at 1x; seam-free anchor transfer is not achieved."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "seams",
+      "box": [
+        180,
+        140,
+        350,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "FAIL: rectangular-looking cloth bridge and local stole texture joins remain; this is a regression from A6 seamless whole painting."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "landmarks",
+      "box": [
+        233,
+        118,
+        284,
+        174
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "landmarks",
+      "box": [
+        227,
+        108,
+        279,
+        165
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "landmarks",
+      "box": [
+        95,
+        65,
+        480,
+        470
+      ],
+      "scale": 0.6049382716049383,
+      "result": "FAIL",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "FAIL: target vs actual full joint/hand/face positions exceed4px on multiple landmarks; exact contact03 and head arc alone do not pass all joints."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "landmarks",
+      "box": [
+        95,
+        65,
+        480,
+        470
+      ],
+      "scale": 0.6049382716049383,
+      "result": "FAIL",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "FAIL: target vs actual full joint/hand/face positions exceed4px on multiple landmarks; exact contact03 and head arc alone do not pass all joints."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "landmarks",
+      "box": [
+        95,
+        65,
+        480,
+        470
+      ],
+      "scale": 0.6049382716049383,
+      "result": "FAIL",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "FAIL: target vs actual full joint/hand/face positions exceed4px on multiple landmarks; exact contact03 and head arc alone do not pass all joints."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "landmarks",
+      "box": [
+        95,
+        65,
+        480,
+        470
+      ],
+      "scale": 0.6049382716049383,
+      "result": "FAIL",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "FAIL: target vs actual full joint/hand/face positions exceed4px on multiple landmarks; exact contact03 and head arc alone do not pass all joints."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "landmarks",
+      "box": [
+        95,
+        65,
+        480,
+        470
+      ],
+      "scale": 0.6049382716049383,
+      "result": "FAIL",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "FAIL: target vs actual full joint/hand/face positions exceed4px on multiple landmarks; exact contact03 and head arc alone do not pass all joints."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "sequence",
+      "box": [
+        165,
+        175,
+        325,
+        400
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "sequence",
+      "box": [
+        162,
+        167,
+        325,
+        406
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "sequence",
+      "box": [
+        95,
+        65,
+        480,
+        470
+      ],
+      "scale": 0.6049382716049383,
+      "result": "FAIL",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "FAIL: face silhouette, panel/hem outline and motif/fringe changes remain through consecutive actual rendered poses."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "sequence",
+      "box": [
+        95,
+        65,
+        480,
+        470
+      ],
+      "scale": 0.6049382716049383,
+      "result": "FAIL",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "FAIL: face silhouette, panel/hem outline and motif/fringe changes remain through consecutive actual rendered poses."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "sequence",
+      "box": [
+        95,
+        65,
+        480,
+        470
+      ],
+      "scale": 0.6049382716049383,
+      "result": "FAIL",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "FAIL: face silhouette, panel/hem outline and motif/fringe changes remain through consecutive actual rendered poses."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "sequence",
+      "box": [
+        95,
+        65,
+        480,
+        470
+      ],
+      "scale": 0.6049382716049383,
+      "result": "FAIL",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "FAIL: face silhouette, panel/hem outline and motif/fringe changes remain through consecutive actual rendered poses."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "sequence",
+      "box": [
+        95,
+        65,
+        480,
+        470
+      ],
+      "scale": 0.6049382716049383,
+      "result": "FAIL",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "FAIL: face silhouette, panel/hem outline and motif/fringe changes remain through consecutive actual rendered poses."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "robe",
+      "box": [
+        165,
+        175,
+        325,
+        400
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "robe",
+      "box": [
+        162,
+        167,
+        325,
+        406
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "robe",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "FAIL: A6 panel widths/fall remain; small texture patches cannot establish anchor drape through the pose."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "robe",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "FAIL: A6 panel widths/fall remain; small texture patches cannot establish anchor drape through the pose."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "robe",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "FAIL: A6 panel widths/fall remain; small texture patches cannot establish anchor drape through the pose."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "robe",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "FAIL: A6 panel widths/fall remain; small texture patches cannot establish anchor drape through the pose."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "robe",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "FAIL: A6 panel widths/fall remain; small texture patches cannot establish anchor drape through the pose."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "belt",
+      "box": [
+        198,
+        234,
+        282,
+        270
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "belt",
+      "box": [
+        193,
+        228,
+        279,
+        263
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "belt",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "PASS",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "belt",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "PASS",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "belt",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "PASS",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "belt",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "PASS",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "belt",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "PASS",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "hair",
+      "box": [
+        227,
+        101,
+        286,
+        150
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "hair",
+      "box": [
+        221,
+        91,
+        281,
+        140
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "hair",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "hair",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "hair",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "hair",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "hair",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "embroidery_left",
+      "box": [
+        222,
+        337,
+        253,
+        373
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "embroidery_left",
+      "box": [
+        219,
+        337,
+        250,
+        374
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "embroidery_left",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "FAIL: visible source sprig pixels transferred, but partial occlusion, alignment and residual A6 strokes do not establish the exact two motifs."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "embroidery_left",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "FAIL: visible source sprig pixels transferred, but partial occlusion, alignment and residual A6 strokes do not establish the exact two motifs."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "embroidery_left",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "FAIL: right donor is visibly misregistered and leaves a residual A6 sprig alongside the transferred patch; exact motif count/placement fails."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "embroidery_left",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "FAIL: visible source sprig pixels transferred, but partial occlusion, alignment and residual A6 strokes do not establish the exact two motifs."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "embroidery_left",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "FAIL: visible source sprig pixels transferred, but partial occlusion, alignment and residual A6 strokes do not establish the exact two motifs."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "tassels_left",
+      "box": [
+        220,
+        369,
+        255,
+        386
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "tassels_left",
+      "box": [
+        217,
+        369,
+        252,
+        386
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "tassels_left",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "FAIL: source fringe interior does not replace every A6 panel-edge tip; attachment/edge count still varies."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "tassels_left",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "FAIL: source fringe interior does not replace every A6 panel-edge tip; attachment/edge count still varies."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "tassels_left",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "FAIL: source fringe interior does not replace every A6 panel-edge tip; attachment/edge count still varies."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "tassels_left",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "FAIL: source fringe interior does not replace every A6 panel-edge tip; attachment/edge count still varies."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "tassels_left",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "FAIL: source fringe interior does not replace every A6 panel-edge tip; attachment/edge count still varies."
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "body_proportions",
+      "box": [
+        165,
+        175,
+        325,
+        400
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "body_proportions",
+      "box": [
+        162,
+        167,
+        325,
+        406
+      ],
+      "scale": 1,
+      "result": "PASS",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "reason": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "body_proportions",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "reason": "FAIL: target vs actual full joint/hand/face positions exceed4px on multiple landmarks; exact contact03 and head arc alone do not pass all joints."
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "body_proportions",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "reason": "FAIL: target vs actual full joint/hand/face positions exceed4px on multiple landmarks; exact contact03 and head arc alone do not pass all joints."
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "body_proportions",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "reason": "FAIL: target vs actual full joint/hand/face positions exceed4px on multiple landmarks; exact contact03 and head arc alone do not pass all joints."
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "body_proportions",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "reason": "FAIL: target vs actual full joint/hand/face positions exceed4px on multiple landmarks; exact contact03 and head arc alone do not pass all joints."
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "body_proportions",
+      "box": [
+        180,
+        140,
+        330,
+        400
+      ],
+      "scale": 0.9423076923076923,
+      "result": "FAIL",
+      "source_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "reason": "FAIL: target vs actual full joint/hand/face positions exceed4px on multiple landmarks; exact contact03 and head arc alone do not pass all joints."
+    }
+  ],
+  "frames": {
+    "thoma/idle/01.png": {
+      "path": "thoma/idle/01.png",
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "source": "raw/thoma-mace-idle-01.png",
+      "raw_sha256": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5",
+      "registration": [
+        665,
+        1219,
+        58,
+        360
+      ],
+      "status": "PASS",
+      "weapon_status": "APPROVED",
+      "reason": "Immutable reference endpoint, not Owner art approval.",
+      "style_review": {
+        "face": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "stole_cape_embroidery": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "cuffs": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "hem_silhouette": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "palette": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "stroke": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "satchel_medallion": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+      },
+      "weapon_approval": "Owner, 2026-10-24",
+      "review_segment": "spike-02 A7",
+      "review_authority": "model inspection; not Owner approval or human playtest",
+      "palette_distance": {
+        "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
+        "value": 0.0,
+        "not_a_perceptual_quality_score": true
+      },
+      "region_review": {
+        "face_hair": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "stole": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "embroidery": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "tassels": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "cuffs": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "hem": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "palette": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "seams": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "bag_count": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "feet": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "mace": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "landmarks": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "sequence": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+      },
+      "bag_count": 1,
+      "bag_count_authority": "model count in whole figure and bag crop"
+    },
+    "thoma/swing/00.png": {
+      "path": "thoma/swing/00.png",
+      "sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+      "source": "godot-spike/docs/evidence/spike02-a7/attempts/00/attempt-1.png",
+      "raw_sha256": "152b5de3847270cb5c9461068684af3ff1300009292b92f87b5c70409a9fc4cd",
+      "registration": [
+        685,
+        1218,
+        144,
+        350
+      ],
+      "status": "PLACEHOLDER",
+      "weapon_status": "APPROVED",
+      "reason": "Anchor interior details corrected; outer face, drape, fringe and local seams remain unacceptable; full art acceptance FAIL.",
+      "style_review": {
+        "face": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced.",
+        "stole_cape_embroidery": "FAIL: visible source sprig pixels transferred, but partial occlusion, alignment and residual A6 strokes do not establish the exact two motifs.",
+        "cuffs": "FAIL: retained A6 fold/edge shape differs from anchors; coherent structure alone does not meet exact appearance spec.",
+        "hem_silhouette": "FAIL: A6 silhouette is continuous, but width and inner pleats still pop relative to fixed endpoints.",
+        "palette": "PASS: only original A6 and anchor colours, no new grading; masked blends remain in original muted teal/ivory/leather families.",
+        "stroke": "FAIL: local face/stole texture transitions remain visible at 1x; seam-free anchor transfer is not achieved.",
+        "satchel_medallion": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used."
+      },
+      "weapon_approval": "Owner, 2026-10-24",
+      "cleanup": "A6 structural base + recorded masked anchor interior transfers; 04 connected weapon translation19px; raw generated full frames not adopted.",
+      "review_segment": "spike-02 A7",
+      "review_authority": "model inspection; not Owner approval or human playtest",
+      "palette_distance": {
+        "before": 5.71192,
+        "after": 0.666352,
+        "metric": "mean nearest idle/01 128-color Euclidean RGB, alpha>240"
+      },
+      "region_review": {
+        "face_hair": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced.",
+        "stole": "FAIL: A6 panel widths/fall remain; small texture patches cannot establish anchor drape through the pose.",
+        "embroidery": "FAIL: visible source sprig pixels transferred, but partial occlusion, alignment and residual A6 strokes do not establish the exact two motifs.",
+        "tassels": "FAIL: source fringe interior does not replace every A6 panel-edge tip; attachment/edge count still varies.",
+        "cuffs": "FAIL: retained A6 fold/edge shape differs from anchors; coherent structure alone does not meet exact appearance spec.",
+        "hem": "FAIL: A6 silhouette is continuous, but width and inner pleats still pop relative to fixed endpoints.",
+        "palette": "PASS: only original A6 and anchor colours, no new grading; masked blends remain in original muted teal/ivory/leather families.",
+        "seams": "FAIL: local face/stole texture transitions remain visible at 1x; seam-free anchor transfer is not achieved.",
+        "bag_count": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used.",
+        "feet": "PASS: both connected A6 boots and lower leg pixels unchanged; no detached shoe or cropped ground.",
+        "mace": "PASS: A6 mace/haft/collar/grip source pixels retained; 04 moves the connected hand/weapon19px without rescaling.",
+        "landmarks": "FAIL: target vs actual full joint/hand/face positions exceed4px on multiple landmarks; exact contact03 and head arc alone do not pass all joints.",
+        "sequence": "FAIL: face silhouette, panel/hem outline and motif/fringe changes remain through consecutive actual rendered poses."
+      },
+      "bag_count": 1,
+      "bag_count_authority": "model count in whole figure and bag crop"
+    },
+    "thoma/swing/01.png": {
+      "path": "thoma/swing/01.png",
+      "sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+      "source": "godot-spike/docs/evidence/spike02-a7/attempts/01/attempt-1.png",
+      "raw_sha256": "f76199d4fa3cdc4c0933f0b0d74f35dbf0664ee0b8310ea2ef97e0eb7f9cf180",
+      "registration": [
+        665,
+        1220,
+        132,
+        354
+      ],
+      "status": "PLACEHOLDER",
+      "weapon_status": "APPROVED",
+      "reason": "Anchor interior details corrected; outer face, drape, fringe and local seams remain unacceptable; full art acceptance FAIL.",
+      "style_review": {
+        "face": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced.",
+        "stole_cape_embroidery": "FAIL: visible source sprig pixels transferred, but partial occlusion, alignment and residual A6 strokes do not establish the exact two motifs.",
+        "cuffs": "FAIL: retained A6 fold/edge shape differs from anchors; coherent structure alone does not meet exact appearance spec.",
+        "hem_silhouette": "FAIL: A6 silhouette is continuous, but width and inner pleats still pop relative to fixed endpoints.",
+        "palette": "PASS: only original A6 and anchor colours, no new grading; masked blends remain in original muted teal/ivory/leather families.",
+        "stroke": "FAIL: local face/stole texture transitions remain visible at 1x; seam-free anchor transfer is not achieved.",
+        "satchel_medallion": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used."
+      },
+      "weapon_approval": "Owner, 2026-10-24",
+      "cleanup": "A6 structural base + recorded masked anchor interior transfers; 04 connected weapon translation19px; raw generated full frames not adopted.",
+      "review_segment": "spike-02 A7",
+      "review_authority": "model inspection; not Owner approval or human playtest",
+      "palette_distance": {
+        "before": 5.457934,
+        "after": 0.696423,
+        "metric": "mean nearest idle/01 128-color Euclidean RGB, alpha>240"
+      },
+      "region_review": {
+        "face_hair": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced.",
+        "stole": "FAIL: A6 panel widths/fall remain; small texture patches cannot establish anchor drape through the pose.",
+        "embroidery": "FAIL: visible source sprig pixels transferred, but partial occlusion, alignment and residual A6 strokes do not establish the exact two motifs.",
+        "tassels": "FAIL: source fringe interior does not replace every A6 panel-edge tip; attachment/edge count still varies.",
+        "cuffs": "FAIL: retained A6 fold/edge shape differs from anchors; coherent structure alone does not meet exact appearance spec.",
+        "hem": "FAIL: A6 silhouette is continuous, but width and inner pleats still pop relative to fixed endpoints.",
+        "palette": "PASS: only original A6 and anchor colours, no new grading; masked blends remain in original muted teal/ivory/leather families.",
+        "seams": "FAIL: local face/stole texture transitions remain visible at 1x; seam-free anchor transfer is not achieved.",
+        "bag_count": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used.",
+        "feet": "PASS: both connected A6 boots and lower leg pixels unchanged; no detached shoe or cropped ground.",
+        "mace": "PASS: A6 mace/haft/collar/grip source pixels retained; 04 moves the connected hand/weapon19px without rescaling.",
+        "landmarks": "FAIL: target vs actual full joint/hand/face positions exceed4px on multiple landmarks; exact contact03 and head arc alone do not pass all joints.",
+        "sequence": "FAIL: face silhouette, panel/hem outline and motif/fringe changes remain through consecutive actual rendered poses."
+      },
+      "bag_count": 1,
+      "bag_count_authority": "model count in whole figure and bag crop"
+    },
+    "thoma/swing/03.png": {
+      "path": "thoma/swing/03.png",
+      "sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+      "source": "godot-spike/docs/evidence/spike02-a7/attempts/03/attempt-1.png",
+      "raw_sha256": "bd12428303a7261d87f675386458d187ad83fb435d6b0c7acdac6d6595c82c7d",
+      "registration": [
+        545,
+        1190,
+        81,
+        350
+      ],
+      "status": "PLACEHOLDER",
+      "weapon_status": "APPROVED",
+      "reason": "Anchor interior details corrected; outer face, drape, fringe and local seams remain unacceptable; full art acceptance FAIL.",
+      "style_review": {
+        "face": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced.",
+        "stole_cape_embroidery": "FAIL: visible source sprig pixels transferred, but partial occlusion, alignment and residual A6 strokes do not establish the exact two motifs.",
+        "cuffs": "FAIL: retained A6 fold/edge shape differs from anchors; coherent structure alone does not meet exact appearance spec.",
+        "hem_silhouette": "FAIL: A6 silhouette is continuous, but width and inner pleats still pop relative to fixed endpoints.",
+        "palette": "PASS: only original A6 and anchor colours, no new grading; masked blends remain in original muted teal/ivory/leather families.",
+        "stroke": "FAIL: local face/stole texture transitions remain visible at 1x; seam-free anchor transfer is not achieved.",
+        "satchel_medallion": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used."
+      },
+      "weapon_approval": "Owner, 2026-10-24",
+      "cleanup": "A6 structural base + recorded masked anchor interior transfers; 04 connected weapon translation19px; raw generated full frames not adopted.",
+      "review_segment": "spike-02 A7",
+      "review_authority": "model inspection; not Owner approval or human playtest",
+      "palette_distance": {
+        "before": 5.760951,
+        "after": 0.70966,
+        "metric": "mean nearest idle/01 128-color Euclidean RGB, alpha>240"
+      },
+      "region_review": {
+        "face_hair": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced.",
+        "stole": "FAIL: A6 panel widths/fall remain; small texture patches cannot establish anchor drape through the pose.",
+        "embroidery": "FAIL: visible source sprig pixels transferred, but partial occlusion, alignment and residual A6 strokes do not establish the exact two motifs.",
+        "tassels": "FAIL: source fringe interior does not replace every A6 panel-edge tip; attachment/edge count still varies.",
+        "cuffs": "FAIL: retained A6 fold/edge shape differs from anchors; coherent structure alone does not meet exact appearance spec.",
+        "hem": "FAIL: A6 silhouette is continuous, but width and inner pleats still pop relative to fixed endpoints.",
+        "palette": "PASS: only original A6 and anchor colours, no new grading; masked blends remain in original muted teal/ivory/leather families.",
+        "seams": "FAIL: local face/stole texture transitions remain visible at 1x; seam-free anchor transfer is not achieved.",
+        "bag_count": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used.",
+        "feet": "PASS: both connected A6 boots and lower leg pixels unchanged; no detached shoe or cropped ground.",
+        "mace": "PASS: A6 mace/haft/collar/grip source pixels retained; 04 moves the connected hand/weapon19px without rescaling.",
+        "landmarks": "FAIL: target vs actual full joint/hand/face positions exceed4px on multiple landmarks; exact contact03 and head arc alone do not pass all joints.",
+        "sequence": "FAIL: face silhouette, panel/hem outline and motif/fringe changes remain through consecutive actual rendered poses."
+      },
+      "bag_count": 1,
+      "bag_count_authority": "model count in whole figure and bag crop"
+    },
+    "thoma/swing/04.png": {
+      "path": "thoma/swing/04.png",
+      "sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "source": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-2.png",
+      "raw_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "registration": [
+        607,
+        1167,
+        110,
+        342
+      ],
+      "status": "PLACEHOLDER",
+      "weapon_status": "APPROVED",
+      "reason": "Anchor interior details corrected; outer face, drape, fringe and local seams remain unacceptable; full art acceptance FAIL.",
+      "style_review": {
+        "face": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced.",
+        "stole_cape_embroidery": "FAIL: visible source sprig pixels transferred, but partial occlusion, alignment and residual A6 strokes do not establish the exact two motifs.",
+        "cuffs": "FAIL: local cloth bridge above lowered hand is visible; smooth arm/cuff continuity not achieved.",
+        "hem_silhouette": "FAIL: A6 silhouette is continuous, but width and inner pleats still pop relative to fixed endpoints.",
+        "palette": "PASS: only original A6 and anchor colours, no new grading; masked blends remain in original muted teal/ivory/leather families.",
+        "stroke": "FAIL: rectangular-looking cloth bridge and local stole texture joins remain; this is a regression from A6 seamless whole painting.",
+        "satchel_medallion": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used."
+      },
+      "weapon_approval": "Owner, 2026-10-24",
+      "cleanup": "A6 structural base + recorded masked anchor interior transfers; 04 connected weapon translation19px; raw generated full frames not adopted.",
+      "review_segment": "spike-02 A7",
+      "review_authority": "model inspection; not Owner approval or human playtest",
+      "palette_distance": {
+        "before": 5.630703,
+        "after": 0.660794,
+        "metric": "mean nearest idle/01 128-color Euclidean RGB, alpha>240"
+      },
+      "region_review": {
+        "face_hair": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced.",
+        "stole": "FAIL: A6 panel widths/fall remain; small texture patches cannot establish anchor drape through the pose.",
+        "embroidery": "FAIL: visible source sprig pixels transferred, but partial occlusion, alignment and residual A6 strokes do not establish the exact two motifs.",
+        "tassels": "FAIL: source fringe interior does not replace every A6 panel-edge tip; attachment/edge count still varies.",
+        "cuffs": "FAIL: local cloth bridge above lowered hand is visible; smooth arm/cuff continuity not achieved.",
+        "hem": "FAIL: A6 silhouette is continuous, but width and inner pleats still pop relative to fixed endpoints.",
+        "palette": "PASS: only original A6 and anchor colours, no new grading; masked blends remain in original muted teal/ivory/leather families.",
+        "seams": "FAIL: rectangular-looking cloth bridge and local stole texture joins remain; this is a regression from A6 seamless whole painting.",
+        "bag_count": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used.",
+        "feet": "PASS: both connected A6 boots and lower leg pixels unchanged; no detached shoe or cropped ground.",
+        "mace": "PASS: A6 mace/haft/collar/grip source pixels retained; 04 moves the connected hand/weapon19px without rescaling.",
+        "landmarks": "FAIL: target vs actual full joint/hand/face positions exceed4px on multiple landmarks; exact contact03 and head arc alone do not pass all joints.",
+        "sequence": "FAIL: face silhouette, panel/hem outline and motif/fringe changes remain through consecutive actual rendered poses."
+      },
+      "bag_count": 1,
+      "bag_count_authority": "model count in whole figure and bag crop"
+    },
+    "thoma/swing/05.png": {
+      "path": "thoma/swing/05.png",
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "source": "raw/thoma-mace-swing-05.png",
+      "raw_sha256": "e89296c8cd0a799e8d5302caf1f611aaa241e84f2a2c4ff56f8b77f4153f31dd",
+      "registration": [
+        673,
+        1217,
+        85,
+        360
+      ],
+      "status": "PASS",
+      "weapon_status": "APPROVED",
+      "reason": "Immutable reference endpoint, not Owner art approval.",
+      "style_review": {
+        "face": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "stole_cape_embroidery": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "cuffs": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "hem_silhouette": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "palette": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "stroke": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "satchel_medallion": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+      },
+      "weapon_approval": "Owner, 2026-10-24",
+      "review_segment": "spike-02 A7",
+      "review_authority": "model inspection; not Owner approval or human playtest",
+      "palette_distance": {
+        "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
+        "value": 0.0,
+        "not_a_perceptual_quality_score": true
+      },
+      "region_review": {
+        "face_hair": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "stole": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "embroidery": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "tassels": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "cuffs": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "hem": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "palette": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "seams": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "bag_count": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "feet": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "mace": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "landmarks": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames.",
+        "sequence": "PASS: byte-identical anchor endpoint, appearance source; transition failures assigned to motion frames."
+      },
+      "bag_count": 1,
+      "bag_count_authority": "model count in whole figure and bag crop"
+    },
+    "thoma/swing/02.png": {
+      "path": "thoma/swing/02.png",
+      "sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+      "source": "godot-spike/docs/evidence/spike02-a7/attempts/02/attempt-1.png",
+      "raw_sha256": "e365138c504538f3b54821925324c4c70b37f44e05bdfcbaa31a991a7e0d3968",
+      "registration": [
+        575,
+        1205,
+        133,
+        350
+      ],
+      "status": "PLACEHOLDER",
+      "weapon_status": "APPROVED",
+      "reason": "Anchor interior details corrected; outer face, drape, fringe and local seams remain unacceptable; full art acceptance FAIL.",
+      "style_review": {
+        "face": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced.",
+        "stole_cape_embroidery": "FAIL: right donor is visibly misregistered and leaves a residual A6 sprig alongside the transferred patch; exact motif count/placement fails.",
+        "cuffs": "FAIL: retained A6 fold/edge shape differs from anchors; coherent structure alone does not meet exact appearance spec.",
+        "hem_silhouette": "FAIL: A6 silhouette is continuous, but width and inner pleats still pop relative to fixed endpoints.",
+        "palette": "PASS: only original A6 and anchor colours, no new grading; masked blends remain in original muted teal/ivory/leather families.",
+        "stroke": "FAIL: local face/stole texture transitions remain visible at 1x; seam-free anchor transfer is not achieved.",
+        "satchel_medallion": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used."
+      },
+      "weapon_approval": "Owner, 2026-10-24",
+      "cleanup": "A6 structural base + recorded masked anchor interior transfers; 04 connected weapon translation19px; raw generated full frames not adopted.",
+      "review_segment": "spike-02 A7",
+      "review_authority": "model inspection; not Owner approval or human playtest",
+      "palette_distance": {
+        "before": 6.622218,
+        "after": 0.576556,
+        "metric": "mean nearest idle/01 128-color Euclidean RGB, alpha>240"
+      },
+      "region_review": {
+        "face_hair": "FAIL: copied anchor interior improves features, but A6 outer hair/cheek silhouette and clipped edge remain; full anchor identity not reproduced.",
+        "stole": "FAIL: A6 panel widths/fall remain; small texture patches cannot establish anchor drape through the pose.",
+        "embroidery": "FAIL: right donor is visibly misregistered and leaves a residual A6 sprig alongside the transferred patch; exact motif count/placement fails.",
+        "tassels": "FAIL: source fringe interior does not replace every A6 panel-edge tip; attachment/edge count still varies.",
+        "cuffs": "FAIL: retained A6 fold/edge shape differs from anchors; coherent structure alone does not meet exact appearance spec.",
+        "hem": "FAIL: A6 silhouette is continuous, but width and inner pleats still pop relative to fixed endpoints.",
+        "palette": "PASS: only original A6 and anchor colours, no new grading; masked blends remain in original muted teal/ivory/leather families.",
+        "seams": "FAIL: local face/stole texture transitions remain visible at 1x; seam-free anchor transfer is not achieved.",
+        "bag_count": "PASS: exactly one unchanged A6 satchel with one cloth roll; no bag-bearing patch used.",
+        "feet": "PASS: both connected A6 boots and lower leg pixels unchanged; no detached shoe or cropped ground.",
+        "mace": "PASS: A6 mace/haft/collar/grip source pixels retained; 04 moves the connected hand/weapon19px without rescaling.",
+        "landmarks": "FAIL: target vs actual full joint/hand/face positions exceed4px on multiple landmarks; exact contact03 and head arc alone do not pass all joints.",
+        "sequence": "FAIL: face silhouette, panel/hem outline and motif/fringe changes remain through consecutive actual rendered poses."
+      },
+      "bag_count": 1,
+      "bag_count_authority": "model count in whole figure and bag crop"
+    }
+  },
+  "limits": "Source-crop visual evidence, not human/Owner approval. Motion ROIs include changing pose. Raw pixels, not the approximate branch/fringe count, are appearance authority."
+}

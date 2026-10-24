@@ -1,0 +1,9 @@
+| Frame | Status | face_hair | stole | embroidery | tassels | cuffs | hem | palette | seams | bag_count | feet | mace | landmarks | sequence | Reason |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `thoma/idle/01.png` | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | 1 PASS | PASS | PASS | PASS | PASS | Immutable reference endpoint, not Owner art approval. |
+| `thoma/swing/00.png` | PLACEHOLDER | FAIL | FAIL | FAIL | FAIL | FAIL | FAIL | PASS | FAIL | 1 PASS | PASS | PASS | FAIL | FAIL | Anchor interior details corrected; outer face, drape, fringe and local seams remain unacceptable; full art acceptance FAIL. |
+| `thoma/swing/01.png` | PLACEHOLDER | FAIL | FAIL | FAIL | FAIL | FAIL | FAIL | PASS | FAIL | 1 PASS | PASS | PASS | FAIL | FAIL | Anchor interior details corrected; outer face, drape, fringe and local seams remain unacceptable; full art acceptance FAIL. |
+| `thoma/swing/03.png` | PLACEHOLDER | FAIL | FAIL | FAIL | FAIL | FAIL | FAIL | PASS | FAIL | 1 PASS | PASS | PASS | FAIL | FAIL | Anchor interior details corrected; outer face, drape, fringe and local seams remain unacceptable; full art acceptance FAIL. |
+| `thoma/swing/04.png` | PLACEHOLDER | FAIL | FAIL | FAIL | FAIL | FAIL | FAIL | PASS | FAIL | 1 PASS | PASS | PASS | FAIL | FAIL | Anchor interior details corrected; outer face, drape, fringe and local seams remain unacceptable; full art acceptance FAIL. |
+| `thoma/swing/05.png` | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | 1 PASS | PASS | PASS | PASS | PASS | Immutable reference endpoint, not Owner art approval. |
+| `thoma/swing/02.png` | PLACEHOLDER | FAIL | FAIL | FAIL | FAIL | FAIL | FAIL | PASS | FAIL | 1 PASS | PASS | PASS | FAIL | FAIL | Anchor interior details corrected; outer face, drape, fringe and local seams remain unacceptable; full art acceptance FAIL. |

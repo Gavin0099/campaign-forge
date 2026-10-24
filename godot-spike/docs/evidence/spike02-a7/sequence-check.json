@@ -1,0 +1,1254 @@
+{
+  "pairs": [
+    {
+      "from": "thoma/idle/01.png",
+      "to": "thoma/swing/00.png",
+      "region_mean_rgb_delta": {
+        "face_hair": 2.49284,
+        "stole": 9.3433,
+        "embroidery": 20.07834,
+        "tassels": 12.80832,
+        "cuffs": 11.62074,
+        "hem": 15.10283,
+        "palette": 13.46578,
+        "seams": 11.14659,
+        "bag_count": 7.11376,
+        "feet": 29.1059,
+        "mace": 11.93766,
+        "landmarks": 12.49822,
+        "sequence": 12.49822
+      },
+      "runtime_mask_bounds": {
+        "face_hair": [
+          [
+            360,
+            205,
+            379,
+            220
+          ],
+          [
+            381,
+            202,
+            402,
+            220
+          ]
+        ],
+        "stole": [
+          [
+            363,
+            211,
+            383,
+            246
+          ],
+          [
+            384,
+            210,
+            407,
+            249
+          ]
+        ],
+        "embroidery": [
+          [
+            364,
+            232,
+            382,
+            245
+          ],
+          [
+            385,
+            233,
+            405,
+            249
+          ]
+        ],
+        "tassels": [
+          [
+            364,
+            237,
+            382,
+            246
+          ],
+          [
+            385,
+            239,
+            405,
+            249
+          ]
+        ],
+        "cuffs": [
+          [
+            352,
+            207,
+            394,
+            234
+          ],
+          [
+            372,
+            205,
+            419,
+            236
+          ]
+        ],
+        "hem": [
+          [
+            354,
+            239,
+            394,
+            252
+          ],
+          [
+            373,
+            241,
+            419,
+            256
+          ]
+        ],
+        "palette": [
+          [
+            362,
+            215,
+            385,
+            250
+          ],
+          [
+            383,
+            214,
+            409,
+            254
+          ]
+        ],
+        "seams": [
+          [
+            360,
+            211,
+            383,
+            246
+          ],
+          [
+            381,
+            210,
+            407,
+            249
+          ]
+        ],
+        "bag_count": [
+          [
+            373,
+            223,
+            386,
+            237
+          ],
+          [
+            395,
+            224,
+            410,
+            239
+          ]
+        ],
+        "feet": [
+          [
+            354,
+            245,
+            394,
+            255
+          ],
+          [
+            373,
+            248,
+            419,
+            260
+          ]
+        ],
+        "mace": [
+          [
+            343,
+            201,
+            394,
+            246
+          ],
+          [
+            361,
+            199,
+            419,
+            250
+          ]
+        ],
+        "landmarks": [
+          [
+            343,
+            201,
+            394,
+            255
+          ],
+          [
+            361,
+            199,
+            419,
+            260
+          ]
+        ],
+        "sequence": [
+          [
+            343,
+            201,
+            394,
+            255
+          ],
+          [
+            361,
+            199,
+            419,
+            260
+          ]
+        ]
+      },
+      "garment_silhouette_iou": 0.697267,
+      "iou_source": "source alpha in registered512px garment ROI; NOT a segmentation of rendered RGB",
+      "character_height_delta_px": -12.631,
+      "visual_result": "FAIL",
+      "reason": "Remaining face/stole/hem differences and local texture joins pop between poses; proxy values cannot grant acceptance."
+    },
+    {
+      "from": "thoma/swing/00.png",
+      "to": "thoma/swing/01.png",
+      "region_mean_rgb_delta": {
+        "face_hair": 9.81113,
+        "stole": 10.12351,
+        "embroidery": 10.50083,
+        "tassels": 5.9193,
+        "cuffs": 13.90126,
+        "hem": 11.06944,
+        "palette": 12.85516,
+        "seams": 12.44432,
+        "bag_count": 11.57726,
+        "feet": 16.2504,
+        "mace": 11.59297,
+        "landmarks": 11.85692,
+        "sequence": 11.85692
+      },
+      "runtime_mask_bounds": {
+        "face_hair": [
+          [
+            381,
+            202,
+            402,
+            220
+          ],
+          [
+            450,
+            223,
+            476,
+            245
+          ]
+        ],
+        "stole": [
+          [
+            384,
+            210,
+            407,
+            249
+          ],
+          [
+            454,
+            233,
+            482,
+            281
+          ]
+        ],
+        "embroidery": [
+          [
+            385,
+            233,
+            405,
+            249
+          ],
+          [
+            455,
+            262,
+            480,
+            280
+          ]
+        ],
+        "tassels": [
+          [
+            385,
+            239,
+            405,
+            249
+          ],
+          [
+            455,
+            269,
+            480,
+            281
+          ]
+        ],
+        "cuffs": [
+          [
+            372,
+            205,
+            419,
+            236
+          ],
+          [
+            439,
+            227,
+            497,
+            264
+          ]
+        ],
+        "hem": [
+          [
+            373,
+            241,
+            419,
+            256
+          ],
+          [
+            441,
+            271,
+            497,
+            290
+          ]
+        ],
+        "palette": [
+          [
+            383,
+            214,
+            409,
+            254
+          ],
+          [
+            453,
+            237,
+            485,
+            287
+          ]
+        ],
+        "seams": [
+          [
+            381,
+            210,
+            407,
+            249
+          ],
+          [
+            450,
+            233,
+            482,
+            281
+          ]
+        ],
+        "bag_count": [
+          [
+            395,
+            224,
+            410,
+            239
+          ],
+          [
+            468,
+            250,
+            486,
+            269
+          ]
+        ],
+        "feet": [
+          [
+            373,
+            248,
+            419,
+            260
+          ],
+          [
+            441,
+            279,
+            497,
+            294
+          ]
+        ],
+        "mace": [
+          [
+            361,
+            199,
+            419,
+            250
+          ],
+          [
+            426,
+            219,
+            498,
+            282
+          ]
+        ],
+        "landmarks": [
+          [
+            361,
+            199,
+            419,
+            260
+          ],
+          [
+            426,
+            219,
+            498,
+            294
+          ]
+        ],
+        "sequence": [
+          [
+            361,
+            199,
+            419,
+            260
+          ],
+          [
+            426,
+            219,
+            498,
+            294
+          ]
+        ]
+      },
+      "garment_silhouette_iou": 0.786611,
+      "iou_source": "source alpha in registered512px garment ROI; NOT a segmentation of rendered RGB",
+      "character_height_delta_px": 1.6212,
+      "visual_result": "FAIL",
+      "reason": "Remaining face/stole/hem differences and local texture joins pop between poses; proxy values cannot grant acceptance."
+    },
+    {
+      "from": "thoma/swing/01.png",
+      "to": "thoma/swing/02.png",
+      "region_mean_rgb_delta": {
+        "face_hair": 13.32325,
+        "stole": 2.25292,
+        "embroidery": 3.15757,
+        "tassels": 4.59175,
+        "cuffs": 1.6029,
+        "hem": 2.78983,
+        "palette": 4.14131,
+        "seams": 4.17297,
+        "bag_count": 16.79573,
+        "feet": 9.06576,
+        "mace": 4.63484,
+        "landmarks": 3.82337,
+        "sequence": 3.82337
+      },
+      "runtime_mask_bounds": {
+        "face_hair": [
+          [
+            450,
+            223,
+            476,
+            245
+          ],
+          [
+            445,
+            240,
+            471,
+            262
+          ]
+        ],
+        "stole": [
+          [
+            454,
+            233,
+            482,
+            281
+          ],
+          [
+            449,
+            250,
+            477,
+            298
+          ]
+        ],
+        "embroidery": [
+          [
+            455,
+            262,
+            480,
+            280
+          ],
+          [
+            450,
+            278,
+            475,
+            297
+          ]
+        ],
+        "tassels": [
+          [
+            455,
+            269,
+            480,
+            281
+          ],
+          [
+            450,
+            286,
+            475,
+            298
+          ]
+        ],
+        "cuffs": [
+          [
+            439,
+            227,
+            497,
+            264
+          ],
+          [
+            434,
+            244,
+            492,
+            281
+          ]
+        ],
+        "hem": [
+          [
+            441,
+            271,
+            497,
+            290
+          ],
+          [
+            436,
+            288,
+            492,
+            306
+          ]
+        ],
+        "palette": [
+          [
+            453,
+            237,
+            485,
+            287
+          ],
+          [
+            448,
+            254,
+            479,
+            304
+          ]
+        ],
+        "seams": [
+          [
+            450,
+            233,
+            482,
+            281
+          ],
+          [
+            445,
+            250,
+            477,
+            298
+          ]
+        ],
+        "bag_count": [
+          [
+            468,
+            250,
+            486,
+            269
+          ],
+          [
+            463,
+            266,
+            480,
+            286
+          ]
+        ],
+        "feet": [
+          [
+            441,
+            279,
+            497,
+            294
+          ],
+          [
+            436,
+            296,
+            492,
+            311
+          ]
+        ],
+        "mace": [
+          [
+            426,
+            219,
+            498,
+            282
+          ],
+          [
+            421,
+            236,
+            493,
+            298
+          ]
+        ],
+        "landmarks": [
+          [
+            426,
+            219,
+            498,
+            294
+          ],
+          [
+            421,
+            236,
+            493,
+            311
+          ]
+        ],
+        "sequence": [
+          [
+            426,
+            219,
+            498,
+            294
+          ],
+          [
+            421,
+            236,
+            493,
+            311
+          ]
+        ]
+      },
+      "garment_silhouette_iou": 0.744629,
+      "iou_source": "source alpha in registered512px garment ROI; NOT a segmentation of rendered RGB",
+      "character_height_delta_px": -0.3616,
+      "visual_result": "FAIL",
+      "reason": "Remaining face/stole/hem differences and local texture joins pop between poses; proxy values cannot grant acceptance."
+    },
+    {
+      "from": "thoma/swing/02.png",
+      "to": "thoma/swing/03.png",
+      "region_mean_rgb_delta": {
+        "face_hair": 22.95609,
+        "stole": 12.78677,
+        "embroidery": 18.78682,
+        "tassels": 19.80152,
+        "cuffs": 10.68146,
+        "hem": 8.82967,
+        "palette": 4.68236,
+        "seams": 7.71134,
+        "bag_count": 28.01839,
+        "feet": 14.54086,
+        "mace": 6.88088,
+        "landmarks": 10.66527,
+        "sequence": 10.66527
+      },
+      "runtime_mask_bounds": {
+        "face_hair": [
+          [
+            445,
+            240,
+            471,
+            262
+          ],
+          [
+            435,
+            254,
+            461,
+            276
+          ]
+        ],
+        "stole": [
+          [
+            449,
+            250,
+            477,
+            298
+          ],
+          [
+            438,
+            263,
+            466,
+            312
+          ]
+        ],
+        "embroidery": [
+          [
+            450,
+            278,
+            475,
+            297
+          ],
+          [
+            439,
+            292,
+            464,
+            311
+          ]
+        ],
+        "tassels": [
+          [
+            450,
+            286,
+            475,
+            298
+          ],
+          [
+            439,
+            299,
+            464,
+            312
+          ]
+        ],
+        "cuffs": [
+          [
+            434,
+            244,
+            492,
+            281
+          ],
+          [
+            424,
+            258,
+            481,
+            295
+          ]
+        ],
+        "hem": [
+          [
+            436,
+            288,
+            492,
+            306
+          ],
+          [
+            425,
+            301,
+            481,
+            320
+          ]
+        ],
+        "palette": [
+          [
+            448,
+            254,
+            479,
+            304
+          ],
+          [
+            437,
+            268,
+            469,
+            317
+          ]
+        ],
+        "seams": [
+          [
+            445,
+            250,
+            477,
+            298
+          ],
+          [
+            435,
+            263,
+            466,
+            312
+          ]
+        ],
+        "bag_count": [
+          [
+            463,
+            266,
+            480,
+            286
+          ],
+          [
+            452,
+            280,
+            470,
+            299
+          ]
+        ],
+        "feet": [
+          [
+            436,
+            296,
+            492,
+            311
+          ],
+          [
+            425,
+            310,
+            481,
+            325
+          ]
+        ],
+        "mace": [
+          [
+            421,
+            236,
+            493,
+            298
+          ],
+          [
+            410,
+            249,
+            482,
+            312
+          ]
+        ],
+        "landmarks": [
+          [
+            421,
+            236,
+            493,
+            311
+          ],
+          [
+            410,
+            249,
+            482,
+            325
+          ]
+        ],
+        "sequence": [
+          [
+            421,
+            236,
+            493,
+            311
+          ],
+          [
+            410,
+            249,
+            482,
+            325
+          ]
+        ]
+      },
+      "garment_silhouette_iou": 0.6744,
+      "iou_source": "source alpha in registered512px garment ROI; NOT a segmentation of rendered RGB",
+      "character_height_delta_px": 5.2198,
+      "visual_result": "FAIL",
+      "reason": "Remaining face/stole/hem differences and local texture joins pop between poses; proxy values cannot grant acceptance."
+    },
+    {
+      "from": "thoma/swing/03.png",
+      "to": "thoma/swing/04.png",
+      "region_mean_rgb_delta": {
+        "face_hair": 34.59125,
+        "stole": 4.69192,
+        "embroidery": 8.8438,
+        "tassels": 17.40002,
+        "cuffs": 4.12486,
+        "hem": 4.00642,
+        "palette": 7.16186,
+        "seams": 5.02677,
+        "bag_count": 2.001,
+        "feet": 3.43257,
+        "mace": 5.6348,
+        "landmarks": 7.1747,
+        "sequence": 7.1747
+      },
+      "runtime_mask_bounds": {
+        "face_hair": [
+          [
+            435,
+            254,
+            461,
+            276
+          ],
+          [
+            443,
+            240,
+            469,
+            262
+          ]
+        ],
+        "stole": [
+          [
+            438,
+            263,
+            466,
+            312
+          ],
+          [
+            446,
+            249,
+            474,
+            298
+          ]
+        ],
+        "embroidery": [
+          [
+            439,
+            292,
+            464,
+            311
+          ],
+          [
+            447,
+            278,
+            473,
+            297
+          ]
+        ],
+        "tassels": [
+          [
+            439,
+            299,
+            464,
+            312
+          ],
+          [
+            447,
+            285,
+            473,
+            298
+          ]
+        ],
+        "cuffs": [
+          [
+            424,
+            258,
+            481,
+            295
+          ],
+          [
+            432,
+            244,
+            489,
+            281
+          ]
+        ],
+        "hem": [
+          [
+            425,
+            301,
+            481,
+            320
+          ],
+          [
+            433,
+            287,
+            489,
+            306
+          ]
+        ],
+        "palette": [
+          [
+            437,
+            268,
+            469,
+            317
+          ],
+          [
+            446,
+            254,
+            477,
+            303
+          ]
+        ],
+        "seams": [
+          [
+            435,
+            263,
+            466,
+            312
+          ],
+          [
+            443,
+            249,
+            474,
+            298
+          ]
+        ],
+        "bag_count": [
+          [
+            452,
+            280,
+            470,
+            299
+          ],
+          [
+            460,
+            266,
+            478,
+            285
+          ]
+        ],
+        "feet": [
+          [
+            425,
+            310,
+            481,
+            325
+          ],
+          [
+            433,
+            296,
+            489,
+            311
+          ]
+        ],
+        "mace": [
+          [
+            410,
+            249,
+            482,
+            312
+          ],
+          [
+            418,
+            235,
+            490,
+            298
+          ]
+        ],
+        "landmarks": [
+          [
+            410,
+            249,
+            482,
+            325
+          ],
+          [
+            418,
+            235,
+            490,
+            311
+          ]
+        ],
+        "sequence": [
+          [
+            410,
+            249,
+            482,
+            325
+          ],
+          [
+            418,
+            235,
+            490,
+            311
+          ]
+        ]
+      },
+      "garment_silhouette_iou": 0.787344,
+      "iou_source": "source alpha in registered512px garment ROI; NOT a segmentation of rendered RGB",
+      "character_height_delta_px": 1.3756,
+      "visual_result": "FAIL",
+      "reason": "Remaining face/stole/hem differences and local texture joins pop between poses; proxy values cannot grant acceptance."
+    },
+    {
+      "from": "thoma/swing/04.png",
+      "to": "thoma/swing/05.png",
+      "region_mean_rgb_delta": {
+        "face_hair": 18.37856,
+        "stole": 9.83711,
+        "embroidery": 30.37586,
+        "tassels": 37.07306,
+        "cuffs": 1.89612,
+        "hem": 17.6185,
+        "palette": 12.20678,
+        "seams": 10.55493,
+        "bag_count": 7.38217,
+        "feet": 13.32189,
+        "mace": 2.14223,
+        "landmarks": 4.39989,
+        "sequence": 4.39989
+      },
+      "runtime_mask_bounds": {
+        "face_hair": [
+          [
+            443,
+            240,
+            469,
+            262
+          ],
+          [
+            458,
+            210,
+            484,
+            232
+          ]
+        ],
+        "stole": [
+          [
+            446,
+            249,
+            474,
+            298
+          ],
+          [
+            462,
+            220,
+            490,
+            268
+          ]
+        ],
+        "embroidery": [
+          [
+            447,
+            278,
+            473,
+            297
+          ],
+          [
+            463,
+            249,
+            488,
+            267
+          ]
+        ],
+        "tassels": [
+          [
+            447,
+            285,
+            473,
+            298
+          ],
+          [
+            463,
+            256,
+            488,
+            268
+          ]
+        ],
+        "cuffs": [
+          [
+            432,
+            244,
+            489,
+            281
+          ],
+          [
+            447,
+            214,
+            505,
+            251
+          ]
+        ],
+        "hem": [
+          [
+            433,
+            287,
+            489,
+            306
+          ],
+          [
+            449,
+            258,
+            505,
+            277
+          ]
+        ],
+        "palette": [
+          [
+            446,
+            254,
+            477,
+            303
+          ],
+          [
+            461,
+            224,
+            493,
+            274
+          ]
+        ],
+        "seams": [
+          [
+            443,
+            249,
+            474,
+            298
+          ],
+          [
+            458,
+            220,
+            490,
+            268
+          ]
+        ],
+        "bag_count": [
+          [
+            460,
+            266,
+            478,
+            285
+          ],
+          [
+            476,
+            237,
+            493,
+            256
+          ]
+        ],
+        "feet": [
+          [
+            433,
+            296,
+            489,
+            311
+          ],
+          [
+            449,
+            266,
+            505,
+            281
+          ]
+        ],
+        "mace": [
+          [
+            418,
+            235,
+            490,
+            298
+          ],
+          [
+            434,
+            206,
+            506,
+            269
+          ]
+        ],
+        "landmarks": [
+          [
+            418,
+            235,
+            490,
+            311
+          ],
+          [
+            434,
+            206,
+            506,
+            281
+          ]
+        ],
+        "sequence": [
+          [
+            418,
+            235,
+            490,
+            311
+          ],
+          [
+            434,
+            206,
+            506,
+            281
+          ]
+        ]
+      },
+      "garment_silhouette_iou": 0.652774,
+      "iou_source": "source alpha in registered512px garment ROI; NOT a segmentation of rendered RGB",
+      "character_height_delta_px": 14.776,
+      "visual_result": "FAIL",
+      "reason": "Remaining face/stole/hem differences and local texture joins pop between poses; proxy values cannot grant acceptance."
+    }
+  ],
+  "authority": "actual rendered-frame RGB measured under transformed source-alpha masks; source silhouette separately labelled",
+  "limits": "Masks can include antialiasing/background occlusion, camera interpolation and transient hit flash. They are measurable proxies, not proof of no flicker."
+}
