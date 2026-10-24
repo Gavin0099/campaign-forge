@@ -1,0 +1,122 @@
+{
+	"checks": {
+		"continuous_battle_win": true,
+		"continuous_turn12": true,
+		"warning_one_full_turn_ahead": true
+	},
+	"engine": "4.7.2-stable (official)",
+	"human": "HUMAN_PENDING",
+	"mode": "stills",
+	"pass": true,
+	"renderer": "AMD Radeon 780M Graphics",
+	"shots": [
+		{
+			"camera": "(960.0, 614.25)",
+			"file": "deployment.png",
+			"mode": "stills",
+			"phase": "player",
+			"resolution": [
+				1280,
+				720
+			],
+			"turn": 1,
+			"zoom": "(1.0, 1.0)"
+		},
+		{
+			"camera": "(1860.8, 1051.785)",
+			"file": "first-contact.png",
+			"mode": "stills",
+			"phase": "player",
+			"resolution": [
+				1280,
+				720
+			],
+			"turn": 2,
+			"zoom": "(1.46, 1.46)"
+		},
+		{
+			"camera": "(1708.054, 1117.43)",
+			"file": "enemy-phase.png",
+			"mode": "stills",
+			"phase": "enemy",
+			"resolution": [
+				1280,
+				720
+			],
+			"turn": 2,
+			"zoom": "(1.0, 1.0)"
+		},
+		{
+			"camera": "(1620.8, 1074.465)",
+			"file": "melee-hit.png",
+			"mode": "stills",
+			"phase": "player",
+			"resolution": [
+				1280,
+				720
+			],
+			"turn": 3,
+			"zoom": "(1.46, 1.46)"
+		},
+		{
+			"camera": "(2840.0, 1323.0)",
+			"file": "reinforcement-warning.png",
+			"mode": "stills",
+			"phase": "player",
+			"resolution": [
+				1280,
+				720
+			],
+			"turn": 4,
+			"zoom": "(1.0, 1.0)"
+		},
+		{
+			"camera": "(1346.514, 1069.551)",
+			"file": "ranged-attack.png",
+			"mode": "stills",
+			"phase": "player",
+			"resolution": [
+				1280,
+				720
+			],
+			"turn": 4,
+			"zoom": "(1.370067, 1.370067)"
+		},
+		{
+			"camera": "(2560.0, 1086.75)",
+			"file": "reinforcement-arrival.png",
+			"mode": "stills",
+			"phase": "player",
+			"resolution": [
+				1280,
+				720
+			],
+			"turn": 5,
+			"zoom": "(1.0, 1.0)"
+		},
+		{
+			"camera": "(1680.0, 992.25)",
+			"file": "mid-battle-overview.png",
+			"mode": "stills",
+			"phase": "player",
+			"resolution": [
+				1280,
+				720
+			],
+			"turn": 6,
+			"zoom": "(0.183408, 0.183408)"
+		},
+		{
+			"camera": "(2086.007, 1373.798)",
+			"file": "win.png",
+			"mode": "stills",
+			"phase": "finished",
+			"resolution": [
+				1280,
+				720
+			],
+			"turn": 12,
+			"zoom": "(1.0, 1.0)"
+		}
+	]
+}

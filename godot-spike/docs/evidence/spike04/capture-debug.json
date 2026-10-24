@@ -1,0 +1,24 @@
+{
+	"checks": {
+		"parsed_debug": true
+	},
+	"engine": "4.7.2-stable (official)",
+	"human": "HUMAN_PENDING",
+	"mode": "debug",
+	"pass": true,
+	"renderer": "AMD Radeon 780M Graphics",
+	"shots": [
+		{
+			"camera": "(960.0, 614.25)",
+			"file": "debug-overlay.png",
+			"mode": "debug",
+			"phase": "player",
+			"resolution": [
+				1280,
+				720
+			],
+			"turn": 1,
+			"zoom": "(1.0, 1.0)"
+		}
+	]
+}

@@ -84,3 +84,22 @@ func test_parsed_keyboard_select_cursor_wait_end_turn_and_restart() -> void:
 	battle.restart()
 	assert_eq(battle.state.turn,1)
 	assert_false(Rules.unit(battle.state,"guard").acted)
+
+func test_mouse_handler_uses_event_position_for_preview_and_confirm() -> void:
+	# A button event need not first warp the OS mouse. Its viewport position is
+	# authoritative, including when the camera has scrolled.
+	battle.camera.pan_to(battle.center(Vector2i(3,9)))
+	for i in range(2):
+		var click := InputEventMouseButton.new()
+		click.position=battle.world.get_global_transform_with_canvas()*battle.center(Vector2i(4,9))
+		click.button_index=MOUSE_BUTTON_LEFT
+		click.pressed=true
+		# GUT's own GUI intercepts viewport clicks in headless runs. Exercise the
+		# scene handler here; capture_field's rendered sequence parses real events.
+		battle._unhandled_input(click)
+		await get_tree().process_frame
+		if i==0:
+			assert_eq(battle.pending.get("type"),"move")
+			assert_eq(Rules.unit(battle.state,"thoma").cell,Vector2i(3,9))
+	while battle.busy: await get_tree().process_frame
+	assert_eq(Rules.unit(battle.state,"thoma").cell,Vector2i(4,9))

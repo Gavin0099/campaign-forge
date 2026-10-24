@@ -1,0 +1,22 @@
+{
+  "scroll-select-move-attack-60fps": {
+    "frames": 136,
+    "fps": 60,
+    "resolution": [
+      1280,
+      720
+    ],
+    "sha256": "c0fd799e7b5e4973b6e07f1c3c329d2519cf968cdf36eea59738a0282ca55833",
+    "bytes": 14577498
+  },
+  "enemy-phase-60fps": {
+    "frames": 148,
+    "fps": 60,
+    "resolution": [
+      1280,
+      720
+    ],
+    "sha256": "33c34b12df404c4f9f18103d98e317b55afa9f93f408e2c75c38b4f3db2c0efe",
+    "bytes": 15768480
+  }
+}

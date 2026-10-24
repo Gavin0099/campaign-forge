@@ -1,0 +1,27 @@
+{
+	"context": "Road policy immediately before turn2 enemy phase, no rule changes",
+	"duration": [
+		{
+			"fast": false,
+			"seconds": 6.473715,
+			"skip_move": false,
+			"turn": 2
+		}
+	],
+	"timings": [
+		{
+			"crit": false,
+			"kind": "knight",
+			"process_seconds": 0.633333333333334,
+			"reduced": false,
+			"wall_seconds": 2.103573
+		},
+		{
+			"crit": false,
+			"kind": "knight",
+			"process_seconds": 0.633333333333334,
+			"reduced": false,
+			"wall_seconds": 1.939176
+		}
+	]
+}

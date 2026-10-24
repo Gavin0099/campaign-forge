@@ -17,6 +17,7 @@ var minimap_panel: Panel
 var indicators
 var warning := {}
 var minimap_collapsed := false
+var camera_hints: Label
 
 func panel(at: Vector2, dimensions: Vector2) -> Panel:
 	var p := Panel.new()
@@ -84,7 +85,7 @@ func _ready() -> void:
 	indicators.battle=battle
 	indicators.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	root.add_child(indicators)
-	label(root,"WASD／方向鍵 捲動 · 中鍵 拖曳 · 滾輪 縮放 · O 全圖 · F 定位 · E 邊緣 OFF",Vector2(34,548),14)
+	camera_hints=label(root,"WASD／方向鍵 捲動 · 中鍵 拖曳 · 滾輪 縮放 · O 全圖 · F 定位 · E 邊緣 OFF",Vector2(34,548),14)
 	update_state()
 
 func toggle_minimap() -> void:
@@ -102,7 +103,7 @@ func on_event(event: Dictionary) -> void:
 
 func update_state() -> void:
 	var s: Dictionary = battle.state
-	title.text="渡口・PLACEHOLDER  |  第 %d / %d 回合・%s" % [s.turn,s.level.turn_limit,"我方" if s.phase=="player" else "敵方"]
+	title.text="渡口・PLACEHOLDER  |  第 %d / %d 回合・%s" % [s.turn,s.level.turn_limit,"戰鬥結束" if s.status!="playing" else ("我方" if s.phase=="player" else "敵方")]
 	objective.text="目標：擊敗領袖 ◆　失敗：托瑪倒下／超過 %d 回合　｜24×18・無迷霧・測試值" % s.level.turn_limit
 	var u: Dictionary = battle.Rules.unit(s,battle.selected_id)
 	selected.text="選擇隊員" if u.is_empty() else "%s　%s　HP %d/%d　移動 %d　射程 %d–%d　%s" % [battle.display_name(u),battle.kind_name(u.kind),u.hp,u.max_hp,s.level.stats[u.kind].move,s.level.stats[u.kind].min_range,s.level.stats[u.kind].max_range,"已行動" if u.acted else ("已移動／可攻擊或等待" if u.moved else "可移動後攻擊或等待")]
@@ -113,10 +114,16 @@ func update_state() -> void:
 	if s.warned and not s.spawned:
 		notice.text="增援：第 %d 回合，東北入口，3 名騎士（到場當回合休息）" % s.level.reinforcement_turn
 	if result_panel.visible:
-		result_label.text=("勝利・領袖已敗" if s.status=="win" else "敗北・重新整隊")+"\n第 %d 回合" % s.turn
+		result_label.text=("勝利・領袖已敗" if s.status=="win" else "敗北・重新整隊")+" · 第 %d 回合" % s.turn
+		result_label.add_theme_font_size_override("font_size",22)
 		result_panel.get_child(result_panel.get_child_count()-1).grab_focus()
 	debug.visible=battle.debug_visible
 	debug.text="F1 DEBUG  ·  PLACEHOLDER\nzoom %.2f · 96px figures · 160×94.5px diamond\nM Reduced Motion: %s · B fast: %s · X skip move: %s\nAttacks: %d · last %.3fs" % [battle.camera.zoom.x,battle.reduced_motion,battle.fast_forward,battle.skip_enemy_movement,battle.attack_timings.size(),battle.impact.last_seconds]
+	debug.text+="\nFirst contact: turn %d · JSON: .godot/spike04/live-telemetry.json" % battle.telemetry.first_contact_turn
+	debug.text+="\nResult: %s / turn%d · last enemy phase %.3fs" % [s.status,s.turn,0.0 if battle.enemy_times.is_empty() else battle.enemy_times.back().seconds]
+	for kind in battle.telemetry.totals:
+		var t: Dictionary = battle.telemetry.totals[kind]
+		debug.text+="\n%s move %.2f · attacks%d · dmg%d/%d · kills%d · idle%d" % [kind,float(t.move_steps)/maxi(1,t.unit_turns),t.attacks,t.damage_dealt,t.damage_taken,t.kills,t.idle_turns]
 
 func hover(cell: Vector2i) -> void:
 	var u: Dictionary = battle.Rules.occupant(battle.state,cell)

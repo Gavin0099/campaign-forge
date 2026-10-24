@@ -1,0 +1,32 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+---  GUT  ---
+[INFO]:  using [C:/Users/daish/AppData/Roaming/Godot/app_userdata/Campaign Forge — Impact Study] for temporary output.
+Godot version:  4.7.2
+GUT version:  9.7.1
+
+
+res://tests/test_field_autoplay.gd
+* test_authored_main_road_has_a_full_win_path_without_routing_every_enemy
+* test_two_other_policies_reach_distinct_terminal_outcomes_deterministically
+* test_telemetry_damage_kills_and_distance_match_events
+3/3 passed.
+
+
+
+
+==============================================
+= Run Summary
+==============================================
+
+Totals
+------
+Scripts               1
+Tests                 3
+Passing Tests         3
+Asserts             371
+Time              8.546s
+
+
+---- All tests passed! ----
+

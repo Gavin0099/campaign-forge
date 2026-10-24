@@ -7,6 +7,18 @@ var profile: ImpactProfile
 var crit := false
 var sfx_trace: Array = []
 var last_seconds := 0.0
+var current_event := {}
+var active := false
+var process_seconds := 0.0
+
+func _process(delta: float) -> void:
+	if active: process_seconds+=delta
+
+func _exit_tree() -> void:
+	for voice in get_children():
+		if voice is AudioStreamPlayer:
+			voice.stop()
+			voice.stream=null
 
 func sound(hook: String) -> void:
 	var voice := AudioStreamPlayer.new()
@@ -80,6 +92,9 @@ func number(at: Vector2, amount: int) -> void:
 	tween.chain().tween_callback(label.queue_free)
 
 func play(event: Dictionary, damage: Dictionary, movement: Dictionary) -> void:
+	current_event=event.duplicate(true)
+	active=true
+	process_seconds=0
 	var started := Time.get_ticks_usec()
 	var attacker: Node2D = battle.actors[event.unit]
 	var victim: Node2D = battle.actors[event.target]
@@ -163,4 +178,5 @@ func play(event: Dictionary, damage: Dictionary, movement: Dictionary) -> void:
 	await get_tree().create_timer(profile.settle_ms/1000,false).timeout
 	battle.camera.finish_return()
 	last_seconds=(Time.get_ticks_usec()-started)/1000000.0
-	battle.attack_timings.append({"kind":event.kind,"reduced":battle.reduced_motion,"crit":crit,"wall_seconds":last_seconds})
+	active=false
+	battle.attack_timings.append({"kind":event.kind,"reduced":battle.reduced_motion,"crit":crit,"wall_seconds":last_seconds,"process_seconds":process_seconds})

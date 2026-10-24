@@ -1,0 +1,414 @@
+WorkerThreadPool: 16 threads, 4 max low-priority.
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+TextServer: Added interface "Dummy"
+TextServer: Added interface "ICU / HarfBuzz / Graphite (Built-in)"
+Accessibility: AccessKit driver loaded.
+Native OpenGL API detected: 3.3: ATI Technologies Inc. - AMD Radeon 780M Graphics
+Accessibility: window 0 adapter created.
+SDL: Init OK!
+Accessibility: window 0 adapter activated.
+Using "winink" pen tablet driver...
+Shader 'CanvasSdfShaderGLES3' SHA256: 01be22750aa8aa44324604f19e9df0da4d1722a317713e76cc1210dbba67d3f4
+Shader 'SkeletonShaderGLES3' SHA256: c6bb66d6b1aa3eba6b4786afbbe8cdcf5032333db05adf03cc6acb7c3f594f98
+Shader 'ParticlesShaderGLES3' SHA256: 53baa85e5fc951527ea2c455ddc0c7d49472becabb9afb10d4caf29f21a0537c
+Shader 'ParticlesCopyShaderGLES3' SHA256: 37c8e21a5dd13e2eeaf333f4665668c7ccac5e597486687d87f1702ed9b94b59
+Shader 'CopyShaderGLES3' SHA256: 9ae3efc6e856614cb839a4498f2acc3f163fd838abd2d2e77fbb340506d6b785
+Shader 'CubemapFilterShaderGLES3' SHA256: d574a253beeb7431b665777199b9d51b2690466dbade69ee5ff3c823224ab678
+Shader 'GlowShaderGLES3' SHA256: 42f18b07f51beb6cbd5ed290a33400da99deaac583b69cc621cbd0f367db030f
+Shader 'PostShaderGLES3' SHA256: 351166de8446bd1f017433f4e3271d7ee26fc7e03ad4932deaa73b657590eb96
+Shader 'FeedShaderGLES3' SHA256: b8b81b3341220262c8db1d5214d2dafd82cde3c831a17f7707b6c2e0af5f4dc7
+Shader 'CanvasShaderGLES3' SHA256: 2c97522862aefdedd506751c468edeea20a6cdbb01fbe0a914158e2389209e8a
+Shader 'CanvasOcclusionShaderGLES3' SHA256: 3593a98e51147d3f1e9c23199fa3da7f40ea3b76f93c0b568037b21630f6396f
+Shader 'SceneShaderGLES3' SHA256: c2aa98583021517c519a44ea7aa27aacc021e0828b1641668d78489e36ccd4e5
+Shader 'SkyShaderGLES3' SHA256: e0ecb5df3ff44861d123cb816b1a13b6d334de109752fd86a2ea6ec36dba66c8
+Shader 'TexBlitShaderGLES3' SHA256: 17e06eaede12b42ed3d149e2d919ea33b2b911bbf039638105f1859c713b3889
+OpenGL API 3.3.0 Core Profile Context 26.10.1.261008 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon 780M Graphics
+
+TextServer: Primary interface set to: "ICU / HarfBuzz / Graphite (Built-in)".
+CORE API HASH: 2004498165
+EDITOR API HASH: 1696660745
+Loading resource: res://tools/capture_field.gd remapped: res://tools/capture_field.gd
+Completed load for: 'res://tools/capture_field.gd' remapped 'res://tools/capture_field.gd' at thread -1
+SceneTreeFTI: traversal method DEFAULT
+Loaded system CA certificates
+Loading resource: res://scenes/levels/Field24x18.tscn remapped: res://scenes/levels/Field24x18.tscn
+Loading resource: res://scripts/levels/field_battle.gd remapped: res://scripts/levels/field_battle.gd
+Loading resource: res://shaders/hit_flash.gdshader remapped: res://shaders/hit_flash.gdshader
+Completed load for: 'res://shaders/hit_flash.gdshader' remapped 'res://shaders/hit_flash.gdshader' at thread -1
+Loading resource: res://art/ui/field-frame.png remapped: res://art/ui/field-frame.png
+Loading resource: res://.godot/imported/field-frame.png-e7967a429e11cb0c1920f79cf8b40867.ctex remapped: res://.godot/imported/field-frame.png-e7967a429e11cb0c1920f79cf8b40867.ctex
+Completed load for: 'res://art/ui/field-frame.png' remapped 'res://art/ui/field-frame.png' at thread -1
+Completed load for: 'res://scripts/levels/field_battle.gd' remapped 'res://scripts/levels/field_battle.gd' at thread -1
+Completed load for: 'res://scenes/levels/Field24x18.tscn' remapped 'res://scenes/levels/Field24x18.tscn' at thread -1
+Loading resource: res://art/bigmap/plain.png remapped: res://art/bigmap/plain.png
+Loading resource: res://.godot/imported/plain.png-d3cc8f6a381dc07bfd922f3a4d631be4.ctex remapped: res://.godot/imported/plain.png-d3cc8f6a381dc07bfd922f3a4d631be4.ctex
+Completed load for: 'res://art/bigmap/plain.png' remapped 'res://art/bigmap/plain.png' at thread -1
+Loading resource: res://art/bigmap/road.png remapped: res://art/bigmap/road.png
+Loading resource: res://.godot/imported/road.png-4d57561fbebc5f92f8f4de4939e8cb69.ctex remapped: res://.godot/imported/road.png-4d57561fbebc5f92f8f4de4939e8cb69.ctex
+Completed load for: 'res://art/bigmap/road.png' remapped 'res://art/bigmap/road.png' at thread -1
+Loading resource: res://art/bigmap/forest.png remapped: res://art/bigmap/forest.png
+Loading resource: res://.godot/imported/forest.png-3b1e48e86ca16b5118fb19dacfb0455a.ctex remapped: res://.godot/imported/forest.png-3b1e48e86ca16b5118fb19dacfb0455a.ctex
+Completed load for: 'res://art/bigmap/forest.png' remapped 'res://art/bigmap/forest.png' at thread -1
+Loading resource: res://art/bigmap/ford.png remapped: res://art/bigmap/ford.png
+Loading resource: res://.godot/imported/ford.png-f8a52e2dde55655eb3d05678980850c2.ctex remapped: res://.godot/imported/ford.png-f8a52e2dde55655eb3d05678980850c2.ctex
+Completed load for: 'res://art/bigmap/ford.png' remapped 'res://art/bigmap/ford.png' at thread -1
+Loading resource: res://art/bigmap/water.png remapped: res://art/bigmap/water.png
+Loading resource: res://.godot/imported/water.png-6ff35bb88b5247636cb85b61467a7e5d.ctex remapped: res://.godot/imported/water.png-6ff35bb88b5247636cb85b61467a7e5d.ctex
+Completed load for: 'res://art/bigmap/water.png' remapped 'res://art/bigmap/water.png' at thread -1
+Loading resource: res://art/bigmap/cliff.png remapped: res://art/bigmap/cliff.png
+Loading resource: res://.godot/imported/cliff.png-7030d0c32af39b5b8faa15b349dc1ced.ctex remapped: res://.godot/imported/cliff.png-7030d0c32af39b5b8faa15b349dc1ced.ctex
+Completed load for: 'res://art/bigmap/cliff.png' remapped 'res://art/bigmap/cliff.png' at thread -1
+Loading resource: res://art/bigmap/defense.png remapped: res://art/bigmap/defense.png
+Loading resource: res://.godot/imported/defense.png-ece09deaebf0668e699dac101016b844.ctex remapped: res://.godot/imported/defense.png-ece09deaebf0668e699dac101016b844.ctex
+Completed load for: 'res://art/bigmap/defense.png' remapped 'res://art/bigmap/defense.png' at thread -1
+Loading resource: res://config/impact_profile.tres remapped: res://config/impact_profile.tres
+Completed load for: 'res://config/impact_profile.tres' remapped 'res://config/impact_profile.tres' at thread -1
+Loading resource: res://art/bigmap/bank.png remapped: res://art/bigmap/bank.png
+Loading resource: res://.godot/imported/bank.png-c8e6d76e1d31232f117e91b7f33de04d.ctex remapped: res://.godot/imported/bank.png-c8e6d76e1d31232f117e91b7f33de04d.ctex
+Completed load for: 'res://art/bigmap/bank.png' remapped 'res://art/bigmap/bank.png' at thread -1
+Loading resource: res://art/bigmap/crossing.png remapped: res://art/bigmap/crossing.png
+Loading resource: res://.godot/imported/crossing.png-74b3ac29a6d4d89d7cc6eb176aa4cd98.ctex remapped: res://.godot/imported/crossing.png-74b3ac29a6d4d89d7cc6eb176aa4cd98.ctex
+Completed load for: 'res://art/bigmap/crossing.png' remapped 'res://art/bigmap/crossing.png' at thread -1
+Loading resource: res://art/bigmap/tree.png remapped: res://art/bigmap/tree.png
+Loading resource: res://.godot/imported/tree.png-842c75d430babaef1a0a8e5b47d43c87.ctex remapped: res://.godot/imported/tree.png-842c75d430babaef1a0a8e5b47d43c87.ctex
+Completed load for: 'res://art/bigmap/tree.png' remapped 'res://art/bigmap/tree.png' at thread -1
+Loading resource: res://art/bigmap/rock.png remapped: res://art/bigmap/rock.png
+Loading resource: res://.godot/imported/rock.png-ff09d91c997c6c8d77e698786922b09a.ctex remapped: res://.godot/imported/rock.png-ff09d91c997c6c8d77e698786922b09a.ctex
+Completed load for: 'res://art/bigmap/rock.png' remapped 'res://art/bigmap/rock.png' at thread -1
+Loading resource: res://art/bigmap/banner.png remapped: res://art/bigmap/banner.png
+Loading resource: res://.godot/imported/banner.png-b1fabdab35ba2d9c84645d70ca2259ca.ctex remapped: res://.godot/imported/banner.png-b1fabdab35ba2d9c84645d70ca2259ca.ctex
+Completed load for: 'res://art/bigmap/banner.png' remapped 'res://art/bigmap/banner.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/idle/01.png remapped: res://art/anim-shared/thoma/idle/01.png
+Loading resource: res://.godot/imported/01.png-c378d18a8c10f9e843a1055cff3ba5dd.ctex remapped: res://.godot/imported/01.png-c378d18a8c10f9e843a1055cff3ba5dd.ctex
+Completed load for: 'res://art/anim-shared/thoma/idle/01.png' remapped 'res://art/anim-shared/thoma/idle/01.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/00.png remapped: res://art/anim-shared/thoma/swing/00.png
+Loading resource: res://.godot/imported/00.png-63de0d97932624c6fb77b36bffebe69c.ctex remapped: res://.godot/imported/00.png-63de0d97932624c6fb77b36bffebe69c.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/00.png' remapped 'res://art/anim-shared/thoma/swing/00.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/01.png remapped: res://art/anim-shared/thoma/swing/01.png
+Loading resource: res://.godot/imported/01.png-74f8ccfb000a26cee392f1d081e7f1ba.ctex remapped: res://.godot/imported/01.png-74f8ccfb000a26cee392f1d081e7f1ba.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/01.png' remapped 'res://art/anim-shared/thoma/swing/01.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/02.png remapped: res://art/anim-shared/thoma/swing/02.png
+Loading resource: res://.godot/imported/02.png-04f562bfd8fec3d202e4da1ad0868708.ctex remapped: res://.godot/imported/02.png-04f562bfd8fec3d202e4da1ad0868708.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/02.png' remapped 'res://art/anim-shared/thoma/swing/02.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/03.png remapped: res://art/anim-shared/thoma/swing/03.png
+Loading resource: res://.godot/imported/03.png-e37dfbb83c7cd0cd45bc0d3b6a7b73dd.ctex remapped: res://.godot/imported/03.png-e37dfbb83c7cd0cd45bc0d3b6a7b73dd.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/03.png' remapped 'res://art/anim-shared/thoma/swing/03.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/04.png remapped: res://art/anim-shared/thoma/swing/04.png
+Loading resource: res://.godot/imported/04.png-0c1293129599bbf6aeaf6c483f1f6c16.ctex remapped: res://.godot/imported/04.png-0c1293129599bbf6aeaf6c483f1f6c16.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/04.png' remapped 'res://art/anim-shared/thoma/swing/04.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/05.png remapped: res://art/anim-shared/thoma/swing/05.png
+Loading resource: res://.godot/imported/05.png-14ae355f3d044ac2c6afc9c13fb8a40c.ctex remapped: res://.godot/imported/05.png-14ae355f3d044ac2c6afc9c13fb8a40c.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/05.png' remapped 'res://art/anim-shared/thoma/swing/05.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/idle/00.png remapped: res://art/anim-shared/knight-a/idle/00.png
+Loading resource: res://.godot/imported/00.png-8c9df32054a9a67ab0d42331e10a4b97.ctex remapped: res://.godot/imported/00.png-8c9df32054a9a67ab0d42331e10a4b97.ctex
+Completed load for: 'res://art/anim-shared/knight-a/idle/00.png' remapped 'res://art/anim-shared/knight-a/idle/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/hit/00.png remapped: res://art/anim-shared/knight-a/hit/00.png
+Loading resource: res://.godot/imported/00.png-a105d19573941a47daa1d01f5f4fc8d1.ctex remapped: res://.godot/imported/00.png-a105d19573941a47daa1d01f5f4fc8d1.ctex
+Completed load for: 'res://art/anim-shared/knight-a/hit/00.png' remapped 'res://art/anim-shared/knight-a/hit/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/hit/01.png remapped: res://art/anim-shared/knight-a/hit/01.png
+Loading resource: res://.godot/imported/01.png-2141143fb08fcc1fce36f4a5e7cd87cd.ctex remapped: res://.godot/imported/01.png-2141143fb08fcc1fce36f4a5e7cd87cd.ctex
+Completed load for: 'res://art/anim-shared/knight-a/hit/01.png' remapped 'res://art/anim-shared/knight-a/hit/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/hit/02.png remapped: res://art/anim-shared/knight-a/hit/02.png
+Loading resource: res://.godot/imported/02.png-50d6983c0b58fcada5ec694bfd598c0d.ctex remapped: res://.godot/imported/02.png-50d6983c0b58fcada5ec694bfd598c0d.ctex
+Completed load for: 'res://art/anim-shared/knight-a/hit/02.png' remapped 'res://art/anim-shared/knight-a/hit/02.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/stagger/00.png remapped: res://art/anim-shared/knight-a/stagger/00.png
+Loading resource: res://.godot/imported/00.png-85389002557a319ed3b1d993e42b2b01.ctex remapped: res://.godot/imported/00.png-85389002557a319ed3b1d993e42b2b01.ctex
+Completed load for: 'res://art/anim-shared/knight-a/stagger/00.png' remapped 'res://art/anim-shared/knight-a/stagger/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/stagger/01.png remapped: res://art/anim-shared/knight-a/stagger/01.png
+Loading resource: res://.godot/imported/01.png-adbf68f93fa88c7b332d1693c8f12f97.ctex remapped: res://.godot/imported/01.png-adbf68f93fa88c7b332d1693c8f12f97.ctex
+Completed load for: 'res://art/anim-shared/knight-a/stagger/01.png' remapped 'res://art/anim-shared/knight-a/stagger/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/stagger/02.png remapped: res://art/anim-shared/knight-a/stagger/02.png
+Loading resource: res://.godot/imported/02.png-1ce655a2660d2bbda87121505a23e211.ctex remapped: res://.godot/imported/02.png-1ce655a2660d2bbda87121505a23e211.ctex
+Completed load for: 'res://art/anim-shared/knight-a/stagger/02.png' remapped 'res://art/anim-shared/knight-a/stagger/02.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/idle/00.png remapped: res://art/anim-shared/knight-b/idle/00.png
+Loading resource: res://.godot/imported/00.png-49c2adf27d241f0f3c65f20e1a223d90.ctex remapped: res://.godot/imported/00.png-49c2adf27d241f0f3c65f20e1a223d90.ctex
+Completed load for: 'res://art/anim-shared/knight-b/idle/00.png' remapped 'res://art/anim-shared/knight-b/idle/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/hit/00.png remapped: res://art/anim-shared/knight-b/hit/00.png
+Loading resource: res://.godot/imported/00.png-6a37316881d8dcf159f5f7696eb2b4f0.ctex remapped: res://.godot/imported/00.png-6a37316881d8dcf159f5f7696eb2b4f0.ctex
+Completed load for: 'res://art/anim-shared/knight-b/hit/00.png' remapped 'res://art/anim-shared/knight-b/hit/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/hit/01.png remapped: res://art/anim-shared/knight-b/hit/01.png
+Loading resource: res://.godot/imported/01.png-358990394a9ba086854dc8353e459f0e.ctex remapped: res://.godot/imported/01.png-358990394a9ba086854dc8353e459f0e.ctex
+Completed load for: 'res://art/anim-shared/knight-b/hit/01.png' remapped 'res://art/anim-shared/knight-b/hit/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/hit/02.png remapped: res://art/anim-shared/knight-b/hit/02.png
+Loading resource: res://.godot/imported/02.png-7756a2097c23a871849c64c7f93fe0d7.ctex remapped: res://.godot/imported/02.png-7756a2097c23a871849c64c7f93fe0d7.ctex
+Completed load for: 'res://art/anim-shared/knight-b/hit/02.png' remapped 'res://art/anim-shared/knight-b/hit/02.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/stagger/00.png remapped: res://art/anim-shared/knight-b/stagger/00.png
+Loading resource: res://.godot/imported/00.png-1e5f9ca715f93e18c31f7c6572173176.ctex remapped: res://.godot/imported/00.png-1e5f9ca715f93e18c31f7c6572173176.ctex
+Completed load for: 'res://art/anim-shared/knight-b/stagger/00.png' remapped 'res://art/anim-shared/knight-b/stagger/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/stagger/01.png remapped: res://art/anim-shared/knight-b/stagger/01.png
+Loading resource: res://.godot/imported/01.png-ee1cfa46eab933f1a3f9925e16f84cff.ctex remapped: res://.godot/imported/01.png-ee1cfa46eab933f1a3f9925e16f84cff.ctex
+Completed load for: 'res://art/anim-shared/knight-b/stagger/01.png' remapped 'res://art/anim-shared/knight-b/stagger/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/stagger/02.png remapped: res://art/anim-shared/knight-b/stagger/02.png
+Loading resource: res://.godot/imported/02.png-5914a194dbf0b3a90b7722f0dcf602a3.ctex remapped: res://.godot/imported/02.png-5914a194dbf0b3a90b7722f0dcf602a3.ctex
+Completed load for: 'res://art/anim-shared/knight-b/stagger/02.png' remapped 'res://art/anim-shared/knight-b/stagger/02.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/idle/01.png remapped: res://art/anim-shared/thoma/idle/01.png
+Loading resource: res://.godot/imported/01.png-c378d18a8c10f9e843a1055cff3ba5dd.ctex remapped: res://.godot/imported/01.png-c378d18a8c10f9e843a1055cff3ba5dd.ctex
+Completed load for: 'res://art/anim-shared/thoma/idle/01.png' remapped 'res://art/anim-shared/thoma/idle/01.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/00.png remapped: res://art/anim-shared/thoma/swing/00.png
+Loading resource: res://.godot/imported/00.png-63de0d97932624c6fb77b36bffebe69c.ctex remapped: res://.godot/imported/00.png-63de0d97932624c6fb77b36bffebe69c.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/00.png' remapped 'res://art/anim-shared/thoma/swing/00.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/01.png remapped: res://art/anim-shared/thoma/swing/01.png
+Loading resource: res://.godot/imported/01.png-74f8ccfb000a26cee392f1d081e7f1ba.ctex remapped: res://.godot/imported/01.png-74f8ccfb000a26cee392f1d081e7f1ba.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/01.png' remapped 'res://art/anim-shared/thoma/swing/01.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/02.png remapped: res://art/anim-shared/thoma/swing/02.png
+Loading resource: res://.godot/imported/02.png-04f562bfd8fec3d202e4da1ad0868708.ctex remapped: res://.godot/imported/02.png-04f562bfd8fec3d202e4da1ad0868708.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/02.png' remapped 'res://art/anim-shared/thoma/swing/02.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/03.png remapped: res://art/anim-shared/thoma/swing/03.png
+Loading resource: res://.godot/imported/03.png-e37dfbb83c7cd0cd45bc0d3b6a7b73dd.ctex remapped: res://.godot/imported/03.png-e37dfbb83c7cd0cd45bc0d3b6a7b73dd.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/03.png' remapped 'res://art/anim-shared/thoma/swing/03.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/04.png remapped: res://art/anim-shared/thoma/swing/04.png
+Loading resource: res://.godot/imported/04.png-0c1293129599bbf6aeaf6c483f1f6c16.ctex remapped: res://.godot/imported/04.png-0c1293129599bbf6aeaf6c483f1f6c16.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/04.png' remapped 'res://art/anim-shared/thoma/swing/04.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/05.png remapped: res://art/anim-shared/thoma/swing/05.png
+Loading resource: res://.godot/imported/05.png-14ae355f3d044ac2c6afc9c13fb8a40c.ctex remapped: res://.godot/imported/05.png-14ae355f3d044ac2c6afc9c13fb8a40c.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/05.png' remapped 'res://art/anim-shared/thoma/swing/05.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/idle/00.png remapped: res://art/anim-shared/knight-a/idle/00.png
+Loading resource: res://.godot/imported/00.png-8c9df32054a9a67ab0d42331e10a4b97.ctex remapped: res://.godot/imported/00.png-8c9df32054a9a67ab0d42331e10a4b97.ctex
+Completed load for: 'res://art/anim-shared/knight-a/idle/00.png' remapped 'res://art/anim-shared/knight-a/idle/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/hit/00.png remapped: res://art/anim-shared/knight-a/hit/00.png
+Loading resource: res://.godot/imported/00.png-a105d19573941a47daa1d01f5f4fc8d1.ctex remapped: res://.godot/imported/00.png-a105d19573941a47daa1d01f5f4fc8d1.ctex
+Completed load for: 'res://art/anim-shared/knight-a/hit/00.png' remapped 'res://art/anim-shared/knight-a/hit/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/hit/01.png remapped: res://art/anim-shared/knight-a/hit/01.png
+Loading resource: res://.godot/imported/01.png-2141143fb08fcc1fce36f4a5e7cd87cd.ctex remapped: res://.godot/imported/01.png-2141143fb08fcc1fce36f4a5e7cd87cd.ctex
+Completed load for: 'res://art/anim-shared/knight-a/hit/01.png' remapped 'res://art/anim-shared/knight-a/hit/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/hit/02.png remapped: res://art/anim-shared/knight-a/hit/02.png
+Loading resource: res://.godot/imported/02.png-50d6983c0b58fcada5ec694bfd598c0d.ctex remapped: res://.godot/imported/02.png-50d6983c0b58fcada5ec694bfd598c0d.ctex
+Completed load for: 'res://art/anim-shared/knight-a/hit/02.png' remapped 'res://art/anim-shared/knight-a/hit/02.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/stagger/00.png remapped: res://art/anim-shared/knight-a/stagger/00.png
+Loading resource: res://.godot/imported/00.png-85389002557a319ed3b1d993e42b2b01.ctex remapped: res://.godot/imported/00.png-85389002557a319ed3b1d993e42b2b01.ctex
+Completed load for: 'res://art/anim-shared/knight-a/stagger/00.png' remapped 'res://art/anim-shared/knight-a/stagger/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/stagger/01.png remapped: res://art/anim-shared/knight-a/stagger/01.png
+Loading resource: res://.godot/imported/01.png-adbf68f93fa88c7b332d1693c8f12f97.ctex remapped: res://.godot/imported/01.png-adbf68f93fa88c7b332d1693c8f12f97.ctex
+Completed load for: 'res://art/anim-shared/knight-a/stagger/01.png' remapped 'res://art/anim-shared/knight-a/stagger/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/stagger/02.png remapped: res://art/anim-shared/knight-a/stagger/02.png
+Loading resource: res://.godot/imported/02.png-1ce655a2660d2bbda87121505a23e211.ctex remapped: res://.godot/imported/02.png-1ce655a2660d2bbda87121505a23e211.ctex
+Completed load for: 'res://art/anim-shared/knight-a/stagger/02.png' remapped 'res://art/anim-shared/knight-a/stagger/02.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/idle/00.png remapped: res://art/anim-shared/knight-b/idle/00.png
+Loading resource: res://.godot/imported/00.png-49c2adf27d241f0f3c65f20e1a223d90.ctex remapped: res://.godot/imported/00.png-49c2adf27d241f0f3c65f20e1a223d90.ctex
+Completed load for: 'res://art/anim-shared/knight-b/idle/00.png' remapped 'res://art/anim-shared/knight-b/idle/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/hit/00.png remapped: res://art/anim-shared/knight-b/hit/00.png
+Loading resource: res://.godot/imported/00.png-6a37316881d8dcf159f5f7696eb2b4f0.ctex remapped: res://.godot/imported/00.png-6a37316881d8dcf159f5f7696eb2b4f0.ctex
+Completed load for: 'res://art/anim-shared/knight-b/hit/00.png' remapped 'res://art/anim-shared/knight-b/hit/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/hit/01.png remapped: res://art/anim-shared/knight-b/hit/01.png
+Loading resource: res://.godot/imported/01.png-358990394a9ba086854dc8353e459f0e.ctex remapped: res://.godot/imported/01.png-358990394a9ba086854dc8353e459f0e.ctex
+Completed load for: 'res://art/anim-shared/knight-b/hit/01.png' remapped 'res://art/anim-shared/knight-b/hit/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/hit/02.png remapped: res://art/anim-shared/knight-b/hit/02.png
+Loading resource: res://.godot/imported/02.png-7756a2097c23a871849c64c7f93fe0d7.ctex remapped: res://.godot/imported/02.png-7756a2097c23a871849c64c7f93fe0d7.ctex
+Completed load for: 'res://art/anim-shared/knight-b/hit/02.png' remapped 'res://art/anim-shared/knight-b/hit/02.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/stagger/00.png remapped: res://art/anim-shared/knight-b/stagger/00.png
+Loading resource: res://.godot/imported/00.png-1e5f9ca715f93e18c31f7c6572173176.ctex remapped: res://.godot/imported/00.png-1e5f9ca715f93e18c31f7c6572173176.ctex
+Completed load for: 'res://art/anim-shared/knight-b/stagger/00.png' remapped 'res://art/anim-shared/knight-b/stagger/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/stagger/01.png remapped: res://art/anim-shared/knight-b/stagger/01.png
+Loading resource: res://.godot/imported/01.png-ee1cfa46eab933f1a3f9925e16f84cff.ctex remapped: res://.godot/imported/01.png-ee1cfa46eab933f1a3f9925e16f84cff.ctex
+Completed load for: 'res://art/anim-shared/knight-b/stagger/01.png' remapped 'res://art/anim-shared/knight-b/stagger/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/stagger/02.png remapped: res://art/anim-shared/knight-b/stagger/02.png
+Loading resource: res://.godot/imported/02.png-5914a194dbf0b3a90b7722f0dcf602a3.ctex remapped: res://.godot/imported/02.png-5914a194dbf0b3a90b7722f0dcf602a3.ctex
+Completed load for: 'res://art/anim-shared/knight-b/stagger/02.png' remapped 'res://art/anim-shared/knight-b/stagger/02.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/idle/01.png remapped: res://art/anim-shared/thoma/idle/01.png
+Loading resource: res://.godot/imported/01.png-c378d18a8c10f9e843a1055cff3ba5dd.ctex remapped: res://.godot/imported/01.png-c378d18a8c10f9e843a1055cff3ba5dd.ctex
+Completed load for: 'res://art/anim-shared/thoma/idle/01.png' remapped 'res://art/anim-shared/thoma/idle/01.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/00.png remapped: res://art/anim-shared/thoma/swing/00.png
+Loading resource: res://.godot/imported/00.png-63de0d97932624c6fb77b36bffebe69c.ctex remapped: res://.godot/imported/00.png-63de0d97932624c6fb77b36bffebe69c.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/00.png' remapped 'res://art/anim-shared/thoma/swing/00.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/01.png remapped: res://art/anim-shared/thoma/swing/01.png
+Loading resource: res://.godot/imported/01.png-74f8ccfb000a26cee392f1d081e7f1ba.ctex remapped: res://.godot/imported/01.png-74f8ccfb000a26cee392f1d081e7f1ba.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/01.png' remapped 'res://art/anim-shared/thoma/swing/01.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/02.png remapped: res://art/anim-shared/thoma/swing/02.png
+Loading resource: res://.godot/imported/02.png-04f562bfd8fec3d202e4da1ad0868708.ctex remapped: res://.godot/imported/02.png-04f562bfd8fec3d202e4da1ad0868708.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/02.png' remapped 'res://art/anim-shared/thoma/swing/02.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/03.png remapped: res://art/anim-shared/thoma/swing/03.png
+Loading resource: res://.godot/imported/03.png-e37dfbb83c7cd0cd45bc0d3b6a7b73dd.ctex remapped: res://.godot/imported/03.png-e37dfbb83c7cd0cd45bc0d3b6a7b73dd.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/03.png' remapped 'res://art/anim-shared/thoma/swing/03.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/04.png remapped: res://art/anim-shared/thoma/swing/04.png
+Loading resource: res://.godot/imported/04.png-0c1293129599bbf6aeaf6c483f1f6c16.ctex remapped: res://.godot/imported/04.png-0c1293129599bbf6aeaf6c483f1f6c16.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/04.png' remapped 'res://art/anim-shared/thoma/swing/04.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/05.png remapped: res://art/anim-shared/thoma/swing/05.png
+Loading resource: res://.godot/imported/05.png-14ae355f3d044ac2c6afc9c13fb8a40c.ctex remapped: res://.godot/imported/05.png-14ae355f3d044ac2c6afc9c13fb8a40c.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/05.png' remapped 'res://art/anim-shared/thoma/swing/05.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/idle/00.png remapped: res://art/anim-shared/knight-a/idle/00.png
+Loading resource: res://.godot/imported/00.png-8c9df32054a9a67ab0d42331e10a4b97.ctex remapped: res://.godot/imported/00.png-8c9df32054a9a67ab0d42331e10a4b97.ctex
+Completed load for: 'res://art/anim-shared/knight-a/idle/00.png' remapped 'res://art/anim-shared/knight-a/idle/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/hit/00.png remapped: res://art/anim-shared/knight-a/hit/00.png
+Loading resource: res://.godot/imported/00.png-a105d19573941a47daa1d01f5f4fc8d1.ctex remapped: res://.godot/imported/00.png-a105d19573941a47daa1d01f5f4fc8d1.ctex
+Completed load for: 'res://art/anim-shared/knight-a/hit/00.png' remapped 'res://art/anim-shared/knight-a/hit/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/hit/01.png remapped: res://art/anim-shared/knight-a/hit/01.png
+Loading resource: res://.godot/imported/01.png-2141143fb08fcc1fce36f4a5e7cd87cd.ctex remapped: res://.godot/imported/01.png-2141143fb08fcc1fce36f4a5e7cd87cd.ctex
+Completed load for: 'res://art/anim-shared/knight-a/hit/01.png' remapped 'res://art/anim-shared/knight-a/hit/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/hit/02.png remapped: res://art/anim-shared/knight-a/hit/02.png
+Loading resource: res://.godot/imported/02.png-50d6983c0b58fcada5ec694bfd598c0d.ctex remapped: res://.godot/imported/02.png-50d6983c0b58fcada5ec694bfd598c0d.ctex
+Completed load for: 'res://art/anim-shared/knight-a/hit/02.png' remapped 'res://art/anim-shared/knight-a/hit/02.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/stagger/00.png remapped: res://art/anim-shared/knight-a/stagger/00.png
+Loading resource: res://.godot/imported/00.png-85389002557a319ed3b1d993e42b2b01.ctex remapped: res://.godot/imported/00.png-85389002557a319ed3b1d993e42b2b01.ctex
+Completed load for: 'res://art/anim-shared/knight-a/stagger/00.png' remapped 'res://art/anim-shared/knight-a/stagger/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/stagger/01.png remapped: res://art/anim-shared/knight-a/stagger/01.png
+Loading resource: res://.godot/imported/01.png-adbf68f93fa88c7b332d1693c8f12f97.ctex remapped: res://.godot/imported/01.png-adbf68f93fa88c7b332d1693c8f12f97.ctex
+Completed load for: 'res://art/anim-shared/knight-a/stagger/01.png' remapped 'res://art/anim-shared/knight-a/stagger/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/stagger/02.png remapped: res://art/anim-shared/knight-a/stagger/02.png
+Loading resource: res://.godot/imported/02.png-1ce655a2660d2bbda87121505a23e211.ctex remapped: res://.godot/imported/02.png-1ce655a2660d2bbda87121505a23e211.ctex
+Completed load for: 'res://art/anim-shared/knight-a/stagger/02.png' remapped 'res://art/anim-shared/knight-a/stagger/02.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/idle/00.png remapped: res://art/anim-shared/knight-b/idle/00.png
+Loading resource: res://.godot/imported/00.png-49c2adf27d241f0f3c65f20e1a223d90.ctex remapped: res://.godot/imported/00.png-49c2adf27d241f0f3c65f20e1a223d90.ctex
+Completed load for: 'res://art/anim-shared/knight-b/idle/00.png' remapped 'res://art/anim-shared/knight-b/idle/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/hit/00.png remapped: res://art/anim-shared/knight-b/hit/00.png
+Loading resource: res://.godot/imported/00.png-6a37316881d8dcf159f5f7696eb2b4f0.ctex remapped: res://.godot/imported/00.png-6a37316881d8dcf159f5f7696eb2b4f0.ctex
+Completed load for: 'res://art/anim-shared/knight-b/hit/00.png' remapped 'res://art/anim-shared/knight-b/hit/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/hit/01.png remapped: res://art/anim-shared/knight-b/hit/01.png
+Loading resource: res://.godot/imported/01.png-358990394a9ba086854dc8353e459f0e.ctex remapped: res://.godot/imported/01.png-358990394a9ba086854dc8353e459f0e.ctex
+Completed load for: 'res://art/anim-shared/knight-b/hit/01.png' remapped 'res://art/anim-shared/knight-b/hit/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/hit/02.png remapped: res://art/anim-shared/knight-b/hit/02.png
+Loading resource: res://.godot/imported/02.png-7756a2097c23a871849c64c7f93fe0d7.ctex remapped: res://.godot/imported/02.png-7756a2097c23a871849c64c7f93fe0d7.ctex
+Completed load for: 'res://art/anim-shared/knight-b/hit/02.png' remapped 'res://art/anim-shared/knight-b/hit/02.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/stagger/00.png remapped: res://art/anim-shared/knight-b/stagger/00.png
+Loading resource: res://.godot/imported/00.png-1e5f9ca715f93e18c31f7c6572173176.ctex remapped: res://.godot/imported/00.png-1e5f9ca715f93e18c31f7c6572173176.ctex
+Completed load for: 'res://art/anim-shared/knight-b/stagger/00.png' remapped 'res://art/anim-shared/knight-b/stagger/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/stagger/01.png remapped: res://art/anim-shared/knight-b/stagger/01.png
+Loading resource: res://.godot/imported/01.png-ee1cfa46eab933f1a3f9925e16f84cff.ctex remapped: res://.godot/imported/01.png-ee1cfa46eab933f1a3f9925e16f84cff.ctex
+Completed load for: 'res://art/anim-shared/knight-b/stagger/01.png' remapped 'res://art/anim-shared/knight-b/stagger/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/stagger/02.png remapped: res://art/anim-shared/knight-b/stagger/02.png
+Loading resource: res://.godot/imported/02.png-5914a194dbf0b3a90b7722f0dcf602a3.ctex remapped: res://.godot/imported/02.png-5914a194dbf0b3a90b7722f0dcf602a3.ctex
+Completed load for: 'res://art/anim-shared/knight-b/stagger/02.png' remapped 'res://art/anim-shared/knight-b/stagger/02.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/idle/01.png remapped: res://art/anim-shared/thoma/idle/01.png
+Loading resource: res://.godot/imported/01.png-c378d18a8c10f9e843a1055cff3ba5dd.ctex remapped: res://.godot/imported/01.png-c378d18a8c10f9e843a1055cff3ba5dd.ctex
+Completed load for: 'res://art/anim-shared/thoma/idle/01.png' remapped 'res://art/anim-shared/thoma/idle/01.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/00.png remapped: res://art/anim-shared/thoma/swing/00.png
+Loading resource: res://.godot/imported/00.png-63de0d97932624c6fb77b36bffebe69c.ctex remapped: res://.godot/imported/00.png-63de0d97932624c6fb77b36bffebe69c.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/00.png' remapped 'res://art/anim-shared/thoma/swing/00.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/01.png remapped: res://art/anim-shared/thoma/swing/01.png
+Loading resource: res://.godot/imported/01.png-74f8ccfb000a26cee392f1d081e7f1ba.ctex remapped: res://.godot/imported/01.png-74f8ccfb000a26cee392f1d081e7f1ba.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/01.png' remapped 'res://art/anim-shared/thoma/swing/01.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/02.png remapped: res://art/anim-shared/thoma/swing/02.png
+Loading resource: res://.godot/imported/02.png-04f562bfd8fec3d202e4da1ad0868708.ctex remapped: res://.godot/imported/02.png-04f562bfd8fec3d202e4da1ad0868708.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/02.png' remapped 'res://art/anim-shared/thoma/swing/02.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/03.png remapped: res://art/anim-shared/thoma/swing/03.png
+Loading resource: res://.godot/imported/03.png-e37dfbb83c7cd0cd45bc0d3b6a7b73dd.ctex remapped: res://.godot/imported/03.png-e37dfbb83c7cd0cd45bc0d3b6a7b73dd.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/03.png' remapped 'res://art/anim-shared/thoma/swing/03.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/04.png remapped: res://art/anim-shared/thoma/swing/04.png
+Loading resource: res://.godot/imported/04.png-0c1293129599bbf6aeaf6c483f1f6c16.ctex remapped: res://.godot/imported/04.png-0c1293129599bbf6aeaf6c483f1f6c16.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/04.png' remapped 'res://art/anim-shared/thoma/swing/04.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/05.png remapped: res://art/anim-shared/thoma/swing/05.png
+Loading resource: res://.godot/imported/05.png-14ae355f3d044ac2c6afc9c13fb8a40c.ctex remapped: res://.godot/imported/05.png-14ae355f3d044ac2c6afc9c13fb8a40c.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/05.png' remapped 'res://art/anim-shared/thoma/swing/05.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/idle/00.png remapped: res://art/anim-shared/knight-a/idle/00.png
+Loading resource: res://.godot/imported/00.png-8c9df32054a9a67ab0d42331e10a4b97.ctex remapped: res://.godot/imported/00.png-8c9df32054a9a67ab0d42331e10a4b97.ctex
+Completed load for: 'res://art/anim-shared/knight-a/idle/00.png' remapped 'res://art/anim-shared/knight-a/idle/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/hit/00.png remapped: res://art/anim-shared/knight-a/hit/00.png
+Loading resource: res://.godot/imported/00.png-a105d19573941a47daa1d01f5f4fc8d1.ctex remapped: res://.godot/imported/00.png-a105d19573941a47daa1d01f5f4fc8d1.ctex
+Completed load for: 'res://art/anim-shared/knight-a/hit/00.png' remapped 'res://art/anim-shared/knight-a/hit/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/hit/01.png remapped: res://art/anim-shared/knight-a/hit/01.png
+Loading resource: res://.godot/imported/01.png-2141143fb08fcc1fce36f4a5e7cd87cd.ctex remapped: res://.godot/imported/01.png-2141143fb08fcc1fce36f4a5e7cd87cd.ctex
+Completed load for: 'res://art/anim-shared/knight-a/hit/01.png' remapped 'res://art/anim-shared/knight-a/hit/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/hit/02.png remapped: res://art/anim-shared/knight-a/hit/02.png
+Loading resource: res://.godot/imported/02.png-50d6983c0b58fcada5ec694bfd598c0d.ctex remapped: res://.godot/imported/02.png-50d6983c0b58fcada5ec694bfd598c0d.ctex
+Completed load for: 'res://art/anim-shared/knight-a/hit/02.png' remapped 'res://art/anim-shared/knight-a/hit/02.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/stagger/00.png remapped: res://art/anim-shared/knight-a/stagger/00.png
+Loading resource: res://.godot/imported/00.png-85389002557a319ed3b1d993e42b2b01.ctex remapped: res://.godot/imported/00.png-85389002557a319ed3b1d993e42b2b01.ctex
+Completed load for: 'res://art/anim-shared/knight-a/stagger/00.png' remapped 'res://art/anim-shared/knight-a/stagger/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/stagger/01.png remapped: res://art/anim-shared/knight-a/stagger/01.png
+Loading resource: res://.godot/imported/01.png-adbf68f93fa88c7b332d1693c8f12f97.ctex remapped: res://.godot/imported/01.png-adbf68f93fa88c7b332d1693c8f12f97.ctex
+Completed load for: 'res://art/anim-shared/knight-a/stagger/01.png' remapped 'res://art/anim-shared/knight-a/stagger/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/stagger/02.png remapped: res://art/anim-shared/knight-a/stagger/02.png
+Loading resource: res://.godot/imported/02.png-1ce655a2660d2bbda87121505a23e211.ctex remapped: res://.godot/imported/02.png-1ce655a2660d2bbda87121505a23e211.ctex
+Completed load for: 'res://art/anim-shared/knight-a/stagger/02.png' remapped 'res://art/anim-shared/knight-a/stagger/02.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/idle/00.png remapped: res://art/anim-shared/knight-b/idle/00.png
+Loading resource: res://.godot/imported/00.png-49c2adf27d241f0f3c65f20e1a223d90.ctex remapped: res://.godot/imported/00.png-49c2adf27d241f0f3c65f20e1a223d90.ctex
+Completed load for: 'res://art/anim-shared/knight-b/idle/00.png' remapped 'res://art/anim-shared/knight-b/idle/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/hit/00.png remapped: res://art/anim-shared/knight-b/hit/00.png
+Loading resource: res://.godot/imported/00.png-6a37316881d8dcf159f5f7696eb2b4f0.ctex remapped: res://.godot/imported/00.png-6a37316881d8dcf159f5f7696eb2b4f0.ctex
+Completed load for: 'res://art/anim-shared/knight-b/hit/00.png' remapped 'res://art/anim-shared/knight-b/hit/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/hit/01.png remapped: res://art/anim-shared/knight-b/hit/01.png
+Loading resource: res://.godot/imported/01.png-358990394a9ba086854dc8353e459f0e.ctex remapped: res://.godot/imported/01.png-358990394a9ba086854dc8353e459f0e.ctex
+Completed load for: 'res://art/anim-shared/knight-b/hit/01.png' remapped 'res://art/anim-shared/knight-b/hit/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/hit/02.png remapped: res://art/anim-shared/knight-b/hit/02.png
+Loading resource: res://.godot/imported/02.png-7756a2097c23a871849c64c7f93fe0d7.ctex remapped: res://.godot/imported/02.png-7756a2097c23a871849c64c7f93fe0d7.ctex
+Completed load for: 'res://art/anim-shared/knight-b/hit/02.png' remapped 'res://art/anim-shared/knight-b/hit/02.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/stagger/00.png remapped: res://art/anim-shared/knight-b/stagger/00.png
+Loading resource: res://.godot/imported/00.png-1e5f9ca715f93e18c31f7c6572173176.ctex remapped: res://.godot/imported/00.png-1e5f9ca715f93e18c31f7c6572173176.ctex
+Completed load for: 'res://art/anim-shared/knight-b/stagger/00.png' remapped 'res://art/anim-shared/knight-b/stagger/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/stagger/01.png remapped: res://art/anim-shared/knight-b/stagger/01.png
+Loading resource: res://.godot/imported/01.png-ee1cfa46eab933f1a3f9925e16f84cff.ctex remapped: res://.godot/imported/01.png-ee1cfa46eab933f1a3f9925e16f84cff.ctex
+Completed load for: 'res://art/anim-shared/knight-b/stagger/01.png' remapped 'res://art/anim-shared/knight-b/stagger/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/stagger/02.png remapped: res://art/anim-shared/knight-b/stagger/02.png
+Loading resource: res://.godot/imported/02.png-5914a194dbf0b3a90b7722f0dcf602a3.ctex remapped: res://.godot/imported/02.png-5914a194dbf0b3a90b7722f0dcf602a3.ctex
+Completed load for: 'res://art/anim-shared/knight-b/stagger/02.png' remapped 'res://art/anim-shared/knight-b/stagger/02.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/idle/01.png remapped: res://art/anim-shared/thoma/idle/01.png
+Loading resource: res://.godot/imported/01.png-c378d18a8c10f9e843a1055cff3ba5dd.ctex remapped: res://.godot/imported/01.png-c378d18a8c10f9e843a1055cff3ba5dd.ctex
+Completed load for: 'res://art/anim-shared/thoma/idle/01.png' remapped 'res://art/anim-shared/thoma/idle/01.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/00.png remapped: res://art/anim-shared/thoma/swing/00.png
+Loading resource: res://.godot/imported/00.png-63de0d97932624c6fb77b36bffebe69c.ctex remapped: res://.godot/imported/00.png-63de0d97932624c6fb77b36bffebe69c.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/00.png' remapped 'res://art/anim-shared/thoma/swing/00.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/01.png remapped: res://art/anim-shared/thoma/swing/01.png
+Loading resource: res://.godot/imported/01.png-74f8ccfb000a26cee392f1d081e7f1ba.ctex remapped: res://.godot/imported/01.png-74f8ccfb000a26cee392f1d081e7f1ba.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/01.png' remapped 'res://art/anim-shared/thoma/swing/01.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/02.png remapped: res://art/anim-shared/thoma/swing/02.png
+Loading resource: res://.godot/imported/02.png-04f562bfd8fec3d202e4da1ad0868708.ctex remapped: res://.godot/imported/02.png-04f562bfd8fec3d202e4da1ad0868708.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/02.png' remapped 'res://art/anim-shared/thoma/swing/02.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/03.png remapped: res://art/anim-shared/thoma/swing/03.png
+Loading resource: res://.godot/imported/03.png-e37dfbb83c7cd0cd45bc0d3b6a7b73dd.ctex remapped: res://.godot/imported/03.png-e37dfbb83c7cd0cd45bc0d3b6a7b73dd.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/03.png' remapped 'res://art/anim-shared/thoma/swing/03.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/04.png remapped: res://art/anim-shared/thoma/swing/04.png
+Loading resource: res://.godot/imported/04.png-0c1293129599bbf6aeaf6c483f1f6c16.ctex remapped: res://.godot/imported/04.png-0c1293129599bbf6aeaf6c483f1f6c16.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/04.png' remapped 'res://art/anim-shared/thoma/swing/04.png' at thread -1
+Loading resource: res://art/anim-shared/thoma/swing/05.png remapped: res://art/anim-shared/thoma/swing/05.png
+Loading resource: res://.godot/imported/05.png-14ae355f3d044ac2c6afc9c13fb8a40c.ctex remapped: res://.godot/imported/05.png-14ae355f3d044ac2c6afc9c13fb8a40c.ctex
+Completed load for: 'res://art/anim-shared/thoma/swing/05.png' remapped 'res://art/anim-shared/thoma/swing/05.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/idle/00.png remapped: res://art/anim-shared/knight-a/idle/00.png
+Loading resource: res://.godot/imported/00.png-8c9df32054a9a67ab0d42331e10a4b97.ctex remapped: res://.godot/imported/00.png-8c9df32054a9a67ab0d42331e10a4b97.ctex
+Completed load for: 'res://art/anim-shared/knight-a/idle/00.png' remapped 'res://art/anim-shared/knight-a/idle/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/hit/00.png remapped: res://art/anim-shared/knight-a/hit/00.png
+Loading resource: res://.godot/imported/00.png-a105d19573941a47daa1d01f5f4fc8d1.ctex remapped: res://.godot/imported/00.png-a105d19573941a47daa1d01f5f4fc8d1.ctex
+Completed load for: 'res://art/anim-shared/knight-a/hit/00.png' remapped 'res://art/anim-shared/knight-a/hit/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/hit/01.png remapped: res://art/anim-shared/knight-a/hit/01.png
+Loading resource: res://.godot/imported/01.png-2141143fb08fcc1fce36f4a5e7cd87cd.ctex remapped: res://.godot/imported/01.png-2141143fb08fcc1fce36f4a5e7cd87cd.ctex
+Completed load for: 'res://art/anim-shared/knight-a/hit/01.png' remapped 'res://art/anim-shared/knight-a/hit/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/hit/02.png remapped: res://art/anim-shared/knight-a/hit/02.png
+Loading resource: res://.godot/imported/02.png-50d6983c0b58fcada5ec694bfd598c0d.ctex remapped: res://.godot/imported/02.png-50d6983c0b58fcada5ec694bfd598c0d.ctex
+Completed load for: 'res://art/anim-shared/knight-a/hit/02.png' remapped 'res://art/anim-shared/knight-a/hit/02.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/stagger/00.png remapped: res://art/anim-shared/knight-a/stagger/00.png
+Loading resource: res://.godot/imported/00.png-85389002557a319ed3b1d993e42b2b01.ctex remapped: res://.godot/imported/00.png-85389002557a319ed3b1d993e42b2b01.ctex
+Completed load for: 'res://art/anim-shared/knight-a/stagger/00.png' remapped 'res://art/anim-shared/knight-a/stagger/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/stagger/01.png remapped: res://art/anim-shared/knight-a/stagger/01.png
+Loading resource: res://.godot/imported/01.png-adbf68f93fa88c7b332d1693c8f12f97.ctex remapped: res://.godot/imported/01.png-adbf68f93fa88c7b332d1693c8f12f97.ctex
+Completed load for: 'res://art/anim-shared/knight-a/stagger/01.png' remapped 'res://art/anim-shared/knight-a/stagger/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-a/stagger/02.png remapped: res://art/anim-shared/knight-a/stagger/02.png
+Loading resource: res://.godot/imported/02.png-1ce655a2660d2bbda87121505a23e211.ctex remapped: res://.godot/imported/02.png-1ce655a2660d2bbda87121505a23e211.ctex
+Completed load for: 'res://art/anim-shared/knight-a/stagger/02.png' remapped 'res://art/anim-shared/knight-a/stagger/02.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/idle/00.png remapped: res://art/anim-shared/knight-b/idle/00.png
+Loading resource: res://.godot/imported/00.png-49c2adf27d241f0f3c65f20e1a223d90.ctex remapped: res://.godot/imported/00.png-49c2adf27d241f0f3c65f20e1a223d90.ctex
+Completed load for: 'res://art/anim-shared/knight-b/idle/00.png' remapped 'res://art/anim-shared/knight-b/idle/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/hit/00.png remapped: res://art/anim-shared/knight-b/hit/00.png
+Loading resource: res://.godot/imported/00.png-6a37316881d8dcf159f5f7696eb2b4f0.ctex remapped: res://.godot/imported/00.png-6a37316881d8dcf159f5f7696eb2b4f0.ctex
+Completed load for: 'res://art/anim-shared/knight-b/hit/00.png' remapped 'res://art/anim-shared/knight-b/hit/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/hit/01.png remapped: res://art/anim-shared/knight-b/hit/01.png
+Loading resource: res://.godot/imported/01.png-358990394a9ba086854dc8353e459f0e.ctex remapped: res://.godot/imported/01.png-358990394a9ba086854dc8353e459f0e.ctex
+Completed load for: 'res://art/anim-shared/knight-b/hit/01.png' remapped 'res://art/anim-shared/knight-b/hit/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/hit/02.png remapped: res://art/anim-shared/knight-b/hit/02.png
+Loading resource: res://.godot/imported/02.png-7756a2097c23a871849c64c7f93fe0d7.ctex remapped: res://.godot/imported/02.png-7756a2097c23a871849c64c7f93fe0d7.ctex
+Completed load for: 'res://art/anim-shared/knight-b/hit/02.png' remapped 'res://art/anim-shared/knight-b/hit/02.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/stagger/00.png remapped: res://art/anim-shared/knight-b/stagger/00.png
+Loading resource: res://.godot/imported/00.png-1e5f9ca715f93e18c31f7c6572173176.ctex remapped: res://.godot/imported/00.png-1e5f9ca715f93e18c31f7c6572173176.ctex
+Completed load for: 'res://art/anim-shared/knight-b/stagger/00.png' remapped 'res://art/anim-shared/knight-b/stagger/00.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/stagger/01.png remapped: res://art/anim-shared/knight-b/stagger/01.png
+Loading resource: res://.godot/imported/01.png-ee1cfa46eab933f1a3f9925e16f84cff.ctex remapped: res://.godot/imported/01.png-ee1cfa46eab933f1a3f9925e16f84cff.ctex
+Completed load for: 'res://art/anim-shared/knight-b/stagger/01.png' remapped 'res://art/anim-shared/knight-b/stagger/01.png' at thread -1
+Loading resource: res://art/anim-shared/knight-b/stagger/02.png remapped: res://art/anim-shared/knight-b/stagger/02.png
+Loading resource: res://.godot/imported/02.png-5914a194dbf0b3a90b7722f0dcf602a3.ctex remapped: res://.godot/imported/02.png-5914a194dbf0b3a90b7722f0dcf602a3.ctex
+Completed load for: 'res://art/anim-shared/knight-b/stagger/02.png' remapped 'res://art/anim-shared/knight-b/stagger/02.png' at thread -1
+FIELD_CAPTURE mode=perf shots=0 checks={  } pass=true
+XR: Clearing primary interface
+XR: Removed interface "Native mobile"
+XR: Removed interface "OpenXR"
+Accessibility: window 0 adapter destroyed.
+Leaked instance: AudioStreamPlaybackWAV:9223372119247685273 - Reference count: 1
+Leaked instance: AudioStreamWAV:9223372119230908251 - Reference count: 1
+Hint: Leaked instances typically happen when nodes are removed from the scene tree (with `remove_child()`) but not freed (with `free()` or `queue_free()`).
+Orphan StringName: Master (static: 0, total: 2)
+StringName: 1 unclaimed string names at exit.
+Godot_v4.7.2-stable_win64_console.exe : WARNING: 2 ObjectDB instances were leaked at exit (run with `--verbose` for det
+ails).
+At line:2 char:474
++ ... g -Tail 20; & $godotExe --verbose --path godot-spike --resolution 128 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: 2 Obje...` for details).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+   at: cleanup (core/object/object.cpp:2536)

@@ -1,0 +1,338 @@
+[
+	{
+		"crit": false,
+		"kind": "mobile",
+		"process_seconds": 0.855146285714286,
+		"reduced": false,
+		"wall_seconds": 0.833811
+	},
+	{
+		"crit": false,
+		"kind": "mobile",
+		"process_seconds": 0.938273777777778,
+		"reduced": false,
+		"wall_seconds": 0.831151
+	},
+	{
+		"crit": false,
+		"kind": "knight",
+		"process_seconds": 0.53232,
+		"reduced": false,
+		"wall_seconds": 0.521736
+	},
+	{
+		"crit": false,
+		"kind": "knight",
+		"process_seconds": 0.661455666666667,
+		"reduced": false,
+		"wall_seconds": 0.647816
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.863473111111111,
+		"reduced": false,
+		"wall_seconds": 0.821015
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.986983666666667,
+		"reduced": false,
+		"wall_seconds": 0.888508
+	},
+	{
+		"crit": false,
+		"kind": "mobile",
+		"process_seconds": 0.963900222222223,
+		"reduced": false,
+		"wall_seconds": 0.864791
+	},
+	{
+		"crit": false,
+		"kind": "mobile",
+		"process_seconds": 0.961402222222223,
+		"reduced": false,
+		"wall_seconds": 0.863248
+	},
+	{
+		"crit": false,
+		"kind": "knight",
+		"process_seconds": 0.632791111111111,
+		"reduced": false,
+		"wall_seconds": 0.625527
+	},
+	{
+		"crit": false,
+		"kind": "knight",
+		"process_seconds": 0.628611682539683,
+		"reduced": false,
+		"wall_seconds": 0.641755
+	},
+	{
+		"crit": false,
+		"kind": "knight",
+		"process_seconds": 0.645909142857143,
+		"reduced": false,
+		"wall_seconds": 0.634468
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.964267666666666,
+		"reduced": false,
+		"wall_seconds": 0.867002
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.933789333333334,
+		"reduced": false,
+		"wall_seconds": 0.852084
+	},
+	{
+		"crit": false,
+		"kind": "ranged",
+		"process_seconds": 0.765433333333334,
+		"reduced": false,
+		"wall_seconds": 0.738726
+	},
+	{
+		"crit": false,
+		"kind": "mobile",
+		"process_seconds": 0.980245,
+		"reduced": false,
+		"wall_seconds": 0.877278
+	},
+	{
+		"crit": false,
+		"kind": "knight",
+		"process_seconds": 0.644633619047619,
+		"reduced": false,
+		"wall_seconds": 0.640315
+	},
+	{
+		"crit": false,
+		"kind": "knight",
+		"process_seconds": 0.650505353535354,
+		"reduced": false,
+		"wall_seconds": 0.634046
+	},
+	{
+		"crit": false,
+		"kind": "knight",
+		"process_seconds": 0.645391777777778,
+		"reduced": false,
+		"wall_seconds": 0.652818
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.977538777777778,
+		"reduced": false,
+		"wall_seconds": 0.886571
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.972247333333334,
+		"reduced": false,
+		"wall_seconds": 0.893442
+	},
+	{
+		"crit": false,
+		"kind": "ranged",
+		"process_seconds": 0.861716904761905,
+		"reduced": false,
+		"wall_seconds": 0.764943
+	},
+	{
+		"crit": false,
+		"kind": "ranged",
+		"process_seconds": 0.869126904761906,
+		"reduced": false,
+		"wall_seconds": 0.801089
+	},
+	{
+		"crit": false,
+		"kind": "knight",
+		"process_seconds": 0.640525,
+		"reduced": false,
+		"wall_seconds": 0.638078
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.981509333333334,
+		"reduced": false,
+		"wall_seconds": 0.890467
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.987389333333333,
+		"reduced": false,
+		"wall_seconds": 0.869566
+	},
+	{
+		"crit": false,
+		"kind": "ranged",
+		"process_seconds": 0.846374333333334,
+		"reduced": false,
+		"wall_seconds": 0.749892
+	},
+	{
+		"crit": false,
+		"kind": "ranged",
+		"process_seconds": 0.857527333333334,
+		"reduced": false,
+		"wall_seconds": 0.774152
+	},
+	{
+		"crit": false,
+		"kind": "knight",
+		"process_seconds": 0.661081666666667,
+		"reduced": false,
+		"wall_seconds": 0.639171
+	},
+	{
+		"crit": false,
+		"kind": "knight",
+		"process_seconds": 0.641457777777778,
+		"reduced": false,
+		"wall_seconds": 0.63147
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.977222222222223,
+		"reduced": false,
+		"wall_seconds": 0.878995
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.955582,
+		"reduced": false,
+		"wall_seconds": 0.855722
+	},
+	{
+		"crit": false,
+		"kind": "ranged",
+		"process_seconds": 0.863420333333334,
+		"reduced": false,
+		"wall_seconds": 0.775466
+	},
+	{
+		"crit": false,
+		"kind": "knight",
+		"process_seconds": 0.636153999999999,
+		"reduced": false,
+		"wall_seconds": 0.637146
+	},
+	{
+		"crit": false,
+		"kind": "knight",
+		"process_seconds": 0.640139666666667,
+		"reduced": false,
+		"wall_seconds": 0.652852
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.975943262626262,
+		"reduced": false,
+		"wall_seconds": 0.858263
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.970707070707071,
+		"reduced": false,
+		"wall_seconds": 0.872364
+	},
+	{
+		"crit": false,
+		"kind": "ranged",
+		"process_seconds": 0.869470666666668,
+		"reduced": false,
+		"wall_seconds": 0.772671
+	},
+	{
+		"crit": false,
+		"kind": "ranged",
+		"process_seconds": 0.864132666666666,
+		"reduced": false,
+		"wall_seconds": 0.750327
+	},
+	{
+		"crit": false,
+		"kind": "knight",
+		"process_seconds": 0.643871428571429,
+		"reduced": false,
+		"wall_seconds": 0.62843
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.961586666666668,
+		"reduced": false,
+		"wall_seconds": 0.870246
+	},
+	{
+		"crit": false,
+		"kind": "ranged",
+		"process_seconds": 0.905851333333334,
+		"reduced": false,
+		"wall_seconds": 0.796664
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.940388666666667,
+		"reduced": false,
+		"wall_seconds": 0.840994
+	},
+	{
+		"crit": false,
+		"kind": "leader",
+		"process_seconds": 0.633468555555556,
+		"reduced": false,
+		"wall_seconds": 0.647513
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.955626777777778,
+		"reduced": false,
+		"wall_seconds": 0.861387
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.950773333333333,
+		"reduced": false,
+		"wall_seconds": 0.869289
+	},
+	{
+		"crit": false,
+		"kind": "leader",
+		"process_seconds": 0.643692,
+		"reduced": false,
+		"wall_seconds": 0.662438
+	},
+	{
+		"crit": false,
+		"kind": "melee",
+		"process_seconds": 0.978617333333335,
+		"reduced": false,
+		"wall_seconds": 0.893403
+	},
+	{
+		"crit": false,
+		"kind": "ranged",
+		"process_seconds": 0.864498121212123,
+		"reduced": false,
+		"wall_seconds": 0.774485
+	}
+]

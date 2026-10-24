@@ -169,7 +169,9 @@ func _input(event: InputEvent) -> void:
 					if overview: toggle_overview()
 					follow(battle.center(battle.Rules.unit(battle.state,battle.selected_id).cell))
 					get_viewport().set_input_as_handled()
-				KEY_E: edge_scroll=not edge_scroll
+				KEY_E:
+					edge_scroll=not edge_scroll
+					battle.hud.camera_hints.text="WASD／方向鍵 捲動 · 中鍵 拖曳 · 滾輪 縮放 · O 全圖 · F 定位 · E 邊緣 "+("ON" if edge_scroll else "OFF")
 	if event is InputEventMouseButton:
 		if event.button_index==MOUSE_BUTTON_MIDDLE:
 			dragging=event.pressed

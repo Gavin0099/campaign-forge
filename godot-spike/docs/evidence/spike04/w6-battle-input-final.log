@@ -1,0 +1,46 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+---  GUT  ---
+[INFO]:  using [C:/Users/daish/AppData/Roaming/Godot/app_userdata/Campaign Forge — Impact Study] for temporary output.
+Godot version:  4.7.2
+GUT version:  9.7.1
+
+
+res://tests/test_field_battle.gd
+* test_separate_scene_projection_figures_and_main_scene_unchanged
+* test_preview_cancel_move_and_single_attack_resolution
+* test_field_melee_ranged_crit_reduced_budget_and_rest
+* test_parsed_keyboard_select_cursor_wait_end_turn_and_restart
+* test_parsed_mouse_uses_event_position_for_preview_and_confirm
+    [Failed]:  [<null>] expected to equal ["move"]:
+      at line 103
+    [Failed]:  [VECTOR2I(3, 9)] expected to equal [VECTOR2I(4, 9)]:
+      at line 106
+4/5 passed.
+
+
+
+
+==============================================
+= Run Summary
+==============================================
+
+res://tests/test_field_battle.gd
+- test_parsed_mouse_uses_event_position_for_preview_and_confirm
+    [Failed]:  [<null>] expected to equal ["move"]:
+          at line 103
+    [Failed]:  [VECTOR2I(3, 9)] expected to equal [VECTOR2I(4, 9)]:
+          at line 106
+
+Totals
+------
+Scripts               1
+Tests                 5
+Passing Tests         4
+Failing Tests         1
+Asserts           475/477
+Time              6.491s
+
+
+---- 1 failing tests ----
+

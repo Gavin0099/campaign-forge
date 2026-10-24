@@ -37,6 +37,7 @@ var next_crit := false
 var attack_timings: Array = []
 var enemy_times: Array = []
 var last_events: Array = []
+var telemetry = preload("res://scripts/levels/field_telemetry.gd").new()
 
 func center(cell: Vector2i) -> Vector2:
 	return Vector2(state.level.size.y*HALF.x+(cell.x-cell.y)*HALF.x,(cell.x+cell.y+1)*HALF.y)
@@ -99,6 +100,7 @@ func _ready() -> void:
 	hud.battle=self
 	add_child(hud)
 	pan_to(center(cursor_cell))
+	telemetry.register(state,"ally")
 	refresh()
 
 func build_props() -> void:
@@ -147,7 +149,7 @@ func build_units() -> void:
 		actor.add_child(player)
 		player.configure(manifest,"thoma" if u.side=="ally" else ("knight-a" if u.id.hash()%2==0 else "knight-b"),body)
 		var badge: String = {"melee":"M","ranged":"BOW 〉","mobile":"BOOT ⇥","knight":"×","leader":"◆ LEADER"}[u.kind]
-		var tag := make_label(actor,badge,Vector2(-24,12),14,TEAL if u.side=="ally" else CLAY)
+		var tag := make_label(actor,badge,Vector2(-66,-68),14,TEAL if u.side=="ally" else CLAY)
 		tag.name="Badge"
 		var hp := make_label(actor,"%d/%d" % [u.hp,u.max_hp],Vector2(-22,-112),14)
 		hp.name="HP"
@@ -226,6 +228,7 @@ func wait_selected() -> void:
 
 func accept(resolved: Dictionary) -> void:
 	if busy or not resolved.ok: return
+	telemetry.record(state,resolved.events,resolved.state)
 	busy=true
 	pending.clear()
 	preview_path.clear()
@@ -236,6 +239,7 @@ func accept(resolved: Dictionary) -> void:
 	busy=false
 	build_units()
 	refresh()
+	telemetry.write("res://.godot/spike04/live-telemetry.json")
 	action_finished.emit()
 
 func playback_speed() -> float:
@@ -292,7 +296,10 @@ func end_turn() -> void:
 	var started := Time.get_ticks_usec()
 	var resolved := Rules.enemy_phase(state)
 	await accept(resolved)
-	enemy_times.append({"turn":state.turn-1,"seconds":(Time.get_ticks_usec()-started)/1000000.0,"fast":fast_forward,"skip_move":skip_enemy_movement})
+	var metric := {"turn":state.turn-1,"seconds":(Time.get_ticks_usec()-started)/1000000.0,"fast":fast_forward,"skip_move":skip_enemy_movement}
+	enemy_times.append(metric)
+	telemetry.enemy_phases.append(metric)
+	telemetry.write("res://.godot/spike04/live-telemetry.json")
 
 func restart() -> void:
 	if busy: return
@@ -303,6 +310,8 @@ func restart() -> void:
 	preview_path.clear()
 	attack_timings.clear()
 	enemy_times.clear()
+	telemetry=preload("res://scripts/levels/field_telemetry.gd").new()
+	telemetry.register(state,"ally")
 	hud.warning.clear()
 	build_units()
 	pan_to(center(cursor_cell))
@@ -333,7 +342,7 @@ func _process(_delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT and event.pressed and camera.overview:
-		var clicked := world_cell(get_global_mouse_position())
+		var clicked := world_cell(world.get_global_transform_with_canvas().affine_inverse()*event.position)
 		camera.toggle_overview()
 		if Rules.inside(state.level,clicked):
 			camera.follow(center(clicked))
@@ -342,9 +351,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index==MOUSE_BUTTON_RIGHT and not busy: cancel()
-		if event.button_index==MOUSE_BUTTON_LEFT: choose(world_cell(get_global_mouse_position()))
+		if event.button_index==MOUSE_BUTTON_LEFT: choose(world_cell(world.get_global_transform_with_canvas().affine_inverse()*event.position))
 	if event is InputEventMouseMotion:
-		var cell := world_cell(get_global_mouse_position())
+		var cell := world_cell(world.get_global_transform_with_canvas().affine_inverse()*event.position)
 		if Rules.inside(state.level,cell): hud.hover(cell)
 	if not event is InputEventKey or not event.pressed or event.echo: return
 	match event.keycode:

@@ -1,0 +1,22 @@
+{
+	"checks": {},
+	"engine": "4.7.2-stable (official)",
+	"human": "HUMAN_PENDING",
+	"mode": "1080",
+	"pass": true,
+	"renderer": "AMD Radeon 780M Graphics",
+	"shots": [
+		{
+			"camera": "(960.0, 614.25)",
+			"file": "deployment-1080.png",
+			"mode": "1080",
+			"phase": "player",
+			"resolution": [
+				1920,
+				1080
+			],
+			"turn": 1,
+			"zoom": "(1.0, 1.0)"
+		}
+	]
+}

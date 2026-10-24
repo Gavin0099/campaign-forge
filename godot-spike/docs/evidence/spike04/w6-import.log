@@ -1,0 +1,78 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] first_scan_filesystem | Started 專案初始化中 (5 steps)
+[   0% ] first_scan_filesystem | 正在掃描檔案結構…
+[  16% ] first_scan_filesystem | 正在載入全域類別名稱…
+[  33% ] first_scan_filesystem | 正在驗證 GDExtension…
+[  50% ] first_scan_filesystem | 正在建立自動載入腳本…
+[  66% ] first_scan_filesystem | 初始化外掛程式...
+[  83% ] first_scan_filesystem | 開始掃描檔案...
+[ DONE ] first_scan_filesystem
+
+[   0% ] update_scripts_classes | Started 註冊全域類別中... (15 steps)
+[   0% ] update_scripts_classes |
+[   6% ] update_scripts_classes |
+[  12% ] update_scripts_classes |
+[  18% ] update_scripts_classes |
+[  25% ] update_scripts_classes |
+[  31% ] update_scripts_classes |
+[  37% ] update_scripts_classes |
+[  43% ] update_scripts_classes |
+[  50% ] update_scripts_classes |
+[  56% ] update_scripts_classes |
+[  62% ] update_scripts_classes |
+[  68% ] update_scripts_classes |
+[  75% ] update_scripts_classes |
+[  81% ] update_scripts_classes |
+[  87% ] update_scripts_classes |
+[ DONE ] update_scripts_classes
+
+[   0% ] _update_scan_actions | Started 掃描動作中... (12 steps)
+[   0% ] _update_scan_actions | bank.png
+[   7% ] _update_scan_actions | banner.png
+[  15% ] _update_scan_actions | cliff.png
+[  23% ] _update_scan_actions | crossing.png
+[  30% ] _update_scan_actions | defense.png
+[  38% ] _update_scan_actions | ford.png
+[  46% ] _update_scan_actions | forest.png
+[  53% ] _update_scan_actions | plain.png
+[  61% ] _update_scan_actions | road.png
+[  69% ] _update_scan_actions | rock.png
+[  76% ] _update_scan_actions | tree.png
+[  84% ] _update_scan_actions | water.png
+[ DONE ] _update_scan_actions
+
+[   0% ] reimport | Started （重新）匯入素材 (10 steps)
+[   0% ] reimport | 正在準備重新匯入檔案…
+[   9% ] reimport | 正在準備重新匯入檔案…
+[  18% ] reimport | 正在準備重新匯入檔案…
+[  27% ] reimport | 正在準備重新匯入檔案…
+[  36% ] reimport | 正在準備重新匯入檔案…
+[  45% ] reimport | 正在準備重新匯入檔案…
+[  54% ] reimport | 正在準備重新匯入檔案…
+[  63% ] reimport | 正在準備重新匯入檔案…
+[  72% ] reimport | 正在準備重新匯入檔案…
+[  81% ] reimport | 正在準備重新匯入檔案…
+[   0% ] reimport | 執行預先重新匯入作業…
+[   0% ] reimport | bank.png
+[   9% ] reimport | cliff.png
+[  18% ] reimport | crossing.png
+[  27% ] reimport | defense.png
+[  36% ] reimport | ford.png
+[  45% ] reimport | forest.png
+[  54% ] reimport | plain.png
+[  63% ] reimport | road.png
+[  72% ] reimport | tree.png
+[  81% ] reimport | water.png
+[  90% ] reimport | 完成素材匯入...
+[ DONE ] reimport
+
+[   0% ] reimport | Started （重新）匯入素材 (10 steps)
+[   0% ] reimport | 執行重新匯入後續處理作業…
+[ DONE ] reimport
+
+[   0% ] loading_editor_layout | Started 正在載入編輯器 (5 steps)
+[   0% ] loading_editor_layout | 正在載入編輯器佈局…
+[  16% ] loading_editor_layout | 正在載入面板…
+[ DONE ] loading_editor_layout
+

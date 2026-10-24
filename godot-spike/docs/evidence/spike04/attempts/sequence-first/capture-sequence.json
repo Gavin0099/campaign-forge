@@ -1,0 +1,89 @@
+{
+	"checks": {
+		"attack_budget_simulation": false,
+		"attack_returns_to_saved_base": true,
+		"parsed_keyboard_pan": true,
+		"parsed_middle_drag": true,
+		"parsed_o_overview": true,
+		"profile_toned": true
+	},
+	"engine": "4.7.2-stable (official)",
+	"human": "HUMAN_PENDING",
+	"mode": "sequence",
+	"pass": false,
+	"renderer": "AMD Radeon 780M Graphics",
+	"shots": [
+		{
+			"camera": "(960.0, 614.25)",
+			"file": "deployment.png",
+			"mode": "sequence",
+			"phase": "player",
+			"resolution": [
+				1280,
+				720
+			],
+			"turn": 1,
+			"zoom": "(1.0, 1.0)"
+		},
+		{
+			"camera": "(1076.334, 584.25)",
+			"file": "scroll.png",
+			"mode": "sequence",
+			"phase": "player",
+			"resolution": [
+				1280,
+				720
+			],
+			"turn": 1,
+			"zoom": "(1.0, 1.0)"
+		},
+		{
+			"camera": "(1680.0, 992.25)",
+			"file": "overview.png",
+			"mode": "sequence",
+			"phase": "player",
+			"resolution": [
+				1280,
+				720
+			],
+			"turn": 1,
+			"zoom": "(0.183408, 0.183408)"
+		},
+		{
+			"camera": "(1840.0, 1039.5)",
+			"file": "camera-before.png",
+			"mode": "sequence",
+			"phase": "player",
+			"resolution": [
+				1280,
+				720
+			],
+			"turn": 2,
+			"zoom": "(1.0, 1.0)"
+		},
+		{
+			"camera": "(1860.8, 1051.785)",
+			"file": "first-contact.png",
+			"mode": "sequence",
+			"phase": "player",
+			"resolution": [
+				1280,
+				720
+			],
+			"turn": 2,
+			"zoom": "(1.46, 1.46)"
+		},
+		{
+			"camera": "(1840.0, 1039.5)",
+			"file": "camera-return.png",
+			"mode": "sequence",
+			"phase": "player",
+			"resolution": [
+				1280,
+				720
+			],
+			"turn": 2,
+			"zoom": "(1.0, 1.0)"
+		}
+	]
+}

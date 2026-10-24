@@ -31,6 +31,13 @@ func _draw() -> void:
 		var path := PackedVector2Array()
 		for cell in battle.preview_path: path.append(battle.center(cell))
 		draw_polyline(path,Color("e0c487"),3,true)
+	if is_instance_valid(battle.hud):
+		for entry in battle.hud.warning_entries():
+			var at: Vector2 = battle.center(entry)
+			draw_arc(at,22,0,TAU,24,battle.BRASS,3)
+			draw_line(at-Vector2(13,0),at+Vector2(13,0),battle.BRASS,2)
+			draw_line(at-Vector2(0,13),at+Vector2(0,13),battle.BRASS,2)
+			draw_string(ThemeDB.fallback_font,at+Vector2(-12,-30),"T%d" % battle.state.level.reinforcement_turn,HORIZONTAL_ALIGNMENT_LEFT,-1,16,battle.BRASS)
 	var cursor: PackedVector2Array = battle.diamond(battle.cursor_cell)
 	cursor.append(cursor[0])
 	draw_polyline(cursor,Color("e9d9b1"),2,true)
