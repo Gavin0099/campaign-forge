@@ -105,6 +105,16 @@
     "sha256_git_lf": "61dfa217cacd96b74a2989ea3a982ff9f00fc2da1936806a0faa615d17949a9f"
   },
   {
+    "path": "godot-spike/docs/evidence/spike02-a8/handoff-section.md",
+    "sha256_working_tree": "7157b8c535e2be17d78c857f167fee3d8d566af478e22c3052c9aaf2709fae93",
+    "sha256_git_lf": "7157b8c535e2be17d78c857f167fee3d8d566af478e22c3052c9aaf2709fae93"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike02-a8/handoff-table-check.log",
+    "sha256_working_tree": "36b3abddf13ab0e402f99f42a09320541dccbe3562148d0ebe45259be5aa78e7",
+    "sha256_git_lf": "fa4ea203796924adf7c0ba95343e1083f48a68499dbef0dccb0e8616d144aabf"
+  },
+  {
     "path": "godot-spike/docs/evidence/spike02-a8/idle-1080p.png",
     "sha256_working_tree": "cfc9be93d713e4e85e01352860e8f144ca6a7235c465c9108d9cf654c9afc79d",
     "sha256_git_lf": "cfc9be93d713e4e85e01352860e8f144ca6a7235c465c9108d9cf654c9afc79d"
