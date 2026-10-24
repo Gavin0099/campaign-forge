@@ -1,0 +1,22 @@
+{
+  "raw_sha256": "5f66d43bb64e9d4570ee2fa187bd63db14dc226d2fa6c644bab7d25e82c99108",
+  "normalized_sha256": "e4e661e76e29d52754971a68f7d879b4a68a7b0d0750b52e66ceb164a88961c0",
+  "settings": {
+    "scale": 0.352,
+    "translate": [
+      30.0,
+      61.0
+    ],
+    "palette_remap": true
+  },
+  "palette_distance": {
+    "before": 5.630703,
+    "after": 0.660794,
+    "metric": "mean nearest idle/01 128-color Euclidean RGB, alpha>240"
+  },
+  "cleanup_mask": "godot-spike/docs/evidence/spike02-a6/normalized/04-attempt-1-cleanup-mask.png",
+  "cleanup_mask_sha256": "08c28cb85f9dba8c0bdaaf63c991621db4bfb26eb65fd19216341e932d4d5069",
+  "operations": "single uniform scale/translate; alpha<24 cleared; nearest idle/01 128-color remap, no dither; transparent RGB cleared; no costume compositing",
+  "runtime_sha256": null,
+  "adopted": false
+}

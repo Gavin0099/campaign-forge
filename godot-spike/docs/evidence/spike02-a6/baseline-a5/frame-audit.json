@@ -1,0 +1,593 @@
+[
+  {
+    "path": "knight-a/idle/00.png",
+    "sha256": "0ca4807cc16f63dba0b3a15bfaaa1d1a534892151db7dfb339e6c5c2b6edf791",
+    "source": "references/knight-a.png",
+    "cleanup": "original crop uniformly scaled, alpha debris threshold 24, fixed pivot",
+    "status": "SOURCE_DERIVED"
+  },
+  {
+    "path": "knight-a/hit/00.png",
+    "sha256": "6ebef74b6cf9520b5f5a243fb4d9bf669bf78bc6c52f9d6b99ce8202619d2b41",
+    "source": "raw/knight-a-hit-00.png",
+    "raw_sha256": "10260a5c1dd3cfdc7ed5eb70da250e74c7f7d1b36543bfee56d078eaff900a79",
+    "registration": [
+      775,
+      1206,
+      68,
+      360
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "knight-a/hit/01.png",
+    "sha256": "9fbf4a41ffcc16d7c0e75a1f74a182ef33eed4c869f934341cf81e2692b85179",
+    "source": "raw/knight-a-hit-01.png",
+    "raw_sha256": "f528b4c5b14bd1dbc5eeba2e6a3e0c8e889c4bce684b0cab16ec3a506cfb592b",
+    "registration": [
+      775,
+      1168,
+      70,
+      350
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "knight-a/hit/02.png",
+    "sha256": "0465fee5877109acb6723c56ebe71134f0d3fcc9ab6e6b9505d7be534f4523bb",
+    "source": "raw/knight-a-hit-02.png",
+    "raw_sha256": "1596e1e438609947b652f20302c8735233247bd400c495125b18eb7743cce376",
+    "registration": [
+      795,
+      1221,
+      33,
+      360
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "knight-a/stagger/00.png",
+    "sha256": "2cfe6ceb5de5380888937e1ec790102372b4efe5a2f7126a711780915f2948b6",
+    "source": "raw/knight-a-stagger-00.png",
+    "raw_sha256": "2f32cc1dc5d47df2f0e40df3bc7790e38c26a2f5dd86ec778f52ee5559a9d299",
+    "registration": [
+      785,
+      1138,
+      151,
+      332
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "knight-a/stagger/01.png",
+    "sha256": "b4ec94ff31941285ebd450a706d0565c23745ad2757bcd9229c55797a4b1773b",
+    "source": "raw/knight-a-stagger-01.png",
+    "raw_sha256": "b7bc8fd69682eda80f00c74a26d7993726add31bf1b678323bc968b55399bbc2",
+    "registration": [
+      795,
+      1149,
+      136,
+      310
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "knight-a/stagger/02.png",
+    "sha256": "62594f3aaef1f3a70fdae0a1965c7649f8badf0a112afced863cf85b44e24dd6",
+    "source": "raw/knight-a-stagger-02.png",
+    "raw_sha256": "7fa1a592fce21df8a5b08076f666b5e77db0cc29fc02b1521ffc931729cfc2cf",
+    "registration": [
+      795,
+      1147,
+      128,
+      335
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "source": "raw/thoma-mace-idle-01.png",
+    "raw_sha256": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5",
+    "registration": [
+      665,
+      1219,
+      58,
+      360
+    ],
+    "status": "PASS",
+    "weapon_status": "APPROVED",
+    "reason": "Byte-unchanged reference endpoint; adjacent transition failures are assigned to motion frames; not Owner art approval.",
+    "style_review": {
+      "face": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "stole_cape_embroidery": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "cuffs": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "hem_silhouette": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "palette": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "proportions": "PASS: fixed canvas/pivot; exact protected mace/hand/feet.",
+      "light_direction": "PASS: reference top-left light retained.",
+      "stroke": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "satchel_medallion": "PASS: one original reference satchel. PASS: immutable reference endpoint; byte-identical to A4."
+    },
+    "weapon_approval": "Owner, 2026-10-24",
+    "review_segment": "spike-02 A5",
+    "review_authority": "model inspection only; not Owner art approval or human playtest",
+    "palette_distance": {
+      "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
+      "value": 0.0,
+      "not_a_perceptual_quality_score": true
+    },
+    "region_review": {
+      "stole": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "embroidery": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "cuffs": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "hem": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "face_hair": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "palette": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "seams": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "bag_count": "PASS: one original reference satchel.",
+      "feet": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "sequence": "PASS: immutable endpoint retained; adjacent transition FAIL assigned to motion frames."
+    },
+    "bag_count": 1,
+    "bag_count_authority": "model count in full-size frame and bag crop"
+  },
+  {
+    "path": "thoma/swing/00.png",
+    "sha256": "578b460defc4c53ba632002e405d40e2b6d40282a85da7db192e0b75be7d9663",
+    "source": "A4 reference rig refinement; recover body, original pose arms and protected A4 geometry",
+    "raw_sha256": null,
+    "registration": [
+      685,
+      1218,
+      144,
+      350
+    ],
+    "status": "PLACEHOLDER",
+    "weapon_status": "APPROVED",
+    "reason": "Single bag and unit motif scale fixed; horizontal plain-cloth repair edge under satchel remains visible; right boot remains detached; left planted sole unchanged.",
+    "style_review": {
+      "face": "PASS: exact A4 reference-derived face/hair pixels protected after seam smoothing.",
+      "stole_cape_embroidery": "FAIL: raised shoulder band still meets the retained sleeve abruptly.",
+      "cuffs": "FAIL: raised cuff fold direction still changes at the sleeve edge.",
+      "hem_silhouette": "FAIL: left connection is wider, but far boot remains separated from cloth.",
+      "palette": "PASS: original muted teal/ivory/brown retained; no remapping or visible colour-family flicker.",
+      "proportions": "PASS: fixed canvas/pivot; exact protected mace/hand/feet.",
+      "light_direction": "PASS: reference top-left light retained.",
+      "stroke": "FAIL: horizontal plain-cloth repair edge under satchel remains visible.",
+      "satchel_medallion": "PASS: exactly one reference satchel; no bag pixels used as occlusion fill. FAIL: horizontal plain-cloth repair edge under satchel remains visible."
+    },
+    "weapon_approval": "Owner, 2026-10-24",
+    "cleanup": "One recover reference body, unit motif scale, plain ivory occlusion fill, lower hem mesh; narrow seam smoothing; fixed raw weapon/hand/feet overwrite; transparent RGB cleared outside protection.",
+    "review_segment": "spike-02 A5",
+    "review_authority": "model inspection only; not Owner art approval or human playtest",
+    "palette_distance": {
+      "before": 2.154391,
+      "after": 2.292463,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "region_review": {
+      "stole": "FAIL: raised shoulder band still meets the retained sleeve abruptly.",
+      "cuffs": "FAIL: raised cuff fold direction still changes at the sleeve edge.",
+      "hem": "FAIL: left connection is wider, but far boot remains separated from cloth.",
+      "seams": "FAIL: horizontal plain-cloth repair edge under satchel remains visible.",
+      "feet": "FAIL: right boot remains detached; left planted sole unchanged.",
+      "embroidery": "PASS: same source sprig row; horizontal local scale 1.0, no new motifs.",
+      "face_hair": "PASS: exact A4 reference-derived face/hair pixels protected after seam smoothing.",
+      "palette": "PASS: original muted teal/ivory/brown retained; no remapping or visible colour-family flicker.",
+      "bag_count": "PASS: exactly one reference satchel; no bag pixels used as occlusion fill.",
+      "sequence": "FAIL: sleeve/shoulder folds and hem/boot outline still pop in neighbouring poses."
+    },
+    "bag_count": 1,
+    "bag_count_authority": "model count in full-size frame and bag crop"
+  },
+  {
+    "path": "thoma/swing/01.png",
+    "sha256": "b06121b366fe9c126d8bcf40c3ffbff974446282d0f22a844776347ad3a14243",
+    "source": "A4 reference rig refinement; recover body, original pose arms and protected A4 geometry",
+    "raw_sha256": null,
+    "registration": [
+      665,
+      1220,
+      132,
+      354
+    ],
+    "status": "PLACEHOLDER",
+    "weapon_status": "APPROVED",
+    "reason": "Single bag and unit motif scale fixed; waist/body and bag-bottom cloth transition retain brightness steps; hem-to-boot transition remains narrow and not anatomically continuous.",
+    "style_review": {
+      "face": "PASS: exact A4 reference-derived face/hair pixels protected after seam smoothing.",
+      "stole_cape_embroidery": "FAIL: upper shoulder band still exposes a layered cutout join.",
+      "cuffs": "FAIL: raised cuff still reads as an inserted reference patch.",
+      "hem_silhouette": "FAIL: underskirt eases toward left ankle but far-leg cloth transition remains abrupt.",
+      "palette": "PASS: original muted teal/ivory/brown retained; no remapping or visible colour-family flicker.",
+      "proportions": "PASS: fixed canvas/pivot; exact protected mace/hand/feet.",
+      "light_direction": "PASS: reference top-left light retained.",
+      "stroke": "FAIL: waist/body and bag-bottom cloth transition retain brightness steps.",
+      "satchel_medallion": "PASS: exactly one reference satchel; no bag pixels used as occlusion fill. FAIL: waist/body and bag-bottom cloth transition retain brightness steps."
+    },
+    "weapon_approval": "Owner, 2026-10-24",
+    "cleanup": "One recover reference body, unit motif scale, plain ivory occlusion fill, lower hem mesh; narrow seam smoothing; fixed raw weapon/hand/feet overwrite; transparent RGB cleared outside protection.",
+    "review_segment": "spike-02 A5",
+    "review_authority": "model inspection only; not Owner art approval or human playtest",
+    "palette_distance": {
+      "before": 2.239122,
+      "after": 2.400236,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "region_review": {
+      "stole": "FAIL: upper shoulder band still exposes a layered cutout join.",
+      "cuffs": "FAIL: raised cuff still reads as an inserted reference patch.",
+      "hem": "FAIL: underskirt eases toward left ankle but far-leg cloth transition remains abrupt.",
+      "seams": "FAIL: waist/body and bag-bottom cloth transition retain brightness steps.",
+      "feet": "FAIL: hem-to-boot transition remains narrow and not anatomically continuous.",
+      "embroidery": "PASS: same source sprig row; horizontal local scale 1.0, no new motifs.",
+      "face_hair": "PASS: exact A4 reference-derived face/hair pixels protected after seam smoothing.",
+      "palette": "PASS: original muted teal/ivory/brown retained; no remapping or visible colour-family flicker.",
+      "bag_count": "PASS: exactly one reference satchel; no bag pixels used as occlusion fill.",
+      "sequence": "FAIL: sleeve/shoulder folds and hem/boot outline still pop in neighbouring poses."
+    },
+    "bag_count": 1,
+    "bag_count_authority": "model count in full-size frame and bag crop"
+  },
+  {
+    "path": "thoma/swing/03.png",
+    "sha256": "f4b590dc492705067948bc9c31fcfdbdfa01a5b424f75cda5a0e6d28cf319d88",
+    "source": "A4 reference rig refinement; recover body, original pose arms and protected A4 geometry",
+    "raw_sha256": null,
+    "registration": [
+      545,
+      1190,
+      81,
+      350
+    ],
+    "status": "PLACEHOLDER",
+    "weapon_status": "APPROVED",
+    "reason": "Single bag and unit motif scale fixed; plain-cloth patch ends in a horizontal bag-bottom seam; shoulder seam still reads; left contact improved; right leg-to-boot gap and boot overlap still fail.",
+    "style_review": {
+      "face": "PASS: exact A4 reference-derived face/hair pixels protected after seam smoothing.",
+      "stole_cape_embroidery": "FAIL: contact shoulder and waist layering still break the fold direction.",
+      "cuffs": "FAIL: primary cuff retains a separate edge against extended sleeve.",
+      "hem_silhouette": "FAIL: left ankle now meets cloth, but right upper boot/underskirt join remains disconnected.",
+      "palette": "PASS: original muted teal/ivory/brown retained; no remapping or visible colour-family flicker.",
+      "proportions": "PASS: fixed canvas/pivot; exact protected mace/hand/feet.",
+      "light_direction": "PASS: reference top-left light retained.",
+      "stroke": "FAIL: plain-cloth patch ends in a horizontal bag-bottom seam; shoulder seam still reads.",
+      "satchel_medallion": "PASS: exactly one reference satchel; no bag pixels used as occlusion fill. FAIL: plain-cloth patch ends in a horizontal bag-bottom seam; shoulder seam still reads."
+    },
+    "weapon_approval": "Owner, 2026-10-24",
+    "cleanup": "One recover reference body, unit motif scale, plain ivory occlusion fill, lower hem mesh; narrow seam smoothing; fixed raw weapon/hand/feet overwrite; transparent RGB cleared outside protection.",
+    "review_segment": "spike-02 A5",
+    "review_authority": "model inspection only; not Owner art approval or human playtest",
+    "palette_distance": {
+      "before": 2.272082,
+      "after": 2.344525,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "region_review": {
+      "stole": "FAIL: contact shoulder and waist layering still break the fold direction.",
+      "cuffs": "FAIL: primary cuff retains a separate edge against extended sleeve.",
+      "hem": "FAIL: left ankle now meets cloth, but right upper boot/underskirt join remains disconnected.",
+      "seams": "FAIL: plain-cloth patch ends in a horizontal bag-bottom seam; shoulder seam still reads.",
+      "feet": "FAIL: left contact improved; right leg-to-boot gap and boot overlap still fail.",
+      "embroidery": "PASS: same source sprig row; horizontal local scale 1.0, no new motifs.",
+      "face_hair": "PASS: exact A4 reference-derived face/hair pixels protected after seam smoothing.",
+      "palette": "PASS: original muted teal/ivory/brown retained; no remapping or visible colour-family flicker.",
+      "bag_count": "PASS: exactly one reference satchel; no bag pixels used as occlusion fill.",
+      "sequence": "FAIL: sleeve/shoulder folds and hem/boot outline still pop in neighbouring poses."
+    },
+    "bag_count": 1,
+    "bag_count_authority": "model count in full-size frame and bag crop"
+  },
+  {
+    "path": "thoma/swing/04.png",
+    "sha256": "cccce1128daf423eb337a88d8dae5fe507524b448ca140d5c57bc488841c96e9",
+    "source": "A4 reference rig refinement; recover body, original pose arms and protected A4 geometry",
+    "raw_sha256": null,
+    "registration": [
+      607,
+      1167,
+      110,
+      342
+    ],
+    "status": "PLACEHOLDER",
+    "weapon_status": "APPROVED",
+    "reason": "Single bag and unit motif scale fixed; twisted sleeve/body and bag-bottom cloth repair remain apparent; trailing boot/hem overlap and far-leg gap remain; no continuous leg anatomy.",
+    "style_review": {
+      "face": "PASS: exact A4 reference-derived face/hair pixels protected after seam smoothing.",
+      "stole_cape_embroidery": "FAIL: torso twist still has a hard upper-band/body junction.",
+      "cuffs": "FAIL: front cuff fold orientation still differs from retained sleeve.",
+      "hem_silhouette": "FAIL: trailing drape still jumps to the compact unwarped recover silhouette.",
+      "palette": "PASS: original muted teal/ivory/brown retained; no remapping or visible colour-family flicker.",
+      "proportions": "PASS: fixed canvas/pivot; exact protected mace/hand/feet.",
+      "light_direction": "PASS: reference top-left light retained.",
+      "stroke": "FAIL: twisted sleeve/body and bag-bottom cloth repair remain apparent.",
+      "satchel_medallion": "PASS: exactly one reference satchel; no bag pixels used as occlusion fill. FAIL: twisted sleeve/body and bag-bottom cloth repair remain apparent."
+    },
+    "weapon_approval": "Owner, 2026-10-24",
+    "cleanup": "One recover reference body, unit motif scale, plain ivory occlusion fill, lower hem mesh; narrow seam smoothing; fixed raw weapon/hand/feet overwrite; transparent RGB cleared outside protection.",
+    "review_segment": "spike-02 A5",
+    "review_authority": "model inspection only; not Owner art approval or human playtest",
+    "palette_distance": {
+      "before": 2.211167,
+      "after": 2.286251,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "region_review": {
+      "stole": "FAIL: torso twist still has a hard upper-band/body junction.",
+      "cuffs": "FAIL: front cuff fold orientation still differs from retained sleeve.",
+      "hem": "FAIL: trailing drape still jumps to the compact unwarped recover silhouette.",
+      "seams": "FAIL: twisted sleeve/body and bag-bottom cloth repair remain apparent.",
+      "feet": "FAIL: trailing boot/hem overlap and far-leg gap remain; no continuous leg anatomy.",
+      "embroidery": "PASS: same source sprig row; horizontal local scale 1.0, no new motifs.",
+      "face_hair": "PASS: exact A4 reference-derived face/hair pixels protected after seam smoothing.",
+      "palette": "PASS: original muted teal/ivory/brown retained; no remapping or visible colour-family flicker.",
+      "bag_count": "PASS: exactly one reference satchel; no bag pixels used as occlusion fill.",
+      "sequence": "FAIL: sleeve/shoulder folds and hem/boot outline still pop in neighbouring poses."
+    },
+    "bag_count": 1,
+    "bag_count_authority": "model count in full-size frame and bag crop"
+  },
+  {
+    "path": "thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "source": "raw/thoma-mace-swing-05.png",
+    "raw_sha256": "e89296c8cd0a799e8d5302caf1f611aaa241e84f2a2c4ff56f8b77f4153f31dd",
+    "registration": [
+      673,
+      1217,
+      85,
+      360
+    ],
+    "status": "PASS",
+    "weapon_status": "APPROVED",
+    "reason": "Byte-unchanged reference endpoint; adjacent transition failures are assigned to motion frames; not Owner art approval.",
+    "style_review": {
+      "face": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "stole_cape_embroidery": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "cuffs": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "hem_silhouette": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "palette": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "proportions": "PASS: fixed canvas/pivot; exact protected mace/hand/feet.",
+      "light_direction": "PASS: reference top-left light retained.",
+      "stroke": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "satchel_medallion": "PASS: one original reference satchel. PASS: immutable reference endpoint; byte-identical to A4."
+    },
+    "weapon_approval": "Owner, 2026-10-24",
+    "review_segment": "spike-02 A5",
+    "review_authority": "model inspection only; not Owner art approval or human playtest",
+    "palette_distance": {
+      "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
+      "value": 0.0,
+      "not_a_perceptual_quality_score": true
+    },
+    "region_review": {
+      "stole": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "embroidery": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "cuffs": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "hem": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "face_hair": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "palette": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "seams": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "bag_count": "PASS: one original reference satchel.",
+      "feet": "PASS: immutable reference endpoint; byte-identical to A4.",
+      "sequence": "PASS: immutable endpoint retained; adjacent transition FAIL assigned to motion frames."
+    },
+    "bag_count": 1,
+    "bag_count_authority": "model count in full-size frame and bag crop"
+  },
+  {
+    "path": "thoma/swing/02.png",
+    "sha256": "91a68c71be081b72fef49a0c90ec010f1fe6a456b64b9ecda1940ae4a0867818",
+    "source": "A4 reference rig refinement; recover body, original pose arms and protected A4 geometry",
+    "raw_sha256": null,
+    "registration": [
+      575,
+      1205,
+      133,
+      350
+    ],
+    "status": "PLACEHOLDER",
+    "weapon_status": "APPROVED",
+    "reason": "Single bag and unit motif scale fixed; shoulder/torso and plain-cloth bag repair edges remain visible; far boot has an exposed gap above its upper edge; fixed soles alone do not prove attachment.",
+    "style_review": {
+      "face": "PASS: exact A4 reference-derived face/hair pixels protected after seam smoothing.",
+      "stole_cape_embroidery": "FAIL: retained upper shoulder still has a squared patch boundary.",
+      "cuffs": "FAIL: offhand cuff has a sharp triangular transition and floating edge.",
+      "hem_silhouette": "FAIL: lower sweep is continuous reference cloth but changes width abruptly from raised pose.",
+      "palette": "PASS: original muted teal/ivory/brown retained; no remapping or visible colour-family flicker.",
+      "proportions": "PASS: fixed canvas/pivot; exact protected mace/hand/feet.",
+      "light_direction": "PASS: reference top-left light retained.",
+      "stroke": "FAIL: shoulder/torso and plain-cloth bag repair edges remain visible.",
+      "satchel_medallion": "PASS: exactly one reference satchel; no bag pixels used as occlusion fill. FAIL: shoulder/torso and plain-cloth bag repair edges remain visible."
+    },
+    "weapon_approval": "Owner, 2026-10-24",
+    "cleanup": "One recover reference body, unit motif scale, plain ivory occlusion fill, lower hem mesh; narrow seam smoothing; fixed raw weapon/hand/feet overwrite; transparent RGB cleared outside protection.",
+    "review_segment": "spike-02 A5",
+    "review_authority": "model inspection only; not Owner art approval or human playtest",
+    "palette_distance": {
+      "before": 2.244537,
+      "after": 2.318793,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "region_review": {
+      "stole": "FAIL: retained upper shoulder still has a squared patch boundary.",
+      "cuffs": "FAIL: offhand cuff has a sharp triangular transition and floating edge.",
+      "hem": "FAIL: lower sweep is continuous reference cloth but changes width abruptly from raised pose.",
+      "seams": "FAIL: shoulder/torso and plain-cloth bag repair edges remain visible.",
+      "feet": "FAIL: far boot has an exposed gap above its upper edge; fixed soles alone do not prove attachment.",
+      "embroidery": "PASS: same source sprig row; horizontal local scale 1.0, no new motifs.",
+      "face_hair": "PASS: exact A4 reference-derived face/hair pixels protected after seam smoothing.",
+      "palette": "PASS: original muted teal/ivory/brown retained; no remapping or visible colour-family flicker.",
+      "bag_count": "PASS: exactly one reference satchel; no bag pixels used as occlusion fill.",
+      "sequence": "FAIL: sleeve/shoulder folds and hem/boot outline still pop in neighbouring poses."
+    },
+    "bag_count": 1,
+    "bag_count_authority": "model count in full-size frame and bag crop"
+  },
+  {
+    "path": "knight-b/idle/00.png",
+    "source": "knight-a/idle/00.png",
+    "source_sha256": "0ca4807cc16f63dba0b3a15bfaaa1d1a534892151db7dfb339e6c5c2b6edf791",
+    "sha256": "e71644dfef36fcb0cc1babd3db63ab9791ade1d1fbd7445601b77f51612e97b5",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      298,
+      109
+    ],
+    "shield_mask": [
+      371,
+      272,
+      28,
+      43
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/hit/00.png",
+    "source": "knight-a/hit/00.png",
+    "source_sha256": "6ebef74b6cf9520b5f5a243fb4d9bf669bf78bc6c52f9d6b99ce8202619d2b41",
+    "sha256": "cc853f78528c4c8391d70606eb4e4da39565ea5d73e568664620ba06c39ab5bd",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      330,
+      107
+    ],
+    "shield_mask": [
+      319,
+      244,
+      33,
+      50
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/hit/01.png",
+    "source": "knight-a/hit/01.png",
+    "source_sha256": "9fbf4a41ffcc16d7c0e75a1f74a182ef33eed4c869f934341cf81e2692b85179",
+    "sha256": "2b54bc88debb009b1a15164a6c40e07f1438eb5be33cb7bb0b0c632e85a7ae9e",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      353,
+      117
+    ],
+    "shield_mask": [
+      276,
+      229,
+      30,
+      52
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/hit/02.png",
+    "source": "knight-a/hit/02.png",
+    "source_sha256": "0465fee5877109acb6723c56ebe71134f0d3fcc9ab6e6b9505d7be534f4523bb",
+    "sha256": "e14b7ba82c075fef7a4f94d14c0309fec15316c73eddd0c3437e0d39b8e4a7cd",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      211,
+      108
+    ],
+    "shield_mask": [
+      313,
+      270,
+      30,
+      44
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/stagger/00.png",
+    "source": "knight-a/stagger/00.png",
+    "source_sha256": "2cfe6ceb5de5380888937e1ec790102372b4efe5a2f7126a711780915f2948b6",
+    "sha256": "e5164c1a931d13ffdfcabffb345a2c2ff57f6f6f87e115aae3bc19c1fc7538e6",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      311,
+      137
+    ],
+    "shield_mask": [
+      204,
+      219,
+      25,
+      51
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/stagger/01.png",
+    "source": "knight-a/stagger/01.png",
+    "source_sha256": "b4ec94ff31941285ebd450a706d0565c23745ad2757bcd9229c55797a4b1773b",
+    "sha256": "aaea5183f82ec03d531770331835530bfb841d3909bcf88875d2f2301d8a49cf",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      192,
+      160
+    ],
+    "shield_mask": [
+      335,
+      296,
+      30,
+      46
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/stagger/02.png",
+    "source": "knight-a/stagger/02.png",
+    "source_sha256": "62594f3aaef1f3a70fdae0a1965c7649f8badf0a112afced863cf85b44e24dd6",
+    "sha256": "4c2dc1cad19b6a6f11a6727d689e53ea124d0644e698925311db4fdb6290e138",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      243,
+      137
+    ],
+    "shield_mask": [
+      364,
+      275,
+      28,
+      47
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  }
+]
