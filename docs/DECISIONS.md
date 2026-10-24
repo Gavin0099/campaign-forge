@@ -13,6 +13,7 @@
 | D005 | 本批執行 S0 至 S3，完成比較後停在故事選擇 | 已核准範圍 |
 | D006 | 專案獨立，不承接其他專案的平台或定價限制，不與其他遊戲專案合併 | 工作界線 |
 | D007 | 不套用故事開源 LICENSE，不把工具 MIT 視為故事授權 | 工作界線 |
+| P010 | **ACCEPTED**（2026-10-24，Owner Gavin 決定）— 直接採用 Godot 4.7.x（GDScript）作為遊戲引擎；React 網頁版不再作為引擎路線，原訂 React 對 Godot 的 Phase B 對照取消；`ui-prototype/` 的 React 程式不再是目標引擎（保留，不刪除） | Gavin 2026-10-24：「不用網頁版 直接用Godot」「選定 Godot 幫我改」；依據 `codex/godot-spike` 的 spike 01 與 spike-02 A／A2／A3／A4，審查見 `review/gpt-godot-spike` 的 `docs/review/gpt-godot-spike-01.md`、`-02a.md`、`-02a2.md`、`-02a3.md`、`-02a4.md`；[PoC 交接](../godot-spike/docs/HANDOFF.md)。仍待追蹤：托瑪 5 格揮擊正式美術、真人打擊感試玩、之後的曹操傳式大地圖 |
 
 ## 提案與工作假設
 
@@ -23,7 +24,6 @@
 | P003 | 推薦優先選 A，B 作冒險隊伍方向的備選，C 作異族視角與巨獸旅程的選擇 | Gavin 決定；三案不自動合併 |
 | P004 | 未來用外部表格追蹤 flags、trust、items 與路線相依資訊 | S6；不假設第三方 CLI 會驗證這些內容 |
 | P005 | 未來文字試玩可評估 ink／Inky | S9 前另確認工具；目前不安裝、不定引擎 |
-| P010 | **PROPOSED** — Godot 4 (GDScript) as the battle presentation engine | Gavin 親自試玩本次隔離 hit-feel spike 並明確決策後才可採用；[PoC 交接](../godot-spike/docs/HANDOFF.md)。目前不授權完整遷移、不改 G005 或 S3／S4 狀態 |
 
 ## 等待 Gavin
 
