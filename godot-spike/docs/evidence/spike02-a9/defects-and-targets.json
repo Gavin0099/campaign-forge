@@ -1,0 +1,3195 @@
+{
+  "base_commit": "dcc949c",
+  "start_commit": "8b6d957",
+  "order": [
+    "03",
+    "02",
+    "04",
+    "00",
+    "01"
+  ],
+  "checks": [
+    "face_hair",
+    "stole",
+    "embroidery",
+    "tassels",
+    "cuffs",
+    "hem",
+    "palette",
+    "seams",
+    "bag_count",
+    "feet",
+    "mace",
+    "landmarks",
+    "sequence"
+  ],
+  "anchors": {
+    "idle-01": {
+      "path": "shared-anim/thoma/idle/01.png",
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "regions": {
+        "head": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/head.png",
+          "sha256": "db1796aa2abdb1a4e26bbfd2b5e8a4a0ee9ce593b3b27d9db6638007d4d75a55",
+          "polygons": [
+            [
+              [
+                224,
+                110
+              ],
+              [
+                236,
+                103
+              ],
+              [
+                267,
+                101
+              ],
+              [
+                284,
+                111
+              ],
+              [
+                287,
+                149
+              ],
+              [
+                280,
+                168
+              ],
+              [
+                265,
+                175
+              ],
+              [
+                245,
+                165
+              ],
+              [
+                230,
+                147
+              ]
+            ]
+          ]
+        },
+        "stole": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/stole.png",
+          "sha256": "5a6fe191fe9be4e54e11c27220848aa9b646cac2676001576ac9b1338d59ac59",
+          "polygons": [
+            [
+              [
+                191,
+                155
+              ],
+              [
+                210,
+                158
+              ],
+              [
+                247,
+                242
+              ],
+              [
+                254,
+                382
+              ],
+              [
+                220,
+                384
+              ],
+              [
+                220,
+                265
+              ]
+            ],
+            [
+              [
+                277,
+                157
+              ],
+              [
+                290,
+                160
+              ],
+              [
+                312,
+                354
+              ],
+              [
+                287,
+                363
+              ]
+            ]
+          ]
+        },
+        "embroidery": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/embroidery.png",
+          "sha256": "a0782e700014826ed6c377b6c6b6ce786173de7c6ce1890674eaa977b9e31283",
+          "polygons": [
+            [
+              [
+                222,
+                337
+              ],
+              [
+                253,
+                337
+              ],
+              [
+                253,
+                373
+              ],
+              [
+                222,
+                373
+              ]
+            ],
+            [
+              [
+                285,
+                300
+              ],
+              [
+                309,
+                300
+              ],
+              [
+                309,
+                350
+              ],
+              [
+                285,
+                350
+              ]
+            ]
+          ]
+        },
+        "tassels": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/tassels.png",
+          "sha256": "c9f61991c51cee785462f1c8578a8e407ab5fbf8f69c7501d8f6d7e3bafe32b9",
+          "polygons": [
+            [
+              [
+                220,
+                369
+              ],
+              [
+                255,
+                369
+              ],
+              [
+                255,
+                386
+              ],
+              [
+                220,
+                386
+              ]
+            ],
+            [
+              [
+                285,
+                346
+              ],
+              [
+                313,
+                346
+              ],
+              [
+                313,
+                366
+              ],
+              [
+                285,
+                366
+              ]
+            ]
+          ]
+        },
+        "mace": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/mace.png",
+          "sha256": "39f92f2c29c54c2c752ba0c1f3e639a5cfd0b6493ab23a9eb100c81ccd43ebf6",
+          "polygons": [
+            [
+              [
+                171,
+                294
+              ],
+              [
+                179,
+                290
+              ],
+              [
+                199,
+                306
+              ],
+              [
+                211,
+                317
+              ],
+              [
+                216,
+                317
+              ],
+              [
+                217,
+                312
+              ],
+              [
+                224,
+                315
+              ],
+              [
+                232,
+                315
+              ],
+              [
+                234,
+                324
+              ],
+              [
+                241,
+                329
+              ],
+              [
+                238,
+                338
+              ],
+              [
+                235,
+                348
+              ],
+              [
+                226,
+                341
+              ],
+              [
+                218,
+                344
+              ],
+              [
+                215,
+                335
+              ],
+              [
+                207,
+                329
+              ],
+              [
+                184,
+                308
+              ]
+            ]
+          ]
+        },
+        "legs_feet": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/legs_feet.png",
+          "sha256": "c727d7ba1b9debbdeb6d7768e569c05b2f36fa72891d2a437e57dd02aeec4705",
+          "polygons": [
+            [
+              [
+                179,
+                389
+              ],
+              [
+                333,
+                389
+              ],
+              [
+                333,
+                465
+              ],
+              [
+                179,
+                465
+              ]
+            ]
+          ]
+        }
+      }
+    },
+    "swing-05": {
+      "path": "shared-anim/thoma/swing/05.png",
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "regions": {
+        "head": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/swing-05/head.png",
+          "sha256": "74e8a608f88c68bd9446173c88527fd2042b5e0d966bc4e1d6da5f562c496d39",
+          "polygons": [
+            [
+              [
+                219,
+                100
+              ],
+              [
+                231,
+                93
+              ],
+              [
+                262,
+                91
+              ],
+              [
+                279,
+                101
+              ],
+              [
+                282,
+                139
+              ],
+              [
+                275,
+                158
+              ],
+              [
+                260,
+                165
+              ],
+              [
+                240,
+                155
+              ],
+              [
+                225,
+                137
+              ]
+            ]
+          ]
+        },
+        "stole": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/swing-05/stole.png",
+          "sha256": "c99c2d911d6b38ca1c7c0455f7ffa921b00f1432157d0b88cdba636130f59d58",
+          "polygons": [
+            [
+              [
+                186,
+                145
+              ],
+              [
+                205,
+                148
+              ],
+              [
+                242,
+                232
+              ],
+              [
+                249,
+                372
+              ],
+              [
+                215,
+                374
+              ],
+              [
+                215,
+                255
+              ]
+            ],
+            [
+              [
+                272,
+                147
+              ],
+              [
+                285,
+                150
+              ],
+              [
+                307,
+                344
+              ],
+              [
+                282,
+                353
+              ]
+            ]
+          ]
+        },
+        "embroidery": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/swing-05/embroidery.png",
+          "sha256": "5006799cbc1cc0ec05c424eb7b3512f33c5ea6bdfa9c149637bbc15ee59d6f7c",
+          "polygons": [
+            [
+              [
+                217,
+                327
+              ],
+              [
+                248,
+                327
+              ],
+              [
+                248,
+                363
+              ],
+              [
+                217,
+                363
+              ]
+            ],
+            [
+              [
+                280,
+                290
+              ],
+              [
+                304,
+                290
+              ],
+              [
+                304,
+                340
+              ],
+              [
+                280,
+                340
+              ]
+            ]
+          ]
+        },
+        "tassels": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/swing-05/tassels.png",
+          "sha256": "738a8d714cdad1386560f9c7f8b8c88aafd0934bcdd2d79462405f402aef4cd0",
+          "polygons": [
+            [
+              [
+                215,
+                359
+              ],
+              [
+                250,
+                359
+              ],
+              [
+                250,
+                376
+              ],
+              [
+                215,
+                376
+              ]
+            ],
+            [
+              [
+                280,
+                336
+              ],
+              [
+                308,
+                336
+              ],
+              [
+                308,
+                356
+              ],
+              [
+                280,
+                356
+              ]
+            ]
+          ]
+        },
+        "mace": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/swing-05/mace.png",
+          "sha256": "39f92f2c29c54c2c752ba0c1f3e639a5cfd0b6493ab23a9eb100c81ccd43ebf6",
+          "polygons": [
+            [
+              [
+                171,
+                294
+              ],
+              [
+                179,
+                290
+              ],
+              [
+                199,
+                306
+              ],
+              [
+                211,
+                317
+              ],
+              [
+                216,
+                317
+              ],
+              [
+                217,
+                312
+              ],
+              [
+                224,
+                315
+              ],
+              [
+                232,
+                315
+              ],
+              [
+                234,
+                324
+              ],
+              [
+                241,
+                329
+              ],
+              [
+                238,
+                338
+              ],
+              [
+                235,
+                348
+              ],
+              [
+                226,
+                341
+              ],
+              [
+                218,
+                344
+              ],
+              [
+                215,
+                335
+              ],
+              [
+                207,
+                329
+              ],
+              [
+                184,
+                308
+              ]
+            ]
+          ]
+        },
+        "legs_feet": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/swing-05/legs_feet.png",
+          "sha256": "6552934d1af3b5e50aa780bed6099d1827adffe152133dc94263e52e1df4043c",
+          "polygons": [
+            [
+              [
+                178,
+                394
+              ],
+              [
+                332,
+                394
+              ],
+              [
+                332,
+                465
+              ],
+              [
+                178,
+                465
+              ]
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "frames": {
+    "00": {
+      "frame": "thoma/swing/00.png",
+      "a8_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+      "a8_checklist": {
+        "face_hair": "FAIL: common sheet improves similarity, but broader grey crown, softer beard/cheek and changed brow differ from anchor identity.",
+        "stole": "FAIL: generated panels are wider and more symmetrical at the ends than the narrow asymmetric anchor stole.",
+        "embroidery": "FAIL: two sprigs remain, but leaf scale, branch spacing and shape differ from the exact anchor motifs.",
+        "tassels": "FAIL: dense fairly regular generated fringe does not establish10/8 uneven tips within1; long cord attachment shifts.",
+        "cuffs": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+        "hem": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+        "palette": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+        "seams": "FAIL: reconstructed mace/haft joins and changed hand overlap remain visible at1x; seamless painted integration not achieved.",
+        "bag_count": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
+        "feet": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
+        "mace": "FAIL: target centre and impact opacity pass, but local reconstruction changes projected shaft length and head/haft brush continuity; not canon-design acceptance.",
+        "landmarks": "FAIL: several observed hands, elbows and feet exceed brief targets by4px; cloth-hidden knees have larger uncertainty and are not certified.",
+        "sequence": "FAIL: face, stole ends and hem/stance still jump from anchors to sheet and between action panels; all-same-painting requirement unmet."
+      },
+      "a8_landmarks": {
+        "head_centre": {
+          "measured": [
+            260,
+            143
+          ],
+          "target": [
+            260,
+            143
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "error_px": 0.0,
+          "within4": true
+        },
+        "hand_weapon": {
+          "measured": [
+            151,
+            110
+          ],
+          "target": [
+            127,
+            117
+          ],
+          "delta": [
+            24,
+            -7
+          ],
+          "error_px": 25.0,
+          "within4": false
+        },
+        "hand_free": {
+          "measured": [
+            388,
+            251
+          ],
+          "target": [
+            358,
+            249
+          ],
+          "delta": [
+            30,
+            2
+          ],
+          "error_px": 30.067,
+          "within4": false
+        },
+        "elbow_left": {
+          "measured": [
+            137,
+            174
+          ],
+          "target": [
+            140,
+            174
+          ],
+          "delta": [
+            -3,
+            0
+          ],
+          "error_px": 3.0,
+          "within4": true
+        },
+        "elbow_right": {
+          "measured": [
+            350,
+            230
+          ],
+          "target": [
+            331,
+            230
+          ],
+          "delta": [
+            19,
+            0
+          ],
+          "error_px": 19.0,
+          "within4": false
+        },
+        "knee_left": {
+          "measured": [
+            179,
+            384
+          ],
+          "target": [
+            201,
+            365
+          ],
+          "delta": [
+            -22,
+            19
+          ],
+          "error_px": 29.069,
+          "within4": false
+        },
+        "knee_right": {
+          "measured": [
+            321,
+            378
+          ],
+          "target": [
+            289,
+            371
+          ],
+          "delta": [
+            32,
+            7
+          ],
+          "error_px": 32.757,
+          "within4": false
+        },
+        "foot_left": {
+          "measured": [
+            157,
+            464
+          ],
+          "target": [
+            145,
+            464
+          ],
+          "delta": [
+            12,
+            0
+          ],
+          "error_px": 12.0,
+          "within4": false
+        },
+        "foot_right": {
+          "measured": [
+            355,
+            442
+          ],
+          "target": [
+            342,
+            439
+          ],
+          "delta": [
+            13,
+            3
+          ],
+          "error_px": 13.342,
+          "within4": false
+        },
+        "mace_head": {
+          "measured": [
+            191.589,
+            84.551
+          ],
+          "target": [
+            192,
+            85
+          ],
+          "delta": [
+            -0.411,
+            -0.449
+          ],
+          "error_px": 0.609,
+          "within4": true
+        }
+      },
+      "targets": {
+        "head_centre": [
+          260,
+          143
+        ],
+        "eye_near": [
+          269,
+          141
+        ],
+        "eye_far": [
+          281,
+          143
+        ],
+        "shoulder_left": [
+          211,
+          174
+        ],
+        "shoulder_right": [
+          290,
+          172
+        ],
+        "elbow_left": [
+          140,
+          174
+        ],
+        "elbow_right": [
+          331,
+          230
+        ],
+        "hand_weapon": [
+          127,
+          117
+        ],
+        "hand_free": [
+          358,
+          249
+        ],
+        "hip_left": [
+          237,
+          270
+        ],
+        "hip_right": [
+          279,
+          269
+        ],
+        "knee_left": [
+          201,
+          365
+        ],
+        "knee_right": [
+          289,
+          371
+        ],
+        "foot_left": [
+          145,
+          464
+        ],
+        "foot_right": [
+          342,
+          439
+        ],
+        "mace_grip": [
+          127,
+          117
+        ],
+        "mace_head": [
+          192,
+          85
+        ]
+      },
+      "masks": {
+        "head": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/00/head.png",
+          "sha256": "284158923f60ab8c9e3380f6d185af2e6b647a075f58c6a467dc2408008f6e74",
+          "polygons": [
+            [
+              [
+                229,
+                99
+              ],
+              [
+                288,
+                99
+              ],
+              [
+                300,
+                117
+              ],
+              [
+                297,
+                169
+              ],
+              [
+                280,
+                179
+              ],
+              [
+                235,
+                174
+              ],
+              [
+                221,
+                134
+              ]
+            ]
+          ],
+          "bbox": [
+            221,
+            99,
+            301,
+            180
+          ]
+        },
+        "stole": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/00/stole.png",
+          "sha256": "01a1b626a071eb557c22adb41970ed4329e415ef41dc0ebc757f2d959d445897",
+          "polygons": [
+            [
+              [
+                218,
+                263
+              ],
+              [
+                239,
+                265
+              ],
+              [
+                250,
+                391
+              ],
+              [
+                222,
+                393
+              ]
+            ],
+            [
+              [
+                291,
+                249
+              ],
+              [
+                308,
+                249
+              ],
+              [
+                344,
+                364
+              ],
+              [
+                312,
+                378
+              ]
+            ]
+          ],
+          "bbox": [
+            218,
+            249,
+            345,
+            394
+          ]
+        },
+        "embroidery": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/00/embroidery.png",
+          "sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+          "polygons": [
+            [
+              [
+                130,
+                290
+              ],
+              [
+                350,
+                290
+              ],
+              [
+                350,
+                403
+              ],
+              [
+                130,
+                403
+              ]
+            ]
+          ],
+          "bbox": [
+            130,
+            290,
+            351,
+            404
+          ]
+        },
+        "tassels": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/00/tassels.png",
+          "sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+          "polygons": [
+            [
+              [
+                130,
+                340
+              ],
+              [
+                350,
+                340
+              ],
+              [
+                350,
+                415
+              ],
+              [
+                130,
+                415
+              ]
+            ]
+          ],
+          "bbox": [
+            130,
+            340,
+            351,
+            416
+          ]
+        },
+        "mace": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/00/mace.png",
+          "sha256": "5fbc4aaa1624b02339d3a08bc618f4723a5ad520944cddd7a17768fd0aa3df1b",
+          "polygons": [
+            [
+              [
+                96,
+                60
+              ],
+              [
+                299,
+                60
+              ],
+              [
+                299,
+                140
+              ],
+              [
+                96,
+                140
+              ]
+            ]
+          ],
+          "bbox": [
+            96,
+            60,
+            300,
+            141
+          ]
+        },
+        "legs_feet": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/00/legs_feet.png",
+          "sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+          "polygons": [
+            [
+              [
+                28,
+                385
+              ],
+              [
+                395,
+                385
+              ],
+              [
+                395,
+                468
+              ],
+              [
+                28,
+                468
+              ]
+            ]
+          ],
+          "bbox": [
+            28,
+            385,
+            396,
+            469
+          ]
+        }
+      },
+      "measured_a8_head_box": [
+        221,
+        99,
+        300,
+        179
+      ],
+      "stance_width_target": 197,
+      "target_head_size": [
+        60,
+        70
+      ],
+      "target_head_centre": [
+        260,
+        143
+      ],
+      "pose_repair": "replace compressed mace with rigid canon donor"
+    },
+    "01": {
+      "frame": "thoma/swing/01.png",
+      "a8_sha256": "cf37fc5b439cd639e447f4b3a3ae0b5665b2cb8923896e3f560a63067c0566d4",
+      "a8_checklist": {
+        "face_hair": "FAIL: common sheet improves similarity, but broader grey crown, softer beard/cheek and changed brow differ from anchor identity.",
+        "stole": "FAIL: generated panels are wider and more symmetrical at the ends than the narrow asymmetric anchor stole.",
+        "embroidery": "FAIL: two sprigs remain, but leaf scale, branch spacing and shape differ from the exact anchor motifs.",
+        "tassels": "FAIL: dense fairly regular generated fringe does not establish10/8 uneven tips within1; long cord attachment shifts.",
+        "cuffs": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+        "hem": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+        "palette": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+        "seams": "FAIL: reconstructed mace/haft joins and changed hand overlap remain visible at1x; seamless painted integration not achieved.",
+        "bag_count": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
+        "feet": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
+        "mace": "FAIL: target centre and impact opacity pass, but local reconstruction changes projected shaft length and head/haft brush continuity; not canon-design acceptance.",
+        "landmarks": "FAIL: several observed hands, elbows and feet exceed brief targets by4px; cloth-hidden knees have larger uncertainty and are not certified.",
+        "sequence": "FAIL: face, stole ends and hem/stance still jump from anchors to sheet and between action panels; all-same-painting requirement unmet."
+      },
+      "a8_landmarks": {
+        "head_centre": {
+          "measured": [
+            260,
+            143
+          ],
+          "target": [
+            260,
+            141
+          ],
+          "delta": [
+            0,
+            2
+          ],
+          "error_px": 2.0,
+          "within4": true
+        },
+        "hand_weapon": {
+          "measured": [
+            218,
+            79
+          ],
+          "target": [
+            194,
+            109
+          ],
+          "delta": [
+            24,
+            -30
+          ],
+          "error_px": 38.419,
+          "within4": false
+        },
+        "hand_free": {
+          "measured": [
+            375,
+            282
+          ],
+          "target": [
+            295,
+            249
+          ],
+          "delta": [
+            80,
+            33
+          ],
+          "error_px": 86.539,
+          "within4": false
+        },
+        "elbow_left": {
+          "measured": [
+            162,
+            122
+          ],
+          "target": [
+            174,
+            140
+          ],
+          "delta": [
+            -12,
+            -18
+          ],
+          "error_px": 21.633,
+          "within4": false
+        },
+        "elbow_right": {
+          "measured": [
+            348,
+            249
+          ],
+          "target": [
+            299,
+            225
+          ],
+          "delta": [
+            49,
+            24
+          ],
+          "error_px": 54.562,
+          "within4": false
+        },
+        "knee_left": {
+          "measured": [
+            189,
+            382
+          ],
+          "target": [
+            214,
+            363
+          ],
+          "delta": [
+            -25,
+            19
+          ],
+          "error_px": 31.401,
+          "within4": false
+        },
+        "knee_right": {
+          "measured": [
+            318,
+            391
+          ],
+          "target": [
+            284,
+            371
+          ],
+          "delta": [
+            34,
+            20
+          ],
+          "error_px": 39.446,
+          "within4": false
+        },
+        "foot_left": {
+          "measured": [
+            161,
+            464
+          ],
+          "target": [
+            167,
+            464
+          ],
+          "delta": [
+            -6,
+            0
+          ],
+          "error_px": 6.0,
+          "within4": false
+        },
+        "foot_right": {
+          "measured": [
+            361,
+            442
+          ],
+          "target": [
+            326,
+            443
+          ],
+          "delta": [
+            35,
+            -1
+          ],
+          "error_px": 35.014,
+          "within4": false
+        },
+        "mace_head": {
+          "measured": [
+            259.195,
+            87.447
+          ],
+          "target": [
+            259,
+            87
+          ],
+          "delta": [
+            0.195,
+            0.447
+          ],
+          "error_px": 0.488,
+          "within4": true
+        }
+      },
+      "targets": {
+        "head_centre": [
+          260,
+          141
+        ],
+        "eye_near": [
+          269,
+          139
+        ],
+        "eye_far": [
+          281,
+          141
+        ],
+        "shoulder_left": [
+          215,
+          171
+        ],
+        "shoulder_right": [
+          287,
+          174
+        ],
+        "elbow_left": [
+          174,
+          140
+        ],
+        "elbow_right": [
+          299,
+          225
+        ],
+        "hand_weapon": [
+          194,
+          109
+        ],
+        "hand_free": [
+          295,
+          249
+        ],
+        "hip_left": [
+          238,
+          269
+        ],
+        "hip_right": [
+          277,
+          268
+        ],
+        "knee_left": [
+          214,
+          363
+        ],
+        "knee_right": [
+          284,
+          371
+        ],
+        "foot_left": [
+          167,
+          464
+        ],
+        "foot_right": [
+          326,
+          443
+        ],
+        "mace_grip": [
+          194,
+          109
+        ],
+        "mace_head": [
+          259,
+          87
+        ]
+      },
+      "masks": {
+        "head": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/01/head.png",
+          "sha256": "827eaae3d02ee457fea1d37052cf2fdfb5efb0092c5f98a1c45f82b457a0c9e5",
+          "polygons": [
+            [
+              [
+                230,
+                99
+              ],
+              [
+                288,
+                99
+              ],
+              [
+                300,
+                117
+              ],
+              [
+                297,
+                168
+              ],
+              [
+                280,
+                178
+              ],
+              [
+                236,
+                173
+              ],
+              [
+                222,
+                134
+              ]
+            ]
+          ],
+          "bbox": [
+            222,
+            99,
+            301,
+            179
+          ]
+        },
+        "stole": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/01/stole.png",
+          "sha256": "1f5069c7af7e3ff0ea9200190d76061059c073286eaac8c5d4afd8e0e9bc55bf",
+          "polygons": [
+            [
+              [
+                222,
+                265
+              ],
+              [
+                242,
+                265
+              ],
+              [
+                252,
+                392
+              ],
+              [
+                225,
+                394
+              ]
+            ],
+            [
+              [
+                294,
+                253
+              ],
+              [
+                311,
+                250
+              ],
+              [
+                347,
+                366
+              ],
+              [
+                318,
+                381
+              ]
+            ]
+          ],
+          "bbox": [
+            222,
+            250,
+            348,
+            395
+          ]
+        },
+        "embroidery": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/01/embroidery.png",
+          "sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+          "polygons": [
+            [
+              [
+                130,
+                290
+              ],
+              [
+                350,
+                290
+              ],
+              [
+                350,
+                403
+              ],
+              [
+                130,
+                403
+              ]
+            ]
+          ],
+          "bbox": [
+            130,
+            290,
+            351,
+            404
+          ]
+        },
+        "tassels": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/01/tassels.png",
+          "sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+          "polygons": [
+            [
+              [
+                130,
+                340
+              ],
+              [
+                350,
+                340
+              ],
+              [
+                350,
+                415
+              ],
+              [
+                130,
+                415
+              ]
+            ]
+          ],
+          "bbox": [
+            130,
+            340,
+            351,
+            416
+          ]
+        },
+        "mace": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/01/mace.png",
+          "sha256": "20ad04ae39716f4f7d5bda265dcbbc4c75aad4b0dad6121123310a91e5927d4e",
+          "polygons": [
+            [
+              [
+                170,
+                57
+              ],
+              [
+                309,
+                57
+              ],
+              [
+                309,
+                120
+              ],
+              [
+                170,
+                120
+              ]
+            ]
+          ],
+          "bbox": [
+            170,
+            57,
+            310,
+            121
+          ]
+        },
+        "legs_feet": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/01/legs_feet.png",
+          "sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+          "polygons": [
+            [
+              [
+                28,
+                385
+              ],
+              [
+                395,
+                385
+              ],
+              [
+                395,
+                468
+              ],
+              [
+                28,
+                468
+              ]
+            ]
+          ],
+          "bbox": [
+            28,
+            385,
+            396,
+            469
+          ]
+        }
+      },
+      "measured_a8_head_box": [
+        222,
+        99,
+        300,
+        178
+      ],
+      "stance_width_target": 159,
+      "target_head_size": [
+        60,
+        70
+      ],
+      "target_head_centre": [
+        260,
+        141
+      ],
+      "pose_repair": "replace compressed mace with rigid canon donor"
+    },
+    "02": {
+      "frame": "thoma/swing/02.png",
+      "a8_sha256": "fdcdd0aa2ff102c70909f5e97105d6ba36f1c33bca127d9381fdca2610d5dd8c",
+      "a8_checklist": {
+        "face_hair": "FAIL: common sheet improves similarity, but broader grey crown, softer beard/cheek and changed brow differ from anchor identity.",
+        "stole": "FAIL: generated panels are wider and more symmetrical at the ends than the narrow asymmetric anchor stole.",
+        "embroidery": "FAIL: two sprigs remain, but leaf scale, branch spacing and shape differ from the exact anchor motifs.",
+        "tassels": "FAIL: dense fairly regular generated fringe does not establish10/8 uneven tips within1; long cord attachment shifts.",
+        "cuffs": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+        "hem": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+        "palette": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+        "seams": "FAIL: reconstructed mace/haft joins and changed hand overlap remain visible at1x; seamless painted integration not achieved.",
+        "bag_count": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
+        "feet": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
+        "mace": "FAIL: target centre and impact opacity pass, but local reconstruction changes projected shaft length and head/haft brush continuity; not canon-design acceptance.",
+        "landmarks": "FAIL: several observed hands, elbows and feet exceed brief targets by4px; cloth-hidden knees have larger uncertainty and are not certified.",
+        "sequence": "FAIL: face, stole ends and hem/stance still jump from anchors to sheet and between action panels; all-same-painting requirement unmet."
+      },
+      "a8_landmarks": {
+        "head_centre": {
+          "measured": [
+            282,
+            143
+          ],
+          "target": [
+            282,
+            145
+          ],
+          "delta": [
+            0,
+            -2
+          ],
+          "error_px": 2.0,
+          "within4": true
+        },
+        "hand_weapon": {
+          "measured": [
+            376,
+            170
+          ],
+          "target": [
+            372,
+            160
+          ],
+          "delta": [
+            4,
+            10
+          ],
+          "error_px": 10.77,
+          "within4": false
+        },
+        "hand_free": {
+          "measured": [
+            166,
+            260
+          ],
+          "target": [
+            350,
+            266
+          ],
+          "delta": [
+            -184,
+            -6
+          ],
+          "error_px": 184.098,
+          "within4": false
+        },
+        "elbow_left": {
+          "measured": [
+            265,
+            204
+          ],
+          "target": [
+            306,
+            193
+          ],
+          "delta": [
+            -41,
+            11
+          ],
+          "error_px": 42.45,
+          "within4": false
+        },
+        "elbow_right": {
+          "measured": [
+            165,
+            226
+          ],
+          "target": [
+            319,
+            242
+          ],
+          "delta": [
+            -154,
+            -16
+          ],
+          "error_px": 154.829,
+          "within4": false
+        },
+        "knee_left": {
+          "measured": [
+            154,
+            391
+          ],
+          "target": [
+            213,
+            371
+          ],
+          "delta": [
+            -59,
+            20
+          ],
+          "error_px": 62.298,
+          "within4": false
+        },
+        "knee_right": {
+          "measured": [
+            311,
+            396
+          ],
+          "target": [
+            307,
+            376
+          ],
+          "delta": [
+            4,
+            20
+          ],
+          "error_px": 20.396,
+          "within4": false
+        },
+        "foot_left": {
+          "measured": [
+            100,
+            464
+          ],
+          "target": [
+            135,
+            464
+          ],
+          "delta": [
+            -35,
+            0
+          ],
+          "error_px": 35.0,
+          "within4": false
+        },
+        "foot_right": {
+          "measured": [
+            350,
+            438
+          ],
+          "target": [
+            372,
+            448
+          ],
+          "delta": [
+            -22,
+            -10
+          ],
+          "error_px": 24.166,
+          "within4": false
+        },
+        "mace_head": {
+          "measured": [
+            448.731,
+            110.486
+          ],
+          "target": [
+            449,
+            110
+          ],
+          "delta": [
+            -0.269,
+            0.486
+          ],
+          "error_px": 0.555,
+          "within4": true
+        }
+      },
+      "targets": {
+        "head_centre": [
+          282,
+          145
+        ],
+        "eye_near": [
+          291,
+          143
+        ],
+        "eye_far": [
+          302,
+          145
+        ],
+        "shoulder_left": [
+          234,
+          174
+        ],
+        "shoulder_right": [
+          302,
+          173
+        ],
+        "elbow_left": [
+          306,
+          193
+        ],
+        "elbow_right": [
+          319,
+          242
+        ],
+        "hand_weapon": [
+          372,
+          160
+        ],
+        "hand_free": [
+          350,
+          266
+        ],
+        "hip_left": [
+          254,
+          275
+        ],
+        "hip_right": [
+          293,
+          274
+        ],
+        "knee_left": [
+          213,
+          371
+        ],
+        "knee_right": [
+          307,
+          376
+        ],
+        "foot_left": [
+          135,
+          464
+        ],
+        "foot_right": [
+          372,
+          448
+        ],
+        "mace_grip": [
+          372,
+          160
+        ],
+        "mace_head": [
+          449,
+          110
+        ]
+      },
+      "masks": {
+        "head": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/02/head.png",
+          "sha256": "1dd534c32800fe881d10dc6de5850ab2dded427696d92fccd9758f609399a441",
+          "polygons": [
+            [
+              [
+                254,
+                99
+              ],
+              [
+                310,
+                99
+              ],
+              [
+                322,
+                117
+              ],
+              [
+                319,
+                168
+              ],
+              [
+                302,
+                178
+              ],
+              [
+                260,
+                173
+              ],
+              [
+                246,
+                134
+              ]
+            ]
+          ],
+          "bbox": [
+            246,
+            99,
+            323,
+            179
+          ]
+        },
+        "stole": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/02/stole.png",
+          "sha256": "6d4d900782b31bbb9b1634314db8ef9b33bac09f4fe9dc771e61656126254387",
+          "polygons": [
+            [
+              [
+                226,
+                260
+              ],
+              [
+                245,
+                265
+              ],
+              [
+                223,
+                390
+              ],
+              [
+                191,
+                393
+              ]
+            ],
+            [
+              [
+                291,
+                251
+              ],
+              [
+                309,
+                250
+              ],
+              [
+                329,
+                362
+              ],
+              [
+                301,
+                371
+              ]
+            ]
+          ],
+          "bbox": [
+            191,
+            250,
+            330,
+            394
+          ]
+        },
+        "embroidery": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/02/embroidery.png",
+          "sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+          "polygons": [
+            [
+              [
+                130,
+                290
+              ],
+              [
+                350,
+                290
+              ],
+              [
+                350,
+                403
+              ],
+              [
+                130,
+                403
+              ]
+            ]
+          ],
+          "bbox": [
+            130,
+            290,
+            351,
+            404
+          ]
+        },
+        "tassels": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/02/tassels.png",
+          "sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+          "polygons": [
+            [
+              [
+                130,
+                340
+              ],
+              [
+                350,
+                340
+              ],
+              [
+                350,
+                415
+              ],
+              [
+                130,
+                415
+              ]
+            ]
+          ],
+          "bbox": [
+            130,
+            340,
+            351,
+            416
+          ]
+        },
+        "mace": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/02/mace.png",
+          "sha256": "2f53db4965ef3f3220e53866a2f3e152eabdb123f159ca42784b01c8cc85016c",
+          "polygons": [
+            [
+              [
+                352,
+                85
+              ],
+              [
+                480,
+                85
+              ],
+              [
+                480,
+                188
+              ],
+              [
+                352,
+                188
+              ]
+            ]
+          ],
+          "bbox": [
+            352,
+            85,
+            481,
+            189
+          ]
+        },
+        "legs_feet": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/02/legs_feet.png",
+          "sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+          "polygons": [
+            [
+              [
+                28,
+                385
+              ],
+              [
+                395,
+                385
+              ],
+              [
+                395,
+                468
+              ],
+              [
+                28,
+                468
+              ]
+            ]
+          ],
+          "bbox": [
+            28,
+            385,
+            396,
+            469
+          ]
+        }
+      },
+      "measured_a8_head_box": [
+        246,
+        99,
+        322,
+        178
+      ],
+      "stance_width_target": 237,
+      "target_head_size": [
+        60,
+        70
+      ],
+      "target_head_centre": [
+        282,
+        145
+      ],
+      "pose_repair": "identity/terminal cloth only"
+    },
+    "03": {
+      "frame": "thoma/swing/03.png",
+      "a8_sha256": "5e26004a23c014dee7a4ff0b90bf25fcd3341910355c9f91ac1ed4fd711cb3bd",
+      "a8_checklist": {
+        "face_hair": "FAIL: common sheet improves similarity, but broader grey crown, softer beard/cheek and changed brow differ from anchor identity.",
+        "stole": "FAIL: generated panels are wider and more symmetrical at the ends than the narrow asymmetric anchor stole.",
+        "embroidery": "FAIL: two sprigs remain, but leaf scale, branch spacing and shape differ from the exact anchor motifs.",
+        "tassels": "FAIL: dense fairly regular generated fringe does not establish10/8 uneven tips within1; long cord attachment shifts.",
+        "cuffs": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+        "hem": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+        "palette": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+        "seams": "FAIL: reconstructed mace/haft joins and changed hand overlap remain visible at1x; seamless painted integration not achieved.",
+        "bag_count": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
+        "feet": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
+        "mace": "FAIL: target centre and impact opacity pass, but local reconstruction changes projected shaft length and head/haft brush continuity; not canon-design acceptance.",
+        "landmarks": "FAIL: several observed hands, elbows and feet exceed brief targets by4px; cloth-hidden knees have larger uncertainty and are not certified.",
+        "sequence": "FAIL: face, stole ends and hem/stance still jump from anchors to sheet and between action panels; all-same-painting requirement unmet."
+      },
+      "a8_landmarks": {
+        "head_centre": {
+          "measured": [
+            264,
+            143
+          ],
+          "target": [
+            264,
+            140
+          ],
+          "delta": [
+            0,
+            3
+          ],
+          "error_px": 3.0,
+          "within4": true
+        },
+        "hand_weapon": {
+          "measured": [
+            365,
+            186
+          ],
+          "target": [
+            358,
+            196
+          ],
+          "delta": [
+            7,
+            -10
+          ],
+          "error_px": 12.207,
+          "within4": false
+        },
+        "hand_free": {
+          "measured": [
+            110,
+            253
+          ],
+          "target": [
+            305,
+            258
+          ],
+          "delta": [
+            -195,
+            -5
+          ],
+          "error_px": 195.064,
+          "within4": false
+        },
+        "elbow_left": {
+          "measured": [
+            305,
+            199
+          ],
+          "target": [
+            294,
+            193
+          ],
+          "delta": [
+            11,
+            6
+          ],
+          "error_px": 12.53,
+          "within4": false
+        },
+        "elbow_right": {
+          "measured": [
+            135,
+            193
+          ],
+          "target": [
+            291,
+            240
+          ],
+          "delta": [
+            -156,
+            -47
+          ],
+          "error_px": 162.926,
+          "within4": false
+        },
+        "knee_left": {
+          "measured": [
+            129,
+            388
+          ],
+          "target": [
+            197,
+            371
+          ],
+          "delta": [
+            -68,
+            17
+          ],
+          "error_px": 70.093,
+          "within4": false
+        },
+        "knee_right": {
+          "measured": [
+            263,
+            387
+          ],
+          "target": [
+            297,
+            378
+          ],
+          "delta": [
+            -34,
+            9
+          ],
+          "error_px": 35.171,
+          "within4": false
+        },
+        "foot_left": {
+          "measured": [
+            59,
+            464
+          ],
+          "target": [
+            120,
+            464
+          ],
+          "delta": [
+            -61,
+            0
+          ],
+          "error_px": 61.0,
+          "within4": false
+        },
+        "foot_right": {
+          "measured": [
+            319,
+            444
+          ],
+          "target": [
+            354,
+            447
+          ],
+          "delta": [
+            -35,
+            -3
+          ],
+          "error_px": 35.128,
+          "within4": false
+        },
+        "mace_head": {
+          "measured": [
+            455.43,
+            195.552
+          ],
+          "target": [
+            455,
+            196
+          ],
+          "delta": [
+            0.43,
+            -0.448
+          ],
+          "error_px": 0.621,
+          "within4": true
+        }
+      },
+      "targets": {
+        "head_centre": [
+          264,
+          140
+        ],
+        "eye_near": [
+          274,
+          138
+        ],
+        "eye_far": [
+          284,
+          140
+        ],
+        "shoulder_left": [
+          226,
+          173
+        ],
+        "shoulder_right": [
+          291,
+          172
+        ],
+        "elbow_left": [
+          294,
+          193
+        ],
+        "elbow_right": [
+          291,
+          240
+        ],
+        "hand_weapon": [
+          358,
+          196
+        ],
+        "hand_free": [
+          305,
+          258
+        ],
+        "hip_left": [
+          241,
+          275
+        ],
+        "hip_right": [
+          281,
+          272
+        ],
+        "knee_left": [
+          197,
+          371
+        ],
+        "knee_right": [
+          297,
+          378
+        ],
+        "foot_left": [
+          120,
+          464
+        ],
+        "foot_right": [
+          354,
+          447
+        ],
+        "mace_grip": [
+          358,
+          196
+        ],
+        "mace_head": [
+          455,
+          196
+        ]
+      },
+      "masks": {
+        "head": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/03/head.png",
+          "sha256": "4259298b65e730077e7d96a8374842c54032312756ec5e701fddd27298b24b85",
+          "polygons": [
+            [
+              [
+                233,
+                99
+              ],
+              [
+                289,
+                99
+              ],
+              [
+                301,
+                117
+              ],
+              [
+                298,
+                166
+              ],
+              [
+                281,
+                176
+              ],
+              [
+                239,
+                171
+              ],
+              [
+                225,
+                134
+              ]
+            ]
+          ],
+          "bbox": [
+            225,
+            99,
+            302,
+            177
+          ]
+        },
+        "stole": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/03/stole.png",
+          "sha256": "05db87433c1853c4c3f12c9361d526fa0be5e194f34c41b31420e068fa1348d1",
+          "polygons": [
+            [
+              [
+                210,
+                266
+              ],
+              [
+                230,
+                272
+              ],
+              [
+                184,
+                399
+              ],
+              [
+                139,
+                396
+              ]
+            ],
+            [
+              [
+                246,
+                264
+              ],
+              [
+                269,
+                262
+              ],
+              [
+                278,
+                358
+              ],
+              [
+                240,
+                373
+              ]
+            ]
+          ],
+          "bbox": [
+            139,
+            262,
+            279,
+            400
+          ]
+        },
+        "embroidery": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/03/embroidery.png",
+          "sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+          "polygons": [
+            [
+              [
+                130,
+                290
+              ],
+              [
+                350,
+                290
+              ],
+              [
+                350,
+                403
+              ],
+              [
+                130,
+                403
+              ]
+            ]
+          ],
+          "bbox": [
+            130,
+            290,
+            351,
+            404
+          ]
+        },
+        "tassels": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/03/tassels.png",
+          "sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+          "polygons": [
+            [
+              [
+                130,
+                340
+              ],
+              [
+                350,
+                340
+              ],
+              [
+                350,
+                415
+              ],
+              [
+                130,
+                415
+              ]
+            ]
+          ],
+          "bbox": [
+            130,
+            340,
+            351,
+            416
+          ]
+        },
+        "mace": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/03/mace.png",
+          "sha256": "958bc7aeaef37be893faaaa72e965debac82dcf81c1f7d7fcb3148c060e984a6",
+          "polygons": [
+            [
+              [
+                350,
+                168
+              ],
+              [
+                480,
+                168
+              ],
+              [
+                480,
+                221
+              ],
+              [
+                350,
+                221
+              ]
+            ]
+          ],
+          "bbox": [
+            350,
+            168,
+            481,
+            222
+          ]
+        },
+        "legs_feet": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/03/legs_feet.png",
+          "sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+          "polygons": [
+            [
+              [
+                28,
+                385
+              ],
+              [
+                395,
+                385
+              ],
+              [
+                395,
+                468
+              ],
+              [
+                28,
+                468
+              ]
+            ]
+          ],
+          "bbox": [
+            28,
+            385,
+            396,
+            469
+          ]
+        }
+      },
+      "measured_a8_head_box": [
+        225,
+        99,
+        301,
+        176
+      ],
+      "stance_width_target": 234,
+      "target_head_size": [
+        60,
+        70
+      ],
+      "target_head_centre": [
+        264,
+        140
+      ],
+      "pose_repair": "narrow left stance 59 ->120, right319 ->354"
+    },
+    "04": {
+      "frame": "thoma/swing/04.png",
+      "a8_sha256": "c3e40e2485f31e60bd1aa1d21c8cbc452e7a359db92d2e58d6391395adc167b0",
+      "a8_checklist": {
+        "face_hair": "FAIL: common sheet improves similarity, but broader grey crown, softer beard/cheek and changed brow differ from anchor identity.",
+        "stole": "FAIL: generated panels are wider and more symmetrical at the ends than the narrow asymmetric anchor stole.",
+        "embroidery": "FAIL: two sprigs remain, but leaf scale, branch spacing and shape differ from the exact anchor motifs.",
+        "tassels": "FAIL: dense fairly regular generated fringe does not establish10/8 uneven tips within1; long cord attachment shifts.",
+        "cuffs": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+        "hem": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+        "palette": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+        "seams": "FAIL: reconstructed mace/haft joins and changed hand overlap remain visible at1x; seamless painted integration not achieved.",
+        "bag_count": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
+        "feet": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
+        "mace": "FAIL: target centre and impact opacity pass, but local reconstruction changes projected shaft length and head/haft brush continuity; not canon-design acceptance.",
+        "landmarks": "FAIL: several observed hands, elbows and feet exceed brief targets by4px; cloth-hidden knees have larger uncertainty and are not certified.",
+        "sequence": "FAIL: face, stole ends and hem/stance still jump from anchors to sheet and between action panels; all-same-painting requirement unmet."
+      },
+      "a8_landmarks": {
+        "head_centre": {
+          "measured": [
+            310,
+            143
+          ],
+          "target": [
+            310,
+            141
+          ],
+          "delta": [
+            0,
+            2
+          ],
+          "error_px": 2.0,
+          "within4": true
+        },
+        "hand_weapon": {
+          "measured": [
+            375,
+            314
+          ],
+          "target": [
+            347,
+            324
+          ],
+          "delta": [
+            28,
+            -10
+          ],
+          "error_px": 29.732,
+          "within4": false
+        },
+        "hand_free": {
+          "measured": [
+            111,
+            222
+          ],
+          "target": [
+            213,
+            255
+          ],
+          "delta": [
+            -102,
+            -33
+          ],
+          "error_px": 107.205,
+          "within4": false
+        },
+        "elbow_left": {
+          "measured": [
+            340,
+            275
+          ],
+          "target": [
+            320,
+            269
+          ],
+          "delta": [
+            20,
+            6
+          ],
+          "error_px": 20.881,
+          "within4": false
+        },
+        "elbow_right": {
+          "measured": [
+            146,
+            180
+          ],
+          "target": [
+            231,
+            236
+          ],
+          "delta": [
+            -85,
+            -56
+          ],
+          "error_px": 101.789,
+          "within4": false
+        },
+        "knee_left": {
+          "measured": [
+            137,
+            390
+          ],
+          "target": [
+            230,
+            371
+          ],
+          "delta": [
+            -93,
+            19
+          ],
+          "error_px": 94.921,
+          "within4": false
+        },
+        "knee_right": {
+          "measured": [
+            294,
+            410
+          ],
+          "target": [
+            322,
+            384
+          ],
+          "delta": [
+            -28,
+            26
+          ],
+          "error_px": 38.21,
+          "within4": false
+        },
+        "foot_left": {
+          "measured": [
+            93,
+            464
+          ],
+          "target": [
+            165,
+            455
+          ],
+          "delta": [
+            -72,
+            9
+          ],
+          "error_px": 72.56,
+          "within4": false
+        },
+        "foot_right": {
+          "measured": [
+            351,
+            464
+          ],
+          "target": [
+            334,
+            464
+          ],
+          "delta": [
+            17,
+            0
+          ],
+          "error_px": 17.0,
+          "within4": false
+        },
+        "mace_head": {
+          "measured": [
+            421.46,
+            375.635
+          ],
+          "target": [
+            421,
+            376
+          ],
+          "delta": [
+            0.46,
+            -0.365
+          ],
+          "error_px": 0.587,
+          "within4": true
+        }
+      },
+      "targets": {
+        "head_centre": [
+          310,
+          141
+        ],
+        "eye_near": [
+          318,
+          139
+        ],
+        "eye_far": [
+          329,
+          141
+        ],
+        "shoulder_left": [
+          269,
+          181
+        ],
+        "shoulder_right": [
+          320,
+          178
+        ],
+        "elbow_left": [
+          320,
+          269
+        ],
+        "elbow_right": [
+          231,
+          236
+        ],
+        "hand_weapon": [
+          347,
+          324
+        ],
+        "hand_free": [
+          213,
+          255
+        ],
+        "hip_left": [
+          265,
+          279
+        ],
+        "hip_right": [
+          304,
+          282
+        ],
+        "knee_left": [
+          230,
+          371
+        ],
+        "knee_right": [
+          322,
+          384
+        ],
+        "foot_left": [
+          165,
+          455
+        ],
+        "foot_right": [
+          334,
+          464
+        ],
+        "mace_grip": [
+          347,
+          324
+        ],
+        "mace_head": [
+          421,
+          376
+        ]
+      },
+      "masks": {
+        "head": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/04/head.png",
+          "sha256": "64d6e83ed2dd41a44d370412696f6d9088f3ab77b6364d8a733e51cbc491e222",
+          "polygons": [
+            [
+              [
+                285,
+                99
+              ],
+              [
+                338,
+                99
+              ],
+              [
+                350,
+                117
+              ],
+              [
+                347,
+                170
+              ],
+              [
+                330,
+                180
+              ],
+              [
+                291,
+                175
+              ],
+              [
+                277,
+                134
+              ]
+            ]
+          ],
+          "bbox": [
+            277,
+            99,
+            351,
+            181
+          ]
+        },
+        "stole": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/04/stole.png",
+          "sha256": "e4f254e1a3e0fa9f05a3db20bc8bd4e0179b6eaa26d9d3df41a1d4094a5fb117",
+          "polygons": [
+            [
+              [
+                221,
+                258
+              ],
+              [
+                243,
+                264
+              ],
+              [
+                198,
+                386
+              ],
+              [
+                158,
+                381
+              ]
+            ],
+            [
+              [
+                278,
+                253
+              ],
+              [
+                302,
+                251
+              ],
+              [
+                328,
+                380
+              ],
+              [
+                290,
+                390
+              ]
+            ]
+          ],
+          "bbox": [
+            158,
+            251,
+            329,
+            391
+          ]
+        },
+        "embroidery": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/04/embroidery.png",
+          "sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+          "polygons": [
+            [
+              [
+                130,
+                290
+              ],
+              [
+                350,
+                290
+              ],
+              [
+                350,
+                403
+              ],
+              [
+                130,
+                403
+              ]
+            ]
+          ],
+          "bbox": [
+            130,
+            290,
+            351,
+            404
+          ]
+        },
+        "tassels": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/04/tassels.png",
+          "sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+          "polygons": [
+            [
+              [
+                130,
+                340
+              ],
+              [
+                350,
+                340
+              ],
+              [
+                350,
+                415
+              ],
+              [
+                130,
+                415
+              ]
+            ]
+          ],
+          "bbox": [
+            130,
+            340,
+            351,
+            416
+          ]
+        },
+        "mace": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/04/mace.png",
+          "sha256": "eacf65ecaca34e9ec6f0dedb7148f672ce531412731fa5b8bbabe9667d5bebcf",
+          "polygons": [
+            [
+              [
+                349,
+                301
+              ],
+              [
+                447,
+                301
+              ],
+              [
+                447,
+                401
+              ],
+              [
+                349,
+                401
+              ]
+            ]
+          ],
+          "bbox": [
+            349,
+            301,
+            448,
+            402
+          ]
+        },
+        "legs_feet": {
+          "path": "godot-spike/docs/evidence/spike02-a9/masks/04/legs_feet.png",
+          "sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+          "polygons": [
+            [
+              [
+                28,
+                385
+              ],
+              [
+                395,
+                385
+              ],
+              [
+                395,
+                468
+              ],
+              [
+                28,
+                468
+              ]
+            ]
+          ],
+          "bbox": [
+            28,
+            385,
+            396,
+            469
+          ]
+        }
+      },
+      "measured_a8_head_box": [
+        277,
+        99,
+        350,
+        180
+      ],
+      "stance_width_target": 169,
+      "target_head_size": [
+        60,
+        70
+      ],
+      "target_head_centre": [
+        310,
+        141
+      ],
+      "pose_repair": "front foot351 ->334, rear93,464 ->165,455"
+    }
+  },
+  "anchor_measurements": {
+    "head": {
+      "idle_centre": [
+        256,
+        138
+      ],
+      "width_height": [
+        60,
+        70
+      ],
+      "hair_bbox": [
+        227,
+        103,
+        285,
+        149
+      ],
+      "brow_extents": [
+        [
+          258,
+          132
+        ],
+        [
+          281,
+          136
+        ]
+      ],
+      "beard_bbox": [
+        249,
+        151,
+        281,
+        174
+      ],
+      "uncertainty_px": 2
+    },
+    "stole": {
+      "description": "Two ivory hanging panels, broad near shoulder, narrow at waist, widening toward embroidered ends; teal cowl crosses above.",
+      "idle_left_width_px_at_y": {
+        "185": 27,
+        "225": 24,
+        "362": 30
+      },
+      "idle_right_width_px_at_y": {
+        "185": 12,
+        "225": 15,
+        "330": 22
+      },
+      "folds": "Left shoulder diagonal to waist at (235,250), left vertical fall to (237,379); right fall (286,161) to (299,357), narrow dark fold on inner edge.",
+      "endpoint_choice": "idle/01 panel shapes and motif spacing; swing/05 confirms construction but right sprig/fringe sits ~7px higher."
+    },
+    "embroidery": {
+      "description": "One muted grey-green botanical sprig on EACH ivory panel (2 total); single central stem, alternating oblique leaf strokes; pale ochre short bottom border. No repeated floral diamonds.",
+      "count": 2,
+      "left_bbox": [
+        230,
+        340,
+        248,
+        371
+      ],
+      "right_bbox": [
+        291,
+        302,
+        306,
+        345
+      ],
+      "visible_branch_pairs": {
+        "left": 4,
+        "right": 6
+      },
+      "count_uncertainty": "~1 branch at 512px: left upper stem obscured by mace; do not reconstruct hidden pattern.",
+      "vertical_spacing_px": {
+        "left": [
+          4,
+          6
+        ],
+        "right": [
+          5,
+          7
+        ]
+      },
+      "motif_centre_separation_px": [
+        60,
+        -31
+      ],
+      "source_rule": "Use anchor crop pixels, not newly invented leaves. Left partial occlusion remains legitimate.",
+      "colour_sample": {
+        "hex": "#8d7862",
+        "sample_xy": [
+          300,
+          329
+        ],
+        "source": "idle/01",
+        "rgba": [
+          141,
+          120,
+          98,
+          253
+        ]
+      }
+    },
+    "tassels": {
+      "description": "Short irregular pale fringe strands at each stole end, plus ONE long knotted waist cord end; fringe is not the waist cord.",
+      "left_visible_tips": 10,
+      "right_visible_tips": 8,
+      "tip_count_uncertainty": 1,
+      "left_length_px": [
+        4,
+        9
+      ],
+      "right_length_px": [
+        4,
+        9
+      ],
+      "left_attachment": [
+        222,
+        374,
+        254,
+        380
+      ],
+      "right_attachment": [
+        288,
+        347,
+        310,
+        357
+      ],
+      "waist_cord_bbox": [
+        256,
+        251,
+        270,
+        346
+      ],
+      "colour": "#d8c4ad",
+      "rule": "Preserve sampled anchor edge, including uneven tips; no uniform extra 20px fringe."
+    },
+    "mace": {
+      "canon": "APPROVED short one-handed flanged mace; no canon edit.",
+      "idle_head_bbox": [
+        211,
+        310,
+        248,
+        346
+      ],
+      "idle_head_centre": [
+        230,
+        328
+      ],
+      "idle_grip": [
+        185,
+        297
+      ],
+      "recover_head_centre": [
+        223,
+        333
+      ],
+      "recover_grip": [
+        183,
+        299
+      ],
+      "idle_grip_to_head_px": 54.644,
+      "exposed_haft_px": 39,
+      "head_size_px": [
+        37,
+        36
+      ],
+      "collar_width_px": 7,
+      "grip_width_px": 17,
+      "shape": "Angular dark iron flanged star head with projecting triangular fins, worn oak haft, small brass collar before head; rounded pommel.",
+      "projection_limit": "Lengths are anchor projections, not a 3D length. Preserve each A6 pose weapon/grip geometry where projected length differs; no global length invention.",
+      "colours": {
+        "oak": "#120a06",
+        "iron": "#685a48",
+        "brass": "#503323"
+      }
+    },
+    "feet": {
+      "description": "Two worn brown rounded ankle boots, dark seams and laces; both visibly join legs under inner robe.",
+      "idle_left_ground": [
+        201,
+        462
+      ],
+      "idle_right_ground": [
+        312,
+        414
+      ],
+      "recover_left_ground": [
+        198,
+        463
+      ],
+      "recover_right_ground": [
+        311,
+        425
+      ],
+      "pivot_note": "[256,464] is the unchanged actor registration origin, NOT the centre of each shoe; two feet cannot both occupy one pivot."
+    }
+  },
+  "limits": "Manual visible landmarks +/-2px, hidden joints +/-12px. Masks are permission ceilings, not anatomical acceptance. Exact anchor pixels take precedence. No Owner art approval.",
+  "protected_a8_pass_items": [
+    "cuffs",
+    "hem",
+    "palette",
+    "bag_count",
+    "feet"
+  ]
+}
