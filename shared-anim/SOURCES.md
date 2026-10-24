@@ -326,6 +326,14 @@ commercial art approval. Human hit-feel remains HUMAN_PENDING.
 
 ## spike-02 A6 — complete per-frame regeneration
 
+Model verdict: structural sleeve/hem/foot continuity improves, but all five
+motion frames remain PLACEHOLDER for motif/fringe, face and sequence drift.
+04 also fails the requested exact mace pose geometry (head about19px high).
+Contact03 transform retains [455,196]; fixed manifest/timing and reference PNGs
+are unchanged. See A6 W3-OBSERVATIONS.md, geometry-check.json and frame-audit.json.
+Godot is Owner-selected; React and Phase B are CANCELLED. Human playtest remains
+HUMAN_PENDING. Exact painted A5 mace/grip pixels are not claimed preserved.
+
 Built-in image_gen. Exactly idle/01 + swing/05 for identity/costume/style/mace; A5 same-index ONLY for pose. No rig/region compositing. Seed/model/quality: not exposed. Transparent background requested. Maximum 4 attempts per frame. Every unchanged raw candidate retained under godot-spike/docs/evidence/spike02-a6/candidates/. Full normalization transforms, cleanup masks, palette distances and hashes in a6-swing-prompts.json. Uniform scale/translate, alpha<24 cleanup, idle/01 nearest-128-colour remap only. See A6 METHOD.md for gate and limits. Human playtest HUMAN_PENDING; model checks are not Owner art approval.
 
 ### thoma/swing/02.png attempt 1

@@ -1,7 +1,13 @@
 extends "res://addons/gut/test.gd"
 const SHARED = "res://art/anim-shared/"
 const EVIDENCE = "res://docs/evidence/spike02-a5/"
+const A5_ARCHIVE = "res://docs/evidence/spike02-a6/baseline-a5/"
 const CHECKS = ["stole","embroidery","cuffs","hem","face_hair","palette","seams","bag_count","feet","sequence"]
+
+# A6 replaces generated art. A5 raw cutout-protection proofs remain against
+# the immutable A5 archive; all current contracts live in test_a6_contract.gd.
+func a5_frame(path: String) -> String:
+	return A5_ARCHIVE + ("idle-01.png" if path.contains("/idle/") else path.get_file())
 
 func json(path: String):
 	return JSON.parse_string(FileAccess.get_file_as_string(path))
@@ -33,10 +39,10 @@ func test_a5_raw_mace_grip_face_feet_protection_and_rebuilt_canvas() -> void:
 	for index in range(5):
 		var name := "%02d.png" % index
 		var before := png(EVIDENCE+"baseline-a4/"+name)
-		var after := png(SHARED+"thoma/swing/"+name)
+		var after := png(a5_frame("thoma/swing/"+name))
 		var protection := png(EVIDENCE+"protected-masks/"+name)
 		assert_eq(after.get_size(),Vector2i(512,512))
-		assert_ne(FileAccess.get_sha256(SHARED+"thoma/swing/"+name),FileAccess.get_sha256(EVIDENCE+"baseline-a4/"+name))
+		assert_ne(FileAccess.get_sha256(a5_frame("thoma/swing/"+name)),FileAccess.get_sha256(EVIDENCE+"baseline-a4/"+name))
 		var identical := true
 		for y in range(512):
 			for x in range(512):
@@ -44,7 +50,7 @@ func test_a5_raw_mace_grip_face_feet_protection_and_rebuilt_canvas() -> void:
 					identical = identical and before.get_pixel(x,y)==after.get_pixel(x,y)
 		assert_true(identical,"Raw A4 protected RGBA: "+name)
 		assert_true(after.get_region(Rect2i(0,444,512,68)).get_data()==before.get_region(Rect2i(0,444,512,68)).get_data(),"Planted ground bytes: "+name)
-	var contact := png(SHARED+"thoma/swing/03.png")
+	var contact := png(a5_frame("thoma/swing/03.png"))
 	var before_contact := png(EVIDENCE+"baseline-a4/03.png")
 	assert_true(contact.get_region(Rect2i(340,170,140,55)).get_data()==before_contact.get_region(Rect2i(340,170,140,55)).get_data(),"Exact contact head/haft/grip at [455,196]")
 
@@ -59,10 +65,10 @@ func test_a5_all_pass_gates_and_table_agreement() -> void:
 	var table := FileAccess.get_file_as_string(EVIDENCE+"frame-status-table.md")
 	var handoff := FileAccess.get_file_as_string("res://docs/HANDOFF.md")
 	var count := 0
-	for record in json(SHARED+"frame-audit.json"):
+	for record in json(A5_ARCHIVE+"frame-audit.json"):
 		if not record.path.begins_with("thoma/"):continue
 		count += 1
-		assert_eq(record.sha256,FileAccess.get_sha256(SHARED+record.path))
+		assert_eq(record.sha256,FileAccess.get_sha256(a5_frame(record.path)))
 		assert_eq(record.weapon_status,"APPROVED")
 		assert_eq(record.bag_count,1.0)
 		var failed := false
@@ -118,7 +124,7 @@ func test_a5_baseline_provenance_and_unit_embroidery_scale() -> void:
 	for record in records:
 		assert_eq(record.generation_attempts,0.0)
 		assert_lte(record.generation_attempts,3.0)
-		assert_eq(record.runtime_sha256,FileAccess.get_sha256(SHARED+record.frame))
+		assert_eq(record.runtime_sha256,FileAccess.get_sha256(a5_frame(record.frame)))
 		assert_eq(record.baseline_sha256,FileAccess.get_sha256(EVIDENCE+"baseline-a4/"+record.frame.get_file()))
 		assert_eq(record.mask_sha256,FileAccess.get_sha256("res://../"+record.mask))
 		for path in record.references:assert_eq(record.references[path],FileAccess.get_sha256(SHARED+path))

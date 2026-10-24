@@ -1,0 +1,139 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+---  GUT  ---
+[INFO]:  using [C:/Users/daish/AppData/Roaming/Godot/app_userdata/Campaign Forge — Impact Study] for temporary output.
+Godot version:  4.7.2
+GUT version:  9.7.1
+
+
+res://tests/test_a2_hud.gd
+* test_default_hud_has_no_diagnostics_and_f1_reveals_them
+* test_help_hidden_and_h_question_shift_slash_escape_toggle
+* test_forecast_matches_each_rules_result_and_rendered_labels
+* test_armed_confirmation_locks_and_forecast_hides_at_contact
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8292 limit=1.700 hp=4 cell=(1, 6)
+* test_weapon_manifest_schema_fields_hashes_and_no_smear_in_reduced
+* test_knight_textures_differ_in_every_idle_hit_and_stagger_frame
+* test_a2_timing_all_setups_normal_and_reduced_under_budget
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8037 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.7792 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.7893 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.6166 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=true elapsed_wall_s=0.6303 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=true elapsed_wall_s=0.6315 limit=1.700 hp=4 cell=(3, 4)
+* test_cjk_glyphs_and_transient_banner
+* test_real_space_press_release_arms_once_then_confirms_once
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9250 limit=1.700 hp=4 cell=(1, 6)
+9/9 passed.
+
+
+res://tests/test_a3_contract.gd
+* test_entire_manifest_matches_preserved_a2_contract
+* test_approved_weapon_and_handoff_table_match_audit
+* test_five_repaints_preserve_alpha_and_protected_contact_geometry
+* test_baseline_hashes_and_bounded_generation_attempts
+4/4 passed.
+
+
+res://tests/test_a4_contract.gd
+* test_immutable_references_match_a3_fixed_hashes
+* test_complete_a3_manifest_and_no_archived_frames
+* test_rebuilt_frames_preserve_mace_grip_contact_and_grounded_feet
+* test_region_status_and_handoff_table_cannot_claim_partial_pass
+* test_provenance_archive_masks_and_generation_bounds
+5/5 passed.
+
+
+res://tests/test_a5_contract.gd
+* test_a5_immutable_references_and_entire_manifest_match_a4
+* test_a5_raw_mace_grip_face_feet_protection_and_rebuilt_canvas
+* test_a5_all_pass_gates_and_table_agreement
+* test_a5_seam_masks_are_narrow_declared_bands_with_bounded_area
+* test_a5_baseline_provenance_and_unit_embroidery_scale
+* test_a5_six_sequence_pairs_have_colour_and_outline_evidence
+6/6 passed.
+
+
+res://tests/test_a6_contract.gd
+* test_a6_immutable_endpoints_match_fixed_a5_sha256
+* test_a6_complete_manifest_matches_a5_and_excludes_all_baselines
+* test_a6_every_attempt_retained_three_reference_hashes_bounded_and_runtime_bound
+* test_a6_pass_requires_every_check_and_table_handoff_agreement
+* test_a6_canvas_ground_scale_contact_anchor_and_honest_geometry_limit
+* test_a6_a5_byte_baselines_are_evidence_only
+* test_a6_real_playback_trace_and_six_proxy_pairs_preserve_failures
+7/7 passed.
+
+
+res://tests/test_grid_rules.gd
+* test_adjacent_attack_event_order_hp_and_immutability
+* test_nonadjacent_and_diagonal_attacks_are_rejected
+* test_destroyed_crossing_blocks_knockback
+* test_water_blocks_knockback
+* test_unit_blocker_preserves_both_positions
+* test_all_four_map_edges_block_knockback
+* test_open_route_terrain_matches_source_contract
+* test_bfs_detours_without_passing_through_units
+* test_invalid_moves_and_disconnected_bank_rejected
+* test_invalid_combatants_and_lethal_damage_are_bounded
+10/10 passed.
+
+
+res://tests/test_manifest.gd
+* test_valid_manifest_and_every_frame_contract
+* test_invalid_manifest_rejected_without_partial_data
+* test_reduced_keyposes_keep_contact_and_omit_smear
+3/3 passed.
+
+
+res://tests/test_playback.gd
+* test_all_three_normal_sequences_and_replay
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8136 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.7950 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.7689 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.7901 limit=1.700 hp=4 cell=(3, 4)
+* test_all_three_reduced_motion_sequences
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.6279 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=true elapsed_wall_s=0.6281 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=true elapsed_wall_s=0.6266 limit=1.700 hp=4 cell=(3, 4)
+* test_keyboard_controls_and_diagnostic_default
+SEQUENCE setup=2 reduced=true elapsed_wall_s=0.6253 limit=1.700 hp=4 cell=(1, 5)
+* test_procedural_audio_is_deterministic_non_silent_pcm
+4/4 passed.
+
+
+res://tests/test_shared_hashes.gd
+* test_shared_copy_hash_parity
+1/1 passed.
+
+
+res://tests/test_spike02.gd
+* test_whole_frame_hitstop_and_ui_progress_over_real_hold
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8285 limit=1.700 hp=4 cell=(1, 6)
+* test_contact_triggers_share_exact_process_frame
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8259 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.6456 limit=1.700 hp=4 cell=(1, 6)
+* test_generic_event_dispatch_reordered_and_unknown_event
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8360 limit=1.700 hp=4 cell=(1, 6)
+* test_knight_identity_and_debug_visibility
+* test_frame_player_offsets_and_mirror_are_pivot_relative
+* test_first_frame_uses_only_time_after_play
+6/6 passed.
+
+
+
+
+==============================================
+= Run Summary
+==============================================
+
+Totals
+------
+Scripts              10
+Tests                55
+Passing Tests        55
+Asserts            2772
+Time              32.91s
+
+
+---- All tests passed! ----
