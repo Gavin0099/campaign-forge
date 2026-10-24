@@ -6,6 +6,7 @@ import argparse
 import math
 import shutil
 from collections import deque
+from pathlib import Path
 
 def prepare(number):
     folder=OUT/'sheet-attempts'

@@ -253,8 +253,8 @@
       },
       "raw": "godot-spike/docs/evidence/spike02-a8/sheet-attempts/attempt-3.png",
       "raw_sha256": "5ba4a3fd04b9a87378d0978fe38737e5a9c5557ae1b7cec88fbfd33836755c18",
-      "runtime": "godot-spike/docs/evidence/spike02-a8/normalized/attempt-3/01-runtime.png",
-      "runtime_sha256": "790e174e38b830d08c668275870b0926c8ddd3fb33230195df352134c6b75a98",
+      "runtime": "godot-spike/docs/evidence/spike02-a8/normalized/attempt-3/01-runtime-2.png",
+      "runtime_sha256": "cf37fc5b439cd639e447f4b3a3ae0b5665b2cb8923896e3f560a63067c0566d4",
       "slice": {
         "layout": "godot-spike/docs/evidence/spike02-a8/inputs/sheet-layout.json",
         "uniform_sheet_scale": 1.1544532130777903,
@@ -305,6 +305,16 @@
             217.9833729216152,
             72.1306413301663
           ]
+        },
+        {
+          "scope": "old exposed mace shaft residual ONLY",
+          "input": "godot-spike/docs/evidence/spike02-a8/normalized/attempt-3/01-runtime.png",
+          "input_sha256": "790e174e38b830d08c668275870b0926c8ddd3fb33230195df352134c6b75a98",
+          "output": "godot-spike/docs/evidence/spike02-a8/normalized/attempt-3/01-runtime-2.png",
+          "output_sha256": "cf37fc5b439cd639e447f4b3a3ae0b5665b2cb8923896e3f560a63067c0566d4",
+          "mask": "godot-spike/docs/evidence/spike02-a8/normalized/attempt-3/01-residual-cleanup-mask.png",
+          "mask_sha256": "eeb9acea16786a1a309d07aa9d7e3e762f8647513737c0ea057764f1803e2034",
+          "description": "1x inspection found small remnant of superseded shaft outside first mask; erase exact residual polygon without changing body/head/hand/new mace."
         }
       ],
       "alpha_policy": "Generated alpha preserved above24; disconnected components<80px removed; RGB retained straight, zero RGB where alpha0",
@@ -526,8 +536,8 @@
       },
       "raw": "godot-spike/docs/evidence/spike02-a8/sheet-attempts/attempt-3.png",
       "raw_sha256": "5ba4a3fd04b9a87378d0978fe38737e5a9c5557ae1b7cec88fbfd33836755c18",
-      "runtime": "godot-spike/docs/evidence/spike02-a8/normalized/attempt-3/04-runtime.png",
-      "runtime_sha256": "afff39a5272b2f187b86128edc191714c26b7b784191b21ded0a70f854bb5a91",
+      "runtime": "godot-spike/docs/evidence/spike02-a8/normalized/attempt-3/04-runtime-2.png",
+      "runtime_sha256": "c3e40e2485f31e60bd1aa1d21c8cbc452e7a359db92d2e58d6391395adc167b0",
       "slice": {
         "layout": "godot-spike/docs/evidence/spike02-a8/inputs/sheet-layout.json",
         "uniform_sheet_scale": 1.1544532130777903,
@@ -578,6 +588,16 @@
             375.0365535248042,
             312.2480417754569
           ]
+        },
+        {
+          "scope": "old exposed mace shaft residual ONLY",
+          "input": "godot-spike/docs/evidence/spike02-a8/normalized/attempt-3/04-runtime.png",
+          "input_sha256": "afff39a5272b2f187b86128edc191714c26b7b784191b21ded0a70f854bb5a91",
+          "output": "godot-spike/docs/evidence/spike02-a8/normalized/attempt-3/04-runtime-2.png",
+          "output_sha256": "c3e40e2485f31e60bd1aa1d21c8cbc452e7a359db92d2e58d6391395adc167b0",
+          "mask": "godot-spike/docs/evidence/spike02-a8/normalized/attempt-3/04-residual-cleanup-mask.png",
+          "mask_sha256": "fc77ab20ae40bb88df64e5b64c1e077c2d0ead094a25a7118300acb49d468890",
+          "description": "1x inspection found small remnant of superseded shaft outside first mask; erase exact residual polygon without changing body/head/hand/new mace."
         }
       ],
       "alpha_policy": "Generated alpha preserved above24; disconnected components<80px removed; RGB retained straight, zero RGB where alpha0",

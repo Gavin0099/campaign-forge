@@ -49,3 +49,5 @@ no install. A read requested nonexistent check_a7_frames.py (exit1); existing
 audit tools were then read instead. No push, merge, PR, stash, addon, gameplay,
 timing, HUD, story, ui-prototype or art-brief changes. Task completion is not
 session end; memory/PLAN writes are outside this explicitly scoped segment.
+
+W2 correction: initial residual cleanup exited1 (missing pathlib.Path import), before changing any pixels. W2 commit2a355a0 therefore retained those slivers. Import fixed and cleanup rerun exit0 in a separate corrective commit before W3; both pre-cleanup runtime images preserved. No generation repeated.
