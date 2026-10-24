@@ -1,0 +1,1834 @@
+{
+  "brief": "docs/art-briefs/thoma-swing-commission.md",
+  "brief_sha256": "5a046051addd43d13da732bdfb8bf7ff6d795257ccd3eea0d4113ab2d68ead51",
+  "frames": {
+    "thoma/idle/01.png": {
+      "path": "thoma/idle/01.png",
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "source": "raw/thoma-mace-idle-01.png",
+      "raw_sha256": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5",
+      "registration": [
+        665,
+        1219,
+        58,
+        360
+      ],
+      "status": "PASS",
+      "weapon_status": "APPROVED",
+      "reason": "Immutable appearance endpoint; not Owner art approval.",
+      "style_review": {
+        "face": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "stole_cape_embroidery": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "cuffs": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "hem_silhouette": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "palette": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "stroke": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "satchel_medallion": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval."
+      },
+      "weapon_approval": "Owner, 2026-10-24",
+      "review_segment": "spike-02 A9",
+      "review_authority": "model native512px source inspection plus actual rendered playback; not Owner art approval",
+      "palette_distance": {
+        "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
+        "value": 0.0,
+        "not_a_perceptual_quality_score": true
+      },
+      "region_review": {
+        "face_hair": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "stole": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "embroidery": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "tassels": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "cuffs": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "hem": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "palette": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "seams": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "bag_count": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "feet": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "mace": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "landmarks": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "sequence": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval."
+      },
+      "bag_count": 1,
+      "bag_count_authority": "model count in whole figure and bag crop",
+      "technical_check": {
+        "pass": true,
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "lowest_opaque_y": 463,
+        "opaque_pixels_on_ground": 0,
+        "saturated_guide_pixels": 0,
+        "guide_visual_check": "PASS: no line, arc, joint dot or text visible in final1x frame",
+        "straight_alpha": "visible RGB retained unmultiplied; hidden RGB zeroed by normalization",
+        "limits": "Original immutable anchors retain original ground/alpha; no endpoint changed to satisfy a new gate."
+      },
+      "a8_to_a9_change": {
+        "face_hair": "same",
+        "stole": "same",
+        "embroidery": "same",
+        "tassels": "same",
+        "cuffs": "same",
+        "hem": "same",
+        "palette": "same",
+        "seams": "same",
+        "bag_count": "same",
+        "feet": "same",
+        "mace": "same",
+        "landmarks": "same",
+        "sequence": "same"
+      }
+    },
+    "thoma/swing/00.png": {
+      "path": "thoma/swing/00.png",
+      "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+      "source": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
+      "raw_sha256": "5ba4a3fd04b9a87378d0978fe38737e5a9c5557ae1b7cec88fbfd33836755c18",
+      "registration": [
+        685,
+        1218,
+        144,
+        350
+      ],
+      "status": "PLACEHOLDER",
+      "weapon_status": "APPROVED",
+      "reason": "Partial anchor identity and/or uncompressed mace improvement; cloth details, integration and full pose/sequence still fail.",
+      "style_review": {
+        "face": "PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams.",
+        "stole_cape_embroidery": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
+        "cuffs": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+        "hem_silhouette": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+        "palette": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+        "stroke": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
+        "satchel_medallion": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel."
+      },
+      "weapon_approval": "Owner, 2026-10-24",
+      "cleanup": "A9 enforced region masks; retained anchor-pixel transplants only; rejected cloth/leg regions exactly A8.",
+      "review_segment": "spike-02 A9",
+      "review_authority": "model native512px source inspection plus actual rendered playback; not Owner art approval",
+      "palette_distance": {
+        "before": 5.71192,
+        "after": 0.666352,
+        "metric": "mean nearest idle/01 128-color Euclidean RGB, alpha>240"
+      },
+      "region_review": {
+        "face_hair": "PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams.",
+        "stole": "FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps.",
+        "embroidery": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
+        "tassels": "FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established.",
+        "cuffs": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+        "hem": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+        "palette": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+        "seams": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
+        "bag_count": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
+        "feet": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
+        "mace": "FAIL: rigid recover05 head/haft transplant removes compression and meets target; grip/head edge highlights and projected-length integration still differ.",
+        "landmarks": "FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression.",
+        "sequence": "FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints."
+      },
+      "bag_count": 1,
+      "bag_count_authority": "model count in whole figure and bag crop",
+      "technical_check": {
+        "pass": true,
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "lowest_opaque_y": 464,
+        "opaque_pixels_on_ground": 13,
+        "saturated_guide_pixels": 0,
+        "guide_visual_check": "PASS: no line, arc, joint dot or text visible in final1x frame",
+        "straight_alpha": "visible RGB retained unmultiplied; hidden RGB zeroed by normalization",
+        "limits": "Original immutable anchors retain original ground/alpha; no endpoint changed to satisfy a new gate."
+      },
+      "a8_to_a9_change": {
+        "face_hair": "improved",
+        "stole": "same",
+        "embroidery": "same",
+        "tassels": "same",
+        "cuffs": "same",
+        "hem": "same",
+        "palette": "same",
+        "seams": "same",
+        "bag_count": "same",
+        "feet": "same",
+        "mace": "improved",
+        "landmarks": "same",
+        "sequence": "same"
+      }
+    },
+    "thoma/swing/01.png": {
+      "path": "thoma/swing/01.png",
+      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "source": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
+      "raw_sha256": "5ba4a3fd04b9a87378d0978fe38737e5a9c5557ae1b7cec88fbfd33836755c18",
+      "registration": [
+        665,
+        1220,
+        132,
+        354
+      ],
+      "status": "PLACEHOLDER",
+      "weapon_status": "APPROVED",
+      "reason": "Partial anchor identity and/or uncompressed mace improvement; cloth details, integration and full pose/sequence still fail.",
+      "style_review": {
+        "face": "FAIL: all three anchor-head trials produced old-face fragments or collar holes; A8 broad crown/softened beard retained.",
+        "stole_cape_embroidery": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
+        "cuffs": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+        "hem_silhouette": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+        "palette": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+        "stroke": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
+        "satchel_medallion": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel."
+      },
+      "weapon_approval": "Owner, 2026-10-24",
+      "cleanup": "A9 enforced region masks; retained anchor-pixel transplants only; rejected cloth/leg regions exactly A8.",
+      "review_segment": "spike-02 A9",
+      "review_authority": "model native512px source inspection plus actual rendered playback; not Owner art approval",
+      "palette_distance": {
+        "before": 5.457934,
+        "after": 0.696423,
+        "metric": "mean nearest idle/01 128-color Euclidean RGB, alpha>240"
+      },
+      "region_review": {
+        "face_hair": "FAIL: all three anchor-head trials produced old-face fragments or collar holes; A8 broad crown/softened beard retained.",
+        "stole": "FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps.",
+        "embroidery": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
+        "tassels": "FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established.",
+        "cuffs": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+        "hem": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+        "palette": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+        "seams": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
+        "bag_count": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
+        "feet": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
+        "mace": "FAIL: rigid recover05 head/haft transplant removes compression and meets target; grip/head edge highlights and projected-length integration still differ.",
+        "landmarks": "FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression.",
+        "sequence": "FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints."
+      },
+      "bag_count": 1,
+      "bag_count_authority": "model count in whole figure and bag crop",
+      "technical_check": {
+        "pass": true,
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "lowest_opaque_y": 464,
+        "opaque_pixels_on_ground": 12,
+        "saturated_guide_pixels": 0,
+        "guide_visual_check": "PASS: no line, arc, joint dot or text visible in final1x frame",
+        "straight_alpha": "visible RGB retained unmultiplied; hidden RGB zeroed by normalization",
+        "limits": "Original immutable anchors retain original ground/alpha; no endpoint changed to satisfy a new gate."
+      },
+      "a8_to_a9_change": {
+        "face_hair": "same",
+        "stole": "same",
+        "embroidery": "same",
+        "tassels": "same",
+        "cuffs": "same",
+        "hem": "same",
+        "palette": "same",
+        "seams": "same",
+        "bag_count": "same",
+        "feet": "same",
+        "mace": "improved",
+        "landmarks": "same",
+        "sequence": "same"
+      }
+    },
+    "thoma/swing/03.png": {
+      "path": "thoma/swing/03.png",
+      "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+      "source": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
+      "raw_sha256": "5ba4a3fd04b9a87378d0978fe38737e5a9c5557ae1b7cec88fbfd33836755c18",
+      "registration": [
+        545,
+        1190,
+        81,
+        350
+      ],
+      "status": "PLACEHOLDER",
+      "weapon_status": "APPROVED",
+      "reason": "Partial anchor identity and/or uncompressed mace improvement; cloth details, integration and full pose/sequence still fail.",
+      "style_review": {
+        "face": "PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams.",
+        "stole_cape_embroidery": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
+        "cuffs": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+        "hem_silhouette": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+        "palette": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+        "stroke": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
+        "satchel_medallion": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel."
+      },
+      "weapon_approval": "Owner, 2026-10-24",
+      "cleanup": "A9 enforced region masks; retained anchor-pixel transplants only; rejected cloth/leg regions exactly A8.",
+      "review_segment": "spike-02 A9",
+      "review_authority": "model native512px source inspection plus actual rendered playback; not Owner art approval",
+      "palette_distance": {
+        "before": 5.760951,
+        "after": 0.70966,
+        "metric": "mean nearest idle/01 128-color Euclidean RGB, alpha>240"
+      },
+      "region_review": {
+        "face_hair": "PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams.",
+        "stole": "FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps.",
+        "embroidery": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
+        "tassels": "FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established.",
+        "cuffs": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+        "hem": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+        "palette": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+        "seams": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
+        "bag_count": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
+        "feet": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
+        "mace": "FAIL: A8 target/impact opacity pass, but reconstructed projected haft/head and brush joins still fail canon integration.",
+        "landmarks": "FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression.",
+        "sequence": "FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints."
+      },
+      "bag_count": 1,
+      "bag_count_authority": "model count in whole figure and bag crop",
+      "technical_check": {
+        "pass": true,
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "lowest_opaque_y": 464,
+        "opaque_pixels_on_ground": 18,
+        "saturated_guide_pixels": 0,
+        "guide_visual_check": "PASS: no line, arc, joint dot or text visible in final1x frame",
+        "straight_alpha": "visible RGB retained unmultiplied; hidden RGB zeroed by normalization",
+        "limits": "Original immutable anchors retain original ground/alpha; no endpoint changed to satisfy a new gate."
+      },
+      "a8_to_a9_change": {
+        "face_hair": "improved",
+        "stole": "same",
+        "embroidery": "same",
+        "tassels": "same",
+        "cuffs": "same",
+        "hem": "same",
+        "palette": "same",
+        "seams": "same",
+        "bag_count": "same",
+        "feet": "same",
+        "mace": "same",
+        "landmarks": "same",
+        "sequence": "same"
+      }
+    },
+    "thoma/swing/04.png": {
+      "path": "thoma/swing/04.png",
+      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "source": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
+      "raw_sha256": "5ba4a3fd04b9a87378d0978fe38737e5a9c5557ae1b7cec88fbfd33836755c18",
+      "registration": [
+        607,
+        1167,
+        110,
+        342
+      ],
+      "status": "PLACEHOLDER",
+      "weapon_status": "APPROVED",
+      "reason": "Partial anchor identity and/or uncompressed mace improvement; cloth details, integration and full pose/sequence still fail.",
+      "style_review": {
+        "face": "PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams.",
+        "stole_cape_embroidery": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
+        "cuffs": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+        "hem_silhouette": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+        "palette": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+        "stroke": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
+        "satchel_medallion": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel."
+      },
+      "weapon_approval": "Owner, 2026-10-24",
+      "cleanup": "A9 enforced region masks; retained anchor-pixel transplants only; rejected cloth/leg regions exactly A8.",
+      "review_segment": "spike-02 A9",
+      "review_authority": "model native512px source inspection plus actual rendered playback; not Owner art approval",
+      "palette_distance": {
+        "before": 5.630703,
+        "after": 0.660794,
+        "metric": "mean nearest idle/01 128-color Euclidean RGB, alpha>240"
+      },
+      "region_review": {
+        "face_hair": "PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams.",
+        "stole": "FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps.",
+        "embroidery": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
+        "tassels": "FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established.",
+        "cuffs": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+        "hem": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+        "palette": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+        "seams": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
+        "bag_count": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
+        "feet": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
+        "mace": "FAIL: A8 target/impact opacity pass, but reconstructed projected haft/head and brush joins still fail canon integration.",
+        "landmarks": "FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression.",
+        "sequence": "FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints."
+      },
+      "bag_count": 1,
+      "bag_count_authority": "model count in whole figure and bag crop",
+      "technical_check": {
+        "pass": true,
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "lowest_opaque_y": 464,
+        "opaque_pixels_on_ground": 8,
+        "saturated_guide_pixels": 0,
+        "guide_visual_check": "PASS: no line, arc, joint dot or text visible in final1x frame",
+        "straight_alpha": "visible RGB retained unmultiplied; hidden RGB zeroed by normalization",
+        "limits": "Original immutable anchors retain original ground/alpha; no endpoint changed to satisfy a new gate."
+      },
+      "a8_to_a9_change": {
+        "face_hair": "improved",
+        "stole": "same",
+        "embroidery": "same",
+        "tassels": "same",
+        "cuffs": "same",
+        "hem": "same",
+        "palette": "same",
+        "seams": "same",
+        "bag_count": "same",
+        "feet": "same",
+        "mace": "same",
+        "landmarks": "same",
+        "sequence": "same"
+      }
+    },
+    "thoma/swing/05.png": {
+      "path": "thoma/swing/05.png",
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "source": "raw/thoma-mace-swing-05.png",
+      "raw_sha256": "e89296c8cd0a799e8d5302caf1f611aaa241e84f2a2c4ff56f8b77f4153f31dd",
+      "registration": [
+        673,
+        1217,
+        85,
+        360
+      ],
+      "status": "PASS",
+      "weapon_status": "APPROVED",
+      "reason": "Immutable appearance endpoint; not Owner art approval.",
+      "style_review": {
+        "face": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "stole_cape_embroidery": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "cuffs": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "hem_silhouette": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "palette": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "stroke": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "satchel_medallion": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval."
+      },
+      "weapon_approval": "Owner, 2026-10-24",
+      "review_segment": "spike-02 A9",
+      "review_authority": "model native512px source inspection plus actual rendered playback; not Owner art approval",
+      "palette_distance": {
+        "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
+        "value": 0.0,
+        "not_a_perceptual_quality_score": true
+      },
+      "region_review": {
+        "face_hair": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "stole": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "embroidery": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "tassels": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "cuffs": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "hem": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "palette": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "seams": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "bag_count": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "feet": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "mace": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "landmarks": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+        "sequence": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval."
+      },
+      "bag_count": 1,
+      "bag_count_authority": "model count in whole figure and bag crop",
+      "technical_check": {
+        "pass": true,
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "lowest_opaque_y": 464,
+        "opaque_pixels_on_ground": 10,
+        "saturated_guide_pixels": 0,
+        "guide_visual_check": "PASS: no line, arc, joint dot or text visible in final1x frame",
+        "straight_alpha": "visible RGB retained unmultiplied; hidden RGB zeroed by normalization",
+        "limits": "Original immutable anchors retain original ground/alpha; no endpoint changed to satisfy a new gate."
+      },
+      "a8_to_a9_change": {
+        "face_hair": "same",
+        "stole": "same",
+        "embroidery": "same",
+        "tassels": "same",
+        "cuffs": "same",
+        "hem": "same",
+        "palette": "same",
+        "seams": "same",
+        "bag_count": "same",
+        "feet": "same",
+        "mace": "same",
+        "landmarks": "same",
+        "sequence": "same"
+      }
+    },
+    "thoma/swing/02.png": {
+      "path": "thoma/swing/02.png",
+      "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+      "source": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
+      "raw_sha256": "5ba4a3fd04b9a87378d0978fe38737e5a9c5557ae1b7cec88fbfd33836755c18",
+      "registration": [
+        575,
+        1205,
+        133,
+        350
+      ],
+      "status": "PLACEHOLDER",
+      "weapon_status": "APPROVED",
+      "reason": "Partial anchor identity and/or uncompressed mace improvement; cloth details, integration and full pose/sequence still fail.",
+      "style_review": {
+        "face": "PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams.",
+        "stole_cape_embroidery": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
+        "cuffs": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+        "hem_silhouette": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+        "palette": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+        "stroke": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
+        "satchel_medallion": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel."
+      },
+      "weapon_approval": "Owner, 2026-10-24",
+      "cleanup": "A9 enforced region masks; retained anchor-pixel transplants only; rejected cloth/leg regions exactly A8.",
+      "review_segment": "spike-02 A9",
+      "review_authority": "model native512px source inspection plus actual rendered playback; not Owner art approval",
+      "palette_distance": {
+        "before": 6.622218,
+        "after": 0.576556,
+        "metric": "mean nearest idle/01 128-color Euclidean RGB, alpha>240"
+      },
+      "region_review": {
+        "face_hair": "PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams.",
+        "stole": "FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps.",
+        "embroidery": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
+        "tassels": "FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established.",
+        "cuffs": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+        "hem": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+        "palette": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+        "seams": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
+        "bag_count": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
+        "feet": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
+        "mace": "FAIL: A8 target/impact opacity pass, but reconstructed projected haft/head and brush joins still fail canon integration.",
+        "landmarks": "FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression.",
+        "sequence": "FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints."
+      },
+      "bag_count": 1,
+      "bag_count_authority": "model count in whole figure and bag crop",
+      "technical_check": {
+        "pass": true,
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "lowest_opaque_y": 464,
+        "opaque_pixels_on_ground": 15,
+        "saturated_guide_pixels": 0,
+        "guide_visual_check": "PASS: no line, arc, joint dot or text visible in final1x frame",
+        "straight_alpha": "visible RGB retained unmultiplied; hidden RGB zeroed by normalization",
+        "limits": "Original immutable anchors retain original ground/alpha; no endpoint changed to satisfy a new gate."
+      },
+      "a8_to_a9_change": {
+        "face_hair": "improved",
+        "stole": "same",
+        "embroidery": "same",
+        "tassels": "same",
+        "cuffs": "same",
+        "hem": "same",
+        "palette": "same",
+        "seams": "same",
+        "bag_count": "same",
+        "feet": "same",
+        "mace": "same",
+        "landmarks": "same",
+        "sequence": "same"
+      }
+    }
+  },
+  "crops": [
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "face_hair",
+      "box": [
+        233,
+        118,
+        284,
+        174
+      ],
+      "scale": 1,
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "face_hair",
+      "box": [
+        227,
+        108,
+        279,
+        165
+      ],
+      "scale": 1,
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "face_hair",
+      "box": [
+        210,
+        90,
+        350,
+        190
+      ],
+      "scale": 1,
+      "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+      "result": "PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams.",
+      "a8_to_a9_change": "improved"
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "face_hair",
+      "box": [
+        210,
+        90,
+        350,
+        190
+      ],
+      "scale": 1,
+      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "result": "FAIL: all three anchor-head trials produced old-face fragments or collar holes; A8 broad crown/softened beard retained.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "face_hair",
+      "box": [
+        210,
+        90,
+        350,
+        190
+      ],
+      "scale": 1,
+      "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+      "result": "PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams.",
+      "a8_to_a9_change": "improved"
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "face_hair",
+      "box": [
+        210,
+        90,
+        350,
+        190
+      ],
+      "scale": 1,
+      "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+      "result": "PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams.",
+      "a8_to_a9_change": "improved"
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "face_hair",
+      "box": [
+        210,
+        90,
+        350,
+        190
+      ],
+      "scale": 1,
+      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "result": "PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams.",
+      "a8_to_a9_change": "improved"
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "stole",
+      "box": [
+        187,
+        151,
+        312,
+        387
+      ],
+      "scale": 0.9957627118644068,
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "stole",
+      "box": [
+        183,
+        143,
+        310,
+        386
+      ],
+      "scale": 0.9670781893004116,
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "stole",
+      "box": [
+        130,
+        140,
+        350,
+        415
+      ],
+      "scale": 0.8545454545454545,
+      "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+      "result": "FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "stole",
+      "box": [
+        130,
+        140,
+        350,
+        415
+      ],
+      "scale": 0.8545454545454545,
+      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "result": "FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "stole",
+      "box": [
+        130,
+        140,
+        350,
+        415
+      ],
+      "scale": 0.8545454545454545,
+      "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+      "result": "FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "stole",
+      "box": [
+        130,
+        140,
+        350,
+        415
+      ],
+      "scale": 0.8545454545454545,
+      "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+      "result": "FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "stole",
+      "box": [
+        130,
+        140,
+        350,
+        415
+      ],
+      "scale": 0.8545454545454545,
+      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "result": "FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "embroidery",
+      "box": [
+        285,
+        300,
+        309,
+        350
+      ],
+      "scale": 1,
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "embroidery",
+      "box": [
+        282,
+        292,
+        306,
+        343
+      ],
+      "scale": 1,
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "embroidery",
+      "box": [
+        130,
+        295,
+        340,
+        415
+      ],
+      "scale": 1,
+      "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+      "result": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "embroidery",
+      "box": [
+        130,
+        295,
+        340,
+        415
+      ],
+      "scale": 1,
+      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "result": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "embroidery",
+      "box": [
+        130,
+        295,
+        340,
+        415
+      ],
+      "scale": 1,
+      "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+      "result": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "embroidery",
+      "box": [
+        130,
+        295,
+        340,
+        415
+      ],
+      "scale": 1,
+      "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+      "result": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "embroidery",
+      "box": [
+        130,
+        295,
+        340,
+        415
+      ],
+      "scale": 1,
+      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "result": "FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "tassels",
+      "box": [
+        285,
+        346,
+        313,
+        366
+      ],
+      "scale": 1,
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "tassels",
+      "box": [
+        282,
+        339,
+        310,
+        359
+      ],
+      "scale": 1,
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "tassels",
+      "box": [
+        130,
+        335,
+        340,
+        420
+      ],
+      "scale": 1,
+      "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+      "result": "FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "tassels",
+      "box": [
+        130,
+        335,
+        340,
+        420
+      ],
+      "scale": 1,
+      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "result": "FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "tassels",
+      "box": [
+        130,
+        335,
+        340,
+        420
+      ],
+      "scale": 1,
+      "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+      "result": "FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "tassels",
+      "box": [
+        130,
+        335,
+        340,
+        420
+      ],
+      "scale": 1,
+      "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+      "result": "FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "tassels",
+      "box": [
+        130,
+        335,
+        340,
+        420
+      ],
+      "scale": 1,
+      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "result": "FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "cuffs",
+      "box": [
+        154,
+        230,
+        332,
+        284
+      ],
+      "scale": 1,
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "cuffs",
+      "box": [
+        151,
+        225,
+        329,
+        282
+      ],
+      "scale": 1,
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "cuffs",
+      "box": [
+        95,
+        65,
+        410,
+        330
+      ],
+      "scale": 0.8867924528301887,
+      "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+      "result": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "cuffs",
+      "box": [
+        95,
+        65,
+        410,
+        330
+      ],
+      "scale": 0.8867924528301887,
+      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "result": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "cuffs",
+      "box": [
+        95,
+        65,
+        410,
+        330
+      ],
+      "scale": 0.8867924528301887,
+      "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+      "result": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "cuffs",
+      "box": [
+        95,
+        65,
+        410,
+        330
+      ],
+      "scale": 0.8867924528301887,
+      "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+      "result": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "cuffs",
+      "box": [
+        95,
+        65,
+        410,
+        330
+      ],
+      "scale": 0.8867924528301887,
+      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "result": "PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "hem",
+      "box": [
+        169,
+        351,
+        325,
+        423
+      ],
+      "scale": 1,
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "hem",
+      "box": [
+        163,
+        347,
+        326,
+        427
+      ],
+      "scale": 1,
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "hem",
+      "box": [
+        60,
+        340,
+        390,
+        450
+      ],
+      "scale": 1,
+      "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+      "result": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "hem",
+      "box": [
+        60,
+        340,
+        390,
+        450
+      ],
+      "scale": 1,
+      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "result": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "hem",
+      "box": [
+        60,
+        340,
+        390,
+        450
+      ],
+      "scale": 1,
+      "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+      "result": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "hem",
+      "box": [
+        60,
+        340,
+        390,
+        450
+      ],
+      "scale": 1,
+      "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+      "result": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "hem",
+      "box": [
+        60,
+        340,
+        390,
+        450
+      ],
+      "scale": 1,
+      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "result": "PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "palette",
+      "box": [
+        165,
+        175,
+        325,
+        400
+      ],
+      "scale": 1,
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "palette",
+      "box": [
+        162,
+        167,
+        325,
+        406
+      ],
+      "scale": 0.9832635983263598,
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "palette",
+      "box": [
+        150,
+        170,
+        335,
+        430
+      ],
+      "scale": 0.9038461538461539,
+      "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+      "result": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "palette",
+      "box": [
+        150,
+        170,
+        335,
+        430
+      ],
+      "scale": 0.9038461538461539,
+      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "result": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "palette",
+      "box": [
+        150,
+        170,
+        335,
+        430
+      ],
+      "scale": 0.9038461538461539,
+      "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+      "result": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "palette",
+      "box": [
+        150,
+        170,
+        335,
+        430
+      ],
+      "scale": 0.9038461538461539,
+      "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+      "result": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "palette",
+      "box": [
+        150,
+        170,
+        335,
+        430
+      ],
+      "scale": 0.9038461538461539,
+      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "result": "PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "seams",
+      "box": [
+        170,
+        289,
+        252,
+        348
+      ],
+      "scale": 1,
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "seams",
+      "box": [
+        170,
+        290,
+        246,
+        352
+      ],
+      "scale": 1,
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "seams",
+      "box": [
+        95,
+        60,
+        485,
+        425
+      ],
+      "scale": 0.6438356164383562,
+      "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+      "result": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "seams",
+      "box": [
+        95,
+        60,
+        485,
+        425
+      ],
+      "scale": 0.6438356164383562,
+      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "result": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "seams",
+      "box": [
+        95,
+        60,
+        485,
+        425
+      ],
+      "scale": 0.6438356164383562,
+      "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+      "result": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "seams",
+      "box": [
+        95,
+        60,
+        485,
+        425
+      ],
+      "scale": 0.6438356164383562,
+      "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+      "result": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "seams",
+      "box": [
+        95,
+        60,
+        485,
+        425
+      ],
+      "scale": 0.6438356164383562,
+      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "result": "FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "bag_count",
+      "box": [
+        181,
+        246,
+        241,
+        323
+      ],
+      "scale": 1,
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "bag_count",
+      "box": [
+        178,
+        241,
+        239,
+        321
+      ],
+      "scale": 1,
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "bag_count",
+      "box": [
+        95,
+        220,
+        260,
+        340
+      ],
+      "scale": 1,
+      "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+      "result": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "bag_count",
+      "box": [
+        95,
+        220,
+        260,
+        340
+      ],
+      "scale": 1,
+      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "result": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "bag_count",
+      "box": [
+        95,
+        220,
+        260,
+        340
+      ],
+      "scale": 1,
+      "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+      "result": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "bag_count",
+      "box": [
+        95,
+        220,
+        260,
+        340
+      ],
+      "scale": 1,
+      "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+      "result": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "bag_count",
+      "box": [
+        95,
+        220,
+        260,
+        340
+      ],
+      "scale": 1,
+      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "result": "PASS: one brown flap satchel and one pale roll at screen-left hip in every panel.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "feet",
+      "box": [
+        181,
+        388,
+        332,
+        465
+      ],
+      "scale": 1,
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "feet",
+      "box": [
+        179,
+        395,
+        331,
+        465
+      ],
+      "scale": 1,
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "feet",
+      "box": [
+        30,
+        390,
+        400,
+        470
+      ],
+      "scale": 1,
+      "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+      "result": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "feet",
+      "box": [
+        30,
+        390,
+        400,
+        470
+      ],
+      "scale": 1,
+      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "result": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "feet",
+      "box": [
+        30,
+        390,
+        400,
+        470
+      ],
+      "scale": 1,
+      "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+      "result": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "feet",
+      "box": [
+        30,
+        390,
+        400,
+        470
+      ],
+      "scale": 1,
+      "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+      "result": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "feet",
+      "box": [
+        30,
+        390,
+        400,
+        470
+      ],
+      "scale": 1,
+      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "result": "PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "mace",
+      "box": [
+        170,
+        289,
+        252,
+        348
+      ],
+      "scale": 1,
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "mace",
+      "box": [
+        170,
+        290,
+        246,
+        352
+      ],
+      "scale": 1,
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "mace",
+      "box": [
+        95,
+        60,
+        485,
+        410
+      ],
+      "scale": 0.6714285714285714,
+      "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+      "result": "FAIL: rigid recover05 head/haft transplant removes compression and meets target; grip/head edge highlights and projected-length integration still differ.",
+      "a8_to_a9_change": "improved"
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "mace",
+      "box": [
+        95,
+        60,
+        485,
+        410
+      ],
+      "scale": 0.6714285714285714,
+      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "result": "FAIL: rigid recover05 head/haft transplant removes compression and meets target; grip/head edge highlights and projected-length integration still differ.",
+      "a8_to_a9_change": "improved"
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "mace",
+      "box": [
+        95,
+        60,
+        485,
+        410
+      ],
+      "scale": 0.6714285714285714,
+      "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+      "result": "FAIL: A8 target/impact opacity pass, but reconstructed projected haft/head and brush joins still fail canon integration.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "mace",
+      "box": [
+        95,
+        60,
+        485,
+        410
+      ],
+      "scale": 0.6714285714285714,
+      "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+      "result": "FAIL: A8 target/impact opacity pass, but reconstructed projected haft/head and brush joins still fail canon integration.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "mace",
+      "box": [
+        95,
+        60,
+        485,
+        410
+      ],
+      "scale": 0.6714285714285714,
+      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "result": "FAIL: A8 target/impact opacity pass, but reconstructed projected haft/head and brush joins still fail canon integration.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "landmarks",
+      "box": [
+        165,
+        175,
+        325,
+        400
+      ],
+      "scale": 1,
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "landmarks",
+      "box": [
+        162,
+        167,
+        325,
+        406
+      ],
+      "scale": 0.9832635983263598,
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "landmarks",
+      "box": [
+        30,
+        60,
+        485,
+        470
+      ],
+      "scale": 0.573170731707317,
+      "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+      "result": "FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "landmarks",
+      "box": [
+        30,
+        60,
+        485,
+        470
+      ],
+      "scale": 0.573170731707317,
+      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "result": "FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "landmarks",
+      "box": [
+        30,
+        60,
+        485,
+        470
+      ],
+      "scale": 0.573170731707317,
+      "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+      "result": "FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "landmarks",
+      "box": [
+        30,
+        60,
+        485,
+        470
+      ],
+      "scale": 0.573170731707317,
+      "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+      "result": "FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "landmarks",
+      "box": [
+        30,
+        60,
+        485,
+        470
+      ],
+      "scale": 0.573170731707317,
+      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "result": "FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/idle/01.png",
+      "item": "sequence",
+      "box": [
+        165,
+        175,
+        325,
+        400
+      ],
+      "scale": 1,
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/05.png",
+      "item": "sequence",
+      "box": [
+        162,
+        167,
+        325,
+        406
+      ],
+      "scale": 0.9832635983263598,
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "result": "PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/00.png",
+      "item": "sequence",
+      "box": [
+        30,
+        60,
+        485,
+        470
+      ],
+      "scale": 0.573170731707317,
+      "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+      "result": "FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/01.png",
+      "item": "sequence",
+      "box": [
+        30,
+        60,
+        485,
+        470
+      ],
+      "scale": 0.573170731707317,
+      "sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+      "result": "FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/02.png",
+      "item": "sequence",
+      "box": [
+        30,
+        60,
+        485,
+        470
+      ],
+      "scale": 0.573170731707317,
+      "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+      "result": "FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/03.png",
+      "item": "sequence",
+      "box": [
+        30,
+        60,
+        485,
+        470
+      ],
+      "scale": 0.573170731707317,
+      "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+      "result": "FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints.",
+      "a8_to_a9_change": "same"
+    },
+    {
+      "frame": "thoma/swing/04.png",
+      "item": "sequence",
+      "box": [
+        30,
+        60,
+        485,
+        470
+      ],
+      "scale": 0.573170731707317,
+      "sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+      "result": "FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints.",
+      "a8_to_a9_change": "same"
+    }
+  ],
+  "art_pass": false
+}

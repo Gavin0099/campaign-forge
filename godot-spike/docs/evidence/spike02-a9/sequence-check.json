@@ -1,0 +1,107 @@
+{
+  "pairs": [
+    {
+      "from": "thoma/idle/01.png",
+      "to": "thoma/swing/00.png",
+      "region_mean_rgb_delta": {
+        "head": 17.80012,
+        "stole": 32.41358,
+        "embroidery": 117.59536,
+        "tassels": 26.04147,
+        "mace": 62.58476,
+        "legs_feet": 11.88244
+      },
+      "garment_silhouette_iou": 0.665769,
+      "iou_source": "registered SOURCE alpha garment ROI (100,275)-(420,440), not segmentation of actual rendered RGB",
+      "character_height_delta_px": -6,
+      "result": "FAIL",
+      "reason": "Mixed head01 identity, broad retained cloth and A8 stance/feet jumps; proxy values do not establish no flicker."
+    },
+    {
+      "from": "thoma/swing/00.png",
+      "to": "thoma/swing/01.png",
+      "region_mean_rgb_delta": {
+        "head": 10.52388,
+        "stole": 18.60849,
+        "embroidery": 4.91411,
+        "tassels": 10.10532,
+        "mace": 23.75407,
+        "legs_feet": 4.22007
+      },
+      "garment_silhouette_iou": 0.914796,
+      "iou_source": "registered SOURCE alpha garment ROI (100,275)-(420,440), not segmentation of actual rendered RGB",
+      "character_height_delta_px": 19,
+      "result": "FAIL",
+      "reason": "Mixed head01 identity, broad retained cloth and A8 stance/feet jumps; proxy values do not establish no flicker."
+    },
+    {
+      "from": "thoma/swing/01.png",
+      "to": "thoma/swing/02.png",
+      "region_mean_rgb_delta": {
+        "head": 6.21756,
+        "stole": 48.30821,
+        "embroidery": 3.39743,
+        "tassels": 9.06072,
+        "mace": 16.86369,
+        "legs_feet": 6.38622
+      },
+      "garment_silhouette_iou": 0.773543,
+      "iou_source": "registered SOURCE alpha garment ROI (100,275)-(420,440), not segmentation of actual rendered RGB",
+      "character_height_delta_px": -21,
+      "result": "FAIL",
+      "reason": "Mixed head01 identity, broad retained cloth and A8 stance/feet jumps; proxy values do not establish no flicker."
+    },
+    {
+      "from": "thoma/swing/02.png",
+      "to": "thoma/swing/03.png",
+      "region_mean_rgb_delta": {
+        "head": 25.89359,
+        "stole": 46.20781,
+        "embroidery": 2.34424,
+        "tassels": 1.87175,
+        "mace": 104.9823,
+        "legs_feet": 0.68769
+      },
+      "garment_silhouette_iou": 0.690046,
+      "iou_source": "registered SOURCE alpha garment ROI (100,275)-(420,440), not segmentation of actual rendered RGB",
+      "character_height_delta_px": 5,
+      "result": "FAIL",
+      "reason": "Mixed head01 identity, broad retained cloth and A8 stance/feet jumps; proxy values do not establish no flicker."
+    },
+    {
+      "from": "thoma/swing/03.png",
+      "to": "thoma/swing/04.png",
+      "region_mean_rgb_delta": {
+        "head": 23.05543,
+        "stole": 18.47458,
+        "embroidery": 4.00184,
+        "tassels": 3.64277,
+        "mace": 140.12065,
+        "legs_feet": 4.70251
+      },
+      "garment_silhouette_iou": 0.720232,
+      "iou_source": "registered SOURCE alpha garment ROI (100,275)-(420,440), not segmentation of actual rendered RGB",
+      "character_height_delta_px": -1,
+      "result": "FAIL",
+      "reason": "Mixed head01 identity, broad retained cloth and A8 stance/feet jumps; proxy values do not establish no flicker."
+    },
+    {
+      "from": "thoma/swing/04.png",
+      "to": "thoma/swing/05.png",
+      "region_mean_rgb_delta": {
+        "head": 19.23392,
+        "stole": 55.80058,
+        "embroidery": 46.12048,
+        "tassels": 31.09596,
+        "mace": 21.70997,
+        "legs_feet": 6.2882
+      },
+      "garment_silhouette_iou": 0.546787,
+      "iou_source": "registered SOURCE alpha garment ROI (100,275)-(420,440), not segmentation of actual rendered RGB",
+      "character_height_delta_px": 14,
+      "result": "FAIL",
+      "reason": "Mixed head01 identity, broad retained cloth and A8 stance/feet jumps; proxy values do not establish no flicker."
+    }
+  ],
+  "authority": "RGB differences measured from actual Godot movie pixels under transformed W1 masks; source silhouette separately labelled"
+}
