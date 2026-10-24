@@ -171,8 +171,8 @@
   {
     "path": "thoma/swing/00.png",
     "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
-    "source": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
-    "raw_sha256": "5ba4a3fd04b9a87378d0978fe38737e5a9c5557ae1b7cec88fbfd33836755c18",
+    "source": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+    "raw_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
     "registration": [
       685,
       1218,
@@ -231,6 +231,7 @@
       "straight_alpha": "visible RGB retained unmultiplied; hidden RGB zeroed by normalization",
       "limits": "Original immutable anchors retain original ground/alpha; no endpoint changed to satisfy a new gate."
     },
+    "operation_log": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
     "a8_to_a9_change": {
       "face_hair": "improved",
       "stole": "same",
@@ -250,8 +251,8 @@
   {
     "path": "thoma/swing/01.png",
     "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
-    "source": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
-    "raw_sha256": "5ba4a3fd04b9a87378d0978fe38737e5a9c5557ae1b7cec88fbfd33836755c18",
+    "source": "godot-spike/docs/evidence/spike02-a9/baseline-a8/01.png",
+    "raw_sha256": "cf37fc5b439cd639e447f4b3a3ae0b5665b2cb8923896e3f560a63067c0566d4",
     "registration": [
       665,
       1220,
@@ -310,6 +311,7 @@
       "straight_alpha": "visible RGB retained unmultiplied; hidden RGB zeroed by normalization",
       "limits": "Original immutable anchors retain original ground/alpha; no endpoint changed to satisfy a new gate."
     },
+    "operation_log": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
     "a8_to_a9_change": {
       "face_hair": "same",
       "stole": "same",
@@ -329,8 +331,8 @@
   {
     "path": "thoma/swing/03.png",
     "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
-    "source": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
-    "raw_sha256": "5ba4a3fd04b9a87378d0978fe38737e5a9c5557ae1b7cec88fbfd33836755c18",
+    "source": "godot-spike/docs/evidence/spike02-a9/baseline-a8/03.png",
+    "raw_sha256": "5e26004a23c014dee7a4ff0b90bf25fcd3341910355c9f91ac1ed4fd711cb3bd",
     "registration": [
       545,
       1190,
@@ -389,6 +391,7 @@
       "straight_alpha": "visible RGB retained unmultiplied; hidden RGB zeroed by normalization",
       "limits": "Original immutable anchors retain original ground/alpha; no endpoint changed to satisfy a new gate."
     },
+    "operation_log": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
     "a8_to_a9_change": {
       "face_hair": "improved",
       "stole": "same",
@@ -408,8 +411,8 @@
   {
     "path": "thoma/swing/04.png",
     "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
-    "source": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
-    "raw_sha256": "5ba4a3fd04b9a87378d0978fe38737e5a9c5557ae1b7cec88fbfd33836755c18",
+    "source": "godot-spike/docs/evidence/spike02-a9/baseline-a8/04.png",
+    "raw_sha256": "c3e40e2485f31e60bd1aa1d21c8cbc452e7a359db92d2e58d6391395adc167b0",
     "registration": [
       607,
       1167,
@@ -468,6 +471,7 @@
       "straight_alpha": "visible RGB retained unmultiplied; hidden RGB zeroed by normalization",
       "limits": "Original immutable anchors retain original ground/alpha; no endpoint changed to satisfy a new gate."
     },
+    "operation_log": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
     "a8_to_a9_change": {
       "face_hair": "improved",
       "stole": "same",
@@ -565,8 +569,8 @@
   {
     "path": "thoma/swing/02.png",
     "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
-    "source": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
-    "raw_sha256": "5ba4a3fd04b9a87378d0978fe38737e5a9c5557ae1b7cec88fbfd33836755c18",
+    "source": "godot-spike/docs/evidence/spike02-a9/baseline-a8/02.png",
+    "raw_sha256": "fdcdd0aa2ff102c70909f5e97105d6ba36f1c33bca127d9381fdca2610d5dd8c",
     "registration": [
       575,
       1205,
@@ -625,6 +629,7 @@
       "straight_alpha": "visible RGB retained unmultiplied; hidden RGB zeroed by normalization",
       "limits": "Original immutable anchors retain original ground/alpha; no endpoint changed to satisfy a new gate."
     },
+    "operation_log": "godot-spike/docs/evidence/spike02-a9/a9-fix-log.json",
     "a8_to_a9_change": {
       "face_hair": "improved",
       "stole": "same",

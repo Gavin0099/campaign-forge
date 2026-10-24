@@ -25,7 +25,7 @@ def audit():
             if 'mace' in kept:change['mace']='improved'
             checks['landmarks']='FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression.'
             checks['sequence']='FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints.'
-            r.update(source=rel(OUT/'a9-fix-log.json'),cleanup='A9 enforced region masks; retained anchor-pixel transplants only; rejected cloth/leg regions exactly A8.',
+            r.update(source=rel(OUT/f'baseline-a8/{f}.png'),raw_sha256=sha(OUT/f'baseline-a8/{f}.png'),operation_log=rel(OUT/'a9-fix-log.json'),cleanup='A9 enforced region masks; retained anchor-pixel transplants only; rejected cloth/leg regions exactly A8.',
               reason='Partial anchor identity and/or uncompressed mace improvement; cloth details, integration and full pose/sequence still fail.')
         r.update(region_review=checks,a8_to_a9_change=change,sha256=sha(SHARED/p),technical_check=technical(p),
           review_segment='spike-02 A9',review_authority='model native512px source inspection plus actual rendered playback; not Owner art approval',bag_count=1,weapon_status='APPROVED')

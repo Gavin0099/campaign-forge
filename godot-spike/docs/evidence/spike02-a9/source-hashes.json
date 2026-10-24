@@ -976,8 +976,8 @@
   },
   {
     "path": "godot-spike/docs/evidence/spike02-a9/checklist.json",
-    "sha256_working_tree": "5d1b2cb0368fc765864c168fdc35170aa617bd7d669f60d53b551a3238d76be5",
-    "sha256_git_lf": "34b1db350a4c347626fe27ea702f14fc73609d56380318450ca942671a171f98"
+    "sha256_working_tree": "4c988a6e32f301ac68642e724bef0e7a49f30639e98a6cda5a911394e18ae143",
+    "sha256_git_lf": "48d9ce906869bcf772a76fa85c66b6d740148d485a47d6ac36101448cdc8806d"
   },
   {
     "path": "godot-spike/docs/evidence/spike02-a9/checklist.png",
@@ -1033,6 +1033,11 @@
     "path": "godot-spike/docs/evidence/spike02-a9/frame-status-table.md",
     "sha256_working_tree": "c39c3fcc59e4ea8272da669e8fd62fa50a763d51ec37ab8fc5492156aa1b3b1e",
     "sha256_git_lf": "713a40d16ed66e8b99d9861fc6417f01347e76df8c39cddde2959151c1798c0f"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike02-a9/handoff-table-check.log",
+    "sha256_working_tree": "19ac37b351a8f0722f31cafde381bdef277f88281390bd2faccdba9aff10ff41",
+    "sha256_git_lf": "19ac37b351a8f0722f31cafde381bdef277f88281390bd2faccdba9aff10ff41"
   },
   {
     "path": "godot-spike/docs/evidence/spike02-a9/idle-1080p.png",
@@ -1780,14 +1785,19 @@
     "sha256_git_lf": "a951536f91492a07f96e7a0809ed238a6df5782155ea5562db4992b48db770bd"
   },
   {
+    "path": "godot-spike/docs/evidence/spike02-a9/w6-sync.log",
+    "sha256_working_tree": "ac898117e10bc354816f5f8b3bf5a62a12509b3dc548d9fac4b7ddcb8c80678a",
+    "sha256_git_lf": "ac898117e10bc354816f5f8b3bf5a62a12509b3dc548d9fac4b7ddcb8c80678a"
+  },
+  {
     "path": "godot-spike/docs/HANDOFF.md",
-    "sha256_working_tree": "b1a4593816dc10bb462f71aee465557d114c595b97c0925bbefd2e49b2a3f23b",
-    "sha256_git_lf": "41e22059c29e0977c81778e34f906cf844e2721ea07c28f25ea039e4d3455b69"
+    "sha256_working_tree": "603b31c017ed8a9f628cb6a6387d92aa21b7c6f722c217038d3dbb6f8206a455",
+    "sha256_git_lf": "603b31c017ed8a9f628cb6a6387d92aa21b7c6f722c217038d3dbb6f8206a455"
   },
   {
     "path": "godot-spike/docs/VERIFICATION.md",
-    "sha256_working_tree": "6dc92711849d80210e29cf62dd8ab4c9a8060edb3c1314ca51976ed923b13d4a",
-    "sha256_git_lf": "6dc92711849d80210e29cf62dd8ab4c9a8060edb3c1314ca51976ed923b13d4a"
+    "sha256_working_tree": "92045b2a0c179ed26b4b3cea5360ecefe0edcf2e2bc2aeac8b19163b7045c861",
+    "sha256_git_lf": "92045b2a0c179ed26b4b3cea5360ecefe0edcf2e2bc2aeac8b19163b7045c861"
   },
   {
     "path": "godot-spike/project.godot",
@@ -2016,8 +2026,8 @@
   },
   {
     "path": "godot-spike/tools/a9_style_check.py",
-    "sha256_working_tree": "63d7d2adb578ba26a49d19b04c72bc78fc92b974c65f49a4fa8a2426d350b4ea",
-    "sha256_git_lf": "63d7d2adb578ba26a49d19b04c72bc78fc92b974c65f49a4fa8a2426d350b4ea"
+    "sha256_working_tree": "c243adb20ee5a26f443b775cb7126b06227855f9eaf4d3a68bda1e5955436ac4",
+    "sha256_git_lf": "c243adb20ee5a26f443b775cb7126b06227855f9eaf4d3a68bda1e5955436ac4"
   },
   {
     "path": "godot-spike/tools/adopt_a6_frame.py",
@@ -2111,8 +2121,8 @@
   },
   {
     "path": "godot-spike/tools/document_a9.py",
-    "sha256_working_tree": "a3a32b88953a14ab2edaed9b065e68b8d92a0ed6cea4a71bb5a68215518b1b10",
-    "sha256_git_lf": "a3a32b88953a14ab2edaed9b065e68b8d92a0ed6cea4a71bb5a68215518b1b10"
+    "sha256_working_tree": "f62571977a1cf6d6eea1550514ba79a20787cf939469d04a0e69a9afa1c54b45",
+    "sha256_git_lf": "f62571977a1cf6d6eea1550514ba79a20787cf939469d04a0e69a9afa1c54b45"
   },
   {
     "path": "godot-spike/tools/fix_a9_regions.py",
@@ -2176,8 +2186,8 @@
   },
   {
     "path": "godot-spike/tools/package_a9_evidence.py",
-    "sha256_working_tree": "aec91b8b1b3672be7c11d672e07989fed7777e6f77228cee1eb6d5e408d7500c",
-    "sha256_git_lf": "aec91b8b1b3672be7c11d672e07989fed7777e6f77228cee1eb6d5e408d7500c"
+    "sha256_working_tree": "83fa3375611769476287b95a1a086aaafe42e8217980e9e8c598bde94fdd3134",
+    "sha256_git_lf": "83fa3375611769476287b95a1a086aaafe42e8217980e9e8c598bde94fdd3134"
   },
   {
     "path": "godot-spike/tools/package_spike02_evidence.py",
@@ -2331,8 +2341,8 @@
   },
   {
     "path": "shared-anim/frame-audit.json",
-    "sha256_working_tree": "f4b23d393f10aebaffe5cae5400fd6abba1196499f601991113aa58c6ff77109",
-    "sha256_git_lf": "002ada6ac257b04d38f5ebec91ad595b5daebe83837546d007c1e7fdc1593d73"
+    "sha256_working_tree": "479e128c372db3578a3dc490ed26be4156d3bcd85812f8ee362eb25072bed8c5",
+    "sha256_git_lf": "f55811691131c0bd207a7bc8acf7679ee5bd9aab6a88ba513d2b32cc3a5e7453"
   },
   {
     "path": "shared-anim/generation-prompts.json",

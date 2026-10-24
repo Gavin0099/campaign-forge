@@ -1895,3 +1895,332 @@ SessionEnd. Explicit task scope excludes PLAN/memory/shared story-file writes.
 
 
 Final W6 check after the actual section/table was inserted: GODOT --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gtest=res://tests/test_a8_contract.gd -gexit returned exit0,8/8 tests,843 assertions. See [handoff-table-check.log](evidence/spike02-a8/handoff-table-check.log). Full W4 remains71/71 tests,5729 assertions. No runtime asset or game code changed after capture/testing.
+
+
+## spike-02 A9
+
+**Delivery/evidence PASS; complete art gate FAIL,0/5.** The46 recorded local
+operations improve four head identities and two uncompressed mace regions.
+All five motion frames remain PLACEHOLDER because cloth details, integration,
+full guide pose and temporal consistency still fail. The partial repairs do
+not establish a successful final animation pipeline. HUMAN_PENDING for real
+hit-feel; Owner art approval pending. The untouched commission brief remains
+valid and needed for a human-artist fallback.
+
+### Run / inspect
+
+From this worktree root on codex/godot-spike, using the existing executable:
+
+```powershell
+$GODOT = 'C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe'
+& $GODOT --headless --path godot-spike -s res://tools/sync_shared_anim.gd
+& $GODOT --headless --path godot-spike --import
+& $GODOT --path godot-spike --resolution 1280x720
+```
+
+R replays;1/2/3 select open/unit-blocked/terrain-blocked;M toggles Reduced
+Motion. Existing keyboard/HUD/controls unchanged. Run GUT with
+`& $GODOT --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gdir=res://tests -gexit`.
+Full final run:79/79,7948 assertions,
+13 scripts, exit0, no warnings. A8's eight original tests now read its archived
+PNG/audit; no old assertion removed. Eight A9 tests cover both fixed anchors,
+mechanics, region/mask budget, regression flags, kept-pixel confinement and
+actual evidence. [Commands/real failures](VERIFICATION.md#spike-02-a9).
+
+### Method / provenance
+
+A8 is the byte-archived base. [Measured defects/targets](evidence/spike02-a9/defects-and-targets.md),
+[masks](evidence/spike02-a9/masks/), [all attempts](evidence/spike02-a9/attempts/),
+[method](evidence/spike02-a9/METHOD.md), [fix log](evidence/spike02-a9/a9-fix-log.json),
+[source records](../../shared-anim/SOURCES.md). No whole-frame/sheet generation
+or independent face repaint. The expressly permitted Python/manual blend route
+was used; **zero image_gen calls**. Kept donor pixels are transformed only by
+recorded rigid translation/rotation at scale1. Every trial remains immutable;
+each has actual changed-pixel and permission masks, input/output/donor SHA,
+matrix, tool and kept/rejected reason. No region exceeds three attempts.
+
+Order03,02,04,00,01. Head1 carved too much collar; head2 retains the collar
+underpainting and copies the exact idle01 face/crown/beard onto03,02,04,00.
+01 head2 leaves a fragment of the old head; head3's revised mask damages the
+ivory collar, so all01 head trials are rejected. Its A8 head stays. Canon
+recover05 mace2 uses a tighter source mask and an uncompressed rigid transform
+on00/01, retaining the original painted gripping fingers. Projection/edge
+integration remains an art FAIL even though compression and target position
+improve. No weapon-design/canon status changed.
+
+Stole/fringe patches from anchors produced gaps or abrupt cloth boundaries;
+motif patches retained old larger leaves or weapon/teal crop contamination.
+03 motif2 was initially kept, then explicitly withdrawn by operation3 during
+adjacent-frame review.03 boot translations narrow the stance toward the brief;
+04 translations move feet toward165,455 and334,464, but both open hem/leg
+boundaries. All these regions return to exact A8 pixels. The regression gate
+protects A8's PASS cuffs, hem, palette, one satchel/roll and attached grounded
+boots. The remaining stance/foot defects are not waived.
+
+W5's independent alpha scan found1 newly isolated opaque pixel on01 mace and2
+on04's old-head edge. Tiny recorded region attempt3 erasures remove them;
+original outputs/captures survive under [pre-alpha-cleanup](evidence/spike02-a9/pre-alpha-cleanup/).
+Full GUT, native movie, flicker metrics and both resolution captures were rerun
+after correction. [Alpha audit](evidence/spike02-a9/alpha-components.json) reports no NEW
+tiny4-neighbour opaque clusters;02's A8 diagonal antialiasing pixels remain.
+This is a measured regression proxy, not a universal halo detector.
+
+[Integrity audit](evidence/spike02-a9/evidence-audit.json) independently replays the KEPT
+regional operations to reconstruct every final RGBA byte, checks confinement
+on all46 attempts, anchors/manifest,70 source-copy byte matches and actual
+screenshots/movie. Final source snapshot: [hashes](evidence/spike02-a9/source-hashes.json).
+
+### Exact frame gate / A8 to A9 comparison
+
+All13 items must PASS plus technical checks before a motion frame can be
+non-PLACEHOLDER. PASS endpoints below mean immutable reference frames, not
+Owner art approval or a waiver of transition failures in the middle frames.
+
+| Frame | Status | face_hair | stole | embroidery | tassels | cuffs | hem | palette | seams | bag_count | feet | mace | landmarks | sequence | Reason |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `thoma/idle/01.png` | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | 1 PASS | PASS | PASS | PASS | PASS | Immutable appearance endpoint; not Owner art approval. |
+| `thoma/swing/00.png` | PLACEHOLDER | PASS | FAIL | FAIL | FAIL | PASS | PASS | PASS | FAIL | 1 PASS | PASS | FAIL | FAIL | FAIL | Partial anchor identity and/or uncompressed mace improvement; cloth details, integration and full pose/sequence still fail. |
+| `thoma/swing/01.png` | PLACEHOLDER | FAIL | FAIL | FAIL | FAIL | PASS | PASS | PASS | FAIL | 1 PASS | PASS | FAIL | FAIL | FAIL | Partial anchor identity and/or uncompressed mace improvement; cloth details, integration and full pose/sequence still fail. |
+| `thoma/swing/02.png` | PLACEHOLDER | PASS | FAIL | FAIL | FAIL | PASS | PASS | PASS | FAIL | 1 PASS | PASS | FAIL | FAIL | FAIL | Partial anchor identity and/or uncompressed mace improvement; cloth details, integration and full pose/sequence still fail. |
+| `thoma/swing/03.png` | PLACEHOLDER | PASS | FAIL | FAIL | FAIL | PASS | PASS | PASS | FAIL | 1 PASS | PASS | FAIL | FAIL | FAIL | Partial anchor identity and/or uncompressed mace improvement; cloth details, integration and full pose/sequence still fail. |
+| `thoma/swing/04.png` | PLACEHOLDER | PASS | FAIL | FAIL | FAIL | PASS | PASS | PASS | FAIL | 1 PASS | PASS | FAIL | FAIL | FAIL | Partial anchor identity and/or uncompressed mace improvement; cloth details, integration and full pose/sequence still fail. |
+| `thoma/swing/05.png` | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | 1 PASS | PASS | PASS | PASS | PASS | Immutable appearance endpoint; not Owner art approval. |
+
+
+Below are every item, its A8->A9 change and the reason. `improved` can still be
+FAIL (mace integration); `same` can still be FAIL (retained A8 cloth/pose).
+No formerly passing A8 item is downgraded.
+
+| Frame | Item | A8 | A9 | Change | Reason |
+| --- | --- | --- | --- | --- | --- |
+| thoma/idle/01.png | face_hair | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/idle/01.png | stole | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/idle/01.png | embroidery | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/idle/01.png | tassels | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/idle/01.png | cuffs | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/idle/01.png | hem | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/idle/01.png | palette | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/idle/01.png | seams | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/idle/01.png | bag_count | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/idle/01.png | feet | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/idle/01.png | mace | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/idle/01.png | landmarks | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/idle/01.png | sequence | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/swing/00.png | face_hair | FAIL | PASS | improved | PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams. |
+| thoma/swing/00.png | stole | FAIL | FAIL | same | FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps. |
+| thoma/swing/00.png | embroidery | FAIL | FAIL | same | FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination. |
+| thoma/swing/00.png | tassels | FAIL | FAIL | same | FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established. |
+| thoma/swing/00.png | cuffs | PASS | PASS | same | PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer. |
+| thoma/swing/00.png | hem | PASS | PASS | same | PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments. |
+| thoma/swing/00.png | palette | PASS | PASS | same | PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading. |
+| thoma/swing/00.png | seams | FAIL | FAIL | same | FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration. |
+| thoma/swing/00.png | bag_count | PASS | PASS | same | PASS: one brown flap satchel and one pale roll at screen-left hip in every panel. |
+| thoma/swing/00.png | feet | PASS | PASS | same | PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465. |
+| thoma/swing/00.png | mace | FAIL | FAIL | improved | FAIL: rigid recover05 head/haft transplant removes compression and meets target; grip/head edge highlights and projected-length integration still differ. |
+| thoma/swing/00.png | landmarks | FAIL | FAIL | same | FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression. |
+| thoma/swing/00.png | sequence | FAIL | FAIL | same | FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints. |
+| thoma/swing/01.png | face_hair | FAIL | FAIL | same | FAIL: all three anchor-head trials produced old-face fragments or collar holes; A8 broad crown/softened beard retained. |
+| thoma/swing/01.png | stole | FAIL | FAIL | same | FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps. |
+| thoma/swing/01.png | embroidery | FAIL | FAIL | same | FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination. |
+| thoma/swing/01.png | tassels | FAIL | FAIL | same | FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established. |
+| thoma/swing/01.png | cuffs | PASS | PASS | same | PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer. |
+| thoma/swing/01.png | hem | PASS | PASS | same | PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments. |
+| thoma/swing/01.png | palette | PASS | PASS | same | PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading. |
+| thoma/swing/01.png | seams | FAIL | FAIL | same | FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration. |
+| thoma/swing/01.png | bag_count | PASS | PASS | same | PASS: one brown flap satchel and one pale roll at screen-left hip in every panel. |
+| thoma/swing/01.png | feet | PASS | PASS | same | PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465. |
+| thoma/swing/01.png | mace | FAIL | FAIL | improved | FAIL: rigid recover05 head/haft transplant removes compression and meets target; grip/head edge highlights and projected-length integration still differ. |
+| thoma/swing/01.png | landmarks | FAIL | FAIL | same | FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression. |
+| thoma/swing/01.png | sequence | FAIL | FAIL | same | FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints. |
+| thoma/swing/03.png | face_hair | FAIL | PASS | improved | PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams. |
+| thoma/swing/03.png | stole | FAIL | FAIL | same | FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps. |
+| thoma/swing/03.png | embroidery | FAIL | FAIL | same | FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination. |
+| thoma/swing/03.png | tassels | FAIL | FAIL | same | FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established. |
+| thoma/swing/03.png | cuffs | PASS | PASS | same | PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer. |
+| thoma/swing/03.png | hem | PASS | PASS | same | PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments. |
+| thoma/swing/03.png | palette | PASS | PASS | same | PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading. |
+| thoma/swing/03.png | seams | FAIL | FAIL | same | FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration. |
+| thoma/swing/03.png | bag_count | PASS | PASS | same | PASS: one brown flap satchel and one pale roll at screen-left hip in every panel. |
+| thoma/swing/03.png | feet | PASS | PASS | same | PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465. |
+| thoma/swing/03.png | mace | FAIL | FAIL | same | FAIL: A8 target/impact opacity pass, but reconstructed projected haft/head and brush joins still fail canon integration. |
+| thoma/swing/03.png | landmarks | FAIL | FAIL | same | FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression. |
+| thoma/swing/03.png | sequence | FAIL | FAIL | same | FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints. |
+| thoma/swing/04.png | face_hair | FAIL | PASS | improved | PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams. |
+| thoma/swing/04.png | stole | FAIL | FAIL | same | FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps. |
+| thoma/swing/04.png | embroidery | FAIL | FAIL | same | FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination. |
+| thoma/swing/04.png | tassels | FAIL | FAIL | same | FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established. |
+| thoma/swing/04.png | cuffs | PASS | PASS | same | PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer. |
+| thoma/swing/04.png | hem | PASS | PASS | same | PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments. |
+| thoma/swing/04.png | palette | PASS | PASS | same | PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading. |
+| thoma/swing/04.png | seams | FAIL | FAIL | same | FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration. |
+| thoma/swing/04.png | bag_count | PASS | PASS | same | PASS: one brown flap satchel and one pale roll at screen-left hip in every panel. |
+| thoma/swing/04.png | feet | PASS | PASS | same | PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465. |
+| thoma/swing/04.png | mace | FAIL | FAIL | same | FAIL: A8 target/impact opacity pass, but reconstructed projected haft/head and brush joins still fail canon integration. |
+| thoma/swing/04.png | landmarks | FAIL | FAIL | same | FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression. |
+| thoma/swing/04.png | sequence | FAIL | FAIL | same | FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints. |
+| thoma/swing/05.png | face_hair | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/swing/05.png | stole | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/swing/05.png | embroidery | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/swing/05.png | tassels | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/swing/05.png | cuffs | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/swing/05.png | hem | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/swing/05.png | palette | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/swing/05.png | seams | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/swing/05.png | bag_count | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/swing/05.png | feet | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/swing/05.png | mace | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/swing/05.png | landmarks | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/swing/05.png | sequence | PASS | PASS | same | PASS: immutable appearance endpoint; transition failures assigned to middle frames, not Owner approval. |
+| thoma/swing/02.png | face_hair | FAIL | PASS | improved | PASS: translated idle01 crown, brow, nose and squared beard retain the same donor identity; collar blending is judged separately under seams. |
+| thoma/swing/02.png | stole | FAIL | FAIL | same | FAIL: A8 wide terminal panels retained because narrower anchor transplants opened garment gaps. |
+| thoma/swing/02.png | embroidery | FAIL | FAIL | same | FAIL: A8 larger sprigs retained; anchor motif patches overlapped leaves or included weapon/teal edge contamination. |
+| thoma/swing/02.png | tassels | FAIL | FAIL | same | FAIL: A8 regular fringe/cord retained; narrow donor fringe did not join the continuous hem; counts10/8 +/-1 not established. |
+| thoma/swing/02.png | cuffs | PASS | PASS | same | PASS: ivory flared inner sleeves narrow to visibly continuous wrists; no separated arm or new cuff layer. |
+| thoma/swing/02.png | hem | PASS | PASS | same | PASS: continuous ivory inner bell and teal divided outer skirt; no detached triangular cloth fragments. |
+| thoma/swing/02.png | palette | PASS | PASS | same | PASS: muted dark teal, warm ivory, worn leather and grey hair remain in anchor material families without colour grading. |
+| thoma/swing/02.png | seams | FAIL | FAIL | same | FAIL: head/collar and/or mace-edge joins remain visible at native size; no complete seamless painted integration. |
+| thoma/swing/02.png | bag_count | PASS | PASS | same | PASS: one brown flap satchel and one pale roll at screen-left hip in every panel. |
+| thoma/swing/02.png | feet | PASS | PASS | same | PASS: both worn boots visibly attach to legs; at least one foot meets464 and opaque bottom is463-465. |
+| thoma/swing/02.png | mace | FAIL | FAIL | same | FAIL: A8 target/impact opacity pass, but reconstructed projected haft/head and brush joins still fail canon integration. |
+| thoma/swing/02.png | landmarks | FAIL | FAIL | same | FAIL: A8 hands/elbows/knees and feet still exceed guide targets;03 narrowed-stance and04 foot trials rejected for hem/attachment regression. |
+| thoma/swing/02.png | sequence | FAIL | FAIL | same | FAIL:01 retains A8 identity while other heads use anchors; broad cloth ends, stance and foot positions still jump across immutable endpoints. |
+
+
+[13-item anchor crops](evidence/spike02-a9/checklist.png) /
+[machine-readable checklist](evidence/spike02-a9/checklist.json) /
+[measured landmark table](evidence/spike02-a9/landmark-deltas.md) /
+[sequence strip](evidence/spike02-a9/sequence-strip.png) /
+[style check](../../shared-anim/thoma-weapon-style-check.png) /
+[A8 above A9, fixed anchors at both ends](evidence/spike02-a9/contact-sheet-a8-vs-a9.png).
+These are source assets, not screenshots. Visible manual joint uncertainty
+is+/-2px, hidden elbows/knees+/-12px. New head centres derive from anchor picks
+and matrices; unchanged joints reuse exact A8 anatomy observations.01 headtop
+retains original manual103px because its raised mace overlaps the head ROI.
+No strict4px compliance is claimed for occluded anatomy.
+
+### Mace / fixed mechanics
+
+Final independent alpha>0.9 centroid in each37x37 head ROI (including a little
+haft/antialiasing overlap); target placement is separate from design/brush PASS.
+
+| Frame | Final opaque-ROI centroid | Brief target | Error px |
+| --- | --- | --- | --- |
+| 00 | [191.292, 85.33] | [192, 85] | 0.7808 |
+| 01 | [259.084, 86.639] | [259, 87] | 0.3709 |
+| 02 | [447.378, 111.567] | [449, 110] | 2.2557 |
+| 03 | [454.51, 195.393] | [455, 196] | 0.7801 |
+| 04 | [420.493, 374.46] | [421, 376] | 1.6212 |
+
+03 pixel455,196 remains opaque. All five RGBA/transparent canvases512x512,
+pivot256,464, at least one grounded foot464, opaque bottom463-465. Head-to-ground
+height approximately360px; fixed original endpoints retain their known height
+difference. Full manifest, events, offsets, contact frame3 and anchor455,196
+unchanged;180/70/40/80/100/150ms,80ms hitstop, Reduced Motion00/03/05 unchanged.
+idle01 and swing05 keep exact original SHA-256. No archived PNG in manifest.
+
+### Actual playback / measured timing
+
+[Actual seven-pose native720p crops](evidence/spike02-a9/playback-keyframes.png) /
+[every decoded frame](evidence/spike02-a9/playback-every-frame.png) /
+[region metrics](evidence/spike02-a9/playback-check.json). Region mean-colour deltas come
+from rendered movie pixels through W1 masks/source alpha transformed into
+viewport space. Source silhouette IoU and anatomical height deltas are
+separately labelled proxies, not segmentation of rendered RGB or proof of
+no flicker. The mixed01 identity and retained wide cloth/stance still jump.
+
+| Resolution / mode | Open | Unit blocked | Terrain blocked |
+| --- | --- | --- | --- |
+| 720p normal | 0.909355s | 0.929085s | 0.946548s |
+| 720p Reduced Motion | 0.749362s | 0.680090s | 0.717853s |
+| 1080p normal | 0.919576s | 0.919482s | 0.918028s |
+| 1080p Reduced Motion | 0.717850s | 0.735911s | 0.717906s |
+
+All12 no-readback runs return input-ready under1.7s, with same-frame feedback
+and at least80ms measured hitstop.720p/1080p real-time captures ran sequentially.
+Movie:59 frames,60FPS,7,273,008 bytes, strike2
+to ready57=0.916667s,
+identical RGB held20-24
+(83.333ms), then resumes. No subsampling/transcoding.
+Encoding wall time is not attack latency; Dummy audio is not hardware audition.
+
+[60FPS AVI](evidence/spike02-a9/attack-60fps.avi) / [movie notes](evidence/spike02-a9/MOVIE.md) /
+[index](evidence/spike02-a9/movie-index.json) / [720p timing](evidence/spike02-a9/timing.json) /
+[1080p timing](evidence/spike02-a9/timing-1080p.json).
+Every rendered run printed CAPTURE_COMPLETE pass=true and passed native-size /
+pose/hold gates.13 captures per resolution include extra raise/recover and A8
+comparisons; the requested five are linked here:
+
+| Pose | Native1280x720 | Native1920x1080 |
+| --- | --- | --- |
+| Anticipation | [PNG](evidence/spike02-a9/swing-anticipation.png) | [PNG](evidence/spike02-a9/swing-anticipation-1080p.png) |
+| Swing/smear | [PNG](evidence/spike02-a9/swing-smear.png) | [PNG](evidence/spike02-a9/swing-smear-1080p.png) |
+| Contact during hitstop | [PNG](evidence/spike02-a9/contact.png) | [PNG](evidence/spike02-a9/contact-1080p.png) |
+| Follow-through | [PNG](evidence/spike02-a9/follow-through.png) | [PNG](evidence/spike02-a9/follow-through-1080p.png) |
+| Idle | [PNG](evidence/spike02-a9/idle.png) | [PNG](evidence/spike02-a9/idle-1080p.png) |
+
+### What improved / remains open
+
+The four copied faces look like the anchors rather than A8's softened generic
+face;00/01 preserve more of the canon weapon's original head/haft proportions.
+Only small recorded regions change; the rest of A8 is preserved exactly.
+The method still cannot integrate narrow stole/fringe or repair foot positions
+without damaging already passing shapes.01 identity, all costume details,
+seams, complete pose and temporal consistency still fail. This is a partial
+local improvement, not final animation acceptance or a proven production path.
+
+Open: all five PLACEHOLDER motion frames, HUMAN_PENDING hit-feel playtest,
+Owner art approval and an artist solution if Gavin proceeds. The [commission
+brief](../../docs/art-briefs/thoma-swing-commission.md) remains valid/needed;
+no layered artist source was produced. No new art round or commissioning
+action is implied. No story, rules, timing/HUD, knight, environment, G005,
+ui-prototype/, docs/art-briefs/, immutable anchor/raw-candidate PNG or previous A2-A8 evidence changed.
+
+### Resource self-check
+
+Every [RESOURCE-CHECKLIST](../../docs/review/RESOURCE-CHECKLIST.md) item is
+accounted for below. The existing A8 handoff's pinned game-feel/game-ui-ux
+references are local historical context; external SKILL files were not re-read
+or installed this turn. This table asserts the listed acceptance evidence,
+not new skill certification, third-party borrowing or human review.
+
+| Checklist item | Result | Scope/evidence |
+| --- | --- | --- |
+| A prototype-fast | PASS scoped keep/discard discipline | No new mechanic; explicitly bounded region experiments and regression rejection,46 records |
+| A level-design | N/A | No terrain/routes/objectives/placement changes or new reachability claim |
+| A game-ai | N/A | Existing scripted defender; no new AI |
+| A game-ui-ux | PASS tested unchanged scope | Existing keyboard/input/focus/HUD tests retained; native720p/1080p captures, no new move/threat UI claim |
+| A game-feel | Engineering PASS; art FAIL; HUMAN_PENDING | Same-frame contact, >=80ms hold, <=1.7s return and Reduced Motion tested; actual movie, no human fun/weight claim |
+| B Grid-Tactics | N/A borrowing | No new architecture/code adopted; simulation/view unchanged |
+| B HopeMetal | N/A borrowing | No code/assets borrowed; existing original anchors only |
+| B no new engine/dependency | PASS boundary | Existing approved Godot4.7.2/GUT/Pillow; no install/addon |
+| C full3-5min battle alone | N/A scoped art/attack spike | This task repairs five animation frames, does not deliver a battle |
+| C enemies react to player | N/A | Scripted defender; no new AI |
+| C win/lose | N/A | No battle outcome system added |
+| C two tactical outcomes | N/A new tactical system | Existing open/unit/terrain-blocked setups tested; no full tactical-choice claim |
+| C restart/change strategy | PASS scoped replay | R /1/2/3 reinitialize; timing/capture runs and existing tests |
+| C no duplicate/stuck/invalid/interrupted resolution | PASS covered scope | Full79-test suite, final12 ready captures; no complete-battle coverage claim |
+| C both resolutions/basic keyboard | PASS |26 native captures and parsed R/1/2/3/M plus existing keyboard/focus tests |
+| C automated/human separated | PASS disclosure | Engineering results, model art FAIL and HUMAN_PENDING recorded independently |
+| D SRD/CC-BY/WotC boundary | N/A rules; PASS art boundary | No rule changes or new third-party IP; approved original mace/anchors only; G005 untouched |
+| D scope/no main/story | PASS | Only allowed paths and existing brief diff; local commits only, no remote operation |
+
+No unexplained FAIL in C/D: N/A entries state the deliberately scoped boundary.
+Independent Claude/GPT review is Owner-routed; no sub-agent was spawned and
+model self-check is not review approval. No cross-worktree/global trust edits.
+Normal Git hooks ran; missing_canonical_memory is a report-only advisory,
+not a bypass. This handoff is task DONE, not SessionEnd; explicit segment scope
+excludes PLAN/memory/shared narrative updates.
+
+| Step | Local commit |
+| --- | --- |
+| W1 masks / A8 archive |8b30434|
+| W2 bounded transplants / regression records |11adc34|
+| W3 full source / rendered audit |1555c74|
+| W4 A8 history /79 GUT tests |b5e2f0d|
+| W5 final alpha / native verification |6b2ee3d|
+| W6 handoff / final table check |This commit|
+
+**Stop after this W6 handoff commit. No push, merge, PR, stash, Actions,
+deployment, new slice or further art attempt. Wait for Owner review.**
+
+W6 final validation: A9 contract against the actual inserted handoff/table returned exit0,8/8 tests,2219 assertions, no warnings (handoff-table-check.log). Final independent package audit returned0:46 bounded operations,70 byte-equal shared files,26 native captures,59 movie frames; no PNG changed after W5 capture. Metadata-only correction binds frame-audit source/raw_sha256 to its archived A8 base and names the operation log separately; w6-sync.log and final contract/package checks verify that correction. Source snapshot refreshed after this final narrative addition.

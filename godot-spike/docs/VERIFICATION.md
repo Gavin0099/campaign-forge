@@ -1230,3 +1230,5 @@ decision, rule, HUD, timing, environment, knight or G005 change. No push,
 merge, PR, stash, Actions, deployment, new task or session-end claim.
 Commit hooks run normally; report-only missing_canonical_memory advisory is
 documented, not bypassed. Explicit segment scope excludes PLAN/memory edits.
+
+W6 final table check: GODOT --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gtest=res://tests/test_a9_contract.gd -gexit returned0,8/8,2219 assertions,no warnings. See evidence/spike02-a9/handoff-table-check.log. Final metadata-only source/raw hash binding was synchronized (w6-sync.log,0) and independently rechecked by package_a9_evidence.py (0); no PNG or game code changed after W5 capture. W5 full suite remains79/79,7948 assertions.

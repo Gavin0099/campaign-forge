@@ -139,6 +139,7 @@ human hit-feel HUMAN_PENDING, Owner approval pending. Not a full-battle claim.
     audit=load(SHARED/'frame-audit.json');middle=[r for r in audit if r['path'] in [f'thoma/swing/{i:02}.png' for i in range(5)]]
     assert len(middle)==5 and all(r['status']=='PLACEHOLDER' for r in middle)
     assert all(r['technical_check']['pass'] for r in middle)
+    for r in middle:assert sha(ROOT/r['source'])==r['raw_sha256']
     write(OUT/'evidence-audit.json',{'engineering_pass':True,'tests':tests,'assertions':assertions,'shared_files_byte_equal':parity,'operations':operation_audit,
       'attempt_counts':{f'{a}/{b}':n for (a,b),n in counts.items()},'max_attempts_per_region':max(counts.values()),'whole_frame_regenerations':0,'image_gen_calls':0,
       'final_live_technical':live_checks,'screenshots_720p':13,'screenshots_1080p':13,'timing_runs':timing_summaries,'movie':movie,
