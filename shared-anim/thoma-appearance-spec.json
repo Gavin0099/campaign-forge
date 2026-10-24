@@ -1,0 +1,1074 @@
+{
+  "version": 1,
+  "segment": "spike-02 A7",
+  "authority": "Anchor pixel observations and model-defined pose targets; NOT Owner art approval.",
+  "appearance_sources": [
+    {
+      "path": "shared-anim/thoma/idle/01.png",
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808"
+    },
+    {
+      "path": "shared-anim/thoma/swing/05.png",
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+    }
+  ],
+  "measurement_convention": "512x512 source pixels, top-left origin, half-open crop rectangles; manual estimates with stated ambiguity.",
+  "anchor_choice": "idle/01 appearance master; recover05 corroborates brush/materials, but 10px taller head and ~7px higher right sprig are documented disagreements.",
+  "face": {
+    "shape": "Right-facing three-quarter angular long face; heavy brow, deep eye socket, projecting nose, short squared grey beard and moustache.",
+    "landmarks_idle": {
+      "eyes": [
+        [
+          263,
+          137
+        ],
+        [
+          279,
+          138
+        ]
+      ],
+      "nose_tip": [
+        281,
+        148
+      ],
+      "mouth": [
+        271,
+        158
+      ],
+      "chin": [
+        264,
+        170
+      ],
+      "ear": [
+        241,
+        145
+      ]
+    },
+    "eye_brow": "Dark 1-2px eyes beneath 2-3px oblique brows; no bright round cartoon iris.",
+    "mouth": "Closed, short dark horizontal mouth under pale moustache; no smile.",
+    "skin_hex": {
+      "skin_light": "#d5b99f",
+      "skin_mid": "#9e856c",
+      "skin_shadow": "#5d4f40"
+    }
+  },
+  "hair": {
+    "silhouette": "Close cropped irregular grey cap, receding at temple, swept right; small textured curls. Exposes ear; ends at nape above teal collar.",
+    "bbox_idle": [
+      227,
+      103,
+      285,
+      149
+    ],
+    "bbox_recover": [
+      222,
+      93,
+      280,
+      140
+    ],
+    "parting": "No clean graphic part line resolvable; rightward brushed crown, not invented centre part.",
+    "colours": {
+      "hair_light": "#b29d84",
+      "hair_mid": "#806b56",
+      "hair_shadow": "#5b4938"
+    }
+  },
+  "costume": {
+    "robe": {
+      "description": "Desaturated dark teal short outer sleeve and long divided outer skirt over ivory ankle-length underrobe; textured broad shaded folds.",
+      "outer_hem_idle_y": [
+        370,
+        397
+      ],
+      "inner_hem_idle_y": [
+        397,
+        421
+      ]
+    },
+    "stole": {
+      "description": "Two ivory hanging panels, broad near shoulder, narrow at waist, widening toward embroidered ends; teal cowl crosses above.",
+      "idle_left_width_px_at_y": {
+        "185": 27,
+        "225": 24,
+        "362": 30
+      },
+      "idle_right_width_px_at_y": {
+        "185": 12,
+        "225": 15,
+        "330": 22
+      },
+      "folds": "Left shoulder diagonal to waist at (235,250), left vertical fall to (237,379); right fall (286,161) to (299,357), narrow dark fold on inner edge.",
+      "endpoint_choice": "idle/01 panel shapes and motif spacing; swing/05 confirms construction but right sprig/fringe sits ~7px higher."
+    },
+    "embroidery": {
+      "description": "One muted grey-green botanical sprig on EACH ivory panel (2 total); single central stem, alternating oblique leaf strokes; pale ochre short bottom border. No repeated floral diamonds.",
+      "count": 2,
+      "left_bbox": [
+        230,
+        340,
+        248,
+        371
+      ],
+      "right_bbox": [
+        291,
+        302,
+        306,
+        345
+      ],
+      "visible_branch_pairs": {
+        "left": 4,
+        "right": 6
+      },
+      "count_uncertainty": "~1 branch at 512px: left upper stem obscured by mace; do not reconstruct hidden pattern.",
+      "vertical_spacing_px": {
+        "left": [
+          4,
+          6
+        ],
+        "right": [
+          5,
+          7
+        ]
+      },
+      "motif_centre_separation_px": [
+        60,
+        -31
+      ],
+      "source_rule": "Use anchor crop pixels, not newly invented leaves. Left partial occlusion remains legitimate.",
+      "colour_sample": {
+        "hex": "#8d7862",
+        "sample_xy": [
+          300,
+          329
+        ],
+        "source": "idle/01",
+        "rgba": [
+          141,
+          120,
+          98,
+          253
+        ]
+      }
+    },
+    "tassels": {
+      "description": "Short irregular pale fringe strands at each stole end, plus ONE long knotted waist cord end; fringe is not the waist cord.",
+      "left_visible_tips": 10,
+      "right_visible_tips": 8,
+      "tip_count_uncertainty": 1,
+      "left_length_px": [
+        4,
+        9
+      ],
+      "right_length_px": [
+        4,
+        9
+      ],
+      "left_attachment": [
+        222,
+        374,
+        254,
+        380
+      ],
+      "right_attachment": [
+        288,
+        347,
+        310,
+        357
+      ],
+      "waist_cord_bbox": [
+        256,
+        251,
+        270,
+        346
+      ],
+      "colour": "#d8c4ad",
+      "rule": "Preserve sampled anchor edge, including uneven tips; no uniform extra 20px fringe."
+    },
+    "cuffs": {
+      "description": "Ivory undersleeves flare from short teal sleeves, narrow near wrist; dark interior crease, continuous arm/hand junction.",
+      "idle_weapon_side_bbox": [
+        156,
+        232,
+        204,
+        281
+      ],
+      "idle_free_side_bbox": [
+        297,
+        214,
+        332,
+        259
+      ]
+    },
+    "hem": {
+      "description": "Continuous ivory inner bell with several long shaded pleats beneath teal split panels; no detached triangles.",
+      "idle_outline_points": [
+        [
+          178,
+          366
+        ],
+        [
+          173,
+          391
+        ],
+        [
+          178,
+          405
+        ],
+        [
+          194,
+          414
+        ],
+        [
+          236,
+          422
+        ],
+        [
+          269,
+          417
+        ],
+        [
+          307,
+          391
+        ]
+      ],
+      "layers": 2,
+      "source_disagreement": "recover inner hem bottom ~2px lower and right shoe ~10px lower; retain idle as proportion standard, allow recover endpoint as immutable."
+    },
+    "bag": {
+      "count": 1,
+      "idle_bbox": [
+        183,
+        249,
+        243,
+        324
+      ],
+      "description": "One brown flap satchel at screen-left hip with a single pale rolled cloth under flap; roll is not a second pouch."
+    },
+    "belt": {
+      "idle_bbox": [
+        198,
+        236,
+        281,
+        266
+      ],
+      "description": "Brown belt with pale rope knot screen-right of centre; small bronze round medallion above belt at [265,214]."
+    },
+    "shoes": {
+      "description": "Two worn brown rounded ankle boots, dark seams and laces; both visibly join legs under inner robe.",
+      "idle_left_ground": [
+        201,
+        462
+      ],
+      "idle_right_ground": [
+        312,
+        414
+      ],
+      "recover_left_ground": [
+        198,
+        463
+      ],
+      "recover_right_ground": [
+        311,
+        425
+      ],
+      "pivot_note": "[256,464] is the unchanged actor registration origin, NOT the centre of each shoe; two feet cannot both occupy one pivot."
+    }
+  },
+  "mace": {
+    "canon": "APPROVED short one-handed flanged mace; no canon edit.",
+    "idle_head_bbox": [
+      211,
+      310,
+      248,
+      346
+    ],
+    "idle_head_centre": [
+      230,
+      328
+    ],
+    "idle_grip": [
+      185,
+      297
+    ],
+    "recover_head_centre": [
+      223,
+      333
+    ],
+    "recover_grip": [
+      183,
+      299
+    ],
+    "idle_grip_to_head_px": 54.644,
+    "exposed_haft_px": 39,
+    "head_size_px": [
+      37,
+      36
+    ],
+    "collar_width_px": 7,
+    "grip_width_px": 17,
+    "shape": "Angular dark iron flanged star head with projecting triangular fins, worn oak haft, small brass collar before head; rounded pommel.",
+    "projection_limit": "Lengths are anchor projections, not a 3D length. Preserve each A6 pose weapon/grip geometry where projected length differs; no global length invention.",
+    "colours": {
+      "oak": "#120a06",
+      "iron": "#685a48",
+      "brass": "#503323"
+    }
+  },
+  "body_proportions": {
+    "head_height_px": 70,
+    "shoulder_width_px": 99,
+    "torso_length_px": 104,
+    "leg_and_skirt_to_ground_px": 204,
+    "character_height_from_pivot_px": 361,
+    "head_top_y": 103,
+    "shoulder_y": 156,
+    "hip_y": 260,
+    "ground_y": 464,
+    "measurement_limit": "Manual anatomical estimates +/-2px (shoulders/hips under cloth +/-5px); anchor face/hair crop is exact pixel evidence.",
+    "recover_head_top_y": 93,
+    "recover_character_height_px": 371,
+    "policy": "idle proportions preferred; recover is immutable 10px taller, do not pretend anchors agree."
+  },
+  "palette": {
+    "skin_light": {
+      "hex": "#d5b99f",
+      "sample_xy": [
+        265,
+        128
+      ],
+      "source": "idle/01",
+      "rgba": [
+        213,
+        185,
+        159,
+        253
+      ]
+    },
+    "skin_mid": {
+      "hex": "#9e856c",
+      "sample_xy": [
+        251,
+        151
+      ],
+      "source": "idle/01",
+      "rgba": [
+        158,
+        133,
+        108,
+        253
+      ]
+    },
+    "skin_shadow": {
+      "hex": "#5d4f40",
+      "sample_xy": [
+        254,
+        134
+      ],
+      "source": "idle/01",
+      "rgba": [
+        93,
+        79,
+        64,
+        253
+      ]
+    },
+    "hair_light": {
+      "hex": "#b29d84",
+      "sample_xy": [
+        253,
+        114
+      ],
+      "source": "idle/01",
+      "rgba": [
+        178,
+        157,
+        132,
+        253
+      ]
+    },
+    "hair_mid": {
+      "hex": "#806b56",
+      "sample_xy": [
+        239,
+        116
+      ],
+      "source": "idle/01",
+      "rgba": [
+        128,
+        107,
+        86,
+        249
+      ]
+    },
+    "hair_shadow": {
+      "hex": "#5b4938",
+      "sample_xy": [
+        242,
+        113
+      ],
+      "source": "idle/01",
+      "rgba": [
+        91,
+        73,
+        56,
+        248
+      ]
+    },
+    "teal_light": {
+      "hex": "#4f635f",
+      "sample_xy": [
+        183,
+        226
+      ],
+      "source": "idle/01",
+      "rgba": [
+        79,
+        99,
+        95,
+        253
+      ]
+    },
+    "teal_mid": {
+      "hex": "#405350",
+      "sample_xy": [
+        178,
+        215
+      ],
+      "source": "idle/01",
+      "rgba": [
+        64,
+        83,
+        80,
+        253
+      ]
+    },
+    "teal_shadow": {
+      "hex": "#2d3835",
+      "sample_xy": [
+        188,
+        185
+      ],
+      "source": "idle/01",
+      "rgba": [
+        45,
+        56,
+        53,
+        252
+      ]
+    },
+    "ivory_light": {
+      "hex": "#e8d6c1",
+      "sample_xy": [
+        216,
+        185
+      ],
+      "source": "idle/01",
+      "rgba": [
+        232,
+        214,
+        193,
+        253
+      ]
+    },
+    "ivory_mid": {
+      "hex": "#d8c4ad",
+      "sample_xy": [
+        218,
+        185
+      ],
+      "source": "idle/01",
+      "rgba": [
+        216,
+        196,
+        173,
+        253
+      ]
+    },
+    "ivory_shadow": {
+      "hex": "#c4ac92",
+      "sample_xy": [
+        215,
+        194
+      ],
+      "source": "idle/01",
+      "rgba": [
+        196,
+        172,
+        146,
+        253
+      ]
+    },
+    "embroidery": {
+      "hex": "#8d7862",
+      "sample_xy": [
+        300,
+        329
+      ],
+      "source": "idle/01",
+      "rgba": [
+        141,
+        120,
+        98,
+        253
+      ]
+    },
+    "leather": {
+      "hex": "#503323",
+      "sample_xy": [
+        202,
+        295
+      ],
+      "source": "idle/01",
+      "rgba": [
+        80,
+        51,
+        35,
+        253
+      ]
+    },
+    "oak": {
+      "hex": "#120a06",
+      "sample_xy": [
+        202,
+        312
+      ],
+      "source": "idle/01",
+      "rgba": [
+        18,
+        10,
+        6,
+        253
+      ]
+    },
+    "iron": {
+      "hex": "#685a48",
+      "sample_xy": [
+        232,
+        328
+      ],
+      "source": "idle/01",
+      "rgba": [
+        104,
+        90,
+        72,
+        253
+      ]
+    },
+    "brass": {
+      "hex": "#503323",
+      "sample_xy": [
+        215,
+        318
+      ],
+      "source": "idle/01",
+      "rgba": [
+        80,
+        51,
+        35,
+        254
+      ]
+    },
+    "outline": {
+      "hex": "#121210",
+      "sample_xy": [
+        187,
+        379
+      ],
+      "source": "idle/01",
+      "rgba": [
+        18,
+        18,
+        16,
+        253
+      ]
+    }
+  },
+  "outline_brush": {
+    "description": "Thin broken dark brown/teal contour, 1-2px most boundaries and up to 3px under sleeve/bag; mottled hand-painted low-contrast highlights, no black vector edge.",
+    "outline_sample": {
+      "hex": "#121210",
+      "sample_xy": [
+        187,
+        379
+      ],
+      "source": "idle/01",
+      "rgba": [
+        18,
+        18,
+        16,
+        253
+      ]
+    },
+    "normalization": "Uniform scale/translate only. Any anchor-region touch-up separately recorded with masks; no whole-body warp."
+  },
+  "pose_targets": {
+    "00": {
+      "intent": "anticipation",
+      "landmarks": {
+        "head_centre": [
+          260,
+          143
+        ],
+        "eye_near": [
+          269,
+          141
+        ],
+        "eye_far": [
+          281,
+          143
+        ],
+        "shoulder_left": [
+          211,
+          174
+        ],
+        "shoulder_right": [
+          290,
+          172
+        ],
+        "elbow_left": [
+          140,
+          174
+        ],
+        "elbow_right": [
+          331,
+          230
+        ],
+        "hand_weapon": [
+          127,
+          117
+        ],
+        "hand_free": [
+          358,
+          249
+        ],
+        "hip_left": [
+          237,
+          270
+        ],
+        "hip_right": [
+          279,
+          269
+        ],
+        "knee_left": [
+          201,
+          365
+        ],
+        "knee_right": [
+          289,
+          371
+        ],
+        "foot_left": [
+          145,
+          464
+        ],
+        "foot_right": [
+          342,
+          439
+        ],
+        "mace_grip": [
+          127,
+          117
+        ],
+        "mace_head": [
+          192,
+          85
+        ]
+      },
+      "pivot": [
+        256,
+        464
+      ],
+      "landmark_tolerance_px": 4,
+      "mace_geometry_rule": "A6 projected head/haft/grip lengths retained; pose correction must move connected arm/weapon together."
+    },
+    "01": {
+      "intent": "raise",
+      "landmarks": {
+        "head_centre": [
+          260,
+          141
+        ],
+        "eye_near": [
+          269,
+          139
+        ],
+        "eye_far": [
+          281,
+          141
+        ],
+        "shoulder_left": [
+          215,
+          171
+        ],
+        "shoulder_right": [
+          287,
+          174
+        ],
+        "elbow_left": [
+          174,
+          140
+        ],
+        "elbow_right": [
+          299,
+          225
+        ],
+        "hand_weapon": [
+          194,
+          109
+        ],
+        "hand_free": [
+          295,
+          249
+        ],
+        "hip_left": [
+          238,
+          269
+        ],
+        "hip_right": [
+          277,
+          268
+        ],
+        "knee_left": [
+          214,
+          363
+        ],
+        "knee_right": [
+          284,
+          371
+        ],
+        "foot_left": [
+          167,
+          464
+        ],
+        "foot_right": [
+          326,
+          443
+        ],
+        "mace_grip": [
+          194,
+          109
+        ],
+        "mace_head": [
+          259,
+          87
+        ]
+      },
+      "pivot": [
+        256,
+        464
+      ],
+      "landmark_tolerance_px": 4,
+      "mace_geometry_rule": "A6 projected head/haft/grip lengths retained; pose correction must move connected arm/weapon together."
+    },
+    "02": {
+      "intent": "swing (smear hidden under Reduced Motion)",
+      "landmarks": {
+        "head_centre": [
+          282,
+          145
+        ],
+        "eye_near": [
+          291,
+          143
+        ],
+        "eye_far": [
+          302,
+          145
+        ],
+        "shoulder_left": [
+          234,
+          174
+        ],
+        "shoulder_right": [
+          302,
+          173
+        ],
+        "elbow_left": [
+          306,
+          193
+        ],
+        "elbow_right": [
+          319,
+          242
+        ],
+        "hand_weapon": [
+          372,
+          160
+        ],
+        "hand_free": [
+          350,
+          266
+        ],
+        "hip_left": [
+          254,
+          275
+        ],
+        "hip_right": [
+          293,
+          274
+        ],
+        "knee_left": [
+          213,
+          371
+        ],
+        "knee_right": [
+          307,
+          376
+        ],
+        "foot_left": [
+          135,
+          464
+        ],
+        "foot_right": [
+          372,
+          448
+        ],
+        "mace_grip": [
+          372,
+          160
+        ],
+        "mace_head": [
+          449,
+          110
+        ]
+      },
+      "pivot": [
+        256,
+        464
+      ],
+      "landmark_tolerance_px": 4,
+      "mace_geometry_rule": "A6 projected head/haft/grip lengths retained; pose correction must move connected arm/weapon together."
+    },
+    "03": {
+      "intent": "contact",
+      "landmarks": {
+        "head_centre": [
+          264,
+          140
+        ],
+        "eye_near": [
+          274,
+          138
+        ],
+        "eye_far": [
+          284,
+          140
+        ],
+        "shoulder_left": [
+          226,
+          173
+        ],
+        "shoulder_right": [
+          291,
+          172
+        ],
+        "elbow_left": [
+          294,
+          193
+        ],
+        "elbow_right": [
+          291,
+          240
+        ],
+        "hand_weapon": [
+          358,
+          196
+        ],
+        "hand_free": [
+          305,
+          258
+        ],
+        "hip_left": [
+          241,
+          275
+        ],
+        "hip_right": [
+          281,
+          272
+        ],
+        "knee_left": [
+          197,
+          371
+        ],
+        "knee_right": [
+          297,
+          378
+        ],
+        "foot_left": [
+          120,
+          464
+        ],
+        "foot_right": [
+          354,
+          447
+        ],
+        "mace_grip": [
+          358,
+          196
+        ],
+        "mace_head": [
+          455,
+          196
+        ]
+      },
+      "pivot": [
+        256,
+        464
+      ],
+      "landmark_tolerance_px": 4,
+      "mace_geometry_rule": "A6 projected head/haft/grip lengths retained; pose correction must move connected arm/weapon together."
+    },
+    "04": {
+      "intent": "follow-through",
+      "landmarks": {
+        "head_centre": [
+          310,
+          141
+        ],
+        "eye_near": [
+          318,
+          139
+        ],
+        "eye_far": [
+          329,
+          141
+        ],
+        "shoulder_left": [
+          269,
+          181
+        ],
+        "shoulder_right": [
+          320,
+          178
+        ],
+        "elbow_left": [
+          320,
+          269
+        ],
+        "elbow_right": [
+          231,
+          236
+        ],
+        "hand_weapon": [
+          347,
+          324
+        ],
+        "hand_free": [
+          213,
+          255
+        ],
+        "hip_left": [
+          265,
+          279
+        ],
+        "hip_right": [
+          304,
+          282
+        ],
+        "knee_left": [
+          230,
+          371
+        ],
+        "knee_right": [
+          322,
+          384
+        ],
+        "foot_left": [
+          165,
+          455
+        ],
+        "foot_right": [
+          334,
+          464
+        ],
+        "mace_grip": [
+          347,
+          324
+        ],
+        "mace_head": [
+          421,
+          376
+        ]
+      },
+      "pivot": [
+        256,
+        464
+      ],
+      "landmark_tolerance_px": 4,
+      "mace_geometry_rule": "A6 projected head/haft/grip lengths retained; pose correction must move connected arm/weapon together."
+    }
+  },
+  "swing_arc": {
+    "type": "single C1 piecewise cubic Hermite swing arc, not an invented circular shoulder joint",
+    "knots": [
+      [
+        192,
+        85
+      ],
+      [
+        259,
+        87
+      ],
+      [
+        449,
+        110
+      ],
+      [
+        455,
+        196
+      ],
+      [
+        421,
+        376
+      ]
+    ],
+    "tangents": [
+      [
+        67,
+        2
+      ],
+      [
+        128.5,
+        12.5
+      ],
+      [
+        98,
+        54.5
+      ],
+      [
+        -14,
+        133
+      ],
+      [
+        -34,
+        180
+      ]
+    ],
+    "parameter": "frame key 0..4; actual playback uses unchanged manifest holds",
+    "contact": [
+      455,
+      196
+    ],
+    "follow_through_a6": [
+      420.72,
+      357.384
+    ],
+    "follow_through_target": [
+      421,
+      376
+    ],
+    "correction_px": [
+      0.28,
+      18.616
+    ],
+    "limits": "Pose intent is design, not appearance measurement; target vs actual must be reported. Final recovery retracts weapon to anchor."
+  },
+  "canvas": [
+    512,
+    512
+  ],
+  "pivot": [
+    256,
+    464
+  ]
+}

@@ -1,0 +1,392 @@
+[
+  {
+    "item": "face",
+    "source": "shared-anim/thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "box": [
+      233,
+      118,
+      284,
+      174
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "face",
+    "source": "shared-anim/thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "box": [
+      227,
+      108,
+      279,
+      165
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "hair",
+    "source": "shared-anim/thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "box": [
+      227,
+      101,
+      286,
+      150
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "hair",
+    "source": "shared-anim/thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "box": [
+      221,
+      91,
+      281,
+      140
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "robe",
+    "source": "shared-anim/thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "box": [
+      165,
+      175,
+      325,
+      400
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "robe",
+    "source": "shared-anim/thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "box": [
+      162,
+      167,
+      325,
+      406
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "stole",
+    "source": "shared-anim/thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "box": [
+      187,
+      151,
+      312,
+      387
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "stole",
+    "source": "shared-anim/thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "box": [
+      183,
+      143,
+      310,
+      386
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "embroidery_left",
+    "source": "shared-anim/thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "box": [
+      222,
+      337,
+      253,
+      373
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "embroidery_left",
+    "source": "shared-anim/thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "box": [
+      219,
+      337,
+      250,
+      374
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "embroidery_right",
+    "source": "shared-anim/thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "box": [
+      285,
+      300,
+      309,
+      350
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "embroidery_right",
+    "source": "shared-anim/thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "box": [
+      282,
+      292,
+      306,
+      343
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "tassels_left",
+    "source": "shared-anim/thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "box": [
+      220,
+      369,
+      255,
+      386
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "tassels_left",
+    "source": "shared-anim/thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "box": [
+      217,
+      369,
+      252,
+      386
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "tassels_right",
+    "source": "shared-anim/thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "box": [
+      285,
+      346,
+      313,
+      366
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "tassels_right",
+    "source": "shared-anim/thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "box": [
+      282,
+      339,
+      310,
+      359
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "cuffs",
+    "source": "shared-anim/thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "box": [
+      154,
+      230,
+      332,
+      284
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "cuffs",
+    "source": "shared-anim/thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "box": [
+      151,
+      225,
+      329,
+      282
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "hem",
+    "source": "shared-anim/thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "box": [
+      169,
+      351,
+      325,
+      423
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "hem",
+    "source": "shared-anim/thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "box": [
+      163,
+      347,
+      326,
+      427
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "bag",
+    "source": "shared-anim/thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "box": [
+      181,
+      246,
+      241,
+      323
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "bag",
+    "source": "shared-anim/thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "box": [
+      178,
+      241,
+      239,
+      321
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "belt",
+    "source": "shared-anim/thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "box": [
+      198,
+      234,
+      282,
+      270
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "belt",
+    "source": "shared-anim/thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "box": [
+      193,
+      228,
+      279,
+      263
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "shoes",
+    "source": "shared-anim/thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "box": [
+      181,
+      388,
+      332,
+      465
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "shoes",
+    "source": "shared-anim/thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "box": [
+      179,
+      395,
+      331,
+      465
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "mace",
+    "source": "shared-anim/thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "box": [
+      170,
+      289,
+      252,
+      348
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "mace",
+    "source": "shared-anim/thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "box": [
+      170,
+      290,
+      246,
+      352
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "outline",
+    "source": "shared-anim/thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "box": [
+      166,
+      339,
+      191,
+      380
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  },
+  {
+    "item": "outline",
+    "source": "shared-anim/thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "box": [
+      162,
+      339,
+      187,
+      380
+    ],
+    "native_scale": 1,
+    "enlargement_scale": 2
+  }
+]
