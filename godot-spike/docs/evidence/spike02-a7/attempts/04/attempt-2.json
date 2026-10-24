@@ -1,0 +1,315 @@
+{
+  "frame": "thoma/swing/04.png",
+  "attempt": 2,
+  "tool": "Pillow authorized targeted touch-up",
+  "mode": "local correction of attempted weapon extraction, no new generation",
+  "prompt": "Correct failed 04 attempt1 duplicate weapon: start from saved pre-weapon touchup03, extract ALL connected hand/weapon pixels using larger polygon, translate exactly [0,19], bridge cuff with cloth-only A6 patch. No weapon scale/rotation or new paint design.",
+  "references": [
+    {
+      "path": "godot-spike/docs/evidence/spike02-a7/baseline-a6/04.png",
+      "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/04/edit-target.png",
+      "sha256": "e4e661e76e29d52754971a68f7d879b4a68a7b0d0750b52e66ceb164a88961c0",
+      "role": "EDIT TARGET: A6 structure/pose; retain feet, bag, weapon"
+    },
+    {
+      "path": "shared-anim/thoma/idle/01.png",
+      "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/04/anchor-idle.png",
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "role": "APPEARANCE MASTER ONLY"
+    },
+    {
+      "path": "shared-anim/thoma/swing/05.png",
+      "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/04/anchor-recover.png",
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "role": "APPEARANCE corroboration ONLY"
+    },
+    {
+      "path": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-03-output.png",
+      "sha256": "7599d918ebeee0446071ae23251db8751e66702b1423c53df62e93dc0f81afa7",
+      "role": "pre-weapon A7 touchup source"
+    }
+  ],
+  "spec_sha256": "bb0c9ff5949c659f35a892ad4e2b38aa28bb645fd8b4a81fbdf6f76c01ddb163",
+  "base_selection": {
+    "structure": "A6 adopted: connected shoes, one bag, no cutout joins; retain original pixels outside local masks.",
+    "face_hair": "idle/01 exact source pixels, swing/05 corroboration; A5 candidate has correct face but no better body structure.",
+    "embroidery_tassels": "idle/01 crop pixels, not A5 deformation or A6 larger invented sprigs.",
+    "cuffs_hem_bag_feet_weapon": "A6 adopted pose geometry; generator only supplies local surface touch-up, not replacement anatomy.",
+    "a5_considered": {
+      "path": "godot-spike/docs/evidence/spike02-a6/baseline-a5/04.png",
+      "sha256": "cccce1128daf423eb337a88d8dae5fe507524b448ca140d5c57bc488841c96e9",
+      "reason": "01 is best A5 frame but silhouette/hem pop against A6 neighbours; other A5 frames have known structural scraps/gaps."
+    },
+    "a6_raw_considered": [
+      {
+        "path": "godot-spike/docs/evidence/spike02-a6/candidates/04/attempt-1.png",
+        "sha256": "5f66d43bb64e9d4570ee2fa187bd63db14dc226d2fa6c644bab7d25e82c99108",
+        "reason": "Higher resolution same structural base; normalized adopted version preserves established registration. 02 attempt2 has bulbous shoulder/stole."
+      }
+    ]
+  },
+  "settings": {
+    "seed": "not applicable; deterministic",
+    "model": "not applicable",
+    "transparent_background": true,
+    "canvas": [
+      512,
+      512
+    ]
+  },
+  "status": "FINISHED",
+  "adopted": true,
+  "touchups": [
+    {
+      "name": "anchor face/hair interior",
+      "input": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-01-input.png",
+      "input_sha256": "e4e661e76e29d52754971a68f7d879b4a68a7b0d0750b52e66ceb164a88961c0",
+      "output": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-01-output.png",
+      "output_sha256": "7609011140645d72872ebeb8c5d23b6c2526f5e1af8a44ad9e668747f661e1dd",
+      "mask": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-01-mask.png",
+      "mask_sha256": "2d07699c44eb14db411c6d287fc74c7e677ba662d78c851c53922f2f5654b81f",
+      "source": "shared-anim/thoma/idle/01.png",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "details": {
+        "source_polygon": [
+          [
+            232,
+            118
+          ],
+          [
+            239,
+            109
+          ],
+          [
+            252,
+            106
+          ],
+          [
+            270,
+            110
+          ],
+          [
+            281,
+            121
+          ],
+          [
+            283,
+            149
+          ],
+          [
+            273,
+            163
+          ],
+          [
+            258,
+            169
+          ],
+          [
+            244,
+            158
+          ],
+          [
+            236,
+            145
+          ]
+        ],
+        "uniform_scale": 1,
+        "translate": [
+          54,
+          3
+        ],
+        "feather_px": 1.25,
+        "limit": "Exact interior source features, but A6 outer hair silhouette retained; identity outline still requires visual acceptance."
+      },
+      "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+    },
+    {
+      "name": "anchor left sprig/fringe",
+      "input": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-02-input.png",
+      "input_sha256": "7609011140645d72872ebeb8c5d23b6c2526f5e1af8a44ad9e668747f661e1dd",
+      "output": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-02-output.png",
+      "output_sha256": "bd6dcce5ef89ef9579e925d65277750e94c200bbaa88b1aeffb81757625d6403",
+      "mask": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-02-mask.png",
+      "mask_sha256": "d3884ad730300db8c94412f4267dfb2b50d52b4fa1fe2daba393e4d715a35180",
+      "source": "shared-anim/thoma/idle/01.png",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "details": {
+        "source_polygon": [
+          [
+            224,
+            349
+          ],
+          [
+            251,
+            349
+          ],
+          [
+            254,
+            377
+          ],
+          [
+            247,
+            383
+          ],
+          [
+            221,
+            381
+          ]
+        ],
+        "uniform_scale": 1,
+        "translate": [
+          -26,
+          0
+        ],
+        "feather_px": 1.2,
+        "limit": "Visible anchor sprig only; underlying A6 stole outline retained; donor may not cover every old fringe edge. No hidden embroidery inferred."
+      },
+      "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+    },
+    {
+      "name": "anchor right sprig/fringe",
+      "input": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-03-input.png",
+      "input_sha256": "bd6dcce5ef89ef9579e925d65277750e94c200bbaa88b1aeffb81757625d6403",
+      "output": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-03-output.png",
+      "output_sha256": "7599d918ebeee0446071ae23251db8751e66702b1423c53df62e93dc0f81afa7",
+      "mask": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-03-mask.png",
+      "mask_sha256": "1df411fb83523f1515b3497d86af5537a3e31e7af6c057c2bf654b1374351bf1",
+      "source": "shared-anim/thoma/idle/01.png",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "details": {
+        "source_polygon": [
+          [
+            288,
+            300
+          ],
+          [
+            305,
+            299
+          ],
+          [
+            310,
+            348
+          ],
+          [
+            309,
+            358
+          ],
+          [
+            289,
+            364
+          ]
+        ],
+        "uniform_scale": 1,
+        "translate": [
+          -14,
+          8
+        ],
+        "feather_px": 1.2,
+        "limit": "Visible anchor sprig only; underlying A6 stole outline retained; donor may not cover every old fringe edge. No hidden embroidery inferred."
+      },
+      "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+    },
+    {
+      "name": "corrected complete connected weapon translation",
+      "input": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-03-output.png",
+      "input_sha256": "7599d918ebeee0446071ae23251db8751e66702b1423c53df62e93dc0f81afa7",
+      "output": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-2.png",
+      "output_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+      "mask": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-2-weapon-mask.png",
+      "mask_sha256": "9aebc4d7ddc334d89fac87b865d9d9bf813c0b7d963eaa0c48d520390c479741",
+      "join_mask": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-2-join-mask.png",
+      "join_mask_sha256": "b66b5786cc4ea07e9abf4e24cac3b1afb0459ce2f902b812b64a296fceb15c1f",
+      "details": {
+        "source_polygon": [
+          [
+            324,
+            280
+          ],
+          [
+            358,
+            291
+          ],
+          [
+            461,
+            335
+          ],
+          [
+            466,
+            404
+          ],
+          [
+            391,
+            405
+          ],
+          [
+            345,
+            350
+          ],
+          [
+            326,
+            331
+          ]
+        ],
+        "translate": [
+          0,
+          19
+        ],
+        "scale": 1,
+        "cuff_cloth_translate": [
+          14,
+          24
+        ],
+        "cuff_polygon": [
+          [
+            318,
+            282
+          ],
+          [
+            331,
+            285
+          ],
+          [
+            342,
+            300
+          ],
+          [
+            333,
+            311
+          ],
+          [
+            318,
+            298
+          ]
+        ],
+        "feather_px": 1.5
+      }
+    }
+  ],
+  "raw": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-2.png",
+  "raw_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+  "normalization": {
+    "scale": 0.4082934609250399,
+    "translate": [
+      0,
+      0
+    ],
+    "method": "uniform scale only, preview retained; not adopted because generator reframed the target and changed local identity/motif",
+    "output": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-1-normalized-preview.png",
+    "sha256": "8a48f5212226f92e5ff086a6ec88eff6530510cd69c5238a730c40d3e62324f8"
+  },
+  "generated_pixels_adopted": false,
+  "raw_result": "REJECT: constrained edit returned reframed/repainted details; using it as a whole frame would violate A6 geometry. Preserve A6 structure and finish the authorized anchor touch-ups instead.",
+  "runtime": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-2.png",
+  "runtime_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+  "placeholder": true,
+  "reason": "Single mace restored and 04 head lowered19px. Cloth bridge/face/stole continuity remains unproven: PLACEHOLDER.",
+  "completed_order": 5,
+  "previous_frame": "03",
+  "neighbour_check": {
+    "role": "consistency check ONLY, never appearance source",
+    "previous_frame": "03",
+    "sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712"
+  },
+  "origin_imagegen_raw": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-1.png",
+  "origin_imagegen_raw_sha256": "a276781ef166cf4e4b4f2767a00450125f3fca9ed5d4aabaf21b71d13bbd187d"
+}

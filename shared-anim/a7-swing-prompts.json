@@ -1,0 +1,1592 @@
+[
+  {
+    "frame": "thoma/swing/01.png",
+    "attempt": 1,
+    "tool": "image_gen (built-in)",
+    "mode": "edit existing A6 target with two immutable anchors, not independent regeneration",
+    "prompt": "Use case: identity-preserve / precise-object-edit. EDIT the FIRST image, an EXISTING swing/01 animation frame. Do NOT generate an independent new full-body pose. Images 2 and 3 are immutable appearance anchors: same elderly man, angular weathered face, close grey swept hair, short grey beard, narrow dark eyes, teal cowl and robe, ivory stole/undersleeves, brown single satchel with one cloth roll, bronze medallion. Retain the FIRST image exact canvas framing, scale, complete silhouette, pose, hands/grip, connected feet and ONE bag. Preserve its fine worn hand-painted edges and muted original colours. Make only small controlled identity and costume corrections to the first image: match the anchor face/hair features, narrow ivory stole falls and their exact small grey-green botanical sprigs, short irregular ivory fringes, cuff edge and layered continuous hem. There are TWO sprigs total, one at each stole end: a simple central stem with alternating oblique leaf strokes, about 18x31px left and 15x43px right on 512px canvas, no new motifs or trim. Short fringe tips 4-9px, approximately 10 left/8 right visible, plus ONE long waist rope, no long new tassels. Match exact anchor motif scale, not a large decorative plant. Use the anchors to restore the SAME character, not a younger/redesigned face. Repair local details while retaining all already-correct structure. 512x512 transparent canvas, pivot [256,464]. Pose intent: raise; mace head target [259, 87], grip [194, 109]. Keep existing A6 mace head/haft/collar/grip dimensions and orientation, single short one-handed dark iron flanged mace on worn oak haft with small brass collar. Do not move the weapon, hands, body or feet. No scene, other figures, labels, cast shadow, new ornament, duplicate bag, detached footwear, geometric fragments, bright recolouring or Ferry Dusk palette. Output ONLY the edited first sprite on genuine alpha.",
+    "references": [
+      {
+        "path": "godot-spike/docs/evidence/spike02-a7/baseline-a6/01.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/01/edit-target.png",
+        "sha256": "af72787e963038cc4e15ce7ded953a9c9202aabda110c8792e519b97460812b8",
+        "role": "EDIT TARGET: A6 structure/pose; retain feet, bag, weapon"
+      },
+      {
+        "path": "shared-anim/thoma/idle/01.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/01/anchor-idle.png",
+        "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "role": "APPEARANCE MASTER ONLY"
+      },
+      {
+        "path": "shared-anim/thoma/swing/05.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/01/anchor-recover.png",
+        "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+        "role": "APPEARANCE corroboration ONLY"
+      }
+    ],
+    "spec_sha256": "bb0c9ff5949c659f35a892ad4e2b38aa28bb645fd8b4a81fbdf6f76c01ddb163",
+    "base_selection": {
+      "structure": "A6 adopted: connected shoes, one bag, no cutout joins; retain original pixels outside local masks.",
+      "face_hair": "idle/01 exact source pixels, swing/05 corroboration; A5 candidate has correct face but no better body structure.",
+      "embroidery_tassels": "idle/01 crop pixels, not A5 deformation or A6 larger invented sprigs.",
+      "cuffs_hem_bag_feet_weapon": "A6 adopted pose geometry; generator only supplies local surface touch-up, not replacement anatomy.",
+      "a5_considered": {
+        "path": "godot-spike/docs/evidence/spike02-a6/baseline-a5/01.png",
+        "sha256": "b06121b366fe9c126d8bcf40c3ffbff974446282d0f22a844776347ad3a14243",
+        "reason": "01 is best A5 frame but silhouette/hem pop against A6 neighbours; other A5 frames have known structural scraps/gaps."
+      },
+      "a6_raw_considered": [
+        {
+          "path": "godot-spike/docs/evidence/spike02-a6/candidates/01/attempt-1.png",
+          "sha256": "35e3adf1c64609328155792dcf3fb5920da0a6ab0da8909cdb0e0e7fa4895dbd",
+          "reason": "Higher resolution same structural base; normalized adopted version preserves established registration. 02 attempt2 has bulbous shoulder/stole."
+        }
+      ]
+    },
+    "settings": {
+      "transparent_background": true,
+      "seed": "not exposed",
+      "model": "not exposed",
+      "quality": "not exposed",
+      "requested_size": [
+        512,
+        512
+      ],
+      "returned_size": [
+        1254,
+        1254
+      ]
+    },
+    "status": "FINISHED",
+    "adopted": true,
+    "touchups": [
+      {
+        "name": "anchor face/hair interior",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/01/touchup-01-input.png",
+        "input_sha256": "af72787e963038cc4e15ce7ded953a9c9202aabda110c8792e519b97460812b8",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/01/touchup-01-output.png",
+        "output_sha256": "0fbf08576c4749ae462c520d4ba7e3a9be781ce6a06974aacaa67223798aa0b7",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/01/touchup-01-mask.png",
+        "mask_sha256": "88a6ec7fead3af34d3aee4703090188384906d07152883405ed92a78e77acf8e",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              232,
+              118
+            ],
+            [
+              239,
+              109
+            ],
+            [
+              252,
+              106
+            ],
+            [
+              270,
+              110
+            ],
+            [
+              281,
+              121
+            ],
+            [
+              283,
+              149
+            ],
+            [
+              273,
+              163
+            ],
+            [
+              258,
+              169
+            ],
+            [
+              244,
+              158
+            ],
+            [
+              236,
+              145
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            4,
+            3
+          ],
+          "feather_px": 1.25,
+          "limit": "Exact interior source features, but A6 outer hair silhouette retained; identity outline still requires visual acceptance."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      },
+      {
+        "name": "anchor left sprig/fringe",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/01/touchup-02-input.png",
+        "input_sha256": "0fbf08576c4749ae462c520d4ba7e3a9be781ce6a06974aacaa67223798aa0b7",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/01/touchup-02-output.png",
+        "output_sha256": "fb7e060bb0ae629509437b16d15e56251b2916ca5cae21f7d2faef3514b292fd",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/01/touchup-02-mask.png",
+        "mask_sha256": "07aafa81fe0b610cc8450285f4648e42969546bcbd24b7d2f76958fc1513222f",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              224,
+              349
+            ],
+            [
+              251,
+              349
+            ],
+            [
+              254,
+              377
+            ],
+            [
+              247,
+              383
+            ],
+            [
+              221,
+              381
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            0,
+            0
+          ],
+          "feather_px": 1.2,
+          "limit": "Visible anchor sprig only; underlying A6 stole outline retained; donor may not cover every old fringe edge. No hidden embroidery inferred."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      },
+      {
+        "name": "anchor right sprig/fringe",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/01/touchup-03-input.png",
+        "input_sha256": "fb7e060bb0ae629509437b16d15e56251b2916ca5cae21f7d2faef3514b292fd",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/01/touchup-03-output.png",
+        "output_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/01/touchup-03-mask.png",
+        "mask_sha256": "726ea95afe226a66cf1b551d32d639c0b9ec5f6d2b53d34e429fe2b6be13fe58",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              288,
+              300
+            ],
+            [
+              305,
+              299
+            ],
+            [
+              310,
+              348
+            ],
+            [
+              309,
+              358
+            ],
+            [
+              289,
+              364
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            0,
+            -4
+          ],
+          "feather_px": 1.2,
+          "limit": "Visible anchor sprig only; underlying A6 stole outline retained; donor may not cover every old fringe edge. No hidden embroidery inferred."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      }
+    ],
+    "raw": "godot-spike/docs/evidence/spike02-a7/attempts/01/attempt-1.png",
+    "raw_sha256": "f76199d4fa3cdc4c0933f0b0d74f35dbf0664ee0b8310ea2ef97e0eb7f9cf180",
+    "normalization": {
+      "scale": 0.4082934609250399,
+      "translate": [
+        0,
+        0
+      ],
+      "method": "uniform scale only, preview retained; not adopted because generator reframed the target and changed local identity/motif",
+      "output": "godot-spike/docs/evidence/spike02-a7/attempts/01/attempt-1-normalized-preview.png",
+      "sha256": "a336b7800a99616d1dcd14e90e4f61f5065e5e0f9a3481a8e3b089752bae39a2"
+    },
+    "generated_pixels_adopted": false,
+    "raw_result": "REJECT: constrained edit returned reframed/repainted details; using it as a whole frame would violate A6 geometry. Preserve A6 structure and finish the authorized anchor touch-ups instead.",
+    "runtime": "godot-spike/docs/evidence/spike02-a7/attempts/01/attempt-1-runtime.png",
+    "runtime_sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da",
+    "placeholder": true,
+    "reason": "Anchor interior texture corrections only. Outer silhouette/drape and remaining motif fringes are not proven consistent; retain PLACEHOLDER.",
+    "completed_order": 1,
+    "previous_frame": null,
+    "neighbour_check": {
+      "role": "consistency check ONLY, never appearance source",
+      "previous_frame": null,
+      "sha256": null
+    }
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "attempt": 1,
+    "tool": "image_gen (built-in)",
+    "mode": "edit existing A6 target with two immutable anchors, not independent regeneration",
+    "prompt": "Use case: identity-preserve / precise-object-edit. EDIT the FIRST image, an EXISTING swing/02 animation frame. Do NOT generate an independent new full-body pose. Images 2 and 3 are immutable appearance anchors: same elderly man, angular weathered face, close grey swept hair, short grey beard, narrow dark eyes, teal cowl and robe, ivory stole/undersleeves, brown single satchel with one cloth roll, bronze medallion. Retain the FIRST image exact canvas framing, scale, complete silhouette, pose, hands/grip, connected feet and ONE bag. Preserve its fine worn hand-painted edges and muted original colours. Make only small controlled identity and costume corrections to the first image: match the anchor face/hair features, narrow ivory stole falls and their exact small grey-green botanical sprigs, short irregular ivory fringes, cuff edge and layered continuous hem. There are TWO sprigs total, one at each stole end: a simple central stem with alternating oblique leaf strokes, about 18x31px left and 15x43px right on 512px canvas, no new motifs or trim. Short fringe tips 4-9px, approximately 10 left/8 right visible, plus ONE long waist rope, no long new tassels. Match exact anchor motif scale, not a large decorative plant. Use the anchors to restore the SAME character, not a younger/redesigned face. Repair local details while retaining all already-correct structure. 512x512 transparent canvas, pivot [256,464]. Pose intent: swing (smear hidden under Reduced Motion); mace head target [449, 110], grip [372, 160]. Keep existing A6 mace head/haft/collar/grip dimensions and orientation, single short one-handed dark iron flanged mace on worn oak haft with small brass collar. Do not move the weapon, hands, body or feet. No scene, other figures, labels, cast shadow, new ornament, duplicate bag, detached footwear, geometric fragments, bright recolouring or Ferry Dusk palette. Output ONLY the edited first sprite on genuine alpha.",
+    "references": [
+      {
+        "path": "godot-spike/docs/evidence/spike02-a7/baseline-a6/02.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/02/edit-target.png",
+        "sha256": "0f76a0f68e6ea294146accdba635fa999a5fb6db532bc2b957461dd2e2050624",
+        "role": "EDIT TARGET: A6 structure/pose; retain feet, bag, weapon"
+      },
+      {
+        "path": "shared-anim/thoma/idle/01.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/02/anchor-idle.png",
+        "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "role": "APPEARANCE MASTER ONLY"
+      },
+      {
+        "path": "shared-anim/thoma/swing/05.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/02/anchor-recover.png",
+        "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+        "role": "APPEARANCE corroboration ONLY"
+      }
+    ],
+    "spec_sha256": "bb0c9ff5949c659f35a892ad4e2b38aa28bb645fd8b4a81fbdf6f76c01ddb163",
+    "base_selection": {
+      "structure": "A6 adopted: connected shoes, one bag, no cutout joins; retain original pixels outside local masks.",
+      "face_hair": "idle/01 exact source pixels, swing/05 corroboration; A5 candidate has correct face but no better body structure.",
+      "embroidery_tassels": "idle/01 crop pixels, not A5 deformation or A6 larger invented sprigs.",
+      "cuffs_hem_bag_feet_weapon": "A6 adopted pose geometry; generator only supplies local surface touch-up, not replacement anatomy.",
+      "a5_considered": {
+        "path": "godot-spike/docs/evidence/spike02-a6/baseline-a5/02.png",
+        "sha256": "91a68c71be081b72fef49a0c90ec010f1fe6a456b64b9ecda1940ae4a0867818",
+        "reason": "01 is best A5 frame but silhouette/hem pop against A6 neighbours; other A5 frames have known structural scraps/gaps."
+      },
+      "a6_raw_considered": [
+        {
+          "path": "godot-spike/docs/evidence/spike02-a6/candidates/02/attempt-1.png",
+          "sha256": "4d462f01ef8327c8a309613dfc4e92fd7681742eeed35f5d4793ea0715376942",
+          "reason": "Higher resolution same structural base; normalized adopted version preserves established registration. 02 attempt2 has bulbous shoulder/stole."
+        },
+        {
+          "path": "godot-spike/docs/evidence/spike02-a6/candidates/02/attempt-2.png",
+          "sha256": "5cb4d19822b571cc7f7416c3dddcf45d9ed3bfeeab50873611af07515e1e7756",
+          "reason": "Higher resolution same structural base; normalized adopted version preserves established registration. 02 attempt2 has bulbous shoulder/stole."
+        }
+      ]
+    },
+    "settings": {
+      "transparent_background": true,
+      "seed": "not exposed",
+      "model": "not exposed",
+      "quality": "not exposed",
+      "requested_size": [
+        512,
+        512
+      ],
+      "returned_size": [
+        1254,
+        1254
+      ]
+    },
+    "status": "FINISHED",
+    "adopted": true,
+    "touchups": [
+      {
+        "name": "anchor face/hair interior",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/02/touchup-01-input.png",
+        "input_sha256": "0f76a0f68e6ea294146accdba635fa999a5fb6db532bc2b957461dd2e2050624",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/02/touchup-01-output.png",
+        "output_sha256": "c8c921970728dd8d995075b8d2c910d7831ae5cc3a8fa4c3691c691ad560eaab",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/02/touchup-01-mask.png",
+        "mask_sha256": "787cf6340158905dd72a516cb96dfa356970cb4502b3370addf039f870ca93af",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              232,
+              118
+            ],
+            [
+              239,
+              109
+            ],
+            [
+              252,
+              106
+            ],
+            [
+              270,
+              110
+            ],
+            [
+              281,
+              121
+            ],
+            [
+              283,
+              149
+            ],
+            [
+              273,
+              163
+            ],
+            [
+              258,
+              169
+            ],
+            [
+              244,
+              158
+            ],
+            [
+              236,
+              145
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            26,
+            7
+          ],
+          "feather_px": 1.25,
+          "limit": "Exact interior source features, but A6 outer hair silhouette retained; identity outline still requires visual acceptance."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      },
+      {
+        "name": "anchor left sprig/fringe",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/02/touchup-02-input.png",
+        "input_sha256": "c8c921970728dd8d995075b8d2c910d7831ae5cc3a8fa4c3691c691ad560eaab",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/02/touchup-02-output.png",
+        "output_sha256": "1a4cf8550bdc255e494a57392724e1d52d830f2867af3eecb2608571bffb01ca",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/02/touchup-02-mask.png",
+        "mask_sha256": "07aafa81fe0b610cc8450285f4648e42969546bcbd24b7d2f76958fc1513222f",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              224,
+              349
+            ],
+            [
+              251,
+              349
+            ],
+            [
+              254,
+              377
+            ],
+            [
+              247,
+              383
+            ],
+            [
+              221,
+              381
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            0,
+            0
+          ],
+          "feather_px": 1.2,
+          "limit": "Visible anchor sprig only; underlying A6 stole outline retained; donor may not cover every old fringe edge. No hidden embroidery inferred."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      },
+      {
+        "name": "anchor right sprig/fringe",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/02/touchup-03-input.png",
+        "input_sha256": "1a4cf8550bdc255e494a57392724e1d52d830f2867af3eecb2608571bffb01ca",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/02/touchup-03-output.png",
+        "output_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/02/touchup-03-mask.png",
+        "mask_sha256": "9b0513c77d94305fcc77c4202d4a2827cd77865d9600b973e71659f741c1bc6a",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              288,
+              300
+            ],
+            [
+              305,
+              299
+            ],
+            [
+              310,
+              348
+            ],
+            [
+              309,
+              358
+            ],
+            [
+              289,
+              364
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            0,
+            -5
+          ],
+          "feather_px": 1.2,
+          "limit": "Visible anchor sprig only; underlying A6 stole outline retained; donor may not cover every old fringe edge. No hidden embroidery inferred."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      }
+    ],
+    "raw": "godot-spike/docs/evidence/spike02-a7/attempts/02/attempt-1.png",
+    "raw_sha256": "e365138c504538f3b54821925324c4c70b37f44e05bdfcbaa31a991a7e0d3968",
+    "normalization": {
+      "scale": 0.4082934609250399,
+      "translate": [
+        0,
+        0
+      ],
+      "method": "uniform scale only, preview retained; not adopted because generator reframed the target and changed local identity/motif",
+      "output": "godot-spike/docs/evidence/spike02-a7/attempts/02/attempt-1-normalized-preview.png",
+      "sha256": "f9c09d5e17d20e0f1fe818456da51caf8b499b35fce0bcf2a0de0e7d7063f4d4"
+    },
+    "generated_pixels_adopted": false,
+    "raw_result": "REJECT: constrained edit returned reframed/repainted details; using it as a whole frame would violate A6 geometry. Preserve A6 structure and finish the authorized anchor touch-ups instead.",
+    "runtime": "godot-spike/docs/evidence/spike02-a7/attempts/02/attempt-1-runtime.png",
+    "runtime_sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4",
+    "placeholder": true,
+    "reason": "Anchor interior texture corrections only. Outer silhouette/drape and remaining motif fringes are not proven consistent; retain PLACEHOLDER.",
+    "completed_order": 2,
+    "previous_frame": "01",
+    "neighbour_check": {
+      "role": "consistency check ONLY, never appearance source",
+      "previous_frame": "01",
+      "sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da"
+    }
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "attempt": 1,
+    "tool": "image_gen (built-in)",
+    "mode": "edit existing A6 target with two immutable anchors, not independent regeneration",
+    "prompt": "Use case: identity-preserve / precise-object-edit. EDIT the FIRST image, an EXISTING swing/00 animation frame. Do NOT generate an independent new full-body pose. Images 2 and 3 are immutable appearance anchors: same elderly man, angular weathered face, close grey swept hair, short grey beard, narrow dark eyes, teal cowl and robe, ivory stole/undersleeves, brown single satchel with one cloth roll, bronze medallion. Retain the FIRST image exact canvas framing, scale, complete silhouette, pose, hands/grip, connected feet and ONE bag. Preserve its fine worn hand-painted edges and muted original colours. Make only small controlled identity and costume corrections to the first image: match the anchor face/hair features, narrow ivory stole falls and their exact small grey-green botanical sprigs, short irregular ivory fringes, cuff edge and layered continuous hem. There are TWO sprigs total, one at each stole end: a simple central stem with alternating oblique leaf strokes, about 18x31px left and 15x43px right on 512px canvas, no new motifs or trim. Short fringe tips 4-9px, approximately 10 left/8 right visible, plus ONE long waist rope, no long new tassels. Match exact anchor motif scale, not a large decorative plant. Use the anchors to restore the SAME character, not a younger/redesigned face. Repair local details while retaining all already-correct structure. 512x512 transparent canvas, pivot [256,464]. Pose intent: anticipation; mace head target [192, 85], grip [127, 117]. Keep existing A6 mace head/haft/collar/grip dimensions and orientation, single short one-handed dark iron flanged mace on worn oak haft with small brass collar. Do not move the weapon, hands, body or feet. No scene, other figures, labels, cast shadow, new ornament, duplicate bag, detached footwear, geometric fragments, bright recolouring or Ferry Dusk palette. Output ONLY the edited first sprite on genuine alpha.",
+    "references": [
+      {
+        "path": "godot-spike/docs/evidence/spike02-a7/baseline-a6/00.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/00/edit-target.png",
+        "sha256": "9b677f91691d3a23786f6d82aac949a00973901cbea96b225f275e1ba4332bf7",
+        "role": "EDIT TARGET: A6 structure/pose; retain feet, bag, weapon"
+      },
+      {
+        "path": "shared-anim/thoma/idle/01.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/00/anchor-idle.png",
+        "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "role": "APPEARANCE MASTER ONLY"
+      },
+      {
+        "path": "shared-anim/thoma/swing/05.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/00/anchor-recover.png",
+        "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+        "role": "APPEARANCE corroboration ONLY"
+      }
+    ],
+    "spec_sha256": "bb0c9ff5949c659f35a892ad4e2b38aa28bb645fd8b4a81fbdf6f76c01ddb163",
+    "base_selection": {
+      "structure": "A6 adopted: connected shoes, one bag, no cutout joins; retain original pixels outside local masks.",
+      "face_hair": "idle/01 exact source pixels, swing/05 corroboration; A5 candidate has correct face but no better body structure.",
+      "embroidery_tassels": "idle/01 crop pixels, not A5 deformation or A6 larger invented sprigs.",
+      "cuffs_hem_bag_feet_weapon": "A6 adopted pose geometry; generator only supplies local surface touch-up, not replacement anatomy.",
+      "a5_considered": {
+        "path": "godot-spike/docs/evidence/spike02-a6/baseline-a5/00.png",
+        "sha256": "578b460defc4c53ba632002e405d40e2b6d40282a85da7db192e0b75be7d9663",
+        "reason": "01 is best A5 frame but silhouette/hem pop against A6 neighbours; other A5 frames have known structural scraps/gaps."
+      },
+      "a6_raw_considered": [
+        {
+          "path": "godot-spike/docs/evidence/spike02-a6/candidates/00/attempt-1.png",
+          "sha256": "7e4c391cb17a0c074d5d19faef17f74285205349d6732bc45f05b55402749641",
+          "reason": "Higher resolution same structural base; normalized adopted version preserves established registration. 02 attempt2 has bulbous shoulder/stole."
+        }
+      ]
+    },
+    "settings": {
+      "transparent_background": true,
+      "seed": "not exposed",
+      "model": "not exposed",
+      "quality": "not exposed",
+      "requested_size": [
+        512,
+        512
+      ],
+      "returned_size": [
+        1254,
+        1254
+      ]
+    },
+    "status": "FINISHED",
+    "adopted": true,
+    "touchups": [
+      {
+        "name": "anchor face/hair interior",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/00/touchup-01-input.png",
+        "input_sha256": "9b677f91691d3a23786f6d82aac949a00973901cbea96b225f275e1ba4332bf7",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/00/touchup-01-output.png",
+        "output_sha256": "46104b11ef956e45620a2e1d65a97dda54a69f278121a5a88b29e36981c08c22",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/00/touchup-01-mask.png",
+        "mask_sha256": "fccc6dbd16ec83369c25ccad24c723a9c22d38f3edb5097d3bc6ac686f4c53be",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              232,
+              118
+            ],
+            [
+              239,
+              109
+            ],
+            [
+              252,
+              106
+            ],
+            [
+              270,
+              110
+            ],
+            [
+              281,
+              121
+            ],
+            [
+              283,
+              149
+            ],
+            [
+              273,
+              163
+            ],
+            [
+              258,
+              169
+            ],
+            [
+              244,
+              158
+            ],
+            [
+              236,
+              145
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            4,
+            5
+          ],
+          "feather_px": 1.25,
+          "limit": "Exact interior source features, but A6 outer hair silhouette retained; identity outline still requires visual acceptance."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      },
+      {
+        "name": "anchor left sprig/fringe",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/00/touchup-02-input.png",
+        "input_sha256": "46104b11ef956e45620a2e1d65a97dda54a69f278121a5a88b29e36981c08c22",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/00/touchup-02-output.png",
+        "output_sha256": "a3da250b76a7ed5a256eb452fb283cd0624338f3d383641face78671f2b2e5da",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/00/touchup-02-mask.png",
+        "mask_sha256": "28c8b33f768e178bbec34d6a5aa630aa52e27894f274fd099b2a70c4e3058ec0",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              224,
+              349
+            ],
+            [
+              251,
+              349
+            ],
+            [
+              254,
+              377
+            ],
+            [
+              247,
+              383
+            ],
+            [
+              221,
+              381
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            -10,
+            0
+          ],
+          "feather_px": 1.2,
+          "limit": "Visible anchor sprig only; underlying A6 stole outline retained; donor may not cover every old fringe edge. No hidden embroidery inferred."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      },
+      {
+        "name": "anchor right sprig/fringe",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/00/touchup-03-input.png",
+        "input_sha256": "a3da250b76a7ed5a256eb452fb283cd0624338f3d383641face78671f2b2e5da",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/00/touchup-03-output.png",
+        "output_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/00/touchup-03-mask.png",
+        "mask_sha256": "636c994bcb03197b0567703f686e5280f4b9c73b0c429c81b36fb948c15ffd03",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              288,
+              300
+            ],
+            [
+              305,
+              299
+            ],
+            [
+              310,
+              348
+            ],
+            [
+              309,
+              358
+            ],
+            [
+              289,
+              364
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            2,
+            -1
+          ],
+          "feather_px": 1.2,
+          "limit": "Visible anchor sprig only; underlying A6 stole outline retained; donor may not cover every old fringe edge. No hidden embroidery inferred."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      }
+    ],
+    "raw": "godot-spike/docs/evidence/spike02-a7/attempts/00/attempt-1.png",
+    "raw_sha256": "152b5de3847270cb5c9461068684af3ff1300009292b92f87b5c70409a9fc4cd",
+    "normalization": {
+      "scale": 0.4082934609250399,
+      "translate": [
+        0,
+        0
+      ],
+      "method": "uniform scale only, preview retained; not adopted because generator reframed the target and changed local identity/motif",
+      "output": "godot-spike/docs/evidence/spike02-a7/attempts/00/attempt-1-normalized-preview.png",
+      "sha256": "be1edf521b7c8082d857514adbcf03f2940fa6f675f4fada050e4d69e9ac2367"
+    },
+    "generated_pixels_adopted": false,
+    "raw_result": "REJECT: constrained edit returned reframed/repainted details; using it as a whole frame would violate A6 geometry. Preserve A6 structure and finish the authorized anchor touch-ups instead.",
+    "runtime": "godot-spike/docs/evidence/spike02-a7/attempts/00/attempt-1-runtime.png",
+    "runtime_sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f",
+    "placeholder": true,
+    "reason": "Anchor interior texture corrections only. Outer silhouette/drape and remaining motif fringes are not proven consistent; retain PLACEHOLDER.",
+    "completed_order": 3,
+    "previous_frame": "02",
+    "neighbour_check": {
+      "role": "consistency check ONLY, never appearance source",
+      "previous_frame": "02",
+      "sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4"
+    }
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "attempt": 1,
+    "tool": "image_gen (built-in)",
+    "mode": "edit existing A6 target with two immutable anchors, not independent regeneration",
+    "prompt": "Use case: identity-preserve / precise-object-edit. EDIT the FIRST image, an EXISTING swing/03 animation frame. Do NOT generate an independent new full-body pose. Images 2 and 3 are immutable appearance anchors: same elderly man, angular weathered face, close grey swept hair, short grey beard, narrow dark eyes, teal cowl and robe, ivory stole/undersleeves, brown single satchel with one cloth roll, bronze medallion. Retain the FIRST image exact canvas framing, scale, complete silhouette, pose, hands/grip, connected feet and ONE bag. Preserve its fine worn hand-painted edges and muted original colours. Make only small controlled identity and costume corrections to the first image: match the anchor face/hair features, narrow ivory stole falls and their exact small grey-green botanical sprigs, short irregular ivory fringes, cuff edge and layered continuous hem. There are TWO sprigs total, one at each stole end: a simple central stem with alternating oblique leaf strokes, about 18x31px left and 15x43px right on 512px canvas, no new motifs or trim. Short fringe tips 4-9px, approximately 10 left/8 right visible, plus ONE long waist rope, no long new tassels. Match exact anchor motif scale, not a large decorative plant. Use the anchors to restore the SAME character, not a younger/redesigned face. Repair local details while retaining all already-correct structure. 512x512 transparent canvas, pivot [256,464]. Pose intent: contact; mace head target [455, 196], grip [358, 196]. Keep existing A6 mace head/haft/collar/grip dimensions and orientation, single short one-handed dark iron flanged mace on worn oak haft with small brass collar. Do not move the weapon, hands, body or feet. No scene, other figures, labels, cast shadow, new ornament, duplicate bag, detached footwear, geometric fragments, bright recolouring or Ferry Dusk palette. Output ONLY the edited first sprite on genuine alpha.",
+    "references": [
+      {
+        "path": "godot-spike/docs/evidence/spike02-a7/baseline-a6/03.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/03/edit-target.png",
+        "sha256": "418676b008e19d4aa36114e2f01fef35967b2f896833ae43ed62522d947468e1",
+        "role": "EDIT TARGET: A6 structure/pose; retain feet, bag, weapon"
+      },
+      {
+        "path": "shared-anim/thoma/idle/01.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/03/anchor-idle.png",
+        "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "role": "APPEARANCE MASTER ONLY"
+      },
+      {
+        "path": "shared-anim/thoma/swing/05.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/03/anchor-recover.png",
+        "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+        "role": "APPEARANCE corroboration ONLY"
+      }
+    ],
+    "spec_sha256": "bb0c9ff5949c659f35a892ad4e2b38aa28bb645fd8b4a81fbdf6f76c01ddb163",
+    "base_selection": {
+      "structure": "A6 adopted: connected shoes, one bag, no cutout joins; retain original pixels outside local masks.",
+      "face_hair": "idle/01 exact source pixels, swing/05 corroboration; A5 candidate has correct face but no better body structure.",
+      "embroidery_tassels": "idle/01 crop pixels, not A5 deformation or A6 larger invented sprigs.",
+      "cuffs_hem_bag_feet_weapon": "A6 adopted pose geometry; generator only supplies local surface touch-up, not replacement anatomy.",
+      "a5_considered": {
+        "path": "godot-spike/docs/evidence/spike02-a6/baseline-a5/03.png",
+        "sha256": "f4b590dc492705067948bc9c31fcfdbdfa01a5b424f75cda5a0e6d28cf319d88",
+        "reason": "01 is best A5 frame but silhouette/hem pop against A6 neighbours; other A5 frames have known structural scraps/gaps."
+      },
+      "a6_raw_considered": [
+        {
+          "path": "godot-spike/docs/evidence/spike02-a6/candidates/03/attempt-1.png",
+          "sha256": "4083388200a2954d2df0511e3481b66d328712bbffe5e1c609ded94efa00b718",
+          "reason": "Higher resolution same structural base; normalized adopted version preserves established registration. 02 attempt2 has bulbous shoulder/stole."
+        }
+      ]
+    },
+    "settings": {
+      "transparent_background": true,
+      "seed": "not exposed",
+      "model": "not exposed",
+      "quality": "not exposed",
+      "requested_size": [
+        512,
+        512
+      ],
+      "returned_size": [
+        1254,
+        1254
+      ]
+    },
+    "status": "FINISHED",
+    "adopted": true,
+    "touchups": [
+      {
+        "name": "anchor face/hair interior",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/03/touchup-01-input.png",
+        "input_sha256": "418676b008e19d4aa36114e2f01fef35967b2f896833ae43ed62522d947468e1",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/03/touchup-01-output.png",
+        "output_sha256": "b82bb104d69af90fadc8acea15602562200b709e953bee8f23fe45e928e6023f",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/03/touchup-01-mask.png",
+        "mask_sha256": "b51183b6eb3457afb4c9672196fe9ad92dd44941a6900e89f7fdc434b98fadd5",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              232,
+              118
+            ],
+            [
+              239,
+              109
+            ],
+            [
+              252,
+              106
+            ],
+            [
+              270,
+              110
+            ],
+            [
+              281,
+              121
+            ],
+            [
+              283,
+              149
+            ],
+            [
+              273,
+              163
+            ],
+            [
+              258,
+              169
+            ],
+            [
+              244,
+              158
+            ],
+            [
+              236,
+              145
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            8,
+            2
+          ],
+          "feather_px": 1.25,
+          "limit": "Exact interior source features, but A6 outer hair silhouette retained; identity outline still requires visual acceptance."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      },
+      {
+        "name": "anchor left sprig/fringe",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/03/touchup-02-input.png",
+        "input_sha256": "b82bb104d69af90fadc8acea15602562200b709e953bee8f23fe45e928e6023f",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/03/touchup-02-output.png",
+        "output_sha256": "b653a43fd09dc6cc1b44cb189693029067a9cb2c1faed7ff0f761db1ed01330b",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/03/touchup-02-mask.png",
+        "mask_sha256": "028e1878fbf963cc7fbaab573f3765f324ea5f123d3c1c1bac44f32c39319a16",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              224,
+              349
+            ],
+            [
+              251,
+              349
+            ],
+            [
+              254,
+              377
+            ],
+            [
+              247,
+              383
+            ],
+            [
+              221,
+              381
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            -20,
+            12
+          ],
+          "feather_px": 1.2,
+          "limit": "Visible anchor sprig only; underlying A6 stole outline retained; donor may not cover every old fringe edge. No hidden embroidery inferred."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      },
+      {
+        "name": "anchor right sprig/fringe",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/03/touchup-03-input.png",
+        "input_sha256": "b653a43fd09dc6cc1b44cb189693029067a9cb2c1faed7ff0f761db1ed01330b",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/03/touchup-03-output.png",
+        "output_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/03/touchup-03-mask.png",
+        "mask_sha256": "b8b163cab58b1ee8c473c3e2ae60b4e56963c10db599e86b1bd2fa5cac76729e",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              288,
+              300
+            ],
+            [
+              305,
+              299
+            ],
+            [
+              310,
+              348
+            ],
+            [
+              309,
+              358
+            ],
+            [
+              289,
+              364
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            -12,
+            9
+          ],
+          "feather_px": 1.2,
+          "limit": "Visible anchor sprig only; underlying A6 stole outline retained; donor may not cover every old fringe edge. No hidden embroidery inferred."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      }
+    ],
+    "raw": "godot-spike/docs/evidence/spike02-a7/attempts/03/attempt-1.png",
+    "raw_sha256": "bd12428303a7261d87f675386458d187ad83fb435d6b0c7acdac6d6595c82c7d",
+    "normalization": {
+      "scale": 0.4082934609250399,
+      "translate": [
+        0,
+        0
+      ],
+      "method": "uniform scale only, preview retained; not adopted because generator reframed the target and changed local identity/motif",
+      "output": "godot-spike/docs/evidence/spike02-a7/attempts/03/attempt-1-normalized-preview.png",
+      "sha256": "5b42110f15a85e02da12c1ef77c4e18ecf1edc38a5b9d516bc60333db193ee41"
+    },
+    "generated_pixels_adopted": false,
+    "raw_result": "REJECT: constrained edit returned reframed/repainted details; using it as a whole frame would violate A6 geometry. Preserve A6 structure and finish the authorized anchor touch-ups instead.",
+    "runtime": "godot-spike/docs/evidence/spike02-a7/attempts/03/attempt-1-runtime.png",
+    "runtime_sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712",
+    "placeholder": true,
+    "reason": "Anchor interior texture corrections only. Outer silhouette/drape and remaining motif fringes are not proven consistent; retain PLACEHOLDER.",
+    "completed_order": 4,
+    "previous_frame": "00",
+    "neighbour_check": {
+      "role": "consistency check ONLY, never appearance source",
+      "previous_frame": "00",
+      "sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f"
+    }
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "attempt": 1,
+    "tool": "image_gen (built-in)",
+    "mode": "edit existing A6 target with two immutable anchors, not independent regeneration",
+    "prompt": "Use case: identity-preserve / precise-object-edit. EDIT the FIRST image, an EXISTING swing/04 animation frame. Do NOT generate an independent new full-body pose. Images 2 and 3 are immutable appearance anchors: same elderly man, angular weathered face, close grey swept hair, short grey beard, narrow dark eyes, teal cowl and robe, ivory stole/undersleeves, brown single satchel with one cloth roll, bronze medallion. Retain the FIRST image exact canvas framing, scale, complete silhouette, pose, hands/grip, connected feet and ONE bag. Preserve its fine worn hand-painted edges and muted original colours. Make only small controlled identity and costume corrections to the first image: match the anchor face/hair features, narrow ivory stole falls and their exact small grey-green botanical sprigs, short irregular ivory fringes, cuff edge and layered continuous hem. There are TWO sprigs total, one at each stole end: a simple central stem with alternating oblique leaf strokes, about 18x31px left and 15x43px right on 512px canvas, no new motifs or trim. Short fringe tips 4-9px, approximately 10 left/8 right visible, plus ONE long waist rope, no long new tassels. Match exact anchor motif scale, not a large decorative plant. Use the anchors to restore the SAME character, not a younger/redesigned face. Repair local details while retaining all already-correct structure. 512x512 transparent canvas, pivot [256,464]. Pose intent: follow-through; mace head target [421, 376], grip [347, 324]. Keep existing A6 mace head/haft/collar/grip dimensions and orientation, single short one-handed dark iron flanged mace on worn oak haft with small brass collar. For this follow-through ONLY, lower the connected weapon hand/forearm AND mace about19px so head centre moves from [421,357] to [421,376]; keep weapon dimensions; blend the sleeve naturally. No scene, other figures, labels, cast shadow, new ornament, duplicate bag, detached footwear, geometric fragments, bright recolouring or Ferry Dusk palette. Output ONLY the edited first sprite on genuine alpha.",
+    "references": [
+      {
+        "path": "godot-spike/docs/evidence/spike02-a7/baseline-a6/04.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/04/edit-target.png",
+        "sha256": "e4e661e76e29d52754971a68f7d879b4a68a7b0d0750b52e66ceb164a88961c0",
+        "role": "EDIT TARGET: A6 structure/pose; retain feet, bag, weapon"
+      },
+      {
+        "path": "shared-anim/thoma/idle/01.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/04/anchor-idle.png",
+        "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "role": "APPEARANCE MASTER ONLY"
+      },
+      {
+        "path": "shared-anim/thoma/swing/05.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/04/anchor-recover.png",
+        "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+        "role": "APPEARANCE corroboration ONLY"
+      }
+    ],
+    "spec_sha256": "bb0c9ff5949c659f35a892ad4e2b38aa28bb645fd8b4a81fbdf6f76c01ddb163",
+    "base_selection": {
+      "structure": "A6 adopted: connected shoes, one bag, no cutout joins; retain original pixels outside local masks.",
+      "face_hair": "idle/01 exact source pixels, swing/05 corroboration; A5 candidate has correct face but no better body structure.",
+      "embroidery_tassels": "idle/01 crop pixels, not A5 deformation or A6 larger invented sprigs.",
+      "cuffs_hem_bag_feet_weapon": "A6 adopted pose geometry; generator only supplies local surface touch-up, not replacement anatomy.",
+      "a5_considered": {
+        "path": "godot-spike/docs/evidence/spike02-a6/baseline-a5/04.png",
+        "sha256": "cccce1128daf423eb337a88d8dae5fe507524b448ca140d5c57bc488841c96e9",
+        "reason": "01 is best A5 frame but silhouette/hem pop against A6 neighbours; other A5 frames have known structural scraps/gaps."
+      },
+      "a6_raw_considered": [
+        {
+          "path": "godot-spike/docs/evidence/spike02-a6/candidates/04/attempt-1.png",
+          "sha256": "5f66d43bb64e9d4570ee2fa187bd63db14dc226d2fa6c644bab7d25e82c99108",
+          "reason": "Higher resolution same structural base; normalized adopted version preserves established registration. 02 attempt2 has bulbous shoulder/stole."
+        }
+      ]
+    },
+    "settings": {
+      "transparent_background": true,
+      "seed": "not exposed",
+      "model": "not exposed",
+      "quality": "not exposed",
+      "requested_size": [
+        512,
+        512
+      ],
+      "returned_size": [
+        1254,
+        1254
+      ]
+    },
+    "status": "FINISHED",
+    "adopted": false,
+    "touchups": [
+      {
+        "name": "anchor face/hair interior",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-01-input.png",
+        "input_sha256": "e4e661e76e29d52754971a68f7d879b4a68a7b0d0750b52e66ceb164a88961c0",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-01-output.png",
+        "output_sha256": "7609011140645d72872ebeb8c5d23b6c2526f5e1af8a44ad9e668747f661e1dd",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-01-mask.png",
+        "mask_sha256": "2d07699c44eb14db411c6d287fc74c7e677ba662d78c851c53922f2f5654b81f",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              232,
+              118
+            ],
+            [
+              239,
+              109
+            ],
+            [
+              252,
+              106
+            ],
+            [
+              270,
+              110
+            ],
+            [
+              281,
+              121
+            ],
+            [
+              283,
+              149
+            ],
+            [
+              273,
+              163
+            ],
+            [
+              258,
+              169
+            ],
+            [
+              244,
+              158
+            ],
+            [
+              236,
+              145
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            54,
+            3
+          ],
+          "feather_px": 1.25,
+          "limit": "Exact interior source features, but A6 outer hair silhouette retained; identity outline still requires visual acceptance."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      },
+      {
+        "name": "anchor left sprig/fringe",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-02-input.png",
+        "input_sha256": "7609011140645d72872ebeb8c5d23b6c2526f5e1af8a44ad9e668747f661e1dd",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-02-output.png",
+        "output_sha256": "bd6dcce5ef89ef9579e925d65277750e94c200bbaa88b1aeffb81757625d6403",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-02-mask.png",
+        "mask_sha256": "d3884ad730300db8c94412f4267dfb2b50d52b4fa1fe2daba393e4d715a35180",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              224,
+              349
+            ],
+            [
+              251,
+              349
+            ],
+            [
+              254,
+              377
+            ],
+            [
+              247,
+              383
+            ],
+            [
+              221,
+              381
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            -26,
+            0
+          ],
+          "feather_px": 1.2,
+          "limit": "Visible anchor sprig only; underlying A6 stole outline retained; donor may not cover every old fringe edge. No hidden embroidery inferred."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      },
+      {
+        "name": "anchor right sprig/fringe",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-03-input.png",
+        "input_sha256": "bd6dcce5ef89ef9579e925d65277750e94c200bbaa88b1aeffb81757625d6403",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-03-output.png",
+        "output_sha256": "7599d918ebeee0446071ae23251db8751e66702b1423c53df62e93dc0f81afa7",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-03-mask.png",
+        "mask_sha256": "1df411fb83523f1515b3497d86af5537a3e31e7af6c057c2bf654b1374351bf1",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              288,
+              300
+            ],
+            [
+              305,
+              299
+            ],
+            [
+              310,
+              348
+            ],
+            [
+              309,
+              358
+            ],
+            [
+              289,
+              364
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            -14,
+            8
+          ],
+          "feather_px": 1.2,
+          "limit": "Visible anchor sprig only; underlying A6 stole outline retained; donor may not cover every old fringe edge. No hidden embroidery inferred."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      },
+      {
+        "name": "connected follow-through hand/weapon translation",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-03-output.png",
+        "input_sha256": "7599d918ebeee0446071ae23251db8751e66702b1423c53df62e93dc0f81afa7",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-04-output.png",
+        "output_sha256": "9851d82b80b6c6cac1055896fcc173d9b3b4cc051c2b5b83cfcc078ca3d58539",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-04-mask.png",
+        "mask_sha256": "b639a2d5ca7fbc8f3bf16f409cccfe07e4563e38d24460fff786a2c2fd7af4fd",
+        "source": "godot-spike/docs/evidence/spike02-a7/baseline-a6/04.png",
+        "source_sha256": "e4e661e76e29d52754971a68f7d879b4a68a7b0d0750b52e66ceb164a88961c0",
+        "details": {
+          "polygon": [
+            [
+              331,
+              286
+            ],
+            [
+              354,
+              297
+            ],
+            [
+              385,
+              321
+            ],
+            [
+              444,
+              344
+            ],
+            [
+              452,
+              373
+            ],
+            [
+              427,
+              388
+            ],
+            [
+              389,
+              363
+            ],
+            [
+              352,
+              331
+            ],
+            [
+              334,
+              319
+            ]
+          ],
+          "scale": 1,
+          "translate": [
+            0,
+            19
+          ],
+          "cuff_join_polygon": [
+            [
+              331,
+              289
+            ],
+            [
+              347,
+              297
+            ],
+            [
+              355,
+              321
+            ],
+            [
+              339,
+              330
+            ],
+            [
+              327,
+              309
+            ]
+          ],
+          "feather_px": 2
+        },
+        "limit": "Weapon geometry unchanged; cuff continuity must be inspected; no automatic seam PASS."
+      }
+    ],
+    "raw": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-1.png",
+    "raw_sha256": "a276781ef166cf4e4b4f2767a00450125f3fca9ed5d4aabaf21b71d13bbd187d",
+    "normalization": {
+      "scale": 0.4082934609250399,
+      "translate": [
+        0,
+        0
+      ],
+      "method": "uniform scale only, preview retained; not adopted because generator reframed the target and changed local identity/motif",
+      "output": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-1-normalized-preview.png",
+      "sha256": "8a48f5212226f92e5ff086a6ec88eff6530510cd69c5238a730c40d3e62324f8"
+    },
+    "generated_pixels_adopted": false,
+    "raw_result": "REJECT: constrained edit returned reframed/repainted details; using it as a whole frame would violate A6 geometry. Preserve A6 structure and finish the authorized anchor touch-ups instead.",
+    "runtime": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-1-runtime.png",
+    "runtime_sha256": "9851d82b80b6c6cac1055896fcc173d9b3b4cc051c2b5b83cfcc078ca3d58539",
+    "placeholder": true,
+    "reason": "REJECTED local result: first extraction mask omitted part of original head/haft, causing a duplicate mace. Preserved, superseded by local attempt2.",
+    "completed_order": 5,
+    "previous_frame": "03",
+    "neighbour_check": {
+      "role": "consistency check ONLY, never appearance source",
+      "previous_frame": "03",
+      "sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712"
+    }
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "attempt": 2,
+    "tool": "Pillow authorized targeted touch-up",
+    "mode": "local correction of attempted weapon extraction, no new generation",
+    "prompt": "Correct failed 04 attempt1 duplicate weapon: start from saved pre-weapon touchup03, extract ALL connected hand/weapon pixels using larger polygon, translate exactly [0,19], bridge cuff with cloth-only A6 patch. No weapon scale/rotation or new paint design.",
+    "references": [
+      {
+        "path": "godot-spike/docs/evidence/spike02-a7/baseline-a6/04.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/04/edit-target.png",
+        "sha256": "e4e661e76e29d52754971a68f7d879b4a68a7b0d0750b52e66ceb164a88961c0",
+        "role": "EDIT TARGET: A6 structure/pose; retain feet, bag, weapon"
+      },
+      {
+        "path": "shared-anim/thoma/idle/01.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/04/anchor-idle.png",
+        "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "role": "APPEARANCE MASTER ONLY"
+      },
+      {
+        "path": "shared-anim/thoma/swing/05.png",
+        "input_copy": "godot-spike/docs/evidence/spike02-a7/attempts/04/anchor-recover.png",
+        "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+        "role": "APPEARANCE corroboration ONLY"
+      },
+      {
+        "path": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-03-output.png",
+        "sha256": "7599d918ebeee0446071ae23251db8751e66702b1423c53df62e93dc0f81afa7",
+        "role": "pre-weapon A7 touchup source"
+      }
+    ],
+    "spec_sha256": "bb0c9ff5949c659f35a892ad4e2b38aa28bb645fd8b4a81fbdf6f76c01ddb163",
+    "base_selection": {
+      "structure": "A6 adopted: connected shoes, one bag, no cutout joins; retain original pixels outside local masks.",
+      "face_hair": "idle/01 exact source pixels, swing/05 corroboration; A5 candidate has correct face but no better body structure.",
+      "embroidery_tassels": "idle/01 crop pixels, not A5 deformation or A6 larger invented sprigs.",
+      "cuffs_hem_bag_feet_weapon": "A6 adopted pose geometry; generator only supplies local surface touch-up, not replacement anatomy.",
+      "a5_considered": {
+        "path": "godot-spike/docs/evidence/spike02-a6/baseline-a5/04.png",
+        "sha256": "cccce1128daf423eb337a88d8dae5fe507524b448ca140d5c57bc488841c96e9",
+        "reason": "01 is best A5 frame but silhouette/hem pop against A6 neighbours; other A5 frames have known structural scraps/gaps."
+      },
+      "a6_raw_considered": [
+        {
+          "path": "godot-spike/docs/evidence/spike02-a6/candidates/04/attempt-1.png",
+          "sha256": "5f66d43bb64e9d4570ee2fa187bd63db14dc226d2fa6c644bab7d25e82c99108",
+          "reason": "Higher resolution same structural base; normalized adopted version preserves established registration. 02 attempt2 has bulbous shoulder/stole."
+        }
+      ]
+    },
+    "settings": {
+      "seed": "not applicable; deterministic",
+      "model": "not applicable",
+      "transparent_background": true,
+      "canvas": [
+        512,
+        512
+      ]
+    },
+    "status": "FINISHED",
+    "adopted": true,
+    "touchups": [
+      {
+        "name": "anchor face/hair interior",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-01-input.png",
+        "input_sha256": "e4e661e76e29d52754971a68f7d879b4a68a7b0d0750b52e66ceb164a88961c0",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-01-output.png",
+        "output_sha256": "7609011140645d72872ebeb8c5d23b6c2526f5e1af8a44ad9e668747f661e1dd",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-01-mask.png",
+        "mask_sha256": "2d07699c44eb14db411c6d287fc74c7e677ba662d78c851c53922f2f5654b81f",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              232,
+              118
+            ],
+            [
+              239,
+              109
+            ],
+            [
+              252,
+              106
+            ],
+            [
+              270,
+              110
+            ],
+            [
+              281,
+              121
+            ],
+            [
+              283,
+              149
+            ],
+            [
+              273,
+              163
+            ],
+            [
+              258,
+              169
+            ],
+            [
+              244,
+              158
+            ],
+            [
+              236,
+              145
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            54,
+            3
+          ],
+          "feather_px": 1.25,
+          "limit": "Exact interior source features, but A6 outer hair silhouette retained; identity outline still requires visual acceptance."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      },
+      {
+        "name": "anchor left sprig/fringe",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-02-input.png",
+        "input_sha256": "7609011140645d72872ebeb8c5d23b6c2526f5e1af8a44ad9e668747f661e1dd",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-02-output.png",
+        "output_sha256": "bd6dcce5ef89ef9579e925d65277750e94c200bbaa88b1aeffb81757625d6403",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-02-mask.png",
+        "mask_sha256": "d3884ad730300db8c94412f4267dfb2b50d52b4fa1fe2daba393e4d715a35180",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              224,
+              349
+            ],
+            [
+              251,
+              349
+            ],
+            [
+              254,
+              377
+            ],
+            [
+              247,
+              383
+            ],
+            [
+              221,
+              381
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            -26,
+            0
+          ],
+          "feather_px": 1.2,
+          "limit": "Visible anchor sprig only; underlying A6 stole outline retained; donor may not cover every old fringe edge. No hidden embroidery inferred."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      },
+      {
+        "name": "anchor right sprig/fringe",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-03-input.png",
+        "input_sha256": "bd6dcce5ef89ef9579e925d65277750e94c200bbaa88b1aeffb81757625d6403",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-03-output.png",
+        "output_sha256": "7599d918ebeee0446071ae23251db8751e66702b1423c53df62e93dc0f81afa7",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-03-mask.png",
+        "mask_sha256": "1df411fb83523f1515b3497d86af5537a3e31e7af6c057c2bf654b1374351bf1",
+        "source": "shared-anim/thoma/idle/01.png",
+        "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+        "details": {
+          "source_polygon": [
+            [
+              288,
+              300
+            ],
+            [
+              305,
+              299
+            ],
+            [
+              310,
+              348
+            ],
+            [
+              309,
+              358
+            ],
+            [
+              289,
+              364
+            ]
+          ],
+          "uniform_scale": 1,
+          "translate": [
+            -14,
+            8
+          ],
+          "feather_px": 1.2,
+          "limit": "Visible anchor sprig only; underlying A6 stole outline retained; donor may not cover every old fringe edge. No hidden embroidery inferred."
+        },
+        "alpha_policy": "A6 silhouette alpha retained exactly; inward blend; no body/limb warping"
+      },
+      {
+        "name": "corrected complete connected weapon translation",
+        "input": "godot-spike/docs/evidence/spike02-a7/attempts/04/touchup-03-output.png",
+        "input_sha256": "7599d918ebeee0446071ae23251db8751e66702b1423c53df62e93dc0f81afa7",
+        "output": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-2.png",
+        "output_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+        "mask": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-2-weapon-mask.png",
+        "mask_sha256": "9aebc4d7ddc334d89fac87b865d9d9bf813c0b7d963eaa0c48d520390c479741",
+        "join_mask": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-2-join-mask.png",
+        "join_mask_sha256": "b66b5786cc4ea07e9abf4e24cac3b1afb0459ce2f902b812b64a296fceb15c1f",
+        "details": {
+          "source_polygon": [
+            [
+              324,
+              280
+            ],
+            [
+              358,
+              291
+            ],
+            [
+              461,
+              335
+            ],
+            [
+              466,
+              404
+            ],
+            [
+              391,
+              405
+            ],
+            [
+              345,
+              350
+            ],
+            [
+              326,
+              331
+            ]
+          ],
+          "translate": [
+            0,
+            19
+          ],
+          "scale": 1,
+          "cuff_cloth_translate": [
+            14,
+            24
+          ],
+          "cuff_polygon": [
+            [
+              318,
+              282
+            ],
+            [
+              331,
+              285
+            ],
+            [
+              342,
+              300
+            ],
+            [
+              333,
+              311
+            ],
+            [
+              318,
+              298
+            ]
+          ],
+          "feather_px": 1.5
+        }
+      }
+    ],
+    "raw": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-2.png",
+    "raw_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+    "normalization": {
+      "scale": 0.4082934609250399,
+      "translate": [
+        0,
+        0
+      ],
+      "method": "uniform scale only, preview retained; not adopted because generator reframed the target and changed local identity/motif",
+      "output": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-1-normalized-preview.png",
+      "sha256": "8a48f5212226f92e5ff086a6ec88eff6530510cd69c5238a730c40d3e62324f8"
+    },
+    "generated_pixels_adopted": false,
+    "raw_result": "REJECT: constrained edit returned reframed/repainted details; using it as a whole frame would violate A6 geometry. Preserve A6 structure and finish the authorized anchor touch-ups instead.",
+    "runtime": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-2.png",
+    "runtime_sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc",
+    "placeholder": true,
+    "reason": "Single mace restored and 04 head lowered19px. Cloth bridge/face/stole continuity remains unproven: PLACEHOLDER.",
+    "completed_order": 5,
+    "previous_frame": "03",
+    "neighbour_check": {
+      "role": "consistency check ONLY, never appearance source",
+      "previous_frame": "03",
+      "sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712"
+    },
+    "origin_imagegen_raw": "godot-spike/docs/evidence/spike02-a7/attempts/04/attempt-1.png",
+    "origin_imagegen_raw_sha256": "a276781ef166cf4e4b4f2767a00450125f3fca9ed5d4aabaf21b71d13bbd187d"
+  }
+]
