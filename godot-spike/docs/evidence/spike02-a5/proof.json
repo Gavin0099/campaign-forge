@@ -1,0 +1,39 @@
+{
+  "frame": "03",
+  "input_sha256": "04795f7b3a137c171033f1bae1578ee47e6700ffad3f8fd573bd9895175eb1cf",
+  "output_sha256": "fba0b9638837540bd4ca532a5d95c95fec682e82ed7cb9b7d7fb3761f3767657",
+  "generation_attempts": 0,
+  "status": "DRAFT; visual review in W3",
+  "crops": {
+    "shoulder": [
+      200,
+      154,
+      302,
+      230
+    ],
+    "waist": [
+      193,
+      227,
+      304,
+      283
+    ],
+    "cuff": [
+      277,
+      177,
+      342,
+      229
+    ],
+    "bag": [
+      177,
+      248,
+      245,
+      341
+    ],
+    "hem-feet": [
+      108,
+      374,
+      397,
+      469
+    ]
+  }
+}
