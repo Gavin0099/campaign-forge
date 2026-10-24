@@ -1,0 +1,956 @@
+[
+  {
+    "reference": "thoma/idle/01.png",
+    "reference_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "region": "body",
+    "polygon": [
+      [
+        192,
+        158
+      ],
+      [
+        215,
+        150
+      ],
+      [
+        279,
+        153
+      ],
+      [
+        290,
+        180
+      ],
+      [
+        299,
+        239
+      ],
+      [
+        307,
+        301
+      ],
+      [
+        329,
+        354
+      ],
+      [
+        319,
+        398
+      ],
+      [
+        281,
+        420
+      ],
+      [
+        235,
+        429
+      ],
+      [
+        173,
+        417
+      ],
+      [
+        162,
+        383
+      ],
+      [
+        182,
+        331
+      ],
+      [
+        187,
+        294
+      ],
+      [
+        193,
+        240
+      ],
+      [
+        203,
+        216
+      ]
+    ],
+    "bbox": [
+      162,
+      150,
+      330,
+      430
+    ],
+    "pixels": "idle-body.png",
+    "mask": "idle-body-mask.png"
+  },
+  {
+    "reference": "thoma/idle/01.png",
+    "reference_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "region": "stole-left",
+    "polygon": [
+      [
+        192,
+        159
+      ],
+      [
+        207,
+        157
+      ],
+      [
+        230,
+        182
+      ],
+      [
+        245,
+        239
+      ],
+      [
+        231,
+        248
+      ],
+      [
+        220,
+        199
+      ],
+      [
+        208,
+        177
+      ]
+    ],
+    "bbox": [
+      192,
+      157,
+      246,
+      249
+    ],
+    "pixels": "idle-stole-left.png",
+    "mask": "idle-stole-left-mask.png"
+  },
+  {
+    "reference": "thoma/idle/01.png",
+    "reference_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "region": "stole-left-lower",
+    "polygon": [
+      [
+        230,
+        257
+      ],
+      [
+        251,
+        252
+      ],
+      [
+        256,
+        379
+      ],
+      [
+        219,
+        386
+      ],
+      [
+        221,
+        340
+      ]
+    ],
+    "bbox": [
+      219,
+      252,
+      257,
+      387
+    ],
+    "pixels": "idle-stole-left-lower.png",
+    "mask": "idle-stole-left-lower-mask.png"
+  },
+  {
+    "reference": "thoma/idle/01.png",
+    "reference_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "region": "stole-right",
+    "polygon": [
+      [
+        278,
+        157
+      ],
+      [
+        287,
+        165
+      ],
+      [
+        292,
+        228
+      ],
+      [
+        311,
+        348
+      ],
+      [
+        292,
+        360
+      ],
+      [
+        282,
+        308
+      ],
+      [
+        280,
+        233
+      ]
+    ],
+    "bbox": [
+      278,
+      157,
+      312,
+      361
+    ],
+    "pixels": "idle-stole-right.png",
+    "mask": "idle-stole-right-mask.png"
+  },
+  {
+    "reference": "thoma/idle/01.png",
+    "reference_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "region": "embroidery",
+    "polygon": [
+      [
+        226,
+        343
+      ],
+      [
+        251,
+        343
+      ],
+      [
+        251,
+        376
+      ],
+      [
+        226,
+        376
+      ]
+    ],
+    "bbox": [
+      226,
+      343,
+      252,
+      377
+    ],
+    "pixels": "idle-embroidery.png",
+    "mask": "idle-embroidery-mask.png"
+  },
+  {
+    "reference": "thoma/idle/01.png",
+    "reference_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "region": "cuff-left",
+    "polygon": [
+      [
+        167,
+        234
+      ],
+      [
+        188,
+        243
+      ],
+      [
+        199,
+        245
+      ],
+      [
+        193,
+        274
+      ],
+      [
+        174,
+        278
+      ],
+      [
+        156,
+        267
+      ]
+    ],
+    "bbox": [
+      156,
+      234,
+      200,
+      279
+    ],
+    "pixels": "idle-cuff-left.png",
+    "mask": "idle-cuff-left-mask.png"
+  },
+  {
+    "reference": "thoma/idle/01.png",
+    "reference_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "region": "cuff-right",
+    "polygon": [
+      [
+        308,
+        215
+      ],
+      [
+        319,
+        228
+      ],
+      [
+        328,
+        239
+      ],
+      [
+        313,
+        252
+      ],
+      [
+        300,
+        259
+      ],
+      [
+        298,
+        241
+      ]
+    ],
+    "bbox": [
+      298,
+      215,
+      329,
+      260
+    ],
+    "pixels": "idle-cuff-right.png",
+    "mask": "idle-cuff-right-mask.png"
+  },
+  {
+    "reference": "thoma/idle/01.png",
+    "reference_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "region": "hem",
+    "polygon": [
+      [
+        165,
+        355
+      ],
+      [
+        324,
+        350
+      ],
+      [
+        321,
+        397
+      ],
+      [
+        279,
+        421
+      ],
+      [
+        235,
+        427
+      ],
+      [
+        172,
+        417
+      ],
+      [
+        162,
+        384
+      ]
+    ],
+    "bbox": [
+      162,
+      350,
+      325,
+      428
+    ],
+    "pixels": "idle-hem.png",
+    "mask": "idle-hem-mask.png"
+  },
+  {
+    "reference": "thoma/idle/01.png",
+    "reference_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "region": "satchel",
+    "polygon": [
+      [
+        199,
+        248
+      ],
+      [
+        237,
+        248
+      ],
+      [
+        232,
+        290
+      ],
+      [
+        220,
+        315
+      ],
+      [
+        187,
+        305
+      ],
+      [
+        180,
+        284
+      ]
+    ],
+    "bbox": [
+      180,
+      248,
+      238,
+      316
+    ],
+    "pixels": "idle-satchel.png",
+    "mask": "idle-satchel-mask.png"
+  },
+  {
+    "reference": "thoma/idle/01.png",
+    "reference_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "region": "medallion",
+    "polygon": [
+      [
+        250,
+        196
+      ],
+      [
+        271,
+        196
+      ],
+      [
+        271,
+        221
+      ],
+      [
+        250,
+        221
+      ]
+    ],
+    "bbox": [
+      250,
+      196,
+      272,
+      222
+    ],
+    "pixels": "idle-medallion.png",
+    "mask": "idle-medallion-mask.png"
+  },
+  {
+    "reference": "thoma/idle/01.png",
+    "reference_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "region": "face-hair",
+    "polygon": [
+      [
+        226,
+        120
+      ],
+      [
+        234,
+        106
+      ],
+      [
+        253,
+        101
+      ],
+      [
+        273,
+        107
+      ],
+      [
+        287,
+        118
+      ],
+      [
+        287,
+        146
+      ],
+      [
+        278,
+        164
+      ],
+      [
+        258,
+        171
+      ],
+      [
+        241,
+        158
+      ],
+      [
+        232,
+        143
+      ]
+    ],
+    "bbox": [
+      226,
+      101,
+      288,
+      172
+    ],
+    "pixels": "idle-face-hair.png",
+    "mask": "idle-face-hair-mask.png"
+  },
+  {
+    "reference": "thoma/swing/05.png",
+    "reference_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "region": "body",
+    "polygon": [
+      [
+        192,
+        155
+      ],
+      [
+        215,
+        147
+      ],
+      [
+        279,
+        150
+      ],
+      [
+        290,
+        177
+      ],
+      [
+        299,
+        236
+      ],
+      [
+        307,
+        298
+      ],
+      [
+        329,
+        351
+      ],
+      [
+        319,
+        395
+      ],
+      [
+        281,
+        417
+      ],
+      [
+        235,
+        426
+      ],
+      [
+        173,
+        414
+      ],
+      [
+        162,
+        380
+      ],
+      [
+        182,
+        328
+      ],
+      [
+        187,
+        291
+      ],
+      [
+        193,
+        237
+      ],
+      [
+        203,
+        213
+      ]
+    ],
+    "bbox": [
+      162,
+      147,
+      330,
+      427
+    ],
+    "pixels": "recover-body.png",
+    "mask": "recover-body-mask.png"
+  },
+  {
+    "reference": "thoma/swing/05.png",
+    "reference_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "region": "stole-left",
+    "polygon": [
+      [
+        192,
+        156
+      ],
+      [
+        207,
+        154
+      ],
+      [
+        230,
+        179
+      ],
+      [
+        245,
+        236
+      ],
+      [
+        231,
+        245
+      ],
+      [
+        220,
+        196
+      ],
+      [
+        208,
+        174
+      ]
+    ],
+    "bbox": [
+      192,
+      154,
+      246,
+      246
+    ],
+    "pixels": "recover-stole-left.png",
+    "mask": "recover-stole-left-mask.png"
+  },
+  {
+    "reference": "thoma/swing/05.png",
+    "reference_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "region": "stole-left-lower",
+    "polygon": [
+      [
+        230,
+        254
+      ],
+      [
+        251,
+        249
+      ],
+      [
+        256,
+        376
+      ],
+      [
+        219,
+        383
+      ],
+      [
+        221,
+        337
+      ]
+    ],
+    "bbox": [
+      219,
+      249,
+      257,
+      384
+    ],
+    "pixels": "recover-stole-left-lower.png",
+    "mask": "recover-stole-left-lower-mask.png"
+  },
+  {
+    "reference": "thoma/swing/05.png",
+    "reference_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "region": "stole-right",
+    "polygon": [
+      [
+        278,
+        154
+      ],
+      [
+        287,
+        162
+      ],
+      [
+        292,
+        225
+      ],
+      [
+        311,
+        345
+      ],
+      [
+        292,
+        357
+      ],
+      [
+        282,
+        305
+      ],
+      [
+        280,
+        230
+      ]
+    ],
+    "bbox": [
+      278,
+      154,
+      312,
+      358
+    ],
+    "pixels": "recover-stole-right.png",
+    "mask": "recover-stole-right-mask.png"
+  },
+  {
+    "reference": "thoma/swing/05.png",
+    "reference_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "region": "embroidery",
+    "polygon": [
+      [
+        226,
+        340
+      ],
+      [
+        251,
+        340
+      ],
+      [
+        251,
+        373
+      ],
+      [
+        226,
+        373
+      ]
+    ],
+    "bbox": [
+      226,
+      340,
+      252,
+      374
+    ],
+    "pixels": "recover-embroidery.png",
+    "mask": "recover-embroidery-mask.png"
+  },
+  {
+    "reference": "thoma/swing/05.png",
+    "reference_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "region": "cuff-left",
+    "polygon": [
+      [
+        167,
+        231
+      ],
+      [
+        188,
+        240
+      ],
+      [
+        199,
+        242
+      ],
+      [
+        193,
+        271
+      ],
+      [
+        174,
+        275
+      ],
+      [
+        156,
+        264
+      ]
+    ],
+    "bbox": [
+      156,
+      231,
+      200,
+      276
+    ],
+    "pixels": "recover-cuff-left.png",
+    "mask": "recover-cuff-left-mask.png"
+  },
+  {
+    "reference": "thoma/swing/05.png",
+    "reference_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "region": "cuff-right",
+    "polygon": [
+      [
+        308,
+        212
+      ],
+      [
+        319,
+        225
+      ],
+      [
+        328,
+        236
+      ],
+      [
+        313,
+        249
+      ],
+      [
+        300,
+        256
+      ],
+      [
+        298,
+        238
+      ]
+    ],
+    "bbox": [
+      298,
+      212,
+      329,
+      257
+    ],
+    "pixels": "recover-cuff-right.png",
+    "mask": "recover-cuff-right-mask.png"
+  },
+  {
+    "reference": "thoma/swing/05.png",
+    "reference_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "region": "hem",
+    "polygon": [
+      [
+        165,
+        352
+      ],
+      [
+        324,
+        347
+      ],
+      [
+        321,
+        394
+      ],
+      [
+        279,
+        418
+      ],
+      [
+        235,
+        424
+      ],
+      [
+        172,
+        414
+      ],
+      [
+        162,
+        381
+      ]
+    ],
+    "bbox": [
+      162,
+      347,
+      325,
+      425
+    ],
+    "pixels": "recover-hem.png",
+    "mask": "recover-hem-mask.png"
+  },
+  {
+    "reference": "thoma/swing/05.png",
+    "reference_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "region": "satchel",
+    "polygon": [
+      [
+        199,
+        245
+      ],
+      [
+        237,
+        245
+      ],
+      [
+        232,
+        287
+      ],
+      [
+        220,
+        312
+      ],
+      [
+        187,
+        302
+      ],
+      [
+        180,
+        281
+      ]
+    ],
+    "bbox": [
+      180,
+      245,
+      238,
+      313
+    ],
+    "pixels": "recover-satchel.png",
+    "mask": "recover-satchel-mask.png"
+  },
+  {
+    "reference": "thoma/swing/05.png",
+    "reference_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "region": "medallion",
+    "polygon": [
+      [
+        250,
+        193
+      ],
+      [
+        271,
+        193
+      ],
+      [
+        271,
+        218
+      ],
+      [
+        250,
+        218
+      ]
+    ],
+    "bbox": [
+      250,
+      193,
+      272,
+      219
+    ],
+    "pixels": "recover-medallion.png",
+    "mask": "recover-medallion-mask.png"
+  },
+  {
+    "reference": "thoma/swing/05.png",
+    "reference_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "region": "face-hair",
+    "polygon": [
+      [
+        226,
+        112
+      ],
+      [
+        234,
+        98
+      ],
+      [
+        253,
+        93
+      ],
+      [
+        273,
+        99
+      ],
+      [
+        287,
+        110
+      ],
+      [
+        287,
+        138
+      ],
+      [
+        278,
+        156
+      ],
+      [
+        258,
+        163
+      ],
+      [
+        241,
+        150
+      ],
+      [
+        232,
+        135
+      ]
+    ],
+    "bbox": [
+      226,
+      93,
+      288,
+      164
+    ],
+    "pixels": "recover-face-hair.png",
+    "mask": "recover-face-hair-mask.png"
+  }
+]
