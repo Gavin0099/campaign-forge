@@ -287,3 +287,39 @@ Full per-frame input hashes, output hashes, controls, zero-attempt provenance, c
 ### A4 W3 model verdict
 
 Five motion frames remain PLACEHOLDER. Reference transfer fixes provenance and replaces the old contour, but shoulder/cuff/bag seams and hem-to-feet continuity fail. See frame-audit.json region_review and spike02-a4/sequence-check.json. Two immutable references retain PASS. No human or Owner art approval is claimed.
+
+## spike-02 A5 — deterministic seam and foot repair
+
+Tool: offline Pillow 12.2.0, godot-spike/tools/prepare_a5_frames.py. Uses the
+unmodified A4 reference cutout helpers/pose controls. Zero AI calls (0/3 per
+frame), prompt/raw=null, no rejected AI output. Full source, reference, mask
+and runtime SHA-256 records: a5-swing-prompts.json. No original PNGs moved or
+edited. Both immutable references match A4 hashes. A4 frames archived as byte
+copies in godot-spike/docs/evidence/spike02-a5/baseline-a4/ with hashes.json.
+
+One continuous recover body replaces A4 bag-bearing clone patches. Two plain
+cloth source/target quads remove the reference mace occlusion; no bag pixels
+or motifs are cloned. Final mask-limited 0.75px smoothing, upper silhouette
+retention, unit embroidery scale and below-motif hem mesh are reproducible.
+Mace, grip, head/face and feet are protected raw A4 bytes. Palette is unmapped.
+Coordinates/width/area/hashes: seam-masks/coordinates.json and rig-controls.json
+under the A5 evidence folder. The first W2 inspection found a surviving
+reference mace-head fragment; W3 corrected its occlusion support and protected
+face pixels. W1 proof remains the original draft, not silently regenerated.
+
+| Frame | Runtime SHA-256 | Mask SHA-256 | Palette distance A4 / A5 |
+| --- | --- | --- | --- |
+| thoma/swing/00.png | 578b460defc4c53ba632002e405d40e2b6d40282a85da7db192e0b75be7d9663 | e169aecfa50fe7359bde2e87225a5a071157ef6864f8313d74f2076d55067654 | 2.154391 / 2.292463 |
+| thoma/swing/01.png | b06121b366fe9c126d8bcf40c3ffbff974446282d0f22a844776347ad3a14243 | 5193766e897af5ae2be8c3768e1a3eafe84f1f89c11c558ec1b0f6019e5318d1 | 2.239122 / 2.400236 |
+| thoma/swing/02.png | 91a68c71be081b72fef49a0c90ec010f1fe6a456b64b9ecda1940ae4a0867818 | e7ce806c8e54d41b7df191b1a947416e2f3dfb93f3605e5cc9503286d0a1d7eb | 2.244537 / 2.318793 |
+| thoma/swing/03.png | f4b590dc492705067948bc9c31fcfdbdfa01a5b424f75cda5a0e6d28cf319d88 | 9ecf1c2e2b4f2c27c4afab90f324b336fc196f6c0d14f7c14b9ee7c8a760950a | 2.272082 / 2.344525 |
+| thoma/swing/04.png | cccce1128daf423eb337a88d8dae5fe507524b448ca140d5c57bc488841c96e9 | a87ddcc2184e31f0d2e3c8981690d91d5551bac5f3cdc3659134041faf5f01c2 | 2.211167 / 2.286251 |
+
+### A5 model verdict
+
+Single-bag count and unit local motif scale pass. Shoulder/waist/cuff folds,
+plain-cloth repair boundary and hem-to-boot/sequence continuity still fail.
+All five motion frames remain PLACEHOLDER; two unchanged reference endpoints
+retain PASS. Per-check reasons in frame-audit.json, same-scale crops in A5
+region-check.png and six pair proxies in sequence-check.json. No Owner or
+commercial art approval. Human hit-feel remains HUMAN_PENDING.

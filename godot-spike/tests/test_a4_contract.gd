@@ -1,7 +1,13 @@
 extends "res://addons/gut/test.gd"
 const SHARED = "res://art/anim-shared/"
 const EVIDENCE = "res://docs/evidence/spike02-a4/"
+const A4_ARCHIVE = "res://docs/evidence/spike02-a5/baseline-a4/"
 const REGIONS = ["stole","embroidery","cuffs","hem","face_hair","palette","sequence"]
+
+# Historical A4 art assertions use immutable A4 bytes; live A5 contracts have
+# their own tests. No A4 geometry/status assertion is dropped or weakened.
+func a4_frame(path: String) -> String:
+	return A4_ARCHIVE + ("idle-01.png" if path.contains("/idle/") else path.get_file())
 
 func json(path: String):
 	return JSON.parse_string(FileAccess.get_file_as_string(path))
@@ -35,7 +41,7 @@ func test_rebuilt_frames_preserve_mace_grip_contact_and_grounded_feet() -> void:
 	for index in range(5):
 		var name := "%02d.png" % index
 		var old := png(EVIDENCE+"baseline-a3/"+name)
-		var current := png(SHARED+"thoma/swing/"+name)
+		var current := png(A4_ARCHIVE+name)
 		var protected := png(EVIDENCE+"protected-masks/"+name)
 		assert_eq(current.get_size(),Vector2i(512,512))
 		assert_ne(current.get_data(),old.get_data(),"Rebuilt costume: "+name)
@@ -47,7 +53,7 @@ func test_rebuilt_frames_preserve_mace_grip_contact_and_grounded_feet() -> void:
 		assert_true(same,"Exact motion weapon/hand mask: "+name)
 		assert_true(current.get_region(Rect2i(0,444,512,68)).get_data()==old.get_region(Rect2i(0,444,512,68)).get_data(),"Ground-contact pixels remain exact: "+name)
 		assert_ne(current.get_region(Rect2i(110,350,290,80)).get_data(),old.get_region(Rect2i(110,350,290,80)).get_data(),"Old fan hem actually replaced")
-	var contact := png(SHARED+"thoma/swing/03.png")
+	var contact := png(A4_ARCHIVE+"03.png")
 	var old_contact := png(EVIDENCE+"baseline-a3/03.png")
 	assert_true(contact.get_region(Rect2i(340,170,140,55)).get_data()==old_contact.get_region(Rect2i(340,170,140,55)).get_data(),"Contact grip/haft/head exact RGBA")
 
@@ -55,10 +61,10 @@ func test_region_status_and_handoff_table_cannot_claim_partial_pass() -> void:
 	var table := FileAccess.get_file_as_string(EVIDENCE+"frame-status-table.md")
 	var handoff := FileAccess.get_file_as_string("res://docs/HANDOFF.md")
 	var count := 0
-	for record in json(SHARED+"frame-audit.json"):
+	for record in json(A4_ARCHIVE+"frame-audit.json"):
 		if not record.path.begins_with("thoma/"):continue
 		count += 1
-		assert_eq(record.sha256,FileAccess.get_sha256(SHARED+record.path))
+		assert_eq(record.sha256,FileAccess.get_sha256(a4_frame(record.path)))
 		assert_eq(record.weapon_status,"APPROVED")
 		var flags: Array[String] = []
 		for name in REGIONS:
@@ -83,7 +89,7 @@ func test_provenance_archive_masks_and_generation_bounds() -> void:
 	for record in records:
 		assert_eq(record.generation_attempts,0.0)
 		assert_lte(record.generation_attempts,3.0)
-		assert_eq(record.runtime_sha256,FileAccess.get_sha256(SHARED+record.frame))
+		assert_eq(record.runtime_sha256,FileAccess.get_sha256(a4_frame(record.frame)))
 		assert_eq(record.baseline_sha256,FileAccess.get_sha256(EVIDENCE+"baseline-a3/"+record.frame.get_file()))
 		for path in record.references:assert_eq(record.references[path],FileAccess.get_sha256(SHARED+path))
 	for region in json(EVIDENCE+"reference-regions/regions.json"):

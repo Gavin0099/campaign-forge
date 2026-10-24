@@ -1,0 +1,35 @@
+A5_REPRODUCTION frames=5 identical_png_bytes=true protected_masks=true seam_masks=true references=true
+{
+  "ground_contact_observations": [
+    {
+      "frame": "00",
+      "a4_opaque_pixels_below_pivot_y464": 0,
+      "a5_opaque_pixels_below_pivot_y464": 0,
+      "interpretation": "fixed A4 sole pixels retained; any inherited raster overshoot is a feet FAIL, not excused by pivot equality"
+    },
+    {
+      "frame": "01",
+      "a4_opaque_pixels_below_pivot_y464": 0,
+      "a5_opaque_pixels_below_pivot_y464": 0,
+      "interpretation": "fixed A4 sole pixels retained; any inherited raster overshoot is a feet FAIL, not excused by pivot equality"
+    },
+    {
+      "frame": "02",
+      "a4_opaque_pixels_below_pivot_y464": 0,
+      "a5_opaque_pixels_below_pivot_y464": 0,
+      "interpretation": "fixed A4 sole pixels retained; any inherited raster overshoot is a feet FAIL, not excused by pivot equality"
+    },
+    {
+      "frame": "03",
+      "a4_opaque_pixels_below_pivot_y464": 0,
+      "a5_opaque_pixels_below_pivot_y464": 0,
+      "interpretation": "fixed A4 sole pixels retained; any inherited raster overshoot is a feet FAIL, not excused by pivot equality"
+    },
+    {
+      "frame": "04",
+      "a4_opaque_pixels_below_pivot_y464": 0,
+      "a5_opaque_pixels_below_pivot_y464": 0,
+      "interpretation": "fixed A4 sole pixels retained; any inherited raster overshoot is a feet FAIL, not excused by pivot equality"
+    }
+  ]
+}

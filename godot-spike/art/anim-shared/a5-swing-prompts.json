@@ -1,0 +1,127 @@
+[
+  {
+    "frame": "thoma/swing/00.png",
+    "tool": "Pillow deterministic A4-rig refinement",
+    "generation_attempts": 0,
+    "prompt": null,
+    "raw": null,
+    "raw_sha256": null,
+    "rejected_attempts": [],
+    "references": {
+      "thoma/idle/01.png": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+    },
+    "baseline_sha256": "93d1f3bb044d06c459236b79af4b4c09d16bf8bf7f67aaa1cc7d6ea2bd523853",
+    "runtime_sha256": "578b460defc4c53ba632002e405d40e2b6d40282a85da7db192e0b75be7d9663",
+    "mask": "godot-spike/docs/evidence/spike02-a5/seam-masks/00.png",
+    "mask_sha256": "e169aecfa50fe7359bde2e87225a5a071157ef6864f8313d74f2076d55067654",
+    "controls": "godot-spike/docs/evidence/spike02-a5/rig-controls.json",
+    "palette_distance": {
+      "before": 2.154391,
+      "after": 2.292463,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "cleanup": "One recover reference body, unit motif scale, plain ivory occlusion fill, lower hem mesh; narrow seam smoothing; fixed raw weapon/hand/feet overwrite; transparent RGB cleared outside protection."
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "tool": "Pillow deterministic A4-rig refinement",
+    "generation_attempts": 0,
+    "prompt": null,
+    "raw": null,
+    "raw_sha256": null,
+    "rejected_attempts": [],
+    "references": {
+      "thoma/idle/01.png": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+    },
+    "baseline_sha256": "c4951e886bdaf6f49a72531e27c0db37254aabda071f4304d951c45d85c496cf",
+    "runtime_sha256": "b06121b366fe9c126d8bcf40c3ffbff974446282d0f22a844776347ad3a14243",
+    "mask": "godot-spike/docs/evidence/spike02-a5/seam-masks/01.png",
+    "mask_sha256": "5193766e897af5ae2be8c3768e1a3eafe84f1f89c11c558ec1b0f6019e5318d1",
+    "controls": "godot-spike/docs/evidence/spike02-a5/rig-controls.json",
+    "palette_distance": {
+      "before": 2.239122,
+      "after": 2.400236,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "cleanup": "One recover reference body, unit motif scale, plain ivory occlusion fill, lower hem mesh; narrow seam smoothing; fixed raw weapon/hand/feet overwrite; transparent RGB cleared outside protection."
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "tool": "Pillow deterministic A4-rig refinement",
+    "generation_attempts": 0,
+    "prompt": null,
+    "raw": null,
+    "raw_sha256": null,
+    "rejected_attempts": [],
+    "references": {
+      "thoma/idle/01.png": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+    },
+    "baseline_sha256": "7ac71805794546f0bb85ba38257fa76c4aa802f6b15531792e491e5a19d2973d",
+    "runtime_sha256": "91a68c71be081b72fef49a0c90ec010f1fe6a456b64b9ecda1940ae4a0867818",
+    "mask": "godot-spike/docs/evidence/spike02-a5/seam-masks/02.png",
+    "mask_sha256": "e7ce806c8e54d41b7df191b1a947416e2f3dfb93f3605e5cc9503286d0a1d7eb",
+    "controls": "godot-spike/docs/evidence/spike02-a5/rig-controls.json",
+    "palette_distance": {
+      "before": 2.244537,
+      "after": 2.318793,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "cleanup": "One recover reference body, unit motif scale, plain ivory occlusion fill, lower hem mesh; narrow seam smoothing; fixed raw weapon/hand/feet overwrite; transparent RGB cleared outside protection."
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "tool": "Pillow deterministic A4-rig refinement",
+    "generation_attempts": 0,
+    "prompt": null,
+    "raw": null,
+    "raw_sha256": null,
+    "rejected_attempts": [],
+    "references": {
+      "thoma/idle/01.png": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+    },
+    "baseline_sha256": "04795f7b3a137c171033f1bae1578ee47e6700ffad3f8fd573bd9895175eb1cf",
+    "runtime_sha256": "f4b590dc492705067948bc9c31fcfdbdfa01a5b424f75cda5a0e6d28cf319d88",
+    "mask": "godot-spike/docs/evidence/spike02-a5/seam-masks/03.png",
+    "mask_sha256": "9ecf1c2e2b4f2c27c4afab90f324b336fc196f6c0d14f7c14b9ee7c8a760950a",
+    "controls": "godot-spike/docs/evidence/spike02-a5/rig-controls.json",
+    "palette_distance": {
+      "before": 2.272082,
+      "after": 2.344525,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "cleanup": "One recover reference body, unit motif scale, plain ivory occlusion fill, lower hem mesh; narrow seam smoothing; fixed raw weapon/hand/feet overwrite; transparent RGB cleared outside protection."
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "tool": "Pillow deterministic A4-rig refinement",
+    "generation_attempts": 0,
+    "prompt": null,
+    "raw": null,
+    "raw_sha256": null,
+    "rejected_attempts": [],
+    "references": {
+      "thoma/idle/01.png": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+    },
+    "baseline_sha256": "e2d809bd1b7ab0d371a125532260b092d0372635af6cbd31e2cb695ed4df3f18",
+    "runtime_sha256": "cccce1128daf423eb337a88d8dae5fe507524b448ca140d5c57bc488841c96e9",
+    "mask": "godot-spike/docs/evidence/spike02-a5/seam-masks/04.png",
+    "mask_sha256": "a87ddcc2184e31f0d2e3c8981690d91d5551bac5f3cdc3659134041faf5f01c2",
+    "controls": "godot-spike/docs/evidence/spike02-a5/rig-controls.json",
+    "palette_distance": {
+      "before": 2.211167,
+      "after": 2.286251,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "cleanup": "One recover reference body, unit motif scale, plain ivory occlusion fill, lower hem mesh; narrow seam smoothing; fixed raw weapon/hand/feet overwrite; transparent RGB cleared outside protection."
+  }
+]
