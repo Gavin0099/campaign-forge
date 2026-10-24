@@ -75,6 +75,8 @@ extends Resource
 @export var dust_on_contact: bool = false
 @export_range(1, 600, 1) var particle_lifetime_ms: float = 300
 @export_range(0, 180, 1) var particle_spread: float = 100
+## 0 preserves A9/spike03 upward spray; 1 aims sparks along attacker → target.
+@export_range(0, 1, 0.01) var spark_direction_bias: float = 0
 @export_range(0, 400, 1) var particle_gravity: float = 150
 @export_range(0, 200, 1) var spark_velocity_min: float = 55
 @export_range(0, 300, 1) var spark_velocity_max: float = 125
@@ -108,3 +110,9 @@ extends Resource
 func hitstop_ms(crit: bool, reduced: bool) -> float:
 	if reduced: return reduced_hitstop_ms
 	return maxf(attacker_hitstop_ms,target_hitstop_ms) * (crit_hitstop_multiplier if crit else 1.0)
+
+static func from_args(args: PackedStringArray) -> ImpactProfile:
+	for arg in args:
+		if arg == "--impact-profile=a9_baseline": return load("res://config/impact_profile_a9_baseline.tres")
+		if arg == "--impact-profile=spike03": return load("res://config/impact_profile_spike03.tres")
+	return load("res://config/impact_profile.tres")

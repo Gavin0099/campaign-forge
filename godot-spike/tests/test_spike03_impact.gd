@@ -1,12 +1,14 @@
 extends "res://addons/gut/test.gd"
 const Scene = preload("res://scenes/Skirmish.tscn")
-const Tuned = preload("res://config/impact_profile.tres")
+const Tuned = preload("res://config/impact_profile_spike03.tres")
 const Baseline = preload("res://config/impact_profile_a9_baseline.tres")
 var scene
 
 func before_each() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	scene = add_child_autofree(Scene.instantiate())
+	# Historical spike03 behavioral contract; spike04 has separate default tests.
+	scene.impact_profile = Tuned
 	await get_tree().process_frame
 
 func after_each() -> void:

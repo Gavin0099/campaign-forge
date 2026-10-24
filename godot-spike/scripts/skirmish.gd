@@ -96,6 +96,7 @@ func sprite(parent: Node, texture: Texture2D, at: Vector2, size: Vector2) -> Spr
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	impact_profile = ImpactProfile.from_args(OS.get_cmdline_user_args())
 	for arg in OS.get_cmdline_user_args():
 		if arg == "--impact-profile=a9_baseline": impact_profile = preload("res://config/impact_profile_a9_baseline.tres")
 		if arg == "--crit": next_hit_crit = true
@@ -551,7 +552,8 @@ func emit_particles(at: Vector2, dust: bool) -> void:
 		var count: int = roundi(impact_profile.spoke_count*(impact_profile.crit_particle_multiplier if hit_is_crit else 1.0))
 		for i in range(count):
 			var line := Line2D.new()
-			var direction := Vector2.from_angle(i * TAU / count + impact_profile.spoke_angle)
+			var radial := Vector2.from_angle(i * TAU / count + impact_profile.spoke_angle)
+			var direction := radial.lerp(hit_direction.rotated((float(i)/maxi(count-1,1)-0.5)*1.2), impact_profile.spark_direction_bias).normalized()
 			line.points = PackedVector2Array([direction * impact_profile.spoke_inner_px, direction * (impact_profile.spoke_outer_px + i % 3 * impact_profile.spoke_variation_px)])
 			line.width = impact_profile.spoke_width
 			line.default_color = impact_profile.spoke_color
@@ -575,8 +577,8 @@ func emit_particles(at: Vector2, dust: bool) -> void:
 	particles.lifetime = impact_profile.particle_lifetime_ms/1000.0
 	particles.one_shot = true
 	particles.explosiveness = 1
-	particles.direction = Vector2(0, -1)
-	particles.spread = impact_profile.particle_spread
+	particles.direction = Vector2.UP if dust else Vector2.UP.lerp(hit_direction,impact_profile.spark_direction_bias).normalized()
+	particles.spread = impact_profile.particle_spread * (1.0 if dust else 1.0-0.65*impact_profile.spark_direction_bias)
 	particles.gravity = Vector2(0, impact_profile.particle_gravity)
 	particles.initial_velocity_min = impact_profile.dust_velocity_min if dust else impact_profile.spark_velocity_min
 	particles.initial_velocity_max = impact_profile.dust_velocity_max if dust else impact_profile.spark_velocity_max
