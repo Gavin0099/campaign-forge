@@ -2,6 +2,11 @@ extends "res://addons/gut/test.gd"
 const SHARED = "res://art/anim-shared/"
 const E = "res://docs/evidence/spike02-a7/"
 const REPO = "res://../"
+const A7_ARCHIVE = "res://docs/evidence/spike02-a8/baseline-a7/"
+
+# A8 only replaces current art. Keep all A7 byte/pixel/provenance assertions.
+func a7_frame(path: String) -> String:
+	return A7_ARCHIVE + ("idle-01.png" if path.contains("/idle/") else path.get_file())
 const CHECKS = ["face_hair","stole","embroidery","tassels","cuffs","hem","palette","seams","bag_count","feet","mace","landmarks","sequence"]
 
 func json(path: String):
@@ -73,7 +78,7 @@ func test_a7_attempts_bounded_ordered_and_every_adoption_bound() -> void:
 		if record.adopted:
 			assert_false(adopted.has(record.frame))
 			adopted[record.frame]=true
-			assert_eq(record.runtime_sha256,FileAccess.get_sha256(SHARED+record.frame))
+			assert_eq(record.runtime_sha256,FileAccess.get_sha256(a7_frame(record.frame)))
 			assert_eq(record.runtime_sha256,FileAccess.get_sha256(REPO+record.runtime))
 	assert_eq(generated_order,["01.png","02.png","00.png","03.png","04.png"])
 	assert_eq(adopted.size(),5)
@@ -89,10 +94,10 @@ func test_a7_honest_placeholder_gates_match_table_and_final_handoff() -> void:
 	var table := FileAccess.get_file_as_string(E+"frame-status-table.md")
 	var handoff := FileAccess.get_file_as_string("res://docs/HANDOFF.md")
 	var count := 0
-	for record in json(SHARED+"frame-audit.json"):
+	for record in json(A7_ARCHIVE+"frame-audit.json"):
 		if not record.path.begins_with("thoma/"):continue
 		count+=1
-		assert_eq(record.sha256,FileAccess.get_sha256(SHARED+record.path))
+		assert_eq(record.sha256,FileAccess.get_sha256(a7_frame(record.path)))
 		assert_eq(record.bag_count,1.0)
 		assert_eq(record.weapon_status,"APPROVED")
 		var failed := false
@@ -113,7 +118,7 @@ func test_a7_canvas_ground_and_foot_region_preserved() -> void:
 	for i in range(5):
 		var name := "%02d.png" % i
 		var before := image(E+"baseline-a6/"+name)
-		var after := image(SHARED+"thoma/swing/"+name)
+		var after := image(a7_frame("thoma/swing/"+name))
 		assert_eq(after.get_size(),Vector2i(512,512))
 		assert_true(before.get_region(Rect2i(0,420,512,92)).get_data()==after.get_region(Rect2i(0,420,512,92)).get_data(),"Exact lower leg/boot source pixels")
 		var bottom := 0
@@ -125,11 +130,11 @@ func test_a7_canvas_ground_and_foot_region_preserved() -> void:
 		if item.path.ends_with(".png"):assert_eq(item.sha256,FileAccess.get_sha256(REPO+item.path))
 
 func test_a7_contact_and_lowered_mace_pixels_are_preserved() -> void:
-	var contact := image(SHARED+"thoma/swing/03.png")
+	var contact := image(a7_frame("thoma/swing/03.png"))
 	var old_contact := image(E+"baseline-a6/03.png")
 	assert_true(contact.get_region(Rect2i(340,175,140,46)).get_data()==old_contact.get_region(Rect2i(340,175,140,46)).get_data())
 	assert_gt(contact.get_pixel(455,196).a,0.9)
-	var follow := image(SHARED+"thoma/swing/04.png")
+	var follow := image(a7_frame("thoma/swing/04.png"))
 	var old_follow := image(E+"baseline-a6/04.png")
 	var opaque_count := 0
 	for y in range(338,379):
@@ -159,7 +164,7 @@ func test_a7_real_playback_and_all_adjacent_measured_proxies_exist() -> void:
 	assert_eq(json(E+"landmark-deltas.json").pairs.size(),6)
 
 func test_a7_failures_are_not_disguised_by_geometry_pass() -> void:
-	var audit: Array = json(SHARED+"frame-audit.json")
+	var audit: Array = json(A7_ARCHIVE+"frame-audit.json")
 	for index in range(5):
 		var path := "thoma/swing/%02d.png" % index
 		var rec: Dictionary = audit.filter(func(r):return r.path==path)[0]
