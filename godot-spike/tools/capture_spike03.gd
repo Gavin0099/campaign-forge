@@ -88,6 +88,9 @@ func run() -> void:
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--output="): output = arg.trim_prefix("--output=")
 	timing_only = "--timing" in OS.get_cmdline_user_args()
+	if "--still1080" in OS.get_cmdline_user_args():
+		root.min_size = Vector2i(1920,1080)
+		root.size = Vector2i(1920,1080)
 	create_timer(60,true,false,true).timeout.connect(func():
 		if not complete: quit(3))
 	scene = load("res://scenes/Skirmish.tscn").instantiate()
@@ -97,7 +100,19 @@ func run() -> void:
 	scene.phase_changed.connect(func(value): phases.append({"phase":value,"frame":Engine.get_process_frames()}))
 	await process_frame
 	await process_frame
-	if timing_only:
+	if "--still1080" in OS.get_cmdline_user_args():
+		for pressed in [true,false]:
+			var key := InputEventKey.new()
+			key.keycode = KEY_R
+			key.pressed = pressed
+			Input.parse_input_event(key)
+		await scene.hitstop_started
+		await RenderingServer.frame_post_draw
+		var still: Image = root.get_texture().get_image()
+		failed = still.get_size()!=Vector2i(1920,1080)
+		await scene.attack_finished
+		failed = still.save_png(PREFIX+"contact-1080.png")!=OK or failed
+	elif timing_only:
 		for mode in ["normal","crit","reduced"]:
 			for setup in range(3):
 				scene.select_setup(setup)
@@ -131,6 +146,9 @@ func run() -> void:
 			failed = images[i].save_png(PREFIX+output+"/"+name) != OK or failed
 			rows[i]["png"] = name
 		write_json(PREFIX+output+"/timeline.json",{"frames":rows,"runs":runs,"contact_row":contact,
+			"impact_profile":scene.impact_profile.resource_path if has_property(scene,"impact_profile") else "A9 pre-W2 code",
+			"impact_layers":scene.impact_layers if has_property(scene,"impact_layers") else [],
+			"sfx_trace":scene.sfx_trace if has_property(scene,"sfx_trace") else [],
 			"contact_process_frame":rows[contact].process_frame if contact>=0 else -1,
 			"fixed_fps":60,"resolution":[1280,720],"movie_path":Engine.get_write_movie_path(),
 			"particle_note":"Godot CPU particles expose emitter capacity, not live particle count; upper bound is capacity of live emitters.",

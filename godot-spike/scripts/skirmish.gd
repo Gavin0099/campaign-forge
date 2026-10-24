@@ -124,6 +124,7 @@ func _ready() -> void:
 	world.add_child(grid_overlay)
 	grid_overlay.draw.connect(draw_grid)
 	build_hud()
+	update_crit_hint()
 	sound = AudioStreamPlayer.new()
 	var synth = preload("res://audio/impact_synth.gd")
 	sound.stream = synth.make_hit()
@@ -305,6 +306,7 @@ func play_attack(event_override: Array = []) -> void:
 	sfx_trace.clear()
 	hit_is_crit = next_hit_crit
 	next_hit_crit = false
+	update_crit_hint()
 	sequence_process_seconds = 0
 	var started := Time.get_ticks_usec()
 	for attack in current_plan.attacks:
@@ -500,6 +502,9 @@ func play_sfx(hook: String) -> void:
 		voice.finished.connect(voice.queue_free)
 		voice.play()
 
+func update_crit_hint() -> void:
+	hint_label.text = "1/2/3 | R REPLAY | C CRIT: " + ("ON" if next_hit_crit else "OFF")
+
 func show_damage(at: Vector2, amount: int) -> void:
 	var anchor: Vector2 = actors["knight-1"].position if impact_profile.number_from_target else at
 	var number := label_at(world, "−%d" % amount, anchor + Vector2(impact_profile.number_offset_x,impact_profile.number_offset_y), impact_profile.crit_number_font_px if hit_is_crit else impact_profile.number_font_px, impact_profile.crit_number_color if hit_is_crit else impact_profile.number_color)
@@ -509,7 +514,7 @@ func show_damage(at: Vector2, amount: int) -> void:
 	backing.bg_color = impact_profile.number_backing_color
 	backing.content_margin_left = impact_profile.number_margin_px
 	backing.content_margin_right = impact_profile.number_margin_px
-	number.add_theme_stylebox_override("normal",backing)
+	if impact_profile.number_backing: number.add_theme_stylebox_override("normal",backing)
 	number.z_index = 1000
 	number.add_theme_constant_override("outline_size", impact_profile.number_outline_px)
 	var tween := number.create_tween().set_parallel(true)
@@ -606,7 +611,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		KEY_C:
 			if not busy:
 				next_hit_crit = not next_hit_crit
-				hint_label.text = "NEXT HIT CRIT: %s | C TO TOGGLE" % next_hit_crit
+				update_crit_hint()
 		KEY_F1, KEY_QUOTELEFT:
 			set_debug_visible(not debug_visible)
 		KEY_H, KEY_QUESTION:

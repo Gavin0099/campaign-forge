@@ -33,7 +33,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 119.471
+			"wall_ms_from_strike": 105.727
 		},
 		{
 			"camera_offset": [
@@ -65,7 +65,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 147.215
+			"wall_ms_from_strike": 127.788
 		},
 		{
 			"camera_offset": [
@@ -97,7 +97,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 168.08
+			"wall_ms_from_strike": 148.429
 		},
 		{
 			"camera_offset": [
@@ -129,7 +129,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 191.231
+			"wall_ms_from_strike": 164.961
 		},
 		{
 			"camera_offset": [
@@ -161,7 +161,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 214.518
+			"wall_ms_from_strike": 183.072
 		},
 		{
 			"camera_offset": [
@@ -193,7 +193,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 238.102
+			"wall_ms_from_strike": 204.187
 		},
 		{
 			"camera_offset": [
@@ -225,7 +225,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 263.759
+			"wall_ms_from_strike": 228.523
 		},
 		{
 			"camera_offset": [
@@ -257,7 +257,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 291.672
+			"wall_ms_from_strike": 248.407
 		},
 		{
 			"camera_offset": [
@@ -289,7 +289,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 312.494
+			"wall_ms_from_strike": 270.466
 		},
 		{
 			"camera_offset": [
@@ -321,7 +321,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 333.613
+			"wall_ms_from_strike": 291.142
 		},
 		{
 			"camera_offset": [
@@ -354,7 +354,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 356.561
+			"wall_ms_from_strike": 312.371
 		},
 		{
 			"camera_offset": [
@@ -387,7 +387,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 379.571
+			"wall_ms_from_strike": 333.114
 		},
 		{
 			"camera_offset": [
@@ -420,7 +420,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 403.801
+			"wall_ms_from_strike": 353.925
 		},
 		{
 			"camera_offset": [
@@ -453,7 +453,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 429.057
+			"wall_ms_from_strike": 374.999
 		},
 		{
 			"camera_offset": [
@@ -486,7 +486,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 454.338
+			"wall_ms_from_strike": 399.482
 		},
 		{
 			"camera_offset": [
@@ -519,7 +519,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 480.023
+			"wall_ms_from_strike": 421.231
 		},
 		{
 			"camera_offset": [
@@ -552,7 +552,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 502.353
+			"wall_ms_from_strike": 441.937
 		},
 		{
 			"camera_offset": [
@@ -585,7 +585,7 @@
 				0.0
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 526.276
+			"wall_ms_from_strike": 463.785
 		},
 		{
 			"camera_offset": [
@@ -610,7 +610,7 @@
 				}
 			],
 			"hitstop": true,
-			"live_bursts": 0,
+			"live_bursts": 1,
 			"live_particle_count_upper_bound": 24,
 			"live_particle_emitters": 1,
 			"ms_from_strike": 300.0,
@@ -624,8 +624,10 @@
 			],
 			"sfx_triggers": [
 				{
+					"db": -7.0,
 					"frame": 19,
-					"type": "sfx"
+					"hook": "impact",
+					"swing_frame": 3
 				}
 			],
 			"strike_frame": 18,
@@ -635,7 +637,7 @@
 				0.0
 			],
 			"target_flash": 1.0,
-			"wall_ms_from_strike": 551.473
+			"wall_ms_from_strike": 485.56
 		},
 		{
 			"camera_offset": [
@@ -660,7 +662,7 @@
 				}
 			],
 			"hitstop": true,
-			"live_bursts": 0,
+			"live_bursts": 1,
 			"live_particle_count_upper_bound": 24,
 			"live_particle_emitters": 1,
 			"ms_from_strike": 316.666666666667,
@@ -680,7 +682,7 @@
 				0.0
 			],
 			"target_flash": 1.0,
-			"wall_ms_from_strike": 578.84
+			"wall_ms_from_strike": 504.842
 		},
 		{
 			"camera_offset": [
@@ -705,7 +707,7 @@
 				}
 			],
 			"hitstop": true,
-			"live_bursts": 0,
+			"live_bursts": 1,
 			"live_particle_count_upper_bound": 24,
 			"live_particle_emitters": 1,
 			"ms_from_strike": 333.333333333333,
@@ -725,7 +727,7 @@
 				0.0
 			],
 			"target_flash": 1.0,
-			"wall_ms_from_strike": 599.536
+			"wall_ms_from_strike": 527.372
 		},
 		{
 			"camera_offset": [
@@ -750,7 +752,7 @@
 				}
 			],
 			"hitstop": true,
-			"live_bursts": 0,
+			"live_bursts": 1,
 			"live_particle_count_upper_bound": 24,
 			"live_particle_emitters": 1,
 			"ms_from_strike": 350.0,
@@ -770,7 +772,7 @@
 				0.0
 			],
 			"target_flash": 1.0,
-			"wall_ms_from_strike": 621.534
+			"wall_ms_from_strike": 550.516
 		},
 		{
 			"camera_offset": [
@@ -795,7 +797,7 @@
 				}
 			],
 			"hitstop": true,
-			"live_bursts": 0,
+			"live_bursts": 1,
 			"live_particle_count_upper_bound": 24,
 			"live_particle_emitters": 1,
 			"ms_from_strike": 366.666666666667,
@@ -815,7 +817,7 @@
 				0.0
 			],
 			"target_flash": 1.0,
-			"wall_ms_from_strike": 646.426
+			"wall_ms_from_strike": 573.371
 		},
 		{
 			"camera_offset": [
@@ -840,7 +842,7 @@
 				}
 			],
 			"hitstop": false,
-			"live_bursts": 0,
+			"live_bursts": 1,
 			"live_particle_count_upper_bound": 24,
 			"live_particle_emitters": 1,
 			"ms_from_strike": 383.333333333333,
@@ -860,7 +862,7 @@
 				5.14437866210938
 			],
 			"target_flash": 0.523809492588043,
-			"wall_ms_from_strike": 674.137
+			"wall_ms_from_strike": 598.88
 		},
 		{
 			"camera_offset": [
@@ -885,7 +887,7 @@
 				}
 			],
 			"hitstop": false,
-			"live_bursts": 0,
+			"live_bursts": 1,
 			"live_particle_count_upper_bound": 24,
 			"live_particle_emitters": 1,
 			"ms_from_strike": 400.0,
@@ -905,7 +907,7 @@
 				9.51089477539063
 			],
 			"target_flash": 0.0476189851760864,
-			"wall_ms_from_strike": 703.62
+			"wall_ms_from_strike": 624.551
 		},
 		{
 			"camera_offset": [
@@ -930,7 +932,7 @@
 				}
 			],
 			"hitstop": false,
-			"live_bursts": 0,
+			"live_bursts": 1,
 			"live_particle_count_upper_bound": 24,
 			"live_particle_emitters": 1,
 			"ms_from_strike": 416.666666666667,
@@ -950,7 +952,7 @@
 				13.1633605957031
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 726.982
+			"wall_ms_from_strike": 645.512
 		},
 		{
 			"camera_offset": [
@@ -975,7 +977,7 @@
 				}
 			],
 			"hitstop": false,
-			"live_bursts": 0,
+			"live_bursts": 1,
 			"live_particle_count_upper_bound": 24,
 			"live_particle_emitters": 1,
 			"ms_from_strike": 433.333333333333,
@@ -995,7 +997,7 @@
 				16.1654663085938
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 744.452
+			"wall_ms_from_strike": 666.654
 		},
 		{
 			"camera_offset": [
@@ -1020,7 +1022,7 @@
 				}
 			],
 			"hitstop": false,
-			"live_bursts": 0,
+			"live_bursts": 1,
 			"live_particle_count_upper_bound": 24,
 			"live_particle_emitters": 1,
 			"ms_from_strike": 450.0,
@@ -1040,7 +1042,7 @@
 				18.5810241699219
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 765.489
+			"wall_ms_from_strike": 693.278
 		},
 		{
 			"camera_offset": [
@@ -1065,7 +1067,7 @@
 				}
 			],
 			"hitstop": false,
-			"live_bursts": 0,
+			"live_bursts": 1,
 			"live_particle_count_upper_bound": 24,
 			"live_particle_emitters": 1,
 			"ms_from_strike": 466.666666666667,
@@ -1085,7 +1087,7 @@
 				20.4737854003906
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 789.771
+			"wall_ms_from_strike": 716.95
 		},
 		{
 			"camera_offset": [
@@ -1110,7 +1112,7 @@
 				}
 			],
 			"hitstop": false,
-			"live_bursts": 0,
+			"live_bursts": 1,
 			"live_particle_count_upper_bound": 24,
 			"live_particle_emitters": 1,
 			"ms_from_strike": 483.333333333333,
@@ -1130,7 +1132,7 @@
 				21.907470703125
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 812.799
+			"wall_ms_from_strike": 740.854
 		},
 		{
 			"camera_offset": [
@@ -1175,7 +1177,7 @@
 				22.9458618164063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 832.476
+			"wall_ms_from_strike": 760.727
 		},
 		{
 			"camera_offset": [
@@ -1220,7 +1222,7 @@
 				23.6527099609375
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 856.036
+			"wall_ms_from_strike": 783.643
 		},
 		{
 			"camera_offset": [
@@ -1265,7 +1267,7 @@
 				24.091796875
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 877.625
+			"wall_ms_from_strike": 802.69
 		},
 		{
 			"camera_offset": [
@@ -1310,7 +1312,7 @@
 				24.3268432617188
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 902.838
+			"wall_ms_from_strike": 826.526
 		},
 		{
 			"camera_offset": [
@@ -1355,7 +1357,7 @@
 				24.421630859375
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 925.558
+			"wall_ms_from_strike": 849.936
 		},
 		{
 			"camera_offset": [
@@ -1400,7 +1402,7 @@
 				24.4399108886719
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 946.45
+			"wall_ms_from_strike": 872.864
 		},
 		{
 			"camera_offset": [
@@ -1445,7 +1447,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 973.199
+			"wall_ms_from_strike": 894.844
 		},
 		{
 			"camera_offset": [
@@ -1490,7 +1492,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 996.759
+			"wall_ms_from_strike": 919.05
 		},
 		{
 			"camera_offset": [
@@ -1535,7 +1537,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1019.318
+			"wall_ms_from_strike": 942.549
 		},
 		{
 			"camera_offset": [
@@ -1580,7 +1582,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1042.566
+			"wall_ms_from_strike": 964.366
 		},
 		{
 			"camera_offset": [
@@ -1625,7 +1627,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1067.971
+			"wall_ms_from_strike": 987.934
 		},
 		{
 			"camera_offset": [
@@ -1670,7 +1672,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1092.091
+			"wall_ms_from_strike": 1004.894
 		},
 		{
 			"camera_offset": [
@@ -1715,7 +1717,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1113.615
+			"wall_ms_from_strike": 1025.938
 		},
 		{
 			"camera_offset": [
@@ -1760,7 +1762,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1138.513
+			"wall_ms_from_strike": 1045.855
 		},
 		{
 			"camera_offset": [
@@ -1805,7 +1807,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1163.226
+			"wall_ms_from_strike": 1066.119
 		},
 		{
 			"camera_offset": [
@@ -1838,7 +1840,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1183.705
+			"wall_ms_from_strike": 1084.746
 		},
 		{
 			"camera_offset": [
@@ -1871,7 +1873,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1203.876
+			"wall_ms_from_strike": 1104.172
 		},
 		{
 			"camera_offset": [
@@ -1904,7 +1906,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1225.987
+			"wall_ms_from_strike": 1125.836
 		},
 		{
 			"camera_offset": [
@@ -1937,7 +1939,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1250.028
+			"wall_ms_from_strike": 1146.732
 		},
 		{
 			"camera_offset": [
@@ -1970,7 +1972,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1271.351
+			"wall_ms_from_strike": 1170.506
 		},
 		{
 			"camera_offset": [
@@ -2003,7 +2005,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1291.548
+			"wall_ms_from_strike": 1189.549
 		},
 		{
 			"camera_offset": [
@@ -2036,7 +2038,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1320.63
+			"wall_ms_from_strike": 1212.017
 		},
 		{
 			"camera_offset": [
@@ -2069,7 +2071,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1345.938
+			"wall_ms_from_strike": 1234.065
 		},
 		{
 			"camera_offset": [
@@ -2102,7 +2104,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1364.932
+			"wall_ms_from_strike": 1251.261
 		},
 		{
 			"camera_offset": [
@@ -2135,7 +2137,7 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1388.051
+			"wall_ms_from_strike": 1268.256
 		},
 		{
 			"camera_offset": [
@@ -2168,9 +2170,57 @@
 				24.4400024414063
 			],
 			"target_flash": 0.0,
-			"wall_ms_from_strike": 1410.453
+			"wall_ms_from_strike": 1288.023
 		}
 	],
+	"impact_layers": [
+		{
+			"frame": 19,
+			"suppressed": false,
+			"type": "hitstop"
+		},
+		{
+			"frame": 19,
+			"suppressed": false,
+			"type": "shake"
+		},
+		{
+			"frame": 19,
+			"suppressed": false,
+			"type": "flash"
+		},
+		{
+			"frame": 19,
+			"suppressed": false,
+			"type": "recoil"
+		},
+		{
+			"frame": 19,
+			"suppressed": false,
+			"type": "sparks"
+		},
+		{
+			"frame": 19,
+			"suppressed": false,
+			"type": "dust"
+		},
+		{
+			"frame": 19,
+			"suppressed": false,
+			"type": "number"
+		},
+		{
+			"frame": 19,
+			"suppressed": false,
+			"type": "zoom"
+		},
+		{
+			"frame": 19,
+			"suppressed": false,
+			"type": "sfx"
+		}
+	],
+	"impact_profile": "res://config/impact_profile_a9_baseline.tres",
 	"movie_path": "res://.godot/spike03-before/attack.avi",
 	"particle_note": "Godot CPU particles expose emitter capacity, not live particle count; upper bound is capacity of live emitters.",
 	"pass": true,
@@ -2186,7 +2236,7 @@
 			],
 			"fixed_fps_seconds": 0.916666666666667,
 			"hitstop_process_ms": 83.3333333333333,
-			"hitstop_wall_ms": 122.993,
+			"hitstop_wall_ms": 113.462,
 			"hp": 4,
 			"input_ready": true,
 			"mode": "normal",
@@ -2234,7 +2284,15 @@
 					"type": "flash"
 				}
 			],
-			"wall_seconds": 1.296902
+			"wall_seconds": 1.187101
+		}
+	],
+	"sfx_trace": [
+		{
+			"db": -7.0,
+			"frame": 19,
+			"hook": "impact",
+			"swing_frame": 3
 		}
 	]
 }

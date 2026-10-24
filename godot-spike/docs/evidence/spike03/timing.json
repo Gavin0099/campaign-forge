@@ -1,0 +1,544 @@
+{
+	"fixed_fps": 60,
+	"pass": true,
+	"readbacks": 0,
+	"runs": [
+		{
+			"cell": [
+				1.0,
+				6.0
+			],
+			"fixed_fps_seconds": 0.95,
+			"hitstop_process_ms": 116.666666666667,
+			"hitstop_wall_ms": 114.892,
+			"hp": 4,
+			"input_ready": true,
+			"mode": "normal",
+			"phases": [
+				{
+					"frame": 1,
+					"phase": "windup"
+				},
+				{
+					"frame": 12,
+					"phase": "lunge"
+				},
+				{
+					"frame": 19,
+					"phase": "contact"
+				},
+				{
+					"frame": 26,
+					"phase": "knockback"
+				},
+				{
+					"frame": 48,
+					"phase": "settled"
+				},
+				{
+					"frame": 58,
+					"phase": "ready"
+				}
+			],
+			"same_frame_contact": true,
+			"setup": 1,
+			"triggers": [
+				{
+					"frame": 19,
+					"suppressed": false,
+					"type": "spark"
+				},
+				{
+					"frame": 19,
+					"type": "sfx"
+				},
+				{
+					"frame": 19,
+					"suppressed": false,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 0.928577
+		},
+		{
+			"cell": [
+				1.0,
+				5.0
+			],
+			"fixed_fps_seconds": 0.95,
+			"hitstop_process_ms": 116.666666666667,
+			"hitstop_wall_ms": 114.266,
+			"hp": 4,
+			"input_ready": true,
+			"mode": "normal",
+			"phases": [
+				{
+					"frame": 59,
+					"phase": "windup"
+				},
+				{
+					"frame": 70,
+					"phase": "lunge"
+				},
+				{
+					"frame": 77,
+					"phase": "contact"
+				},
+				{
+					"frame": 84,
+					"phase": "blocked"
+				},
+				{
+					"frame": 87,
+					"phase": "blocked_recoil"
+				},
+				{
+					"frame": 106,
+					"phase": "settled"
+				},
+				{
+					"frame": 116,
+					"phase": "ready"
+				}
+			],
+			"same_frame_contact": true,
+			"setup": 2,
+			"triggers": [
+				{
+					"frame": 77,
+					"suppressed": false,
+					"type": "spark"
+				},
+				{
+					"frame": 77,
+					"type": "sfx"
+				},
+				{
+					"frame": 77,
+					"suppressed": false,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 0.918207
+		},
+		{
+			"cell": [
+				3.0,
+				4.0
+			],
+			"fixed_fps_seconds": 0.95,
+			"hitstop_process_ms": 116.666666666667,
+			"hitstop_wall_ms": 114.933,
+			"hp": 4,
+			"input_ready": true,
+			"mode": "normal",
+			"phases": [
+				{
+					"frame": 117,
+					"phase": "windup"
+				},
+				{
+					"frame": 128,
+					"phase": "lunge"
+				},
+				{
+					"frame": 135,
+					"phase": "contact"
+				},
+				{
+					"frame": 142,
+					"phase": "blocked"
+				},
+				{
+					"frame": 145,
+					"phase": "blocked_recoil"
+				},
+				{
+					"frame": 164,
+					"phase": "settled"
+				},
+				{
+					"frame": 174,
+					"phase": "ready"
+				}
+			],
+			"same_frame_contact": true,
+			"setup": 3,
+			"triggers": [
+				{
+					"frame": 135,
+					"suppressed": false,
+					"type": "spark"
+				},
+				{
+					"frame": 135,
+					"type": "sfx"
+				},
+				{
+					"frame": 135,
+					"suppressed": false,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 0.920291
+		},
+		{
+			"cell": [
+				1.0,
+				6.0
+			],
+			"fixed_fps_seconds": 1.01666666666667,
+			"hitstop_process_ms": 183.333333333333,
+			"hitstop_wall_ms": 184.101,
+			"hp": 4,
+			"input_ready": true,
+			"mode": "crit",
+			"phases": [
+				{
+					"frame": 175,
+					"phase": "windup"
+				},
+				{
+					"frame": 186,
+					"phase": "lunge"
+				},
+				{
+					"frame": 193,
+					"phase": "contact"
+				},
+				{
+					"frame": 204,
+					"phase": "knockback"
+				},
+				{
+					"frame": 226,
+					"phase": "settled"
+				},
+				{
+					"frame": 236,
+					"phase": "ready"
+				}
+			],
+			"same_frame_contact": true,
+			"setup": 1,
+			"triggers": [
+				{
+					"frame": 193,
+					"suppressed": false,
+					"type": "spark"
+				},
+				{
+					"frame": 193,
+					"type": "sfx"
+				},
+				{
+					"frame": 193,
+					"suppressed": false,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 0.987982
+		},
+		{
+			"cell": [
+				1.0,
+				5.0
+			],
+			"fixed_fps_seconds": 1.01666666666667,
+			"hitstop_process_ms": 183.333333333333,
+			"hitstop_wall_ms": 181.22,
+			"hp": 4,
+			"input_ready": true,
+			"mode": "crit",
+			"phases": [
+				{
+					"frame": 237,
+					"phase": "windup"
+				},
+				{
+					"frame": 248,
+					"phase": "lunge"
+				},
+				{
+					"frame": 255,
+					"phase": "contact"
+				},
+				{
+					"frame": 266,
+					"phase": "blocked"
+				},
+				{
+					"frame": 269,
+					"phase": "blocked_recoil"
+				},
+				{
+					"frame": 288,
+					"phase": "settled"
+				},
+				{
+					"frame": 298,
+					"phase": "ready"
+				}
+			],
+			"same_frame_contact": true,
+			"setup": 2,
+			"triggers": [
+				{
+					"frame": 255,
+					"suppressed": false,
+					"type": "spark"
+				},
+				{
+					"frame": 255,
+					"type": "sfx"
+				},
+				{
+					"frame": 255,
+					"suppressed": false,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 0.983269
+		},
+		{
+			"cell": [
+				3.0,
+				4.0
+			],
+			"fixed_fps_seconds": 1.01666666666667,
+			"hitstop_process_ms": 183.333333333333,
+			"hitstop_wall_ms": 182.533,
+			"hp": 4,
+			"input_ready": true,
+			"mode": "crit",
+			"phases": [
+				{
+					"frame": 299,
+					"phase": "windup"
+				},
+				{
+					"frame": 310,
+					"phase": "lunge"
+				},
+				{
+					"frame": 317,
+					"phase": "contact"
+				},
+				{
+					"frame": 328,
+					"phase": "blocked"
+				},
+				{
+					"frame": 331,
+					"phase": "blocked_recoil"
+				},
+				{
+					"frame": 350,
+					"phase": "settled"
+				},
+				{
+					"frame": 360,
+					"phase": "ready"
+				}
+			],
+			"same_frame_contact": true,
+			"setup": 3,
+			"triggers": [
+				{
+					"frame": 317,
+					"suppressed": false,
+					"type": "spark"
+				},
+				{
+					"frame": 317,
+					"type": "sfx"
+				},
+				{
+					"frame": 317,
+					"suppressed": false,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 0.97586
+		},
+		{
+			"cell": [
+				1.0,
+				6.0
+			],
+			"fixed_fps_seconds": 0.716666666666667,
+			"hitstop_process_ms": 83.3333333333333,
+			"hitstop_wall_ms": 82.524,
+			"hp": 4,
+			"input_ready": true,
+			"mode": "reduced",
+			"phases": [
+				{
+					"frame": 361,
+					"phase": "windup"
+				},
+				{
+					"frame": 367,
+					"phase": "lunge"
+				},
+				{
+					"frame": 367,
+					"phase": "contact"
+				},
+				{
+					"frame": 372,
+					"phase": "knockback"
+				},
+				{
+					"frame": 394,
+					"phase": "settled"
+				},
+				{
+					"frame": 404,
+					"phase": "ready"
+				}
+			],
+			"same_frame_contact": true,
+			"setup": 1,
+			"triggers": [
+				{
+					"frame": 367,
+					"suppressed": true,
+					"type": "spark"
+				},
+				{
+					"frame": 367,
+					"type": "sfx"
+				},
+				{
+					"frame": 367,
+					"suppressed": true,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 0.683442
+		},
+		{
+			"cell": [
+				1.0,
+				5.0
+			],
+			"fixed_fps_seconds": 0.716666666666667,
+			"hitstop_process_ms": 83.3333333333333,
+			"hitstop_wall_ms": 81.159,
+			"hp": 4,
+			"input_ready": true,
+			"mode": "reduced",
+			"phases": [
+				{
+					"frame": 405,
+					"phase": "windup"
+				},
+				{
+					"frame": 411,
+					"phase": "lunge"
+				},
+				{
+					"frame": 411,
+					"phase": "contact"
+				},
+				{
+					"frame": 416,
+					"phase": "blocked"
+				},
+				{
+					"frame": 419,
+					"phase": "blocked_recoil"
+				},
+				{
+					"frame": 438,
+					"phase": "settled"
+				},
+				{
+					"frame": 448,
+					"phase": "ready"
+				}
+			],
+			"same_frame_contact": true,
+			"setup": 2,
+			"triggers": [
+				{
+					"frame": 411,
+					"suppressed": true,
+					"type": "spark"
+				},
+				{
+					"frame": 411,
+					"type": "sfx"
+				},
+				{
+					"frame": 411,
+					"suppressed": true,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 0.676853
+		},
+		{
+			"cell": [
+				3.0,
+				4.0
+			],
+			"fixed_fps_seconds": 0.716666666666667,
+			"hitstop_process_ms": 83.3333333333333,
+			"hitstop_wall_ms": 82.646,
+			"hp": 4,
+			"input_ready": true,
+			"mode": "reduced",
+			"phases": [
+				{
+					"frame": 449,
+					"phase": "windup"
+				},
+				{
+					"frame": 455,
+					"phase": "lunge"
+				},
+				{
+					"frame": 455,
+					"phase": "contact"
+				},
+				{
+					"frame": 460,
+					"phase": "blocked"
+				},
+				{
+					"frame": 463,
+					"phase": "blocked_recoil"
+				},
+				{
+					"frame": 482,
+					"phase": "settled"
+				},
+				{
+					"frame": 492,
+					"phase": "ready"
+				}
+			],
+			"same_frame_contact": true,
+			"setup": 3,
+			"triggers": [
+				{
+					"frame": 455,
+					"suppressed": true,
+					"type": "spark"
+				},
+				{
+					"frame": 455,
+					"type": "sfx"
+				},
+				{
+					"frame": 455,
+					"suppressed": true,
+					"type": "flash"
+				}
+			],
+			"wall_seconds": 0.681805
+		}
+	]
+}

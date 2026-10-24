@@ -49,6 +49,7 @@ extends Resource
 @export var number_color: Color = Color("d2b777")
 @export var crit_number_color: Color = Color("dd9c7e")
 @export var number_backing_color: Color = Color("101a19")
+@export var number_backing: bool = true
 @export_range(0, 8, 1) var number_margin_px: int = 3
 @export_range(0, 8, 1) var number_outline_px: int = 3
 @export_range(1, 2.2, 0.01) var number_scale: float = 1

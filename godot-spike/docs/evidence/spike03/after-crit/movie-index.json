@@ -1,0 +1,63 @@
+{
+  "fps": 60,
+  "frames": 64,
+  "bytes": 8032720,
+  "sha256": "d46a826eb26d608fcff16667f2dd63bae8925732c894349b14de76b0edf32702",
+  "timeline_run": {
+    "cell": [
+      1.0,
+      6.0
+    ],
+    "fixed_fps_seconds": 1.01666666666667,
+    "hitstop_process_ms": 183.333333333333,
+    "hitstop_wall_ms": 240.323,
+    "hp": 4,
+    "input_ready": true,
+    "mode": "crit",
+    "phases": [
+      {
+        "frame": 1,
+        "phase": "windup"
+      },
+      {
+        "frame": 12,
+        "phase": "lunge"
+      },
+      {
+        "frame": 19,
+        "phase": "contact"
+      },
+      {
+        "frame": 30,
+        "phase": "knockback"
+      },
+      {
+        "frame": 52,
+        "phase": "settled"
+      },
+      {
+        "frame": 62,
+        "phase": "ready"
+      }
+    ],
+    "same_frame_contact": true,
+    "setup": 1,
+    "triggers": [
+      {
+        "frame": 19,
+        "suppressed": false,
+        "type": "spark"
+      },
+      {
+        "frame": 19,
+        "type": "sfx"
+      },
+      {
+        "frame": 19,
+        "suppressed": false,
+        "type": "flash"
+      }
+    ],
+    "wall_seconds": 1.377581
+  }
+}
