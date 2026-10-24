@@ -30,7 +30,7 @@
       },
       "garment_silhouette_iou": 0.914796,
       "iou_source": "registered SOURCE alpha garment ROI (100,275)-(420,440), not segmentation of actual rendered RGB",
-      "character_height_delta_px": 19,
+      "character_height_delta_px": 6,
       "result": "FAIL",
       "reason": "Mixed head01 identity, broad retained cloth and A8 stance/feet jumps; proxy values do not establish no flicker."
     },
@@ -47,7 +47,7 @@
       },
       "garment_silhouette_iou": 0.773543,
       "iou_source": "registered SOURCE alpha garment ROI (100,275)-(420,440), not segmentation of actual rendered RGB",
-      "character_height_delta_px": -21,
+      "character_height_delta_px": -8,
       "result": "FAIL",
       "reason": "Mixed head01 identity, broad retained cloth and A8 stance/feet jumps; proxy values do not establish no flicker."
     },

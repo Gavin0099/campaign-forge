@@ -141,7 +141,7 @@
         259.1111111111111,
         86.61191626409018
       ],
-      "character_height_px": 374,
+      "character_height_px": 361,
       "lowest_opaque_y": 464,
       "uncertainty_px": {
         "visible": 2,
@@ -1359,7 +1359,7 @@
         "foot_left",
         "foot_right"
       ],
-      "character_height_delta_px": 19,
+      "character_height_delta_px": 6,
       "result": "FAIL"
     },
     {
@@ -1459,7 +1459,7 @@
         "foot_left",
         "foot_right"
       ],
-      "character_height_delta_px": -21,
+      "character_height_delta_px": -8,
       "result": "FAIL"
     },
     {

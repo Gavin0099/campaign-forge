@@ -77,8 +77,11 @@ def landmarks():
         r['mace_head']=rec['technical']['mace_centre']
         im=Image.open(SHARED/p);box=HEAD_BOXES[f]
         opaque=im.crop((box[0],90,box[2],190)).getchannel('A').point(lambda v:255 if v>127 else 0)
-        # Read head ROI only, excluding raised weapon where it crosses that ROI.
-        top=opaque.getbbox()[1]+90;r['character_height_px']=464-top;r['lowest_opaque_y']=technical(p)['lowest_opaque_y']
+        # 01's raised weapon overlaps this ROI: its unchanged head uses the
+        # original A8 manual headtop103 instead of treating the mace as hair.
+        if 'head' in rec['kept_regions']:
+            top=opaque.getbbox()[1]+90;r['character_height_px']=464-top
+        r['lowest_opaque_y']=technical(p)['lowest_opaque_y']
         r['measurement']='Head centre transferred from manually picked anchor through kept rigid matrix; headtop scanned in local ROI; other landmarks retained A8 native manual observations because those pixels are identical. Mace is independent final alpha centroid. Hidden joints +/-12px, visible +/-2px.'
         data['per_frame'][p]={n:{'measured':r[n],'target':spec['frames'][f]['targets'][n],'delta':[round(a-b,4) for a,b in zip(r[n],spec['frames'][f]['targets'][n])],
           'error_px':round(math.dist(r[n],spec['frames'][f]['targets'][n]),4),'within4':math.dist(r[n],spec['frames'][f]['targets'][n])<=4} for n in names}

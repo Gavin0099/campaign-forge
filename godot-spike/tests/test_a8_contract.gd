@@ -2,6 +2,10 @@ extends "res://addons/gut/test.gd"
 const SHARED = "res://art/anim-shared/"
 const E = "res://docs/evidence/spike02-a8/"
 const REPO = "res://../"
+const A8_ARCHIVE = "res://docs/evidence/spike02-a9/baseline-a8/"
+
+func a8_frame(path: String) -> String:
+	return A8_ARCHIVE + ("idle-01.png" if path.contains("/idle/") else path.get_file())
 const CHECKS = ["face_hair","stole","embroidery","tassels","cuffs","hem","palette","seams","bag_count","feet","mace","landmarks","sequence"]
 const TARGETS = [Vector2(192,85),Vector2(259,87),Vector2(449,110),Vector2(455,196),Vector2(421,376)]
 
@@ -9,6 +13,7 @@ func json(path: String):
 	return JSON.parse_string(FileAccess.get_file_as_string(path))
 
 func image(path: String) -> Image:
+	if path.begins_with(SHARED+"thoma/"): path = a8_frame(path)
 	var im := Image.new()
 	assert_eq(im.load_png_from_buffer(FileAccess.get_file_as_bytes(path)),OK)
 	return im
@@ -78,10 +83,10 @@ func test_a8_placeholder_is_exactly_the_complete_brief_gate_and_matches_handoff(
 	var table := FileAccess.get_file_as_string(E+"frame-status-table.md")
 	var handoff := FileAccess.get_file_as_string("res://docs/HANDOFF.md")
 	var count := 0
-	for record in json(SHARED+"frame-audit.json"):
+	for record in json(A8_ARCHIVE+"frame-audit.json"):
 		if not record.path.begins_with("thoma/"):continue
 		count+=1
-		assert_eq(record.sha256,FileAccess.get_sha256(SHARED+record.path))
+		assert_eq(record.sha256,FileAccess.get_sha256(a8_frame(record.path)))
 		assert_eq(record.bag_count,1.0)
 		assert_eq(record.weapon_status,"APPROVED")
 		var passed: bool = record.technical_check.pass
@@ -118,7 +123,7 @@ func test_a8_one_shared_sheet_inputs_and_every_final_adoption_are_hash_bound() -
 		assert_eq(record.sheet_attempt,provenance.selected_attempt)
 		assert_eq(record.raw_sha256,FileAccess.get_sha256(REPO+record.raw))
 		assert_eq(record.runtime_sha256,FileAccess.get_sha256(REPO+record.runtime))
-		assert_eq(record.runtime_sha256,FileAccess.get_sha256(SHARED+record.frame))
+		assert_eq(record.runtime_sha256,FileAccess.get_sha256(a8_frame(record.frame)))
 		for fix in record.local_fixes:
 			for pair in [["input","input_sha256"],["output","output_sha256"],["mask","mask_sha256"]]:
 				assert_eq(fix[pair[1]],FileAccess.get_sha256(REPO+fix[pair[0]]))
