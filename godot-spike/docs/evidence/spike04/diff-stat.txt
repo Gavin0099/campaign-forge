@@ -16,9 +16,11 @@
  godot-spike/config/impact_profile_spike03.tres     |   42 +
  godot-spike/data/levels/field_24x18.gd             |   59 +
  godot-spike/data/levels/field_24x18.gd.uid         |    1 +
+ godot-spike/docs/VERIFICATION.md                   |   89 +
  godot-spike/docs/evidence/spike04/MOVIE.md         |   32 +
  godot-spike/docs/evidence/spike04/PACING.md        |   54 +
  godot-spike/docs/evidence/spike04/PERFORMANCE.md   |   30 +
+ godot-spike/docs/evidence/spike04/README.md        |   38 +
  godot-spike/docs/evidence/spike04/WORK.md          |   34 +
  .../attempts/parsed-mouse/capture-sequence.json    |   80 +
  .../spike04/attempts/parsed-mouse/sequence.avi     |  Bin 0 -> 7443118 bytes
@@ -26,6 +28,7 @@
  .../attempts/sequence-first/capture-sequence.json  |   89 +
  .../spike04/attempts/sequence-first/sequence.avi   |  Bin 0 -> 11042008 bytes
  .../attempts/sequence-first/w6-sequence.log        |   12 +
+ godot-spike/docs/evidence/spike04/audit.json       |  400 ++
  .../docs/evidence/spike04/autoplay/flank.json      | 4629 +++++++++++++++
  .../evidence/spike04/autoplay/initial/flank.json   | 4160 +++++++++++++
  .../evidence/spike04/autoplay/initial/road.json    | 4796 +++++++++++++++
@@ -48,15 +51,18 @@
  .../docs/evidence/spike04/capture-perf.json        |    9 +
  .../docs/evidence/spike04/capture-sequence.json    |  106 +
  .../docs/evidence/spike04/capture-stills.json      |  122 +
+ .../docs/evidence/spike04/changed-paths.txt        |  376 ++
  .../docs/evidence/spike04/debug-overlay.png        |  Bin 0 -> 508226 bytes
  .../docs/evidence/spike04/deployment-1080.png      |  Bin 0 -> 843282 bytes
  godot-spike/docs/evidence/spike04/deployment.png   |  Bin 0 -> 441961 bytes
+ godot-spike/docs/evidence/spike04/diff-stat.txt    |  376 ++
  godot-spike/docs/evidence/spike04/enemy-movie.json |   27 +
  .../docs/evidence/spike04/enemy-phase-60fps.avi    |  Bin 0 -> 15768480 bytes
  godot-spike/docs/evidence/spike04/enemy-phase.png  |  Bin 0 -> 555259 bytes
  .../docs/evidence/spike04/first-contact.png        |  Bin 0 -> 643513 bytes
+ godot-spike/docs/evidence/spike04/git-scope.json   |    9 +
  .../hitfeel/impact-strip-spike03-vs-spike04.png    |  Bin 0 -> 7687577 bytes
- .../docs/evidence/spike04/hitfeel/spike03-crit.log |  Bin 0 -> 1874 bytes
+ .../docs/evidence/spike04/hitfeel/spike03-crit.log |   13 +
  .../spike04/hitfeel/spike03-crit/attack-60fps.avi  |  Bin 0 -> 8032720 bytes
  .../spike04/hitfeel/spike03-crit/contact.png       |  Bin 0 -> 1465535 bytes
  .../spike04/hitfeel/spike03-crit/frames/0010.png   |  Bin 0 -> 1253447 bytes
@@ -113,7 +119,7 @@
  .../spike04/hitfeel/spike03-crit/frames/0061.png   |  Bin 0 -> 903072 bytes
  .../spike04/hitfeel/spike03-crit/impact-strip.png  |  Bin 0 -> 1820959 bytes
  .../spike04/hitfeel/spike03-crit/timeline.json     | 2594 ++++++++
- .../evidence/spike04/hitfeel/spike03-normal.log    |  Bin 0 -> 1882 bytes
+ .../evidence/spike04/hitfeel/spike03-normal.log    |   13 +
  .../hitfeel/spike03-normal/attack-60fps.avi        |  Bin 0 -> 7484838 bytes
  .../spike04/hitfeel/spike03-normal/contact.png     |  Bin 0 -> 1467722 bytes
  .../spike04/hitfeel/spike03-normal/frames/0010.png |  Bin 0 -> 1253447 bytes
@@ -166,7 +172,7 @@
  .../spike04/hitfeel/spike03-normal/frames/0057.png |  Bin 0 -> 903072 bytes
  .../hitfeel/spike03-normal/impact-strip.png        |  Bin 0 -> 2019094 bytes
  .../spike04/hitfeel/spike03-normal/timeline.json   | 2414 ++++++++
- .../docs/evidence/spike04/hitfeel/spike04-crit.log |  Bin 0 -> 1874 bytes
+ .../docs/evidence/spike04/hitfeel/spike04-crit.log |   13 +
  .../spike04/hitfeel/spike04-crit/attack-60fps.avi  |  Bin 0 -> 8027342 bytes
  .../spike04/hitfeel/spike04-crit/contact.png       |  Bin 0 -> 1467357 bytes
  .../spike04/hitfeel/spike04-crit/frames/0010.png   |  Bin 0 -> 1253447 bytes
@@ -223,7 +229,7 @@
  .../spike04/hitfeel/spike04-crit/frames/0061.png   |  Bin 0 -> 903072 bytes
  .../spike04/hitfeel/spike04-crit/impact-strip.png  |  Bin 0 -> 1825684 bytes
  .../spike04/hitfeel/spike04-crit/timeline.json     | 2594 ++++++++
- .../evidence/spike04/hitfeel/spike04-normal.log    |  Bin 0 -> 1882 bytes
+ .../evidence/spike04/hitfeel/spike04-normal.log    |   13 +
  .../hitfeel/spike04-normal/attack-60fps.avi        |  Bin 0 -> 7481220 bytes
  .../spike04/hitfeel/spike04-normal/contact.png     |  Bin 0 -> 1469345 bytes
  .../spike04/hitfeel/spike04-normal/frames/0010.png |  Bin 0 -> 1253447 bytes
@@ -277,7 +283,7 @@
  .../hitfeel/spike04-normal/impact-strip.png        |  Bin 0 -> 2022557 bytes
  .../spike04/hitfeel/spike04-normal/timeline.json   | 2414 ++++++++
  .../docs/evidence/spike04/hitfeel/timing.json      |  544 ++
- .../docs/evidence/spike04/hitfeel/timing.log       |  Bin 0 -> 2042 bytes
+ .../docs/evidence/spike04/hitfeel/timing.log       |   13 +
  godot-spike/docs/evidence/spike04/melee-hit.png    |  Bin 0 -> 665467 bytes
  .../docs/evidence/spike04/mid-battle-overview.png  |  Bin 0 -> 273281 bytes
  .../docs/evidence/spike04/move-confirmed.png       |  Bin 0 -> 407118 bytes
@@ -291,41 +297,47 @@
  .../docs/evidence/spike04/runtime-battle.json      | 5254 +++++++++++++++++
  .../spike04/scroll-select-move-attack-60fps.avi    |  Bin 0 -> 14577498 bytes
  godot-spike/docs/evidence/spike04/scroll.png       |  Bin 0 -> 465571 bytes
- godot-spike/docs/evidence/spike04/w1-import.log    |  Bin 0 -> 2712 bytes
- godot-spike/docs/evidence/spike04/w1-tests.log     |  Bin 0 -> 20652 bytes
- godot-spike/docs/evidence/spike04/w2-import.log    |  Bin 0 -> 2450 bytes
- godot-spike/docs/evidence/spike04/w2-rules.log     |  Bin 0 -> 2650 bytes
- .../docs/evidence/spike04/w3-battle-final.log      |  Bin 0 -> 1816 bytes
- godot-spike/docs/evidence/spike04/w3-battle.log    |  Bin 0 -> 4790 bytes
+ .../docs/evidence/spike04/source-hashes.json       | 3372 +++++++++++
+ godot-spike/docs/evidence/spike04/test-run.log     |  272 +
+ .../docs/evidence/spike04/untracked-paths.txt      |   13 +
+ godot-spike/docs/evidence/spike04/w1-import.log    |   23 +
+ godot-spike/docs/evidence/spike04/w1-tests.log     |  220 +
+ godot-spike/docs/evidence/spike04/w2-import.log    |   21 +
+ godot-spike/docs/evidence/spike04/w2-rules.log     |   40 +
+ .../docs/evidence/spike04/w3-battle-final.log      |   32 +
+ godot-spike/docs/evidence/spike04/w3-battle.log    |   56 +
  .../docs/evidence/spike04/w3-deployment.png        |  Bin 0 -> 424629 bytes
- godot-spike/docs/evidence/spike04/w3-import.log    |  Bin 0 -> 7880 bytes
- godot-spike/docs/evidence/spike04/w3-render.log    |  Bin 0 -> 462 bytes
- godot-spike/docs/evidence/spike04/w3-smoke.log     |  Bin 0 -> 1584 bytes
- godot-spike/docs/evidence/spike04/w4-battle.log    |  Bin 0 -> 1816 bytes
- .../docs/evidence/spike04/w4-camera-final.log      |  Bin 0 -> 2012 bytes
- godot-spike/docs/evidence/spike04/w4-camera.log    |  Bin 0 -> 4534 bytes
- godot-spike/docs/evidence/spike04/w5-ui.log        |  Bin 0 -> 2054 bytes
+ godot-spike/docs/evidence/spike04/w3-import.log    |   70 +
+ godot-spike/docs/evidence/spike04/w3-render.log    |    4 +
+ godot-spike/docs/evidence/spike04/w3-smoke.log     |   13 +
+ godot-spike/docs/evidence/spike04/w4-battle.log    |   32 +
+ .../docs/evidence/spike04/w4-camera-final.log      |   34 +
+ godot-spike/docs/evidence/spike04/w4-camera.log    |   55 +
+ godot-spike/docs/evidence/spike04/w5-ui.log        |   34 +
  .../docs/evidence/spike04/w6-1080-final.log        |    4 +
  godot-spike/docs/evidence/spike04/w6-1080.log      |    4 +
  .../docs/evidence/spike04/w6-autoplay-retuned.log  |    5 +
  godot-spike/docs/evidence/spike04/w6-autoplay.log  |    5 +
- .../evidence/spike04/w6-battle-handler-final.log   |   34 +
- .../evidence/spike04/w6-battle-input-final.log     |   46 +
- .../evidence/spike04/w6-battle-input-tests.log     |   72 +
+ .../evidence/spike04/w6-battle-handler-final.log   |   33 +
+ .../evidence/spike04/w6-battle-input-final.log     |   45 +
+ .../evidence/spike04/w6-battle-input-tests.log     |   71 +
  godot-spike/docs/evidence/spike04/w6-debug.log     |    4 +
  .../docs/evidence/spike04/w6-enemy-final.log       |   12 +
  .../docs/evidence/spike04/w6-enemy-movie.log       |   21 +
  .../docs/evidence/spike04/w6-full-battle-final.log |    4 +
  .../docs/evidence/spike04/w6-full-battle.log       |    4 +
- godot-spike/docs/evidence/spike04/w6-import.log    |   78 +
+ godot-spike/docs/evidence/spike04/w6-import.log    |   77 +
  .../docs/evidence/spike04/w6-performance-clean.log |    4 +
  .../docs/evidence/spike04/w6-performance-final.log |  414 ++
  .../docs/evidence/spike04/w6-performance.log       |   13 +
- .../docs/evidence/spike04/w6-policy-tests.log      |   32 +
+ .../docs/evidence/spike04/w6-policy-tests.log      |   31 +
  .../docs/evidence/spike04/w6-sequence-final.log    |   12 +
  .../docs/evidence/spike04/w6-sequence-final2.log   |   28 +
  .../docs/evidence/spike04/w6-sequence-verified.log |   12 +
  godot-spike/docs/evidence/spike04/w6-sequence.log  |   12 +
+ godot-spike/docs/evidence/spike04/w7-audit-run.log |  Bin 0 -> 156 bytes
+ .../docs/evidence/spike04/w7-exit-codes.json       |    6 +
+ godot-spike/docs/evidence/spike04/w7-import.log    |   26 +
  godot-spike/docs/evidence/spike04/win.png          |  Bin 0 -> 387636 bytes
  godot-spike/scenes/levels/Field24x18.tscn          |    6 +
  godot-spike/scripts/impact/impact_profile.gd       |    8 +
@@ -349,6 +361,7 @@
  godot-spike/scripts/rules/field_rules.gd.uid       |    1 +
  godot-spike/scripts/skirmish.gd                    |    8 +-
  godot-spike/tests/test_field_autoplay.gd           |   54 +
+ godot-spike/tests/test_field_autoplay.gd.uid       |    1 +
  godot-spike/tests/test_field_battle.gd             |  105 +
  godot-spike/tests/test_field_battle.gd.uid         |    1 +
  godot-spike/tests/test_field_camera.gd             |  117 +
@@ -360,6 +373,7 @@
  godot-spike/tests/test_spike03_impact.gd           |    4 +-
  godot-spike/tests/test_spike04_profile.gd          |   23 +
  godot-spike/tests/test_spike04_profile.gd.uid      |    1 +
+ godot-spike/tools/audit_spike04.py                 |  105 +
  godot-spike/tools/autoplay_field.gd                |   49 +
  godot-spike/tools/autoplay_field.gd.uid            |    1 +
  godot-spike/tools/capture_field.gd                 |  274 +
@@ -373,4 +387,4 @@
  godot-spike/tools/make_field_art.py                |   63 +
  godot-spike/tools/package_field_evidence.py        |  175 +
  godot-spike/tools/package_spike04_hitfeel.py       |   40 +
- 375 files changed, 46352 insertions(+), 11 deletions(-)
+ 389 files changed, 52129 insertions(+), 11 deletions(-)

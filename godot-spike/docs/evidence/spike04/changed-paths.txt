@@ -16,10 +16,12 @@ godot-spike/config/impact_profile.tres
 godot-spike/config/impact_profile_spike03.tres
 godot-spike/data/levels/field_24x18.gd
 godot-spike/data/levels/field_24x18.gd.uid
+godot-spike/docs/HANDOFF.md
 godot-spike/docs/VERIFICATION.md
 godot-spike/docs/evidence/spike04/MOVIE.md
 godot-spike/docs/evidence/spike04/PACING.md
 godot-spike/docs/evidence/spike04/PERFORMANCE.md
+godot-spike/docs/evidence/spike04/README.md
 godot-spike/docs/evidence/spike04/WORK.md
 godot-spike/docs/evidence/spike04/attempts/parsed-mouse/capture-sequence.json
 godot-spike/docs/evidence/spike04/attempts/parsed-mouse/sequence.avi
@@ -27,6 +29,7 @@ godot-spike/docs/evidence/spike04/attempts/sequence-first/camera-sequence.json
 godot-spike/docs/evidence/spike04/attempts/sequence-first/capture-sequence.json
 godot-spike/docs/evidence/spike04/attempts/sequence-first/sequence.avi
 godot-spike/docs/evidence/spike04/attempts/sequence-first/w6-sequence.log
+godot-spike/docs/evidence/spike04/audit.json
 godot-spike/docs/evidence/spike04/autoplay/flank.json
 godot-spike/docs/evidence/spike04/autoplay/initial/flank.json
 godot-spike/docs/evidence/spike04/autoplay/initial/road.json
@@ -49,13 +52,16 @@ godot-spike/docs/evidence/spike04/capture-enemy.json
 godot-spike/docs/evidence/spike04/capture-perf.json
 godot-spike/docs/evidence/spike04/capture-sequence.json
 godot-spike/docs/evidence/spike04/capture-stills.json
+godot-spike/docs/evidence/spike04/changed-paths.txt
 godot-spike/docs/evidence/spike04/debug-overlay.png
 godot-spike/docs/evidence/spike04/deployment-1080.png
 godot-spike/docs/evidence/spike04/deployment.png
+godot-spike/docs/evidence/spike04/diff-stat.txt
 godot-spike/docs/evidence/spike04/enemy-movie.json
 godot-spike/docs/evidence/spike04/enemy-phase-60fps.avi
 godot-spike/docs/evidence/spike04/enemy-phase.png
 godot-spike/docs/evidence/spike04/first-contact.png
+godot-spike/docs/evidence/spike04/git-scope.json
 godot-spike/docs/evidence/spike04/hitfeel/impact-strip-spike03-vs-spike04.png
 godot-spike/docs/evidence/spike04/hitfeel/spike03-crit.log
 godot-spike/docs/evidence/spike04/hitfeel/spike03-crit/attack-60fps.avi
@@ -292,6 +298,9 @@ godot-spike/docs/evidence/spike04/runtime-attack-timings.json
 godot-spike/docs/evidence/spike04/runtime-battle.json
 godot-spike/docs/evidence/spike04/scroll-select-move-attack-60fps.avi
 godot-spike/docs/evidence/spike04/scroll.png
+godot-spike/docs/evidence/spike04/source-hashes.json
+godot-spike/docs/evidence/spike04/test-run.log
+godot-spike/docs/evidence/spike04/untracked-paths.txt
 godot-spike/docs/evidence/spike04/w1-import.log
 godot-spike/docs/evidence/spike04/w1-tests.log
 godot-spike/docs/evidence/spike04/w2-import.log
@@ -327,6 +336,9 @@ godot-spike/docs/evidence/spike04/w6-sequence-final.log
 godot-spike/docs/evidence/spike04/w6-sequence-final2.log
 godot-spike/docs/evidence/spike04/w6-sequence-verified.log
 godot-spike/docs/evidence/spike04/w6-sequence.log
+godot-spike/docs/evidence/spike04/w7-audit-run.log
+godot-spike/docs/evidence/spike04/w7-exit-codes.json
+godot-spike/docs/evidence/spike04/w7-import.log
 godot-spike/docs/evidence/spike04/win.png
 godot-spike/scenes/levels/Field24x18.tscn
 godot-spike/scripts/impact/impact_profile.gd
@@ -350,6 +362,7 @@ godot-spike/scripts/rules/field_rules.gd
 godot-spike/scripts/rules/field_rules.gd.uid
 godot-spike/scripts/skirmish.gd
 godot-spike/tests/test_field_autoplay.gd
+godot-spike/tests/test_field_autoplay.gd.uid
 godot-spike/tests/test_field_battle.gd
 godot-spike/tests/test_field_battle.gd.uid
 godot-spike/tests/test_field_camera.gd
@@ -361,6 +374,7 @@ godot-spike/tests/test_field_ui.gd.uid
 godot-spike/tests/test_spike03_impact.gd
 godot-spike/tests/test_spike04_profile.gd
 godot-spike/tests/test_spike04_profile.gd.uid
+godot-spike/tools/audit_spike04.py
 godot-spike/tools/autoplay_field.gd
 godot-spike/tools/autoplay_field.gd.uid
 godot-spike/tools/capture_field.gd

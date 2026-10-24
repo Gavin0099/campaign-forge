@@ -1,13 +1,1 @@
-godot-spike/docs/evidence/spike04/README.md
-godot-spike/docs/evidence/spike04/audit.json
-godot-spike/docs/evidence/spike04/changed-paths.txt
-godot-spike/docs/evidence/spike04/diff-stat.txt
-godot-spike/docs/evidence/spike04/git-scope.json
-godot-spike/docs/evidence/spike04/source-hashes.json
-godot-spike/docs/evidence/spike04/test-run.log
-godot-spike/docs/evidence/spike04/untracked-paths.txt
-godot-spike/docs/evidence/spike04/w7-audit-run.log
-godot-spike/docs/evidence/spike04/w7-exit-codes.json
-godot-spike/docs/evidence/spike04/w7-import.log
-godot-spike/tests/test_field_autoplay.gd.uid
-godot-spike/tools/audit_spike04.py
+godot-spike/docs/evidence/spike04/w8-audit-run.log

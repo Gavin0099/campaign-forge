@@ -2457,3 +2457,229 @@ missing_canonical_memory僅report-only advisory，沒有繞過hook。
 **W7交接commit完成後停止，等待Owner review。不push、merge、PR、stash、部署、
 Actions或自動接續下一任務。此為task DONE，不是SessionEnd；沒有宣稱canonical
 closeout或完整原生治理接線驗收。**
+
+## spike-04
+
+本段依 Gavin 2026-10-24 21:26 Asia/Taipei 的 Option C 授權，完成獨立的
+**可操作24×18戰場**與打擊感降濃。160×94.5px菱形格、約96px人物；沒有製作
+32×24、迷霧或正式戰鬥規則。主場景仍為11×9 Skirmish。工程與自動操作證據
+通過；**Gavin完整遊玩、鏡頭舒適度、辨識度、美術與打擊感判定仍為HUMAN_PENDING**。
+本工作區 `D:\campaign-forge\scratch\godot-spike`，分支 `codex/godot-spike`，
+起點 `cbf3608`，本段只做本地commit，不push。
+
+### 啟動與操作
+
+在本工作區執行以下PowerShell；直接啟動新場景，不會更改預設main scene。
+
+```powershell
+$godotExe = 'C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe'
+& $godotExe --path godot-spike res://scenes/levels/Field24x18.tscn
+# 歷史打擊設定，可替換成 a9_baseline；省略參數就是spike04 toned。
+& $godotExe --path godot-spike res://scenes/levels/Field24x18.tscn -- --impact-profile=spike03
+# 小教學地圖維持原預設：
+& $godotExe --path godot-spike
+```
+
+| 操作 | 效果 |
+| --- | --- |
+| 點隊員→點可達格→再點／Enter | 成本範圍、路徑預覽，再確認移動；每人一回合移動一次 |
+| 點射程內敵人→再點／Enter | 預覽傷害2，再確認攻擊；攻擊或等待後結束該人行動 |
+| Esc／右鍵 | 取消預覽；中鍵獨立用於拖曳 |
+| Tab、IJKL、Enter、T | 循環隊員、移格游標、選擇／確認、循環合法目標 |
+| Space／N | 等待／結束我方回合；按鈕同樣可用 |
+| WASD／方向鍵、中鍵拖曳 | 鏡頭捲動；速度隨zoom修正 |
+| 滾輪、O、F／Home | .8／1／1.2游標錨定縮放、全圖閱讀、定位選取隊員 |
+| P／點小地圖、點邊緣箭頭 | 收合小地圖／移鏡頭、定位威脅或目標 |
+| E | 邊緣捲動開關，預設OFF，提示同步顯示 |
+| G／V | 格線／敵方可達攻擊威脅範圍 |
+| B／按住Shift、X | 敵方2×／暫時加速、略過敵方移動動畫；不跳過規則結算 |
+| M、C | Reduced Motion、下一次攻擊暴擊展示；展示仍只傷害2 |
+| F1、R | telemetry／重新部署；勝敗後也能R改策略 |
+
+滑鼠使用事件本身的viewport座標換算格位；確認鍵的按下與放開由戰術輸入接管，
+避免聚焦按鈕重複結算。攻擊／敵方階段鎖戰術輸入，保留加速與診斷操作。
+F1列首接戰回合、每兵種平均步數、攻擊／傷害／擊殺／無目標回合、敵方階段秒數；
+每次結算將完整逐單位逐回合資料寫到專案內 `.godot/spike04/live-telemetry.json`。
+這是本地診斷輸出，沒有帳號、連線或永久遊戲存檔。
+
+### 打擊感03→04
+
+| 參數 | spike03 | spike04預設 |
+| --- | ---: | ---: |
+| flash_mix | 1.0 | .8；hold16.67ms／80ms不變，暴擊有效mix仍≤1 |
+| sparks／spokes | 36／11 | 22／7 |
+| 暴擊粒子倍率 | 1.5 | 1.3 |
+| 方向偏重／streak | 0／22px | .8／22px；收窄散射，保留命中方向 |
+| 一般／暴擊數字字級 | 28／34 | 24／30，縮小14.29%／11.76% |
+| hitstop／shake／recoil／dust／zoom／SFX | 原設定 | 配置不變；crit dust數量仍共用已降低的粒子倍率 |
+
+歷史profile原樣保存在 `config/impact_profile_spike03.tres`，Git blob與
+`a0ae42c`相同；a9_baseline未改。舊spike03測試只重新指向保存的profile，
+新測試另驗證04預設。Skirmish只加profile選擇及方向粒子；HUD、格位、傷害、
+阻擋、G005、swing接觸幀／時序未改。
+[四組接觸±8幀比較](evidence/spike04/hitfeel/impact-strip-spike03-vs-spike04.png)、
+[四組AVI及原始PNG](evidence/spike04/hitfeel/)、
+[九次Skirmish時序](evidence/spike04/hitfeel/timing.json)。
+一般 .950s、暴擊1.017s、Reduced .717s（固定60FPS）；未讀圖wall最高 .985s。
+三setup仍為HP4、格位(1,6)／(1,5)／(3,4)。
+
+### 新戰場與測試規則
+
+獨立 `scenes/levels/Field24x18.tscn`、`scripts/rules/field_rules.gd`、
+`data/levels/field_24x18.gd`，不引用裝飾mockup。純函式複製輸入並回傳事件；
+場景只播放移動、接觸、傷害、擊退與回合事件。另用小型impact adapter，
+避免抽共用邏輯時擾動原Skirmish。
+
+四鄰格，荒地／道路成本1、森林2、高機動森林3、淺灘2，深水／峭壁不通行；
+守備高地只有地標、沒有隱藏防禦加成。主道路橫跨y9／10，北森林通往x15的
+y5／6淺灘，南森林為較昂貴的通路。地形取自規則資料，不從繪圖推斷。
+
+| 兵種（全部是spike test values） | 移動 | HP | 曼哈頓射程 | 傷害／擊退 |
+| --- | ---: | ---: | --- | --- |
+| 近戰：托瑪＋guard | 4 | 8 | 1 | 2／1格或阻擋 |
+| 遠程：bow-1／2 | 3 | 6 | 2–3；不能貼身射擊 | 2／無擊退；**無LOS** |
+| 高機動：scout-1／2 | 6 | 6 | 1 | 2／1格或阻擋，森林額外成本1 |
+| 敵騎士 | 4 | 6 | 1 | 2／1格或阻擋 |
+| 敵領袖 | 4 | 10 | 1 | 2／1格或阻擋 |
+
+六我方部署西側x2–3；初始11騎士＋1領袖，另有3騎士增援。前線距部署
+約11–12曼哈頓格。每人可移動一次後攻擊／等待一次，也可原地攻擊結束行動。
+我方→敵方→增援／目標檢查→下回合。**擊敗領袖勝利，托瑪倒下或超過15回合敗北**；
+不要求全殲。開場頂部明示目標、失敗條件與上限。
+
+增援在我方第4回合完整預告，第5回合開始到場，出生當回合不動，最早敵方第6回合
+行動。入口(23,4)／(23,5)／(23,6)，小地圖與戰場T5標記同步。占位時依
+上／左／右／下BFS找最近空且可通行格；完全無空位則延後，沒有憑空覆蓋角色。
+
+AI按群組guard→alert→approach→attack：4格警戒或同群受擊即追擊；領袖持位，
+受擊或目標點2格內受威脅才離位。合法射程內先挑低HP、再按id；否則用反向
+Dijkstra共用距離圖找最近可攻擊位置。cache鍵為兵種／陣營／occupancy_revision，
+移動、死亡、擊退與增援使其失效。種子24018控制座標平手，不用全域RNG。
+
+### 鏡頭與可讀性
+
+base位置／zoom保留玩家導航，attack focus保存並復位到攻擊前狀態，impact只走
+offset／短zoom punch。每次縮放／shake都夾在包含HUD安全邊界的世界矩形；
+預留左右120px、上下180px空白，所以畫面可能看見菱形地圖之外的深色背景。
+O容納整圖並保存返回位置；全圖模式點選可回到局部。選隊員與移動平滑跟隨，
+敵方攻擊／增援短提示定位。Reduced Motion定位與移動改snap，關shake／punch／
+閃光／粒子／recoil，保留必要回饋。不再跳回(640,360)。
+
+右上可收合、可點的小地圖有地形、我方方塊／敵方三角／領袖菱形、目標、增援與
+viewport框。HUD安全區箭頭顯示領袖、已公告入口，以及距我方8格內敵群的一名代表；
+可點定位。沒有fog。框、標籤與非純顏色識別仍是原型，密集近戰下重疊需真人看。
+[720p部署](evidence/spike04/deployment.png)、[1080p部署](evidence/spike04/deployment-1080.png)、
+[相機復位逐幀條](evidence/spike04/camera-follow-return-strip.png)。
+
+### 節奏、平衡與效能
+
+| 自動策略 | 初始布局 | 只調敵方位置後 | 首接戰 | 平均近戰／遠程／高機動步數 | 估計分鐘 |
+| --- | --- | --- | ---: | --- | --- |
+| road主道 | 7回合敗 | **12回合勝** | 2 | 2.65／2.25／4.86 | 12.9–21.2 |
+| flank北側 | 6回合敗 | 7回合敗 | 2 | 2.42／2.29／4.25 | 8.7–14.4 |
+| turtle固守＋射擊 | 3回合敗 | 3回合敗 | 2 | 2.33／2.67／2.67 | 4.6–7.6 |
+
+步數是實際走格／存活單位回合，含零移動，成本另記。idle定義為階段開始時，
+任何合法可達格都無法攻擊敵人；即使有往前走也可能算idle。首次布局三策皆很早
+倒下，故只把側翼／後衛部署拉開，保留兩名前線；未改數值、地形、wave或policy。
+前後JSON、事件與命令全部保留。[PACING完整表](evidence/spike04/PACING.md)。
+
+估算=`回合×（實測敵方平均秒＋每回合平均存活我方數×假設每人思考15–25秒）`。
+實際場景主道11個敵方階段平均1.999s、最高4.719s；50個我方單位回合／12回合
+約4.17人。若固定六人不減員則18.4–30.4分鐘。估算與15–25分鐘部分重疊，
+**不代表達成真人目標**；側翼／固守過早失敗仍有問題。簡單policy不是最佳解。
+
+road近戰17次攻擊、53.1%傷害；遠程31.25%傷害卻拿60%擊殺，有出手順序／尾刀
+偏差；高機動15.6%傷害、早死。沒有觀察到遠程或高機動>50%傷害統治，但樣本小，
+無LOS仍可能利於射手。敵騎士有72個無目標單位回合，後衛／增援可被目標擊殺路線
+繞過；增援可見不等於增援有戰術價值。這些是下一輪設計風險，不靠這次自動測試定案。
+
+連續實際場景使用選取／預覽／確認／等待／結束回合跑到12回合勝利；另外60FPS
+操作AVI解析實際鍵鼠事件，先捲動／選取／移動，再從該road軌跡首攻擊狀態展示
+攻擊／鏡頭返回，**不是完整連續戰役錄影**。另有正常敵方階段AVI。
+ffmpeg不存在，交付AVI＋PNG strips；Dummy音效有觸發證據、未實際聆聽。
+[MOVIE說明與錄影](evidence/spike04/MOVIE.md)。
+
+| AMD780M、GL Compatibility、720p未錄影 | 平均ms | 最差ms |
+| --- | ---: | ---: |
+| 捲動 | 19.666 | 42.897 |
+| 敵方正常 | 22.776 | 30.366 |
+| 敵方2× | 22.521 | 32.135 |
+
+同一敵方第2回合正常2.188s／2×1.433s。短時間inter-frame wall取樣含60FPS
+cap與排程，**沒有穩定60FPS保證**。錄影／讀圖會拖長wall，不能當操作延遲；
+未錄影完整場景48次一般攻擊最高wall .893s，符合1.7s硬限與1.2s目標；GUT另測
+crit／Reduced。[PERFORMANCE原始數字](evidence/spike04/PERFORMANCE.md)。
+
+### 驗證、限制與待人工判定
+
+最終匯入0；GUT **123／123、10,310 assertions、21 scripts、exit0**。
+[test log](evidence/spike04/test-run.log)、[驗證指令與真實退出碼](VERIFICATION.md#spike-04)、
+[完整證據索引](evidence/spike04/README.md)、[稽核及雜湊](evidence/spike04/audit.json)。
+70個共用動畫檔與原始A9 hash相符，grid_rules未變；保護路徑Git diff為空。
+首次capture／測試的失敗、包括exit0但含錯誤的紀錄都保留；以最終逐項檢查與乾淨log
+為準。未弱化舊測試。既有hook只有非阻擋missing_canonical_memory提示，沒有繞過。
+
+PLACEHOLDER：程式繪製地形／岸線／渡口chunks／樹岩旗／標記；所有我方借托瑪，
+敵方借knight-a／b；BOW／BOOT／leader標籤代替正式弓手、坐騎與領袖美術；A9
+swing原幀未修，敵騎士以位移代攻擊幀；合成SFX。這些不構成商業美術／動畫驗收。
+新地景來源及生成方式在 `art/bigmap/SOURCES.md`；沒有下載第三方素材或修改原幀。
+
+HUMAN_PENDING：Gavin用鍵鼠完整打一場並重來一次，判定鏡頭舒適、96px辨識、
+低濃度命中感、15–25分鐘節奏與兵種公平性。工程證據不能替代此判定，也不能
+把測試數值升格正式規則。尚無真人回饋；沒有製作存檔、多人、LOS、迷霧或32×24。
+
+後續Owner決策／open questions（每項一行即可；本輪不追問、不執行）：
+
+1. 目標：保留擊敗領袖，或下一輪改占點。
+2. 移動：保留4／3／6，或指定要調整的兵種。
+3. 24×18真人驗收：通過／需重做；32×24維持未授權，須另開任務。
+4. 邊緣捲動：維持預設OFF，或改ON。
+5. 敵方速度：預設正常，或預設2×。
+6. 增援：維持可繞過守點，或下一輪要求其確實接戰。
+
+### Resource self-check
+
+依 `docs/review/RESOURCE-CHECKLIST.md` 逐項記錄。此為Codex自查，Claude／GPT
+獨立review及Owner核准仍屬後續流程；本段沒有新增代理或代填他人review。
+
+| 區段／項目 | 結果與證據 |
+| --- | --- |
+| A prototype-fast | PASS：WORK先列keep/discard條件，獨立一次性spike；W1–W8是Owner範圍，不擴張正式引擎或故事 |
+| A level-design | PASS（有限）：可達主道／昂貴北側淺灘、非全殲目標、road勝利軌跡；側翼策略未證明可勝，已明列風險；本場不是原故事雙分支 |
+| A game-ai | PASS：群組警戒、領袖持位、低HP目標、seed與Dijkstra；rules determinism測試及事件JSON |
+| A game-ui-ux | PASS：成本／目標／預覽／威脅／敵意／回合／增援／控制提示；720p／1080p實際截圖 |
+| A game-feel | PASS工程、HUMAN_PENDING感受：03→04 strips、歷史profile、實測≤1.7s、Reduced；真人尚未判定 |
+| B Grid-Tactics架構 | PASS架構／N/A新借用：新pure rules→events→view，沒有本輪複製該repo程式或素材 |
+| B HopeMetal MIT | N/A：本輪無借用程式／資產，無新增授權依賴 |
+| B engine/dependency | PASS：Owner明確授權的獨立Godot4.7.2 PoC，GDScript＋既有GUT，Python僅離線證據；沒有新增引擎／addon |
+| C 單人完整戰鬥3–5分鐘 | HUMAN_PENDING；Owner本輪15–25分鐘覆蓋通用3–5。自動完整win12不等於人類遊玩；估算未證實目標 |
+| C 敵人理解／勝敗 | PASS工程：AI事件、road勝／另兩策敗、規則目標／失敗測試 |
+| C 兩種戰術不同後果 | PASS：road／flank／turtle結果與傷害分布不同，非正式劇情分支 |
+| C 重來改策略 | PASS工程：R／result按鈕與restart測試；真人完整重玩仍pending |
+| C 重複結算／卡回合／非法移動／動畫中斷 | PASS測試範圍：pure rules、busy鎖與連續12回合、preview/cancel/confirm、rest/reset測試；不宣稱窮盡所有操作 |
+| C 720p／1080p／鍵盤 | PASS工程：原生執行截圖、解析鍵盤／拖曳／滑鼠操作AVI、UI／camera測試；真人舒適度pending |
+| C 自動與人工分開 | PASS：所有自動紀錄具名，HUMAN_PENDING與美術判定另列，沒有假稱人工回饋 |
+| D SRD／授權／adaptation | PASS邊界／N/A新增SRD：沒有引入WotC IP、書籍或第三方規則；Field數值標記測試值，未改G005／L03或宣稱正式adaptation |
+| D AGENTS授權／故事／Git | PASS：只寫godot-spike/，只本地codex分支commit；原故事／保護路徑未改，無push／merge／PR／stash／Actions／部署／S4 |
+
+五個指定skill的唯讀固定版本來源及套用方法見證據README。安全的模糊處選擇：
+defensive地形僅作地標；射程採無LOS；增援占位採BFS／延後；歷史Skirmish不抽大共用
+重構；profile未知參數回預設；差別兵種只加標籤，不自創正式角色或動畫幀。
+
+### 本段commit
+
+| W | 本地commit |
+| --- | --- |
+| W1 toned profile／歷史保存／前後證據 | `2360cad` |
+| W2 pure rules／24×18資料 | `3e7352b` |
+| W3 獨立可玩場景 | `32e6480` |
+| W4 三層捲動相機 | `4d74672` |
+| W5 小地圖／目標／增援UI | `7bab449` |
+| W6 telemetry／自動節奏／執行證據 | `e56b36f` |
+| W7 全測試／範圍稽核 | `fafa6f0` |
+| W8 本交接／metadata hash刷新 | 本commit |
+
+**W8交接commit後停止，等待review；不push、merge、PR、stash或自動開下一段。
+沒有其他worktree寫入、正式世界觀／故事／S4變更。這是task DONE，不是SessionEnd，
+不觸發canonical daily closeout，也不宣稱治理完整自動導入。**
