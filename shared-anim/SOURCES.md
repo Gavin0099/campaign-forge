@@ -266,3 +266,20 @@ Model inspection, not Owner/commercial approval. All five repaints remain PLACEH
 | thoma/swing/02.png | PLACEHOLDER | Original sprigs and cuff cloth improve continuity, but compressed leaf detail, cuff patch boundary and swept underskirt contour still drift. |
 
 Style sheet SHA-256 `04926a2dd63e6d63c36b797d22cc9d13bd539061aceccd03ea605f4ed40fcbbe`.
+
+## spike-02 A4 — reference pixel transfer
+
+Tool: offline Pillow cutout rig, godot-spike/tools/prepare_a4_frames.py.
+No image generation requests, prompts, raw outputs or rejected generation attempts in A4 (0/3 per frame). No external assets introduced. Full controls, source masks and region library: godot-spike/docs/evidence/spike02-a4/reference-regions/. A3 live frames were archived as byte copies in baseline-a3 before replacement. Original/reference PNGs are unchanged.
+
+Costume comes from idle/01 and swing/05 with continuous-body affine transfer, reference cuff quadrilaterals and translated reference face/hair. Existing A3 motion arms/torso twist, feet and mace are retained; small reference-mace occlusion patches clone plain reference cloth/bag. Old fan hem alpha is removed. This changes method; it does not by itself establish art acceptance. W3 per-region and sequence verdicts control PLACEHOLDER.
+
+Full per-frame input hashes, output hashes, controls, zero-attempt provenance, cleanup and before/after palette distances are in a4-swing-prompts.json. Historical A3 runtime hashes refer to the preserved baseline-a3 frames, not the A4 live files.
+
+| Frame | Reference hashes | A4 runtime SHA-256 | Palette distance before / after |
+| --- | --- | --- | --- |
+| thoma/swing/00.png | idle c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808; recover f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf | b5fd52bd56ec155e98694ab51a668f7959d66db1d0d6fefe68458c551e9d4f1b | 0.0 / 2.155998 |
+| thoma/swing/01.png | idle c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808; recover f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf | 0770cbaf3f99ea322175521471685d0f27164ba560bbc66c1f0cc4194edbfabb | 0.0 / 2.252855 |
+| thoma/swing/02.png | idle c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808; recover f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf | 23abb318b5ced100c5fb92b8b2fdf636911ed331bb1dd8a448ee0b6c9974ca1b | 0.0 / 2.24222 |
+| thoma/swing/03.png | idle c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808; recover f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf | 688fb0d3744f2314056f6c7ee5719f46e02735445caf581bc105ca62d0b8f846 | 0.0 / 2.271027 |
+| thoma/swing/04.png | idle c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808; recover f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf | 85aeeb4eec4c29d66ef461c5f04ef352bdc61619aee62c94175fd23b2e672bd5 | 0.0 / 2.248148 |

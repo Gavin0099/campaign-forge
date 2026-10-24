@@ -78,6 +78,19 @@ POSES = {
         'cuffs': [[(282,253),(302,255),(330,278),(296,298)],[(177,202),(199,206),(204,223),(185,220)]]},
 }
 
+# Coordinates refined against A3 full-size baselines, not scaled thumbnails.
+for index,offset in {'00':[-5,10],'01':[3,6],'02':[43,20],'03':[28,19],'04':[54,28]}.items():
+    POSES[index]['head']=offset
+POSES['00']['dx']=0
+POSES['00']['shear']=-0.10
+POSES['01']['dx']=4
+POSES['01']['weapon']=[rect(140,60,290,144)]
+POSES['02']['weapon']=[rect(337,65,480,179)]
+POSES['02']['feet'][1]=[(336,402),(366,410),(414,428),(416,451),(330,450),(318,420)]
+POSES['04']['shear']=-0.32
+POSES['04']['weapon']=[[(321,296),(357,293),(407,338),(455,369),(449,403),(404,390),(367,349),(325,322)]]
+HEAD_CLEAR={'00':(216,105,283,180),'01':(229,105,293,177),'02':(264,106,336,179),'03':(250,108,316,180),'04':(277,114,348,194)}
+
 def perspective(source, src, dst):
     # Local solver, no external runner/dependency.
     from prepare_a3_frames import solve
@@ -98,7 +111,7 @@ def extract():
             records.append({'reference':path,'reference_sha256':sha(SHARED/path),'region':region,'polygon':poly,
                             'bbox':region_mask.getbbox(),'pixels':f'{name}-{region}.png','mask':f'{name}-{region}-mask.png'})
     write(LIB/'regions.json',records)
-    write(LIB/'rig-controls.json',{'poses':POSES,'motion_occlusion_clone_patches':CLONES,'canvas':[512,512],'pivot':[256,464]})
+    write(LIB/'rig-controls.json',{'poses':POSES,'head_clear':HEAD_CLEAR,'motion_occlusion_clone_patches':CLONES,'canvas':[512,512],'pivot':[256,464],'body_horizontal_scale':1.15})
     samples={'robe':[271,278,280,293],'stole':[236,276,245,293],'embroidery':[233,349,245,371],
              'cuff':[170,249,185,264],'hem-shadow':[185,392,199,409],'skin':[258,130,273,145],'hair':[242,109,260,118]}
     im=Image.open(SHARED/REFS['idle']).convert('RGB')
@@ -124,9 +137,10 @@ def build(index,old):
     # Old torso twist is retained only above the waist; remove the entire old
     # skirt/hem alpha rather than putting reference rectangles over the fan.
     out.paste((0,0,0,0),(0,270,512,512))
-    out.paste((0,0,0,0),(252,105,315,177))
+    out.paste((0,0,0,0),HEAD_CLEAR[index])
     # Exact untransformed legs behind replacement garment; fixed pivot.
     for poly in p['feet']: out.alpha_composite(cut(old,poly))
+    out.alpha_composite(cut(old,rect(0,432,511,511)))
     out.alpha_composite(body)
     # Torso twist and arms retain pose-specific A3 paint; costume sleeve ends replaced below.
     for poly in p['arms']: out.alpha_composite(cut(old,poly))
