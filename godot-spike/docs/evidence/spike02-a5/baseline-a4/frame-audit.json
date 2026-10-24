@@ -1,0 +1,558 @@
+[
+  {
+    "path": "knight-a/idle/00.png",
+    "sha256": "0ca4807cc16f63dba0b3a15bfaaa1d1a534892151db7dfb339e6c5c2b6edf791",
+    "source": "references/knight-a.png",
+    "cleanup": "original crop uniformly scaled, alpha debris threshold 24, fixed pivot",
+    "status": "SOURCE_DERIVED"
+  },
+  {
+    "path": "knight-a/hit/00.png",
+    "sha256": "6ebef74b6cf9520b5f5a243fb4d9bf669bf78bc6c52f9d6b99ce8202619d2b41",
+    "source": "raw/knight-a-hit-00.png",
+    "raw_sha256": "10260a5c1dd3cfdc7ed5eb70da250e74c7f7d1b36543bfee56d078eaff900a79",
+    "registration": [
+      775,
+      1206,
+      68,
+      360
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "knight-a/hit/01.png",
+    "sha256": "9fbf4a41ffcc16d7c0e75a1f74a182ef33eed4c869f934341cf81e2692b85179",
+    "source": "raw/knight-a-hit-01.png",
+    "raw_sha256": "f528b4c5b14bd1dbc5eeba2e6a3e0c8e889c4bce684b0cab16ec3a506cfb592b",
+    "registration": [
+      775,
+      1168,
+      70,
+      350
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "knight-a/hit/02.png",
+    "sha256": "0465fee5877109acb6723c56ebe71134f0d3fcc9ab6e6b9505d7be534f4523bb",
+    "source": "raw/knight-a-hit-02.png",
+    "raw_sha256": "1596e1e438609947b652f20302c8735233247bd400c495125b18eb7743cce376",
+    "registration": [
+      795,
+      1221,
+      33,
+      360
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "knight-a/stagger/00.png",
+    "sha256": "2cfe6ceb5de5380888937e1ec790102372b4efe5a2f7126a711780915f2948b6",
+    "source": "raw/knight-a-stagger-00.png",
+    "raw_sha256": "2f32cc1dc5d47df2f0e40df3bc7790e38c26a2f5dd86ec778f52ee5559a9d299",
+    "registration": [
+      785,
+      1138,
+      151,
+      332
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "knight-a/stagger/01.png",
+    "sha256": "b4ec94ff31941285ebd450a706d0565c23745ad2757bcd9229c55797a4b1773b",
+    "source": "raw/knight-a-stagger-01.png",
+    "raw_sha256": "b7bc8fd69682eda80f00c74a26d7993726add31bf1b678323bc968b55399bbc2",
+    "registration": [
+      795,
+      1149,
+      136,
+      310
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "knight-a/stagger/02.png",
+    "sha256": "62594f3aaef1f3a70fdae0a1965c7649f8badf0a112afced863cf85b44e24dd6",
+    "source": "raw/knight-a-stagger-02.png",
+    "raw_sha256": "7fa1a592fce21df8a5b08076f666b5e77db0cc29fc02b1521ffc931729cfc2cf",
+    "registration": [
+      795,
+      1147,
+      128,
+      335
+    ],
+    "status": "CANDIDATE",
+    "reason": "automated palette match; Owner art review pending"
+  },
+  {
+    "path": "thoma/idle/01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "source": "raw/thoma-mace-idle-01.png",
+    "raw_sha256": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5",
+    "registration": [
+      665,
+      1219,
+      58,
+      360
+    ],
+    "status": "PASS",
+    "weapon_status": "APPROVED",
+    "reason": "Byte-unchanged A3 reference; model PASS retained, not Owner art approval.",
+    "style_review": {
+      "face": "PASS: unchanged accepted A3 reference region.",
+      "stole_cape_embroidery": "PASS: unchanged accepted A3 reference region.",
+      "cuffs": "PASS: unchanged accepted A3 reference region.",
+      "hem_silhouette": "PASS: unchanged accepted A3 reference region.",
+      "palette": "PASS: unchanged accepted A3 reference region.",
+      "proportions": "PASS: canvas/pivot fixed; exact pose weapon retained.",
+      "light_direction": "PASS: source top-left paint retained.",
+      "stroke": "PASS: unchanged reference.",
+      "satchel_medallion": "PASS: unchanged reference."
+    },
+    "weapon_approval": "Owner, 2026-10-24",
+    "review_segment": "spike-02 A4",
+    "review_authority": "model visual inspection; Owner art approval not claimed",
+    "palette_distance": {
+      "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
+      "value": 0.0,
+      "not_a_perceptual_quality_score": true
+    },
+    "region_review": {
+      "stole": "PASS: unchanged accepted A3 reference region.",
+      "embroidery": "PASS: unchanged accepted A3 reference region.",
+      "cuffs": "PASS: unchanged accepted A3 reference region.",
+      "hem": "PASS: unchanged accepted A3 reference region.",
+      "face_hair": "PASS: unchanged accepted A3 reference region.",
+      "palette": "PASS: unchanged accepted A3 reference region.",
+      "sequence": "PASS: unchanged reference endpoint; incoming/outgoing motion-transition defects are assigned to motion frames in sequence-check.json."
+    }
+  },
+  {
+    "path": "thoma/swing/00.png",
+    "sha256": "93d1f3bb044d06c459236b79af4b4c09d16bf8bf7f67aaa1cc7d6ea2bd523853",
+    "source": "reference pixel rig: idle/01 + swing/05",
+    "raw_sha256": null,
+    "registration": [
+      685,
+      1218,
+      144,
+      350
+    ],
+    "status": "PLACEHOLDER",
+    "weapon_status": "APPROVED",
+    "reason": "Reference pixel method fixes the old fan contour and duplicate motif rows, but shoulder band meets retained raised-arm paint abruptly; bag/plain-cloth clone has a visible horizontal seam. fan contour replaced with reference edge, but left boot/hem connection is too narrow and near-idle drape lacks coil.",
+    "style_review": {
+      "face": "PASS: reference face and hair translated as one unit; recognizable grey beard and facial identity.",
+      "stole_cape_embroidery": "FAIL: shoulder band meets retained raised-arm paint abruptly; bag/plain-cloth clone has a visible horizontal seam.",
+      "cuffs": "FAIL: cloth grain is reference-derived but the raised cuff changes fold direction abruptly at the sleeve join.",
+      "hem_silhouette": "FAIL: fan contour replaced with reference edge, but left boot/hem connection is too narrow and near-idle drape lacks coil.",
+      "palette": "PASS: muted reference teal/ivory/brown retained; no new palette mapping.",
+      "proportions": "PASS: canvas/pivot fixed; exact pose weapon retained.",
+      "light_direction": "PASS: source top-left paint retained.",
+      "stroke": "FAIL: visible composite joins remain.",
+      "satchel_medallion": "FAIL: bag clone boundary visible; reference medallion preserved."
+    },
+    "weapon_approval": "Owner, 2026-10-24",
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic RGBA; old fan hem removed. Transparent RGB cleared only outside protected regions. Final raw overwrite preserves weapon, hand and explicit feet/ground masks including hidden RGB and edge alpha.",
+    "review_segment": "spike-02 A4",
+    "review_authority": "model visual inspection; Owner art approval not claimed",
+    "palette_distance": {
+      "before": 0.0,
+      "after": 2.154391,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "region_review": {
+      "stole": "FAIL: shoulder band meets retained raised-arm paint abruptly; bag/plain-cloth clone has a visible horizontal seam.",
+      "embroidery": "PASS: same source lower-end sprig, one row with no doubled motif; lateral 15 percent ease is documented.",
+      "cuffs": "FAIL: cloth grain is reference-derived but the raised cuff changes fold direction abruptly at the sleeve join.",
+      "hem": "FAIL: fan contour replaced with reference edge, but left boot/hem connection is too narrow and near-idle drape lacks coil.",
+      "face_hair": "PASS: reference face and hair translated as one unit; recognizable grey beard and facial identity.",
+      "palette": "PASS: muted reference teal/ivory/brown retained; no new palette mapping.",
+      "sequence": "FAIL: idle-to-raised sleeve/shoulder joins pop; narrow hem against spread feet is discontinuous."
+    }
+  },
+  {
+    "path": "thoma/swing/01.png",
+    "sha256": "c4951e886bdaf6f49a72531e27c0db37254aabda071f4304d951c45d85c496cf",
+    "source": "reference pixel rig: idle/01 + swing/05",
+    "raw_sha256": null,
+    "registration": [
+      665,
+      1220,
+      132,
+      354
+    ],
+    "status": "PLACEHOLDER",
+    "weapon_status": "APPROVED",
+    "reason": "Reference pixel method fixes the old fan contour and duplicate motif rows, but upper band/arm seam and horizontal bag clone edge remain visible. reference scalloped edge retained but transition from preceding wide stance is abrupt.",
+    "style_review": {
+      "face": "PASS: same source facial identity and grey hair; moderate positional change.",
+      "stole_cape_embroidery": "FAIL: upper band/arm seam and horizontal bag clone edge remain visible.",
+      "cuffs": "FAIL: raised cuff texture reads as a separate patch despite correct reference color.",
+      "hem_silhouette": "FAIL: reference scalloped edge retained but transition from preceding wide stance is abrupt.",
+      "palette": "PASS: no visible color-family flicker or Ferry Dusk palette.",
+      "proportions": "PASS: canvas/pivot fixed; exact pose weapon retained.",
+      "light_direction": "PASS: source top-left paint retained.",
+      "stroke": "FAIL: visible composite joins remain.",
+      "satchel_medallion": "FAIL: bag clone boundary visible; reference medallion preserved."
+    },
+    "weapon_approval": "Owner, 2026-10-24",
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic RGBA; old fan hem removed. Transparent RGB cleared only outside protected regions. Final raw overwrite preserves weapon, hand and explicit feet/ground masks including hidden RGB and edge alpha.",
+    "review_segment": "spike-02 A4",
+    "review_authority": "model visual inspection; Owner art approval not claimed",
+    "palette_distance": {
+      "before": 0.0,
+      "after": 2.239122,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "region_review": {
+      "stole": "FAIL: upper band/arm seam and horizontal bag clone edge remain visible.",
+      "embroidery": "PASS: intact source sprig and border spacing along the band; no added leaf row.",
+      "cuffs": "FAIL: raised cuff texture reads as a separate patch despite correct reference color.",
+      "hem": "FAIL: reference scalloped edge retained but transition from preceding wide stance is abrupt.",
+      "face_hair": "PASS: same source facial identity and grey hair; moderate positional change.",
+      "palette": "PASS: no visible color-family flicker or Ferry Dusk palette.",
+      "sequence": "FAIL: raised-to-swing torso occlusion and cuff silhouette jump remain."
+    }
+  },
+  {
+    "path": "thoma/swing/03.png",
+    "sha256": "04795f7b3a137c171033f1bae1578ee47e6700ffad3f8fd573bd9895175eb1cf",
+    "source": "reference pixel rig: idle/01 + swing/05",
+    "raw_sha256": null,
+    "registration": [
+      545,
+      1190,
+      81,
+      350
+    ],
+    "status": "PLACEHOLDER",
+    "weapon_status": "APPROVED",
+    "reason": "Reference pixel method fixes the old fan contour and duplicate motif rows, but waist/shoulder joins and cloned bag occlusion remain visible even though full source bands are used. reference-shaped edge replaces broad fan; wide planted stance still reads disconnected at the left ankle.",
+    "style_review": {
+      "face": "PASS: unchanged reference facial pixels translated to contact head position.",
+      "stole_cape_embroidery": "FAIL: waist/shoulder joins and cloned bag occlusion remain visible even though full source bands are used.",
+      "cuffs": "FAIL: primary cuff retains a visible composite boundary against the extended sleeve.",
+      "hem_silhouette": "FAIL: reference-shaped edge replaces broad fan; wide planted stance still reads disconnected at the left ankle.",
+      "palette": "PASS: original muted color family with no independent color remapping.",
+      "proportions": "PASS: canvas/pivot fixed; exact pose weapon retained.",
+      "light_direction": "PASS: source top-left paint retained.",
+      "stroke": "FAIL: visible composite joins remain.",
+      "satchel_medallion": "FAIL: bag clone boundary visible; reference medallion preserved."
+    },
+    "weapon_approval": "Owner, 2026-10-24",
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic RGBA; old fan hem removed. Transparent RGB cleared only outside protected regions. Final raw overwrite preserves weapon, hand and explicit feet/ground masks including hidden RGB and edge alpha.",
+    "review_segment": "spike-02 A4",
+    "review_authority": "model visual inspection; Owner art approval not claimed",
+    "palette_distance": {
+      "before": 0.0,
+      "after": 2.272082,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "region_review": {
+      "stole": "FAIL: waist/shoulder joins and cloned bag occlusion remain visible even though full source bands are used.",
+      "embroidery": "PASS: original sprig/line weight survives the small shear with no doubled rows.",
+      "cuffs": "FAIL: primary cuff retains a visible composite boundary against the extended sleeve.",
+      "hem": "FAIL: reference-shaped edge replaces broad fan; wide planted stance still reads disconnected at the left ankle.",
+      "face_hair": "PASS: unchanged reference facial pixels translated to contact head position.",
+      "palette": "PASS: original muted color family with no independent color remapping.",
+      "sequence": "FAIL: contact-to-follow-through changes shoulder occlusion and hem attachment abruptly."
+    }
+  },
+  {
+    "path": "thoma/swing/04.png",
+    "sha256": "e2d809bd1b7ab0d371a125532260b092d0372635af6cbd31e2cb695ed4df3f18",
+    "source": "reference pixel rig: idle/01 + swing/05",
+    "raw_sha256": null,
+    "registration": [
+      607,
+      1167,
+      110,
+      342
+    ],
+    "status": "PLACEHOLDER",
+    "weapon_status": "APPROVED",
+    "reason": "Reference pixel method fixes the old fan contour and duplicate motif rows, but torso twist retains an A3 shoulder seam; reference-band/body junction and bag clone remain apparent. trailing contour now derives from reference, but floor/boot overlap and recovery shape jump remain.",
+    "style_review": {
+      "face": "PASS: source recover face and hair transferred together; no regenerated identity.",
+      "stole_cape_embroidery": "FAIL: torso twist retains an A3 shoulder seam; reference-band/body junction and bag clone remain apparent.",
+      "cuffs": "FAIL: front cuff is reference cloth but edge/fold transition still reads pasted.",
+      "hem_silhouette": "FAIL: trailing contour now derives from reference, but floor/boot overlap and recovery shape jump remain.",
+      "palette": "PASS: no visible independent palette change.",
+      "proportions": "PASS: canvas/pivot fixed; exact pose weapon retained.",
+      "light_direction": "PASS: source top-left paint retained.",
+      "stroke": "FAIL: visible composite joins remain.",
+      "satchel_medallion": "FAIL: bag clone boundary visible; reference medallion preserved."
+    },
+    "weapon_approval": "Owner, 2026-10-24",
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic RGBA; old fan hem removed. Transparent RGB cleared only outside protected regions. Final raw overwrite preserves weapon, hand and explicit feet/ground masks including hidden RGB and edge alpha.",
+    "review_segment": "spike-02 A4",
+    "review_authority": "model visual inspection; Owner art approval not claimed",
+    "palette_distance": {
+      "before": 0.0,
+      "after": 2.211167,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "region_review": {
+      "stole": "FAIL: torso twist retains an A3 shoulder seam; reference-band/body junction and bag clone remain apparent.",
+      "embroidery": "PASS: source lower sprig persists with fixed vertical spacing; shear follows cloth direction.",
+      "cuffs": "FAIL: front cuff is reference cloth but edge/fold transition still reads pasted.",
+      "hem": "FAIL: trailing contour now derives from reference, but floor/boot overlap and recovery shape jump remain.",
+      "face_hair": "PASS: source recover face and hair transferred together; no regenerated identity.",
+      "palette": "PASS: no visible independent palette change.",
+      "sequence": "FAIL: trailing garment snaps back to unwarped recovery; this is not a continuous finished costume rig."
+    }
+  },
+  {
+    "path": "thoma/swing/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "source": "raw/thoma-mace-swing-05.png",
+    "raw_sha256": "e89296c8cd0a799e8d5302caf1f611aaa241e84f2a2c4ff56f8b77f4153f31dd",
+    "registration": [
+      673,
+      1217,
+      85,
+      360
+    ],
+    "status": "PASS",
+    "weapon_status": "APPROVED",
+    "reason": "Byte-unchanged A3 reference; model PASS retained, not Owner art approval.",
+    "style_review": {
+      "face": "PASS: unchanged accepted A3 reference region.",
+      "stole_cape_embroidery": "PASS: unchanged accepted A3 reference region.",
+      "cuffs": "PASS: unchanged accepted A3 reference region.",
+      "hem_silhouette": "PASS: unchanged accepted A3 reference region.",
+      "palette": "PASS: unchanged accepted A3 reference region.",
+      "proportions": "PASS: canvas/pivot fixed; exact pose weapon retained.",
+      "light_direction": "PASS: source top-left paint retained.",
+      "stroke": "PASS: unchanged reference.",
+      "satchel_medallion": "PASS: unchanged reference."
+    },
+    "weapon_approval": "Owner, 2026-10-24",
+    "review_segment": "spike-02 A4",
+    "review_authority": "model visual inspection; Owner art approval not claimed",
+    "palette_distance": {
+      "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
+      "value": 0.0,
+      "not_a_perceptual_quality_score": true
+    },
+    "region_review": {
+      "stole": "PASS: unchanged accepted A3 reference region.",
+      "embroidery": "PASS: unchanged accepted A3 reference region.",
+      "cuffs": "PASS: unchanged accepted A3 reference region.",
+      "hem": "PASS: unchanged accepted A3 reference region.",
+      "face_hair": "PASS: unchanged accepted A3 reference region.",
+      "palette": "PASS: unchanged accepted A3 reference region.",
+      "sequence": "PASS: unchanged reference endpoint; incoming/outgoing motion-transition defects are assigned to motion frames in sequence-check.json."
+    }
+  },
+  {
+    "path": "thoma/swing/02.png",
+    "sha256": "7ac71805794546f0bb85ba38257fa76c4aa802f6b15531792e491e5a19d2973d",
+    "source": "reference pixel rig: idle/01 + swing/05",
+    "raw_sha256": null,
+    "registration": [
+      575,
+      1205,
+      133,
+      350
+    ],
+    "status": "PLACEHOLDER",
+    "weapon_status": "APPROVED",
+    "reason": "Reference pixel method fixes the old fan contour and duplicate motif rows, but squared shoulder cut and waist overlay boundary expose the cutout construction. old swept fan removed, but reference hem bridges the fixed stance awkwardly.",
+    "style_review": {
+      "face": "PASS: recover reference face/hair remains identifiable through forward motion.",
+      "stole_cape_embroidery": "FAIL: squared shoulder cut and waist overlay boundary expose the cutout construction.",
+      "cuffs": "FAIL: off-hand cuff has an abrupt triangular edge and fold transition.",
+      "hem_silhouette": "FAIL: old swept fan removed, but reference hem bridges the fixed stance awkwardly.",
+      "palette": "PASS: reference palette retained; numeric delta includes changing occlusion.",
+      "proportions": "PASS: canvas/pivot fixed; exact pose weapon retained.",
+      "light_direction": "PASS: source top-left paint retained.",
+      "stroke": "FAIL: visible composite joins remain.",
+      "satchel_medallion": "FAIL: bag clone boundary visible; reference medallion preserved."
+    },
+    "weapon_approval": "Owner, 2026-10-24",
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic RGBA; old fan hem removed. Transparent RGB cleared only outside protected regions. Final raw overwrite preserves weapon, hand and explicit feet/ground masks including hidden RGB and edge alpha.",
+    "review_segment": "spike-02 A4",
+    "review_authority": "model visual inspection; Owner art approval not claimed",
+    "palette_distance": {
+      "before": 0.0,
+      "after": 2.244537,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "region_review": {
+      "stole": "FAIL: squared shoulder cut and waist overlay boundary expose the cutout construction.",
+      "embroidery": "PASS: lower motif remains the same source sprig at unit vertical scale.",
+      "cuffs": "FAIL: off-hand cuff has an abrupt triangular edge and fold transition.",
+      "hem": "FAIL: old swept fan removed, but reference hem bridges the fixed stance awkwardly.",
+      "face_hair": "PASS: recover reference face/hair remains identifiable through forward motion.",
+      "palette": "PASS: reference palette retained; numeric delta includes changing occlusion.",
+      "sequence": "FAIL: torso/cuff boundaries and cloth-to-boot junction change visibly from raised pose."
+    }
+  },
+  {
+    "path": "knight-b/idle/00.png",
+    "source": "knight-a/idle/00.png",
+    "source_sha256": "0ca4807cc16f63dba0b3a15bfaaa1d1a534892151db7dfb339e6c5c2b6edf791",
+    "sha256": "e71644dfef36fcb0cc1babd3db63ab9791ade1d1fbd7445601b77f51612e97b5",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      298,
+      109
+    ],
+    "shield_mask": [
+      371,
+      272,
+      28,
+      43
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/hit/00.png",
+    "source": "knight-a/hit/00.png",
+    "source_sha256": "6ebef74b6cf9520b5f5a243fb4d9bf669bf78bc6c52f9d6b99ce8202619d2b41",
+    "sha256": "cc853f78528c4c8391d70606eb4e4da39565ea5d73e568664620ba06c39ab5bd",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      330,
+      107
+    ],
+    "shield_mask": [
+      319,
+      244,
+      33,
+      50
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/hit/01.png",
+    "source": "knight-a/hit/01.png",
+    "source_sha256": "9fbf4a41ffcc16d7c0e75a1f74a182ef33eed4c869f934341cf81e2692b85179",
+    "sha256": "2b54bc88debb009b1a15164a6c40e07f1438eb5be33cb7bb0b0c632e85a7ae9e",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      353,
+      117
+    ],
+    "shield_mask": [
+      276,
+      229,
+      30,
+      52
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/hit/02.png",
+    "source": "knight-a/hit/02.png",
+    "source_sha256": "0465fee5877109acb6723c56ebe71134f0d3fcc9ab6e6b9505d7be534f4523bb",
+    "sha256": "e14b7ba82c075fef7a4f94d14c0309fec15316c73eddd0c3437e0d39b8e4a7cd",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      211,
+      108
+    ],
+    "shield_mask": [
+      313,
+      270,
+      30,
+      44
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/stagger/00.png",
+    "source": "knight-a/stagger/00.png",
+    "source_sha256": "2cfe6ceb5de5380888937e1ec790102372b4efe5a2f7126a711780915f2948b6",
+    "sha256": "e5164c1a931d13ffdfcabffb345a2c2ff57f6f6f87e115aae3bc19c1fc7538e6",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      311,
+      137
+    ],
+    "shield_mask": [
+      204,
+      219,
+      25,
+      51
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/stagger/01.png",
+    "source": "knight-a/stagger/01.png",
+    "source_sha256": "b4ec94ff31941285ebd450a706d0565c23745ad2757bcd9229c55797a4b1773b",
+    "sha256": "aaea5183f82ec03d531770331835530bfb841d3909bcf88875d2f2301d8a49cf",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      192,
+      160
+    ],
+    "shield_mask": [
+      335,
+      296,
+      30,
+      46
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  },
+  {
+    "path": "knight-b/stagger/02.png",
+    "source": "knight-a/stagger/02.png",
+    "source_sha256": "62594f3aaef1f3a70fdae0a1965c7649f8badf0a112afced863cf85b44e24dd6",
+    "sha256": "4c2dc1cad19b6a6f11a6727d689e53ea124d0644e698925311db4fdb6290e138",
+    "status": "SOURCE_DERIVED",
+    "tool": "Python/Pillow deterministic scripted edit",
+    "attempt": 1,
+    "cleanup": "bone shield remap and textured short crest; fixed canvas/pivot, no body geometry changes",
+    "helmet_anchor": [
+      243,
+      137
+    ],
+    "shield_mask": [
+      364,
+      275,
+      28,
+      47
+    ],
+    "palette": "existing bone/brass/moss; no Ferry Dusk",
+    "prompt": "Scripted edit, no generative prompt: retain knight-A body pixels; remap shield field to bone and attach the same textured short bone crest to manually registered helmet top."
+  }
+]

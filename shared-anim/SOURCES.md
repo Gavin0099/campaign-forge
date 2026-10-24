@@ -287,3 +287,19 @@ Full per-frame input hashes, output hashes, controls, zero-attempt provenance, c
 ### A4 W3 model verdict
 
 Five motion frames remain PLACEHOLDER. Reference transfer fixes provenance and replaces the old contour, but shoulder/cuff/bag seams and hem-to-feet continuity fail. See frame-audit.json region_review and spike02-a4/sequence-check.json. Two immutable references retain PASS. No human or Owner art approval is claimed.
+
+## spike-02 A5 — deterministic seams-and-feet refinement
+
+Tool: offline Pillow 12.2.0; `godot-spike/tools/prepare_a5_frames.py`, based on unmodified prepare_a4_frames.py helpers/controls. No AI image generation calls (0/3 attempts per frame), no full-frame regeneration, no raw generative outputs and no rejected AI attempts. `a5-swing-prompts.json` records prompt=null and raw=null explicitly. Source reference pixels, narrow-band smoothing and lower-hem mesh are reproducible.
+
+Reference idle/01 SHA-256 `c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808`; swing/05 SHA-256 `f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf`; both byte-unchanged. Original PNGs were not edited or moved. A4 live frames copied byte-for-byte to godot-spike/docs/evidence/spike02-a5/baseline-a4/ with hashes.json; not manifest sources. The A4 style sheet is preserved separately as style-check-a4.png.
+
+Method, per-frame controls, every narrow seam band and plain-cloth patch source/target: godot-spike/docs/evidence/spike02-a5/METHOD.md, rig-controls.json, seam-masks/coordinates.json. No costume motifs created. Global horizontal scale is 1.0; lower-hem ease starts below embroidery. Final protected overwrite preserves mace/hand/feet raw RGBA. No palette remapping; distances are numeric support, not art acceptance.
+
+| Frame | Runtime SHA-256 | Mask SHA-256 | Palette distance A4 / A5 |
+| --- | --- | --- | --- |
+| thoma/swing/00.png | b67be788586606cd8f5f183b3c6218226978b1eeb72cafa12ba45f6c895b2bf9 | e169aecfa50fe7359bde2e87225a5a071157ef6864f8313d74f2076d55067654 | 2.154391 / 2.292049 |
+| thoma/swing/01.png | 718e2bf016b07a838fa9de2677ffa89a4a7621cc5b8e4ccd50537ff2982b6c34 | 5193766e897af5ae2be8c3768e1a3eafe84f1f89c11c558ec1b0f6019e5318d1 | 2.239122 / 2.397622 |
+| thoma/swing/02.png | a4280148c22e2afb5f6355abe609e10bce0ea7fbef459a679d5153f7b6785c13 | e7ce806c8e54d41b7df191b1a947416e2f3dfb93f3605e5cc9503286d0a1d7eb | 2.244537 / 2.321312 |
+| thoma/swing/03.png | fba0b9638837540bd4ca532a5d95c95fec682e82ed7cb9b7d7fb3761f3767657 | 9ecf1c2e2b4f2c27c4afab90f324b336fc196f6c0d14f7c14b9ee7c8a760950a | 2.272082 / 2.349292 |
+| thoma/swing/04.png | 6c6706350142f0d0324772cab25381de086811e6b5381172a6e8e278648b5f34 | a87ddcc2184e31f0d2e3c8981690d91d5551bac5f3cdc3659134041faf5f01c2 | 2.211167 / 2.280099 |
