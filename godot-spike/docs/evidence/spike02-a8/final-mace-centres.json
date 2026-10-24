@@ -1,0 +1,82 @@
+[
+  {
+    "frame": "thoma/swing/00.png",
+    "sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "measured": [
+      190.4115,
+      85.2153
+    ],
+    "target": [
+      192,
+      85
+    ],
+    "error_px": 1.603,
+    "within4": true,
+    "opaque_pixels": 627,
+    "method": "Independent final-PNG alpha>0.9 centroid in37x37 head ROI; includes small haft overlap, not a pose/design acceptance"
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "sha256": "cf37fc5b439cd639e447f4b3a3ae0b5665b2cb8923896e3f560a63067c0566d4",
+    "measured": [
+      258.7474,
+      85.8856
+    ],
+    "target": [
+      259,
+      87
+    ],
+    "error_px": 1.1427,
+    "within4": true,
+    "opaque_pixels": 673,
+    "method": "Independent final-PNG alpha>0.9 centroid in37x37 head ROI; includes small haft overlap, not a pose/design acceptance"
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "sha256": "fdcdd0aa2ff102c70909f5e97105d6ba36f1c33bca127d9381fdca2610d5dd8c",
+    "measured": [
+      447.3775,
+      111.567
+    ],
+    "target": [
+      449,
+      110
+    ],
+    "error_px": 2.2557,
+    "within4": true,
+    "opaque_pixels": 649,
+    "method": "Independent final-PNG alpha>0.9 centroid in37x37 head ROI; includes small haft overlap, not a pose/design acceptance"
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "sha256": "5e26004a23c014dee7a4ff0b90bf25fcd3341910355c9f91ac1ed4fd711cb3bd",
+    "measured": [
+      454.5097,
+      195.3932
+    ],
+    "target": [
+      455,
+      196
+    ],
+    "error_px": 0.7801,
+    "within4": true,
+    "opaque_pixels": 618,
+    "method": "Independent final-PNG alpha>0.9 centroid in37x37 head ROI; includes small haft overlap, not a pose/design acceptance"
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "sha256": "c3e40e2485f31e60bd1aa1d21c8cbc452e7a359db92d2e58d6391395adc167b0",
+    "measured": [
+      420.493,
+      374.4601
+    ],
+    "target": [
+      421,
+      376
+    ],
+    "error_px": 1.6212,
+    "within4": true,
+    "opaque_pixels": 639,
+    "method": "Independent final-PNG alpha>0.9 centroid in37x37 head ROI; includes small haft overlap, not a pose/design acceptance"
+  }
+]
