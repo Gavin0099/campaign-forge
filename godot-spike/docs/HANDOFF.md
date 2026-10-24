@@ -816,3 +816,186 @@ this is not evidence of a SessionEnd callback or canonical closeout.
 
 **Stop after this W6 handoff commit and wait for review. No push. Phase B
 remains unstarted. Task completion is not SessionEnd.**
+
+## spike-02 A4
+
+**W1-W6 delivered for review; art completion remains PARTIAL.** The five motion
+costumes were rebuilt from the accepted idle/recover pixels using a reproducible
+cutout rig, with no new image generation. This replaces the old fan/bell skirt
+contour and avoids adding extra leaf rows, but visible costume joins and
+sequence discontinuities remain. All five are honestly **PLACEHOLDER**; this is
+not a completed costume-art pass. Engineering checks and rendered evidence pass.
+
+Owner Gavin confirmed this session is the only agent in this worktree and
+explicitly authorized A4 on 2026-10-24. Started clean at `8197026` (brief) over
+A3 `bd80c5e`, branch `codex/godot-spike`, only in
+`D:\campaign-forge\scratch\godot-spike`. **Commit only, no push.** The short
+one-handed flanged mace remains **APPROVED**, P010 remains **PROPOSED**, human
+hit-feel remains **HUMAN_PENDING**, and **Phase B is unstarted**.
+
+### Run and reproduce
+
+From this worktree, using installed Godot 4.7.2 standard/GDScript:
+
+```powershell
+godot --headless --path godot-spike -s res://tools/sync_shared_anim.gd
+godot --headless --path godot-spike --import
+godot --path godot-spike --resolution 1280x720
+```
+
+If the wrapper is not on PATH, use
+`C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe`.
+Space arms/confirms, R replays, 1/2/3 change fixture, M toggles Reduced Motion,
+H/? opens help, F1 shows diagnostics, Esc closes the current overlay/forecast.
+All existing gameplay/HUD behavior is unchanged.
+
+Offline Python/Pillow: `godot-spike/tools/prepare_a4_frames.py --build`, then
+`a4_style_check.py`, `a4_contact_sheet.py`, and sync/import. The separate
+`check_a4_reproduction.py` reconstructs in memory without rewriting files and
+proves exact live PNG bytes and protection masks. Scripts install nothing.
+
+[Method and one-frame proof](evidence/spike02-a4/METHOD.md),
+[reference region coordinates/masks](evidence/spike02-a4/reference-regions/regions.json),
+[rig controls](evidence/spike02-a4/reference-regions/rig-controls.json),
+[measured reference palette](evidence/spike02-a4/reference-regions/palette.png).
+
+Continuous reference torso/skirt carries both stole bands, embroidery, bag,
+medallion and layered hem. Separate reference cuffs and face/hair follow the
+pose. A3 motion arms/torso twist and fixed mace/feet are retained. A small region
+behind the reference's idle mace is reconstructed with adjacent plain reference
+pixels; that patch is still visibly imperfect. No full figure was regenerated.
+The body uses modest horizontal ease and shear; all source regions and control
+points are committed. W1's rejected rigid proof is retained. W4 corrected raw
+RGBA preservation after a real failing test, then regenerated all live evidence.
+
+### Frame verdicts
+
+Model observations only; no Owner/commercial art approval. A reference endpoint's
+sequence PASS means it is byte-unchanged; adjacent transition failures are
+assigned to the motion frames and all six pairs are explicitly FAIL in
+[sequence-check.json](evidence/spike02-a4/sequence-check.json). Thus the reference
+PASS rows do not claim an overall clean animation.
+
+| Frame | Status | Stole | Embroidery | Cuffs | Hem | Face/hair | Palette | Sequence | Reason |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `thoma/idle/01.png` | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | Byte-unchanged A3 reference; model PASS retained, not Owner art approval. |
+| `thoma/swing/00.png` | PLACEHOLDER | FAIL | PASS | FAIL | FAIL | PASS | PASS | FAIL | Reference pixel method fixes the old fan contour and duplicate motif rows, but shoulder band meets retained raised-arm paint abruptly; bag/plain-cloth clone has a visible horizontal seam. fan contour replaced with reference edge, but left boot/hem connection is too narrow and near-idle drape lacks coil. |
+| `thoma/swing/01.png` | PLACEHOLDER | FAIL | PASS | FAIL | FAIL | PASS | PASS | FAIL | Reference pixel method fixes the old fan contour and duplicate motif rows, but upper band/arm seam and horizontal bag clone edge remain visible. reference scalloped edge retained but transition from preceding wide stance is abrupt. |
+| `thoma/swing/02.png` | PLACEHOLDER | FAIL | PASS | FAIL | FAIL | PASS | PASS | FAIL | Reference pixel method fixes the old fan contour and duplicate motif rows, but squared shoulder cut and waist overlay boundary expose the cutout construction. old swept fan removed, but reference hem bridges the fixed stance awkwardly. |
+| `thoma/swing/03.png` | PLACEHOLDER | FAIL | PASS | FAIL | FAIL | PASS | PASS | FAIL | Reference pixel method fixes the old fan contour and duplicate motif rows, but waist/shoulder joins and cloned bag occlusion remain visible even though full source bands are used. reference-shaped edge replaces broad fan; wide planted stance still reads disconnected at the left ankle. |
+| `thoma/swing/04.png` | PLACEHOLDER | FAIL | PASS | FAIL | FAIL | PASS | PASS | FAIL | Reference pixel method fixes the old fan contour and duplicate motif rows, but torso twist retains an A3 shoulder seam; reference-band/body junction and bag clone remain apparent. trailing contour now derives from reference, but floor/boot overlap and recovery shape jump remain. |
+| `thoma/swing/05.png` | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | Byte-unchanged A3 reference; model PASS retained, not Owner art approval. |
+
+[1:1 region comparison](evidence/spike02-a4/region-check.png),
+[seven-frame sequence and onion strip](evidence/spike02-a4/sequence-strip.png),
+[shared style check](../../shared-anim/thoma-weapon-style-check.png),
+[rendered A3/A4 comparison](evidence/spike02-a4/contact-sheet-a3-vs-a4.png),
+[exact same-scale asset comparison](evidence/spike02-a4/asset-sheet-a3-vs-a4.png),
+[A3 byte baseline/hashes](evidence/spike02-a4/baseline-a3/hashes.json).
+
+Six-region details and one-line failure reasons live in
+[frame-audit.json](../../shared-anim/frame-audit.json). Stole, cuffs, hem and
+sequence fail in every motion frame; the specific motif, face/hair and palette
+checks pass. No PLACEHOLDER was removed. Palette deltas measure masked mean RGB,
+not seam quality or human recognition. No commercial/repository art was copied.
+
+### Measured timing and engineering evidence
+
+| Setup | 720p normal | 720p Reduced Motion | 1080p normal | 1080p Reduced Motion |
+| --- | --- | --- | --- | --- |
+| Open | 0.917815 s | 0.650812 s | 0.919160 s | 0.684374 s |
+| Unit-blocked | 0.917651 s | 0.684154 s | 0.917966 s | 0.667565 s |
+| Terrain-blocked | 0.917613 s | 0.667759 s | 0.917747 s | 0.684457 s |
+
+All twelve ordinary rendered runs include hitstop, exclude screenshot readback
+and finish below **1.7 s** with input unlocked. [720p timing](evidence/spike02-a4/timing.json),
+[1080p timing](evidence/spike02-a4/timing-1080p.json).
+
+Manifest is identical to A3: **512x512**, pivot **[256,464]**, contact index **3**,
+anchor **[455,196]**, durations **180/70/40/80/100/150 ms**, camera/offsets and
+Reduced Motion keys unchanged. Fixed A3 reference hashes match; protected
+weapon/head/grip, foot masks and ground pixels match raw RGBA. A3 and A2
+baselines are evidence only, never manifest frames. Source/synced files: **64**
+byte-identical. Read-only reconstruction reproduces all five live PNG hashes.
+
+Full GUT: **42/42 tests, 1,583 assertions, exit 0**. Historical A3 alpha/audit
+assertions now target the archived A3 bytes, while five added A4 tests verify the
+current contracts. The first failed protected-RGBA run and the fix are retained;
+assertions were not relaxed. [Test log](evidence/spike02-a4/test-run.log),
+[correction](evidence/spike02-a4/W4-CORRECTION.md),
+[verification commands and actual exits](VERIFICATION.md#spike-02-a4).
+
+Both rendered runs report `CAPTURE_COMPLETE A4 movie=false runs=6 shots=13 pass=true`.
+Required anticipation/smear/contact/follow-through/idle PNGs exist at 1280x720 and
+1920x1080; extra raised/recovery and A3 comparison shots are also retained.
+1080p initially failed because Windows clamped the viewport to 1875x1055; the
+capture tool's minimum size was corrected, not the images upscaled. Failure
+log/dimensions and one rejected image are preserved in the evidence directory.
+
+[Full 60 FPS clip](evidence/spike02-a4/attack-60fps.avi): **59 frames**, **7,270,584
+bytes**, no subsampling. Strike-to-ready **0.916667 s**; five identical decoded
+contact frames give **83.333 ms** hold with visible resume. [Movie details](evidence/spike02-a4/MOVIE.md),
+[source hashes](evidence/spike02-a4/source-hashes.json). Dummy audio does not
+establish physical-device sound quality.
+
+### Open items and limits
+
+- Five costume frames still need art work on shoulder/waist joins, cuff edges,
+  reference-mace occlusion repair and hem-to-stance/sequence continuity. A4 has
+  changed the construction method but has not met full costume-art acceptance.
+- **HUMAN_PENDING:** human playtest for hit weight, contact timing, responsiveness,
+  animation continuity and sound. Automated capture/model review cannot replace it.
+- Shared React/Godot asset-and-timing comparison rule remains open for Phase B.
+  React was neither edited nor integrated. This handoff does not start B.
+- No battlefield/props/knight edits, Ferry Dusk palette, rule/HUD/timing changes,
+  engine adoption, new story/Ink, formal save system, AI or complete battle loop.
+- This is task DONE, not SessionEnd. No canonical daily record was hand-edited.
+  Shared PLAN/memory edits are outside the narrower A4 scope; this section records
+  the milestone. Normal hooks ran with the nonblocking missing_canonical_memory
+  advisory; their execution is not a claim of full lifecycle acceptance.
+
+### Resource self-check
+
+Against [RESOURCE-CHECKLIST](../../docs/review/RESOURCE-CHECKLIST.md):
+
+| Item | Status | Evidence / scoped exception |
+| --- | --- | --- |
+| A — prototype-fast | PASS (criterion) | Bounded five-frame proof/rig; explicit rejection conditions and honest PLACEHOLDER; no extra mechanic |
+| A — level-design | N/A | No terrain, route, objective or placement changes |
+| A — game-ai | N/A | No AI work authorized |
+| A — game-ui-ux | PASS (scoped check) | Read pinned [skill](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/skills/disciplines/game-ui-ux/SKILL.md); actual 720p/1080p captures and existing keyboard/focus/overlay GUT checks; no HUD redesign |
+| A — game-feel | PASS (engineering), HUMAN_PENDING | Read pinned [skill](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/skills/disciplines/game-feel/SKILL.md); same-frame impact, hold, input-ready and Reduced Motion checked; no human feel claim |
+| B — Grid-Tactics separation | PASS (criterion) | Rule/view separation unchanged; no code/art newly borrowed |
+| B — HopeMetal attribution | N/A | No new reference-repo code or assets copied |
+| B — new engine/dependency | PASS | Existing authorized Godot/GDScript/GUT/Pillow only; nothing installed |
+| C — full 3-5 minute battle | N/A, explicit scope exception | One-attack costume spike, no complete-battle claim |
+| C — understandable enemy actions | N/A, explicit scope exception | Fixed fixtures; no autonomous enemy turn |
+| C — win/lose | N/A, explicit scope exception | Not in authorized spike |
+| C — two tactical choices | N/A, explicit scope exception | Three fixtures are not a tactical decision loop |
+| C — restart/change strategy | PASS (replay), N/A (strategy) | Real R replay captures and retained reset tests; strategy loop not claimed |
+| C — no duplicate/stuck/invalid resolution | PASS (tested paths) | Full existing tests plus complete rendered runs with input-ready and unchanged geometry contract |
+| C — 720p/1080p/keyboard | PASS (automated) | Both native rendered sizes; retained physical Space dispatch and focus/overlay tests |
+| C — automation vs human | PASS | 42-test engineering result separate from HUMAN_PENDING and partial art |
+| D — SRD/rule sources | N/A (new rules), PASS (scope) | No rule change, new SRD/WotC content or G005 change |
+| D — authorization | PASS | Only shared-anim/ and godot-spike/ changed in these six steps; existing Owner brief is the only other path over bd80c5e; no other worktree, React, push, main merge, PR, Actions, deployment, S4 or B |
+
+No sub-agent was spawned. No imagegen attempt was made; the Owner explicitly
+requested scriptable compositing/warping, so offline Pillow implements it.
+Model art observations are not independent review or Owner approval.
+
+| Step | Commit |
+| --- | --- |
+| W1 — method/library/proof | `bd46c93` |
+| W2 — five reference-derived frames / A3 baseline | `2809547` |
+| W3 — region/sequence checks / honest flags | `bdd33a5` |
+| W4 — sync / raw RGBA correction / 42 tests | `c28f046` |
+| W5 — rendered verification / movie / hashes | `719473f` |
+| W6 — A4 handoff | This commit |
+
+**Stop after this W6 handoff commit and wait for review. No push. Phase B remains
+unstarted. Task completion is not SessionEnd.**
+
+W6 final table verification: `GODOT --headless --path godot-spike -s
+res://addons/gut/gut_cmdln.gd -gtest=res://tests/test_a4_contract.gd -gexit`
+passed **5/5 tests, 425 assertions, exit 0** after this section was written.
+[Final handoff-table log](evidence/spike02-a4/handoff-table-check.log).
