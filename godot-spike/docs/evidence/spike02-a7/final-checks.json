@@ -1,0 +1,19 @@
+{
+  "segment": "spike-02 A7 W6",
+  "full_gut": {"exit_code": 0, "tests": 63, "passing": 63, "assertions": 4883, "log": "test-run.log"},
+  "actual_handoff_table_gut": {"exit_code": 0, "tests": 8, "passing": 8, "assertions": 2102, "log": "handoff-table-check.log"},
+  "source_hashes_verified": {"count": 265, "pass": true, "manifest": "source-hashes.json"},
+  "protected_diff_against_e233171_exit_code": 0,
+  "unexpected_paths_against_e233171": [],
+  "protected": ["ui-prototype", "docs/DECISIONS.md", "memory", "PLAN.md", "SLICES.md", "godot-spike/scripts", "godot-spike/docs/evidence/spike02-a2", "godot-spike/docs/evidence/spike02-a3", "godot-spike/docs/evidence/spike02-a4", "godot-spike/docs/evidence/spike02-a5", "godot-spike/docs/evidence/spike02-a6", "shared-anim/manifest.json", "shared-anim/thoma/idle/01.png", "shared-anim/thoma/swing/05.png", "shared-anim/raw", "shared-anim/references"],
+  "art_verdict": "FAIL",
+  "motion_placeholder_count": 5,
+  "seam_regression_recorded": true,
+  "human_playtest": "HUMAN_PENDING",
+  "owner_art_approval": "pending",
+  "push": false,
+  "PR": false,
+  "merge": false,
+  "session_end_claimed": false,
+  "stop": "After W6 handoff commit, wait for review"
+}
