@@ -276,13 +276,13 @@ Costume comes from idle/01 and swing/05 with continuous-body affine transfer, re
 
 Full per-frame input hashes, output hashes, controls, zero-attempt provenance, cleanup and before/after palette distances are in a4-swing-prompts.json. Historical A3 runtime hashes refer to the preserved baseline-a3 frames, not the A4 live files.
 
-| Frame | Reference hashes | A4 runtime SHA-256 | Palette distance before / after |
-| --- | --- | --- | --- |
-| thoma/swing/00.png | idle c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808; recover f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf | b5fd52bd56ec155e98694ab51a668f7959d66db1d0d6fefe68458c551e9d4f1b | 0.0 / 2.155998 |
-| thoma/swing/01.png | idle c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808; recover f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf | 0770cbaf3f99ea322175521471685d0f27164ba560bbc66c1f0cc4194edbfabb | 0.0 / 2.252855 |
-| thoma/swing/02.png | idle c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808; recover f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf | 23abb318b5ced100c5fb92b8b2fdf636911ed331bb1dd8a448ee0b6c9974ca1b | 0.0 / 2.24222 |
-| thoma/swing/03.png | idle c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808; recover f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf | 688fb0d3744f2314056f6c7ee5719f46e02735445caf581bc105ca62d0b8f846 | 0.0 / 2.271027 |
-| thoma/swing/04.png | idle c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808; recover f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf | 85aeeb4eec4c29d66ef461c5f04ef352bdc61619aee62c94175fd23b2e672bd5 | 0.0 / 2.248148 |
+| Frame | A4 runtime SHA-256 | Palette distance before / after |
+| --- | --- | --- |
+| thoma/swing/00.png | 93d1f3bb044d06c459236b79af4b4c09d16bf8bf7f67aaa1cc7d6ea2bd523853 | 0.0 / 2.154391 |
+| thoma/swing/01.png | c4951e886bdaf6f49a72531e27c0db37254aabda071f4304d951c45d85c496cf | 0.0 / 2.239122 |
+| thoma/swing/02.png | 7ac71805794546f0bb85ba38257fa76c4aa802f6b15531792e491e5a19d2973d | 0.0 / 2.244537 |
+| thoma/swing/03.png | 04795f7b3a137c171033f1bae1578ee47e6700ffad3f8fd573bd9895175eb1cf | 0.0 / 2.272082 |
+| thoma/swing/04.png | e2d809bd1b7ab0d371a125532260b092d0372635af6cbd31e2cb695ed4df3f18 | 0.0 / 2.211167 |
 
 ### A4 W3 model verdict
 

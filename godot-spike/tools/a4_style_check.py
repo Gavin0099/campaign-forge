@@ -138,7 +138,13 @@ def main():
         lines.append('| `'+path+'` | '+record['status']+' | '+' | '.join(flags)+' | '+reason+' |')
     write(SHARED/'frame-audit.json',audit)
     (OUT/'frame-status-table.md').write_text('\n'.join(lines)+'\n',encoding='utf-8',newline='\n')
-    with (SHARED/'SOURCES.md').open('a',encoding='utf-8',newline='\n') as f:
+    source=(SHARED/'SOURCES.md').read_text(encoding='utf-8').split('\n### A4 W3 model verdict')[0]
+    source=source.split('\n| Frame | Reference hashes | A4 runtime SHA-256')[0]
+    source+='\n| Frame | A4 runtime SHA-256 | Palette distance before / after |\n| --- | --- | --- |\n'
+    for item in provenance.values():
+        source+=f"| {item['frame']} | {item['runtime_sha256']} | {item['palette_distance']['before']} / {item['palette_distance']['after']} |\n"
+    with (SHARED/'SOURCES.md').open('w',encoding='utf-8',newline='\n') as f:
+        f.write(source)
         f.write('\n### A4 W3 model verdict\n\nFive motion frames remain PLACEHOLDER. Reference transfer fixes provenance and replaces the old contour, but shoulder/cuff/bag seams and hem-to-feet continuity fail. See frame-audit.json region_review and spike02-a4/sequence-check.json. Two immutable references retain PASS. No human or Owner art approval is claimed.\n')
     print('A4_STYLE_CHECK region_results=42 motion_placeholder=5 reference_pass=2 sequence_pairs_failed=6')
 

@@ -9,9 +9,9 @@
         "stole": 9.8751,
         "embroidery": 10.1581,
         "cuffs": 42.4377,
-        "hem": 3.7484,
+        "hem": 3.7797,
         "face_hair": 0.4521,
-        "palette": 1.2871
+        "palette": 1.2805
       },
       "visual_result": "FAIL",
       "reason": "Sleeve/torso joins or hem-to-stance attachment change abruptly; palette mean does not detect spatial seams."
@@ -23,9 +23,9 @@
         "stole": 4.3308,
         "embroidery": 0.3633,
         "cuffs": 2.2756,
-        "hem": 0.1735,
+        "hem": 0.3345,
         "face_hair": 0.8692,
-        "palette": 5.5738
+        "palette": 5.5701
       },
       "visual_result": "FAIL",
       "reason": "Sleeve/torso joins or hem-to-stance attachment change abruptly; palette mean does not detect spatial seams."
@@ -37,9 +37,9 @@
         "stole": 1.9355,
         "embroidery": 4.5451,
         "cuffs": 48.9512,
-        "hem": 11.2695,
+        "hem": 11.2199,
         "face_hair": 6.1931,
-        "palette": 8.0064
+        "palette": 8.0067
       },
       "visual_result": "FAIL",
       "reason": "Sleeve/torso joins or hem-to-stance attachment change abruptly; palette mean does not detect spatial seams."
@@ -51,9 +51,9 @@
         "stole": 3.5102,
         "embroidery": 0.0045,
         "cuffs": 11.2724,
-        "hem": 0.306,
+        "hem": 0.3373,
         "face_hair": 1.1703,
-        "palette": 1.0861
+        "palette": 1.0959
       },
       "visual_result": "FAIL",
       "reason": "Sleeve/torso joins or hem-to-stance attachment change abruptly; palette mean does not detect spatial seams."
@@ -65,9 +65,9 @@
         "stole": 16.2733,
         "embroidery": 0.1687,
         "cuffs": 7.9758,
-        "hem": 0.2523,
+        "hem": 10.3569,
         "face_hair": 1.2851,
-        "palette": 7.0049
+        "palette": 3.8141
       },
       "visual_result": "FAIL",
       "reason": "Sleeve/torso joins or hem-to-stance attachment change abruptly; palette mean does not detect spatial seams."
@@ -79,9 +79,9 @@
         "stole": 4.0785,
         "embroidery": 27.092,
         "cuffs": 5.7323,
-        "hem": 0.2055,
+        "hem": 10.4886,
         "face_hair": 0.1013,
-        "palette": 5.3256
+        "palette": 2.1625
       },
       "visual_result": "FAIL",
       "reason": "Sleeve/torso joins or hem-to-stance attachment change abruptly; palette mean does not detect spatial seams."

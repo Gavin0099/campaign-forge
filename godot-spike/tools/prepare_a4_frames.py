@@ -160,6 +160,11 @@ def build(index,old):
     out.paste(old,(0,0),protected)
     # Remove RGB under transparent pixels; retain antialiased reference edges.
     pixels=[(0,0,0,0) if q[3]==0 else q for q in out.getdata()];out.putdata(pixels)
+    # Preservation includes hidden RGB beneath alpha=0 and edge alpha. Do not
+    # alpha-composite protected pixels twice (that increases antialiased alpha).
+    for poly in p['feet']:protected=ImageChops.lighter(protected,mask(poly))
+    protected=ImageChops.lighter(protected,mask(rect(0,444,511,511)))
+    out.paste(old,(0,0),protected)
     return out, protected
 
 def palette_distance(im,palette):
@@ -198,7 +203,7 @@ def main():
             records.append({'frame':f'thoma/swing/{index}.png','tool':'Pillow reference cutout rig','generation_attempts':0,'prompt':None,'raw':None,
               'references':{path:sha(SHARED/path) for path in REFS.values()},'baseline_sha256':sha(baseline/f'{index}.png'),
               'runtime_sha256':sha(path),'controls':POSES[index],'palette_distance':{'before':palette_distance(old,pal),'after':palette_distance(im,pal),'metric':'mean nearest reference 128-color Euclidean RGB, alpha>240','mapping_applied':False},
-              'cleanup':'Reference alpha preserved on cutouts; transformed with bicubic premultiplied RGBA; no silhouette inherited from A2/A3 garment. Transparent RGB cleared. Motion weapon exact.'})
+              'cleanup':'Reference alpha preserved on cutouts; transformed with bicubic RGBA; old fan hem removed. Transparent RGB cleared only outside protected regions. Final raw overwrite preserves weapon, hand and explicit feet/ground masks including hidden RGB and edge alpha.'})
         write(SHARED/'a4-swing-prompts.json',records)
         print('A4_W2 rebuilt=5 generation_attempts=0 references_unchanged=true')
 

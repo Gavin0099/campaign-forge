@@ -266,3 +266,24 @@ Model inspection, not Owner/commercial approval. All five repaints remain PLACEH
 | thoma/swing/02.png | PLACEHOLDER | Original sprigs and cuff cloth improve continuity, but compressed leaf detail, cuff patch boundary and swept underskirt contour still drift. |
 
 Style sheet SHA-256 `04926a2dd63e6d63c36b797d22cc9d13bd539061aceccd03ea605f4ed40fcbbe`.
+
+## spike-02 A4 — reference pixel transfer
+
+Tool: offline Pillow cutout rig, godot-spike/tools/prepare_a4_frames.py.
+No image generation requests, prompts, raw outputs or rejected generation attempts in A4 (0/3 per frame). No external assets introduced. Full controls, source masks and region library: godot-spike/docs/evidence/spike02-a4/reference-regions/. A3 live frames were archived as byte copies in baseline-a3 before replacement. Original/reference PNGs are unchanged.
+
+Costume comes from idle/01 and swing/05 with continuous-body affine transfer, reference cuff quadrilaterals and translated reference face/hair. Existing A3 motion arms/torso twist, feet and mace are retained; small reference-mace occlusion patches clone plain reference cloth/bag. Old fan hem alpha is removed. This changes method; it does not by itself establish art acceptance. W3 per-region and sequence verdicts control PLACEHOLDER.
+
+Full per-frame input hashes, output hashes, controls, zero-attempt provenance, cleanup and before/after palette distances are in a4-swing-prompts.json. Historical A3 runtime hashes refer to the preserved baseline-a3 frames, not the A4 live files.
+
+| Frame | A4 runtime SHA-256 | Palette distance before / after |
+| --- | --- | --- |
+| thoma/swing/00.png | 93d1f3bb044d06c459236b79af4b4c09d16bf8bf7f67aaa1cc7d6ea2bd523853 | 0.0 / 2.154391 |
+| thoma/swing/01.png | c4951e886bdaf6f49a72531e27c0db37254aabda071f4304d951c45d85c496cf | 0.0 / 2.239122 |
+| thoma/swing/02.png | 7ac71805794546f0bb85ba38257fa76c4aa802f6b15531792e491e5a19d2973d | 0.0 / 2.244537 |
+| thoma/swing/03.png | 04795f7b3a137c171033f1bae1578ee47e6700ffad3f8fd573bd9895175eb1cf | 0.0 / 2.272082 |
+| thoma/swing/04.png | e2d809bd1b7ab0d371a125532260b092d0372635af6cbd31e2cb695ed4df3f18 | 0.0 / 2.211167 |
+
+### A4 W3 model verdict
+
+Five motion frames remain PLACEHOLDER. Reference transfer fixes provenance and replaces the old contour, but shoulder/cuff/bag seams and hem-to-feet continuity fail. See frame-audit.json region_review and spike02-a4/sequence-check.json. Two immutable references retain PASS. No human or Owner art approval is claimed.

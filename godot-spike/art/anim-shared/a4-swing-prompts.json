@@ -1,0 +1,1130 @@
+[
+  {
+    "frame": "thoma/swing/00.png",
+    "tool": "Pillow reference cutout rig",
+    "generation_attempts": 0,
+    "prompt": null,
+    "raw": null,
+    "references": {
+      "thoma/idle/01.png": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+    },
+    "baseline_sha256": "8026a8871b1b72fc7e9846d564a1e689d8dbecb6605bebccd9911baa9ef43c17",
+    "runtime_sha256": "93d1f3bb044d06c459236b79af4b4c09d16bf8bf7f67aaa1cc7d6ea2bd523853",
+    "controls": {
+      "ref": "idle",
+      "dx": 0,
+      "dy": 2,
+      "shear": -0.1,
+      "head": [
+        -5,
+        10
+      ],
+      "arms": [
+        [
+          [
+            106,
+            129
+          ],
+          [
+            135,
+            126
+          ],
+          [
+            172,
+            145
+          ],
+          [
+            200,
+            140
+          ],
+          [
+            222,
+            174
+          ],
+          [
+            218,
+            221
+          ],
+          [
+            190,
+            238
+          ],
+          [
+            164,
+            213
+          ],
+          [
+            138,
+            198
+          ],
+          [
+            112,
+            191
+          ]
+        ],
+        [
+          [
+            290,
+            171
+          ],
+          [
+            327,
+            187
+          ],
+          [
+            360,
+            214
+          ],
+          [
+            382,
+            244
+          ],
+          [
+            392,
+            269
+          ],
+          [
+            367,
+            273
+          ],
+          [
+            346,
+            252
+          ],
+          [
+            322,
+            264
+          ],
+          [
+            297,
+            234
+          ]
+        ]
+      ],
+      "weapon": [
+        [
+          [
+            95,
+            65
+          ],
+          [
+            213,
+            65
+          ],
+          [
+            213,
+            140
+          ],
+          [
+            95,
+            140
+          ]
+        ]
+      ],
+      "feet": [
+        [
+          [
+            141,
+            399
+          ],
+          [
+            166,
+            412
+          ],
+          [
+            158,
+            446
+          ],
+          [
+            143,
+            463
+          ],
+          [
+            123,
+            463
+          ],
+          [
+            126,
+            435
+          ]
+        ],
+        [
+          [
+            327,
+            399
+          ],
+          [
+            361,
+            402
+          ],
+          [
+            382,
+            423
+          ],
+          [
+            369,
+            434
+          ],
+          [
+            335,
+            431
+          ],
+          [
+            320,
+            417
+          ]
+        ]
+      ],
+      "cuffs": [
+        [
+          [
+            117,
+            145
+          ],
+          [
+            135,
+            143
+          ],
+          [
+            156,
+            175
+          ],
+          [
+            121,
+            184
+          ]
+        ],
+        [
+          [
+            338,
+            211
+          ],
+          [
+            357,
+            224
+          ],
+          [
+            342,
+            262
+          ],
+          [
+            319,
+            246
+          ]
+        ]
+      ]
+    },
+    "palette_distance": {
+      "before": 0.0,
+      "after": 2.154391,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic RGBA; old fan hem removed. Transparent RGB cleared only outside protected regions. Final raw overwrite preserves weapon, hand and explicit feet/ground masks including hidden RGB and edge alpha."
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "tool": "Pillow reference cutout rig",
+    "generation_attempts": 0,
+    "prompt": null,
+    "raw": null,
+    "references": {
+      "thoma/idle/01.png": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+    },
+    "baseline_sha256": "3722d0272e821c323ef913fd4cabe2a56a140b279fe07878c8db716c013d0acd",
+    "runtime_sha256": "c4951e886bdaf6f49a72531e27c0db37254aabda071f4304d951c45d85c496cf",
+    "controls": {
+      "ref": "idle",
+      "dx": 4,
+      "dy": 1,
+      "shear": 0.04,
+      "head": [
+        3,
+        6
+      ],
+      "arms": [
+        [
+          [
+            144,
+            125
+          ],
+          [
+            166,
+            119
+          ],
+          [
+            196,
+            143
+          ],
+          [
+            213,
+            155
+          ],
+          [
+            228,
+            188
+          ],
+          [
+            207,
+            220
+          ],
+          [
+            183,
+            207
+          ],
+          [
+            158,
+            180
+          ]
+        ],
+        [
+          [
+            284,
+            172
+          ],
+          [
+            311,
+            182
+          ],
+          [
+            331,
+            203
+          ],
+          [
+            326,
+            251
+          ],
+          [
+            301,
+            253
+          ],
+          [
+            289,
+            224
+          ]
+        ]
+      ],
+      "weapon": [
+        [
+          [
+            140,
+            60
+          ],
+          [
+            290,
+            60
+          ],
+          [
+            290,
+            144
+          ],
+          [
+            140,
+            144
+          ]
+        ]
+      ],
+      "feet": [
+        [
+          [
+            169,
+            398
+          ],
+          [
+            194,
+            412
+          ],
+          [
+            187,
+            454
+          ],
+          [
+            171,
+            464
+          ],
+          [
+            154,
+            459
+          ]
+        ],
+        [
+          [
+            316,
+            393
+          ],
+          [
+            345,
+            398
+          ],
+          [
+            361,
+            414
+          ],
+          [
+            350,
+            425
+          ],
+          [
+            320,
+            422
+          ]
+        ]
+      ],
+      "cuffs": [
+        [
+          [
+            152,
+            153
+          ],
+          [
+            173,
+            145
+          ],
+          [
+            186,
+            171
+          ],
+          [
+            160,
+            178
+          ]
+        ],
+        [
+          [
+            306,
+            212
+          ],
+          [
+            330,
+            215
+          ],
+          [
+            319,
+            249
+          ],
+          [
+            302,
+            238
+          ]
+        ]
+      ]
+    },
+    "palette_distance": {
+      "before": 0.0,
+      "after": 2.239122,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic RGBA; old fan hem removed. Transparent RGB cleared only outside protected regions. Final raw overwrite preserves weapon, hand and explicit feet/ground masks including hidden RGB and edge alpha."
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "tool": "Pillow reference cutout rig",
+    "generation_attempts": 0,
+    "prompt": null,
+    "raw": null,
+    "references": {
+      "thoma/idle/01.png": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+    },
+    "baseline_sha256": "f38de24651841d855a4d14040838b9a33bd2050f7bffe4f5eb1ffdd206a9b7a2",
+    "runtime_sha256": "7ac71805794546f0bb85ba38257fa76c4aa802f6b15531792e491e5a19d2973d",
+    "controls": {
+      "ref": "recover",
+      "dx": 19,
+      "dy": 7,
+      "shear": -0.13,
+      "head": [
+        43,
+        20
+      ],
+      "arms": [
+        [
+          [
+            232,
+            170
+          ],
+          [
+            264,
+            174
+          ],
+          [
+            287,
+            181
+          ],
+          [
+            329,
+            165
+          ],
+          [
+            358,
+            157
+          ],
+          [
+            369,
+            175
+          ],
+          [
+            343,
+            193
+          ],
+          [
+            332,
+            226
+          ],
+          [
+            295,
+            228
+          ],
+          [
+            261,
+            222
+          ],
+          [
+            237,
+            221
+          ]
+        ],
+        [
+          [
+            298,
+            233
+          ],
+          [
+            325,
+            232
+          ],
+          [
+            348,
+            247
+          ],
+          [
+            367,
+            270
+          ],
+          [
+            359,
+            285
+          ],
+          [
+            337,
+            269
+          ],
+          [
+            319,
+            277
+          ],
+          [
+            303,
+            259
+          ]
+        ]
+      ],
+      "weapon": [
+        [
+          [
+            337,
+            65
+          ],
+          [
+            480,
+            65
+          ],
+          [
+            480,
+            179
+          ],
+          [
+            337,
+            179
+          ]
+        ]
+      ],
+      "feet": [
+        [
+          [
+            115,
+            404
+          ],
+          [
+            146,
+            403
+          ],
+          [
+            155,
+            425
+          ],
+          [
+            138,
+            457
+          ],
+          [
+            118,
+            466
+          ],
+          [
+            102,
+            456
+          ]
+        ],
+        [
+          [
+            336,
+            402
+          ],
+          [
+            366,
+            410
+          ],
+          [
+            414,
+            428
+          ],
+          [
+            416,
+            451
+          ],
+          [
+            330,
+            450
+          ],
+          [
+            318,
+            420
+          ]
+        ]
+      ],
+      "cuffs": [
+        [
+          [
+            309,
+            185
+          ],
+          [
+            333,
+            174
+          ],
+          [
+            339,
+            213
+          ],
+          [
+            293,
+            213
+          ]
+        ],
+        [
+          [
+            335,
+            239
+          ],
+          [
+            354,
+            249
+          ],
+          [
+            338,
+            273
+          ],
+          [
+            323,
+            258
+          ]
+        ]
+      ]
+    },
+    "palette_distance": {
+      "before": 0.0,
+      "after": 2.244537,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic RGBA; old fan hem removed. Transparent RGB cleared only outside protected regions. Final raw overwrite preserves weapon, hand and explicit feet/ground masks including hidden RGB and edge alpha."
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "tool": "Pillow reference cutout rig",
+    "generation_attempts": 0,
+    "prompt": null,
+    "raw": null,
+    "references": {
+      "thoma/idle/01.png": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+    },
+    "baseline_sha256": "32034e392720ad04f2294ddc74f02b142050761a4adbed01bc7aa2d11de0b10a",
+    "runtime_sha256": "04795f7b3a137c171033f1bae1578ee47e6700ffad3f8fd573bd9895175eb1cf",
+    "controls": {
+      "ref": "recover",
+      "dx": 15,
+      "dy": 8,
+      "shear": -0.13,
+      "head": [
+        28,
+        19
+      ],
+      "arms": [
+        [
+          [
+            222,
+            171
+          ],
+          [
+            245,
+            173
+          ],
+          [
+            272,
+            175
+          ],
+          [
+            303,
+            179
+          ],
+          [
+            335,
+            177
+          ],
+          [
+            345,
+            184
+          ],
+          [
+            376,
+            184
+          ],
+          [
+            380,
+            207
+          ],
+          [
+            337,
+            213
+          ],
+          [
+            328,
+            229
+          ],
+          [
+            301,
+            220
+          ],
+          [
+            276,
+            220
+          ],
+          [
+            245,
+            231
+          ],
+          [
+            220,
+            216
+          ]
+        ],
+        [
+          [
+            291,
+            232
+          ],
+          [
+            318,
+            233
+          ],
+          [
+            339,
+            249
+          ],
+          [
+            344,
+            269
+          ],
+          [
+            330,
+            273
+          ],
+          [
+            316,
+            260
+          ],
+          [
+            305,
+            269
+          ],
+          [
+            294,
+            257
+          ]
+        ]
+      ],
+      "weapon": [
+        [
+          [
+            340,
+            170
+          ],
+          [
+            480,
+            170
+          ],
+          [
+            480,
+            225
+          ],
+          [
+            340,
+            225
+          ]
+        ]
+      ],
+      "feet": [
+        [
+          [
+            124,
+            399
+          ],
+          [
+            155,
+            405
+          ],
+          [
+            157,
+            426
+          ],
+          [
+            141,
+            458
+          ],
+          [
+            123,
+            465
+          ],
+          [
+            111,
+            454
+          ]
+        ],
+        [
+          [
+            322,
+            395
+          ],
+          [
+            353,
+            402
+          ],
+          [
+            391,
+            424
+          ],
+          [
+            394,
+            441
+          ],
+          [
+            372,
+            447
+          ],
+          [
+            327,
+            435
+          ]
+        ]
+      ],
+      "cuffs": [
+        [
+          [
+            303,
+            183
+          ],
+          [
+            330,
+            183
+          ],
+          [
+            321,
+            218
+          ],
+          [
+            280,
+            211
+          ]
+        ],
+        [
+          [
+            315,
+            242
+          ],
+          [
+            329,
+            250
+          ],
+          [
+            317,
+            268
+          ],
+          [
+            303,
+            258
+          ]
+        ]
+      ]
+    },
+    "palette_distance": {
+      "before": 0.0,
+      "after": 2.272082,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic RGBA; old fan hem removed. Transparent RGB cleared only outside protected regions. Final raw overwrite preserves weapon, hand and explicit feet/ground masks including hidden RGB and edge alpha."
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "tool": "Pillow reference cutout rig",
+    "generation_attempts": 0,
+    "prompt": null,
+    "raw": null,
+    "references": {
+      "thoma/idle/01.png": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+    },
+    "baseline_sha256": "b2d64c00944131073dccde2c7399a3d638abd83d3101431d6f9d3bfbf23274ce",
+    "runtime_sha256": "e2d809bd1b7ab0d371a125532260b092d0372635af6cbd31e2cb695ed4df3f18",
+    "controls": {
+      "ref": "recover",
+      "dx": 9,
+      "dy": 11,
+      "shear": -0.32,
+      "head": [
+        54,
+        28
+      ],
+      "arms": [
+        [
+          [
+            181,
+            187
+          ],
+          [
+            201,
+            195
+          ],
+          [
+            214,
+            219
+          ],
+          [
+            198,
+            232
+          ],
+          [
+            178,
+            219
+          ],
+          [
+            165,
+            228
+          ],
+          [
+            154,
+            231
+          ],
+          [
+            151,
+            219
+          ]
+        ],
+        [
+          [
+            258,
+            187
+          ],
+          [
+            278,
+            190
+          ],
+          [
+            290,
+            212
+          ],
+          [
+            307,
+            242
+          ],
+          [
+            332,
+            275
+          ],
+          [
+            350,
+            293
+          ],
+          [
+            345,
+            310
+          ],
+          [
+            330,
+            302
+          ],
+          [
+            302,
+            299
+          ],
+          [
+            278,
+            276
+          ],
+          [
+            263,
+            249
+          ],
+          [
+            248,
+            218
+          ]
+        ]
+      ],
+      "weapon": [
+        [
+          [
+            321,
+            296
+          ],
+          [
+            357,
+            293
+          ],
+          [
+            407,
+            338
+          ],
+          [
+            455,
+            369
+          ],
+          [
+            449,
+            403
+          ],
+          [
+            404,
+            390
+          ],
+          [
+            367,
+            349
+          ],
+          [
+            325,
+            322
+          ]
+        ]
+      ],
+      "feet": [
+        [
+          [
+            125,
+            397
+          ],
+          [
+            150,
+            396
+          ],
+          [
+            154,
+            420
+          ],
+          [
+            141,
+            451
+          ],
+          [
+            122,
+            460
+          ],
+          [
+            111,
+            451
+          ]
+        ],
+        [
+          [
+            292,
+            392
+          ],
+          [
+            320,
+            393
+          ],
+          [
+            337,
+            427
+          ],
+          [
+            352,
+            441
+          ],
+          [
+            345,
+            454
+          ],
+          [
+            323,
+            448
+          ],
+          [
+            298,
+            425
+          ]
+        ]
+      ],
+      "cuffs": [
+        [
+          [
+            282,
+            253
+          ],
+          [
+            302,
+            255
+          ],
+          [
+            330,
+            278
+          ],
+          [
+            296,
+            298
+          ]
+        ],
+        [
+          [
+            177,
+            202
+          ],
+          [
+            199,
+            206
+          ],
+          [
+            204,
+            223
+          ],
+          [
+            185,
+            220
+          ]
+        ]
+      ]
+    },
+    "palette_distance": {
+      "before": 0.0,
+      "after": 2.211167,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic RGBA; old fan hem removed. Transparent RGB cleared only outside protected regions. Final raw overwrite preserves weapon, hand and explicit feet/ground masks including hidden RGB and edge alpha."
+  }
+]

@@ -10,7 +10,7 @@
       "thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
     },
     "baseline_sha256": "8026a8871b1b72fc7e9846d564a1e689d8dbecb6605bebccd9911baa9ef43c17",
-    "runtime_sha256": "b5fd52bd56ec155e98694ab51a668f7959d66db1d0d6fefe68458c551e9d4f1b",
+    "runtime_sha256": "93d1f3bb044d06c459236b79af4b4c09d16bf8bf7f67aaa1cc7d6ea2bd523853",
     "controls": {
       "ref": "idle",
       "dx": 0,
@@ -217,11 +217,11 @@
     },
     "palette_distance": {
       "before": 0.0,
-      "after": 2.155998,
+      "after": 2.154391,
       "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
       "mapping_applied": false
     },
-    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic premultiplied RGBA; no silhouette inherited from A2/A3 garment. Transparent RGB cleared. Motion weapon exact."
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic RGBA; old fan hem removed. Transparent RGB cleared only outside protected regions. Final raw overwrite preserves weapon, hand and explicit feet/ground masks including hidden RGB and edge alpha."
   },
   {
     "frame": "thoma/swing/01.png",
@@ -234,7 +234,7 @@
       "thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
     },
     "baseline_sha256": "3722d0272e821c323ef913fd4cabe2a56a140b279fe07878c8db716c013d0acd",
-    "runtime_sha256": "0770cbaf3f99ea322175521471685d0f27164ba560bbc66c1f0cc4194edbfabb",
+    "runtime_sha256": "c4951e886bdaf6f49a72531e27c0db37254aabda071f4304d951c45d85c496cf",
     "controls": {
       "ref": "idle",
       "dx": 4,
@@ -413,11 +413,11 @@
     },
     "palette_distance": {
       "before": 0.0,
-      "after": 2.252855,
+      "after": 2.239122,
       "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
       "mapping_applied": false
     },
-    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic premultiplied RGBA; no silhouette inherited from A2/A3 garment. Transparent RGB cleared. Motion weapon exact."
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic RGBA; old fan hem removed. Transparent RGB cleared only outside protected regions. Final raw overwrite preserves weapon, hand and explicit feet/ground masks including hidden RGB and edge alpha."
   },
   {
     "frame": "thoma/swing/02.png",
@@ -430,7 +430,7 @@
       "thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
     },
     "baseline_sha256": "f38de24651841d855a4d14040838b9a33bd2050f7bffe4f5eb1ffdd206a9b7a2",
-    "runtime_sha256": "23abb318b5ced100c5fb92b8b2fdf636911ed331bb1dd8a448ee0b6c9974ca1b",
+    "runtime_sha256": "7ac71805794546f0bb85ba38257fa76c4aa802f6b15531792e491e5a19d2973d",
     "controls": {
       "ref": "recover",
       "dx": 19,
@@ -637,11 +637,11 @@
     },
     "palette_distance": {
       "before": 0.0,
-      "after": 2.24222,
+      "after": 2.244537,
       "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
       "mapping_applied": false
     },
-    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic premultiplied RGBA; no silhouette inherited from A2/A3 garment. Transparent RGB cleared. Motion weapon exact."
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic RGBA; old fan hem removed. Transparent RGB cleared only outside protected regions. Final raw overwrite preserves weapon, hand and explicit feet/ground masks including hidden RGB and edge alpha."
   },
   {
     "frame": "thoma/swing/03.png",
@@ -654,7 +654,7 @@
       "thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
     },
     "baseline_sha256": "32034e392720ad04f2294ddc74f02b142050761a4adbed01bc7aa2d11de0b10a",
-    "runtime_sha256": "688fb0d3744f2314056f6c7ee5719f46e02735445caf581bc105ca62d0b8f846",
+    "runtime_sha256": "04795f7b3a137c171033f1bae1578ee47e6700ffad3f8fd573bd9895175eb1cf",
     "controls": {
       "ref": "recover",
       "dx": 15,
@@ -873,11 +873,11 @@
     },
     "palette_distance": {
       "before": 0.0,
-      "after": 2.271027,
+      "after": 2.272082,
       "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
       "mapping_applied": false
     },
-    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic premultiplied RGBA; no silhouette inherited from A2/A3 garment. Transparent RGB cleared. Motion weapon exact."
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic RGBA; old fan hem removed. Transparent RGB cleared only outside protected regions. Final raw overwrite preserves weapon, hand and explicit feet/ground masks including hidden RGB and edge alpha."
   },
   {
     "frame": "thoma/swing/04.png",
@@ -890,7 +890,7 @@
       "thoma/swing/05.png": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
     },
     "baseline_sha256": "b2d64c00944131073dccde2c7399a3d638abd83d3101431d6f9d3bfbf23274ce",
-    "runtime_sha256": "85aeeb4eec4c29d66ef461c5f04ef352bdc61619aee62c94175fd23b2e672bd5",
+    "runtime_sha256": "e2d809bd1b7ab0d371a125532260b092d0372635af6cbd31e2cb695ed4df3f18",
     "controls": {
       "ref": "recover",
       "dx": 9,
@@ -1121,10 +1121,10 @@
     },
     "palette_distance": {
       "before": 0.0,
-      "after": 2.248148,
+      "after": 2.211167,
       "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
       "mapping_applied": false
     },
-    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic premultiplied RGBA; no silhouette inherited from A2/A3 garment. Transparent RGB cleared. Motion weapon exact."
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic RGBA; old fan hem removed. Transparent RGB cleared only outside protected regions. Final raw overwrite preserves weapon, hand and explicit feet/ground masks including hidden RGB and edge alpha."
   }
 ]
