@@ -1232,3 +1232,130 @@ Commit hooks run normally; report-only missing_canonical_memory advisory is
 documented, not bypassed. Explicit segment scope excludes PLAN/memory edits.
 
 W6 final table check: GODOT --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gtest=res://tests/test_a9_contract.gd -gexit returned0,8/8,2219 assertions,no warnings. See evidence/spike02-a9/handoff-table-check.log. Final metadata-only source/raw hash binding was synchronized (w6-sync.log,0) and independently rechecked by package_a9_evidence.py (0); no PNG or game code changed after W5 capture. W5 full suite remains79/79,7948 assertions.
+
+## spike-03
+
+Implemented layered hit feedback without touching A9 animation art or rules;
+big-map work is a proposal plus a separate throwaway camera scene. The larger
+map is not connected to gameplay. Human hit-feel is **HUMAN_PENDING** and the
+map option is **OWNER_PENDING**, independent of the automated results below.
+
+Worktree `D:\campaign-forge\scratch\godot-spike`, branch `codex/godot-spike`,
+clean start `20d9844` on `b2f460b`. The Owner explicitly named this base and
+authorized W1–W7 local commits, no push. Initial sandbox fetch failed because
+FETCH_HEAD is outside the writable root; scoped `git fetch origin` then exited
+0, remote task branch also `20d9844`. No conflicting remote commits, branch
+switch, other worktree writes, main merge, PR, stash, deployment or Actions.
+Process command-line inspection was denied; process names alone cannot certify
+other desktop-session worktree ownership. Work proceeded under the Owner's
+explicit autonomous worktree confirmation; no absence-of-other-sessions claim.
+
+### Tools and actual commands
+
+From the worktree root, `GODOT` below abbreviates the exact executable actually
+called with PowerShell `&`:
+
+`C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe`
+
+It reports `4.7.2.stable.official.ed1daf0bf`. `PYTHON` abbreviates the existing
+`C:\Users\daish\AppData\Local\Programs\Python\Python312\python.exe`, Pillow 12.2.0.
+Installed executables needed scoped sandbox execution; no installation, launcher,
+global trust/config, dependency or addon was changed. ffmpeg was not on PATH;
+Pillow builds the review GIF and decodes existing MJPEG AVI chunks.
+
+| Command actually run (same flags; stdout/stderr saved) | Real exit / result | Evidence |
+| --- | --- | --- |
+| `GODOT --path godot-spike --resolution 1280x720 --audio-driver Dummy --fixed-fps 60 --write-movie res://.godot/spike03-before/attack.avi -s res://tools/capture_spike03.gd -- --output=before` | 0; W1 original code,56 sampled frames | `before/w1-timeline.json`, W1 commit `4ca7bfb` |
+| Same with `-- --output=before --impact-profile=a9_baseline` after W2 | 0;58 AVI frames,56 sampled frames | `before/capture.log`, baseline profile recorded in JSON |
+| Same movie command with `.godot/spike03-after/attack.avi` / `--output=after` | 0 initial and repeat;60 AVI frames | `pre-number-placement/after/`, final `after/` |
+| Same movie command with `.godot/spike03-after-crit/attack.avi` / `--output=after-crit --crit` | 0 initial and repeat;64 AVI frames | trial and final `after-crit/` |
+| `GODOT --path godot-spike --resolution 1280x720 --audio-driver Dummy --fixed-fps 60 --max-fps 60 -s res://tools/capture_spike03.gd -- --timing` | 0;9 runs,0 readbacks,pass=true | `timing-run.log`, `timing.json` |
+| `GODOT --path godot-spike --resolution 1920x1080 --audio-driver Dummy --max-fps 60 -s res://tools/capture_spike03.gd -- --still1080` | 0 initial and repeat;actual1920×1080 | `still1080-inline-encoding.log` then `still1080-run.log`, `contact-1080.png` |
+| `PYTHON godot-spike/tools/package_spike03.py` | 0 | Strips, 5,262,076-byte GIF, unchanged AVI copies/indices, rejected trial retention |
+| `GODOT --headless --path godot-spike --import` | 0 each W2/W3/W5/W6 | `w2-import.log`, `import-run.log`, `w5-import.log`, `w6-import.log` |
+| `GODOT --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gdir=res://tests -gexit` | W2 0:79/79;W3 0:88/88 twice;W6 first1:88/89,final0:**89/89**,8958 assertions,15 scripts | `w2-test-run.log`, W3 logs, `w6-tests-pre-hintfix.log`, final `test-run.log` |
+| Same GUT command with `-gtest=res://tests/test_spike02.gd -gexit` | First1 (compile error);final0,6/6 | `w2-pause-test.log`, `w2-pause-test-final.log` |
+| Same with `-gtest=res://tests/test_spike03_impact.gd -gexit` | 0;9/9 after crit-indicator correction | `w3-final-impact-test.log` |
+| Same with `-gtest=res://tests/test_big_map_mockup.gd -gexit` | 0;one smoke,34 assertions | `w5-mockup-test.log` |
+| `GODOT --path godot-spike --resolution 1280x720 --audio-driver Dummy --max-fps 60 -s res://tools/capture_big_map.gd` | First0 with directory error,not accepted;repeat0,no error,7 screenshots/7 true checks | `w5-capture-pre-pathfix.log`, final `w5-capture.log`, proposal `capture.json` |
+| `PYTHON godot-spike/tools/audit_spike03.py` | First1 refused failing suite;next1 indentation error;then0 (Pillow deprecation notice),final clean repeat0 | Historical audit logs retained; `audit.json`, `audit-run.log`, `source-hashes.json` |
+| `git diff --stat b2f460b..HEAD`; protected-path `git diff --name-only b2f460b` and `git diff --check` | Scope0,protected paths empty; whitespace first2 from raw-log trailing spaces/blank EOF,final0 after log normalization | `changed-paths.txt`, source hashes and scope records |
+
+All evidence paths in the table are under `docs/evidence/spike03/` unless noted.
+PowerShell capture logs were normalized from UTF-16/ANSI to readable UTF-8 text,
+trimming trailing spaces and excess blank EOF lines;
+actual results and failures were retained. No earlier test was deleted,
+re-pointed, or weakened. Final import/test/capture logs contain no engine errors.
+
+### What changed and what the evidence proves
+
+`ImpactProfile` exports all layer tuning; the baseline resource preserves every
+A9 impact/camera/number/particle/SFX constant, and manifest.impact remains the
+historical record. Normal uses110ms and crit170ms whole-world hitstop; Reduced
+Motion keeps80ms. Attacker and target minima are both110ms, with the larger
+configured minimum governing the pausable world; the HUD/root remains always
+processing. Native still/movie freezes, clocks and UI regression tests agree.
+The real-time and process-time minimum guard stays in place.
+
+Shake is an8px first kick along attacker→target (crit12), three deterministic
+oscillations over200ms with exponential decay4, then exact zero. These are
+Camera2D offset units at the reference canvas; attack zoom scales their visible
+screen displacement. Full warm flash, visual-only9px recoil, immediate flare,
+sparks plus contact dust, number pop and +0.06 zoom punch share frame03. Named
+whoosh/impact/crit/landing hooks are original PLACEHOLDER synthesis.
+Reduced Motion has no shake/zoom/recoil/flash/sparks/dust; it keeps00/03/05 and
+the stationary number can scale. Rules damage stays2 even with C crit on.
+
+Final actual720p normal/crit AVIs are60/64 frames; their strike→ready spans are
+57/61 frames (0.950000/1.016667s), compared with A9 baseline55 (0.916667s).
+Frame-indexed decoded AVI and native PNGs hold identically for5/7/11 frames.
+AVI is lossy MJPEG: mean absolute RGB difference vs indexed native PNG is below
+4/255 per channel; this is an alignment check, not lossless pixel equality.
+146 native PNGs cover contact−8 through ready across the three final sequences.
+
+| Mode | Fixed60FPS seconds, open / unit / terrain | No-readback wall seconds |
+| --- | --- | --- |
+| Normal | .950000 / .950000 / .950000 | .928577 / .918207 / .920291 |
+| Crit presentation | 1.016667 / 1.016667 / 1.016667 | .987982 / .983269 / .975860 |
+| Reduced Motion | .716667 / .716667 / .716667 | .683442 / .676853 / .681805 |
+
+All nine runs ≤1.7s, normal/crit ≤1.2s, reduced ≤normal. HP/cells remain
+4HP at (1,6)/(1,5)/(3,4), with the two blocked setups staying put. Swing timing
+180/70/40/80/100/150ms, contact index3/anchor455,196, source PNGs and A9 flags
+are unchanged. Auditing verifies70 shared runtime files against source and the
+historical A9 hashes, plus unchanged rule bytes. Exact native CPU live-particle
+counts are unavailable: timelines label capacity upper bounds; tests verify
+frozen clocks and eventual deletion rather than inventing a count.
+
+The first number box hid the impact; final placement moves above the target and
+removes only the tuned backing. The first1080 still encoded synchronously during
+the hold and took2.0214s including encoding; the repeated tool saves after ready
+and reports.9486s. These capture costs are separated from the primary0-readback
+timing. The final diagnostic hint preserves legacy SCENARIO/SPACE/DEBUG tokens
+and appends C status; the full existing HUD test caught the earlier replacement.
+
+The mockup has768 decorative cells,12 repeated idle sprites, camera pan/drag/
+edge/wheel/overview/centre controls, bounds clamp and a display-only minimap.
+Seven native1280×720 screenshots show whole map, three positions and three
+tile sizes. It is not reachable from main game code, imports no rules/real HUD,
+and does not validate pathfinding, AI, combat, objectives, fog or production art.
+The proposal recommends C (iso160×94.5px/96px people/32×24), keeps L03 small,
+and leaves8 numbered one-line decisions to Gavin.
+
+### Failures and claim ceiling
+
+The dust-layer explicit Vector2 fixes a compile error; the auditor's indentation
+was corrected without changing acceptance conditions. A deprecated Pillow
+getdata call was replaced with its supported equivalent. The initial mockup
+mkdir API mishandled res://../ on Windows despite exit0; the tool now globalizes
+the path and aborts on failure, and its error-free repeat is authoritative.
+No hook was bypassed. Normal commits report the existing report-only
+missing_canonical_memory advisory; the brief excludes shared PLAN/memory edits.
+No governance code changed, no native lifecycle/full-adoption claim is made,
+and a task handoff is not SessionEnd.
+
+The [evidence index](evidence/spike03/README.md), [movie notes](evidence/spike03/MOVIE.md),
+[big-map proposal](../../docs/proposals/big-map-proposal.md) and W7 handoff carry
+the review trail. No human feel/scale/art approval, production audio, commercial
+quality, full battle or migration is claimed. W7 refreshes source hashes after
+the metadata-only handoff addition, then commits and stops without push.

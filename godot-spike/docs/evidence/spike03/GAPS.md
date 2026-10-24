@@ -3,6 +3,9 @@
 Measured from clean `20d9844` on `b2f460b`, Godot 4.7.2 / AMD 780M GL
 Compatibility, native 1280×720, fixed 60 FPS, setup 1. `before/timeline.json`
 is the post-draw record; `before/impact-strip.png` labels contact ±8 frames.
+The immutable W1 record is now [before/w1-timeline.json](before/w1-timeline.json)
+and commit `4ca7bfb`; W3 regenerated `before/timeline.json` through the selectable
+A9-baseline profile. Process-frame timing is the same; capture wall costs differ.
 Contact F19 (300 ms), hold F19–23, movement F24, input-ready F56:
 **0.916667 s simulation**, 1.296902 s wall time including readbacks/movie.
 Hitstop measured 83.333 ms process / 122.993 ms wall; requested minimum 80 ms.

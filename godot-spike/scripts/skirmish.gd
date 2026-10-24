@@ -503,7 +503,7 @@ func play_sfx(hook: String) -> void:
 		voice.play()
 
 func update_crit_hint() -> void:
-	hint_label.text = "1/2/3 | R REPLAY | C CRIT: " + ("ON" if next_hit_crit else "OFF")
+	hint_label.text = "1/2/3 SCENARIO | SPACE/R | F1 DEBUG | C CRIT: " + ("ON" if next_hit_crit else "OFF")
 
 func show_damage(at: Vector2, amount: int) -> void:
 	var anchor: Vector2 = actors["knight-1"].position if impact_profile.number_from_target else at

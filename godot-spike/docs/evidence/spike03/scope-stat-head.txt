@@ -1,0 +1,234 @@
+﻿ docs/proposals/big-map-proposal.md                 |  255 ++
+ docs/proposals/big-map/README.md                   |   37 +
+ docs/proposals/big-map/capture.json                |  164 ++
+ docs/proposals/big-map/overview.png                |  Bin 0 -> 374355 bytes
+ docs/proposals/big-map/scroll-crossing.png         |  Bin 0 -> 522421 bytes
+ docs/proposals/big-map/scroll-east.png             |  Bin 0 -> 625285 bytes
+ docs/proposals/big-map/scroll-west.png             |  Bin 0 -> 641013 bytes
+ docs/proposals/big-map/tile-128.png                |  Bin 0 -> 638482 bytes
+ docs/proposals/big-map/tile-160.png                |  Bin 0 -> 640575 bytes
+ docs/proposals/big-map/tile-192.png                |  Bin 0 -> 631630 bytes
+ docs/tasks/godot-spike-03-hitfeel-bigmap.md        |  135 +
+ godot-spike/audio/SOURCES.md                       |   14 +
+ godot-spike/audio/impact_synth.gd                  |   27 +
+ godot-spike/config/impact_profile.tres             |   42 +
+ godot-spike/config/impact_profile_a9_baseline.tres |    7 +
+ godot-spike/docs/evidence/spike03/GAPS.md          |   45 +
+ godot-spike/docs/evidence/spike03/MOVIE.md         |   55 +
+ .../evidence/spike03/after-crit/attack-60fps.avi   |  Bin 0 -> 8032720 bytes
+ .../docs/evidence/spike03/after-crit/capture.log   |  Bin 0 -> 1866 bytes
+ .../docs/evidence/spike03/after-crit/contact.png   |  Bin 0 -> 1465535 bytes
+ .../evidence/spike03/after-crit/frames/0010.png    |  Bin 0 -> 1253447 bytes
+ .../evidence/spike03/after-crit/frames/0011.png    |  Bin 0 -> 1261720 bytes
+ .../evidence/spike03/after-crit/frames/0012.png    |  Bin 0 -> 1266868 bytes
+ .../evidence/spike03/after-crit/frames/0013.png    |  Bin 0 -> 1268281 bytes
+ .../evidence/spike03/after-crit/frames/0014.png    |  Bin 0 -> 1268213 bytes
+ .../evidence/spike03/after-crit/frames/0015.png    |  Bin 0 -> 1268203 bytes
+ .../evidence/spike03/after-crit/frames/0016.png    |  Bin 0 -> 1268346 bytes
+ .../evidence/spike03/after-crit/frames/0017.png    |  Bin 0 -> 1268346 bytes
+ .../evidence/spike03/after-crit/frames/0018.png    |  Bin 0 -> 1435417 bytes
+ .../evidence/spike03/after-crit/frames/0019.png    |  Bin 0 -> 1435417 bytes
+ .../evidence/spike03/after-crit/frames/0020.png    |  Bin 0 -> 1435417 bytes
+ .../evidence/spike03/after-crit/frames/0021.png    |  Bin 0 -> 1435417 bytes
+ .../evidence/spike03/after-crit/frames/0022.png    |  Bin 0 -> 1435417 bytes
+ .../evidence/spike03/after-crit/frames/0023.png    |  Bin 0 -> 1435417 bytes
+ .../evidence/spike03/after-crit/frames/0024.png    |  Bin 0 -> 1435417 bytes
+ .../evidence/spike03/after-crit/frames/0025.png    |  Bin 0 -> 1435417 bytes
+ .../evidence/spike03/after-crit/frames/0026.png    |  Bin 0 -> 1435417 bytes
+ .../evidence/spike03/after-crit/frames/0027.png    |  Bin 0 -> 1435417 bytes
+ .../evidence/spike03/after-crit/frames/0028.png    |  Bin 0 -> 1435417 bytes
+ .../evidence/spike03/after-crit/frames/0029.png    |  Bin 0 -> 1425233 bytes
+ .../evidence/spike03/after-crit/frames/0030.png    |  Bin 0 -> 1417445 bytes
+ .../evidence/spike03/after-crit/frames/0031.png    |  Bin 0 -> 1410951 bytes
+ .../evidence/spike03/after-crit/frames/0032.png    |  Bin 0 -> 1407014 bytes
+ .../evidence/spike03/after-crit/frames/0033.png    |  Bin 0 -> 1406595 bytes
+ .../evidence/spike03/after-crit/frames/0034.png    |  Bin 0 -> 1405530 bytes
+ .../evidence/spike03/after-crit/frames/0035.png    |  Bin 0 -> 1406465 bytes
+ .../evidence/spike03/after-crit/frames/0036.png    |  Bin 0 -> 1406263 bytes
+ .../evidence/spike03/after-crit/frames/0037.png    |  Bin 0 -> 1405727 bytes
+ .../evidence/spike03/after-crit/frames/0038.png    |  Bin 0 -> 1405074 bytes
+ .../evidence/spike03/after-crit/frames/0039.png    |  Bin 0 -> 1405270 bytes
+ .../evidence/spike03/after-crit/frames/0040.png    |  Bin 0 -> 1405212 bytes
+ .../evidence/spike03/after-crit/frames/0041.png    |  Bin 0 -> 1405266 bytes
+ .../evidence/spike03/after-crit/frames/0042.png    |  Bin 0 -> 1404831 bytes
+ .../evidence/spike03/after-crit/frames/0043.png    |  Bin 0 -> 1404771 bytes
+ .../evidence/spike03/after-crit/frames/0044.png    |  Bin 0 -> 1404643 bytes
+ .../evidence/spike03/after-crit/frames/0045.png    |  Bin 0 -> 1404626 bytes
+ .../evidence/spike03/after-crit/frames/0046.png    |  Bin 0 -> 1404516 bytes
+ .../evidence/spike03/after-crit/frames/0047.png    |  Bin 0 -> 1404440 bytes
+ .../evidence/spike03/after-crit/frames/0048.png    |  Bin 0 -> 1404217 bytes
+ .../evidence/spike03/after-crit/frames/0049.png    |  Bin 0 -> 1404095 bytes
+ .../evidence/spike03/after-crit/frames/0050.png    |  Bin 0 -> 1404050 bytes
+ .../evidence/spike03/after-crit/frames/0051.png    |  Bin 0 -> 1402282 bytes
+ .../evidence/spike03/after-crit/frames/0052.png    |  Bin 0 -> 1393399 bytes
+ .../evidence/spike03/after-crit/frames/0053.png    |  Bin 0 -> 1372943 bytes
+ .../evidence/spike03/after-crit/frames/0054.png    |  Bin 0 -> 1313422 bytes
+ .../evidence/spike03/after-crit/frames/0055.png    |  Bin 0 -> 1238685 bytes
+ .../evidence/spike03/after-crit/frames/0056.png    |  Bin 0 -> 1141498 bytes
+ .../evidence/spike03/after-crit/frames/0057.png    |  Bin 0 -> 1047852 bytes
+ .../evidence/spike03/after-crit/frames/0058.png    |  Bin 0 -> 980942 bytes
+ .../evidence/spike03/after-crit/frames/0059.png    |  Bin 0 -> 934192 bytes
+ .../evidence/spike03/after-crit/frames/0060.png    |  Bin 0 -> 908381 bytes
+ .../evidence/spike03/after-crit/frames/0061.png    |  Bin 0 -> 903072 bytes
+ .../evidence/spike03/after-crit/impact-strip.png   |  Bin 0 -> 1823467 bytes
+ .../evidence/spike03/after-crit/movie-index.json   |   63 +
+ .../docs/evidence/spike03/after-crit/timeline.json | 2594 ++++++++++++++++++++
+ .../docs/evidence/spike03/after-crit/timeline.md   |   70 +
+ .../docs/evidence/spike03/after/attack-60fps.avi   |  Bin 0 -> 7484838 bytes
+ .../docs/evidence/spike03/after/capture.log        |  Bin 0 -> 1846 bytes
+ .../docs/evidence/spike03/after/contact.png        |  Bin 0 -> 1467722 bytes
+ .../docs/evidence/spike03/after/frames/0010.png    |  Bin 0 -> 1253447 bytes
+ .../docs/evidence/spike03/after/frames/0011.png    |  Bin 0 -> 1261720 bytes
+ .../docs/evidence/spike03/after/frames/0012.png    |  Bin 0 -> 1266868 bytes
+ .../docs/evidence/spike03/after/frames/0013.png    |  Bin 0 -> 1268281 bytes
+ .../docs/evidence/spike03/after/frames/0014.png    |  Bin 0 -> 1268213 bytes
+ .../docs/evidence/spike03/after/frames/0015.png    |  Bin 0 -> 1268203 bytes
+ .../docs/evidence/spike03/after/frames/0016.png    |  Bin 0 -> 1268346 bytes
+ .../docs/evidence/spike03/after/frames/0017.png    |  Bin 0 -> 1268346 bytes
+ .../docs/evidence/spike03/after/frames/0018.png    |  Bin 0 -> 1438228 bytes
+ .../docs/evidence/spike03/after/frames/0019.png    |  Bin 0 -> 1438228 bytes
+ .../docs/evidence/spike03/after/frames/0020.png    |  Bin 0 -> 1438228 bytes
+ .../docs/evidence/spike03/after/frames/0021.png    |  Bin 0 -> 1438228 bytes
+ .../docs/evidence/spike03/after/frames/0022.png    |  Bin 0 -> 1438228 bytes
+ .../docs/evidence/spike03/after/frames/0023.png    |  Bin 0 -> 1438228 bytes
+ .../docs/evidence/spike03/after/frames/0024.png    |  Bin 0 -> 1438228 bytes
+ .../docs/evidence/spike03/after/frames/0025.png    |  Bin 0 -> 1425475 bytes
+ .../docs/evidence/spike03/after/frames/0026.png    |  Bin 0 -> 1419072 bytes
+ .../docs/evidence/spike03/after/frames/0027.png    |  Bin 0 -> 1411136 bytes
+ .../docs/evidence/spike03/after/frames/0028.png    |  Bin 0 -> 1407610 bytes
+ .../docs/evidence/spike03/after/frames/0029.png    |  Bin 0 -> 1407194 bytes
+ .../docs/evidence/spike03/after/frames/0030.png    |  Bin 0 -> 1407220 bytes
+ .../docs/evidence/spike03/after/frames/0031.png    |  Bin 0 -> 1406347 bytes
+ .../docs/evidence/spike03/after/frames/0032.png    |  Bin 0 -> 1407485 bytes
+ .../docs/evidence/spike03/after/frames/0033.png    |  Bin 0 -> 1406218 bytes
+ .../docs/evidence/spike03/after/frames/0034.png    |  Bin 0 -> 1406900 bytes
+ .../docs/evidence/spike03/after/frames/0035.png    |  Bin 0 -> 1405335 bytes
+ .../docs/evidence/spike03/after/frames/0036.png    |  Bin 0 -> 1405040 bytes
+ .../docs/evidence/spike03/after/frames/0037.png    |  Bin 0 -> 1405342 bytes
+ .../docs/evidence/spike03/after/frames/0038.png    |  Bin 0 -> 1405057 bytes
+ .../docs/evidence/spike03/after/frames/0039.png    |  Bin 0 -> 1404754 bytes
+ .../docs/evidence/spike03/after/frames/0040.png    |  Bin 0 -> 1404686 bytes
+ .../docs/evidence/spike03/after/frames/0041.png    |  Bin 0 -> 1404715 bytes
+ .../docs/evidence/spike03/after/frames/0042.png    |  Bin 0 -> 1404497 bytes
+ .../docs/evidence/spike03/after/frames/0043.png    |  Bin 0 -> 1404413 bytes
+ .../docs/evidence/spike03/after/frames/0044.png    |  Bin 0 -> 1404277 bytes
+ .../docs/evidence/spike03/after/frames/0045.png    |  Bin 0 -> 1404227 bytes
+ .../docs/evidence/spike03/after/frames/0046.png    |  Bin 0 -> 1404161 bytes
+ .../docs/evidence/spike03/after/frames/0047.png    |  Bin 0 -> 1402282 bytes
+ .../docs/evidence/spike03/after/frames/0048.png    |  Bin 0 -> 1393399 bytes
+ .../docs/evidence/spike03/after/frames/0049.png    |  Bin 0 -> 1372943 bytes
+ .../docs/evidence/spike03/after/frames/0050.png    |  Bin 0 -> 1313422 bytes
+ .../docs/evidence/spike03/after/frames/0051.png    |  Bin 0 -> 1238685 bytes
+ .../docs/evidence/spike03/after/frames/0052.png    |  Bin 0 -> 1141498 bytes
+ .../docs/evidence/spike03/after/frames/0053.png    |  Bin 0 -> 1047852 bytes
+ .../docs/evidence/spike03/after/frames/0054.png    |  Bin 0 -> 980942 bytes
+ .../docs/evidence/spike03/after/frames/0055.png    |  Bin 0 -> 934192 bytes
+ .../docs/evidence/spike03/after/frames/0056.png    |  Bin 0 -> 908381 bytes
+ .../docs/evidence/spike03/after/frames/0057.png    |  Bin 0 -> 903072 bytes
+ .../docs/evidence/spike03/after/impact-strip.png   |  Bin 0 -> 2020641 bytes
+ .../docs/evidence/spike03/after/movie-index.json   |   63 +
+ .../docs/evidence/spike03/after/timeline.json      | 2414 ++++++++++++++++++
+ .../docs/evidence/spike03/after/timeline.md        |   66 +
+ .../docs/evidence/spike03/before-vs-after.gif      |  Bin 0 -> 5262076 bytes
+ .../docs/evidence/spike03/before/attack-60fps.avi  |  Bin 0 -> 7179690 bytes
+ .../docs/evidence/spike03/before/capture.log       |  Bin 0 -> 1850 bytes
+ .../docs/evidence/spike03/before/contact.png       |  Bin 0 -> 1433770 bytes
+ .../docs/evidence/spike03/before/frames/0010.png   |  Bin 0 -> 1253447 bytes
+ .../docs/evidence/spike03/before/frames/0011.png   |  Bin 0 -> 1261720 bytes
+ .../docs/evidence/spike03/before/frames/0012.png   |  Bin 0 -> 1266868 bytes
+ .../docs/evidence/spike03/before/frames/0013.png   |  Bin 0 -> 1268281 bytes
+ .../docs/evidence/spike03/before/frames/0014.png   |  Bin 0 -> 1268213 bytes
+ .../docs/evidence/spike03/before/frames/0015.png   |  Bin 0 -> 1268203 bytes
+ .../docs/evidence/spike03/before/frames/0016.png   |  Bin 0 -> 1268346 bytes
+ .../docs/evidence/spike03/before/frames/0017.png   |  Bin 0 -> 1268346 bytes
+ .../docs/evidence/spike03/before/frames/0018.png   |  Bin 0 -> 1401593 bytes
+ .../docs/evidence/spike03/before/frames/0019.png   |  Bin 0 -> 1401593 bytes
+ .../docs/evidence/spike03/before/frames/0020.png   |  Bin 0 -> 1401593 bytes
+ .../docs/evidence/spike03/before/frames/0021.png   |  Bin 0 -> 1401593 bytes
+ .../docs/evidence/spike03/before/frames/0022.png   |  Bin 0 -> 1401593 bytes
+ .../docs/evidence/spike03/before/frames/0023.png   |  Bin 0 -> 1399531 bytes
+ .../docs/evidence/spike03/before/frames/0024.png   |  Bin 0 -> 1403835 bytes
+ .../docs/evidence/spike03/before/frames/0025.png   |  Bin 0 -> 1404108 bytes
+ .../docs/evidence/spike03/before/frames/0026.png   |  Bin 0 -> 1401090 bytes
+ .../docs/evidence/spike03/before/frames/0027.png   |  Bin 0 -> 1406059 bytes
+ .../docs/evidence/spike03/before/frames/0028.png   |  Bin 0 -> 1402752 bytes
+ .../docs/evidence/spike03/before/frames/0029.png   |  Bin 0 -> 1402968 bytes
+ .../docs/evidence/spike03/before/frames/0030.png   |  Bin 0 -> 1405101 bytes
+ .../docs/evidence/spike03/before/frames/0031.png   |  Bin 0 -> 1403202 bytes
+ .../docs/evidence/spike03/before/frames/0032.png   |  Bin 0 -> 1403388 bytes
+ .../docs/evidence/spike03/before/frames/0033.png   |  Bin 0 -> 1403699 bytes
+ .../docs/evidence/spike03/before/frames/0034.png   |  Bin 0 -> 1403526 bytes
+ .../docs/evidence/spike03/before/frames/0035.png   |  Bin 0 -> 1404186 bytes
+ .../docs/evidence/spike03/before/frames/0036.png   |  Bin 0 -> 1403579 bytes
+ .../docs/evidence/spike03/before/frames/0037.png   |  Bin 0 -> 1403746 bytes
+ .../docs/evidence/spike03/before/frames/0038.png   |  Bin 0 -> 1403749 bytes
+ .../docs/evidence/spike03/before/frames/0039.png   |  Bin 0 -> 1403893 bytes
+ .../docs/evidence/spike03/before/frames/0040.png   |  Bin 0 -> 1403972 bytes
+ .../docs/evidence/spike03/before/frames/0041.png   |  Bin 0 -> 1403987 bytes
+ .../docs/evidence/spike03/before/frames/0042.png   |  Bin 0 -> 1403965 bytes
+ .../docs/evidence/spike03/before/frames/0043.png   |  Bin 0 -> 1404047 bytes
+ .../docs/evidence/spike03/before/frames/0044.png   |  Bin 0 -> 1404060 bytes
+ .../docs/evidence/spike03/before/frames/0045.png   |  Bin 0 -> 1402282 bytes
+ .../docs/evidence/spike03/before/frames/0046.png   |  Bin 0 -> 1393399 bytes
+ .../docs/evidence/spike03/before/frames/0047.png   |  Bin 0 -> 1372943 bytes
+ .../docs/evidence/spike03/before/frames/0048.png   |  Bin 0 -> 1313422 bytes
+ .../docs/evidence/spike03/before/frames/0049.png   |  Bin 0 -> 1238685 bytes
+ .../docs/evidence/spike03/before/frames/0050.png   |  Bin 0 -> 1141498 bytes
+ .../docs/evidence/spike03/before/frames/0051.png   |  Bin 0 -> 1047852 bytes
+ .../docs/evidence/spike03/before/frames/0052.png   |  Bin 0 -> 980942 bytes
+ .../docs/evidence/spike03/before/frames/0053.png   |  Bin 0 -> 934192 bytes
+ .../docs/evidence/spike03/before/frames/0054.png   |  Bin 0 -> 908381 bytes
+ .../docs/evidence/spike03/before/frames/0055.png   |  Bin 0 -> 903072 bytes
+ .../docs/evidence/spike03/before/impact-strip.png  |  Bin 0 -> 2405186 bytes
+ .../docs/evidence/spike03/before/movie-index.json  |   63 +
+ .../docs/evidence/spike03/before/timeline.json     | 2298 +++++++++++++++++
+ .../docs/evidence/spike03/before/timeline.md       |   64 +
+ .../docs/evidence/spike03/before/w1-timeline.json  | 2240 +++++++++++++++++
+ godot-spike/docs/evidence/spike03/contact-1080.png |  Bin 0 -> 2829667 bytes
+ godot-spike/docs/evidence/spike03/contact-crit.png |  Bin 0 -> 1465535 bytes
+ godot-spike/docs/evidence/spike03/contact.png      |  Bin 0 -> 1467722 bytes
+ .../spike03/impact-strip-before-vs-after.png       |  Bin 0 -> 4425654 bytes
+ godot-spike/docs/evidence/spike03/import-run.log   |  Bin 0 -> 2594 bytes
+ godot-spike/docs/evidence/spike03/number-pop.png   |  Bin 0 -> 1425475 bytes
+ .../spike03/pre-number-placement/README.md         |    3 +
+ .../after-crit/attack-60fps.avi                    |  Bin 0 -> 8002092 bytes
+ .../pre-number-placement/after-crit/capture.log    |  Bin 0 -> 1866 bytes
+ .../pre-number-placement/after-crit/contact.png    |  Bin 0 -> 1439115 bytes
+ .../pre-number-placement/after-crit/timeline.json  | 2594 ++++++++++++++++++++
+ .../pre-number-placement/after/attack-60fps.avi    |  Bin 0 -> 7475396 bytes
+ .../spike03/pre-number-placement/after/capture.log |  Bin 0 -> 1846 bytes
+ .../spike03/pre-number-placement/after/contact.png |  Bin 0 -> 1453813 bytes
+ .../pre-number-placement/after/timeline.json       | 2414 ++++++++++++++++++
+ .../evidence/spike03/still1080-inline-encoding.log |  Bin 0 -> 720 bytes
+ .../docs/evidence/spike03/still1080-run.log        |  Bin 0 -> 720 bytes
+ .../spike03/test-run-pre-number-placement.log      |  Bin 0 -> 20064 bytes
+ godot-spike/docs/evidence/spike03/test-run.log     |  Bin 0 -> 20066 bytes
+ godot-spike/docs/evidence/spike03/timing-run.log   |  Bin 0 -> 2042 bytes
+ godot-spike/docs/evidence/spike03/timing.json      |  544 ++++
+ godot-spike/docs/evidence/spike03/w2-import.log    |  Bin 0 -> 10346 bytes
+ .../docs/evidence/spike03/w2-pause-test-final.log  |  Bin 0 -> 2618 bytes
+ .../docs/evidence/spike03/w2-pause-test.log        |  Bin 0 -> 17234 bytes
+ godot-spike/docs/evidence/spike03/w2-test-run.log  |  Bin 0 -> 15332 bytes
+ .../docs/evidence/spike03/w3-final-impact-test.log |  Bin 0 -> 5930 bytes
+ .../evidence/spike03/w5-capture-pre-pathfix.log    |  Bin 0 -> 2416 bytes
+ godot-spike/docs/evidence/spike03/w5-capture.log   |  Bin 0 -> 840 bytes
+ godot-spike/docs/evidence/spike03/w5-import.log    |  Bin 0 -> 2686 bytes
+ .../docs/evidence/spike03/w5-mockup-test.log       |  Bin 0 -> 1442 bytes
+ godot-spike/scenes/mockups/BigMapMockup.tscn       |    6 +
+ godot-spike/scripts/anim/frame_player.gd           |    9 +-
+ godot-spike/scripts/impact/impact_profile.gd       |  110 +
+ godot-spike/scripts/impact/impact_profile.gd.uid   |    1 +
+ godot-spike/scripts/mockups/big_map_mockup.gd      |  236 ++
+ godot-spike/scripts/mockups/big_map_mockup.gd.uid  |    1 +
+ godot-spike/scripts/skirmish.gd                    |  199 +-
+ godot-spike/shaders/hit_flash.gdshader             |    4 +-
+ godot-spike/tests/test_big_map_mockup.gd           |   25 +
+ godot-spike/tests/test_big_map_mockup.gd.uid       |    1 +
+ godot-spike/tests/test_spike03_impact.gd           |  179 ++
+ godot-spike/tests/test_spike03_impact.gd.uid       |    1 +
+ godot-spike/tools/capture_big_map.gd               |  113 +
+ godot-spike/tools/capture_big_map.gd.uid           |    1 +
+ godot-spike/tools/capture_spike03.gd               |  158 ++
+ godot-spike/tools/capture_spike03.gd.uid           |    1 +
+ godot-spike/tools/package_spike03.py               |  111 +
+ 233 files changed, 17380 insertions(+), 47 deletions(-)

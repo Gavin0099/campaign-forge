@@ -1,0 +1,10 @@
+python.exe : D:\campaign-forge\scratch\godot-spike\godot-spike\tools\audit_spike03.py:66: DeprecationWarning: Image.Ima
+ge.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+At line:2 char:148
++ ... -error.log; & 'C:\Users\daish\AppData\Local\Programs\Python\Python312 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\campaign-for...d_data instead.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+  assert len(set(image.resize((16,9)).getdata()))>50
+SPIKE03_AUDIT pass=true tests=89 protected=70 native_pngs=146 sources=515

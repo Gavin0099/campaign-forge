@@ -1,0 +1,10 @@
+python.exe :   File "D:\campaign-forge\scratch\godot-spike\godot-spike\tools\audit_spike03.py", line 38
+At line:2 char:215
++ ... -paths.txt; & 'C:\Users\daish\AppData\Local\Programs\Python\Python312 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  File "D:\camp...03.py", line 38:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+    final_log = log('test-run.log')
+                                   ^
+IndentationError: unindent does not match any outer indentation level

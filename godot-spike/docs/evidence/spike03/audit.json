@@ -1,0 +1,419 @@
+{
+  "pass": true,
+  "gut_tests": 89,
+  "captures": {
+    "before": {
+      "native_pngs": 46,
+      "held_pngs": 5,
+      "held_pixels_identical": true,
+      "movie_frames": 58,
+      "movie_sha256": "671cea47742f5b84c02405d0892d9b31d4c6c6af41de7cceca9e35adce1c8ba5",
+      "movie_hold_pixels_identical": true,
+      "movie_vs_png_mean_abs_rgb": [
+        3.0959168836805557,
+        2.4403038194444444,
+        3.7981434461805557
+      ],
+      "strike_to_ready_seconds": 0.916666666666667
+    },
+    "after": {
+      "native_pngs": 48,
+      "held_pngs": 7,
+      "held_pixels_identical": true,
+      "movie_frames": 60,
+      "movie_sha256": "1995a3321e9bddb28a8e97f28d68f3719d2cd32e110a104bf5b08ef6b00ac90e",
+      "movie_hold_pixels_identical": true,
+      "movie_vs_png_mean_abs_rgb": [
+        3.128312717013889,
+        2.473976779513889,
+        3.9061783854166667
+      ],
+      "strike_to_ready_seconds": 0.95
+    },
+    "after-crit": {
+      "native_pngs": 52,
+      "held_pngs": 11,
+      "held_pixels_identical": true,
+      "movie_frames": 64,
+      "movie_sha256": "d46a826eb26d608fcff16667f2dd63bae8925732c894349b14de76b0edf32702",
+      "movie_hold_pixels_identical": true,
+      "movie_vs_png_mean_abs_rgb": [
+        3.123029513888889,
+        2.4729915364583333,
+        3.9076888020833334
+      ],
+      "strike_to_ready_seconds": 1.01666666666667
+    }
+  },
+  "no_readback_runs": 9,
+  "mockup_checks": {
+    "centre_key": true,
+    "drag_pan": true,
+    "edge_pan": true,
+    "edge_window_focused": true,
+    "keyboard_pan": true,
+    "overview_key": true,
+    "wheel_zoom": true
+  },
+  "protected_shared_files": [
+    {
+      "path": "shared-anim/a2-generation-prompts.json",
+      "sha256": "a5c0ed40286be5b5bcc74f373087d793c66baa8aba0d1e44733277bd7dfc0010",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/a2-retry-prompt.json",
+      "sha256": "eee84851094b23132ed5a0bfb530bbe149bf8432a901ccb585728d982d9357c4",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/a2-swing-prompts.json",
+      "sha256": "d12577e1871a711266bd3bab21b1976b32f86168afc0d112d3f8f270181abc7f",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/a3-swing-prompts.json",
+      "sha256": "43c9643628994824299714c49abe658ce46c49afd243f195664540bbc9e2830a",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/a4-swing-prompts.json",
+      "sha256": "5ca3fea3b413d37628a961d1ced4931c208126612b5769b99c83f77e068310eb",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/a5-swing-prompts.json",
+      "sha256": "e8c21b294c034e5c249ee19803198ffc733258ae32501d31bdb20131b6f8da43",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/a6-swing-prompts.json",
+      "sha256": "ca2e2e4c83046910b028f28a684fb7663cef3561164408174cffaec84820a84f",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/a7-swing-prompts.json",
+      "sha256": "d35facf74f01ce05fec5b23fac733b54e57a0ff569227a92b55921413d8c6f5a",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/a8-swing-prompts.json",
+      "sha256": "7926c473e30c8d1448f1d0c28181b06ece7b0c6d0d6bb1192a6c7b2af1e83723",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/contact-sheet.png",
+      "sha256": "992a6554ae0871cae73feceaa3b73ab29d5c4196ca9adc1ab2325b3fbaca303e",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/frame-audit.json",
+      "sha256": "479e128c372db3578a3dc490ed26be4156d3bcd85812f8ee362eb25072bed8c5",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/generation-prompts.json",
+      "sha256": "20bf9c7cd31cb363d2b244e84c343375605a8157cd191a1b42422cbf45a7ebcb",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/knight-a/hit/00.png",
+      "sha256": "6ebef74b6cf9520b5f5a243fb4d9bf669bf78bc6c52f9d6b99ce8202619d2b41",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/knight-a/hit/01.png",
+      "sha256": "9fbf4a41ffcc16d7c0e75a1f74a182ef33eed4c869f934341cf81e2692b85179",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/knight-a/hit/02.png",
+      "sha256": "0465fee5877109acb6723c56ebe71134f0d3fcc9ab6e6b9505d7be534f4523bb",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/knight-a/idle/00.png",
+      "sha256": "0ca4807cc16f63dba0b3a15bfaaa1d1a534892151db7dfb339e6c5c2b6edf791",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/knight-a/stagger/00.png",
+      "sha256": "2cfe6ceb5de5380888937e1ec790102372b4efe5a2f7126a711780915f2948b6",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/knight-a/stagger/01.png",
+      "sha256": "b4ec94ff31941285ebd450a706d0565c23745ad2757bcd9229c55797a4b1773b",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/knight-a/stagger/02.png",
+      "sha256": "62594f3aaef1f3a70fdae0a1965c7649f8badf0a112afced863cf85b44e24dd6",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/knight-a2-edits.json",
+      "sha256": "b16f995f3ad25686e05ce32d0e5b650d502818e52a6cc7bbbdb1bda633adc673",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/knight-b/hit/00.png",
+      "sha256": "cc853f78528c4c8391d70606eb4e4da39565ea5d73e568664620ba06c39ab5bd",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/knight-b/hit/01.png",
+      "sha256": "2b54bc88debb009b1a15164a6c40e07f1438eb5be33cb7bb0b0c632e85a7ae9e",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/knight-b/hit/02.png",
+      "sha256": "e14b7ba82c075fef7a4f94d14c0309fec15316c73eddd0c3437e0d39b8e4a7cd",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/knight-b/idle/00.png",
+      "sha256": "e71644dfef36fcb0cc1babd3db63ab9791ade1d1fbd7445601b77f51612e97b5",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/knight-b/stagger/00.png",
+      "sha256": "e5164c1a931d13ffdfcabffb345a2c2ff57f6f6f87e115aae3bc19c1fc7538e6",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/knight-b/stagger/01.png",
+      "sha256": "aaea5183f82ec03d531770331835530bfb841d3909bcf88875d2f2301d8a49cf",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/knight-b/stagger/02.png",
+      "sha256": "4c2dc1cad19b6a6f11a6727d689e53ea124d0644e698925311db4fdb6290e138",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/knight-generation-prompts.json",
+      "sha256": "6db965813b6179252519093d39a379a7736f23d60184ef0c422147de1de30e30",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/manifest.json",
+      "sha256": "ac9f0a10b3ca7556ee04336cbb81d6c660bfa2406e1b5282b7802d8fc68a3eea",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/manifest.schema.json",
+      "sha256": "fe64327043a5a4cf24b4501af2107abcdacc359b7da66f644c638cabe603690c",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/knight-a-hit-00.png",
+      "sha256": "10260a5c1dd3cfdc7ed5eb70da250e74c7f7d1b36543bfee56d078eaff900a79",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/knight-a-hit-01.png",
+      "sha256": "f528b4c5b14bd1dbc5eeba2e6a3e0c8e889c4bce684b0cab16ec3a506cfb592b",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/knight-a-hit-02.png",
+      "sha256": "1596e1e438609947b652f20302c8735233247bd400c495125b18eb7743cce376",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/knight-a-stagger-00.png",
+      "sha256": "2f32cc1dc5d47df2f0e40df3bc7790e38c26a2f5dd86ec778f52ee5559a9d299",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/knight-a-stagger-01.png",
+      "sha256": "b7bc8fd69682eda80f00c74a26d7993726add31bf1b678323bc968b55399bbc2",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/knight-a-stagger-02.png",
+      "sha256": "7fa1a592fce21df8a5b08076f666b5e77db0cc29fc02b1521ffc931729cfc2cf",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-a3-swing-00-attempt1.png",
+      "sha256": "e0f0159ed683807366afe3350b3944a147e6565e5b576b39a8dd9f0e6efd00e0",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-a3-swing-01-attempt1.png",
+      "sha256": "804668a246aeb3330726d7dca2f9f270d393cd70a30496efb49dc12a48ce51ca",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-a3-swing-02-attempt1.png",
+      "sha256": "ba4fa98a9585520c21c9ab64dedd592578b7cd6bab75d2a700f5d64a52628525",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-a3-swing-03-attempt1.png",
+      "sha256": "beb43bf73db79d2c91103c0550dc9ca92421f8bc0fa7fc255b8d31209aa883b6",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-a3-swing-04-attempt1.png",
+      "sha256": "5ebcce2dd61852d41056f79f86a625add621994cd5fff3a56a4526b1b6115738",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-mace-idle-01.png",
+      "sha256": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-mace-swing-00.png",
+      "sha256": "3bc1b5ef510e6b24ebd9625becd39c8370293fa23747c082a29e380e3997ff20",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-mace-swing-01.png",
+      "sha256": "0e138449eaa3634f1af7ee8944b6b2273921d12b58452b7cf7f112d93e8fd8ba",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-mace-swing-02-attempt2.png",
+      "sha256": "274edae4742a67aedd787cb20e6e8b6ff12dce900a2797ac11d22300608b0551",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-mace-swing-03.png",
+      "sha256": "aca010f6472a7aff8b164ee9ea0ae92e12f2f62b44eb19d286b1ba5ca5380ea8",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-mace-swing-04.png",
+      "sha256": "eacc1d40c1b6e70d14d265ec57b81a9bcfcc44406f19afa1e84e44029a89a7bf",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-mace-swing-05.png",
+      "sha256": "e89296c8cd0a799e8d5302caf1f611aaa241e84f2a2c4ff56f8b77f4153f31dd",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-swing-00.png",
+      "sha256": "9b9abc677d83bdb671515bf64953acb3d85eddac73b7d96118aba20862a7ca97",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-swing-01.png",
+      "sha256": "fb72c1459e526cfbdfe93555edbcf1e626fd00d28cc7c7a1702d01ba753ae788",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-swing-02.png",
+      "sha256": "8a94a4e381d89005669c9200f925054a8e1aa53d7bbca76d4f0aadb22aff50ae",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-swing-03.png",
+      "sha256": "e1007e646772e9b5b3d7f56aa8cb4e770249724b0e4699ff864e1d2f46747c06",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-swing-04.png",
+      "sha256": "c4bf92b69f8bee4bc8dd4dccdc9bed90fcf00ac17806b76d0155d8f1a28b827c",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/raw/thoma-swing-05.png",
+      "sha256": "9a8e01df6a7e3273664fc9536f5a0dd74ef43180bba69c684ba3061eac998851",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/README.md",
+      "sha256": "3d4f31a814e770c02e8ec88d325eff6c7a50d6c92b5b3c93e2c014749d5e895f",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/references/knight-a.png",
+      "sha256": "d8243331a939ea2359ec5dd6549e99a152d8eebb53481221ecbabc4cc77f4576",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/references/sword-reference.png",
+      "sha256": "e25f94a801ed7573cacaa3c128cf98716e59bcd647c50c314bfcc5904ff91f23",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/references/thoma.png",
+      "sha256": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/SOURCES.md",
+      "sha256": "c9acdd09a8860a305314c5d2ad256d4891b4a026da1c0c90738c18bfcd56ce4c",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/thoma/idle/00.png",
+      "sha256": "4214584c64eb57e3d63bdbb9975a2a0d41ee76cd4c6087b61485e795abe23400",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/thoma/idle/01.png",
+      "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/thoma/swing/00.png",
+      "sha256": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/thoma/swing/01.png",
+      "sha256": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/thoma/swing/02.png",
+      "sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/thoma/swing/03.png",
+      "sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/thoma/swing/04.png",
+      "sha256": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/thoma/swing/05.png",
+      "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/thoma-appearance-spec.json",
+      "sha256": "bb0c9ff5949c659f35a892ad4e2b38aa28bb645fd8b4a81fbdf6f76c01ddb163",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/thoma-appearance-spec.md",
+      "sha256": "338cc220b2abbb6aba79e258eacc77ba5f48016de77a7408b6d65360cb79a804",
+      "a9_unchanged": true
+    },
+    {
+      "path": "shared-anim/thoma-weapon-style-check.png",
+      "sha256": "f1a2e301db3848aed463f0fbb0c3e53c617c1d6c674e804df1d42ba059882afc",
+      "a9_unchanged": true
+    }
+  ],
+  "rules_a9_unchanged": true,
+  "scope_base": "b2f460b",
+  "changed_paths_checked": 247,
+  "limits": [
+    "CPU particle counts are emitter-capacity upper bounds.",
+    "Dummy audio is not device audition.",
+    "Human hit-feel HUMAN_PENDING; big-map option OWNER_PENDING.",
+    "Mockup is decorative, not a playable level."
+  ]
+}
