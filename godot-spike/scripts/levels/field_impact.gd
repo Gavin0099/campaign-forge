@@ -161,5 +161,6 @@ func play(event: Dictionary, damage: Dictionary, movement: Dictionary) -> void:
 	material.set_shader_parameter("flash",0.0)
 	battle.attack_return()
 	await get_tree().create_timer(profile.settle_ms/1000,false).timeout
+	battle.camera.finish_return()
 	last_seconds=(Time.get_ticks_usec()-started)/1000000.0
 	battle.attack_timings.append({"kind":event.kind,"reduced":battle.reduced_motion,"crit":crit,"wall_seconds":last_seconds})

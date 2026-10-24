@@ -51,7 +51,9 @@ func world_cell(at: Vector2) -> Vector2i:
 	return Vector2i(floori((x+y)/2),floori((y-x)/2))
 
 func world_bounds() -> Rect2:
-	return Rect2(Vector2.ZERO,HALF*(state.level.size.x+state.level.size.y))
+	# Empty perimeter is part of the authored navigable bounds: HUD-safe access
+	# to edge tiles without ever exposing outside the battlefield camera bounds.
+	return Rect2(Vector2(-120,-180),HALF*(state.level.size.x+state.level.size.y)+Vector2(240,360))
 
 func make_label(parent: Node, text: String, at: Vector2, size: int, color: Color = BONE) -> Label:
 	var label := Label.new()
@@ -84,7 +86,8 @@ func _ready() -> void:
 	ground=preload("res://scripts/levels/field_ground.gd").new()
 	ground.battle=self
 	world.add_child(ground)
-	camera=Camera2D.new()
+	camera=preload("res://scripts/levels/field_camera.gd").new()
+	camera.battle=self
 	world.add_child(camera)
 	impact=preload("res://scripts/levels/field_impact.gd").new()
 	impact.battle=self
@@ -179,7 +182,7 @@ func select_unit(id: String) -> void:
 	selected_id=id
 	cursor_cell=u.cell
 	cancel()
-	pan_to(center(u.cell))
+	camera.follow(center(u.cell))
 
 func cancel() -> void:
 	pending.clear()
@@ -261,10 +264,15 @@ func play_events(events: Array) -> void:
 				state.phase=event.phase
 				hud.notice.text="敵方回合　B／Shift 加速 · X 略過移動" if event.phase=="enemy" else "我方回合"
 			"move":
+				if state.phase=="player": camera.follow(center(event.path.back()))
 				await animate_move(event.unit,event.path)
 			"intent":
 				if event.state!="guard": hud.notice.text="%s：%s" % [event.unit,event.get("reason",event.state)]
 			"attack":
+				if state.phase=="enemy":
+					hud.notice.text="敵方攻擊：%s → %s" % [event.unit,event.target]
+					camera.follow(actors[event.target].position)
+					if not reduced_motion: await get_tree().create_timer(.24/playback_speed(),false).timeout
 				var damage: Dictionary = events[i+1]
 				var movement: Dictionary = events[i+2] if i+2<events.size() and events[i+2].type in ["knockback","knockback_blocked"] else {}
 				impact.crit=next_crit
@@ -272,8 +280,10 @@ func play_events(events: Array) -> void:
 				await impact.play(event,damage,movement)
 			"reinforcement_warning":
 				hud.notice.text="增援預告：第 %d 回合，東北入口，3 名騎士；到場當回合不行動" % event.turn
+				camera.follow(center(event.entries[0]))
 			"reinforcement_arrival":
 				hud.notice.text="增援到場：%s（本回合休息）" % event.unit
+				camera.follow(center(event.cell))
 
 func end_turn() -> void:
 	if busy or state.status!="playing": return
@@ -297,19 +307,16 @@ func restart() -> void:
 	refresh()
 
 func pan_to(at: Vector2) -> void:
-	var half_view := Vector2(640,360)/camera.zoom
-	var bounds := world_bounds()
-	camera.position=at.clamp(half_view,bounds.end-half_view)
-	camera.force_update_scroll()
+	camera.pan_to(at)
 
-func attack_focus(_at: Vector2) -> void:
-	pass # W4 adds independent base/focus/impact layers.
+func attack_focus(at: Vector2) -> void:
+	camera.begin_attack(at,impact.profile)
 
 func attack_return() -> void:
-	camera.offset=Vector2.ZERO
+	camera.end_attack()
 
-func impact_kick(_direction: Vector2, _profile: ImpactProfile, _crit: bool) -> void:
-	pass # W4 clamps shake and restores the pre-attack base position.
+func impact_kick(direction: Vector2, profile: ImpactProfile, crit: bool) -> void:
+	camera.kick(direction,profile,crit)
 
 func _process(_delta: float) -> void:
 	if get_tree().paused: return
@@ -322,6 +329,14 @@ func _process(_delta: float) -> void:
 	if debug_visible: hud.update_state()
 
 func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT and event.pressed and camera.overview:
+		var clicked := world_cell(get_global_mouse_position())
+		camera.toggle_overview()
+		if Rules.inside(state.level,clicked):
+			camera.follow(center(clicked))
+			var u := Rules.occupant(state,clicked)
+			if not u.is_empty() and u.side=="ally": select_unit(u.id)
+		return
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index==MOUSE_BUTTON_RIGHT and not busy: cancel()
 		if event.button_index==MOUSE_BUTTON_LEFT: choose(world_cell(get_global_mouse_position()))
