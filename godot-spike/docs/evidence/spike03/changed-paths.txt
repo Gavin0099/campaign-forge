@@ -192,6 +192,7 @@ godot-spike/docs/evidence/spike03/contact.png
 godot-spike/docs/evidence/spike03/contact-1080.png
 godot-spike/docs/evidence/spike03/contact-crit.png
 godot-spike/docs/evidence/spike03/GAPS.md
+godot-spike/docs/evidence/spike03/handoff-audit-run.log
 godot-spike/docs/evidence/spike03/impact-strip-before-vs-after.png
 godot-spike/docs/evidence/spike03/import-run.log
 godot-spike/docs/evidence/spike03/MOVIE.md
@@ -226,6 +227,7 @@ godot-spike/docs/evidence/spike03/w5-import.log
 godot-spike/docs/evidence/spike03/w5-mockup-test.log
 godot-spike/docs/evidence/spike03/w6-import.log
 godot-spike/docs/evidence/spike03/w6-tests-pre-hintfix.log
+godot-spike/docs/HANDOFF.md
 godot-spike/docs/VERIFICATION.md
 godot-spike/scenes/mockups/BigMapMockup.tscn
 godot-spike/scripts/anim/frame_player.gd

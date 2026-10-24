@@ -2224,3 +2224,236 @@ excludes PLAN/memory/shared narrative updates.
 deployment, new slice or further art attempt. Wait for Owner review.**
 
 W6 final validation: A9 contract against the actual inserted handoff/table returned exit0,8/8 tests,2219 assertions, no warnings (handoff-table-check.log). Final independent package audit returned0:46 bounded operations,70 byte-equal shared files,26 native captures,59 movie frames; no PNG changed after W5 capture. Metadata-only correction binds frame-audit source/raw_sha256 to its archived A8 base and names the operation log separately; w6-sync.log and final contract/package checks verify that correction. Source snapshot refreshed after this final narrative addition.
+
+## spike-03
+
+**打擊回饋已實作並完成工程驗證；大地圖只有提案與獨立 mockup。**
+人類打擊感試玩 **HUMAN_PENDING**，大地圖選案 **OWNER_PENDING**。這不代表
+Gavin 已認可重量感、最終動畫、聲音、美術或正式關卡。
+
+Owner Gavin Wu 於 2026-10-24 18:27 授權「A9 先暫用，接著做大地圖提案和
+打擊感」；本輪依 [spike-03 brief](../../docs/tasks/godot-spike-03-hitfeel-bigmap.md)
+在 `D:\campaign-forge\scratch\godot-spike`、`codex/godot-spike` 從乾淨 `20d9844`
+（A9 `b2f460b` 上）依序完成 W1–W7。本段補充前面的歷史交接；Owner 已在
+指定的 P010 決策分支選擇 Godot，React／Phase B 取消，不再提出 web 遷移工作。
+未更改本分支的舊決策紀錄、正式劇情、G005、S3／S4 或任何共用 PLAN／memory。
+
+### 如何執行與調參
+
+從工作區根目錄執行；Godot 4.7.2 standard，遊戲程式全為 GDScript：
+
+```powershell
+$godotSpikeExe = 'C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe'
+& $godotSpikeExe --headless --path godot-spike --import
+& $godotSpikeExe --path godot-spike --resolution 1280x720
+# A9 impact baseline（同一組原封不動的 A9 動作圖）：
+& $godotSpikeExe --path godot-spike --resolution 1280x720 -- --impact-profile=a9_baseline
+# 第一擊展示暴擊，傷害仍是 2：
+& $godotSpikeExe --path godot-spike --resolution 1280x720 -- --crit
+# 獨立大地圖 mockup；沒有從遊戲主場景導向它：
+& $godotSpikeExe --path godot-spike res://scenes/mockups/BigMapMockup.tscn
+```
+
+也可開 `godot-spike/project.godot`，F5 玩原本 Skirmish；mockup 請另開場景 F6。
+R 重播；1／2／3 選開放／友軍阻擋／地形阻擋；空白鍵準備／確認；M 切換
+Reduced Motion；C 切換「下一擊展示暴擊」，出手後自動消耗，忙碌時不能切換。
+F1 可看 C 狀態與原有除錯提示；H／? 說明、Tab 焦點、Esc 收起／取消／離開。
+主 HUD 佈局未改。`--crit` 與 C 都只改 presentation，沒有正式暴擊規則。
+
+調參入口是 [impact_profile.tres](../config/impact_profile.tres)，Inspector 可看到
+[ImpactProfile](../scripts/impact/impact_profile.gd) 的分組、範圍與說明；未覆寫欄位
+沿用 Resource 的 A9 預設值。[baseline](../config/impact_profile_a9_baseline.tres)
+用於前後對照。`manifest.impact` 保留為 A9 歷史紀錄，不是新的 live tuning。
+材質持續使用 `flash` uniform；所有 layer 時間、強度、數量、顏色、音量與 hook
+名稱由 profile 供應。沒有新增 addon、安裝工具或外部素材。
+
+### 打擊層：A9 → spike-03（設定值）
+
+| 層 | A9 baseline | spike-03 normal／crit | Reduced Motion |
+| --- | --- | --- | --- |
+| Hitstop | 80 ms | 攻擊者／目標各110 ms，crit ×1.54545 ≈170 ms；整個 pausable world 取最大值，保留真實時間＋process 時間下限 | 80 ms |
+| Shake | 3.4 px，首下 (3.4,−1.7)，非定向，200 ms、power decay2 | 沿 attacker→target 首下8／12 Camera2D offset units，200 ms、3 次震盪、exponential decay4，歸零 | 無 |
+| Flash | 白 mix0.65，停頓後35 ms fade | 暖白 mix1.0，停頓期間保持，額外16.7 ms 後80／96 ms fade | 無，維持原抑制契約 |
+| 接觸後仰 | 接觸幀無位移 | 目標 sprite 視覺 pivot 即時9 px，120 ms cubic-out 回位；不動邏輯格／actor | 無 |
+| 火花／短 streak | 7 條1.2 px spokes +24 CPU sparks | 11 條2 px spokes +22 px 方向 streak +36 sparks；crit 約17 條／54 sparks | 無 |
+| Ground dust | 只有受阻回彈 | 每次接觸18／27 dust particles＋即時低透明足底 puff；blocked recoil 仍有揚塵 | 無 |
+| 數字 | 18 px，scale1，黑底，30 px rise／380 ms | 28／34 px，scale1.6／1.8 → overshoot →1，120 ms；brass／clay。移到目標上方112 px，tuned 無黑底 | 數字可 scale，無上浮 |
+| Zoom punch | 無；原 attack zoom1.4 | 額外 +0.06，停頓後100 ms 回到 attack zoom | 無 attack zoom／punch |
+| 擊退／受阻／settle | 220 ms；6 px／60+160 ms；180 ms | 全部維持 A9，仍只擊退規則決定的一格 | open knockback30 ms，原受阻時序維持 |
+| SFX | 單一 impact，−7 dB | whoosh −14、impact −7／crit −6、thud −12 dB | whoosh 改 frame00，impact 仍 frame03 |
+
+上述 px 為 1280×720 參考畫布／Camera2D 世界單位，實際 attack zoom 會放大可見
+位移。新回饋保留同一個 frame03／anchor(455,196)，九個 layer 的觸發紀錄同幀；
+原有 spark／sfx／flash 三事件契約也維持。recoil 是獨立 visual_offset，不會被
+換圖覆蓋，也不和規則 knockback 搶同一個位置 tween。
+
+保留 whole-world SceneTree pause：人物 frame clocks、camera、數字、粒子與
+tweens 凍結，root／HUD 仍 always-process，F1 等可操作。這次沒有改成個別 actor
+freeze，也沒有用全域 time_scale。profile 可分別填攻擊者／目標 minimum，但
+在此模型中兩者與世界會一起等到較長值。UI 自動操作與原有 pause regression
+繼續驗證這個契約。
+
+### 實機證據、時序與測試
+
+- [證據總覽](evidence/spike03/README.md)、[驗證命令與真實退出碼](VERIFICATION.md#spike-03)、
+  [GAPS](evidence/spike03/GAPS.md)、[audit](evidence/spike03/audit.json)、
+  [source hashes](evidence/spike03/source-hashes.json)。
+- [相同版型 before／after strip](evidence/spike03/impact-strip-before-vs-after.png)、
+  [crit strip](evidence/spike03/after-crit/impact-strip.png)、
+  [before／after GIF](evidence/spike03/before-vs-after.gif)（約5.02 MiB，contact 對齊、30 FPS native crops）。
+- [A9 baseline AVI](evidence/spike03/before/attack-60fps.avi)、
+  [normal AVI](evidence/spike03/after/attack-60fps.avi)、
+  [crit AVI](evidence/spike03/after-crit/attack-60fps.avi) 都是720p／60 FPS 原始輸出，
+  [MOVIE](evidence/spike03/MOVIE.md) 交代 crop、編碼與時鐘定義。
+- [接觸](evidence/spike03/contact.png)、[暴擊接觸](evidence/spike03/contact-crit.png)、
+  [數字 pop](evidence/spike03/number-pop.png)、[原生1080p](evidence/spike03/contact-1080.png)。
+  三組最終錄影共146張 native PNG，涵蓋接觸−8至恢復輸入，含要求的−6。
+
+| 模式 | Open／unit-blocked／terrain-blocked，固定60FPS秒數 | 無 readback 的實測 wall 秒數 |
+| --- | --- | --- |
+| Normal | .950000／.950000／.950000 | .928577／.918207／.920291 |
+| Crit presentation | 1.016667／1.016667／1.016667 | .987982／.983269／.975860 |
+| Reduced Motion | .716667／.716667／.716667 | .683442／.676853／.681805 |
+
+全部低於硬上限1.7秒，normal／crit 也低於1.2秒目標，Reduced Motion 更短。
+A9 baseline 是.916667秒；原片／normal／crit 分別5／7／11個完全凍結的接觸畫面。
+不要拿取圖／編碼 wall 時間當操作延遲；九次主要 timing run 都沒有 readback。
+第一張1080圖的同步存檔拖慢了量測，已改到 ready 後寫檔並重跑，原紀錄保留。
+
+完整 GUT **89／89，15 scripts，8958 assertions，exit0**；原79項全部保留，
+加9項 impact 行為測試與1項 mockup smoke。包括 profile 每欄範圍與A9基準、
+同幀 layer、normal／crit minimum、方向／衰減、Reduced Motion 全程零鏡頭與
+recoil、flash歸零、數字歸一並刪除、粒子清除、SFX次數／frame、budget與三配置
+相同規則結果。W6曾抓到新 debug hint 取代原文的回歸，已保留原文並重跑89項；
+沒有修改舊測試來遷就它。日誌另保留 type／工具錯誤與修正，不把失敗當成功。
+
+稽核確認70個 shared runtime 檔與 A9／shared source byte parity，規則不變。
+傷害依然2，命中後4HP；三配置目標格為(1,6)、(1,5)、(3,4)。擊退格數、HP、
+walkability、11×9與G005都未改。CPU emitter 不提供精確 live particle count，
+timeline 如實標 capacity upper bound；凍結／清除另有測試。
+
+### PLACEHOLDER 與真人待驗
+
+全部新增音效是原創 deterministic **PLACEHOLDER**，沒有外部 sample：
+
+| Hook | 長度／用途 |
+| --- | --- |
+| `swing_whoosh` | 180 ms，normal frame1；Reduced Motion frame0 |
+| `impact` | 240 ms，A9 原本 hit PCM，frame3 |
+| `impact_crit` | 280 ms，較低頻的展示暴擊，frame3 |
+| `knockback_thud` | 280 ms，open knockback 落點 |
+| `blocked_thud` | 280 ms，受阻後回彈開始 |
+
+詳 [audio/SOURCES](../audio/SOURCES.md)。Dummy driver 的事件與PCM測試不代表
+喇叭試聽或混音通過。VFX 是可調的開發表現，也不是最後美術。
+
+A9 原有動作圖00–04的 **PLACEHOLDER**、所有 `frame-audit.json` 旗標、idle／05
+固定 anchor、knight 圖及全部 shared-anim 原樣保留；未重畫、生成或修改 frame PNG。
+180／70／40／80／100／150ms、contact3、anchor455,196 也未變。短單手 flanged
+mace 的 **APPROVED canon** 不變。[人類委託 brief](../../docs/art-briefs/thoma-swing-commission.md)
+仍是動作美術 fallback，這輪沒有發包或聲稱動畫終稿通過。
+
+**HUMAN_PENDING**：Gavin 實際試一般／暴擊／Reduced Motion，判斷停頓、閃白、
+震動與音量是否舒服，數字是否擋資訊；模型看圖與自動測試無法代替這個判斷。
+本輪工程結果不能推出完整戰鬥好玩或商業美術品質。沒有正式crit、完整戰鬥、
+敵方AI、正式存檔或網路功能。
+
+### 大地圖提案與 mockup 交接
+
+[繁中提案](../../docs/proposals/big-map-proposal.md) 比較 A菱形128／24×18、
+B方格80／32×24、**C菱形160×94.5／32×24（推薦、未定案）**。C人物參考高96px，
+延用投影與原創暗黑奇幻手繪方向；實際代價是每屏格數變少，必須補捲動、
+離屏提示與地景分塊。L03建議保留11×9教學，絞盤(2,1)、渡口與後果不重建。
+成本與回合節奏只是估算；不授權照這份建議自動遷移關卡或正式規則。
+
+獨立 mockup 是32×24／768格、12個重複idle站位，terrain是既有繪畫小塊與
+程式 placeholder。不在 main scene 引用鏈，不讀 rules／真實HUD，不是L03。
+WASD／方向鍵、中鍵、edge、wheel、O、F／Home可操作；1／2／3比較格寬。
+小地圖只顯示，不能點擊。實際 camera input checks全真，bounds smoke通過。
+
+- [全圖](../../docs/proposals/big-map/overview.png)、
+  [西](../../docs/proposals/big-map/scroll-west.png)／
+  [渡口](../../docs/proposals/big-map/scroll-crossing.png)／
+  [東](../../docs/proposals/big-map/scroll-east.png)。
+- [格寬128](../../docs/proposals/big-map/tile-128.png)／
+  [160](../../docs/proposals/big-map/tile-160.png)／
+  [192](../../docs/proposals/big-map/tile-192.png)：原生720p，不是編輯器合成圖。
+- [操作／限制](../../docs/proposals/big-map/README.md)、
+  [camera data](../../docs/proposals/big-map/capture.json)。
+
+高物件遮擋、正式威脅／AI／fog、鏡頭跟隨／事件／攻擊後回原捲動位置、
+TileMapLayer／painted-chunk管線與正式大戰效能都未實作／驗收。overview人物很小
+是全圖閱讀模式；建議操作尺度在局部圖。現有灰盒重複地景不是新的商業美術。
+
+交給 Gavin 的問題（完整代價在提案，每題可一行答）：
+
+1. A菱形128／B方格80／C菱形160，選哪個？
+2. 標準圖先24×18還是32×24？
+3. 人物高先約76／96／114px哪一級？
+4. L03保留11×9教學，另做大圖灰盒是否可行？
+5. 第一版全圖可見、無fog是否可行？
+6. WASD＋中鍵，還是edge為主？
+7. 一張標準戰鬥15–20／20–35／35分鐘以上？
+8. 是否先用hybrid地景、少量tiles／painted chunks驗證？
+
+這是待 Owner 決策清單；不在本輪追問、不代填決策、不啟動下一個任務。
+
+### RESOURCE-CHECKLIST self-check
+
+逐項對照 [RESOURCE-CHECKLIST](../../docs/review/RESOURCE-CHECKLIST.md)。
+game-feel／game-ui-ux於W1基準擷取期間唯讀讀取；prototype-fast於W3證據期間、
+level-design於W4提案期間讀取。均為原清單 repo 的 pinned
+`0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd` 方法，提案/GAPS有連結；相關feedback／
+layout references也已讀，沒有安裝或複製其程式。官方Godot API只供核對，無商業
+素材或reference-repo code採用。未派生新模型代理；此自查不是Claude／GPT審查。
+
+| Item | Result | 證據／本輪適用範圍 |
+| --- | --- | --- |
+| A prototype-fast | PASS scoped | 問題、keep/discard與throwaway界線在GAPS／提案；mockup不接主遊戲，沒有順帶做完整大圖系統 |
+| A level-design | PASS proposal／N/A實作關卡 | 提案列路線距離、增援預告、成本與目標節奏；mockup沒有可達／勝路宣稱，既有規則不變 |
+| A game-ai | N/A | 無AI實作，提案只列成本與未來行為假設 |
+| A game-ui-ux | PASS tested scope | 原HUD／焦點／Space契約保留，C提示同步；原生720p/1080p、parsed keyboard與mockup鍵鼠／edge實測 |
+| A game-feel | Engineering PASS／HUMAN_PENDING | 同幀回饋、5/7/11幀真實freeze、九配置budget、歸零／cleanup與Reduced Motion測試；不宣稱真人重量感通過 |
+| B Grid-Tactics | PASS architecture criterion／N/A borrowing | 規則純函式輸出events，presentation播放；rule hash不變，未借程式或素材 |
+| B HopeMetal | N/A borrowing | 無新採用pattern／code／asset |
+| B no new engine/dependency | PASS | 既有且Owner已選Godot4.7.2／GUT，Pillow既有，無新增addon或安裝 |
+| C full3–5min battle alone | N/A explicit spike scope | 單擊工程與鏡頭mockup，沒有完整戰鬥交付宣稱 |
+| C enemies react to player | N/A | 固定防守者；無AI新功能 |
+| C win/lose | N/A | 無戰役勝負系統 |
+| C two tactical outcomes | N/A new tactical choice | 三配置保留不同擊退結果，但未宣稱完整戰術選擇系統 |
+| C restart/change strategy | PASS scoped replay | R／1/2/3重設；三配置多次回放，不擴張成完整strategy驗收 |
+| C no duplicate/stuck/invalid/interrupted | PASS covered scope | 原有spam／lock／pause測試保留，完整89/89與九次ready，規則結果一致 |
+| C both resolutions/basic keyboard | PASS | 720p逐幀、原生1080p parsed-R截圖；mockup按brief只驗720p，7個input checks全真 |
+| C automated/human separated | PASS | 工程測試、模型看圖、HUMAN_PENDING／OWNER_PENDING分開記錄 |
+| D SRD/CC-BY/WotC boundary | N/A rules／PASS assets | 規則／G005原樣，無新SRD改寫、商業素材或WotC IP；原創音效明標PLACEHOLDER |
+| D scope/no main/story | PASS | scope audit限定Godot／proposals／既有brief；frame PNG、shared-anim、React、art briefs、故事與shared files零變更；正常本地commit，無push/merge/PR/stash |
+
+C／D沒有未解釋FAIL；N/A是本輪明確授權界線，不是完整可玩驗收。
+正式大圖、正式AI／規則、完整動畫與真人美術判斷都不能由這個自查推導通過。
+
+### Choices、驗證狀態與停止點
+
+遇到可選作法採最保守界線並記錄：保留whole-world pause以延續回歸；影響參數
+放獨立Resource，完全不動shared manifest；不做新美術，只重用idle與裝飾地面；
+保留菱形作mockup推薦，L03不擴圖；工具缺ffmpeg就用既有Pillow，不安裝；
+精確粒子數不可觀測就標上限；未取得真人回饋就保留HUMAN_PENDING。
+
+最後一次正式capture後，只修復被原測試抓到的除錯提示文字，並已在W6最終89項
+重跑通過；打擊層與主畫面效果未再變動。W7追加交接後再跑既有offline audit並更新source hashes，沒有擴大
+測試或實作範圍。最終hash含此交接；active audit stdout與hash檔本身不自我納入。
+實際退出碼與scope記錄見VERIFICATION／audit。pre-commit原樣執行，既有
+missing_canonical_memory僅report-only advisory，沒有繞過hook。
+
+| Step | Local commit |
+| --- | --- |
+| W1 baseline／gaps | `4ca7bfb` |
+| W2 profiles／layers | `8c5dd5c` |
+| W3 tests／before-after evidence | `da29b7f` |
+| W4 proposal | `d789734` |
+| W5 isolated mockup | `f383128` |
+| W6 final verification／scope | `d6ed2ad` |
+| W7 handoff | This commit |
+
+**W7交接commit完成後停止，等待Owner review。不push、merge、PR、stash、部署、
+Actions或自動接續下一任務。此為task DONE，不是SessionEnd；沒有宣稱canonical
+closeout或完整原生治理接線驗收。**

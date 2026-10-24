@@ -1016,8 +1016,8 @@
   },
   {
     "path": "godot-spike/docs/evidence/spike03/audit.json",
-    "sha256_working_tree": "9d26fe660f9138f073aee0b18d7812106593049f17e202a9fa0f95cf552d34dc",
-    "sha256_git_lf": "9d26fe660f9138f073aee0b18d7812106593049f17e202a9fa0f95cf552d34dc"
+    "sha256_working_tree": "66fedcd550148edf86d598cad6df2ae651a20eb7c77b0c5dc4aec523a4f11b41",
+    "sha256_git_lf": "66fedcd550148edf86d598cad6df2ae651a20eb7c77b0c5dc4aec523a4f11b41"
   },
   {
     "path": "godot-spike/docs/evidence/spike03/before/attack-60fps.avi",
@@ -1296,8 +1296,8 @@
   },
   {
     "path": "godot-spike/docs/evidence/spike03/changed-paths.txt",
-    "sha256_working_tree": "ab42cd596d79a4195e388cc5413e5fce3211a126ef88ed858041a5c6647667d4",
-    "sha256_git_lf": "fc0767388f8ad9781f32b39b9d362af42e73559361abba0e417b37da9ca8a34f"
+    "sha256_working_tree": "4bbd12322b36b385b8fd7cbd859075e2d18fa201492d6261d44ada21d937aefa",
+    "sha256_git_lf": "4ea206b93fc20eff4e106fa9364bfe05238f2aa99ed7715960b3abff97a39f17"
   },
   {
     "path": "godot-spike/docs/evidence/spike03/contact-1080.png",
@@ -1391,8 +1391,8 @@
   },
   {
     "path": "godot-spike/docs/evidence/spike03/scope-stat-head.txt",
-    "sha256_working_tree": "6bb8c30712cc38225288d5296e7c4d3b879d1c1750757e2d8028fa40f6042561",
-    "sha256_git_lf": "7358f8972ca837b5dd44e7dba60359d6d19323e65ace022c154a23ff9d5f2a6c"
+    "sha256_working_tree": "6d342e710c7caf0410838f24fe31c42ff7de5915cb0f90a74be3ced581a1394f",
+    "sha256_git_lf": "b1da76578921f22d32ee35e121e424316f86b6aadaba1d1c2e04b382c3a4ff1b"
   },
   {
     "path": "godot-spike/docs/evidence/spike03/still1080-inline-encoding.log",
@@ -1486,8 +1486,8 @@
   },
   {
     "path": "godot-spike/docs/HANDOFF.md",
-    "sha256_working_tree": "603b31c017ed8a9f628cb6a6387d92aa21b7c6f722c217038d3dbb6f8206a455",
-    "sha256_git_lf": "603b31c017ed8a9f628cb6a6387d92aa21b7c6f722c217038d3dbb6f8206a455"
+    "sha256_working_tree": "e934c4eee0b948c970569086210bb4fecaaa805851e69f5aba5d11f9dbb885a9",
+    "sha256_git_lf": "e934c4eee0b948c970569086210bb4fecaaa805851e69f5aba5d11f9dbb885a9"
   },
   {
     "path": "godot-spike/docs/VERIFICATION.md",

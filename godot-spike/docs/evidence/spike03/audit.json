@@ -409,7 +409,7 @@
   ],
   "rules_a9_unchanged": true,
   "scope_base": "b2f460b",
-  "changed_paths_checked": 247,
+  "changed_paths_checked": 249,
   "limits": [
     "CPU particle counts are emitter-capacity upper bounds.",
     "Dummy audio is not device audition.",

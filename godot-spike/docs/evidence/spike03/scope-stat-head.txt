@@ -13,10 +13,12 @@
  godot-spike/audio/impact_synth.gd                  |   27 +
  godot-spike/config/impact_profile.tres             |   42 +
  godot-spike/config/impact_profile_a9_baseline.tres |    7 +
- godot-spike/docs/evidence/spike03/GAPS.md          |   45 +
+ godot-spike/docs/VERIFICATION.md                   |  127 +
+ godot-spike/docs/evidence/spike03/GAPS.md          |   48 +
  godot-spike/docs/evidence/spike03/MOVIE.md         |   55 +
+ godot-spike/docs/evidence/spike03/README.md        |   65 +
  .../evidence/spike03/after-crit/attack-60fps.avi   |  Bin 0 -> 8032720 bytes
- .../docs/evidence/spike03/after-crit/capture.log   |  Bin 0 -> 1866 bytes
+ .../docs/evidence/spike03/after-crit/capture.log   |   13 +
  .../docs/evidence/spike03/after-crit/contact.png   |  Bin 0 -> 1465535 bytes
  .../evidence/spike03/after-crit/frames/0010.png    |  Bin 0 -> 1253447 bytes
  .../evidence/spike03/after-crit/frames/0011.png    |  Bin 0 -> 1261720 bytes
@@ -75,7 +77,7 @@
  .../docs/evidence/spike03/after-crit/timeline.json | 2594 ++++++++++++++++++++
  .../docs/evidence/spike03/after-crit/timeline.md   |   70 +
  .../docs/evidence/spike03/after/attack-60fps.avi   |  Bin 0 -> 7484838 bytes
- .../docs/evidence/spike03/after/capture.log        |  Bin 0 -> 1846 bytes
+ .../docs/evidence/spike03/after/capture.log        |   13 +
  .../docs/evidence/spike03/after/contact.png        |  Bin 0 -> 1467722 bytes
  .../docs/evidence/spike03/after/frames/0010.png    |  Bin 0 -> 1253447 bytes
  .../docs/evidence/spike03/after/frames/0011.png    |  Bin 0 -> 1261720 bytes
@@ -129,9 +131,14 @@
  .../docs/evidence/spike03/after/movie-index.json   |   63 +
  .../docs/evidence/spike03/after/timeline.json      | 2414 ++++++++++++++++++
  .../docs/evidence/spike03/after/timeline.md        |   66 +
+ .../evidence/spike03/audit-deprecation-notice.log  |   10 +
+ .../evidence/spike03/audit-indentation-error.log   |   10 +
+ .../docs/evidence/spike03/audit-pre-hintfix.log    |   14 +
+ godot-spike/docs/evidence/spike03/audit-run.log    |  Bin 0 -> 152 bytes
+ godot-spike/docs/evidence/spike03/audit.json       |  419 ++++
  .../docs/evidence/spike03/before-vs-after.gif      |  Bin 0 -> 5262076 bytes
  .../docs/evidence/spike03/before/attack-60fps.avi  |  Bin 0 -> 7179690 bytes
- .../docs/evidence/spike03/before/capture.log       |  Bin 0 -> 1850 bytes
+ .../docs/evidence/spike03/before/capture.log       |   13 +
  .../docs/evidence/spike03/before/contact.png       |  Bin 0 -> 1433770 bytes
  .../docs/evidence/spike03/before/frames/0010.png   |  Bin 0 -> 1253447 bytes
  .../docs/evidence/spike03/before/frames/0011.png   |  Bin 0 -> 1261720 bytes
@@ -184,36 +191,42 @@
  .../docs/evidence/spike03/before/timeline.json     | 2298 +++++++++++++++++
  .../docs/evidence/spike03/before/timeline.md       |   64 +
  .../docs/evidence/spike03/before/w1-timeline.json  | 2240 +++++++++++++++++
+ .../docs/evidence/spike03/changed-paths.txt        |  247 ++
  godot-spike/docs/evidence/spike03/contact-1080.png |  Bin 0 -> 2829667 bytes
  godot-spike/docs/evidence/spike03/contact-crit.png |  Bin 0 -> 1465535 bytes
  godot-spike/docs/evidence/spike03/contact.png      |  Bin 0 -> 1467722 bytes
  .../spike03/impact-strip-before-vs-after.png       |  Bin 0 -> 4425654 bytes
- godot-spike/docs/evidence/spike03/import-run.log   |  Bin 0 -> 2594 bytes
+ godot-spike/docs/evidence/spike03/import-run.log   |   22 +
  godot-spike/docs/evidence/spike03/number-pop.png   |  Bin 0 -> 1425475 bytes
  .../spike03/pre-number-placement/README.md         |    3 +
  .../after-crit/attack-60fps.avi                    |  Bin 0 -> 8002092 bytes
- .../pre-number-placement/after-crit/capture.log    |  Bin 0 -> 1866 bytes
+ .../pre-number-placement/after-crit/capture.log    |   13 +
  .../pre-number-placement/after-crit/contact.png    |  Bin 0 -> 1439115 bytes
  .../pre-number-placement/after-crit/timeline.json  | 2594 ++++++++++++++++++++
  .../pre-number-placement/after/attack-60fps.avi    |  Bin 0 -> 7475396 bytes
- .../spike03/pre-number-placement/after/capture.log |  Bin 0 -> 1846 bytes
+ .../spike03/pre-number-placement/after/capture.log |   13 +
  .../spike03/pre-number-placement/after/contact.png |  Bin 0 -> 1453813 bytes
  .../pre-number-placement/after/timeline.json       | 2414 ++++++++++++++++++
- .../evidence/spike03/still1080-inline-encoding.log |  Bin 0 -> 720 bytes
- .../docs/evidence/spike03/still1080-run.log        |  Bin 0 -> 720 bytes
- .../spike03/test-run-pre-number-placement.log      |  Bin 0 -> 20064 bytes
- godot-spike/docs/evidence/spike03/test-run.log     |  Bin 0 -> 20066 bytes
- godot-spike/docs/evidence/spike03/timing-run.log   |  Bin 0 -> 2042 bytes
+ .../docs/evidence/spike03/scope-stat-head.txt      |  234 ++
+ .../docs/evidence/spike03/source-hashes.json       | 2587 +++++++++++++++++++
+ .../evidence/spike03/still1080-inline-encoding.log |    5 +
+ .../docs/evidence/spike03/still1080-run.log        |    5 +
+ .../spike03/test-run-pre-number-placement.log      |  209 ++
+ godot-spike/docs/evidence/spike03/test-run.log     |  214 ++
+ godot-spike/docs/evidence/spike03/timing-run.log   |   13 +
  godot-spike/docs/evidence/spike03/timing.json      |  544 ++++
- godot-spike/docs/evidence/spike03/w2-import.log    |  Bin 0 -> 10346 bytes
- .../docs/evidence/spike03/w2-pause-test-final.log  |  Bin 0 -> 2618 bytes
- .../docs/evidence/spike03/w2-pause-test.log        |  Bin 0 -> 17234 bytes
- godot-spike/docs/evidence/spike03/w2-test-run.log  |  Bin 0 -> 15332 bytes
- .../docs/evidence/spike03/w3-final-impact-test.log |  Bin 0 -> 5930 bytes
- .../evidence/spike03/w5-capture-pre-pathfix.log    |  Bin 0 -> 2416 bytes
- godot-spike/docs/evidence/spike03/w5-capture.log   |  Bin 0 -> 840 bytes
- godot-spike/docs/evidence/spike03/w5-import.log    |  Bin 0 -> 2686 bytes
- .../docs/evidence/spike03/w5-mockup-test.log       |  Bin 0 -> 1442 bytes
+ godot-spike/docs/evidence/spike03/w2-import.log    |   77 +
+ .../docs/evidence/spike03/w2-pause-test-final.log  |   38 +
+ .../docs/evidence/spike03/w2-pause-test.log        |  165 ++
+ godot-spike/docs/evidence/spike03/w2-test-run.log  |  175 ++
+ godot-spike/docs/evidence/spike03/w3-88-tests.log  |  209 ++
+ .../docs/evidence/spike03/w3-final-impact-test.log |   58 +
+ .../evidence/spike03/w5-capture-pre-pathfix.log    |   19 +
+ godot-spike/docs/evidence/spike03/w5-capture.log   |    4 +
+ godot-spike/docs/evidence/spike03/w5-import.log    |   23 +
+ .../docs/evidence/spike03/w5-mockup-test.log       |   29 +
+ godot-spike/docs/evidence/spike03/w6-import.log    |   15 +
+ .../docs/evidence/spike03/w6-tests-pre-hintfix.log |  230 ++
  godot-spike/scenes/mockups/BigMapMockup.tscn       |    6 +
  godot-spike/scripts/anim/frame_player.gd           |    9 +-
  godot-spike/scripts/impact/impact_profile.gd       |  110 +
@@ -226,9 +239,10 @@
  godot-spike/tests/test_big_map_mockup.gd.uid       |    1 +
  godot-spike/tests/test_spike03_impact.gd           |  179 ++
  godot-spike/tests/test_spike03_impact.gd.uid       |    1 +
+ godot-spike/tools/audit_spike03.py                 |  158 ++
  godot-spike/tools/capture_big_map.gd               |  113 +
  godot-spike/tools/capture_big_map.gd.uid           |    1 +
  godot-spike/tools/capture_spike03.gd               |  158 ++
  godot-spike/tools/capture_spike03.gd.uid           |    1 +
  godot-spike/tools/package_spike03.py               |  111 +
- 233 files changed, 17380 insertions(+), 47 deletions(-)
+ 247 files changed, 22829 insertions(+), 47 deletions(-)
