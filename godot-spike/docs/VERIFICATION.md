@@ -886,3 +886,127 @@ atlas, ui-prototype, story, P010 or other worktree changed. No push/PR/merge/
 Actions/deploy/stash/PhaseB. Hooks ran normally; report-only memory advisory
 does not prove SessionEnd or canonical closeout. W6 records the final handoff
 table check; this verification is not a session-end claim.
+
+## spike-02 A7
+
+2026-10-24, `codex/godot-spike`, only worktree
+`D:\campaign-forge\scratch\godot-spike`; clean start at brief `645ede1` over
+A6 `e233171`. W1–W4 commits: `b711b3f`, `34e1260`, `40ced11`, `926e006`.
+**Engineering/data checks pass; art FAIL. All five motion frames remain
+PLACEHOLDER.** The unified anchor spec and source-interior corrections do not
+achieve stable full face/hair, exact stole/motif/fringe, seam-free transfers or
+continuous motion. 02 has a misregistered right sprig; 04 has a visible cuff
+bridge, a seam regression from A6. These failures are recorded, not excused by
+native sprite size or passing tests. Human feel remains **HUMAN_PENDING**.
+
+Owner chose Godot directly (P010 accepted in Owner instruction), cancelled
+React/Phase B, and approved Thoma's short one-handed flanged mace as canon.
+The stale P010 text in this worktree's decision file was **not edited**.
+
+### Actual commands, results and retained failures
+
+Commands below ran from this worktree. `GODOT` abbreviates the exact installed
+`C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe`;
+`PYTHON` abbreviates
+`C:\Users\daish\AppData\Local\Programs\Python\Python312\python.exe`.
+Versions: Godot **4.7.2.stable.official.ed1daf0bf**, Python **3.12.10**.
+
+| Command / operation actually run | Exit / result | Evidence |
+| --- | --- | --- |
+| `git fetch origin review/gpt-godot-spike`, then `git show` A6 and A5 reviews | Escalated fetch0; both shows0 | Review head `3f29156`; A6 REJECT0/5, A5 only01 single-frame PASS. Initial sandbox fetch denied FETCH_HEAD access; individual exit not retained in the combined read command |
+| `PYTHON --version`; `GODOT --version` | 0 | Existing installed tools, no installation/API key/global trust edit |
+| `PYTHON godot-spike/tools/build_a7_spec.py` | 0 | [Spec](../../shared-anim/thoma-appearance-spec.md), JSON, [source crops](evidence/spike02-a7/spec-crops.png), [pose overlay](evidence/spike02-a7/pose-targets.png); only two anchor PNGs determine appearance |
+| Built-in `image_gen` EDIT with A6 target and two appearance anchors | Five successful returns | Order01,02,00,03,04; all unchanged1254x1254 returns retained in [attempts](evidence/spike02-a7/attempts/). Reframed target geometry: raw generated pixels NOT adopted |
+| `PYTHON godot-spike/tools/prepare_a7_frames.py --archive --prepare 01`, then per-frame `--record`, `--finish`, next `--prepare` | 0 except initial01 finish1 | Missing `json` import at SOURCES append, after saving PNG/attempt JSON; repaired missing append without new generation. [Operations record](evidence/spike02-a7/W2-OPERATIONS.md) |
+| `PYTHON godot-spike/tools/refine_a7_followthrough.py` | 0 | First04 extraction left duplicate head/haft; rejected image retained. Local second attempt removes duplicate and translates original connected weapon19px, no rescale; cuff bridge still FAIL |
+| `PYTHON godot-spike/tools/a7_style_check.py`; `create_a7_capture.py` | 0 | [Every required check](evidence/spike02-a7/spec-check.json), [landmark deltas](evidence/spike02-a7/landmark-deltas.md), [method](evidence/spike02-a7/METHOD.md); capture observer changes evidence/baseline paths only |
+| W3 `GODOT --headless --path godot-spike -s res://tools/sync_shared_anim.gd`; `--headless --path godot-spike --import` | 0 /0 | Prerequisites for real rendered playback; w3-sync.log /w3-import.log |
+| `GODOT --path godot-spike --resolution 1280x720 --audio-driver Dummy --fixed-fps 60 --write-movie res://.godot/spike02-a7-movie/attack.avi -s res://tools/capture_a7.gd -- --movie-a7` | 0 | [W3 log](evidence/spike02-a7/w3-playback.log), `CAPTURE_COMPLETE A7 movie=true runs=1 shots=0 pass=true`; retained unchanged for W5 |
+| `PYTHON godot-spike/tools/a7_playback_check.py` | 0 | Actual59 rendered frames,58 post-draw traces, one terminal frame equal to preceding ready pixels; [playback](evidence/spike02-a7/playback-check.json) art FAIL. Pillow getdata deprecation warning retained in tool output; not an execution failure |
+| `PYTHON godot-spike/tools/update_a7_historical_tests.py`; `a7_contact_sheet.py` | 0 | All historical A6 assertions retained against byte-copy archive; live A7 has eight new tests |
+| W4 `GODOT --headless --path godot-spike -s res://tools/sync_shared_anim.gd` | 0 | [Sync log](evidence/spike02-a7/sync-run.log), **69** copied files byte-equal |
+| `GODOT --headless --path godot-spike --import` | 0 | [Import log](evidence/spike02-a7/import-run.log) |
+| `GODOT --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gdir=res://tests -gexit` | 0 | **63/63 tests,4,883 assertions**, [complete log](evidence/spike02-a7/test-run.log), no script errors/GUT warnings |
+| `GODOT --path godot-spike --resolution 1280x720 --max-fps 60 --audio-driver Dummy -s res://tools/capture_a7.gd` | 0 | [Rendered720p log](evidence/spike02-a7/rendered-run.log),13 shots/6 timing runs, successful completion marker |
+| `GODOT --path godot-spike --resolution 1920x1080 --max-fps 60 --audio-driver Dummy -s res://tools/capture_a7.gd -- --1080p` | 0 | [Rendered1080p log](evidence/spike02-a7/rendered-1080p-run.log),13 real native1920x1080 readbacks,6 timing runs, successful marker |
+| `PYTHON godot-spike/tools/package_a7_evidence.py` | 0 | [Package log](evidence/spike02-a7/package-run.log): markers, timing, dimensions, byte parity, input hashes, movie decoding/hold verified; integrity PASS, art FAIL |
+| `PYTHON godot-spike/tools/normalize_a7_logs.py` | 0 | UTF8/LF, ANSI/trailing whitespace only; diagnostic lines retained |
+
+### Fixed contracts, timing and movie
+
+The full manifest is unchanged: canvas512x512, registration pivot[256,464],
+contact index3 and anchor[455,196], durations **180/70/40/80/100/150ms**, original
+offsets/impact/camera/scenarios. Reduced Motion[0,3,5] still omits smear02.
+Both anchor SHA-256 values are fixed and tested. Both boots/lower leg pixels
+below y420 are byte-identical to A6; all poses retain one satchel. Contact
+weapon pixels are unchanged. 04's original head/haft/grip translate19px without
+resizing: head[420.72,357.384] → [420.72,376.384], target[421,376], error0.475px.
+Full joint/hand/foot target compliance and cuff continuity still FAIL.
+
+| Resolution / mode | Open | Unit blocked | Terrain blocked |
+| --- | --- | --- | --- |
+| 720p normal | 0.925297s | 0.928701s | 0.905224s |
+| 720p Reduced Motion | 0.727183s | 0.722318s | 0.747849s |
+| 1080p normal | 0.923951s | 0.907859s | 0.931091s |
+| 1080p Reduced Motion | 0.729055s | 0.748579s | 0.725249s |
+
+All12 no-readback runs return input-ready and are below1.7s. Contact
+spark/SFX/flash share the same process frame; hitstop wall82.526–99.136ms.
+[720p timing](evidence/spike02-a7/timing.json),
+[1080p timing](evidence/spike02-a7/timing-1080p.json).
+
+[Native movie](evidence/spike02-a7/attack-60fps.avi): **59 frames,1280x720,60FPS,
+7,272,394 bytes**, no subsampling/transcoding. Strike2 → ready57 =0.916667s.
+Contact20–24 full decodedRGB identical, **83.333ms** hold; frame25 resumes.
+[MOVIE notes](evidence/spike02-a7/MOVIE.md), [frame hashes](evidence/spike02-a7/movie-index.json).
+The movie log's2.5476s encoding/render wall time is not gameplay latency.
+Dummy audio is not a physical-device audition; human feel is HUMAN_PENDING.
+
+### Visual evidence and limits
+
+| Pose | 1280x720 | 1920x1080 |
+| --- | --- | --- |
+| Anticipation | [PNG](evidence/spike02-a7/swing-anticipation.png) | [PNG](evidence/spike02-a7/swing-anticipation-1080p.png) |
+| Smear | [PNG](evidence/spike02-a7/swing-smear.png) | [PNG](evidence/spike02-a7/swing-smear-1080p.png) |
+| Contact during hitstop | [PNG](evidence/spike02-a7/contact.png) | [PNG](evidence/spike02-a7/contact-1080p.png) |
+| Follow-through | [PNG](evidence/spike02-a7/follow-through.png) | [PNG](evidence/spike02-a7/follow-through-1080p.png) |
+| Idle | [PNG](evidence/spike02-a7/idle.png) | [PNG](evidence/spike02-a7/idle-1080p.png) |
+
+[A6 vs A7](evidence/spike02-a7/contact-sheet-a6-vs-a7.png) uses equal native
+rendered crops; camera sampling can vary across replays. The separately labelled
+[512px source comparison](evidence/spike02-a7/asset-sheet-a6-vs-a7.png),
+[spec crops/checks](evidence/spike02-a7/spec-check.png),
+[transparent sheet](evidence/spike02-a7/equal-scale-transparent-sheet.png),
+[sequence strip](evidence/spike02-a7/sequence-strip.png),
+[every rendered frame](evidence/spike02-a7/playback-every-frame.png) retain the
+failures. Region RGB deltas measure real readbacks under source-alpha masks;
+IoU is labelled source silhouette occupancy, not a rendered segmentation.
+Manual landmarks/height and proxy values cannot establish stable anatomy.
+
+[Provenance](../../shared-anim/a7-swing-prompts.json) records every raw prompt,
+three inputs/hashes, seed/settings not exposed, all local masks/intermediate
+hashes and raw/runtime hashes. Counts01/02/00/03=1,04=2 (one image_gen EDIT per
+frame, plus one local04 correction). Attempt2's inherited normalization preview
+describes its origin imagegen return; the local operation is unit-scale19px
+translation, not that preview transform. No generated raw return is adopted.
+[Source hashes](evidence/spike02-a7/source-hashes.json) bind code, anchors,
+raw/edited frames, baseline and audit inputs (working-tree and GitLF hashes).
+[Evidence audit](evidence/spike02-a7/evidence-audit.json) explicitly reports art
+FAIL/seam regression/five PLACEHOLDER/HUMAN_PENDING. Tests prove covered engine
+and provenance contracts; they do not prove art acceptance.
+
+Executable identification: Python104,952 bytes/SHA-256
+`4d6f5f81a4bca11191c4c7c6b43632694d0a4ce74e068619d8fdc161d469859a`;
+Godot console198,152 bytes/SHA-256
+`c8f0a6bc45a19b33541501e57f6f7cd972ab18453743266339d495cbbE846643`
+(hex case immaterial). Explicit absolute installed paths used; sandbox
+escalation allowed local tools and linked-worktree Git metadata. This is
+tool identification, not adversarial launcher/environment hardening or global
+trust approval. No process launcher was added to game code.
+
+No ui-prototype, story/decision records, game scripts/HUD/rules, knights,
+battlefield/props or original PNG/evidence was changed. Only shared-anim/ and
+godot-spike/ plus the pre-existing task brief differ from e233171. No push,
+PR, main merge, Actions, deploy, stash or PhaseB. Normal commit hooks emitted
+report-only missing_canonical_memory advisory; commit is not SessionEnd and no
+canonical closeout is claimed. W6 independently checks final handoff/table.

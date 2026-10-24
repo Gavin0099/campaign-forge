@@ -1,0 +1,22 @@
+[
+  {
+    "local": "godot-spike/art/battlefield.png",
+    "source": "ui-prototype/public/art/l03-p1v4/battlefield.png",
+    "sha256": "8c42a5e46952a85db4bce232ac8b3463090a1ddc0f3bf65b25bcea6031e713c5"
+  },
+  {
+    "local": "godot-spike/art/props.png",
+    "source": "ui-prototype/public/art/l03-p1v4/props.png",
+    "sha256": "8f9e678bd048cffe67c9d1f384b6cb0a3ae53cf4d306fa5262019787ac0d16cf"
+  },
+  {
+    "local": "godot-spike/art/l03-party-v1.png",
+    "source": "ui-prototype/public/art/l03-party-v1.png",
+    "sha256": "f67086afa5919d17872ceb8c22c4e6eefd5513dc6e14d8637f38cf90abd4bb08"
+  },
+  {
+    "local": "godot-spike/art/l03-enemies-v1.png",
+    "source": "ui-prototype/public/art/l03-enemies-v1.png",
+    "sha256": "2cdaba9f74dc384ec262a71f9ec1b814949a4325c52b93836b2da50669ddea8c"
+  }
+]

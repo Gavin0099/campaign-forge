@@ -1,0 +1,28 @@
+{
+  "kind": "same native320px crops of actual720p rendered replays, no resizing",
+  "crop": [
+    260,
+    160,
+    580,
+    480
+  ],
+  "rows": [
+    [
+      "rendered-baseline-a6/swing-anticipation.png",
+      "rendered-baseline-a6/swing-raised.png",
+      "rendered-baseline-a6/swing-smear.png",
+      "rendered-baseline-a6/contact.png",
+      "rendered-baseline-a6/follow-through.png",
+      "rendered-baseline-a6/recover.png"
+    ],
+    [
+      "swing-anticipation.png",
+      "swing-raised.png",
+      "swing-smear.png",
+      "contact.png",
+      "follow-through.png",
+      "recover.png"
+    ]
+  ],
+  "limits": "Resolution/crop identical; camera interpolation sampling varies between replay attacks. Asset comparison separately labelled."
+}
