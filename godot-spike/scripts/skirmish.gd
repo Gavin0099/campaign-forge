@@ -62,6 +62,15 @@ var debug_panel: Control
 var scenario_label: Label
 var hint_label: Label
 var hp_bars: Dictionary = {}
+var impact_profile: ImpactProfile = preload("res://config/impact_profile.tres")
+var next_hit_crit := false
+var hit_is_crit := false
+var hit_direction := Vector2.RIGHT
+var impact_layers: Array = []
+var sfx_trace: Array = []
+var sequence_process_seconds := 0.0
+var last_process_seconds := 0.0
+var sfx_streams: Dictionary = {}
 
 func project(x: float, y: float) -> Vector2:
 	return MAP_OFFSET + Vector2(550 + 44 * (x - y), 70 + 26 * (x + y)) * MAP_SCALE
@@ -87,6 +96,9 @@ func sprite(parent: Node, texture: Texture2D, at: Vector2, size: Vector2) -> Spr
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	for arg in OS.get_cmdline_user_args():
+		if arg == "--impact-profile=a9_baseline": impact_profile = preload("res://config/impact_profile_a9_baseline.tres")
+		if arg == "--crit": next_hit_crit = true
 	world = Node2D.new()
 	world.name = "World"
 	world.process_mode = Node.PROCESS_MODE_PAUSABLE
@@ -113,8 +125,11 @@ func _ready() -> void:
 	grid_overlay.draw.connect(draw_grid)
 	build_hud()
 	sound = AudioStreamPlayer.new()
-	sound.stream = preload("res://audio/impact_synth.gd").make_hit()
-	sound.volume_db = -7
+	var synth = preload("res://audio/impact_synth.gd")
+	sound.stream = synth.make_hit()
+	sound.volume_db = impact_profile.impact_db
+	for hook in [impact_profile.whoosh_hook,impact_profile.impact_hook,impact_profile.crit_hook,impact_profile.knockback_hook,impact_profile.blocked_hook]:
+		sfx_streams[hook] = synth.make_hook(hook)
 	add_child(sound)
 	select_setup(0)
 	if "--capture-a2" in OS.get_cmdline_user_args() or "--movie-a2" in OS.get_cmdline_user_args() or "--overview-a2" in OS.get_cmdline_user_args():
@@ -156,13 +171,13 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	ui_process_ticks += 1
+	if busy: sequence_process_seconds += delta
 	if get_tree().paused: return
 	for actor in actors.values():
 		actor.z_index = int(actor.position.y)
 	shake_left = maxf(0, shake_left - delta)
-	shake_phase += delta * 110.0
-	var duration: float = manifest.impact.shake.duration_ms / 1000.0
-	camera.offset = Vector2(sin(shake_phase), cos(shake_phase * 1.3)) * shake_strength * pow(shake_left / duration, manifest.impact.shake.decay) if shake_left > 0 and not reduced_motion else Vector2.ZERO
+	shake_phase += delta * impact_profile.legacy_shake_frequency
+	camera.offset = shake_offset(shake_left)
 	grid_overlay.queue_redraw()
 
 func draw_grid() -> void:
@@ -236,6 +251,8 @@ func select_setup(index: int) -> void:
 		var flash_material := ShaderMaterial.new()
 		flash_material.shader = preload("res://shaders/hit_flash.gdshader")
 		flash_material.set_shader_parameter("flash", 0.0)
+		flash_material.set_shader_parameter("flash_mix", impact_profile.flash_mix)
+		flash_material.set_shader_parameter("flash_color", impact_profile.flash_color)
 		body.material = flash_material
 		var ring := Polygon2D.new()
 		var points := PackedVector2Array()
@@ -284,8 +301,14 @@ func play_attack(event_override: Array = []) -> void:
 	if current_plan.attacks.is_empty(): return
 	set_busy(true)
 	contact_triggers.clear()
+	impact_layers.clear()
+	sfx_trace.clear()
+	hit_is_crit = next_hit_crit
+	next_hit_crit = false
+	sequence_process_seconds = 0
 	var started := Time.get_ticks_usec()
 	for attack in current_plan.attacks:
+		hit_direction = (actors[attack.target].position-actors[attack.unit].position).normalized()
 		attack_camera_in(attack)
 		var attacker_player = players[attack.unit]
 		var listener := on_swing_frame.bind(attack)
@@ -303,7 +326,7 @@ func play_attack(event_override: Array = []) -> void:
 		attacker_player.animation_event.disconnect(on_animation_event)
 	set_phase("settled", "Settled")
 	attack_camera_out()
-	await get_tree().create_timer(manifest.impact.settle_ms / 1000.0, false).timeout
+	await get_tree().create_timer(impact_profile.settle_ms / 1000.0, false).timeout
 	for player in players.values(): player.show_idle()
 	units = result.units
 	for actor in actors.values(): actor.get_node("Body").material.set_shader_parameter("flash", 0.0)
@@ -311,6 +334,7 @@ func play_attack(event_override: Array = []) -> void:
 	camera.zoom = Vector2.ONE
 	camera.position = camera_home
 	last_elapsed = (Time.get_ticks_usec() - started) / 1000000.0
+	last_process_seconds = sequence_process_seconds
 	set_busy(false)
 	set_phase("ready", "%s / %.3f s" % [SETUP_NAMES[setup_index], last_elapsed])
 	print("SEQUENCE setup=%d reduced=%s elapsed_wall_s=%.4f limit=1.700 hp=%d cell=%s" % [setup_index+1, reduced_motion, last_elapsed, units[1].hp, units[1].cell])
@@ -321,21 +345,21 @@ func attack_camera_in(attack: Dictionary) -> void:
 	var midpoint: Vector2 = (actors[attack.unit].position + actors[attack.target].position) / 2.0
 	var tween := camera.create_tween().set_parallel(true)
 	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
-	tween.tween_property(camera, "zoom", Vector2.ONE * manifest.camera.zoom, manifest.camera.in_ms / 1000.0)
-	tween.tween_property(camera, "position", camera_home.lerp(midpoint, manifest.camera.focus_weight), manifest.camera.in_ms / 1000.0)
+	tween.tween_property(camera, "zoom", Vector2.ONE * impact_profile.attack_zoom, impact_profile.camera_in_ms / 1000.0)
+	tween.tween_property(camera, "position", camera_home.lerp(midpoint, impact_profile.focus_weight), impact_profile.camera_in_ms / 1000.0)
 
 func attack_camera_out() -> void:
 	if readability_option != "a" or reduced_motion: return
 	var tween := camera.create_tween().set_parallel(true)
 	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
-	tween.tween_property(camera, "zoom", Vector2.ONE, manifest.camera.out_ms / 1000.0)
-	tween.tween_property(camera, "position", camera_home, manifest.camera.out_ms / 1000.0)
+	tween.tween_property(camera, "zoom", Vector2.ONE, impact_profile.camera_out_ms / 1000.0)
+	tween.tween_property(camera, "position", camera_home, impact_profile.camera_out_ms / 1000.0)
 
 func on_animation_event(event: Dictionary, at: Vector2) -> void:
 	contact_point = at
 	match event.type:
 		"sfx":
-			sound.play()
+			play_sfx(impact_profile.crit_hook if hit_is_crit and impact_profile.layered_sfx else impact_profile.impact_hook)
 			contact_triggers.append({"type": "sfx", "frame": Engine.get_process_frames()})
 		"spark":
 			if not reduced_motion: emit_particles(at, false)
@@ -344,7 +368,10 @@ func on_animation_event(event: Dictionary, at: Vector2) -> void:
 			if not reduced_motion: emit_particles(at, true)
 
 func on_swing_frame(index: int, attack: Dictionary) -> void:
+	if index == impact_profile.whoosh_frame and impact_profile.layered_sfx:
+		play_sfx(impact_profile.whoosh_hook)
 	if index == 1 or (reduced_motion and index == 3): set_phase("lunge", "Swing")
+	if index == 0 and reduced_motion and impact_profile.layered_sfx: play_sfx(impact_profile.whoosh_hook)
 	if index != int(manifest.sequences["thoma.swing"].contact_frame_index): return
 	hud.forecast_panel.hide()
 	var target: Node2D = actors[attack.target]
@@ -357,25 +384,39 @@ func on_swing_frame(index: int, attack: Dictionary) -> void:
 		show_damage(contact_point, damage.amount)
 	var scenario: Dictionary = manifest.scenarios[["open", "unit-blocked", "terrain-blocked"][setup_index]]
 	players[attack.target].play(players[attack.target].character + "." + scenario.reaction, reduced_motion)
-	if not reduced_motion: shake(manifest.impact.shake.strength_px)
+	if not reduced_motion:
+		shake(impact_profile.shake_strength_px * (impact_profile.crit_shake_multiplier if hit_is_crit else 1.0))
+		var player = players[attack.target]
+		player.set_visual_offset(hit_direction * impact_profile.recoil_px)
+		var recoil := target.create_tween()
+		recoil.tween_method(player.set_visual_offset, player.visual_offset, Vector2.ZERO, impact_profile.recoil_ms / 1000.0).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+		if impact_profile.zoom_punch > 0:
+			camera.zoom = Vector2.ONE * (impact_profile.attack_zoom + impact_profile.zoom_punch)
+			camera.create_tween().tween_property(camera,"zoom",Vector2.ONE*impact_profile.attack_zoom,impact_profile.zoom_punch_ms/1000.0).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+		if impact_profile.dust_on_contact: emit_particles(target.position,true)
+	# Full bundle is observable separately; preserve the historical 3 trigger contract.
+	for layer in ["hitstop","shake","flash","recoil","sparks","dust","number","zoom","sfx"]:
+		impact_layers.append({"type":layer,"frame":Engine.get_process_frames(),"suppressed":reduced_motion and layer in ["shake","flash","recoil","sparks","dust","zoom"]})
 	set_phase("contact", "Contact")
 	await hold_contact()
 	if not reduced_motion:
 		var fade := target.create_tween()
-		fade.tween_method(func(value: float): material.set_shader_parameter("flash", value), 1.0, 0.0, manifest.impact.flash_ms / 1000.0)
+		if impact_profile.flash_hold_ms > 0: fade.tween_interval(impact_profile.flash_hold_ms / 1000.0)
+		fade.tween_method(func(value: float): material.set_shader_parameter("flash", value), 1.0, 0.0, impact_profile.flash_ms * (impact_profile.crit_flash_multiplier if hit_is_crit else 1.0) / 1000.0)
 	contact_released.emit()
 
 func hold_contact() -> void:
 	var began := Time.get_ticks_usec()
+	var minimum_ms: float = impact_profile.hitstop_ms(hit_is_crit,reduced_motion)
 	hold_active = true
 	hold_process_ms = 0
 	get_tree().paused = true
 	hitstop_started.emit()
 	count_hold_frames()
-	await get_tree().create_timer(manifest.impact.hitstop_ms / 1000.0, true, false, true).timeout
+	await get_tree().create_timer(minimum_ms / 1000.0, true, false, true).timeout
 	# SceneTreeTimer can be one scheduler quantum early. Never resume before the
 	# specified real-time minimum, including on a fast headless runner.
-	while Time.get_ticks_usec() - began < manifest.impact.hitstop_ms * 1000 or hold_process_ms < manifest.impact.hitstop_ms:
+	while Time.get_ticks_usec() - began < minimum_ms * 1000 or hold_process_ms < minimum_ms:
 		await get_tree().process_frame
 	last_hold_ms = (Time.get_ticks_usec() - began) / 1000.0
 	hitstop_finished.emit()
@@ -396,17 +437,19 @@ func play_movement(event: Dictionary, attack: Dictionary) -> void:
 	var reaction := target.create_tween()
 	if event.type == "knockback":
 		set_phase("knockback", "Giving ground")
-		var duration: float = manifest.impact.reduced_knockback_ms if reduced_motion else manifest.impact.knockback_ms
+		var duration: float = impact_profile.reduced_knockback_ms if reduced_motion else impact_profile.knockback_ms
 		reaction.tween_property(target, "position", center(event.to), duration / 1000.0).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 	else:
 		set_phase("blocked", "Blocked")
-		reaction.tween_property(target, "position", origin + direction * (0 if reduced_motion else manifest.impact.blocked_shove_px), manifest.impact.blocked_shove_ms / 1000.0).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		reaction.tween_property(target, "position", origin + direction * (0 if reduced_motion else impact_profile.blocked_shove_px), impact_profile.blocked_shove_ms / 1000.0).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 		await reaction.finished
 		set_phase("blocked_recoil", "Stagger")
-		if not reduced_motion: emit_particles(origin + direction * 12, true)
+		if not reduced_motion: emit_particles(origin + direction * impact_profile.blocked_dust_offset_px, true)
+		if impact_profile.layered_sfx: play_sfx(impact_profile.blocked_hook)
 		reaction = target.create_tween()
-		reaction.tween_property(target, "position", origin, manifest.impact.blocked_recoil_ms / 1000.0).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		reaction.tween_property(target, "position", origin, impact_profile.blocked_recoil_ms / 1000.0).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	await reaction.finished
+	if event.type == "knockback" and impact_profile.layered_sfx: play_sfx(impact_profile.knockback_hook)
 
 func set_busy(value: bool) -> void:
 	busy = value
@@ -426,63 +469,120 @@ func set_phase(value: String, text: String) -> void:
 
 func shake(strength: float) -> void:
 	shake_strength = strength
-	shake_left = manifest.impact.shake.duration_ms / 1000.0
+	shake_left = impact_profile.shake_duration_ms / 1000.0
 	shake_phase = 0
 	# First offset is visible on the contact frame, then held during hitstop.
-	camera.offset = Vector2(strength, -strength * 0.5) if not reduced_motion else Vector2.ZERO
+	camera.offset = (hit_direction * strength if impact_profile.directional_shake else Vector2(strength,strength*impact_profile.legacy_first_y)) if not reduced_motion else Vector2.ZERO
+
+func shake_offset(remaining: float) -> Vector2:
+	if remaining <= 0 or reduced_motion: return Vector2.ZERO
+	var duration: float = impact_profile.shake_duration_ms / 1000.0
+	var t: float = clampf(1.0-remaining/duration,0,1)
+	if impact_profile.directional_shake:
+		return hit_direction * shake_strength * cos(TAU*impact_profile.shake_cycles*t) * exp(-impact_profile.shake_decay*t)
+	return Vector2(sin(shake_phase),cos(shake_phase*impact_profile.legacy_shake_y_frequency)) * shake_strength * pow(remaining/duration,impact_profile.shake_decay)
+
+func play_sfx(hook: String) -> void:
+	var volume: float = impact_profile.impact_db
+	if hook == impact_profile.crit_hook: volume = impact_profile.crit_db
+	if hook == impact_profile.whoosh_hook: volume = impact_profile.whoosh_db
+	if hook in [impact_profile.knockback_hook,impact_profile.blocked_hook]: volume = impact_profile.thud_db
+	sfx_trace.append({"hook":hook,"frame":Engine.get_process_frames(),"swing_frame":players.thoma.frame_index,"db":volume})
+	if hook in [impact_profile.impact_hook,impact_profile.crit_hook]:
+		sound.stream = sfx_streams[hook]
+		sound.volume_db = volume
+		sound.play()
+	else:
+		var voice := AudioStreamPlayer.new()
+		voice.stream = sfx_streams[hook]
+		voice.volume_db = volume
+		add_child(voice)
+		voice.finished.connect(voice.queue_free)
+		voice.play()
 
 func show_damage(at: Vector2, amount: int) -> void:
-	var number := label_at(world, "−%d" % amount, at + Vector2(-8, -58), 18, BRASS)
+	var anchor: Vector2 = actors["knight-1"].position if impact_profile.number_from_target else at
+	var number := label_at(world, "−%d" % amount, anchor + Vector2(impact_profile.number_offset_x,impact_profile.number_offset_y), impact_profile.crit_number_font_px if hit_is_crit else impact_profile.number_font_px, impact_profile.crit_number_color if hit_is_crit else impact_profile.number_color)
+	number.add_to_group("impact_numbers")
+	number.scale = Vector2.ONE * impact_profile.number_scale * (impact_profile.crit_number_scale_multiplier if hit_is_crit else 1.0)
 	var backing := StyleBoxFlat.new()
-	backing.bg_color = Color("101a19")
-	backing.content_margin_left = 3
-	backing.content_margin_right = 3
+	backing.bg_color = impact_profile.number_backing_color
+	backing.content_margin_left = impact_profile.number_margin_px
+	backing.content_margin_right = impact_profile.number_margin_px
 	number.add_theme_stylebox_override("normal",backing)
 	number.z_index = 1000
-	number.add_theme_constant_override("outline_size", 3)
+	number.add_theme_constant_override("outline_size", impact_profile.number_outline_px)
 	var tween := number.create_tween().set_parallel(true)
-	tween.tween_property(number, "position:y", number.position.y - (0 if reduced_motion else 30), 0.38).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-	tween.tween_property(number, "modulate:a", 0.0, 0.20).set_delay(0.18)
+	tween.tween_property(number,"scale",Vector2.ONE,impact_profile.number_pop_ms/1000.0).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tween.tween_property(number, "position:y", number.position.y - (0 if reduced_motion else impact_profile.number_rise_px), impact_profile.number_lifetime_ms/1000.0).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tween.tween_property(number, "modulate:a", 0.0, impact_profile.number_fade_ms/1000.0).set_delay(impact_profile.number_fade_delay_ms/1000.0)
 	tween.chain().tween_callback(number.queue_free)
 
 func emit_particles(at: Vector2, dust: bool) -> void:
+	if dust and impact_profile.dust_on_contact:
+		# Immediately visible footprint before the CPU emitter's first tick.
+		var puff := Polygon2D.new()
+		var points := PackedVector2Array()
+		for i in range(impact_profile.dust_count):
+			var point: Vector2 = Vector2.from_angle(i*TAU/impact_profile.dust_count)*impact_profile.dust_puff_radius_px
+			points.append(point*Vector2(1,impact_profile.dust_puff_flatten))
+		puff.polygon = points
+		puff.position = at
+		puff.color = Color(impact_profile.dust_color,impact_profile.dust_puff_alpha)
+		puff.add_to_group("impact_particles")
+		world.add_child(puff)
+		var dissipate := puff.create_tween()
+		dissipate.tween_property(puff,"modulate:a",0.0,impact_profile.particle_lifetime_ms/1000.0)
+		dissipate.tween_callback(puff.queue_free)
 	# Static contact spokes are visible immediately, including before the CPU
 	# emitter's first simulation tick. Their world tween also freezes in hitstop.
 	if not dust:
 		var burst := Node2D.new()
 		burst.position = at
+		burst.set_meta("impact_burst",true)
+		burst.add_to_group("impact_particles")
 		burst.z_index = 901
 		world.add_child(burst)
-		for i in range(7):
+		var count: int = roundi(impact_profile.spoke_count*(impact_profile.crit_particle_multiplier if hit_is_crit else 1.0))
+		for i in range(count):
 			var line := Line2D.new()
-			var direction := Vector2.from_angle(i * TAU / 7.0 + 0.2)
-			line.points = PackedVector2Array([direction * 3, direction * (8 + i % 3 * 2)])
-			line.width = 1.2
-			line.default_color = BRASS
+			var direction := Vector2.from_angle(i * TAU / count + impact_profile.spoke_angle)
+			line.points = PackedVector2Array([direction * impact_profile.spoke_inner_px, direction * (impact_profile.spoke_outer_px + i % 3 * impact_profile.spoke_variation_px)])
+			line.width = impact_profile.spoke_width
+			line.default_color = impact_profile.spoke_color
 			burst.add_child(line)
+		if impact_profile.streak_length_px > 0:
+			var streak := Line2D.new()
+			streak.points = PackedVector2Array([-hit_direction*impact_profile.streak_length_px,hit_direction*impact_profile.streak_length_px])
+			streak.width = impact_profile.spoke_width
+			streak.default_color = impact_profile.spoke_color
+			burst.add_child(streak)
 		var fade := burst.create_tween()
-		fade.tween_property(burst, "modulate:a", 0.0, 0.12)
+		fade.tween_property(burst, "modulate:a", 0.0, impact_profile.spoke_fade_ms/1000.0)
 		fade.tween_callback(burst.queue_free)
 	var particles := preload("res://scripts/anim/world_particles.gd").new()
+	particles.use_fixed_seed = impact_profile.fixed_particle_seed
+	particles.seed = impact_profile.particle_seed
 	particles.position = at
 	particles.z_index = 900
-	particles.amount = 18 if dust else 24
-	particles.lifetime = 0.30
+	particles.add_to_group("impact_particles")
+	particles.amount = roundi((impact_profile.dust_count if dust else impact_profile.spark_count)*(impact_profile.crit_particle_multiplier if hit_is_crit else 1.0))
+	particles.lifetime = impact_profile.particle_lifetime_ms/1000.0
 	particles.one_shot = true
 	particles.explosiveness = 1
 	particles.direction = Vector2(0, -1)
-	particles.spread = 100
-	particles.gravity = Vector2(0, 150)
-	particles.initial_velocity_min = 25 if dust else 55
-	particles.initial_velocity_max = 55 if dust else 125
-	particles.scale_amount_min = 1.4 if dust else 0.6
-	particles.scale_amount_max = 2.8 if dust else 1.5
-	particles.color = Color("aa956e") if dust else Color("f3dca0")
+	particles.spread = impact_profile.particle_spread
+	particles.gravity = Vector2(0, impact_profile.particle_gravity)
+	particles.initial_velocity_min = impact_profile.dust_velocity_min if dust else impact_profile.spark_velocity_min
+	particles.initial_velocity_max = impact_profile.dust_velocity_max if dust else impact_profile.spark_velocity_max
+	particles.scale_amount_min = impact_profile.dust_scale_min if dust else impact_profile.spark_scale_min
+	particles.scale_amount_max = impact_profile.dust_scale_max if dust else impact_profile.spark_scale_max
+	particles.color = impact_profile.dust_color if dust else impact_profile.spark_color
 	var gradient := Gradient.new()
 	gradient.set_color(0, particles.color)
 	gradient.set_color(1, Color(particles.color, 0))
 	particles.color_ramp = gradient
-	particles.preprocess = 0.016
+	particles.preprocess = impact_profile.particle_preprocess_ms/1000.0
 	world.add_child(particles)
 	particles.finished.connect(particles.queue_free)
 	particles.emitting = true
@@ -503,6 +603,10 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	if hud.help_panel.visible and event.keycode not in [KEY_H,KEY_QUESTION,KEY_SLASH,KEY_ESCAPE]:
 		return
 	match event.keycode:
+		KEY_C:
+			if not busy:
+				next_hit_crit = not next_hit_crit
+				hint_label.text = "NEXT HIT CRIT: %s | C TO TOGGLE" % next_hit_crit
 		KEY_F1, KEY_QUOTELEFT:
 			set_debug_visible(not debug_visible)
 		KEY_H, KEY_QUESTION:

@@ -19,6 +19,7 @@ var indices: Array = []
 var cursor := 0
 var textures: Dictionary = {}
 var started_process_frame := -1
+var visual_offset := Vector2.ZERO
 
 func configure(source: Dictionary, id: String, sprite: Sprite2D) -> void:
 	manifest = source
@@ -85,7 +86,13 @@ func apply_frame() -> void:
 	body.centered = false
 	body.texture = textures[f.path]
 	body.scale = signed_scale()
-	body.position = (Vector2(offset[0],offset[1]) - Vector2(c.pivot[0],c.pivot[1])) * signed_scale()
+	body.position = (Vector2(offset[0],offset[1]) - Vector2(c.pivot[0],c.pivot[1])) * signed_scale() + visual_offset
+
+func set_visual_offset(value: Vector2) -> void:
+	# Independent of actor/cell and frame offsets; animation swaps retain recoil.
+	visual_offset = value
+	get_parent().set_meta("recoil_delta",value)
+	apply_frame()
 
 func anchor_world(anchor: Array) -> Vector2:
 	return body.to_global(Vector2(anchor[0],anchor[1]))
