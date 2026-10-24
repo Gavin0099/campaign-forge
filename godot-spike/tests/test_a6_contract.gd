@@ -2,6 +2,11 @@ extends "res://addons/gut/test.gd"
 const SHARED = "res://art/anim-shared/"
 const EVIDENCE = "res://docs/evidence/spike02-a6/"
 const REPO = "res://../"
+const A6_ARCHIVE = "res://docs/evidence/spike02-a7/baseline-a6/"
+
+# A7 changes current art; preserve all historical A6 byte/provenance checks.
+func a6_frame(path: String) -> String:
+	return A6_ARCHIVE + ("idle-01.png" if path.contains("/idle/") else path.get_file())
 const CHECKS = ["stole","embroidery","cuffs","hem","face_hair","palette","seams","bag_count","feet","mace","sequence"]
 
 func json(path: String):
@@ -55,7 +60,7 @@ func test_a6_every_attempt_retained_three_reference_hashes_bounded_and_runtime_b
 			assert_false(adopted.has(row.frame),"Exactly one adopted candidate per frame")
 			adopted[row.frame] = true
 			assert_true(row.pick)
-			assert_eq(row.runtime_sha256,FileAccess.get_sha256(SHARED+row.frame))
+			assert_eq(row.runtime_sha256,FileAccess.get_sha256(a6_frame(row.frame)))
 			assert_eq(row.runtime_sha256,row.normalization.normalized_sha256)
 			assert_eq(row.normalization.raw_sha256,row.raw_sha256)
 			assert_eq(row.normalization.cleanup_mask_sha256,FileAccess.get_sha256(REPO+row.normalization.cleanup_mask))
@@ -75,10 +80,10 @@ func test_a6_pass_requires_every_check_and_table_handoff_agreement() -> void:
 	var table := FileAccess.get_file_as_string(EVIDENCE+"frame-status-table.md")
 	var handoff := FileAccess.get_file_as_string("res://docs/HANDOFF.md")
 	var count := 0
-	for record in json(SHARED+"frame-audit.json"):
+	for record in json(A6_ARCHIVE+"frame-audit.json"):
 		if not record.path.begins_with("thoma/"):continue
 		count += 1
-		assert_eq(record.sha256,FileAccess.get_sha256(SHARED+record.path))
+		assert_eq(record.sha256,FileAccess.get_sha256(a6_frame(record.path)))
 		assert_eq(record.weapon_status,"APPROVED")
 		assert_eq(record.bag_count,1.0)
 		var any_failed := false
@@ -100,7 +105,7 @@ func test_a6_canvas_ground_scale_contact_anchor_and_honest_geometry_limit() -> v
 	assert_eq(geometry.contact_anchor,[455.0,196.0])
 	for row in json(SHARED+"a6-swing-prompts.json"):
 		if not row.adopted:continue
-		var im := image(SHARED+row.frame)
+		var im := image(a6_frame(row.frame))
 		assert_eq(im.get_size(),Vector2i(512,512))
 		var bottom := 0
 		for y in range(512):
@@ -109,11 +114,11 @@ func test_a6_canvas_ground_scale_contact_anchor_and_honest_geometry_limit() -> v
 		assert_between(bottom,463,465,"Foot ground within one-pixel rasterization tolerance")
 		var measured: Dictionary = geometry.frames[row.frame]
 		assert_almost_eq(measured.head_to_ground_px,360.0,18.0)
-	var contact := image(SHARED+"thoma/swing/03.png")
+	var contact := image(a6_frame("thoma/swing/03.png"))
 	assert_gt(contact.get_pixel(455,196).a,0.9,"Painted head covers unchanged contact anchor")
 	assert_eq(geometry.frames["thoma/swing/03.png"].mapped_landmarks.mace_head,[455.0,196.0])
 	assert_true(geometry.frames["thoma/swing/03.png"].contact_anchor_exact_transform)
-	var follow = json(SHARED+"frame-audit.json").filter(func(r):return r.path=="thoma/swing/04.png")[0]
+	var follow = json(A6_ARCHIVE+"frame-audit.json").filter(func(r):return r.path=="thoma/swing/04.png")[0]
 	assert_true(follow.region_review.mace.begins_with("FAIL:"),"Do not disguise 04 weapon pose drift as geometry pass")
 
 func test_a6_a5_byte_baselines_are_evidence_only() -> void:
@@ -121,7 +126,7 @@ func test_a6_a5_byte_baselines_are_evidence_only() -> void:
 		if row.path.ends_with(".png"):assert_eq(FileAccess.get_sha256(REPO+row.path),row.sha256)
 	for i in range(5):
 		var file := "%02d.png" % i
-		assert_ne(FileAccess.get_sha256(SHARED+"thoma/swing/"+file),FileAccess.get_sha256(EVIDENCE+"baseline-a5/"+file))
+		assert_ne(FileAccess.get_sha256(a6_frame("thoma/swing/"+file)),FileAccess.get_sha256(EVIDENCE+"baseline-a5/"+file))
 
 func test_a6_real_playback_trace_and_six_proxy_pairs_preserve_failures() -> void:
 	var playback = json(EVIDENCE+"playback-check.json")

@@ -1,0 +1,96 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] first_scan_filesystem | Started 專案初始化中 (5 steps)
+[   0% ] first_scan_filesystem | 正在掃描檔案結構…
+[  16% ] first_scan_filesystem | 正在載入全域類別名稱…
+[  33% ] first_scan_filesystem | 正在驗證 GDExtension…
+[  50% ] first_scan_filesystem | 正在建立自動載入腳本…
+[  66% ] first_scan_filesystem | 初始化外掛程式...
+[  83% ] first_scan_filesystem | 開始掃描檔案...
+[ DONE ] first_scan_filesystem
+
+Godot_v4.7.2-stable_win64_console.exe : WARNING: Missing .uid file for path "res://tools/capture_a4.gd". The file was r
+e-created from cache.
+At line:2 char:824
++ ... TEXITCODE"; & 'C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: Missin...ted from cache.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1391)
+WARNING: Missing .uid file for path "res://tools/capture_a5.gd". The file was re-created from cache.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1391)
+[   0% ] update_scripts_classes | Started 註冊全域類別中... (2 steps)
+[   0% ] update_scripts_classes |
+[  33% ] update_scripts_classes |
+[ DONE ] update_scripts_classes
+
+[   0% ] _update_scan_actions | Started 掃描動作中... (51 steps)
+[   0% ] _update_scan_actions | 00.png
+[   1% ] _update_scan_actions | 01.png
+[   3% ] _update_scan_actions | 02.png
+[   5% ] _update_scan_actions | 00.png
+[   7% ] _update_scan_actions | 00.png
+[   9% ] _update_scan_actions | 01.png
+[  11% ] _update_scan_actions | 02.png
+[  13% ] _update_scan_actions | 00.png
+[  15% ] _update_scan_actions | 01.png
+[  17% ] _update_scan_actions | 02.png
+[  19% ] _update_scan_actions | 00.png
+[  21% ] _update_scan_actions | 00.png
+[  23% ] _update_scan_actions | 01.png
+[  25% ] _update_scan_actions | 02.png
+[  26% ] _update_scan_actions | knight-a-hit-00.png
+[  28% ] _update_scan_actions | knight-a-hit-01.png
+[  30% ] _update_scan_actions | knight-a-hit-02.png
+[  32% ] _update_scan_actions | knight-a-stagger-00.png
+[  34% ] _update_scan_actions | knight-a-stagger-01.png
+[  36% ] _update_scan_actions | knight-a-stagger-02.png
+[  38% ] _update_scan_actions | thoma-a3-swing-00-attempt1.png
+[  40% ] _update_scan_actions | thoma-a3-swing-01-attempt1.png
+[  42% ] _update_scan_actions | thoma-a3-swing-02-attempt1.png
+[  44% ] _update_scan_actions | thoma-a3-swing-03-attempt1.png
+[  46% ] _update_scan_actions | thoma-a3-swing-04-attempt1.png
+[  48% ] _update_scan_actions | thoma-mace-idle-01.png
+[  50% ] _update_scan_actions | thoma-mace-swing-00.png
+[  51% ] _update_scan_actions | thoma-mace-swing-01.png
+[  53% ] _update_scan_actions | thoma-mace-swing-02-attempt2.png
+[  55% ] _update_scan_actions | thoma-mace-swing-03.png
+[  57% ] _update_scan_actions | thoma-mace-swing-04.png
+[  59% ] _update_scan_actions | thoma-mace-swing-05.png
+[  61% ] _update_scan_actions | thoma-swing-00.png
+[  63% ] _update_scan_actions | thoma-swing-01.png
+[  65% ] _update_scan_actions | thoma-swing-02.png
+[  67% ] _update_scan_actions | thoma-swing-03.png
+[  69% ] _update_scan_actions | thoma-swing-04.png
+[  71% ] _update_scan_actions | thoma-swing-05.png
+[  73% ] _update_scan_actions | knight-a.png
+[  75% ] _update_scan_actions | sword-reference.png
+[  76% ] _update_scan_actions | thoma.png
+[  78% ] _update_scan_actions | 00.png
+[  80% ] _update_scan_actions | 01.png
+[  82% ] _update_scan_actions | 00.png
+[  84% ] _update_scan_actions | 01.png
+[  86% ] _update_scan_actions | 02.png
+[  88% ] _update_scan_actions | 03.png
+[  90% ] _update_scan_actions | 04.png
+[  92% ] _update_scan_actions | 05.png
+[  94% ] _update_scan_actions | contact-sheet.png
+[  96% ] _update_scan_actions | thoma-weapon-style-check.png
+[ DONE ] _update_scan_actions
+
+[   0% ] reimport | Started （重新）匯入素材 (1 steps)
+[   0% ] reimport | 正在準備重新匯入檔案…
+[   0% ] reimport | 執行預先重新匯入作業…
+[   0% ] reimport | contact-sheet.png
+[  50% ] reimport | 完成素材匯入...
+[ DONE ] reimport
+
+[   0% ] reimport | Started （重新）匯入素材 (1 steps)
+[   0% ] reimport | 執行重新匯入後續處理作業…
+[ DONE ] reimport
+
+[   0% ] loading_editor_layout | Started 正在載入編輯器 (5 steps)
+[   0% ] loading_editor_layout | 正在載入編輯器佈局…
+[  16% ] loading_editor_layout | 正在載入面板…
+[ DONE ] loading_editor_layout
