@@ -103,32 +103,41 @@
     ],
     "status": "PASS",
     "weapon_status": "APPROVED",
-    "reason": "Recognizable original face, paired ivory leafy stole, layered cuffs/hem and equipment continuity at review and runtime scale; not Owner art approval.",
+    "reason": "Byte-unchanged A3 reference; model PASS retained, not Owner art approval.",
     "style_review": {
-      "face": "PASS: A2 face retained, original grey hair/beard and aged features recognizable",
-      "stole_cape_embroidery": "PASS: paired ivory band and sparse leafy lower ends retained",
-      "cuffs": "PASS: layered linen cuffs consistent at review scale",
-      "hem_silhouette": "PASS: near-idle layered ivory underskirt/teal hem",
-      "palette": "PASS: original muted teal/ivory/brown palette; see numerical distance",
-      "proportions": "PASS: fixed A2 registration and body proportions retained",
-      "light_direction": "PASS: original top-left light retained",
-      "stroke": "PASS at runtime scale; exact brush identity not claimed",
-      "satchel_medallion": "PASS: retained A2 pixels; holy medallion remains separate from mace"
+      "face": "PASS: unchanged accepted A3 reference region.",
+      "stole_cape_embroidery": "PASS: unchanged accepted A3 reference region.",
+      "cuffs": "PASS: unchanged accepted A3 reference region.",
+      "hem_silhouette": "PASS: unchanged accepted A3 reference region.",
+      "palette": "PASS: unchanged accepted A3 reference region.",
+      "proportions": "PASS: canvas/pivot fixed; exact pose weapon retained.",
+      "light_direction": "PASS: source top-left paint retained.",
+      "stroke": "PASS: unchanged reference.",
+      "satchel_medallion": "PASS: unchanged reference."
     },
     "weapon_approval": "Owner, 2026-10-24",
-    "review_segment": "spike-02 A3",
+    "review_segment": "spike-02 A4",
     "review_authority": "model visual inspection; Owner art approval not claimed",
     "palette_distance": {
       "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
       "value": 0.0,
       "not_a_perceptual_quality_score": true
+    },
+    "region_review": {
+      "stole": "PASS: unchanged accepted A3 reference region.",
+      "embroidery": "PASS: unchanged accepted A3 reference region.",
+      "cuffs": "PASS: unchanged accepted A3 reference region.",
+      "hem": "PASS: unchanged accepted A3 reference region.",
+      "face_hair": "PASS: unchanged accepted A3 reference region.",
+      "palette": "PASS: unchanged accepted A3 reference region.",
+      "sequence": "PASS: unchanged reference endpoint; incoming/outgoing motion-transition defects are assigned to motion frames in sequence-check.json."
     }
   },
   {
     "path": "thoma/swing/00.png",
-    "sha256": "8026a8871b1b72fc7e9846d564a1e689d8dbecb6605bebccd9911baa9ef43c17",
-    "source": "raw/thoma-a3-swing-00-attempt1.png",
-    "raw_sha256": "e0f0159ed683807366afe3350b3944a147e6565e5b576b39a8dd9f0e6efd00e0",
+    "sha256": "b5fd52bd56ec155e98694ab51a668f7959d66db1d0d6fefe68458c551e9d4f1b",
+    "source": "reference pixel rig: idle/01 + swing/05",
+    "raw_sha256": null,
     "registration": [
       685,
       1218,
@@ -137,33 +146,43 @@
     ],
     "status": "PLACEHOLDER",
     "weapon_status": "APPROVED",
-    "reason": "Leaf sprigs now come from the original, but doubled border/leaf density remains at patch edges; raised cuff transition and broad fan hem still differ from idle/recover.",
+    "reason": "Reference pixel method fixes the old fan contour and duplicate motif rows, but shoulder band meets retained raised-arm paint abruptly; bag/plain-cloth clone has a visible horizontal seam. fan contour replaced with reference edge, but left boot/hem connection is too narrow and near-idle drape lacks coil.",
     "style_review": {
-      "face": "PASS: A2 face retained, original grey hair/beard and aged features recognizable",
-      "stole_cape_embroidery": "FAIL: original sprigs transferred but seam/density/shape consistency remains unresolved",
-      "cuffs": "FAIL: new cloth patches do not fully resolve fold/edge transitions",
-      "hem_silhouette": "FAIL: A2 motion contour deliberately retained to preserve geometry; broader fan/trailing silhouette remains",
-      "palette": "PASS: original muted teal/ivory/brown palette; see numerical distance",
-      "proportions": "PASS: fixed A2 registration and body proportions retained",
-      "light_direction": "PASS: original top-left light retained",
-      "stroke": "FAIL: local composite texture/seams remain apparent at enlarged detail scale",
-      "satchel_medallion": "PASS: retained A2 pixels; holy medallion remains separate from mace"
+      "face": "PASS: reference face and hair translated as one unit; recognizable grey beard and facial identity.",
+      "stole_cape_embroidery": "FAIL: shoulder band meets retained raised-arm paint abruptly; bag/plain-cloth clone has a visible horizontal seam.",
+      "cuffs": "FAIL: cloth grain is reference-derived but the raised cuff changes fold direction abruptly at the sleeve join.",
+      "hem_silhouette": "FAIL: fan contour replaced with reference edge, but left boot/hem connection is too narrow and near-idle drape lacks coil.",
+      "palette": "PASS: muted reference teal/ivory/brown retained; no new palette mapping.",
+      "proportions": "PASS: canvas/pivot fixed; exact pose weapon retained.",
+      "light_direction": "PASS: source top-left paint retained.",
+      "stroke": "FAIL: visible composite joins remain.",
+      "satchel_medallion": "FAIL: bag clone boundary visible; reference medallion preserved."
     },
     "weapon_approval": "Owner, 2026-10-24",
-    "cleanup": "Perspective-warp interior cuff/hem patches; transplant original sprig; feather 0.65px; discard alpha <=240 at patch edges; quantize edited pixels to original 128-color palette; preserve entire A2 alpha and all unmasked pixels.",
-    "review_segment": "spike-02 A3",
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic premultiplied RGBA; no silhouette inherited from A2/A3 garment. Transparent RGB cleared. Motion weapon exact.",
+    "review_segment": "spike-02 A4",
     "review_authority": "model visual inspection; Owner art approval not claimed",
     "palette_distance": {
-      "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
-      "value": 0.0,
-      "not_a_perceptual_quality_score": true
+      "before": 0.0,
+      "after": 2.155998,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "region_review": {
+      "stole": "FAIL: shoulder band meets retained raised-arm paint abruptly; bag/plain-cloth clone has a visible horizontal seam.",
+      "embroidery": "PASS: same source lower-end sprig, one row with no doubled motif; lateral 15 percent ease is documented.",
+      "cuffs": "FAIL: cloth grain is reference-derived but the raised cuff changes fold direction abruptly at the sleeve join.",
+      "hem": "FAIL: fan contour replaced with reference edge, but left boot/hem connection is too narrow and near-idle drape lacks coil.",
+      "face_hair": "PASS: reference face and hair translated as one unit; recognizable grey beard and facial identity.",
+      "palette": "PASS: muted reference teal/ivory/brown retained; no new palette mapping.",
+      "sequence": "FAIL: idle-to-raised sleeve/shoulder joins pop; narrow hem against spread feet is discontinuous."
     }
   },
   {
     "path": "thoma/swing/01.png",
-    "sha256": "3722d0272e821c323ef913fd4cabe2a56a140b279fe07878c8db716c013d0acd",
-    "source": "raw/thoma-a3-swing-01-attempt1.png",
-    "raw_sha256": "804668a246aeb3330726d7dca2f9f270d393cd70a30496efb49dc12a48ce51ca",
+    "sha256": "0770cbaf3f99ea322175521471685d0f27164ba560bbc66c1f0cc4194edbfabb",
+    "source": "reference pixel rig: idle/01 + swing/05",
+    "raw_sha256": null,
     "registration": [
       665,
       1220,
@@ -172,33 +191,43 @@
     ],
     "status": "PLACEHOLDER",
     "weapon_status": "APPROVED",
-    "reason": "Original sprigs improve identity, but stole border blending and raised cuff folds still differ; the bell-shaped hem is retained from A2.",
+    "reason": "Reference pixel method fixes the old fan contour and duplicate motif rows, but upper band/arm seam and horizontal bag clone edge remain visible. reference scalloped edge retained but transition from preceding wide stance is abrupt.",
     "style_review": {
-      "face": "PASS: A2 face retained, original grey hair/beard and aged features recognizable",
-      "stole_cape_embroidery": "FAIL: original sprigs transferred but seam/density/shape consistency remains unresolved",
-      "cuffs": "FAIL: new cloth patches do not fully resolve fold/edge transitions",
-      "hem_silhouette": "FAIL: A2 motion contour deliberately retained to preserve geometry; broader fan/trailing silhouette remains",
-      "palette": "PASS: original muted teal/ivory/brown palette; see numerical distance",
-      "proportions": "PASS: fixed A2 registration and body proportions retained",
-      "light_direction": "PASS: original top-left light retained",
-      "stroke": "FAIL: local composite texture/seams remain apparent at enlarged detail scale",
-      "satchel_medallion": "PASS: retained A2 pixels; holy medallion remains separate from mace"
+      "face": "PASS: same source facial identity and grey hair; moderate positional change.",
+      "stole_cape_embroidery": "FAIL: upper band/arm seam and horizontal bag clone edge remain visible.",
+      "cuffs": "FAIL: raised cuff texture reads as a separate patch despite correct reference color.",
+      "hem_silhouette": "FAIL: reference scalloped edge retained but transition from preceding wide stance is abrupt.",
+      "palette": "PASS: no visible color-family flicker or Ferry Dusk palette.",
+      "proportions": "PASS: canvas/pivot fixed; exact pose weapon retained.",
+      "light_direction": "PASS: source top-left paint retained.",
+      "stroke": "FAIL: visible composite joins remain.",
+      "satchel_medallion": "FAIL: bag clone boundary visible; reference medallion preserved."
     },
     "weapon_approval": "Owner, 2026-10-24",
-    "cleanup": "Perspective-warp interior cuff/hem patches; transplant original sprig; feather 0.65px; discard alpha <=240 at patch edges; quantize edited pixels to original 128-color palette; preserve entire A2 alpha and all unmasked pixels.",
-    "review_segment": "spike-02 A3",
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic premultiplied RGBA; no silhouette inherited from A2/A3 garment. Transparent RGB cleared. Motion weapon exact.",
+    "review_segment": "spike-02 A4",
     "review_authority": "model visual inspection; Owner art approval not claimed",
     "palette_distance": {
-      "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
-      "value": 0.0,
-      "not_a_perceptual_quality_score": true
+      "before": 0.0,
+      "after": 2.252855,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "region_review": {
+      "stole": "FAIL: upper band/arm seam and horizontal bag clone edge remain visible.",
+      "embroidery": "PASS: intact source sprig and border spacing along the band; no added leaf row.",
+      "cuffs": "FAIL: raised cuff texture reads as a separate patch despite correct reference color.",
+      "hem": "FAIL: reference scalloped edge retained but transition from preceding wide stance is abrupt.",
+      "face_hair": "PASS: same source facial identity and grey hair; moderate positional change.",
+      "palette": "PASS: no visible color-family flicker or Ferry Dusk palette.",
+      "sequence": "FAIL: raised-to-swing torso occlusion and cuff silhouette jump remain."
     }
   },
   {
     "path": "thoma/swing/03.png",
-    "sha256": "32034e392720ad04f2294ddc74f02b142050761a4adbed01bc7aa2d11de0b10a",
-    "source": "raw/thoma-a3-swing-03-attempt1.png",
-    "raw_sha256": "beb43bf73db79d2c91103c0550dc9ca92421f8bc0fa7fc255b8d31209aa883b6",
+    "sha256": "688fb0d3744f2314056f6c7ee5719f46e02735445caf581bc105ca62d0b8f846",
+    "source": "reference pixel rig: idle/01 + swing/05",
+    "raw_sha256": null,
     "registration": [
       545,
       1190,
@@ -207,33 +236,43 @@
     ],
     "status": "PLACEHOLDER",
     "weapon_status": "APPROVED",
-    "reason": "Contact geometry is byte-preserved; stole seam/leaf density and broad underskirt hem remain inconsistent at detail scale.",
+    "reason": "Reference pixel method fixes the old fan contour and duplicate motif rows, but waist/shoulder joins and cloned bag occlusion remain visible even though full source bands are used. reference-shaped edge replaces broad fan; wide planted stance still reads disconnected at the left ankle.",
     "style_review": {
-      "face": "PASS: A2 face retained, original grey hair/beard and aged features recognizable",
-      "stole_cape_embroidery": "FAIL: original sprigs transferred but seam/density/shape consistency remains unresolved",
-      "cuffs": "FAIL: new cloth patches do not fully resolve fold/edge transitions",
-      "hem_silhouette": "FAIL: A2 motion contour deliberately retained to preserve geometry; broader fan/trailing silhouette remains",
-      "palette": "PASS: original muted teal/ivory/brown palette; see numerical distance",
-      "proportions": "PASS: fixed A2 registration and body proportions retained",
-      "light_direction": "PASS: original top-left light retained",
-      "stroke": "FAIL: local composite texture/seams remain apparent at enlarged detail scale",
-      "satchel_medallion": "PASS: retained A2 pixels; holy medallion remains separate from mace"
+      "face": "PASS: unchanged reference facial pixels translated to contact head position.",
+      "stole_cape_embroidery": "FAIL: waist/shoulder joins and cloned bag occlusion remain visible even though full source bands are used.",
+      "cuffs": "FAIL: primary cuff retains a visible composite boundary against the extended sleeve.",
+      "hem_silhouette": "FAIL: reference-shaped edge replaces broad fan; wide planted stance still reads disconnected at the left ankle.",
+      "palette": "PASS: original muted color family with no independent color remapping.",
+      "proportions": "PASS: canvas/pivot fixed; exact pose weapon retained.",
+      "light_direction": "PASS: source top-left paint retained.",
+      "stroke": "FAIL: visible composite joins remain.",
+      "satchel_medallion": "FAIL: bag clone boundary visible; reference medallion preserved."
     },
     "weapon_approval": "Owner, 2026-10-24",
-    "cleanup": "Perspective-warp interior cuff/hem patches; transplant original sprig; feather 0.65px; discard alpha <=240 at patch edges; quantize edited pixels to original 128-color palette; preserve entire A2 alpha and all unmasked pixels.",
-    "review_segment": "spike-02 A3",
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic premultiplied RGBA; no silhouette inherited from A2/A3 garment. Transparent RGB cleared. Motion weapon exact.",
+    "review_segment": "spike-02 A4",
     "review_authority": "model visual inspection; Owner art approval not claimed",
     "palette_distance": {
-      "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
-      "value": 0.0,
-      "not_a_perceptual_quality_score": true
+      "before": 0.0,
+      "after": 2.271027,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "region_review": {
+      "stole": "FAIL: waist/shoulder joins and cloned bag occlusion remain visible even though full source bands are used.",
+      "embroidery": "PASS: original sprig/line weight survives the small shear with no doubled rows.",
+      "cuffs": "FAIL: primary cuff retains a visible composite boundary against the extended sleeve.",
+      "hem": "FAIL: reference-shaped edge replaces broad fan; wide planted stance still reads disconnected at the left ankle.",
+      "face_hair": "PASS: unchanged reference facial pixels translated to contact head position.",
+      "palette": "PASS: original muted color family with no independent color remapping.",
+      "sequence": "FAIL: contact-to-follow-through changes shoulder occlusion and hem attachment abruptly."
     }
   },
   {
     "path": "thoma/swing/04.png",
-    "sha256": "b2d64c00944131073dccde2c7399a3d638abd83d3101431d6f9d3bfbf23274ce",
-    "source": "raw/thoma-a3-swing-04-attempt1.png",
-    "raw_sha256": "5ebcce2dd61852d41056f79f86a625add621994cd5fff3a56a4526b1b6115738",
+    "sha256": "85aeeb4eec4c29d66ef461c5f04ef352bdc61619aee62c94175fd23b2e672bd5",
+    "source": "reference pixel rig: idle/01 + swing/05",
+    "raw_sha256": null,
     "registration": [
       607,
       1167,
@@ -242,26 +281,36 @@
     ],
     "status": "PLACEHOLDER",
     "weapon_status": "APPROVED",
-    "reason": "Trailing sprigs reuse original pixels, but stretched diagonal embroidery, front cuff transition and trailing hem remain visibly different.",
+    "reason": "Reference pixel method fixes the old fan contour and duplicate motif rows, but torso twist retains an A3 shoulder seam; reference-band/body junction and bag clone remain apparent. trailing contour now derives from reference, but floor/boot overlap and recovery shape jump remain.",
     "style_review": {
-      "face": "PASS: A2 face retained, original grey hair/beard and aged features recognizable",
-      "stole_cape_embroidery": "FAIL: original sprigs transferred but seam/density/shape consistency remains unresolved",
-      "cuffs": "FAIL: new cloth patches do not fully resolve fold/edge transitions",
-      "hem_silhouette": "FAIL: A2 motion contour deliberately retained to preserve geometry; broader fan/trailing silhouette remains",
-      "palette": "PASS: original muted teal/ivory/brown palette; see numerical distance",
-      "proportions": "PASS: fixed A2 registration and body proportions retained",
-      "light_direction": "PASS: original top-left light retained",
-      "stroke": "FAIL: local composite texture/seams remain apparent at enlarged detail scale",
-      "satchel_medallion": "PASS: retained A2 pixels; holy medallion remains separate from mace"
+      "face": "PASS: source recover face and hair transferred together; no regenerated identity.",
+      "stole_cape_embroidery": "FAIL: torso twist retains an A3 shoulder seam; reference-band/body junction and bag clone remain apparent.",
+      "cuffs": "FAIL: front cuff is reference cloth but edge/fold transition still reads pasted.",
+      "hem_silhouette": "FAIL: trailing contour now derives from reference, but floor/boot overlap and recovery shape jump remain.",
+      "palette": "PASS: no visible independent palette change.",
+      "proportions": "PASS: canvas/pivot fixed; exact pose weapon retained.",
+      "light_direction": "PASS: source top-left paint retained.",
+      "stroke": "FAIL: visible composite joins remain.",
+      "satchel_medallion": "FAIL: bag clone boundary visible; reference medallion preserved."
     },
     "weapon_approval": "Owner, 2026-10-24",
-    "cleanup": "Perspective-warp interior cuff/hem patches; transplant original sprig; feather 0.65px; discard alpha <=240 at patch edges; quantize edited pixels to original 128-color palette; preserve entire A2 alpha and all unmasked pixels.",
-    "review_segment": "spike-02 A3",
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic premultiplied RGBA; no silhouette inherited from A2/A3 garment. Transparent RGB cleared. Motion weapon exact.",
+    "review_segment": "spike-02 A4",
     "review_authority": "model visual inspection; Owner art approval not claimed",
     "palette_distance": {
-      "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
-      "value": 0.0,
-      "not_a_perceptual_quality_score": true
+      "before": 0.0,
+      "after": 2.248148,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "region_review": {
+      "stole": "FAIL: torso twist retains an A3 shoulder seam; reference-band/body junction and bag clone remain apparent.",
+      "embroidery": "PASS: source lower sprig persists with fixed vertical spacing; shear follows cloth direction.",
+      "cuffs": "FAIL: front cuff is reference cloth but edge/fold transition still reads pasted.",
+      "hem": "FAIL: trailing contour now derives from reference, but floor/boot overlap and recovery shape jump remain.",
+      "face_hair": "PASS: source recover face and hair transferred together; no regenerated identity.",
+      "palette": "PASS: no visible independent palette change.",
+      "sequence": "FAIL: trailing garment snaps back to unwarped recovery; this is not a continuous finished costume rig."
     }
   },
   {
@@ -277,32 +326,41 @@
     ],
     "status": "PASS",
     "weapon_status": "APPROVED",
-    "reason": "Recognizable original face, paired ivory leafy stole, layered cuffs/hem and equipment continuity at review and runtime scale; not Owner art approval.",
+    "reason": "Byte-unchanged A3 reference; model PASS retained, not Owner art approval.",
     "style_review": {
-      "face": "PASS: A2 face retained, original grey hair/beard and aged features recognizable",
-      "stole_cape_embroidery": "PASS: paired ivory band and sparse leafy lower ends retained",
-      "cuffs": "PASS: layered linen cuffs consistent at review scale",
-      "hem_silhouette": "PASS: near-idle layered ivory underskirt/teal hem",
-      "palette": "PASS: original muted teal/ivory/brown palette; see numerical distance",
-      "proportions": "PASS: fixed A2 registration and body proportions retained",
-      "light_direction": "PASS: original top-left light retained",
-      "stroke": "PASS at runtime scale; exact brush identity not claimed",
-      "satchel_medallion": "PASS: retained A2 pixels; holy medallion remains separate from mace"
+      "face": "PASS: unchanged accepted A3 reference region.",
+      "stole_cape_embroidery": "PASS: unchanged accepted A3 reference region.",
+      "cuffs": "PASS: unchanged accepted A3 reference region.",
+      "hem_silhouette": "PASS: unchanged accepted A3 reference region.",
+      "palette": "PASS: unchanged accepted A3 reference region.",
+      "proportions": "PASS: canvas/pivot fixed; exact pose weapon retained.",
+      "light_direction": "PASS: source top-left paint retained.",
+      "stroke": "PASS: unchanged reference.",
+      "satchel_medallion": "PASS: unchanged reference."
     },
     "weapon_approval": "Owner, 2026-10-24",
-    "review_segment": "spike-02 A3",
+    "review_segment": "spike-02 A4",
     "review_authority": "model visual inspection; Owner art approval not claimed",
     "palette_distance": {
       "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
       "value": 0.0,
       "not_a_perceptual_quality_score": true
+    },
+    "region_review": {
+      "stole": "PASS: unchanged accepted A3 reference region.",
+      "embroidery": "PASS: unchanged accepted A3 reference region.",
+      "cuffs": "PASS: unchanged accepted A3 reference region.",
+      "hem": "PASS: unchanged accepted A3 reference region.",
+      "face_hair": "PASS: unchanged accepted A3 reference region.",
+      "palette": "PASS: unchanged accepted A3 reference region.",
+      "sequence": "PASS: unchanged reference endpoint; incoming/outgoing motion-transition defects are assigned to motion frames in sequence-check.json."
     }
   },
   {
     "path": "thoma/swing/02.png",
-    "sha256": "f38de24651841d855a4d14040838b9a33bd2050f7bffe4f5eb1ffdd206a9b7a2",
-    "source": "raw/thoma-a3-swing-02-attempt1.png",
-    "raw_sha256": "ba4fa98a9585520c21c9ab64dedd592578b7cd6bab75d2a700f5d64a52628525",
+    "sha256": "23abb318b5ced100c5fb92b8b2fdf636911ed331bb1dd8a448ee0b6c9974ca1b",
+    "source": "reference pixel rig: idle/01 + swing/05",
+    "raw_sha256": null,
     "registration": [
       575,
       1205,
@@ -311,26 +369,36 @@
     ],
     "status": "PLACEHOLDER",
     "weapon_status": "APPROVED",
-    "reason": "Original sprigs and cuff cloth improve continuity, but compressed leaf detail, cuff patch boundary and swept underskirt contour still drift.",
+    "reason": "Reference pixel method fixes the old fan contour and duplicate motif rows, but squared shoulder cut and waist overlay boundary expose the cutout construction. old swept fan removed, but reference hem bridges the fixed stance awkwardly.",
     "style_review": {
-      "face": "PASS: A2 face retained, original grey hair/beard and aged features recognizable",
-      "stole_cape_embroidery": "FAIL: original sprigs transferred but seam/density/shape consistency remains unresolved",
-      "cuffs": "FAIL: new cloth patches do not fully resolve fold/edge transitions",
-      "hem_silhouette": "FAIL: A2 motion contour deliberately retained to preserve geometry; broader fan/trailing silhouette remains",
-      "palette": "PASS: original muted teal/ivory/brown palette; see numerical distance",
-      "proportions": "PASS: fixed A2 registration and body proportions retained",
-      "light_direction": "PASS: original top-left light retained",
-      "stroke": "FAIL: local composite texture/seams remain apparent at enlarged detail scale",
-      "satchel_medallion": "PASS: retained A2 pixels; holy medallion remains separate from mace"
+      "face": "PASS: recover reference face/hair remains identifiable through forward motion.",
+      "stole_cape_embroidery": "FAIL: squared shoulder cut and waist overlay boundary expose the cutout construction.",
+      "cuffs": "FAIL: off-hand cuff has an abrupt triangular edge and fold transition.",
+      "hem_silhouette": "FAIL: old swept fan removed, but reference hem bridges the fixed stance awkwardly.",
+      "palette": "PASS: reference palette retained; numeric delta includes changing occlusion.",
+      "proportions": "PASS: canvas/pivot fixed; exact pose weapon retained.",
+      "light_direction": "PASS: source top-left paint retained.",
+      "stroke": "FAIL: visible composite joins remain.",
+      "satchel_medallion": "FAIL: bag clone boundary visible; reference medallion preserved."
     },
     "weapon_approval": "Owner, 2026-10-24",
-    "cleanup": "Perspective-warp interior cuff/hem patches; transplant original sprig; feather 0.65px; discard alpha <=240 at patch edges; quantize edited pixels to original 128-color palette; preserve entire A2 alpha and all unmasked pixels.",
-    "review_segment": "spike-02 A3",
+    "cleanup": "Reference alpha preserved on cutouts; transformed with bicubic premultiplied RGBA; no silhouette inherited from A2/A3 garment. Transparent RGB cleared. Motion weapon exact.",
+    "review_segment": "spike-02 A4",
     "review_authority": "model visual inspection; Owner art approval not claimed",
     "palette_distance": {
-      "metric": "mean nearest original 128-color Euclidean RGB distance, opaque alpha >240",
-      "value": 0.0,
-      "not_a_perceptual_quality_score": true
+      "before": 0.0,
+      "after": 2.24222,
+      "metric": "mean nearest reference 128-color Euclidean RGB, alpha>240",
+      "mapping_applied": false
+    },
+    "region_review": {
+      "stole": "FAIL: squared shoulder cut and waist overlay boundary expose the cutout construction.",
+      "embroidery": "PASS: lower motif remains the same source sprig at unit vertical scale.",
+      "cuffs": "FAIL: off-hand cuff has an abrupt triangular edge and fold transition.",
+      "hem": "FAIL: old swept fan removed, but reference hem bridges the fixed stance awkwardly.",
+      "face_hair": "PASS: recover reference face/hair remains identifiable through forward motion.",
+      "palette": "PASS: reference palette retained; numeric delta includes changing occlusion.",
+      "sequence": "FAIL: torso/cuff boundaries and cloth-to-boot junction change visibly from raised pose."
     }
   },
   {

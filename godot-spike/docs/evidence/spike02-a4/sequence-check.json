@@ -1,0 +1,90 @@
+{
+  "authority": "model inspection, not human playtest",
+  "metric": "Euclidean distance of mask-weighted mean RGB, unaligned poses; occlusion affects sample composition",
+  "pairs": [
+    {
+      "from": "thoma/idle/01.png",
+      "to": "thoma/swing/00.png",
+      "region_mean_rgb_delta": {
+        "stole": 9.8751,
+        "embroidery": 10.1581,
+        "cuffs": 42.4377,
+        "hem": 3.7484,
+        "face_hair": 0.4521,
+        "palette": 1.2871
+      },
+      "visual_result": "FAIL",
+      "reason": "Sleeve/torso joins or hem-to-stance attachment change abruptly; palette mean does not detect spatial seams."
+    },
+    {
+      "from": "thoma/swing/00.png",
+      "to": "thoma/swing/01.png",
+      "region_mean_rgb_delta": {
+        "stole": 4.3308,
+        "embroidery": 0.3633,
+        "cuffs": 2.2756,
+        "hem": 0.1735,
+        "face_hair": 0.8692,
+        "palette": 5.5738
+      },
+      "visual_result": "FAIL",
+      "reason": "Sleeve/torso joins or hem-to-stance attachment change abruptly; palette mean does not detect spatial seams."
+    },
+    {
+      "from": "thoma/swing/01.png",
+      "to": "thoma/swing/02.png",
+      "region_mean_rgb_delta": {
+        "stole": 1.9355,
+        "embroidery": 4.5451,
+        "cuffs": 48.9512,
+        "hem": 11.2695,
+        "face_hair": 6.1931,
+        "palette": 8.0064
+      },
+      "visual_result": "FAIL",
+      "reason": "Sleeve/torso joins or hem-to-stance attachment change abruptly; palette mean does not detect spatial seams."
+    },
+    {
+      "from": "thoma/swing/02.png",
+      "to": "thoma/swing/03.png",
+      "region_mean_rgb_delta": {
+        "stole": 3.5102,
+        "embroidery": 0.0045,
+        "cuffs": 11.2724,
+        "hem": 0.306,
+        "face_hair": 1.1703,
+        "palette": 1.0861
+      },
+      "visual_result": "FAIL",
+      "reason": "Sleeve/torso joins or hem-to-stance attachment change abruptly; palette mean does not detect spatial seams."
+    },
+    {
+      "from": "thoma/swing/03.png",
+      "to": "thoma/swing/04.png",
+      "region_mean_rgb_delta": {
+        "stole": 16.2733,
+        "embroidery": 0.1687,
+        "cuffs": 7.9758,
+        "hem": 0.2523,
+        "face_hair": 1.2851,
+        "palette": 7.0049
+      },
+      "visual_result": "FAIL",
+      "reason": "Sleeve/torso joins or hem-to-stance attachment change abruptly; palette mean does not detect spatial seams."
+    },
+    {
+      "from": "thoma/swing/04.png",
+      "to": "thoma/swing/05.png",
+      "region_mean_rgb_delta": {
+        "stole": 4.0785,
+        "embroidery": 27.092,
+        "cuffs": 5.7323,
+        "hem": 0.2055,
+        "face_hair": 0.1013,
+        "palette": 5.3256
+      },
+      "visual_result": "FAIL",
+      "reason": "Sleeve/torso joins or hem-to-stance attachment change abruptly; palette mean does not detect spatial seams."
+    }
+  ]
+}

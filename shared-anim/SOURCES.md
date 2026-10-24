@@ -283,3 +283,7 @@ Full per-frame input hashes, output hashes, controls, zero-attempt provenance, c
 | thoma/swing/02.png | idle c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808; recover f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf | 23abb318b5ced100c5fb92b8b2fdf636911ed331bb1dd8a448ee0b6c9974ca1b | 0.0 / 2.24222 |
 | thoma/swing/03.png | idle c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808; recover f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf | 688fb0d3744f2314056f6c7ee5719f46e02735445caf581bc105ca62d0b8f846 | 0.0 / 2.271027 |
 | thoma/swing/04.png | idle c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808; recover f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf | 85aeeb4eec4c29d66ef461c5f04ef352bdc61619aee62c94175fd23b2e672bd5 | 0.0 / 2.248148 |
+
+### A4 W3 model verdict
+
+Five motion frames remain PLACEHOLDER. Reference transfer fixes provenance and replaces the old contour, but shoulder/cuff/bag seams and hem-to-feet continuity fail. See frame-audit.json region_review and spike02-a4/sequence-check.json. Two immutable references retain PASS. No human or Owner art approval is claimed.

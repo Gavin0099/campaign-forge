@@ -1,0 +1,992 @@
+[
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "stole",
+    "box": [
+      191,
+      153,
+      317,
+      392
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "stole",
+    "box": [
+      188,
+      150,
+      317,
+      389
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "stole",
+    "box": [
+      189,
+      155,
+      318,
+      394
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "embroidery",
+    "box": [
+      222,
+      339,
+      257,
+      382
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "embroidery",
+    "box": [
+      222,
+      336,
+      257,
+      379
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "embroidery",
+    "box": [
+      206,
+      341,
+      249,
+      384
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "cuffs",
+    "box": [
+      153,
+      211,
+      333,
+      284
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "cuffs",
+    "box": [
+      152,
+      208,
+      332,
+      281
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "cuffs",
+    "box": [
+      113,
+      139,
+      363,
+      268
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "hem",
+    "box": [
+      163,
+      347,
+      327,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "hem",
+    "box": [
+      160,
+      343,
+      330,
+      429
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "hem",
+    "box": [
+      137,
+      349,
+      329,
+      432
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "face_hair",
+    "box": [
+      224,
+      98,
+      293,
+      177
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "face_hair",
+    "box": [
+      222,
+      90,
+      288,
+      169
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "face_hair",
+    "box": [
+      219,
+      108,
+      288,
+      187
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "palette",
+    "box": [
+      165,
+      146,
+      331,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "palette",
+    "box": [
+      162,
+      143,
+      332,
+      431
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "palette",
+    "box": [
+      138,
+      148,
+      334,
+      432
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "stole",
+    "box": [
+      191,
+      153,
+      317,
+      392
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "stole",
+    "box": [
+      188,
+      150,
+      317,
+      389
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "region": "stole",
+    "box": [
+      180,
+      154,
+      336,
+      393
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "embroidery",
+    "box": [
+      222,
+      339,
+      257,
+      382
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "embroidery",
+    "box": [
+      222,
+      336,
+      257,
+      379
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "region": "embroidery",
+    "box": [
+      226,
+      340,
+      268,
+      383
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "cuffs",
+    "box": [
+      153,
+      211,
+      333,
+      284
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "cuffs",
+    "box": [
+      152,
+      208,
+      332,
+      281
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "region": "cuffs",
+    "box": [
+      148,
+      141,
+      336,
+      255
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "hem",
+    "box": [
+      163,
+      347,
+      327,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "hem",
+    "box": [
+      160,
+      343,
+      330,
+      429
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "region": "hem",
+    "box": [
+      162,
+      348,
+      347,
+      431
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "face_hair",
+    "box": [
+      224,
+      98,
+      293,
+      177
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "face_hair",
+    "box": [
+      222,
+      90,
+      288,
+      169
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "region": "face_hair",
+    "box": [
+      226,
+      104,
+      296,
+      183
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "palette",
+    "box": [
+      165,
+      146,
+      331,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "palette",
+    "box": [
+      162,
+      143,
+      332,
+      431
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "region": "palette",
+    "box": [
+      163,
+      147,
+      351,
+      431
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "stole",
+    "box": [
+      191,
+      153,
+      317,
+      392
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "stole",
+    "box": [
+      188,
+      150,
+      317,
+      389
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "region": "stole",
+    "box": [
+      211,
+      157,
+      335,
+      396
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "embroidery",
+    "box": [
+      222,
+      339,
+      257,
+      382
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "embroidery",
+    "box": [
+      222,
+      336,
+      257,
+      379
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "region": "embroidery",
+    "box": [
+      222,
+      343,
+      266,
+      386
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "cuffs",
+    "box": [
+      153,
+      211,
+      333,
+      284
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "cuffs",
+    "box": [
+      152,
+      208,
+      332,
+      281
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "region": "cuffs",
+    "box": [
+      289,
+      170,
+      360,
+      278
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "hem",
+    "box": [
+      163,
+      347,
+      327,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "hem",
+    "box": [
+      160,
+      343,
+      330,
+      429
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "region": "hem",
+    "box": [
+      152,
+      351,
+      348,
+      436
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "face_hair",
+    "box": [
+      224,
+      98,
+      293,
+      177
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "face_hair",
+    "box": [
+      222,
+      90,
+      288,
+      169
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "region": "face_hair",
+    "box": [
+      265,
+      110,
+      332,
+      189
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "palette",
+    "box": [
+      165,
+      146,
+      331,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "palette",
+    "box": [
+      162,
+      143,
+      332,
+      431
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "region": "palette",
+    "box": [
+      152,
+      150,
+      351,
+      439
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "stole",
+    "box": [
+      191,
+      153,
+      317,
+      392
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "stole",
+    "box": [
+      188,
+      150,
+      317,
+      389
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "region": "stole",
+    "box": [
+      207,
+      158,
+      331,
+      397
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "embroidery",
+    "box": [
+      222,
+      339,
+      257,
+      382
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "embroidery",
+    "box": [
+      222,
+      336,
+      257,
+      379
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "region": "embroidery",
+    "box": [
+      218,
+      344,
+      262,
+      387
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "cuffs",
+    "box": [
+      153,
+      211,
+      333,
+      284
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "cuffs",
+    "box": [
+      152,
+      208,
+      332,
+      281
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "region": "cuffs",
+    "box": [
+      276,
+      179,
+      336,
+      274
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "hem",
+    "box": [
+      163,
+      347,
+      327,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "hem",
+    "box": [
+      160,
+      343,
+      330,
+      429
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "region": "hem",
+    "box": [
+      146,
+      352,
+      344,
+      438
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "face_hair",
+    "box": [
+      224,
+      98,
+      293,
+      177
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "face_hair",
+    "box": [
+      222,
+      90,
+      288,
+      169
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "region": "face_hair",
+    "box": [
+      250,
+      109,
+      319,
+      188
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "palette",
+    "box": [
+      165,
+      146,
+      331,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "palette",
+    "box": [
+      162,
+      143,
+      332,
+      431
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "region": "palette",
+    "box": [
+      147,
+      151,
+      347,
+      439
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "stole",
+    "box": [
+      191,
+      153,
+      317,
+      392
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "stole",
+    "box": [
+      188,
+      150,
+      317,
+      389
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "region": "stole",
+    "box": [
+      177,
+      161,
+      337,
+      400
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "embroidery",
+    "box": [
+      222,
+      339,
+      257,
+      382
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "embroidery",
+    "box": [
+      222,
+      336,
+      257,
+      379
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "region": "embroidery",
+    "box": [
+      188,
+      347,
+      239,
+      390
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "cuffs",
+    "box": [
+      153,
+      211,
+      333,
+      284
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "cuffs",
+    "box": [
+      152,
+      208,
+      332,
+      281
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "region": "cuffs",
+    "box": [
+      173,
+      198,
+      336,
+      304
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "hem",
+    "box": [
+      163,
+      347,
+      327,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "hem",
+    "box": [
+      160,
+      343,
+      330,
+      429
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "region": "hem",
+    "box": [
+      113,
+      355,
+      319,
+      440
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "face_hair",
+    "box": [
+      224,
+      98,
+      293,
+      177
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "face_hair",
+    "box": [
+      222,
+      90,
+      288,
+      169
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "region": "face_hair",
+    "box": [
+      276,
+      118,
+      342,
+      197
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "region": "palette",
+    "box": [
+      165,
+      146,
+      331,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "region": "palette",
+    "box": [
+      162,
+      143,
+      332,
+      431
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "region": "palette",
+    "box": [
+      113,
+      154,
+      336,
+      442
+    ],
+    "scale": 1
+  }
+]
