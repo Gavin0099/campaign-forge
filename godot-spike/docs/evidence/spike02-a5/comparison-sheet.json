@@ -1,0 +1,28 @@
+{
+  "kind": "native unresized crops of actual rendered 1280x720 replays",
+  "crop": [
+    260,
+    160,
+    580,
+    480
+  ],
+  "source_rows": [
+    [
+      "rendered-baseline-a4/swing-anticipation.png",
+      "rendered-baseline-a4/swing-raised.png",
+      "rendered-baseline-a4/swing-smear.png",
+      "rendered-baseline-a4/contact.png",
+      "rendered-baseline-a4/follow-through.png",
+      "rendered-baseline-a4/recover.png"
+    ],
+    [
+      "swing-anticipation.png",
+      "swing-raised.png",
+      "swing-smear.png",
+      "contact.png",
+      "follow-through.png",
+      "recover.png"
+    ]
+  ],
+  "limits": "Same resolution/crop and pose index; camera/tween sampling varies slightly across replays. Asset sequence strip is separate."
+}

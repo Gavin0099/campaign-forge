@@ -645,3 +645,126 @@ change. No push, main merge, PR, Actions, deployment or Phase B. Shared PLAN and
 memory are outside this narrow authorization, so the milestone is recorded here
 and in HANDOFF. Normal hooks ran with a nonblocking missing_canonical_memory
 advisory; no SessionEnd or canonical-closeout completion is claimed.
+
+## spike-02 A5
+
+2026-10-24. Worktree `D:\campaign-forge\scratch\godot-spike`, branch
+`codex/godot-spike`, start cc164b2 above A4 8592fbb. **Engineering passes;
+art repair is partial, five motion frames remain PLACEHOLDER.** Single-satchel
+count and unit local embroidery scale are corrected. Shoulder/waist/cuff
+folds, repair-edge visibility and hem/boot/sequence continuity still fail.
+These are model observations, not Owner art approval. Human hit-feel remains
+**HUMAN_PENDING**. Owner chose Godot directly on 2026-10-24; **Phase B is
+CANCELLED**, no React work remains. P010 was not edited; Owner should update it.
+
+### Actual commands and exit codes
+
+Run from this worktree root. `GODOT` means
+`C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe`;
+`PYTHON` means `C:\Users\daish\AppData\Local\Programs\Python\Python312\python.exe`.
+Existing installed versions: Godot **4.7.2.stable.official.ed1daf0bf**, Python
+**3.12.10**, Pillow **12.2.0**; no package installed. Actual rendered adapter:
+AMD Radeon 780M, OpenGL Compatibility. Installed executable access and linked
+worktree Git metadata required sandbox escalation; no trust/credential change.
+
+| Command | Exit | Evidence / result |
+| --- | --- | --- |
+| `git fetch origin review/gpt-godot-spike` | 0 (escalated retry) | Initial sandbox attempt reported FETCH_HEAD permission denial; specified review fetched, no push |
+| `git show origin/review/gpt-godot-spike:docs/review/gpt-godot-spike-02a4.md` | 0 | A4 art REJECT, engineering accepted; React suggestion superseded by Owner |
+| `PYTHON --version`; `GODOT --version` | 0 | Versions above; installed Pillow import also exited 0 |
+| `PYTHON godot-spike/tools/prepare_a5_frames.py --proof` | 1 then 0 | Initial union area budget too small for 00; final fixed-width bands total <4% of canvas; draft saved without changing live PNGs |
+| `PYTHON godot-spike/tools/prepare_a5_frames.py --build` | 0 | Five frames, A4 byte archive, hashes, palette distances; rerun during W3 to remove a remaining source-mace fragment and protect exact face pixels |
+| `PYTHON godot-spike/tools/a5_style_check.py` | 0 | 200 same-scale region crops, seven-pose strip, six pair colour/garment-IoU proxies |
+| `PYTHON godot-spike/tools/a5_audit.py` | 0 | Explicit per-check audit: 5 motion PLACEHOLDER, 2 immutable reference PASS, bag_count=1 on all seven |
+| `GODOT --headless --path godot-spike -s res://tools/sync_shared_anim.gd` | 0 twice | Sync, contact-sheet refresh, final sync; [log](evidence/spike02-a5/sync-run.log); **65** source/copied files byte-equal |
+| `PYTHON godot-spike/tools/a5_contact_sheet.py` | 0 | Live manifest contact sheet; no manifest edit |
+| `GODOT --headless --path godot-spike --import` | 0 | [Import log](evidence/spike02-a5/import-run.log) |
+| `GODOT --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gdir=res://tests -gexit` | 0 | **48/48 tests, 2,126 assertions**; [full log](evidence/spike02-a5/test-run.log), no script errors/GUT warnings |
+| `PYTHON godot-spike/tools/check_a5_reproduction.py` | 0 | [Log](evidence/spike02-a5/reproduction.log): 5 exact reconstructed PNGs/protection masks/seam masks; zero opaque pixels below y=464 in every motion frame |
+| `GODOT --path godot-spike --resolution 1280x720 --max-fps 60 --audio-driver Dummy -s res://tools/capture_a5.gd` | 0 | [720p log](evidence/spike02-a5/rendered-run.log), 13 screenshots, 6 isolated timing runs; `CAPTURE_COMPLETE A5 movie=false runs=6 shots=13 pass=true` |
+| `GODOT --path godot-spike --resolution 1920x1080 --max-fps 60 --audio-driver Dummy -s res://tools/capture_a5.gd -- --1080p` | 0 | [1080p log](evidence/spike02-a5/rendered-1080p-run.log), actual 1920x1080 readbacks, same successful completion marker; capture observer sets minimum viewport size |
+| `GODOT --path godot-spike --resolution 1280x720 --audio-driver Dummy --fixed-fps 60 --write-movie res://.godot/spike02-a5-movie/attack.avi -s res://tools/capture_a5.gd -- --movie-a5` | 0 | [Movie log](evidence/spike02-a5/movie-run.log), `CAPTURE_COMPLETE A5 movie=true runs=1 shots=0 pass=true` |
+| `PYTHON godot-spike/tools/package_a5_evidence.py` | 1 then 0 | First attempt tried normalizing its actively redirected Windows log; [retained failure](evidence/spike02-a5/attempt-package-locked-log.log). Exclude active redirect, successful [package log](evidence/spike02-a5/package-run.log): markers, dimensions, timing, parity and decoded movie hold checked |
+| `git diff --exit-code cc164b2 -- ui-prototype docs/DECISIONS.md shared-anim/manifest.json shared-anim/thoma/idle/01.png shared-anim/thoma/swing/05.png godot-spike/scripts godot-spike/art/battlefield.png godot-spike/art/props.png` | 0 | React, decisions, reference PNGs, manifest, gameplay, battlefield and props unchanged |
+| `git diff --cached --check` before W4 | 2 then 0 | Import progress had trailing spaces; trimmed log whitespace only, all lines retained; no test failure |
+
+Log normalization removes ANSI colour, normalizes UTF-8/LF and trims trailing
+progress whitespace; no diagnostic lines are discarded. Initial area rejection
+occurred before a draft/live build. W1 draft is preserved; final W3 build uses
+two recorded plain-cloth occlusion transfers, no bag-bearing patches. A4
+historical tests now use the immutable A4 archive; live A5 assertions are in
+test_a5_contract.gd. Assertions were retained, including exact raw RGBA.
+
+### Timing and movie
+
+Manifest remains byte/structure equivalent to A4: 512x512 canvas, pivot
+[256,464], contact index 3, head anchor [455,196], swing durations
+**180 / 70 / 40 / 80 / 100 / 150 ms**, all other fields unchanged.
+
+| Resolution / mode | Open | Unit blocked | Terrain blocked |
+| --- | --- | --- | --- |
+| 720p normal | 0.956431 s | 0.951041 s | 0.943756 s |
+| 720p Reduced Motion | 0.754909 s | 0.720051 s | 0.763822 s |
+| 1080p normal | 0.925129 s | 0.956433 s | 0.923250 s |
+| 1080p Reduced Motion | 0.743256 s | 0.734362 s | 0.766221 s |
+
+[timing.json](evidence/spike02-a5/timing.json) and
+[1080p timing](evidence/spike02-a5/timing-1080p.json) contain all phase/contact
+traces. All 12 runs are <=1.7s, return input-ready, and fire spark/SFX/contact
+in the same process frame. Hitstop wall time 91.094–93.496ms; process hold
+87.5–100ms. Screenshot replays are excluded from these timing measurements.
+
+[attack-60fps.avi](evidence/spike02-a5/attack-60fps.avi) is the complete native
+59-frame, 1280x720, 60fps Godot movie, **7,269,540 bytes**, no subsampling.
+Strike frame 2 → input-ready frame 57: **0.916667s**. Contact frames 20–24 have
+identical complete decoded RGB; frame 25 resumes: **83.333ms** hold. Full
+frame hashes, native AVI hash and six PNG samples are in
+[movie-index.json](evidence/spike02-a5/movie-index.json) and
+[MOVIE.md](evidence/spike02-a5/MOVIE.md). Movie encoding wall time (3.0911s
+reported for the attack) is not playback latency; gameplay budget uses the
+fixed frame clock and separate real-time runs. Dummy audio was used, so no
+physical speaker/headphone audition is claimed.
+
+### Visual evidence and limits
+
+| Pose | 1280x720 | 1920x1080 |
+| --- | --- | --- |
+| Anticipation | [PNG](evidence/spike02-a5/swing-anticipation.png) | [PNG](evidence/spike02-a5/swing-anticipation-1080p.png) |
+| Smear | [PNG](evidence/spike02-a5/swing-smear.png) | [PNG](evidence/spike02-a5/swing-smear-1080p.png) |
+| Contact during hitstop | [PNG](evidence/spike02-a5/contact.png) | [PNG](evidence/spike02-a5/contact-1080p.png) |
+| Follow-through | [PNG](evidence/spike02-a5/follow-through.png) | [PNG](evidence/spike02-a5/follow-through-1080p.png) |
+| Idle | [PNG](evidence/spike02-a5/idle.png) | [PNG](evidence/spike02-a5/idle-1080p.png) |
+
+[A4 vs A5](evidence/spike02-a5/contact-sheet-a4-vs-a5.png) is actual native
+rendered crops at the same scale, with camera sampling variation between
+replays. [Asset comparison](evidence/spike02-a5/asset-sheet-a4-vs-a5.png) is
+explicitly separate. [Region sheet](evidence/spike02-a5/region-check.png)
+contains idle/recover/A4/A5 source crops at 1:1 and an added row of actual native
+720p screenshot crops. [Seven-pose strip](evidence/spike02-a5/sequence-strip.png),
+[pair metrics](evidence/spike02-a5/sequence-check.json) and
+[audited table](evidence/spike02-a5/frame-status-table.md) retain all failures.
+Colour means/IoU cannot establish fold continuity or human acceptance.
+
+[source-hashes.json](evidence/spike02-a5/source-hashes.json) records actual
+working-tree and normalized Git LF hashes of gameplay/test/tool code, shared
+assets, baseline, rig controls, masks and audit evidence. Original Godot
+battlefield/props/party/enemy PNGs match recorded A4 hashes without accessing
+React assets. No generated whole-frame art or rejected AI attempt; 0/3 attempts
+for every frame. Thoma's mace remains APPROVED canon, unchanged in design.
+
+Executable audit ceiling: explicit Owner-installed console and Python paths
+were inspected (console 198,152 bytes, SHA-256
+`c8f0a6bc45a19b33541501e57f6f7cd972ab18453743266339d495cbbe846643`;
+Python 104,952 bytes, SHA-256
+`4d6f5f81a4bca11191c4c7c6b43632694d0a4ce74e068619d8fdc161d469859a`).
+This is local tool identification, not a hardened launcher claim: native child
+resolution and inherited process environment were not adversarially audited.
+No global trust edits, credential creation, external service or subprocess
+launcher added to game code.
+
+Only shared-anim/ and godot-spike/ were edited; Owner brief outside them is
+pre-existing. No other worktree, root PLAN/memory, story, P010, ui-prototype,
+S4, PR, Actions, merge, deployment or push. Hooks ran normally with the same
+report-only missing_canonical_memory advisory. Task DONE is not SessionEnd;
+canonical closeout is not claimed. W6 final handoff/table check is recorded
+with the handoff, not inferred from this verification commit.
