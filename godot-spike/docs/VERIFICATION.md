@@ -768,3 +768,121 @@ S4, PR, Actions, merge, deployment or push. Hooks ran normally with the same
 report-only missing_canonical_memory advisory. Task DONE is not SessionEnd;
 canonical closeout is not claimed. W6 final handoff/table check is recorded
 with the handoff, not inferred from this verification commit.
+
+## spike-02 A6
+
+2026-10-24, worktree `D:\campaign-forge\scratch\godot-spike`, branch
+`codex/godot-spike`, clean start `438e801` above A5 `78bb38a`. **Engineering
+checks pass; art remains PARTIAL.** Complete per-frame generation removes
+A5's floating sleeve/hem scraps and disconnected boots. Botanical motifs,
+fringe/face fidelity and sequence pops still fail on all five motion frames;
+04's mace head is about19px above A5's follow-through pose. All five remain
+**PLACEHOLDER**. Exact A5 painted weapon/grip geometry is NOT fully preserved;
+that unmet requirement is a recorded art failure, not an engineering PASS.
+Human playtest is **HUMAN_PENDING**. Owner chose Godot/P010 accepted; React and
+Phase B are **CANCELLED**. No decision record changed.
+
+### Actual commands and exits
+
+Run from this worktree root. `GODOT` means
+`C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe`;
+`PYTHON` means `C:\Users\daish\AppData\Local\Programs\Python\Python312\python.exe`.
+Godot **4.7.2.stable.official.ed1daf0bf**, OpenGL Compatibility, AMD Radeon780M;
+Python3.12.10/Pillow12.2.0 already installed. No installation/global trust edit.
+Built-in image_gen returned six unchanged1280x1280 PNGs, true alpha requested;
+seed/model/quality not exposed. Exact prompts, settings, three input image
+hashes, raw/normalized/runtime hashes and touch-up masks are in
+[a6-swing-prompts.json](../../shared-anim/a6-swing-prompts.json) and
+[SOURCES](../../shared-anim/SOURCES.md#spike-02-a6--complete-per-frame-regeneration).
+
+| Actual command / operation | Exit | Evidence / result |
+| --- | --- | --- |
+| `git fetch origin review/gpt-godot-spike`; `git show origin/review/gpt-godot-spike:docs/review/gpt-godot-spike-02a5.md` and A4 review | 0 | A5 art REJECT, only01 single-frame PASS with playback check pending; obsolete React suggestion superseded by Owner |
+| Built-in `image_gen` with idle01/swing05/A5 same-index image references | Returned successfully6 times | 02 two attempts; 00/03/04/01 one each; every raw retained in [candidates](evidence/spike02-a6/candidates/), no rig reconstruction |
+| `PYTHON --version` | 0 | Installed absolute path works with authorized sandbox escalation; sandbox name/path lookup denied access first, no fallback installation |
+| `PYTHON godot-spike/tools/prepare_a6_frames.py --frame 02 --attempt 1 --scale 0.37155 --tx 25 --ty 35.2 --proof` | 0 | W1 [proof](evidence/spike02-a6/proof-02.png), candidate1 clearly beats broken A5 anatomy; W1 committed before more frames |
+| Same normalization tool:02 attempt2, then `--archive`, then00/03/04/01; `adopt_a6_frame.py` per adopted frame | 0 | Exact per-frame scale/translate in JSON; byte-copy A5 archive, alpha<24 cleanup and recorded nearest idle palette remap only |
+| `PYTHON godot-spike/tools/record_a6_provenance.py` and `a6_w2_compare.py [--after]` | 0 | Exact prompts/hashes;01 regeneration exception demonstrated in before/after equal-scale neighbours |
+| `PYTHON godot-spike/tools/create_a6_capture.py` | 0 | Reuses A5 capture observer, changes evidence/baseline paths, adds post-draw trace; no gameplay changes |
+| `GODOT --version`; W3 `--headless --path godot-spike -s res://tools/sync_shared_anim.gd`; `--headless --path godot-spike --import` | 0 | Real-playback prerequisites; [W3 import](evidence/spike02-a6/w3-import.log) |
+| `GODOT --path godot-spike --resolution 1280x720 --audio-driver Dummy --fixed-fps 60 --write-movie res://.godot/spike02-a6-movie/attack.avi -s res://tools/capture_a6.gd -- --movie-a6` | 0 | W3 movie is retained unchanged as W5 clip; [log](evidence/spike02-a6/w3-playback.log), `CAPTURE_COMPLETE A6 movie=true runs=1 shots=0 pass=true` |
+| `PYTHON godot-spike/tools/a6_playback_check.py` | 1 then0 | Initial59-vs58 trace-count failure [retained](evidence/spike02-a6/attempt-playback-trace-count.log); corrected accounting keeps58 observed records, one untraced terminal image exactly equals preceding ready RGB; no invented trace |
+| `PYTHON godot-spike/tools/a6_style_check.py` | 0 | [200 source crops](evidence/spike02-a6/region-check.png), seven-frame strip, geometry landmarks, six pair colour/IoU/height proxies, explicit eleven-check audit |
+| `PYTHON godot-spike/tools/update_a6_historical_tests.py`; `a6_contact_sheet.py` | 0 | Historical A5 raw-protection assertions retained against A5 archive; contact sheet regenerated from unchanged live manifest |
+| `GODOT --headless --path godot-spike -s res://tools/sync_shared_anim.gd` | 0 | [Final sync log](evidence/spike02-a6/sync-run.log);66 byte-identical source/copied files |
+| `GODOT --headless --path godot-spike --import` | 0 | [Final headless import](evidence/spike02-a6/import-run.log) |
+| `GODOT --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gdir=res://tests -gexit` | 0 | **55/55 tests,2772 assertions**, [complete log](evidence/spike02-a6/test-run.log), no script errors/GUT warnings |
+| `PYTHON godot-spike/tools/check_a6_reproduction.py` | 0 | [Reproduction](evidence/spike02-a6/reproduction.log): five exact runtime PNGs and cleanup masks rebuilt from unchanged raw candidates/settings; fixed references, manifest and66-file parity |
+| `GODOT --path godot-spike --resolution 1280x720 --max-fps 60 --audio-driver Dummy -s res://tools/capture_a6.gd` | 0 | [720p rendered log](evidence/spike02-a6/rendered-run.log):13 shots,6 separate timing runs; `CAPTURE_COMPLETE A6 movie=false runs=6 shots=13 pass=true` |
+| `GODOT --path godot-spike --resolution 1920x1080 --max-fps 60 --audio-driver Dummy -s res://tools/capture_a6.gd -- --1080p` | 0 | [1080p rendered log](evidence/spike02-a6/rendered-1080p-run.log):actual native1920x1080,13 shots,6 runs, same pass marker; no upscaling |
+| `PYTHON godot-spike/tools/create_a6_package.py`; `package_a6_evidence.py` | 0 | [Package log](evidence/spike02-a6/package-run.log):actual sizes, pose/hold markers, movie/trace binding, decoded hold, original assets, shared parity and input hashes checked |
+| `PYTHON godot-spike/tools/normalize_a6_logs.py` | 0 | UTF8/LF, ANSI/trailing progress-whitespace cleanup only; no diagnostic lines dropped. W3 diff-check reported a blank final log line (exit2); corrected inW4, subsequent check0 |
+
+Sandbox Python probes without escalation failed to locate/access the installed
+path, including one package-generator invocation (PowerShell exit1); authorized
+explicit-path reruns succeeded. This is tooling access, not package/test failure.
+No API key, CLI image fallback, new account or external service was configured.
+
+### Timing and fixed contracts
+
+All durations include hitstop and return to input-ready. These ordinary
+rendered runs have no synchronous readback; screenshot replays are excluded.
+
+| Resolution/mode | Open | Unit blocked | Terrain blocked |
+| --- | --- | --- | --- |
+| 720p normal | 0.947969s | 0.945312s | 0.951975s |
+| 720p Reduced Motion | 0.752756s | 0.761012s | 0.752048s |
+| 1080p normal | 0.942829s | 0.943195s | 0.949734s |
+| 1080p Reduced Motion | 0.756074s | 0.760203s | 0.756672s |
+
+All12 are below1.7s; contact spark/SFX/flash share a process frame, input returns,
+hitstop wall91.803–106.804ms. [720p timing](evidence/spike02-a6/timing.json),
+[1080p timing](evidence/spike02-a6/timing-1080p.json). Fixed manifest unchanged:
+512x512, pivot[256,464], contact index3/anchor[455,196], durations
+**180/70/40/80/100/150ms**, same offsets/camera/impact/scenarios and Reduced
+Motion indices[0,3,5] omit smear02. Immutable idle01 and swing05 match the
+fixed A5 SHA-256 values byte for byte. No baseline path in live manifest.
+
+[Native movie](evidence/spike02-a6/attack-60fps.avi):59 complete1280x720 frames,
+60FPS, **7,272,456 bytes**, no subsampling/transcoding. Strike frame2 → ready57
+is **0.916667s**; contact frames20–24 have identical complete decodedRGB for
+**83.333ms**, frame25 resumes. [MOVIE](evidence/spike02-a6/MOVIE.md),
+[decoded hashes](evidence/spike02-a6/movie-index.json). W3 playback checks and
+W5 clip have the same native movie hash. Encoding wall time is not latency;
+Dummy audio is not physical-device audition. The post-draw trace has58 actual
+records and one explicitly untraced final equal-pixel movie frame.
+
+### Visual evidence and limits
+
+| Pose | 1280x720 | 1920x1080 |
+| --- | --- | --- |
+| Anticipation | [PNG](evidence/spike02-a6/swing-anticipation.png) | [PNG](evidence/spike02-a6/swing-anticipation-1080p.png) |
+| Smear | [PNG](evidence/spike02-a6/swing-smear.png) | [PNG](evidence/spike02-a6/swing-smear-1080p.png) |
+| Contact during hitstop | [PNG](evidence/spike02-a6/contact.png) | [PNG](evidence/spike02-a6/contact-1080p.png) |
+| Follow-through | [PNG](evidence/spike02-a6/follow-through.png) | [PNG](evidence/spike02-a6/follow-through-1080p.png) |
+| Idle | [PNG](evidence/spike02-a6/idle.png) | [PNG](evidence/spike02-a6/idle-1080p.png) |
+
+[A5-vs-A6](evidence/spike02-a6/contact-sheet-a5-vs-a6.png) uses native320px
+viewport crops from actual replays at identical resolution/crop; camera
+sampling varies between replays. [Asset comparison](evidence/spike02-a6/asset-sheet-a5-vs-a6.png)
+is separately labeled. [Region sheet](evidence/spike02-a6/region-check.png)
+contains1:1 crops for stole, embroidery, cuffs, hem, seams, bag, feet, face/hair,
+palette and mace against idle01/recover05/A5, plus actual native720p crops.
+[Sequence strip](evidence/spike02-a6/sequence-strip.png),
+[every actual rendered frame](evidence/spike02-a6/playback-every-frame.png),
+[keyposes](evidence/spike02-a6/playback-keyframes.png),
+[sequence metrics](evidence/spike02-a6/sequence-check.json) and
+[observations](evidence/spike02-a6/W3-OBSERVATIONS.md) preserve failures.
+Colour/IoU/height proxies include pose/occlusion and cannot approve anatomy.
+
+55 passing tests prove their covered engine/data contracts, **not** commercial
+art, exact generated mace geometry, complete sequence fidelity or human feel.
+[Source hashes](evidence/spike02-a6/source-hashes.json) bind working-tree/GitLF
+code, reference/raw/adopted frames, masks and evidence inputs.
+[Package audit](evidence/spike02-a6/evidence-audit.json) explicitly records
+art PARTIAL, five PLACEHOLDER,04 geometry failure and HUMAN_PENDING.
+No other character, knight, battlefield, prop, HUD, rules, game script, source
+atlas, ui-prototype, story, P010 or other worktree changed. No push/PR/merge/
+Actions/deploy/stash/PhaseB. Hooks ran normally; report-only memory advisory
+does not prove SessionEnd or canonical closeout. W6 records the final handoff
+table check; this verification is not a session-end claim.
