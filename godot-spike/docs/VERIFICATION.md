@@ -528,3 +528,120 @@ figures were not adopted because they moved geometry. Costume patches only.
 
 No React edits, formal story/engine decision, Phase B, push, merge or PR. No
 physical audio-device audition, human playtest or commercial art approval.
+
+## spike-02 A4
+
+**Engineering checks pass; costume completion remains PARTIAL.** Five swing
+frames now use a reference-pixel cutout rig instead of newly generated figures.
+The old fan/bell hem alpha is replaced. Visible shoulder/waist/cuff joins and
+hem-to-foot continuity still fail, so all five retain **PLACEHOLDER**. Immutable
+idle/01 and swing/05 retain model PASS. The short one-handed flanged mace remains
+**APPROVED (Owner, 2026-10-24)**; human playtest is **HUMAN_PENDING** and P010 is
+**PROPOSED**. Phase B was not started.
+
+Commands ran in `D:\campaign-forge\scratch\godot-spike` on `codex/godot-spike`,
+starting clean at `8197026` over A3 `bd80c5e`. `GODOT` below means
+`C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe`;
+`PYTHON` means `C:\Users\daish\AppData\Local\Programs\Python\Python312\python.exe`.
+Version: **4.7.2.stable.official.ed1daf0bf**, OpenGL Compatibility on AMD Radeon
+780M. Installed tools required sandbox escalation; no installation, credential,
+trust or global configuration change was made.
+
+| Actual command | Exit | Result |
+| --- | --- | --- |
+| `git fetch origin review/gpt-godot-spike` | 1 then 0 | Initial sandbox FETCH_HEAD permission error; authorized escalation fetched the specified branch |
+| `git show origin/review/gpt-godot-spike:docs/review/gpt-godot-spike-02a3.md` | 0 | Read CONDITIONAL ACCEPT review; its ending is explicitly incomplete |
+| `PYTHON godot-spike/tools/prepare_a4_frames.py --proof` | 0 | Reference library, masks, palette, one-frame proof; rejected rigid proof retained |
+| `PYTHON godot-spike/tools/prepare_a4_frames.py --build` | 0 | Five frames, archived A3 bytes, zero generation attempts; repeated for the W4 RGBA correction |
+| `PYTHON godot-spike/tools/a4_style_check.py` | 1, 1, then 0 | First two sheet layouts rejected unscaled crops larger than their cells; enlarged cells, never rescaled crops. Final 1:1 region sheet and per-region/sequence verdicts |
+| `GODOT --version` | 0 | Exact approved version above |
+| `GODOT --headless --path godot-spike -s res://tools/sync_shared_anim.gd` | 0 | Initial sync, then final resync after contact-sheet regeneration/correction; 64 source/copied files byte-equal |
+| `PYTHON godot-spike/tools/a4_contact_sheet.py` | 0 | Contact sheet regenerated from live manifest |
+| `GODOT --headless --path godot-spike --import` | 0 | Final headless import; [log](evidence/spike02-a4/import-run.log) |
+| `GODOT --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gdir=res://tests -gexit` | 1 then 0 | Protected RGBA defect corrected; **42/42 tests, 1,583 assertions**, no engine errors or GUT warnings; [final log](evidence/spike02-a4/test-run.log) |
+| `GODOT --path godot-spike --resolution 1280x720 --max-fps 60 --audio-driver Dummy -s res://tools/capture_a4.gd` | 0 | 13 rendered shots + six no-readback timing runs, `CAPTURE_COMPLETE A4 movie=false runs=6 shots=13 pass=true` |
+| `GODOT --path godot-spike --resolution 1920x1080 --max-fps 60 --audio-driver Dummy -s res://tools/capture_a4.gd -- --1080p` | 1 then 0 | Windows initially clamped to 1875x1055; capture-only minimum size correction yields native 1920x1080, 13 shots and six timing runs, same completion marker with pass=true |
+| `GODOT --path godot-spike --resolution 1280x720 --audio-driver Dummy --fixed-fps 60 --write-movie res://.godot/spike02-a4-movie/attack.avi -s res://tools/capture_a4.gd -- --movie-a4` | 0 | Complete native movie; `CAPTURE_COMPLETE A4 movie=true runs=1 shots=0 pass=true` |
+| `PYTHON godot-spike/tools/check_a4_reproduction.py` | 0 | Rebuilding in memory reproduces all five PNGs byte for byte and exact protection masks |
+| `PYTHON godot-spike/tools/package_a4_evidence.py` | 0 | Checks actual decoded pixels, dimensions, completion logs, timing, original PNG parity, source hashes and movie hold |
+
+### Actual timing and immutable contracts
+
+These are ordinary rendered runs without GPU readback. Screenshot replays are
+excluded. All times run from strike to input-ready and include hitstop.
+
+| Setup | 720p normal | 720p Reduced Motion | 1080p normal | 1080p Reduced Motion |
+| --- | --- | --- | --- | --- |
+| Open | 0.917815 s | 0.650812 s | 0.919160 s | 0.684374 s |
+| Unit-blocked | 0.917651 s | 0.684154 s | 0.917966 s | 0.667565 s |
+| Terrain-blocked | 0.917613 s | 0.667759 s | 0.917747 s | 0.684457 s |
+
+All twelve runs finish below **1.7 s**, with contact events on the same process
+frame, >=80 ms hitstop and unlocked input. The full manifest equals archived A3:
+canvas **512x512**, pivot **[256,464]**, contact index **3**, anchor **[455,196]**,
+durations **180/70/40/80/100/150 ms**, offsets, camera and Reduced Motion indices
+unchanged. Both references match fixed A3 SHA-256 values. No baseline path is
+referenced by the live manifest. Protected weapon/hand/foot masks and ground
+contact pixels compare exact RGBA, including hidden RGB beneath alpha=0.
+
+[720p timing](evidence/spike02-a4/timing.json),
+[1080p timing](evidence/spike02-a4/timing-1080p.json),
+[source hashes](evidence/spike02-a4/source-hashes.json),
+[package audit](evidence/spike02-a4/evidence-audit.json).
+
+### Rendered evidence and visual limits
+
+[Native 60 FPS movie](evidence/spike02-a4/attack-60fps.avi): **59 complete frames,
+7,270,584 bytes**, no subsampling. Strike frame 2 to input-ready frame 57 is
+**0.916667 s**. Decoded contact frames 20-24 are identical (**83.333 ms**), then
+frame 25 visibly resumes. [MOVIE](evidence/spike02-a4/MOVIE.md) and
+[decoded frame hashes](evidence/spike02-a4/movie-index.json). Encoding wall time
+is not gameplay latency; Dummy audio is not physical-device audition.
+
+| Pose | 720p | 1080p |
+| --- | --- | --- |
+| Anticipation | [PNG](evidence/spike02-a4/swing-anticipation.png) | [PNG](evidence/spike02-a4/swing-anticipation-1080p.png) |
+| Smear | [PNG](evidence/spike02-a4/swing-smear.png) | [PNG](evidence/spike02-a4/swing-smear-1080p.png) |
+| Contact in hitstop | [PNG](evidence/spike02-a4/contact.png) | [PNG](evidence/spike02-a4/contact-1080p.png) |
+| Follow-through | [PNG](evidence/spike02-a4/follow-through.png) | [PNG](evidence/spike02-a4/follow-through-1080p.png) |
+| Idle | [PNG](evidence/spike02-a4/idle.png) | [PNG](evidence/spike02-a4/idle-1080p.png) |
+
+[Rendered A3/A4 comparison](evidence/spike02-a4/contact-sheet-a3-vs-a4.png) uses
+native 320x320 viewport crops without resizing; camera/tween sampling can vary
+slightly between replays. [Separate asset comparison](evidence/spike02-a4/asset-sheet-a3-vs-a4.png)
+uses exactly equal sprite scale and is explicitly not a runtime screenshot.
+[Region sheet](evidence/spike02-a4/region-check.png) uses 1:1 source crops;
+[sequence strip](evidence/spike02-a4/sequence-strip.png) shows seven poses,
+native-size approximations and adjacent onion overlays. Six adjacent pairs
+retain visual FAIL despite generally small mean-color deltas: those metrics do
+not detect spatial seams. Full [region/sequence reasons](../../shared-anim/frame-audit.json)
+control PLACEHOLDER; numerical checks do not approve the art.
+
+### Retained failures and boundaries
+
+- W1 rigid cutout proof had cuff holes and detached stance; retained as
+  [rejected proof](evidence/spike02-a4/proof-rejected-rigid.png). Revised method
+  uses actual cuff corners and modest garment ease, but seams remain unfinished.
+- W4 first suite: **41/42**, **1572/1583**, exit **1**. Transparent-RGB cleanup
+  and repeated alpha composition changed protected raw pixels. Final raw overwrite
+  corrects that; [full lossless failed log](evidence/spike02-a4/attempt-test-protected-rgba.log.gz)
+  and [correction detail](evidence/spike02-a4/W4-CORRECTION.md). Equality assertions
+  were retained, not weakened to visible-only comparisons.
+- Initial 1080p run: exit **1**, `pass=false`, actual **1875x1055**. Retained
+  [log](evidence/spike02-a4/attempt-1080p-window-clamped.log),
+  [dimensions/phase trace](evidence/spike02-a4/attempt-1080p-window-clamped.json)
+  and [rejected screenshot](evidence/spike02-a4/attempt-contact-1875x1055.png).
+  Only the capture observer now sets its minimum viewport size; game HUD and
+  gameplay scripts are unchanged. No image upscaling used for acceptance.
+- A sandbox Python probe failed to resolve the installed executable; the
+  explicitly installed path succeeded with escalation. No dependency installed.
+
+A3 historical alpha/audit tests now target the preserved A3 archive; new A4
+contract tests cover current frames. The W4 table was prepared before the W6
+handoff; the final handoff section is checked separately when written.
+
+No React, battlefield, props, knight, rules, HUD, timing, story, G005 or P010
+change. No push, main merge, PR, Actions, deployment or Phase B. Shared PLAN and
+memory are outside this narrow authorization, so the milestone is recorded here
+and in HANDOFF. Normal hooks ran with a nonblocking missing_canonical_memory
+advisory; no SessionEnd or canonical-closeout completion is claimed.

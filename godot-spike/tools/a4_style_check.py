@@ -140,6 +140,7 @@ def main():
     (OUT/'frame-status-table.md').write_text('\n'.join(lines)+'\n',encoding='utf-8',newline='\n')
     source=(SHARED/'SOURCES.md').read_text(encoding='utf-8').split('\n### A4 W3 model verdict')[0]
     source=source.split('\n| Frame | Reference hashes | A4 runtime SHA-256')[0]
+    source=source.split('\n| Frame | A4 runtime SHA-256')[0]
     source+='\n| Frame | A4 runtime SHA-256 | Palette distance before / after |\n| --- | --- | --- |\n'
     for item in provenance.values():
         source+=f"| {item['frame']} | {item['runtime_sha256']} | {item['palette_distance']['before']} / {item['palette_distance']['after']} |\n"

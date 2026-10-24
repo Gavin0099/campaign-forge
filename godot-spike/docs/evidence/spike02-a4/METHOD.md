@@ -14,7 +14,7 @@ face/hair and cuffs are separate articulated parts. The A3 pose supplies only
 the motion silhouette of arms/torso twist, fixed hands/mace and planted feet.
 No image generation is used, so there are zero generation attempts.
 
-`../../../../tools/prepare_a4_frames.py --proof` extracts the library and
+`godot-spike/tools/prepare_a4_frames.py --proof` extracts the library and
 renders contact frame 03 to `proof-03.png`, without changing the live frame.
 `proof-before-after.png` compares the full 512 canvases at identical scale.
 `proof.json` records the input/output SHA-256. This is an asset proof, not a
@@ -32,7 +32,7 @@ remain visible limitations. W3 must judge them; provenance alone is not PASS.
 
 | Swing | Continuous body, both stoles, embroidery, hem, bag, medallion | Face/hair and both cuffs | Reason |
 | --- | --- | --- | --- |
-| 00 | idle/01 | idle/01 | Upright anticipation closest to idle; positive shear follows coil |
+| 00 | idle/01 | idle/01 | Upright anticipation closest to idle; small shear fits the wide stance |
 | 01 | idle/01 | idle/01 | Upright raised pose; smallest torso shear |
 | 02 | swing/05 | swing/05 | Forward shoulder and lower head; negative cloth sweep |
 | 03 | swing/05 | swing/05 | Forward contact shoulder; negative shear, exact A3 weapon overlay |

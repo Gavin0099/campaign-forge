@@ -1,0 +1,35 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 Core Profile Context 26.10.1.261008 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon 780M Graphics
+
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9178 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.9177 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.9176 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.6508 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=true elapsed_wall_s=0.6842 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=true elapsed_wall_s=0.6678 limit=1.700 hp=4 cell=(3, 4)
+CAPTURE_A4 idle.png frame=0 phase=ready hold=false
+CAPTURE_A4 swing-anticipation.png frame=0 phase=windup hold=false
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8509 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_A4 swing-raised.png frame=1 phase=lunge hold=false
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8342 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_A4 swing-smear.png frame=2 phase=lunge hold=false
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8677 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_A4 contact.png frame=3 phase=contact hold=true
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8676 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_A4 follow-through.png frame=4 phase=knockback hold=false
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8680 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_A4 recover.png frame=5 phase=knockback hold=false
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8679 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_A4 swing-anticipation.png frame=0 phase=windup hold=false
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8870 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_A4 swing-raised.png frame=1 phase=lunge hold=false
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9194 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_A4 swing-smear.png frame=2 phase=lunge hold=false
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9190 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_A4 contact.png frame=3 phase=contact hold=true
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9037 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_A4 follow-through.png frame=4 phase=knockback hold=false
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9064 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_A4 recover.png frame=5 phase=knockback hold=false
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9201 limit=1.700 hp=4 cell=(1, 6)
+CAPTURE_COMPLETE A4 movie=false runs=6 shots=13 pass=true
