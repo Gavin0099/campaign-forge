@@ -20,3 +20,5 @@ lower shared particle multiplier. Hitstop/shake/recoil/zoom/SFX unchanged.
 Historical spike03 tests explicitly select the exact preserved resource so their
 assertions remain meaningful; separate tests enforce spike04 default values.
 No PLAN/memory/shared-file edits: this brief restricts writes to godot-spike/.
+
+W2: separate pure FieldRules + authored level data. Six allies / twelve initial enemies; defeat leader, Thoma loss or turn >15. Warning starts player turn4, arrival starts turn5, arrivals first eligible enemy turn6. Occupied entry uses nearest empty passable BFS; defer if full. Ranged has no LOS, Manhattan2-3. Mobile retains melee knockback semantics, forest costs3. AI guard radius4, group attack alerts, leader holds until attacked/point contested within2. Reverse Dijkstra maps are phase-local, keyed by archetype/side/occupancy_revision. GUT12/12,264 assertions, exit0; import0.
