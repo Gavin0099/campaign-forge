@@ -1,0 +1,34 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+---  GUT  ---
+[INFO]:  using [C:/Users/daish/AppData/Roaming/Godot/app_userdata/Campaign Forge — Impact Study] for temporary output.
+Godot version:  4.7.2
+GUT version:  9.7.1
+
+
+res://tests/test_a5_contract.gd
+* test_a5_immutable_references_and_entire_manifest_match_a4
+* test_a5_raw_mace_grip_face_feet_protection_and_rebuilt_canvas
+* test_a5_all_pass_gates_and_table_agreement
+* test_a5_seam_masks_are_narrow_declared_bands_with_bounded_area
+* test_a5_baseline_provenance_and_unit_embroidery_scale
+* test_a5_six_sequence_pairs_have_colour_and_outline_evidence
+6/6 passed.
+
+
+
+
+==============================================
+= Run Summary
+==============================================
+
+Totals
+------
+Scripts               1
+Tests                 6
+Passing Tests         6
+Asserts             540
+Time              1.004s
+
+
+---- All tests passed! ----

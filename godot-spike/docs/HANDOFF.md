@@ -999,3 +999,230 @@ W6 final table verification: `GODOT --headless --path godot-spike -s
 res://addons/gut/gut_cmdln.gd -gtest=res://tests/test_a4_contract.gd -gexit`
 passed **5/5 tests, 425 assertions, exit 0** after this section was written.
 [Final handoff-table log](evidence/spike02-a4/handoff-table-check.log).
+
+## spike-02 A5
+
+2026-10-24, Codex, branch `codex/godot-spike`, isolated worktree
+`D:\campaign-forge\scratch\godot-spike`, start cc164b2 above A4 8592fbb.
+Owner confirmed this is the only agent session in this worktree.
+
+**Engineering verification passes; art repair is PARTIAL.** All five rebuilt
+motion frames remain PLACEHOLDER. Exactly one satchel and unit horizontal
+motif scale now pass. Shoulder/waist/cuff fold joins, plain-cloth repair edges,
+hem/boot attachment and six adjacent transitions still fail. Those are
+unresolved art defects, not completed fixes. This handoff completes the six
+requested work steps; it does not claim all A4 art defects have been solved.
+Human hit-feel playtest remains **HUMAN_PENDING**. Weapon design/status stays
+**APPROVED canon**: Thoma's short one-handed flanged mace.
+
+**Phase B: CANCELLED by Owner (2026-10-24, Godot chosen).** Campaign Forge uses
+Godot directly. No React work remains in this spike. The Owner should update
+P010 to reflect this decision; Codex did not edit P010 or any decision record.
+Earlier handoff language about engine selection/comparison is historical and
+superseded by this explicit Owner instruction.
+
+### Run
+
+From this worktree root in PowerShell, using the existing approved Godot
+binary (the `godot.cmd` PATH wrapper also works):
+
+```powershell
+$a5Godot = 'C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe'
+& $a5Godot --headless --path godot-spike -s res://tools/sync_shared_anim.gd
+& $a5Godot --headless --path godot-spike --import
+& $a5Godot --path godot-spike --resolution 1280x720
+```
+
+Controls retained: 1/2/3 select open, unit-blocked, terrain-blocked fixtures;
+R replays, Space operates the focused attack action, M toggles Reduced Motion,
+G toggles grid, F1 diagnostics, Esc uses the existing overlay/back behaviour.
+These are fixed one-attack fixtures, not a complete battle or rules engine.
+
+Offline reproduction uses the installed Python:
+
+```powershell
+$a5Python = 'C:\Users\daish\AppData\Local\Programs\Python\Python312\python.exe'
+& $a5Python godot-spike/tools/check_a5_reproduction.py
+# Explicit rebuilding, if desired, writes only 00-04 and generated evidence:
+& $a5Python godot-spike/tools/prepare_a5_frames.py --build
+& $a5Python godot-spike/tools/a5_style_check.py
+& $a5Python godot-spike/tools/a5_audit.py
+& $a5Python godot-spike/tools/a5_contact_sheet.py
+# Then sync/import as above; package_a5_evidence.py appends the real runtime row.
+```
+
+### Method and changes
+
+Retained the unmodified A4 reference cutout helpers, source polygons, pose
+controls, translated face, cuff quadrilaterals and exact protected weapon/feet.
+One continuous recover-reference body replaces the bag-bearing clone patches;
+two recorded plain-cloth transfers remove its occluded source mace. The upper
+cape silhouette is retained, arm/cuff joins feather inward, and a small smoothing
+pass is confined to committed narrow 6/8px seam bands. Global garment scale is
+1.0. Lower-hem ease begins below the last motif row, widening stance coverage
+without widening embroidery. No AI generation request or whole-frame repaint.
+No new motif, costume design or palette. Original reference PNGs were not moved
+or edited. A4 body/source library and prior baselines remain untouched.
+
+[Method and per-frame rationale](evidence/spike02-a5/METHOD.md),
+[rig controls](evidence/spike02-a5/rig-controls.json),
+[committed seam mask coordinates/areas](evidence/spike02-a5/seam-masks/coordinates.json),
+[scale measurement](evidence/spike02-a5/scale-measurement.json),
+[provenance](../../shared-anim/a5-swing-prompts.json).
+Mask areas: 7,608 / 5,450 / 5,939 / 6,004 / 5,687px, bounded at 10,000px
+(<4% of canvas); widths <=8px. The embroidery ROI map is 25px ->25px (A4 was
+28.75px), 0% local horizontal deviation versus a <=5% tolerance. This is an
+analytical mapping measurement, not a perceptual raster-quality score.
+
+W1 draft remains the original draft. W3 inspection found an inherited
+reference-mace fragment in the first W2 transfer: the final version uses two
+plain-cloth occlusion quads and restores exact face pixels after smoothing.
+There is now one visible bag and no old mace head inside the live robe, but
+its cloth repair boundary remains visible and is a seam FAIL. Source/mask and
+runtime hashes/cleanup are recorded for all five frames. No AI attempts or
+rejected AI artifacts (0/3 per frame); no image service was used.
+
+### Audited frame table
+
+Model observations only. `PASS` on immutable endpoint sequence checks means
+the original endpoint remains accepted; failing incoming/outgoing transitions
+are explicitly assigned to motion frames in sequence-check.json. This is not
+an assertion that the complete animation sequence passes. Every live PASS
+frame must pass all ten checks and have bag_count==1; otherwise PLACEHOLDER.
+
+| Frame | Status | Stole | Embroidery | Cuffs | Hem | Face/hair | Palette | Seams | Bag count | Feet | Sequence | Reason |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `thoma/idle/01.png` | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | 1 PASS | PASS | PASS | Byte-unchanged reference endpoint; adjacent transition failures are assigned to motion frames; not Owner art approval. |
+| `thoma/swing/00.png` | PLACEHOLDER | FAIL | PASS | FAIL | FAIL | PASS | PASS | FAIL | 1 PASS | FAIL | FAIL | Single bag and unit motif scale fixed; horizontal plain-cloth repair edge under satchel remains visible; right boot remains detached; left planted sole unchanged. |
+| `thoma/swing/01.png` | PLACEHOLDER | FAIL | PASS | FAIL | FAIL | PASS | PASS | FAIL | 1 PASS | FAIL | FAIL | Single bag and unit motif scale fixed; waist/body and bag-bottom cloth transition retain brightness steps; hem-to-boot transition remains narrow and not anatomically continuous. |
+| `thoma/swing/02.png` | PLACEHOLDER | FAIL | PASS | FAIL | FAIL | PASS | PASS | FAIL | 1 PASS | FAIL | FAIL | Single bag and unit motif scale fixed; shoulder/torso and plain-cloth bag repair edges remain visible; far boot has an exposed gap above its upper edge; fixed soles alone do not prove attachment. |
+| `thoma/swing/03.png` | PLACEHOLDER | FAIL | PASS | FAIL | FAIL | PASS | PASS | FAIL | 1 PASS | FAIL | FAIL | Single bag and unit motif scale fixed; plain-cloth patch ends in a horizontal bag-bottom seam; shoulder seam still reads; left contact improved; right leg-to-boot gap and boot overlap still fail. |
+| `thoma/swing/04.png` | PLACEHOLDER | FAIL | PASS | FAIL | FAIL | PASS | PASS | FAIL | 1 PASS | FAIL | FAIL | Single bag and unit motif scale fixed; twisted sleeve/body and bag-bottom cloth repair remain apparent; trailing boot/hem overlap and far-leg gap remain; no continuous leg anatomy. |
+| `thoma/swing/05.png` | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | 1 PASS | PASS | PASS | Byte-unchanged reference endpoint; adjacent transition failures are assigned to motion frames; not Owner art approval. |
+
+Evidence: [region check](evidence/spike02-a5/region-check.png),
+[sequence strip](evidence/spike02-a5/sequence-strip.png),
+[style check](../../shared-anim/thoma-weapon-style-check.png),
+[rendered A4/A5 comparison](evidence/spike02-a5/contact-sheet-a4-vs-a5.png),
+[separate equal-scale asset comparison](evidence/spike02-a5/asset-sheet-a4-vs-a5.png).
+The region sheet includes unscaled idle/recover/A4/A5 crops for stole,
+embroidery, cuffs, hem, face/hair, palette, shoulder seam, waist seam, bag and
+hem-to-feet, plus actual native 720p runtime crops. Six adjacent-pair mask
+colour deltas and garment silhouette IoU are in
+[sequence-check.json](evidence/spike02-a5/sequence-check.json). These proxies
+measure sampled colour/overlap, not fold continuity or Owner acceptance.
+A4 byte baselines and hashes live only under evidence/baseline-a4/; the live
+manifest references no archived A4/A3/A2 frame. The historical A4 style sheet
+is [preserved](evidence/spike02-a5/style-check-a4.png).
+
+### Verification and unchanged timing
+
+Full suite: **48/48 GUT tests, 2,126 assertions, exit 0**.
+[Full test log](evidence/spike02-a5/test-run.log). All prior tests retained;
+historical A4 checks target the A4 archive, while new live A5 contracts check
+references, entire manifest, canvas/pivot/contact geometry and raw protection,
+status/table agreement, all PASS gates, bag count, actual seam support/area,
+provenance, local scale and six adjacent pairs. Sync parity: 65 files.
+[Reproduction log](evidence/spike02-a5/reproduction.log) proves exact PNG bytes,
+protection/seam masks and zero opaque pixels below y=464 in five motion frames.
+Unchanged soles/ground bytes do not establish hem-to-boot attachment; feet
+checks still FAIL for that visual reason.
+
+Manifest is unchanged: 512x512, pivot [256,464], contact frame index 3, mace head
+anchor [455,196], frame timing **180 / 70 / 40 / 80 / 100 / 150ms**, same offsets,
+impact, camera and Reduced Motion indices [0,3,5]. Smear remains excluded from
+Reduced Motion. No gameplay, HUD, terrain, props, knights or rule changes.
+
+Actual rendered ordinary timing, including hitstop and return to input-ready:
+
+| Resolution/mode | Open | Unit blocked | Terrain blocked |
+| --- | --- | --- | --- |
+| 720p normal | 0.956431s | 0.951041s | 0.943756s |
+| 720p Reduced Motion | 0.754909s | 0.720051s | 0.763822s |
+| 1080p normal | 0.925129s | 0.956433s | 0.923250s |
+| 1080p Reduced Motion | 0.743256s | 0.734362s | 0.766221s |
+
+All 12 are below **1.7s**, contact triggers share a process frame, input becomes
+ready, real hitstop >=80ms. Each resolution has 13 screenshots from a rendered
+`CAPTURE_COMPLETE A5 movie=false runs=6 shots=13 pass=true` run. Readbacks are
+on separate replays and excluded from timing. Native dimensions are verified;
+1080p is not enlarged from 720p. Links/commands/real exit codes are in
+[VERIFICATION — spike-02 A5](VERIFICATION.md#spike-02-a5).
+
+[Complete 60fps AVI](evidence/spike02-a5/attack-60fps.avi): 59 native 1280x720
+frames, **7,269,540 bytes**, no subsampling. Strike frame 2 to ready frame 57:
+**0.916667s**. Contact frames 20-24 are identical decoded full RGB (**83.333ms**),
+frame 25 resumes. [Movie details](evidence/spike02-a5/MOVIE.md),
+[decoded frame hashes](evidence/spike02-a5/movie-index.json),
+[source hashes](evidence/spike02-a5/source-hashes.json),
+[720p timing](evidence/spike02-a5/timing.json),
+[1080p timing](evidence/spike02-a5/timing-1080p.json).
+Encoding wall time is not gameplay latency. Audio used Dummy driver, with no
+speaker/headphone audition. Automation is not human playtest.
+
+### Open questions / limits for review
+
+- **Art NOT complete:** five PLACEHOLDER frames and all six neighbouring
+  transitions retain explicit failures above. Bag count and unit local scale
+  are improvements; no claim that all A4 P1/P2 defects were eliminated.
+- Narrow smoothing softens joins but cannot reconstruct pose-specific fold
+  anatomy. The retained cutout sleeve folds and fixed far-leg pixels still
+  conflict with the reference body/hem. Wider hem coverage helps a planted
+  ankle but does not solve the far-leg gap. No silhouette/colour proxy waives
+  these failures. Further repairs require review/Owner direction after W6.
+- **HUMAN_PENDING:** hit feel, readable motion at normal play distance and
+  audible mix. Model judgement is neither human acceptance nor independent review.
+- **Owner action:** update P010 for Godot chosen / Phase B cancelled; not edited
+  here. No React follow-up exists in this spike.
+- The brief limits writes to shared-anim/ and godot-spike/. Root PLAN/memory,
+  ui-prototype/PLAN and story/shared decision files were not edited or locked;
+  this handoff/verification are the authorized milestone record.
+
+### Resource self-check
+
+Against [RESOURCE-CHECKLIST](../../docs/review/RESOURCE-CHECKLIST.md). Relevant
+pinned game-ui-ux and game-feel skills were read for the scoped verification;
+no new feature or code/art was borrowed from external repos.
+
+| Item | Status | Evidence / scoped exception |
+| --- | --- | --- |
+| A — prototype-fast | PASS (criterion) | Bounded W1 proof, five frame repairs, predeclared rejection conditions; no extra mechanic |
+| A — level-design | N/A | No level, route, objective or placement changes |
+| A — game-ai | N/A | No AI logic work authorized |
+| A — game-ui-ux | PASS (scoped verification) | Read [pinned skill](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/skills/disciplines/game-ui-ux/SKILL.md); actual native 720p/1080p captures, existing keyboard/focus/overlay tests pass; HUD unchanged |
+| A — game-feel | PASS (engineering), HUMAN_PENDING | Read [pinned skill](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/skills/disciplines/game-feel/SKILL.md); same-frame impact, real hold, return to ready and Reduced Motion tested; art/feel not approved |
+| B — Grid-Tactics separation | PASS (criterion) | Game rules/view separation unchanged, no reference code copied |
+| B — HopeMetal attribution | N/A | No code/assets borrowed |
+| B — new engine/dependency | PASS | Existing approved Godot/GDScript/GUT/Pillow only; Godot chosen by Owner; nothing installed |
+| C — full 3-5 minute battle | N/A, explicit scope exception | One-attack five-frame art segment, no full-battle claim |
+| C — understandable enemy actions | N/A, explicit scope exception | Three fixed fixtures, no autonomous enemy turn |
+| C — win/lose | N/A, explicit scope exception | Not part of this spike |
+| C — two tactical choices | N/A, explicit scope exception | Fixtures are not a tactical decision loop |
+| C — restart/change strategy | PASS (replay), N/A (strategy) | Repeated R input and retained reset tests; no strategy loop claim |
+| C — no duplicate/stuck/invalid resolution | PASS (tested paths) | 48 tests plus 12 rendered timed runs and complete input-ready movie; gameplay unchanged |
+| C — 720p/1080p/basic keyboard | PASS (automated) | Actual 26 screenshots, physical key-event dispatch in captures and retained keyboard/focus tests; no human input claim |
+| C — automated vs human | PASS | Engineering pass, art partial/PLACEHOLDER and HUMAN_PENDING are separately recorded |
+| D — SRD/rule sources | N/A (new rules), PASS (scope) | No new rule, SRD/WotC content or G005 change |
+| D — project authorization | PASS | Own worktree only; no ui-prototype, other worktree, new story, S4, push, main merge, PR, Actions or deploy |
+
+No unexplained C/D failure: full-battle items are explicit scope exceptions,
+not a declaration of complete playable battle. Art failures remain open and
+must be considered by the reviewers/Owner. No subagent spawned. The
+external-executable-trust-audit skill was applied to local tool identification;
+its full adversarial hardening ceiling is explicitly not claimed in VERIFICATION.
+No custom launcher or global trust change. Normal hooks gave the existing
+report-only missing_canonical_memory advisory; no hook bypass or SessionEnd.
+
+| Step | Commit |
+| --- | --- |
+| W1 — method, seam masks, scale, proof | `a3657ab` |
+| W2 — five frames and A4 baseline | `cf41d1e` |
+| W3 — region/sequence audit and correction | `f1e0e01` |
+| W4 — sync/import/48 tests | `a607a8b` |
+| W5 — rendered verification/movie | `e5faf32` |
+| W6 — this handoff and final table check | This commit |
+
+**STOP after W6 commit; wait for review. Commit only, no push, merge or PR.
+Task DONE is not SessionEnd.**
+
+Final W6 actual-handoff check: `GODOT --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gtest=res://tests/test_a5_contract.gd -gexit` passed **6/6 tests, 540 assertions, exit 0** after this section and its exact table were written. [Final log](evidence/spike02-a5/handoff-table-check.log).
