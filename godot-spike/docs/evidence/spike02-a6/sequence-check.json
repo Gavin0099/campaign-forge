@@ -1,0 +1,120 @@
+{
+  "authority": "model inspection of actual rendered frame sequence, not human playtest",
+  "pairs": [
+    {
+      "from": "thoma/idle/01.png",
+      "to": "thoma/swing/00.png",
+      "region_mean_rgb_delta": {
+        "stole": 17.8061,
+        "embroidery": 31.9293,
+        "cuffs": 14.4513,
+        "hem": 32.7821,
+        "seams": 12.8269,
+        "bag_count": 12.6528,
+        "feet": 46.0181,
+        "face_hair": 4.2088,
+        "palette": 20.1292
+      },
+      "garment_silhouette_iou": 0.697267,
+      "character_height_delta_px": -11.630999999999972,
+      "visual_result": "FAIL",
+      "reason": "Changed motif/fringe width and drape/stance produce visible pops; intact anatomy does not establish sequence fidelity."
+    },
+    {
+      "from": "thoma/swing/00.png",
+      "to": "thoma/swing/01.png",
+      "region_mean_rgb_delta": {
+        "stole": 8.3676,
+        "embroidery": 10.3,
+        "cuffs": 13.062,
+        "hem": 12.4465,
+        "seams": 8.8317,
+        "bag_count": 7.0352,
+        "feet": 21.2325,
+        "face_hair": 11.2295,
+        "palette": 10.1574
+      },
+      "garment_silhouette_iou": 0.786611,
+      "character_height_delta_px": 1.6211999999999875,
+      "visual_result": "FAIL",
+      "reason": "Changed motif/fringe width and drape/stance produce visible pops; intact anatomy does not establish sequence fidelity."
+    },
+    {
+      "from": "thoma/swing/01.png",
+      "to": "thoma/swing/02.png",
+      "region_mean_rgb_delta": {
+        "stole": 0.9111,
+        "embroidery": 0.5758,
+        "cuffs": 1.3068,
+        "hem": 3.6612,
+        "seams": 2.4793,
+        "bag_count": 16.023,
+        "feet": 7.9864,
+        "face_hair": 17.1459,
+        "palette": 2.7266
+      },
+      "garment_silhouette_iou": 0.744629,
+      "character_height_delta_px": -0.3616000000000099,
+      "visual_result": "FAIL",
+      "reason": "Changed motif/fringe width and drape/stance produce visible pops; intact anatomy does not establish sequence fidelity."
+    },
+    {
+      "from": "thoma/swing/02.png",
+      "to": "thoma/swing/03.png",
+      "region_mean_rgb_delta": {
+        "stole": 2.2423,
+        "embroidery": 3.4141,
+        "cuffs": 4.0117,
+        "hem": 9.6176,
+        "seams": 4.03,
+        "bag_count": 28.7371,
+        "feet": 16.0289,
+        "face_hair": 9.6414,
+        "palette": 5.4399
+      },
+      "garment_silhouette_iou": 0.6744,
+      "character_height_delta_px": 5.219800000000021,
+      "visual_result": "FAIL",
+      "reason": "Changed motif/fringe width and drape/stance produce visible pops; intact anatomy does not establish sequence fidelity."
+    },
+    {
+      "from": "thoma/swing/03.png",
+      "to": "thoma/swing/04.png",
+      "region_mean_rgb_delta": {
+        "stole": 6.8726,
+        "embroidery": 8.3394,
+        "cuffs": 3.0689,
+        "hem": 2.3732,
+        "seams": 1.8641,
+        "bag_count": 3.9272,
+        "feet": 3.3117,
+        "face_hair": 22.8773,
+        "palette": 4.7911
+      },
+      "garment_silhouette_iou": 0.794909,
+      "character_height_delta_px": 1.375599999999963,
+      "visual_result": "FAIL",
+      "reason": "Changed motif/fringe width and drape/stance produce visible pops; intact anatomy does not establish sequence fidelity."
+    },
+    {
+      "from": "thoma/swing/04.png",
+      "to": "thoma/swing/05.png",
+      "region_mean_rgb_delta": {
+        "stole": 11.6068,
+        "embroidery": 22.4225,
+        "cuffs": 1.5651,
+        "hem": 22.7729,
+        "seams": 3.8717,
+        "bag_count": 3.705,
+        "feet": 28.1777,
+        "face_hair": 7.9793,
+        "palette": 17.1002
+      },
+      "garment_silhouette_iou": 0.658559,
+      "character_height_delta_px": 12.77600000000001,
+      "visual_result": "FAIL",
+      "reason": "Changed motif/fringe width and drape/stance produce visible pops; intact anatomy does not establish sequence fidelity."
+    }
+  ],
+  "limits": "Rectangular alpha-intersected region masks include occlusion and moving pose. RGB/IoU/height are proxies only. No proxy threshold approves art."
+}

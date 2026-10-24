@@ -1,0 +1,9 @@
+A6 first playback decoder attempt, exit 1:
+  File "godot-spike/tools/a6_playback_check.py", line 11, in main
+    trace=load(OUT/'render-trace.json');assert len(frames)==len(trace),(len(frames),len(trace))
+AssertionError: (59, 58)
+
+Preserved failure. The corrected decoder does not invent a trace entry:
+58 consecutive post-draw records remain, final Movie Maker frame is untraced.
+Require at most one terminal frame and exact full decoded RGB equality to the
+preceding traced ready frame. Final-frame phase is not independently observed.

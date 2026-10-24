@@ -1,0 +1,11 @@
+python.exe : D:\campaign-forge\scratch\godot-spike\godot-spike\tools\a6_style_check.py:69: DeprecationWarning: Image.Im
+age.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+At line:2 char:281
++ ... -check.log; & 'C:/Users/daish/AppData/Local/Programs/Python/Python312 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\campaign-for...d_data instead.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+  inter=sum(v>0 for v in ImageChops.darker(*alphas).getdata());union=sum(v>0 for v in ImageChops.lighter(*alphas).getda
+ta())
+A6_MODEL_AUDIT motion_placeholder=5 reference_pass=2 structural_improvement=true full_art_pass=false

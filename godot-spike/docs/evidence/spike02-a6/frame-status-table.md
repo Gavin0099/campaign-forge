@@ -1,0 +1,9 @@
+| Frame | Status | Stole | Embroidery | Cuffs | Hem | Face/hair | Palette | Seams | Bag count | Feet | Mace | Sequence | Reason |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `thoma/idle/01.png` | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | 1 PASS | PASS | PASS | PASS | Byte-identical reference endpoint; motion transition failures remain assigned to motion frames; not Owner approval. |
+| `thoma/swing/00.png` | PLACEHOLDER | PASS | FAIL | PASS | PASS | FAIL | PASS | PASS | 1 PASS | PASS | PASS | FAIL | Structural fragments/feet repaired; generated motif/fringe and face fidelity still drift; sequence retains visible pops. |
+| `thoma/swing/01.png` | PLACEHOLDER | PASS | FAIL | PASS | PASS | FAIL | PASS | PASS | 1 PASS | PASS | PASS | FAIL | Structural fragments/feet repaired; generated motif/fringe and face fidelity still drift; sequence retains visible pops. |
+| `thoma/swing/03.png` | PLACEHOLDER | PASS | FAIL | PASS | PASS | FAIL | PASS | PASS | 1 PASS | PASS | PASS | FAIL | Structural fragments/feet repaired; generated motif/fringe and face fidelity still drift; sequence retains visible pops. |
+| `thoma/swing/04.png` | PLACEHOLDER | PASS | FAIL | PASS | PASS | FAIL | PASS | PASS | 1 PASS | PASS | FAIL | FAIL | Structural fragments/feet repaired; generated motif/fringe and face fidelity still drift; sequence retains visible pops. Follow-through mace-head height differs from A5. |
+| `thoma/swing/05.png` | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | 1 PASS | PASS | PASS | PASS | Byte-identical reference endpoint; motion transition failures remain assigned to motion frames; not Owner approval. |
+| `thoma/swing/02.png` | PLACEHOLDER | PASS | FAIL | PASS | PASS | FAIL | PASS | PASS | 1 PASS | PASS | PASS | FAIL | Structural fragments/feet repaired; generated motif/fringe and face fidelity still drift; sequence retains visible pops. |

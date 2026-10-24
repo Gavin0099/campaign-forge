@@ -1,0 +1,251 @@
+{
+  "canvas": [
+    512,
+    512
+  ],
+  "pivot": [
+    256,
+    464
+  ],
+  "contact_frame_index": 3,
+  "contact_anchor": [
+    455,
+    196
+  ],
+  "limits": "Manual landmarks, +/-3 raw pixels. Painted mace/hand pixels are newly generated; exact A5 pixel geometry is NOT claimed. 04 head is about19px above A5 pose; recorded mace FAIL.",
+  "frames": {
+    "thoma/idle/01.png": {
+      "head_to_ground_px": 360,
+      "immutable": true
+    },
+    "thoma/swing/05.png": {
+      "head_to_ground_px": 369,
+      "immutable": true
+    },
+    "thoma/swing/02.png": {
+      "raw_landmarks": {
+        "head_top": [
+          690,
+          213
+        ],
+        "ground": [
+          295,
+          1154
+        ],
+        "mace_head": [
+          1140,
+          200
+        ],
+        "grip": [
+          935,
+          335
+        ]
+      },
+      "mapped_landmarks": {
+        "head_top": [
+          281.3695,
+          114.3401
+        ],
+        "ground": [
+          134.6072,
+          463.9687
+        ],
+        "mace_head": [
+          448.567,
+          109.51
+        ],
+        "grip": [
+          372.3992,
+          159.6693
+        ]
+      },
+      "landmark_uncertainty_raw_px": 3,
+      "head_to_ground_px": 349.6286,
+      "head_to_ground_tolerance_px": 18,
+      "ground_bottom_opaque_y": 463,
+      "mace_grip_to_head_px": 91.2003,
+      "mace_design": "short one-handed flanged iron head / oak haft / brass collar; generated brush detail differs, not protected RGBA",
+      "contact_anchor_exact_transform": null
+    },
+    "thoma/swing/00.png": {
+      "raw_landmarks": {
+        "head_top": [
+          650,
+          212
+        ],
+        "ground": [
+          350,
+          1151
+        ],
+        "mace_head": [
+          477,
+          130
+        ],
+        "grip": [
+          302,
+          215
+        ]
+      },
+      "mapped_landmarks": {
+        "head_top": [
+          256.15,
+          115.652
+        ],
+        "ground": [
+          144.85,
+          464.021
+        ],
+        "mace_head": [
+          191.967,
+          85.23
+        ],
+        "grip": [
+          127.042,
+          116.765
+        ]
+      },
+      "landmark_uncertainty_raw_px": 3,
+      "head_to_ground_px": 348.369,
+      "head_to_ground_tolerance_px": 18,
+      "ground_bottom_opaque_y": 463,
+      "mace_grip_to_head_px": 72.1783,
+      "mace_design": "short one-handed flanged iron head / oak haft / brass collar; generated brush detail differs, not protected RGBA",
+      "contact_anchor_exact_transform": null
+    },
+    "thoma/swing/03.png": {
+      "raw_landmarks": {
+        "head_top": [
+          645,
+          191
+        ],
+        "ground": [
+          270,
+          1143
+        ],
+        "mace_head": [
+          1170,
+          424
+        ],
+        "grip": [
+          910,
+          424
+        ]
+      },
+      "mapped_landmarks": {
+        "head_top": [
+          259.3115,
+          109.1516
+        ],
+        "ground": [
+          119.5341,
+          464.0
+        ],
+        "mace_head": [
+          455.0,
+          196.0
+        ],
+        "grip": [
+          358.0876,
+          196.0
+        ]
+      },
+      "landmark_uncertainty_raw_px": 3,
+      "head_to_ground_px": 354.8484,
+      "head_to_ground_tolerance_px": 18,
+      "ground_bottom_opaque_y": 463,
+      "mace_grip_to_head_px": 96.9124,
+      "mace_design": "short one-handed flanged iron head / oak haft / brass collar; generated brush detail differs, not protected RGBA",
+      "contact_anchor_exact_transform": true
+    },
+    "thoma/swing/04.png": {
+      "raw_landmarks": {
+        "head_top": [
+          790,
+          133
+        ],
+        "ground": [
+          865,
+          1145
+        ],
+        "mace_head": [
+          1110,
+          842
+        ],
+        "grip": [
+          900,
+          695
+        ]
+      },
+      "mapped_landmarks": {
+        "head_top": [
+          308.08,
+          107.816
+        ],
+        "ground": [
+          334.48,
+          464.04
+        ],
+        "mace_head": [
+          420.72,
+          357.384
+        ],
+        "grip": [
+          346.8,
+          305.64
+        ]
+      },
+      "landmark_uncertainty_raw_px": 3,
+      "head_to_ground_px": 356.224,
+      "head_to_ground_tolerance_px": 18,
+      "ground_bottom_opaque_y": 464,
+      "mace_grip_to_head_px": 90.2309,
+      "mace_design": "short one-handed flanged iron head / oak haft / brass collar; generated brush detail differs, not protected RGBA",
+      "contact_anchor_exact_transform": null
+    },
+    "thoma/swing/01.png": {
+      "raw_landmarks": {
+        "head_top": [
+          650,
+          195
+        ],
+        "ground": [
+          400,
+          1182
+        ],
+        "mace_head": [
+          660,
+          120
+        ],
+        "grip": [
+          475,
+          180
+        ]
+      },
+      "mapped_landmarks": {
+        "head_top": [
+          255.89,
+          114.0098
+        ],
+        "ground": [
+          167.24,
+          464.0
+        ],
+        "mace_head": [
+          259.436,
+          87.4148
+        ],
+        "grip": [
+          193.835,
+          108.6908
+        ]
+      },
+      "landmark_uncertainty_raw_px": 3,
+      "head_to_ground_px": 349.9902,
+      "head_to_ground_tolerance_px": 18,
+      "ground_bottom_opaque_y": 463,
+      "mace_grip_to_head_px": 68.9649,
+      "mace_design": "short one-handed flanged iron head / oak haft / brass collar; generated brush detail differs, not protected RGBA",
+      "contact_anchor_exact_transform": null
+    }
+  }
+}
