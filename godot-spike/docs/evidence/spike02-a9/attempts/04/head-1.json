@@ -1,0 +1,67 @@
+{
+  "frame": "thoma/swing/04.png",
+  "region": "head",
+  "attempt": 1,
+  "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/04.png",
+  "input_sha256": "c3e40e2485f31e60bd1aa1d21c8cbc452e7a359db92d2e58d6391395adc167b0",
+  "output": "godot-spike/docs/evidence/spike02-a9/attempts/04/head-1.png",
+  "output_sha256": "60f03d8b8bde1755d89892883de4b5a3973e0f2f0cd3552174420321e18d8c39",
+  "mask": "godot-spike/docs/evidence/spike02-a9/attempts/04/head-1-mask.png",
+  "mask_sha256": "1da520fe8673678bf30f7b18f4f2d8e174a80eab15b20a596e71829b0d7d6144",
+  "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/04/head.png",
+  "permission_mask_sha256": "64d6e83ed2dd41a44d370412696f6d9088f3ab77b6364d8a733e51cbc491e222",
+  "source_anchor": "thoma/idle/01.png",
+  "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+  "transform": [
+    {
+      "part": "face_hair_beard",
+      "matrix": [
+        1.0,
+        -0.0,
+        54.0,
+        0.0,
+        1.0,
+        3.0
+      ],
+      "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/head.png"
+    }
+  ],
+  "tool": "Python Pillow manual donor-pixel compositing",
+  "prompt": null,
+  "whole_frame_regeneration": false,
+  "description": "Exact idle head translated without scale or rotation; small bottom-neck RGB seam blend; no face repaint.",
+  "changed_pixels": 3980,
+  "technical": {
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bottom": 464,
+    "ground": 8,
+    "mace_centre": [
+      420.49295774647885,
+      374.4600938967136
+    ],
+    "mace_error": 1.6212349162889705,
+    "contact_opaque": true
+  },
+  "decision": "reverted_to_a8",
+  "kept": false,
+  "reason": "Native review found carved collar gap (head) or donor weapon/teal edge contamination (motif); replaced by bounded revision2.",
+  "regression_check_13": {
+    "face_hair": "FAIL: local candidate not certified.",
+    "stole": "FAIL: local candidate not certified.",
+    "embroidery": "FAIL: local candidate not certified.",
+    "tassels": "FAIL: local candidate not certified.",
+    "cuffs": "PASS: feature unchanged.",
+    "hem": "PASS: feature unchanged.",
+    "palette": "PASS: feature unchanged.",
+    "seams": "FAIL: local candidate not certified.",
+    "bag_count": "PASS: feature unchanged.",
+    "feet": "PASS: feature unchanged.",
+    "mace": "FAIL: local candidate not certified.",
+    "landmarks": "FAIL: local candidate not certified.",
+    "sequence": "FAIL: local candidate not certified."
+  }
+}

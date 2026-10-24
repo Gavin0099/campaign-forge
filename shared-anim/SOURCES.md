@@ -3122,3 +3122,2523 @@ First local normalization retained old shaft slivers on01 and04. Original runtim
     "placeholder": true
   }
 ]
+
+
+### spike-02 A9 targeted frame 03
+
+A8 base; Python/Pillow manual anchor transplants, enforced region masks. No image generation, whole-frame repaint or new external material. Model regression review only; Owner approval pending. Complete operation records:
+
+```json
+[
+  {
+    "frame": "thoma/swing/03.png",
+    "region": "head",
+    "attempt": 2,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/03.png",
+    "input_sha256": "5e26004a23c014dee7a4ff0b90bf25fcd3341910355c9f91ac1ed4fd711cb3bd",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/03/head-2.png",
+    "output_sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/03/head-2-mask.png",
+    "mask_sha256": "5cfd6af20ac650255aff675a7dc693f2e51dfb19568988a6ce1672a93ad208c4",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/03/head.png",
+    "permission_mask_sha256": "4259298b65e730077e7d96a8374842c54032312756ec5e701fddd27298b24b85",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "head",
+        "matrix": [
+          1.0,
+          -0.0,
+          8.0,
+          0.0,
+          1.0,
+          2.0
+        ],
+        "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/head.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Revision2: exact donor face/hair; remove warm old crown only above ears, retain teal collar underpainting; no face repaint.",
+    "changed_pixels": 3572,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 18,
+      "mace_centre": [
+        454.50970873786406,
+        195.39320388349515
+      ],
+      "mace_error": 0.7801198938190365,
+      "contact_opaque": true
+    },
+    "decision": "kept",
+    "kept": true,
+    "reason": "Native-size model inspection: identity/motif improves; protected A8 PASS items remain visually intact. No Owner approval.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "region": "stole",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/03.png",
+    "input_sha256": "5e26004a23c014dee7a4ff0b90bf25fcd3341910355c9f91ac1ed4fd711cb3bd",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/03/stole-1.png",
+    "output_sha256": "c20b1d1c879544851b77762e471bf7906ae95e247ac45081371bfac148958601",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/03/stole-1-mask.png",
+    "mask_sha256": "f39d37d0f6d8fad6062c145783a30eb3ea709c4a07424c18b026c85bb9411723",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/03/stole.png",
+    "permission_mask_sha256": "05db87433c1853c4c3f12c9361d526fa0be5e194f34c41b31420e068fa1348d1",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          220,
+          272,
+          255,
+          386
+        ],
+        "matrix": [
+          0.9455185755993168,
+          -0.3255681544571567,
+          53.54327383965321,
+          0.3255681544571567,
+          0.9455185755993168,
+          -44.14431509856081
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      },
+      {
+        "part": "right",
+        "source_box": [
+          285,
+          266,
+          313,
+          366
+        ],
+        "matrix": [
+          1.0,
+          -0.0,
+          -39.0,
+          0.0,
+          1.0,
+          11.0
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Two separate rigid anchor terminal patches; test narrower anchor panel/fringe with original alpha; inspect hem continuity before adoption.",
+    "changed_pixels": 7799,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 18,
+      "mace_centre": [
+        454.50970873786406,
+        195.39320388349515
+      ],
+      "mace_error": 0.7801198938190365,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "REGRESSION: narrower anchor patch cuts continuous ivory/teal hem or creates a cloth seam/alpha notch; retain A8 region, including its existing motif/fringe defects.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "FAIL: candidate breaks previously continuous lower garment; reverted.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "region": "embroidery",
+    "attempt": 2,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/03.png",
+    "input_sha256": "5e26004a23c014dee7a4ff0b90bf25fcd3341910355c9f91ac1ed4fd711cb3bd",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/03/embroidery-2.png",
+    "output_sha256": "282a28b2cccf509afe99e8a7bc7dbb87479d5f6d785b47d71a6a7d695cdebd8f",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/03/embroidery-2-mask.png",
+    "mask_sha256": "0162dec9439039188d46fec4cebf68bee2daeb0d3aaaecc304eb4def5831f33b",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/03/embroidery.png",
+    "permission_mask_sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          225,
+          349,
+          251,
+          373
+        ],
+        "matrix": [
+          0.9455185755993168,
+          -0.3255681544571567,
+          53.54327383965321,
+          0.3255681544571567,
+          0.9455185755993168,
+          -44.14431509856081
+        ]
+      },
+      {
+        "part": "right",
+        "source_box": [
+          289,
+          300,
+          307,
+          347
+        ],
+        "matrix": [
+          1.0,
+          -0.0,
+          -39.0,
+          0.0,
+          1.0,
+          11.0
+        ]
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Revision2: exclude anchor weapon occlusion and teal edge from motif crops; retain original alpha and feather1px. Larger A8 motifs may remain around patch.",
+    "changed_pixels": 2014,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 18,
+      "mace_centre": [
+        454.50970873786406,
+        195.39320388349515
+      ],
+      "mace_error": 0.7801198938190365,
+      "contact_opaque": true
+    },
+    "decision": "kept",
+    "kept": true,
+    "reason": "Native-size model inspection: identity/motif improves; protected A8 PASS items remain visually intact. No Owner approval.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "region": "tassels",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/03.png",
+    "input_sha256": "5e26004a23c014dee7a4ff0b90bf25fcd3341910355c9f91ac1ed4fd711cb3bd",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/03/tassels-1.png",
+    "output_sha256": "28b834403f7892ee55890125596614dd357987155f626e9a80ba40fbe36c5731",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/03/tassels-1-mask.png",
+    "mask_sha256": "f906159cfd8e336ce1263f768a853d245bb182dfc39b025e99f1da1767a5cd6c",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/03/tassels.png",
+    "permission_mask_sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          220,
+          369,
+          255,
+          386
+        ],
+        "matrix": [
+          0.9455185755993168,
+          -0.3255681544571567,
+          53.54327383965321,
+          0.3255681544571567,
+          0.9455185755993168,
+          -44.14431509856081
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      },
+      {
+        "part": "right",
+        "source_box": [
+          285,
+          346,
+          313,
+          366
+        ],
+        "matrix": [
+          1.0,
+          -0.0,
+          -39.0,
+          0.0,
+          1.0,
+          11.0
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Two separate rigid anchor terminal patches; test narrower anchor panel/fringe with original alpha; inspect hem continuity before adoption.",
+    "changed_pixels": 1313,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 18,
+      "mace_centre": [
+        454.50970873786406,
+        195.39320388349515
+      ],
+      "mace_error": 0.7801198938190365,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "REGRESSION: narrower anchor patch cuts continuous ivory/teal hem or creates a cloth seam/alpha notch; retain A8 region, including its existing motif/fringe defects.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "FAIL: candidate breaks previously continuous lower garment; reverted.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "region": "mace",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/03.png",
+    "input_sha256": "5e26004a23c014dee7a4ff0b90bf25fcd3341910355c9f91ac1ed4fd711cb3bd",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/03/mace-1.png",
+    "output_sha256": "5e26004a23c014dee7a4ff0b90bf25fcd3341910355c9f91ac1ed4fd711cb3bd",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/03/mace-1-mask.png",
+    "mask_sha256": "65795a5b91030a2a433dae510d1edf494082a9cfa1153cd94f3797759f68f257",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/03/mace.png",
+    "permission_mask_sha256": "958bc7aeaef37be893faaaa72e965debac82dcf81c1f7d7fcb3148c060e984a6",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "No pose repair prescribed for this mace; A8 target/opaque contact protected.",
+    "changed_pixels": 0,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 18,
+      "mace_centre": [
+        454.50970873786406,
+        195.39320388349515
+      ],
+      "mace_error": 0.7801198938190365,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "No change required here; A8 pixels retained.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "region": "legs_feet",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/03.png",
+    "input_sha256": "5e26004a23c014dee7a4ff0b90bf25fcd3341910355c9f91ac1ed4fd711cb3bd",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/03/legs_feet-1.png",
+    "output_sha256": "452b72e35d9fb4e8a93718b95f52e2a5dd38ffe1716fb1c68872e869f3bdb5fd",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/03/legs_feet-1-mask.png",
+    "mask_sha256": "83670e5248ce63d01203ddc8dce6befcf02077bbabe644d920aeb4a1f8cf8992",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/03/legs_feet.png",
+    "permission_mask_sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+    "source_anchor": "thoma/swing/03.png (baseline A8)",
+    "source_sha256": "5e26004a23c014dee7a4ff0b90bf25fcd3341910355c9f91ac1ed4fd711cb3bd",
+    "transform": [
+      {
+        "part": "boot_and_lower_leg",
+        "source_box": [
+          29,
+          404,
+          111,
+          467
+        ],
+        "matrix": [
+          1,
+          0,
+          61,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "part": "boot_and_lower_leg",
+        "source_box": [
+          261,
+          410,
+          349,
+          451
+        ],
+        "matrix": [
+          1,
+          0,
+          35,
+          0,
+          1,
+          3
+        ]
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Translate intact boot/lower-leg pixels toward brief feet; inspect hem and leg attachment; no whole-body warp.",
+    "changed_pixels": 9696,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 18,
+      "mace_centre": [
+        454.50970873786406,
+        195.39320388349515
+      ],
+      "mace_error": 0.7801198938190365,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "REGRESSION: foot translation opens a gap or abrupt hem-to-leg boundary; A8 feet/hem PASS would be lost. Keep attached A8 legs/feet, acknowledge target FAIL.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "FAIL: candidate breaks previously continuous lower garment; reverted.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "FAIL: candidate attachment is less continuous than A8; reverted.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  }
+]
+```
+
+A9 corrective regression withdrawal (supersedes prior kept motif decision):
+```json
+{
+  "frame": "thoma/swing/03.png",
+  "region": "embroidery",
+  "attempt": 3,
+  "input": "godot-spike/docs/evidence/spike02-a9/attempts/03/embroidery-3-input.png",
+  "input_sha256": "dd8bf3801f46a071bf602c52665244dbb6ca8b521f25471202271db463ee1ad0",
+  "output": "godot-spike/docs/evidence/spike02-a9/attempts/03/embroidery-3.png",
+  "output_sha256": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+  "mask": "godot-spike/docs/evidence/spike02-a9/attempts/03/embroidery-2-mask.png",
+  "mask_sha256": "0162dec9439039188d46fec4cebf68bee2daeb0d3aaaecc304eb4def5831f33b",
+  "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/03/embroidery.png",
+  "permission_mask_sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+  "source_anchor": "baseline-a8/03.png",
+  "source_sha256": "5e26004a23c014dee7a4ff0b90bf25fcd3341910355c9f91ac1ed4fd711cb3bd",
+  "transform": [
+    {
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  ],
+  "tool": "Python Pillow manual donor-pixel compositing",
+  "prompt": null,
+  "whole_frame_regeneration": false,
+  "description": "Explicit regional rollback to A8 following sequential comparison; no generation.",
+  "changed_pixels": 2014,
+  "technical": {
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bottom": 464,
+    "ground": 18,
+    "mace_centre": [
+      454.50970873786406,
+      195.39320388349515
+    ],
+    "mace_error": 0.7801198938190365,
+    "contact_opaque": true
+  },
+  "decision": "reverted_to_a8",
+  "kept": false,
+  "reason": "REGRESSION: overlapping motif patches do not improve anchor consistency. Restore exact A8 motif pixels; original candidates retained.",
+  "regression_check_13": {
+    "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+    "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+    "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+    "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+    "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+    "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+    "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+    "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+    "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+    "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+    "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+    "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+    "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+  },
+  "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+}
+```
+
+
+### spike-02 A9 targeted frame 02
+
+A8 base; Python/Pillow manual anchor transplants, enforced region masks. No image generation, whole-frame repaint or new external material. Model regression review only; Owner approval pending. Complete operation records:
+
+```json
+[
+  {
+    "frame": "thoma/swing/02.png",
+    "region": "head",
+    "attempt": 2,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/02.png",
+    "input_sha256": "fdcdd0aa2ff102c70909f5e97105d6ba36f1c33bca127d9381fdca2610d5dd8c",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/02/head-2.png",
+    "output_sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/02/head-2-mask.png",
+    "mask_sha256": "40363a0bc2106fd302043aa409304111cb55d4875cbf8b3f308c926e8a317598",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/02/head.png",
+    "permission_mask_sha256": "1dd534c32800fe881d10dc6de5850ab2dded427696d92fccd9758f609399a441",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "head",
+        "matrix": [
+          1.0,
+          -0.0,
+          26.0,
+          0.0,
+          1.0,
+          7.0
+        ],
+        "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/head.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Revision2: exact donor face/hair; remove warm old crown only above ears, retain teal collar underpainting; no face repaint.",
+    "changed_pixels": 3762,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 15,
+      "mace_centre": [
+        447.3775038520801,
+        111.56702619414484
+      ],
+      "mace_error": 2.255673922168485,
+      "contact_opaque": true
+    },
+    "decision": "kept",
+    "kept": true,
+    "reason": "Native-size model inspection: identity/motif improves; protected A8 PASS items remain visually intact. No Owner approval.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "region": "stole",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/02.png",
+    "input_sha256": "fdcdd0aa2ff102c70909f5e97105d6ba36f1c33bca127d9381fdca2610d5dd8c",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/02/stole-1.png",
+    "output_sha256": "2c0410bceff378d1973550337405516e0d5c6f6a60246c0bd93cad098527b259",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/02/stole-1-mask.png",
+    "mask_sha256": "9eb07022e8873c48ec06aef4366391fb9b5e5584ce2131e0cc8b9f130319487d",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/02/stole.png",
+    "permission_mask_sha256": "6d4d900782b31bbb9b1634314db8ef9b33bac09f4fe9dc771e61656126254387",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          220,
+          272,
+          255,
+          386
+        ],
+        "matrix": [
+          0.9781476007338057,
+          -0.20791169081775934,
+          50.00952126565882,
+          0.20791169081775934,
+          0.9781476007338057,
+          -31.72538067512778
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      },
+      {
+        "part": "right",
+        "source_box": [
+          285,
+          266,
+          313,
+          366
+        ],
+        "matrix": [
+          0.9945218953682733,
+          0.10452846326765347,
+          -17.344753486364525,
+          -0.10452846326765347,
+          0.9945218953682733,
+          45.825337595804285
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Two separate rigid anchor terminal patches; test narrower anchor panel/fringe with original alpha; inspect hem continuity before adoption.",
+    "changed_pixels": 5865,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 15,
+      "mace_centre": [
+        447.3775038520801,
+        111.56702619414484
+      ],
+      "mace_error": 2.255673922168485,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "REGRESSION: narrower anchor patch cuts continuous ivory/teal hem or creates a cloth seam/alpha notch; retain A8 region, including its existing motif/fringe defects.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "FAIL: candidate breaks previously continuous lower garment; reverted.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "region": "embroidery",
+    "attempt": 2,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/02.png",
+    "input_sha256": "fdcdd0aa2ff102c70909f5e97105d6ba36f1c33bca127d9381fdca2610d5dd8c",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/02/embroidery-2.png",
+    "output_sha256": "a9d6f091a7d6919ceb609e5e9523fa4ba6e3f82cb485cfa2a70e26e5ca6c96fc",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/02/embroidery-2-mask.png",
+    "mask_sha256": "023eb8f33ec590d27563729896e4b9e0d24c6b0fa25ade720f612f8fda615438",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/02/embroidery.png",
+    "permission_mask_sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          225,
+          349,
+          251,
+          373
+        ],
+        "matrix": [
+          0.9781476007338057,
+          -0.20791169081775934,
+          50.00952126565882,
+          0.20791169081775934,
+          0.9781476007338057,
+          -31.72538067512778
+        ]
+      },
+      {
+        "part": "right",
+        "source_box": [
+          289,
+          300,
+          307,
+          347
+        ],
+        "matrix": [
+          0.9945218953682733,
+          0.10452846326765347,
+          -17.344753486364525,
+          -0.10452846326765347,
+          0.9945218953682733,
+          45.825337595804285
+        ]
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Revision2: exclude anchor weapon occlusion and teal edge from motif crops; retain original alpha and feather1px. Larger A8 motifs may remain around patch.",
+    "changed_pixels": 1983,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 15,
+      "mace_centre": [
+        447.3775038520801,
+        111.56702619414484
+      ],
+      "mace_error": 2.255673922168485,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "No demonstrated improvement without new edge/lighting seam; A8 region retained.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "region": "tassels",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/02.png",
+    "input_sha256": "fdcdd0aa2ff102c70909f5e97105d6ba36f1c33bca127d9381fdca2610d5dd8c",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/02/tassels-1.png",
+    "output_sha256": "3c6690b9f2665bf341d2ea966f5d762ec89ef4f2a21bcad89ca9a14edbe993c2",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/02/tassels-1-mask.png",
+    "mask_sha256": "4ca1e32fd14527e2e4a2ef9ded30178fc905ee43a3a9bfa4ecf300a064d7274d",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/02/tassels.png",
+    "permission_mask_sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          220,
+          369,
+          255,
+          386
+        ],
+        "matrix": [
+          0.9781476007338057,
+          -0.20791169081775934,
+          50.00952126565882,
+          0.20791169081775934,
+          0.9781476007338057,
+          -31.72538067512778
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      },
+      {
+        "part": "right",
+        "source_box": [
+          285,
+          346,
+          313,
+          366
+        ],
+        "matrix": [
+          0.9945218953682733,
+          0.10452846326765347,
+          -17.344753486364525,
+          -0.10452846326765347,
+          0.9945218953682733,
+          45.825337595804285
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Two separate rigid anchor terminal patches; test narrower anchor panel/fringe with original alpha; inspect hem continuity before adoption.",
+    "changed_pixels": 1366,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 15,
+      "mace_centre": [
+        447.3775038520801,
+        111.56702619414484
+      ],
+      "mace_error": 2.255673922168485,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "REGRESSION: narrower anchor patch cuts continuous ivory/teal hem or creates a cloth seam/alpha notch; retain A8 region, including its existing motif/fringe defects.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "FAIL: candidate breaks previously continuous lower garment; reverted.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "region": "mace",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/02.png",
+    "input_sha256": "fdcdd0aa2ff102c70909f5e97105d6ba36f1c33bca127d9381fdca2610d5dd8c",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/02/mace-1.png",
+    "output_sha256": "fdcdd0aa2ff102c70909f5e97105d6ba36f1c33bca127d9381fdca2610d5dd8c",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/02/mace-1-mask.png",
+    "mask_sha256": "65795a5b91030a2a433dae510d1edf494082a9cfa1153cd94f3797759f68f257",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/02/mace.png",
+    "permission_mask_sha256": "2f53db4965ef3f3220e53866a2f3e152eabdb123f159ca42784b01c8cc85016c",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "No pose repair prescribed for this mace; A8 target/opaque contact protected.",
+    "changed_pixels": 0,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 15,
+      "mace_centre": [
+        447.3775038520801,
+        111.56702619414484
+      ],
+      "mace_error": 2.255673922168485,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "No change required here; A8 pixels retained.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "region": "legs_feet",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/02.png",
+    "input_sha256": "fdcdd0aa2ff102c70909f5e97105d6ba36f1c33bca127d9381fdca2610d5dd8c",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/02/legs_feet-1.png",
+    "output_sha256": "fdcdd0aa2ff102c70909f5e97105d6ba36f1c33bca127d9381fdca2610d5dd8c",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/02/legs_feet-1-mask.png",
+    "mask_sha256": "65795a5b91030a2a433dae510d1edf494082a9cfa1153cd94f3797759f68f257",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/02/legs_feet.png",
+    "permission_mask_sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+    "source_anchor": "thoma/swing/02.png (baseline A8)",
+    "source_sha256": "fdcdd0aa2ff102c70909f5e97105d6ba36f1c33bca127d9381fdca2610d5dd8c",
+    "transform": [],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "No stance repair prescribed; retain A8 grounded boots.",
+    "changed_pixels": 0,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 15,
+      "mace_centre": [
+        447.3775038520801,
+        111.56702619414484
+      ],
+      "mace_error": 2.255673922168485,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "No change required here; A8 pixels retained.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  }
+]
+```
+
+
+### spike-02 A9 targeted frame 04
+
+A8 base; Python/Pillow manual anchor transplants, enforced region masks. No image generation, whole-frame repaint or new external material. Model regression review only; Owner approval pending. Complete operation records:
+
+```json
+[
+  {
+    "frame": "thoma/swing/04.png",
+    "region": "head",
+    "attempt": 2,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/04.png",
+    "input_sha256": "c3e40e2485f31e60bd1aa1d21c8cbc452e7a359db92d2e58d6391395adc167b0",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/04/head-2.png",
+    "output_sha256": "4769f2a8d31f03dd9757aaf5ead37609cd025a4f4ead8b9746f6b5f1c531acdc",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/04/head-2-mask.png",
+    "mask_sha256": "c3832a0addc109ec8880e3f2a0d591d87b7fbbcd2ad3952f188e62c4379cb4b1",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/04/head.png",
+    "permission_mask_sha256": "64d6e83ed2dd41a44d370412696f6d9088f3ab77b6364d8a733e51cbc491e222",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "head",
+        "matrix": [
+          1.0,
+          -0.0,
+          54.0,
+          0.0,
+          1.0,
+          3.0
+        ],
+        "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/head.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Revision2: exact donor face/hair; remove warm old crown only above ears, retain teal collar underpainting; no face repaint.",
+    "changed_pixels": 3640,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 8,
+      "mace_centre": [
+        420.49295774647885,
+        374.4600938967136
+      ],
+      "mace_error": 1.6212349162889705,
+      "contact_opaque": true
+    },
+    "decision": "kept",
+    "kept": true,
+    "reason": "Native-size model inspection: identity/motif improves; protected A8 PASS items remain visually intact. No Owner approval.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "region": "stole",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/04.png",
+    "input_sha256": "c3e40e2485f31e60bd1aa1d21c8cbc452e7a359db92d2e58d6391395adc167b0",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/04/stole-1.png",
+    "output_sha256": "e63d8335515ba958609771f3eb09d5c2edbad9745d051631669977bc83e09165",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/04/stole-1-mask.png",
+    "mask_sha256": "e4f254e1a3e0fa9f05a3db20bc8bd4e0179b6eaa26d9d3df41a1d4094a5fb117",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/04/stole.png",
+    "permission_mask_sha256": "e4f254e1a3e0fa9f05a3db20bc8bd4e0179b6eaa26d9d3df41a1d4094a5fb117",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          220,
+          272,
+          255,
+          386
+        ],
+        "matrix": [
+          0.9510565162951535,
+          -0.3090169943749474,
+          65.3495821248598,
+          0.3090169943749474,
+          0.9510565162951535,
+          -57.171107946017
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      },
+      {
+        "part": "right",
+        "source_box": [
+          285,
+          266,
+          313,
+          366
+        ],
+        "matrix": [
+          0.9876883405951378,
+          0.15643446504023087,
+          -37.18463829483093,
+          -0.15643446504023087,
+          0.9876883405951378,
+          83.4623254235288
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Two separate rigid anchor terminal patches; test narrower anchor panel/fringe with original alpha; inspect hem continuity before adoption.",
+    "changed_pixels": 8600,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 8,
+      "mace_centre": [
+        420.49295774647885,
+        374.4600938967136
+      ],
+      "mace_error": 1.6212349162889705,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "REGRESSION: narrower anchor patch cuts continuous ivory/teal hem or creates a cloth seam/alpha notch; retain A8 region, including its existing motif/fringe defects.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "FAIL: candidate breaks previously continuous lower garment; reverted.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "region": "embroidery",
+    "attempt": 2,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/04.png",
+    "input_sha256": "c3e40e2485f31e60bd1aa1d21c8cbc452e7a359db92d2e58d6391395adc167b0",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/04/embroidery-2.png",
+    "output_sha256": "25492b25f08db08ba6099c76b832dddb4c284059600c8971fc055801b1b11a38",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/04/embroidery-2-mask.png",
+    "mask_sha256": "f8a7d6d0bfa5aa0d8a21bd3388e37f4fb20f51f3d69e70c2f06bb4583df2a8bc",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/04/embroidery.png",
+    "permission_mask_sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          225,
+          349,
+          251,
+          373
+        ],
+        "matrix": [
+          0.9510565162951535,
+          -0.3090169943749474,
+          65.3495821248598,
+          0.3090169943749474,
+          0.9510565162951535,
+          -57.171107946017
+        ]
+      },
+      {
+        "part": "right",
+        "source_box": [
+          289,
+          300,
+          307,
+          347
+        ],
+        "matrix": [
+          0.9876883405951378,
+          0.15643446504023087,
+          -37.18463829483093,
+          -0.15643446504023087,
+          0.9876883405951378,
+          83.4623254235288
+        ]
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Revision2: exclude anchor weapon occlusion and teal edge from motif crops; retain original alpha and feather1px. Larger A8 motifs may remain around patch.",
+    "changed_pixels": 1997,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 8,
+      "mace_centre": [
+        420.49295774647885,
+        374.4600938967136
+      ],
+      "mace_error": 1.6212349162889705,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "No demonstrated improvement without new edge/lighting seam; A8 region retained.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "region": "tassels",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/04.png",
+    "input_sha256": "c3e40e2485f31e60bd1aa1d21c8cbc452e7a359db92d2e58d6391395adc167b0",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/04/tassels-1.png",
+    "output_sha256": "ebc434d26d4ba31df7e5fd0feba2f6c387f5149b51ec4e3a0fe9d2967bc94a2e",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/04/tassels-1-mask.png",
+    "mask_sha256": "5499dcd245735cb839a366411d6e7eb37acac7431512a60dbb5ea05f28d890df",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/04/tassels.png",
+    "permission_mask_sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          220,
+          369,
+          255,
+          386
+        ],
+        "matrix": [
+          0.9510565162951535,
+          -0.3090169943749474,
+          65.3495821248598,
+          0.3090169943749474,
+          0.9510565162951535,
+          -57.171107946017
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      },
+      {
+        "part": "right",
+        "source_box": [
+          285,
+          346,
+          313,
+          366
+        ],
+        "matrix": [
+          0.9876883405951378,
+          0.15643446504023087,
+          -37.18463829483093,
+          -0.15643446504023087,
+          0.9876883405951378,
+          83.4623254235288
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Two separate rigid anchor terminal patches; test narrower anchor panel/fringe with original alpha; inspect hem continuity before adoption.",
+    "changed_pixels": 1365,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 8,
+      "mace_centre": [
+        420.49295774647885,
+        374.4600938967136
+      ],
+      "mace_error": 1.6212349162889705,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "REGRESSION: narrower anchor patch cuts continuous ivory/teal hem or creates a cloth seam/alpha notch; retain A8 region, including its existing motif/fringe defects.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "FAIL: candidate breaks previously continuous lower garment; reverted.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "region": "mace",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/04.png",
+    "input_sha256": "c3e40e2485f31e60bd1aa1d21c8cbc452e7a359db92d2e58d6391395adc167b0",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/04/mace-1.png",
+    "output_sha256": "c3e40e2485f31e60bd1aa1d21c8cbc452e7a359db92d2e58d6391395adc167b0",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/04/mace-1-mask.png",
+    "mask_sha256": "65795a5b91030a2a433dae510d1edf494082a9cfa1153cd94f3797759f68f257",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/04/mace.png",
+    "permission_mask_sha256": "eacf65ecaca34e9ec6f0dedb7148f672ce531412731fa5b8bbabe9667d5bebcf",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "No pose repair prescribed for this mace; A8 target/opaque contact protected.",
+    "changed_pixels": 0,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 8,
+      "mace_centre": [
+        420.49295774647885,
+        374.4600938967136
+      ],
+      "mace_error": 1.6212349162889705,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "No change required here; A8 pixels retained.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "region": "legs_feet",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/04.png",
+    "input_sha256": "c3e40e2485f31e60bd1aa1d21c8cbc452e7a359db92d2e58d6391395adc167b0",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/04/legs_feet-1.png",
+    "output_sha256": "7aebb9ff3f956273afc4cf2e545a6352200f80216804a654ea07df496a0a553a",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/04/legs_feet-1-mask.png",
+    "mask_sha256": "a4dc5ab453d52d329a0c5517eb2ca8744fa842c4dcbf1e758e0f55b3f43a2e4d",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/04/legs_feet.png",
+    "permission_mask_sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+    "source_anchor": "thoma/swing/04.png (baseline A8)",
+    "source_sha256": "c3e40e2485f31e60bd1aa1d21c8cbc452e7a359db92d2e58d6391395adc167b0",
+    "transform": [
+      {
+        "part": "boot_and_lower_leg",
+        "source_box": [
+          316,
+          430,
+          389,
+          467
+        ],
+        "matrix": [
+          1,
+          0,
+          -17,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "part": "boot_and_lower_leg",
+        "source_box": [
+          55,
+          405,
+          134,
+          467
+        ],
+        "matrix": [
+          1,
+          0,
+          72,
+          0,
+          1,
+          -9
+        ]
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Translate intact boot/lower-leg pixels toward brief feet; inspect hem and leg attachment; no whole-body warp.",
+    "changed_pixels": 7400,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 462,
+      "ground": 0,
+      "mace_centre": [
+        420.49295774647885,
+        374.4600938967136
+      ],
+      "mace_error": 1.6212349162889705,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "REGRESSION: foot translation opens a gap or abrupt hem-to-leg boundary; A8 feet/hem PASS would be lost. Keep attached A8 legs/feet, acknowledge target FAIL.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "FAIL: candidate breaks previously continuous lower garment; reverted.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "FAIL: candidate attachment is less continuous than A8; reverted.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  }
+]
+```
+
+
+### spike-02 A9 targeted frame 00
+
+A8 base; Python/Pillow manual anchor transplants, enforced region masks. No image generation, whole-frame repaint or new external material. Model regression review only; Owner approval pending. Complete operation records:
+
+```json
+[
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "head",
+    "attempt": 2,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+    "input_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/00/head-2.png",
+    "output_sha256": "724137f816359c83fc0353c09b9a65b1a8871d6d35740c8759176f9e92d8ec4a",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/head-2-mask.png",
+    "mask_sha256": "9c8e1944d708a4178b980814b16005d034fae3146213bd9dead6b3c35a68f837",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/head.png",
+    "permission_mask_sha256": "284158923f60ab8c9e3380f6d185af2e6b647a075f58c6a467dc2408008f6e74",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "head",
+        "matrix": [
+          1.0,
+          -0.0,
+          4.0,
+          0.0,
+          1.0,
+          5.0
+        ],
+        "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/head.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Revision2: exact donor face/hair; remove warm old crown only above ears, retain teal collar underpainting; no face repaint.",
+    "changed_pixels": 3570,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 13,
+      "mace_centre": [
+        190.41148325358853,
+        85.2153110047847
+      ],
+      "mace_error": 1.6030421960794052,
+      "contact_opaque": true
+    },
+    "decision": "kept",
+    "kept": true,
+    "reason": "Native-size model inspection: anchor face identity improves; collar underpainting preserved. Protected A8 PASS items remain visually intact. No Owner approval.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "stole",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+    "input_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/00/stole-1.png",
+    "output_sha256": "3523f46151f33c4779bd2fd3a39d7a73a494f36cb2d2f5baa82462013c440aad",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/stole-1-mask.png",
+    "mask_sha256": "2b5a257595e3d8935e92bc0528f3a1c3f95d682eb2185addf992f27a7051187a",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/stole.png",
+    "permission_mask_sha256": "01a1b626a071eb557c22adb41970ed4329e415ef41dc0ebc757f2d959d445897",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          220,
+          272,
+          255,
+          386
+        ],
+        "matrix": [
+          1.0,
+          -0.0,
+          1.0,
+          0.0,
+          1.0,
+          12.0
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      },
+      {
+        "part": "right",
+        "source_box": [
+          285,
+          266,
+          313,
+          366
+        ],
+        "matrix": [
+          0.9659258262890683,
+          0.25881904510252074,
+          -44.99616006617255,
+          -0.25881904510252074,
+          0.9659258262890683,
+          106.94336285150143
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Two separate rigid anchor terminal patches; test narrower anchor panel/fringe with original alpha; inspect hem continuity before adoption.",
+    "changed_pixels": 6373,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 13,
+      "mace_centre": [
+        190.41148325358853,
+        85.2153110047847
+      ],
+      "mace_error": 1.6030421960794052,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "REGRESSION: narrower anchor patch cuts continuous ivory/teal hem or creates a cloth seam/alpha notch; retain A8 region, including its existing motif/fringe defects.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "FAIL: candidate breaks previously continuous lower garment; reverted.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "embroidery",
+    "attempt": 2,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+    "input_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/00/embroidery-2.png",
+    "output_sha256": "076dd47aec1eaea57ba8c32b30254c9f635859672128f656f81d20c08bedd885",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/embroidery-2-mask.png",
+    "mask_sha256": "6d332cb6b93915ac8a2d956d3d4a25557d76529301f5bf6daa81031468d86250",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/embroidery.png",
+    "permission_mask_sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          225,
+          349,
+          251,
+          373
+        ],
+        "matrix": [
+          1.0,
+          -0.0,
+          1.0,
+          0.0,
+          1.0,
+          12.0
+        ]
+      },
+      {
+        "part": "right",
+        "source_box": [
+          289,
+          300,
+          307,
+          347
+        ],
+        "matrix": [
+          0.9659258262890683,
+          0.25881904510252074,
+          -44.99616006617255,
+          -0.25881904510252074,
+          0.9659258262890683,
+          106.94336285150143
+        ]
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Revision2: exclude anchor weapon occlusion and teal edge from motif crops; retain original alpha and feather1px. Larger A8 motifs may remain around patch.",
+    "changed_pixels": 1999,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 13,
+      "mace_centre": [
+        190.41148325358853,
+        85.2153110047847
+      ],
+      "mace_error": 1.6030421960794052,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "REGRESSION/NO IMPROVEMENT: residual A8 leaves and donor sprig overlap or show patch boundaries; two exact anchor motifs not established; preserve A8 pixels.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "tassels",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+    "input_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/00/tassels-1.png",
+    "output_sha256": "bfcc798dac9783e761d2dd9f74e46900d63e920add62cfbf54b08c8e7d4b4d74",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/tassels-1-mask.png",
+    "mask_sha256": "df628772724f40a7942e00550866c0de761cbcb5d441521849a467a6aa362f89",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/tassels.png",
+    "permission_mask_sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          220,
+          369,
+          255,
+          386
+        ],
+        "matrix": [
+          1.0,
+          -0.0,
+          1.0,
+          0.0,
+          1.0,
+          12.0
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      },
+      {
+        "part": "right",
+        "source_box": [
+          285,
+          346,
+          313,
+          366
+        ],
+        "matrix": [
+          0.9659258262890683,
+          0.25881904510252074,
+          -44.99616006617255,
+          -0.25881904510252074,
+          0.9659258262890683,
+          106.94336285150143
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Two separate rigid anchor terminal patches; test narrower anchor panel/fringe with original alpha; inspect hem continuity before adoption.",
+    "changed_pixels": 1294,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 13,
+      "mace_centre": [
+        190.41148325358853,
+        85.2153110047847
+      ],
+      "mace_error": 1.6030421960794052,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "REGRESSION: narrower anchor patch cuts continuous ivory/teal hem or creates a cloth seam/alpha notch; retain A8 region, including its existing motif/fringe defects.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "FAIL: candidate breaks previously continuous lower garment; reverted.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "mace",
+    "attempt": 2,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+    "input_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/00/mace-2.png",
+    "output_sha256": "080b4ac4d11b1de7e0d032bb4c0311ecdd300d77bbaecf2e816881da12fba488",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/mace-2-mask.png",
+    "mask_sha256": "b4f978faf7fd37b07cbb92ebd1528bc685d224f6d8c388f3dc07de58a2ab78b8",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/mace.png",
+    "permission_mask_sha256": "5fbc4aaa1624b02339d3a08bc618f4723a5ad520944cddd7a17768fd0aa3df1b",
+    "source_anchor": "thoma/swing/05.png",
+    "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "transform": [
+      {
+        "part": "canon_mace",
+        "matrix": [
+          0.3133702998751301,
+          0.9496310100013431,
+          -193.1087032026013,
+          -0.9496310100013431,
+          0.3133702998751301,
+          193.41540537188115
+        ],
+        "scale": 1,
+        "original_grip": [
+          151,
+          110
+        ],
+        "source_mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/mace-2-source-mask.png",
+        "source_mask_sha256": "f9ee2cf69b57171f88698f6c5f52e7d0858b7adfb3f0ab7e930784ff70b73815"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Revision2: tightly traced recover05 weapon mask excludes ivory robe/bag contamination; rigid scale1, original fingers restored, +1px centroid allowance.",
+    "changed_pixels": 1050,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 13,
+      "mace_centre": [
+        191.29245283018867,
+        85.33018867924528
+      ],
+      "mace_error": 0.7807993093041088,
+      "contact_opaque": true
+    },
+    "decision": "kept",
+    "kept": true,
+    "reason": "Native-size model inspection: rigid canon head/haft size and straightness improve; original fingers/cuff retained; integration still needs W3 review. Protected A8 PASS items remain visually intact. No Owner approval.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "legs_feet",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+    "input_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/00/legs_feet-1.png",
+    "output_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/legs_feet-1-mask.png",
+    "mask_sha256": "65795a5b91030a2a433dae510d1edf494082a9cfa1153cd94f3797759f68f257",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/legs_feet.png",
+    "permission_mask_sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+    "source_anchor": "thoma/swing/00.png (baseline A8)",
+    "source_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "transform": [],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "No stance repair prescribed; retain A8 grounded boots.",
+    "changed_pixels": 0,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 13,
+      "mace_centre": [
+        190.41148325358853,
+        85.2153110047847
+      ],
+      "mace_error": 1.6030421960794052,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "No change required here; A8 pixels retained.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  }
+]
+```
+
+
+### spike-02 A9 targeted frame 01
+
+A8 base; Python/Pillow manual anchor transplants, enforced region masks. No image generation, whole-frame repaint or new external material. Model regression review only; Owner approval pending. Complete operation records:
+
+```json
+[
+  {
+    "frame": "thoma/swing/01.png",
+    "region": "head",
+    "attempt": 3,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/01.png",
+    "input_sha256": "cf37fc5b439cd639e447f4b3a3ae0b5665b2cb8923896e3f560a63067c0566d4",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/01/head-3.png",
+    "output_sha256": "fa4e3c1365986e14699f6c496eb143bbbeb3db176a5d22f81317943b22f2359f",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/01/head-3-mask.png",
+    "mask_sha256": "9f39fc79b26e6fd931606659d07d40ff78e18115a79b88aacaffc04ea71f0c70",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/attempts/01/head-3-permission-mask.png",
+    "permission_mask_sha256": "6f06bebf7cdae5ea3381d35230a8138b1bd4e0f38275ef139da434308cebad60",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "matrix": [
+          1.0,
+          -0.0,
+          4.0,
+          0.0,
+          1.0,
+          3.0
+        ],
+        "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/head.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Revision3: correct underestimated old01 nose/hair mask; erase warm original head above collar and composite unchanged anchor face. Explicit revised region permission, not whole-frame edit.",
+    "changed_pixels": 4851,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 12,
+      "mace_centre": [
+        258.69924812030075,
+        85.70375939849625
+      ],
+      "mace_error": 1.3306732845178213,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "No demonstrated improvement without new edge/lighting seam; A8 region retained.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "region": "stole",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/01.png",
+    "input_sha256": "cf37fc5b439cd639e447f4b3a3ae0b5665b2cb8923896e3f560a63067c0566d4",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/01/stole-1.png",
+    "output_sha256": "afd4fa091f7d5ab9aee09f0ee729552b72d7cfb8f97eaabeecd1b1f58cf2f016",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/01/stole-1-mask.png",
+    "mask_sha256": "72fcb943517c032c12f5f1ae1d05b671c779912f718d65eb53839f49a020cab8",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/01/stole.png",
+    "permission_mask_sha256": "1f5069c7af7e3ff0ea9200190d76061059c073286eaac8c5d4afd8e0e9bc55bf",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          220,
+          272,
+          255,
+          386
+        ],
+        "matrix": [
+          1.0,
+          -0.0,
+          4.0,
+          0.0,
+          1.0,
+          12.0
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      },
+      {
+        "part": "right",
+        "source_box": [
+          285,
+          266,
+          313,
+          366
+        ],
+        "matrix": [
+          0.9702957262759965,
+          0.24192189559966773,
+          -37.80244677386294,
+          -0.24192189559966773,
+          0.9702957262759965,
+          100.50469195340247
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Two separate rigid anchor terminal patches; test narrower anchor panel/fringe with original alpha; inspect hem continuity before adoption.",
+    "changed_pixels": 6331,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 12,
+      "mace_centre": [
+        258.7473997028232,
+        85.88558692421991
+      ],
+      "mace_error": 1.1426825515441514,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "REGRESSION: narrower anchor patch cuts continuous ivory/teal hem or creates a cloth seam/alpha notch; retain A8 region, including its existing motif/fringe defects.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "FAIL: candidate breaks previously continuous lower garment; reverted.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "region": "embroidery",
+    "attempt": 2,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/01.png",
+    "input_sha256": "cf37fc5b439cd639e447f4b3a3ae0b5665b2cb8923896e3f560a63067c0566d4",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/01/embroidery-2.png",
+    "output_sha256": "84ae973014a26fbc810d3390f42569a76dd771ef183c596bc9a089fb960baaf7",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/01/embroidery-2-mask.png",
+    "mask_sha256": "f45b20b14a7f38169e94320bf07337b97bdad7d8ed01c877228530a774b8a9d8",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/01/embroidery.png",
+    "permission_mask_sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          225,
+          349,
+          251,
+          373
+        ],
+        "matrix": [
+          1.0,
+          -0.0,
+          4.0,
+          0.0,
+          1.0,
+          12.0
+        ]
+      },
+      {
+        "part": "right",
+        "source_box": [
+          289,
+          300,
+          307,
+          347
+        ],
+        "matrix": [
+          0.9702957262759965,
+          0.24192189559966773,
+          -37.80244677386294,
+          -0.24192189559966773,
+          0.9702957262759965,
+          100.50469195340247
+        ]
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Revision2: exclude anchor weapon occlusion and teal edge from motif crops; retain original alpha and feather1px. Larger A8 motifs may remain around patch.",
+    "changed_pixels": 2013,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 12,
+      "mace_centre": [
+        258.7473997028232,
+        85.88558692421991
+      ],
+      "mace_error": 1.1426825515441514,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "REGRESSION/NO IMPROVEMENT: residual A8 leaves and donor sprig overlap or show patch boundaries; two exact anchor motifs not established; preserve A8 pixels.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "region": "tassels",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/01.png",
+    "input_sha256": "cf37fc5b439cd639e447f4b3a3ae0b5665b2cb8923896e3f560a63067c0566d4",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/01/tassels-1.png",
+    "output_sha256": "806386276f2bb295de0722e055c5c8d09d3661311cc387da37d95869e010fb95",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/01/tassels-1-mask.png",
+    "mask_sha256": "802d8545ea38741c45f9e793fab5bf2e4a76e0262a40daa4b5b8ca386c44475d",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/01/tassels.png",
+    "permission_mask_sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          220,
+          369,
+          255,
+          386
+        ],
+        "matrix": [
+          1.0,
+          -0.0,
+          4.0,
+          0.0,
+          1.0,
+          12.0
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      },
+      {
+        "part": "right",
+        "source_box": [
+          285,
+          346,
+          313,
+          366
+        ],
+        "matrix": [
+          0.9702957262759965,
+          0.24192189559966773,
+          -37.80244677386294,
+          -0.24192189559966773,
+          0.9702957262759965,
+          100.50469195340247
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Two separate rigid anchor terminal patches; test narrower anchor panel/fringe with original alpha; inspect hem continuity before adoption.",
+    "changed_pixels": 1247,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 12,
+      "mace_centre": [
+        258.7473997028232,
+        85.88558692421991
+      ],
+      "mace_error": 1.1426825515441514,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "REGRESSION: narrower anchor patch cuts continuous ivory/teal hem or creates a cloth seam/alpha notch; retain A8 region, including its existing motif/fringe defects.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "FAIL: candidate breaks previously continuous lower garment; reverted.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "region": "mace",
+    "attempt": 2,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/01.png",
+    "input_sha256": "cf37fc5b439cd639e447f4b3a3ae0b5665b2cb8923896e3f560a63067c0566d4",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/01/mace-2.png",
+    "output_sha256": "a8ef6a45e86722a5526ddf85ca03862e08b18d2f6313ead2e7a41c86b76805f6",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/01/mace-2-mask.png",
+    "mask_sha256": "0e14ed6cd0722292198a8e1732079199c015b93670f26b4f762b3993675322b4",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/01/mace.png",
+    "permission_mask_sha256": "20ad04ae39716f4f7d5bda265dcbbc4c75aad4b0dad6121123310a91e5927d4e",
+    "source_anchor": "thoma/swing/05.png",
+    "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "transform": [
+      {
+        "part": "canon_mace",
+        "matrix": [
+          0.8718676537854534,
+          0.4897415586640047,
+          -97.51042582926968,
+          -0.4897415586640047,
+          0.8718676537854534,
+          -93.11956112848293
+        ],
+        "scale": 1,
+        "original_grip": [
+          218,
+          79
+        ],
+        "source_mask": "godot-spike/docs/evidence/spike02-a9/attempts/01/mace-2-source-mask.png",
+        "source_mask_sha256": "f9ee2cf69b57171f88698f6c5f52e7d0858b7adfb3f0ab7e930784ff70b73815"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Revision2: tightly traced recover05 weapon mask excludes ivory robe/bag contamination; rigid scale1, original fingers restored, +1px centroid allowance.",
+    "changed_pixels": 1102,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 12,
+      "mace_centre": [
+        259.1111111111111,
+        86.61191626409018
+      ],
+      "mace_error": 0.4036764361342638,
+      "contact_opaque": true
+    },
+    "decision": "kept",
+    "kept": true,
+    "reason": "Native-size model inspection: rigid canon head/haft size and straightness improve; original fingers/cuff retained; integration still needs W3 review. Protected A8 PASS items remain visually intact. No Owner approval.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "region": "legs_feet",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/01.png",
+    "input_sha256": "cf37fc5b439cd639e447f4b3a3ae0b5665b2cb8923896e3f560a63067c0566d4",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/01/legs_feet-1.png",
+    "output_sha256": "cf37fc5b439cd639e447f4b3a3ae0b5665b2cb8923896e3f560a63067c0566d4",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/01/legs_feet-1-mask.png",
+    "mask_sha256": "65795a5b91030a2a433dae510d1edf494082a9cfa1153cd94f3797759f68f257",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/01/legs_feet.png",
+    "permission_mask_sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+    "source_anchor": "thoma/swing/01.png (baseline A8)",
+    "source_sha256": "cf37fc5b439cd639e447f4b3a3ae0b5665b2cb8923896e3f560a63067c0566d4",
+    "transform": [],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "No stance repair prescribed; retain A8 grounded boots.",
+    "changed_pixels": 0,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 12,
+      "mace_centre": [
+        258.7473997028232,
+        85.88558692421991
+      ],
+      "mace_error": 1.1426825515441514,
+      "contact_opaque": true
+    },
+    "decision": "reverted_to_a8",
+    "kept": false,
+    "reason": "No change required here; A8 pixels retained.",
+    "regression_check_13": {
+      "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+      "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+      "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+      "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+      "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+      "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+      "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+      "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+      "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+      "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+      "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+      "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+      "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+    },
+    "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+  }
+]
+```

@@ -1,0 +1,91 @@
+{
+  "frame": "thoma/swing/00.png",
+  "region": "embroidery",
+  "attempt": 1,
+  "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+  "input_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+  "output": "godot-spike/docs/evidence/spike02-a9/attempts/00/embroidery-1.png",
+  "output_sha256": "7fc7b0f6687348f193ade54a9c64f0fb191be544c4518884d66717d0ca07e42c",
+  "mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/embroidery-1-mask.png",
+  "mask_sha256": "dba03a4988f3c2e3a1212b720af2cf27427748761cbdd516d92be0926c6757a4",
+  "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/embroidery.png",
+  "permission_mask_sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+  "source_anchor": "thoma/idle/01.png",
+  "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+  "transform": [
+    {
+      "part": "left",
+      "source_box": [
+        222,
+        337,
+        253,
+        373
+      ],
+      "matrix": [
+        1.0,
+        -0.0,
+        1.0,
+        0.0,
+        1.0,
+        12.0
+      ],
+      "source_anchor": "thoma/idle/01.png"
+    },
+    {
+      "part": "right",
+      "source_box": [
+        285,
+        300,
+        309,
+        350
+      ],
+      "matrix": [
+        0.9659258262890683,
+        0.25881904510252074,
+        -44.99616006617255,
+        -0.25881904510252074,
+        0.9659258262890683,
+        106.94336285150143
+      ],
+      "source_anchor": "thoma/idle/01.png"
+    }
+  ],
+  "tool": "Python Pillow manual donor-pixel compositing",
+  "prompt": null,
+  "whole_frame_regeneration": false,
+  "description": "Two separate rigid anchor terminal patches; alpha locked, narrow feather RGB seam only.",
+  "changed_pixels": 3153,
+  "technical": {
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bottom": 464,
+    "ground": 13,
+    "mace_centre": [
+      190.41148325358853,
+      85.2153110047847
+    ],
+    "mace_error": 1.6030421960794052,
+    "contact_opaque": true
+  },
+  "decision": "reverted_to_a8",
+  "kept": false,
+  "reason": "Native review found carved collar gap (head) or donor weapon/teal edge contamination (motif). Replaced by bounded revision2.",
+  "regression_check_13": {
+    "face_hair": "FAIL: local candidate not certified.",
+    "stole": "FAIL: local candidate not certified.",
+    "embroidery": "FAIL: local candidate not certified.",
+    "tassels": "FAIL: local candidate not certified.",
+    "cuffs": "PASS: feature unchanged.",
+    "hem": "PASS: feature unchanged.",
+    "palette": "PASS: feature unchanged.",
+    "seams": "FAIL: local candidate not certified.",
+    "bag_count": "PASS: feature unchanged.",
+    "feet": "PASS: feature unchanged.",
+    "mace": "FAIL: local candidate not certified.",
+    "landmarks": "FAIL: local candidate not certified.",
+    "sequence": "FAIL: local candidate not certified."
+  }
+}

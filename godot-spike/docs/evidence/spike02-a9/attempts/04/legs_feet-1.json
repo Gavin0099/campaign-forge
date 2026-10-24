@@ -1,0 +1,90 @@
+{
+  "frame": "thoma/swing/04.png",
+  "region": "legs_feet",
+  "attempt": 1,
+  "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/04.png",
+  "input_sha256": "c3e40e2485f31e60bd1aa1d21c8cbc452e7a359db92d2e58d6391395adc167b0",
+  "output": "godot-spike/docs/evidence/spike02-a9/attempts/04/legs_feet-1.png",
+  "output_sha256": "7aebb9ff3f956273afc4cf2e545a6352200f80216804a654ea07df496a0a553a",
+  "mask": "godot-spike/docs/evidence/spike02-a9/attempts/04/legs_feet-1-mask.png",
+  "mask_sha256": "a4dc5ab453d52d329a0c5517eb2ca8744fa842c4dcbf1e758e0f55b3f43a2e4d",
+  "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/04/legs_feet.png",
+  "permission_mask_sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+  "source_anchor": "thoma/swing/04.png (baseline A8)",
+  "source_sha256": "c3e40e2485f31e60bd1aa1d21c8cbc452e7a359db92d2e58d6391395adc167b0",
+  "transform": [
+    {
+      "part": "boot_and_lower_leg",
+      "source_box": [
+        316,
+        430,
+        389,
+        467
+      ],
+      "matrix": [
+        1,
+        0,
+        -17,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "part": "boot_and_lower_leg",
+      "source_box": [
+        55,
+        405,
+        134,
+        467
+      ],
+      "matrix": [
+        1,
+        0,
+        72,
+        0,
+        1,
+        -9
+      ]
+    }
+  ],
+  "tool": "Python Pillow manual donor-pixel compositing",
+  "prompt": null,
+  "whole_frame_regeneration": false,
+  "description": "Translate intact boot/lower-leg pixels toward brief feet; inspect hem and leg attachment; no whole-body warp.",
+  "changed_pixels": 7400,
+  "technical": {
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bottom": 462,
+    "ground": 0,
+    "mace_centre": [
+      420.49295774647885,
+      374.4600938967136
+    ],
+    "mace_error": 1.6212349162889705,
+    "contact_opaque": true
+  },
+  "decision": "reverted_to_a8",
+  "kept": false,
+  "reason": "REGRESSION: foot translation opens a gap or abrupt hem-to-leg boundary; A8 feet/hem PASS would be lost. Keep attached A8 legs/feet, acknowledge target FAIL.",
+  "regression_check_13": {
+    "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+    "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+    "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+    "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+    "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+    "hem": "FAIL: candidate breaks previously continuous lower garment; reverted.",
+    "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+    "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+    "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+    "feet": "FAIL: candidate attachment is less continuous than A8; reverted.",
+    "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+    "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+    "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+  },
+  "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+}

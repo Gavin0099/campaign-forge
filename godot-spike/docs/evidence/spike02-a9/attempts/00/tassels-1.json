@@ -1,0 +1,92 @@
+{
+  "frame": "thoma/swing/00.png",
+  "region": "tassels",
+  "attempt": 1,
+  "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+  "input_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+  "output": "godot-spike/docs/evidence/spike02-a9/attempts/00/tassels-1.png",
+  "output_sha256": "bfcc798dac9783e761d2dd9f74e46900d63e920add62cfbf54b08c8e7d4b4d74",
+  "mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/tassels-1-mask.png",
+  "mask_sha256": "df628772724f40a7942e00550866c0de761cbcb5d441521849a467a6aa362f89",
+  "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/tassels.png",
+  "permission_mask_sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+  "source_anchor": "thoma/idle/01.png",
+  "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+  "transform": [
+    {
+      "part": "left",
+      "source_box": [
+        220,
+        369,
+        255,
+        386
+      ],
+      "matrix": [
+        1.0,
+        -0.0,
+        1.0,
+        0.0,
+        1.0,
+        12.0
+      ],
+      "source_anchor": "thoma/idle/01.png"
+    },
+    {
+      "part": "right",
+      "source_box": [
+        285,
+        346,
+        313,
+        366
+      ],
+      "matrix": [
+        0.9659258262890683,
+        0.25881904510252074,
+        -44.99616006617255,
+        -0.25881904510252074,
+        0.9659258262890683,
+        106.94336285150143
+      ],
+      "source_anchor": "thoma/idle/01.png"
+    }
+  ],
+  "tool": "Python Pillow manual donor-pixel compositing",
+  "prompt": null,
+  "whole_frame_regeneration": false,
+  "description": "Two separate rigid anchor terminal patches; test narrower anchor panel/fringe with original alpha; inspect hem continuity before adoption.",
+  "changed_pixels": 1294,
+  "technical": {
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bottom": 464,
+    "ground": 13,
+    "mace_centre": [
+      190.41148325358853,
+      85.2153110047847
+    ],
+    "mace_error": 1.6030421960794052,
+    "contact_opaque": true
+  },
+  "decision": "reverted_to_a8",
+  "kept": false,
+  "reason": "REGRESSION: narrower anchor patch cuts continuous ivory/teal hem or creates a cloth seam/alpha notch; retain A8 region, including its existing motif/fringe defects.",
+  "regression_check_13": {
+    "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+    "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+    "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+    "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+    "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+    "hem": "FAIL: candidate breaks previously continuous lower garment; reverted.",
+    "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+    "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+    "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+    "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+    "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+    "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+    "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+  },
+  "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+}

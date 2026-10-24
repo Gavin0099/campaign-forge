@@ -1,0 +1,365 @@
+[
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "head",
+    "attempt": 2,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+    "input_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/00/head-2.png",
+    "output_sha256": "724137f816359c83fc0353c09b9a65b1a8871d6d35740c8759176f9e92d8ec4a",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/head-2-mask.png",
+    "mask_sha256": "9c8e1944d708a4178b980814b16005d034fae3146213bd9dead6b3c35a68f837",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/head.png",
+    "permission_mask_sha256": "284158923f60ab8c9e3380f6d185af2e6b647a075f58c6a467dc2408008f6e74",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "head",
+        "matrix": [
+          1.0,
+          -0.0,
+          4.0,
+          0.0,
+          1.0,
+          5.0
+        ],
+        "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/head.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Revision2: exact donor face/hair; remove warm old crown only above ears, retain teal collar underpainting; no face repaint.",
+    "changed_pixels": 3570,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 13,
+      "mace_centre": [
+        190.41148325358853,
+        85.2153110047847
+      ],
+      "mace_error": 1.6030421960794052,
+      "contact_opaque": true
+    },
+    "decision": "PENDING_VISUAL_INSPECTION"
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "stole",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+    "input_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/00/stole-1.png",
+    "output_sha256": "3523f46151f33c4779bd2fd3a39d7a73a494f36cb2d2f5baa82462013c440aad",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/stole-1-mask.png",
+    "mask_sha256": "2b5a257595e3d8935e92bc0528f3a1c3f95d682eb2185addf992f27a7051187a",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/stole.png",
+    "permission_mask_sha256": "01a1b626a071eb557c22adb41970ed4329e415ef41dc0ebc757f2d959d445897",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          220,
+          272,
+          255,
+          386
+        ],
+        "matrix": [
+          1.0,
+          -0.0,
+          1.0,
+          0.0,
+          1.0,
+          12.0
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      },
+      {
+        "part": "right",
+        "source_box": [
+          285,
+          266,
+          313,
+          366
+        ],
+        "matrix": [
+          0.9659258262890683,
+          0.25881904510252074,
+          -44.99616006617255,
+          -0.25881904510252074,
+          0.9659258262890683,
+          106.94336285150143
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Two separate rigid anchor terminal patches; test narrower anchor panel/fringe with original alpha; inspect hem continuity before adoption.",
+    "changed_pixels": 6373,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 13,
+      "mace_centre": [
+        190.41148325358853,
+        85.2153110047847
+      ],
+      "mace_error": 1.6030421960794052,
+      "contact_opaque": true
+    },
+    "decision": "PENDING_VISUAL_INSPECTION"
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "embroidery",
+    "attempt": 2,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+    "input_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/00/embroidery-2.png",
+    "output_sha256": "076dd47aec1eaea57ba8c32b30254c9f635859672128f656f81d20c08bedd885",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/embroidery-2-mask.png",
+    "mask_sha256": "6d332cb6b93915ac8a2d956d3d4a25557d76529301f5bf6daa81031468d86250",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/embroidery.png",
+    "permission_mask_sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          225,
+          349,
+          251,
+          373
+        ],
+        "matrix": [
+          1.0,
+          -0.0,
+          1.0,
+          0.0,
+          1.0,
+          12.0
+        ]
+      },
+      {
+        "part": "right",
+        "source_box": [
+          289,
+          300,
+          307,
+          347
+        ],
+        "matrix": [
+          0.9659258262890683,
+          0.25881904510252074,
+          -44.99616006617255,
+          -0.25881904510252074,
+          0.9659258262890683,
+          106.94336285150143
+        ]
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Revision2: exclude anchor weapon occlusion and teal edge from motif crops; retain original alpha and feather1px. Larger A8 motifs may remain around patch.",
+    "changed_pixels": 1999,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 13,
+      "mace_centre": [
+        190.41148325358853,
+        85.2153110047847
+      ],
+      "mace_error": 1.6030421960794052,
+      "contact_opaque": true
+    },
+    "decision": "PENDING_VISUAL_INSPECTION"
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "tassels",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+    "input_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/00/tassels-1.png",
+    "output_sha256": "bfcc798dac9783e761d2dd9f74e46900d63e920add62cfbf54b08c8e7d4b4d74",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/tassels-1-mask.png",
+    "mask_sha256": "df628772724f40a7942e00550866c0de761cbcb5d441521849a467a6aa362f89",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/tassels.png",
+    "permission_mask_sha256": "c95fa96f6c542268290d7467e19fd98fc72195d89c44efa2d7641ee3ad8e7634",
+    "source_anchor": "thoma/idle/01.png",
+    "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "transform": [
+      {
+        "part": "left",
+        "source_box": [
+          220,
+          369,
+          255,
+          386
+        ],
+        "matrix": [
+          1.0,
+          -0.0,
+          1.0,
+          0.0,
+          1.0,
+          12.0
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      },
+      {
+        "part": "right",
+        "source_box": [
+          285,
+          346,
+          313,
+          366
+        ],
+        "matrix": [
+          0.9659258262890683,
+          0.25881904510252074,
+          -44.99616006617255,
+          -0.25881904510252074,
+          0.9659258262890683,
+          106.94336285150143
+        ],
+        "source_anchor": "thoma/idle/01.png"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Two separate rigid anchor terminal patches; test narrower anchor panel/fringe with original alpha; inspect hem continuity before adoption.",
+    "changed_pixels": 1294,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 13,
+      "mace_centre": [
+        190.41148325358853,
+        85.2153110047847
+      ],
+      "mace_error": 1.6030421960794052,
+      "contact_opaque": true
+    },
+    "decision": "PENDING_VISUAL_INSPECTION"
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "mace",
+    "attempt": 2,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+    "input_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/00/mace-2.png",
+    "output_sha256": "080b4ac4d11b1de7e0d032bb4c0311ecdd300d77bbaecf2e816881da12fba488",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/mace-2-mask.png",
+    "mask_sha256": "b4f978faf7fd37b07cbb92ebd1528bc685d224f6d8c388f3dc07de58a2ab78b8",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/mace.png",
+    "permission_mask_sha256": "5fbc4aaa1624b02339d3a08bc618f4723a5ad520944cddd7a17768fd0aa3df1b",
+    "source_anchor": "thoma/swing/05.png",
+    "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "transform": [
+      {
+        "part": "canon_mace",
+        "matrix": [
+          0.3133702998751301,
+          0.9496310100013431,
+          -193.1087032026013,
+          -0.9496310100013431,
+          0.3133702998751301,
+          193.41540537188115
+        ],
+        "scale": 1,
+        "original_grip": [
+          151,
+          110
+        ],
+        "source_mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/mace-2-source-mask.png",
+        "source_mask_sha256": "f9ee2cf69b57171f88698f6c5f52e7d0858b7adfb3f0ab7e930784ff70b73815"
+      }
+    ],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "Revision2: tightly traced recover05 weapon mask excludes ivory robe/bag contamination; rigid scale1, original fingers restored, +1px centroid allowance.",
+    "changed_pixels": 1050,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 13,
+      "mace_centre": [
+        191.29245283018867,
+        85.33018867924528
+      ],
+      "mace_error": 0.7807993093041088,
+      "contact_opaque": true
+    },
+    "decision": "PENDING_VISUAL_INSPECTION"
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "region": "legs_feet",
+    "attempt": 1,
+    "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+    "input_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "output": "godot-spike/docs/evidence/spike02-a9/attempts/00/legs_feet-1.png",
+    "output_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/legs_feet-1-mask.png",
+    "mask_sha256": "65795a5b91030a2a433dae510d1edf494082a9cfa1153cd94f3797759f68f257",
+    "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/legs_feet.png",
+    "permission_mask_sha256": "220b19d6bff97894414402aaee69b2911bf020cb0e30527d2ac659873680d646",
+    "source_anchor": "thoma/swing/00.png (baseline A8)",
+    "source_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+    "transform": [],
+    "tool": "Python Pillow manual donor-pixel compositing",
+    "prompt": null,
+    "whole_frame_regeneration": false,
+    "description": "No stance repair prescribed; retain A8 grounded boots.",
+    "changed_pixels": 0,
+    "technical": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "bottom": 464,
+      "ground": 13,
+      "mace_centre": [
+        190.41148325358853,
+        85.2153110047847
+      ],
+      "mace_error": 1.6030421960794052,
+      "contact_opaque": true
+    },
+    "decision": "PENDING_VISUAL_INSPECTION"
+  }
+]

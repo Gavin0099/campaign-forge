@@ -1,0 +1,68 @@
+{
+  "frame": "thoma/swing/02.png",
+  "region": "head",
+  "attempt": 2,
+  "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/02.png",
+  "input_sha256": "fdcdd0aa2ff102c70909f5e97105d6ba36f1c33bca127d9381fdca2610d5dd8c",
+  "output": "godot-spike/docs/evidence/spike02-a9/attempts/02/head-2.png",
+  "output_sha256": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+  "mask": "godot-spike/docs/evidence/spike02-a9/attempts/02/head-2-mask.png",
+  "mask_sha256": "40363a0bc2106fd302043aa409304111cb55d4875cbf8b3f308c926e8a317598",
+  "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/02/head.png",
+  "permission_mask_sha256": "1dd534c32800fe881d10dc6de5850ab2dded427696d92fccd9758f609399a441",
+  "source_anchor": "thoma/idle/01.png",
+  "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+  "transform": [
+    {
+      "part": "head",
+      "matrix": [
+        1.0,
+        -0.0,
+        26.0,
+        0.0,
+        1.0,
+        7.0
+      ],
+      "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/idle-01/head.png"
+    }
+  ],
+  "tool": "Python Pillow manual donor-pixel compositing",
+  "prompt": null,
+  "whole_frame_regeneration": false,
+  "description": "Revision2: exact donor face/hair; remove warm old crown only above ears, retain teal collar underpainting; no face repaint.",
+  "changed_pixels": 3762,
+  "technical": {
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bottom": 464,
+    "ground": 15,
+    "mace_centre": [
+      447.3775038520801,
+      111.56702619414484
+    ],
+    "mace_error": 2.255673922168485,
+    "contact_opaque": true
+  },
+  "decision": "kept",
+  "kept": true,
+  "reason": "Native-size model inspection: identity/motif improves; protected A8 PASS items remain visually intact. No Owner approval.",
+  "regression_check_13": {
+    "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+    "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+    "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+    "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+    "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+    "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+    "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+    "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+    "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+    "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+    "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+    "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+    "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+  },
+  "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+}

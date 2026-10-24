@@ -1,0 +1,74 @@
+{
+  "frame": "thoma/swing/00.png",
+  "region": "mace",
+  "attempt": 2,
+  "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+  "input_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+  "output": "godot-spike/docs/evidence/spike02-a9/attempts/00/mace-2.png",
+  "output_sha256": "080b4ac4d11b1de7e0d032bb4c0311ecdd300d77bbaecf2e816881da12fba488",
+  "mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/mace-2-mask.png",
+  "mask_sha256": "b4f978faf7fd37b07cbb92ebd1528bc685d224f6d8c388f3dc07de58a2ab78b8",
+  "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/mace.png",
+  "permission_mask_sha256": "5fbc4aaa1624b02339d3a08bc618f4723a5ad520944cddd7a17768fd0aa3df1b",
+  "source_anchor": "thoma/swing/05.png",
+  "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+  "transform": [
+    {
+      "part": "canon_mace",
+      "matrix": [
+        0.3133702998751301,
+        0.9496310100013431,
+        -193.1087032026013,
+        -0.9496310100013431,
+        0.3133702998751301,
+        193.41540537188115
+      ],
+      "scale": 1,
+      "original_grip": [
+        151,
+        110
+      ],
+      "source_mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/mace-2-source-mask.png",
+      "source_mask_sha256": "f9ee2cf69b57171f88698f6c5f52e7d0858b7adfb3f0ab7e930784ff70b73815"
+    }
+  ],
+  "tool": "Python Pillow manual donor-pixel compositing",
+  "prompt": null,
+  "whole_frame_regeneration": false,
+  "description": "Revision2: tightly traced recover05 weapon mask excludes ivory robe/bag contamination; rigid scale1, original fingers restored, +1px centroid allowance.",
+  "changed_pixels": 1050,
+  "technical": {
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bottom": 464,
+    "ground": 13,
+    "mace_centre": [
+      191.29245283018867,
+      85.33018867924528
+    ],
+    "mace_error": 0.7807993093041088,
+    "contact_opaque": true
+  },
+  "decision": "kept",
+  "kept": true,
+  "reason": "Native-size model inspection: rigid canon head/haft size and straightness improve; original fingers/cuff retained; integration still needs W3 review. Protected A8 PASS items remain visually intact. No Owner approval.",
+  "regression_check_13": {
+    "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+    "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+    "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+    "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+    "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+    "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+    "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+    "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+    "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+    "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+    "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+    "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+    "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+  },
+  "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+}

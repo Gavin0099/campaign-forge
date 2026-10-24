@@ -1,0 +1,80 @@
+{
+  "frame": "thoma/swing/00.png",
+  "region": "mace",
+  "attempt": 1,
+  "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/00.png",
+  "input_sha256": "59eb02428446c5ed9c69d0673a3f7c41dd06163dc878f5d9f53e21fa7baae55b",
+  "output": "godot-spike/docs/evidence/spike02-a9/attempts/00/mace-1.png",
+  "output_sha256": "84e47284e350ea06d88dfd08cebbdfb862bec0cb634a92f0fb8c02d1744424ed",
+  "mask": "godot-spike/docs/evidence/spike02-a9/attempts/00/mace-1-mask.png",
+  "mask_sha256": "e8be77aaa1dc31e0d0b081af981f4ad47ab8b93a8b3a6940d1f23783f1fdd0e7",
+  "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/00/mace.png",
+  "permission_mask_sha256": "5fbc4aaa1624b02339d3a08bc618f4723a5ad520944cddd7a17768fd0aa3df1b",
+  "source_anchor": "thoma/swing/05.png",
+  "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+  "transform": [
+    {
+      "part": "canon_mace_rigid",
+      "matrix": [
+        0.3133702998751301,
+        0.9496310100013431,
+        -194.1087032026013,
+        -0.9496310100013431,
+        0.3133702998751301,
+        192.41540537188115
+      ],
+      "scale": 1,
+      "head_source": [
+        223,
+        333
+      ],
+      "head_target": [
+        192,
+        85
+      ],
+      "original_grip": [
+        151,
+        110
+      ],
+      "source_mask": "godot-spike/docs/evidence/spike02-a9/masks/swing-05/mace.png"
+    }
+  ],
+  "tool": "Python Pillow manual donor-pixel compositing",
+  "prompt": null,
+  "whole_frame_regeneration": false,
+  "description": "Rigid recover05 mace transplant, no compression; preserve original gripping fingers. Grip alignment and alpha independently reviewed.",
+  "changed_pixels": 1283,
+  "technical": {
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bottom": 464,
+    "ground": 13,
+    "mace_centre": [
+      188.06013071895424,
+      82.89019607843137
+    ],
+    "mace_error": 4.46921050513336,
+    "contact_opaque": true
+  },
+  "decision": "reverted_to_a8",
+  "kept": false,
+  "reason": "Native review found donor robe contamination and target-centroid error in rigid mace1. Replaced by bounded revision2.",
+  "regression_check_13": {
+    "face_hair": "FAIL: local candidate not certified.",
+    "stole": "FAIL: local candidate not certified.",
+    "embroidery": "FAIL: local candidate not certified.",
+    "tassels": "FAIL: local candidate not certified.",
+    "cuffs": "PASS: feature unchanged.",
+    "hem": "PASS: feature unchanged.",
+    "palette": "PASS: feature unchanged.",
+    "seams": "FAIL: local candidate not certified.",
+    "bag_count": "PASS: feature unchanged.",
+    "feet": "PASS: feature unchanged.",
+    "mace": "FAIL: local candidate not certified.",
+    "landmarks": "FAIL: local candidate not certified.",
+    "sequence": "FAIL: local candidate not certified."
+  }
+}

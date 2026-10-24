@@ -1,0 +1,90 @@
+{
+  "frame": "thoma/swing/03.png",
+  "region": "embroidery",
+  "attempt": 2,
+  "input": "godot-spike/docs/evidence/spike02-a9/baseline-a8/03.png",
+  "input_sha256": "5e26004a23c014dee7a4ff0b90bf25fcd3341910355c9f91ac1ed4fd711cb3bd",
+  "output": "godot-spike/docs/evidence/spike02-a9/attempts/03/embroidery-2.png",
+  "output_sha256": "282a28b2cccf509afe99e8a7bc7dbb87479d5f6d785b47d71a6a7d695cdebd8f",
+  "mask": "godot-spike/docs/evidence/spike02-a9/attempts/03/embroidery-2-mask.png",
+  "mask_sha256": "0162dec9439039188d46fec4cebf68bee2daeb0d3aaaecc304eb4def5831f33b",
+  "permission_mask": "godot-spike/docs/evidence/spike02-a9/masks/03/embroidery.png",
+  "permission_mask_sha256": "912b18e19dcbf70160f9adfe1cb0339eb786941d3223dbfad9abd32825dd8955",
+  "source_anchor": "thoma/idle/01.png",
+  "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+  "transform": [
+    {
+      "part": "left",
+      "source_box": [
+        225,
+        349,
+        251,
+        373
+      ],
+      "matrix": [
+        0.9455185755993168,
+        -0.3255681544571567,
+        53.54327383965321,
+        0.3255681544571567,
+        0.9455185755993168,
+        -44.14431509856081
+      ]
+    },
+    {
+      "part": "right",
+      "source_box": [
+        289,
+        300,
+        307,
+        347
+      ],
+      "matrix": [
+        1.0,
+        -0.0,
+        -39.0,
+        0.0,
+        1.0,
+        11.0
+      ]
+    }
+  ],
+  "tool": "Python Pillow manual donor-pixel compositing",
+  "prompt": null,
+  "whole_frame_regeneration": false,
+  "description": "Revision2: exclude anchor weapon occlusion and teal edge from motif crops; retain original alpha and feather1px. Larger A8 motifs may remain around patch.",
+  "changed_pixels": 2014,
+  "technical": {
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "bottom": 464,
+    "ground": 18,
+    "mace_centre": [
+      454.50970873786406,
+      195.39320388349515
+    ],
+    "mace_error": 0.7801198938190365,
+    "contact_opaque": true
+  },
+  "decision": "withdrawn_after_adjacent_review",
+  "kept": false,
+  "reason": "Adjacent/source review revealed residual A8 leaves plus donor motif make the embroidery larger/doubled; improvement not established. Third operation restores A8 region.",
+  "regression_check_13": {
+    "face_hair": "FAIL: not certified by this local operation; full W3 audit required.",
+    "stole": "FAIL: not certified by this local operation; full W3 audit required.",
+    "embroidery": "FAIL: not certified by this local operation; full W3 audit required.",
+    "tassels": "FAIL: not certified by this local operation; full W3 audit required.",
+    "cuffs": "PASS: A8 passing feature remains intact in native candidate review.",
+    "hem": "PASS: A8 passing feature remains intact in native candidate review.",
+    "palette": "PASS: A8 passing feature remains intact in native candidate review.",
+    "seams": "FAIL: not certified by this local operation; full W3 audit required.",
+    "bag_count": "PASS: A8 passing feature remains intact in native candidate review.",
+    "feet": "PASS: A8 passing feature remains intact in native candidate review.",
+    "mace": "FAIL: not certified by this local operation; full W3 audit required.",
+    "landmarks": "FAIL: not certified by this local operation; full W3 audit required.",
+    "sequence": "FAIL: not certified by this local operation; full W3 audit required."
+  },
+  "regression_authority": "model native source comparison; A8 PASS items protected; not human approval"
+}
