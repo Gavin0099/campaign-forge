@@ -1,0 +1,126 @@
+[
+  {
+    "frame": "thoma/swing/02.png",
+    "attempt": 1,
+    "tool": "image_gen (built-in)",
+    "prompt": "Use case: stylized-concept. Asset: ONE complete newly painted full-body 2D animation sprite, frame swing/02, real transparent background, square 512x512 canvas (if higher resolution output, preserve these normalized coordinates). Reference image 1 idle/01 and reference image 2 swing/05 are the ONLY authorities for ALL costume detail, face, grey hair/beard, muted teal/ivory/brown palette, brush/ink style, exact short one-handed flanged mace (dark iron flanges, worn oak haft, small brass collar). Reference image 3 A5 swing/02 defines POSE AND SILHOUETTE ONLY: never copy its broken cloth fragments, gaps, costume patches or detached shoes. Regenerate the ENTIRE man coherently in a single painting, no cutout parts or collage. Same elderly weathered man in three-quarter view facing right. Head near x296 y145, head-to-ground height about 350 pixels, planted ground y464, stance centered on foot pivot [256,464], left boot x128 y444 and right boot x370 y430. Braced mid-swing torso; right arm extends diagonally up/right, hand around [371,166], short mace head around [443,111], SAME mace proportions as references 1/2, not a long pole weapon. Left arm counterbalances with one naturally attached hand. Coherent shoulder and sleeves, ivory wide inner cuffs; unbroken teal robe over ivory underskirt, continuous scalloped hem, both legs visibly connect to brown boots. Exactly ONE brown satchel at left hip with single rolled cloth, one belt and round bronze pendant. Two continuous ivory stole bands, simple small botanical embroidery only at their lower ends, same motif scale as references 1/2; no embroidery added to robe/hem. Do not add accessories, magic, scenery, props, other figures, labels, shadow, platform or background. Full head, both feet and mace entirely inside canvas. Match worn painterly fine ink edges, subdued top-left light and precise costume detail of references 1/2. A restrained short grey-teal motion smear behind mace only. Avoid triangular hem scraps, floating sleeve pieces, disconnected limbs, cloned bag, redesigned face, chibi proportions, bright grading.",
+    "references": [
+      {
+        "path": "shared-anim/thoma/idle/01.png",
+        "role": "costume/face/hair/palette/painting/mace",
+        "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808"
+      },
+      {
+        "path": "shared-anim/thoma/swing/05.png",
+        "role": "costume/face/hair/palette/painting/mace",
+        "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+      },
+      {
+        "path": "shared-anim/thoma/swing/02.png",
+        "role": "A5 pose/silhouette ONLY",
+        "sha256": "91a68c71be081b72fef49a0c90ec010f1fe6a456b64b9ecda1940ae4a0867818"
+      }
+    ],
+    "settings": {
+      "transparent_background": true,
+      "seed": "not exposed",
+      "model": "not exposed",
+      "quality": "not exposed",
+      "requested_size": "512x512 via prompt",
+      "returned_size": [
+        1280,
+        1280
+      ]
+    },
+    "raw": "godot-spike/docs/evidence/spike02-a6/candidates/02/attempt-1.png",
+    "pick": true,
+    "reason": "Best W1 proof: continuous sleeve/hem, both boots attached, consistent two-band stole and one satchel; retains recognizable botanical costume. Remaining motif/texture drift is a W3 failure, not waived.",
+    "raw_sha256": "4d462f01ef8327c8a309613dfc4e92fd7681742eeed35f5d4793ea0715376942",
+    "runtime_sha256": null,
+    "adopted": false,
+    "normalization": {
+      "raw_sha256": "4d462f01ef8327c8a309613dfc4e92fd7681742eeed35f5d4793ea0715376942",
+      "normalized_sha256": "0f76a0f68e6ea294146accdba635fa999a5fb6db532bc2b957461dd2e2050624",
+      "settings": {
+        "scale": 0.37155,
+        "translate": [
+          25.0,
+          35.2
+        ],
+        "palette_remap": true
+      },
+      "palette_distance": {
+        "before": 6.622218,
+        "after": 0.576556,
+        "metric": "mean nearest idle/01 128-color Euclidean RGB, alpha>240"
+      },
+      "cleanup_mask": "godot-spike/docs/evidence/spike02-a6/normalized/02-attempt-1-cleanup-mask.png",
+      "cleanup_mask_sha256": "ba5802b9c17d40dc8b6cff279d789ffd69cd9fe9528bcb5430bdb23cd9ffc7b5",
+      "operations": "single uniform scale/translate; alpha<24 cleared; nearest idle/01 128-color remap, no dither; transparent RGB cleared; no costume compositing",
+      "runtime_sha256": null,
+      "adopted": false
+    }
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "attempt": 2,
+    "tool": "image_gen (built-in)",
+    "prompt": "Use case: stylized-concept. Asset: ONE complete newly painted full-body 2D animation sprite, frame swing/02, real transparent background, square 512x512 canvas (if higher resolution output, preserve these normalized coordinates). Reference image 1 idle/01 and reference image 2 swing/05 are the ONLY authorities for ALL costume detail, face, grey hair/beard, muted teal/ivory/brown palette, brush/ink style, exact short one-handed flanged mace (dark iron flanges, worn oak haft, small brass collar). Reference image 3 A5 swing/02 defines POSE AND SILHOUETTE ONLY: never copy its broken cloth fragments, gaps, costume patches or detached shoes. Regenerate the ENTIRE man coherently in a single painting, no cutout parts or collage. Same elderly weathered man in three-quarter view facing right. Head near x296 y145, head-to-ground height about 350 pixels, planted ground y464, stance centered on foot pivot [256,464], left boot x128 y444 and right boot x370 y430. Braced mid-swing torso; right arm extends diagonally up/right, hand around [371,166], short mace head around [443,111], SAME mace proportions as references 1/2, not a long pole weapon. Left arm counterbalances with one naturally attached hand. Coherent shoulder and sleeves, ivory wide inner cuffs; unbroken teal robe over ivory underskirt, continuous scalloped hem, both legs visibly connect to brown boots. Exactly ONE brown satchel at left hip with single rolled cloth, one belt and round bronze pendant. Two continuous ivory stole bands, simple small botanical embroidery only at their lower ends, same motif scale as references 1/2; no embroidery added to robe/hem. Do not add accessories, magic, scenery, props, other figures, labels, shadow, platform or background. Full head, both feet and mace entirely inside canvas. Match worn painterly fine ink edges, subdued top-left light and precise costume detail of references 1/2. A restrained short grey-teal motion smear behind mace only. Avoid triangular hem scraps, floating sleeve pieces, disconnected limbs, cloned bag, redesigned face, chibi proportions, bright grading.\nCorrection for this independent attempt: match the SMALL, understated botanical sprigs of references 1/2 exactly; preserve their ivory stole's short fringe and restrained dark-grey embroidered leaves, not a large decorative plant. Avoid excessive crisp texture, saturated teal, reddish trim or a youthful face; the reference has a slender weathered elderly face and soft fine brushwork. Keep the swing silhouette but render costume with the exact unornamented worn surfaces of reference 1. No bright orange embroidery borders. One small original-size satchel only.",
+    "references": [
+      {
+        "path": "shared-anim/thoma/idle/01.png",
+        "role": "costume/face/hair/palette/painting/mace",
+        "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808"
+      },
+      {
+        "path": "shared-anim/thoma/swing/05.png",
+        "role": "costume/face/hair/palette/painting/mace",
+        "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+      },
+      {
+        "path": "shared-anim/thoma/swing/02.png",
+        "role": "A5 pose/silhouette ONLY",
+        "sha256": "91a68c71be081b72fef49a0c90ec010f1fe6a456b64b9ecda1940ae4a0867818"
+      }
+    ],
+    "settings": {
+      "transparent_background": true,
+      "seed": "not exposed",
+      "model": "not exposed",
+      "quality": "not exposed",
+      "requested_size": "512x512 via prompt",
+      "returned_size": [
+        1280,
+        1280
+      ]
+    },
+    "raw": "godot-spike/docs/evidence/spike02-a6/candidates/02/attempt-2.png",
+    "pick": false,
+    "reason": "Rejected in favor of 1: shoulder/stole drape more bulbous, embroidery simplification and wrist/hand pose drift; structural feet are improved but fidelity is not better.",
+    "raw_sha256": "5cb4d19822b571cc7f7416c3dddcf45d9ed3bfeeab50873611af07515e1e7756",
+    "runtime_sha256": null,
+    "adopted": false,
+    "normalization": {
+      "raw_sha256": "5cb4d19822b571cc7f7416c3dddcf45d9ed3bfeeab50873611af07515e1e7756",
+      "normalized_sha256": "114651c14b10026b237833d59ea1faff15c0c3c3cb3047675737428eed196bc3",
+      "settings": {
+        "scale": 0.3893,
+        "translate": [
+          17.0,
+          19.5
+        ],
+        "palette_remap": true
+      },
+      "palette_distance": {
+        "before": 5.661234,
+        "after": 0.692524,
+        "metric": "mean nearest idle/01 128-color Euclidean RGB, alpha>240"
+      },
+      "cleanup_mask": "godot-spike/docs/evidence/spike02-a6/normalized/02-attempt-2-cleanup-mask.png",
+      "cleanup_mask_sha256": "3cf61441d31a6a8ad05fd23b2d8b2c653d4f8a31e08583efa2ba80218a277575",
+      "operations": "single uniform scale/translate; alpha<24 cleared; nearest idle/01 128-color remap, no dither; transparent RGB cleared; no costume compositing",
+      "runtime_sha256": null,
+      "adopted": false
+    }
+  }
+]
