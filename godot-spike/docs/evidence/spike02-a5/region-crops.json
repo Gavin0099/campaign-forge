@@ -1,0 +1,2402 @@
+[
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "stole",
+    "crop": [
+      191,
+      153,
+      317,
+      392
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "stole",
+    "crop": [
+      188,
+      150,
+      317,
+      389
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/00.png",
+    "region": "stole",
+    "crop": [
+      189,
+      155,
+      318,
+      394
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "shared-anim/thoma/swing/00.png",
+    "region": "stole",
+    "crop": [
+      197,
+      155,
+      308,
+      394
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "embroidery",
+    "crop": [
+      222,
+      339,
+      257,
+      382
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "embroidery",
+    "crop": [
+      222,
+      336,
+      257,
+      379
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/00.png",
+    "region": "embroidery",
+    "crop": [
+      206,
+      341,
+      249,
+      384
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "shared-anim/thoma/swing/00.png",
+    "region": "embroidery",
+    "crop": [
+      209,
+      341,
+      248,
+      384
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "cuffs",
+    "crop": [
+      153,
+      211,
+      333,
+      284
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "cuffs",
+    "crop": [
+      152,
+      208,
+      332,
+      281
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/00.png",
+    "region": "cuffs",
+    "crop": [
+      113,
+      139,
+      363,
+      268
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "shared-anim/thoma/swing/00.png",
+    "region": "cuffs",
+    "crop": [
+      113,
+      139,
+      363,
+      267
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "hem",
+    "crop": [
+      163,
+      347,
+      327,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "hem",
+    "crop": [
+      160,
+      343,
+      330,
+      429
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/00.png",
+    "region": "hem",
+    "crop": [
+      137,
+      349,
+      329,
+      432
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "shared-anim/thoma/swing/00.png",
+    "region": "hem",
+    "crop": [
+      125,
+      349,
+      320,
+      435
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "face_hair",
+    "crop": [
+      224,
+      98,
+      293,
+      177
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "face_hair",
+    "crop": [
+      222,
+      90,
+      288,
+      169
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/00.png",
+    "region": "face_hair",
+    "crop": [
+      219,
+      108,
+      288,
+      187
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "shared-anim/thoma/swing/00.png",
+    "region": "face_hair",
+    "crop": [
+      219,
+      108,
+      288,
+      187
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "palette",
+    "crop": [
+      165,
+      146,
+      331,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "palette",
+    "crop": [
+      162,
+      143,
+      332,
+      431
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/00.png",
+    "region": "palette",
+    "crop": [
+      138,
+      148,
+      334,
+      432
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "shared-anim/thoma/swing/00.png",
+    "region": "palette",
+    "crop": [
+      124,
+      148,
+      323,
+      436
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/00.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "shared-anim/thoma/swing/00.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/00.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "shared-anim/thoma/swing/00.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/00.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "shared-anim/thoma/swing/00.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/00.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/00.png",
+    "source": "shared-anim/thoma/swing/00.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "stole",
+    "crop": [
+      191,
+      153,
+      317,
+      392
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "stole",
+    "crop": [
+      188,
+      150,
+      317,
+      389
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/01.png",
+    "region": "stole",
+    "crop": [
+      180,
+      154,
+      336,
+      393
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "shared-anim/thoma/swing/01.png",
+    "region": "stole",
+    "crop": [
+      188,
+      154,
+      325,
+      393
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "embroidery",
+    "crop": [
+      222,
+      339,
+      257,
+      382
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "embroidery",
+    "crop": [
+      222,
+      336,
+      257,
+      379
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/01.png",
+    "region": "embroidery",
+    "crop": [
+      226,
+      340,
+      268,
+      383
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "shared-anim/thoma/swing/01.png",
+    "region": "embroidery",
+    "crop": [
+      229,
+      340,
+      266,
+      383
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "cuffs",
+    "crop": [
+      153,
+      211,
+      333,
+      284
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "cuffs",
+    "crop": [
+      152,
+      208,
+      332,
+      281
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/01.png",
+    "region": "cuffs",
+    "crop": [
+      148,
+      141,
+      336,
+      255
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "shared-anim/thoma/swing/01.png",
+    "region": "cuffs",
+    "crop": [
+      148,
+      141,
+      336,
+      255
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "hem",
+    "crop": [
+      163,
+      347,
+      327,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "hem",
+    "crop": [
+      160,
+      343,
+      330,
+      429
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/01.png",
+    "region": "hem",
+    "crop": [
+      162,
+      348,
+      347,
+      431
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "shared-anim/thoma/swing/01.png",
+    "region": "hem",
+    "crop": [
+      161,
+      348,
+      342,
+      433
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "face_hair",
+    "crop": [
+      224,
+      98,
+      293,
+      177
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "face_hair",
+    "crop": [
+      222,
+      90,
+      288,
+      169
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/01.png",
+    "region": "face_hair",
+    "crop": [
+      226,
+      104,
+      296,
+      183
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "shared-anim/thoma/swing/01.png",
+    "region": "face_hair",
+    "crop": [
+      226,
+      104,
+      296,
+      183
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "palette",
+    "crop": [
+      165,
+      146,
+      331,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "palette",
+    "crop": [
+      162,
+      143,
+      332,
+      431
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/01.png",
+    "region": "palette",
+    "crop": [
+      163,
+      147,
+      351,
+      431
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "shared-anim/thoma/swing/01.png",
+    "region": "palette",
+    "crop": [
+      161,
+      147,
+      342,
+      435
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/01.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "shared-anim/thoma/swing/01.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/01.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "shared-anim/thoma/swing/01.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/01.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "shared-anim/thoma/swing/01.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/01.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/01.png",
+    "source": "shared-anim/thoma/swing/01.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "stole",
+    "crop": [
+      191,
+      153,
+      317,
+      392
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "stole",
+    "crop": [
+      188,
+      150,
+      317,
+      389
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/02.png",
+    "region": "stole",
+    "crop": [
+      211,
+      157,
+      335,
+      396
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "shared-anim/thoma/swing/02.png",
+    "region": "stole",
+    "crop": [
+      216,
+      157,
+      324,
+      396
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "embroidery",
+    "crop": [
+      222,
+      339,
+      257,
+      382
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "embroidery",
+    "crop": [
+      222,
+      336,
+      257,
+      379
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/02.png",
+    "region": "embroidery",
+    "crop": [
+      222,
+      343,
+      266,
+      386
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "shared-anim/thoma/swing/02.png",
+    "region": "embroidery",
+    "crop": [
+      224,
+      343,
+      265,
+      386
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "cuffs",
+    "crop": [
+      153,
+      211,
+      333,
+      284
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "cuffs",
+    "crop": [
+      152,
+      208,
+      332,
+      281
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/02.png",
+    "region": "cuffs",
+    "crop": [
+      289,
+      170,
+      360,
+      278
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "shared-anim/thoma/swing/02.png",
+    "region": "cuffs",
+    "crop": [
+      289,
+      170,
+      358,
+      276
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "hem",
+    "crop": [
+      163,
+      347,
+      327,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "hem",
+    "crop": [
+      160,
+      343,
+      330,
+      429
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/02.png",
+    "region": "hem",
+    "crop": [
+      152,
+      351,
+      348,
+      436
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "shared-anim/thoma/swing/02.png",
+    "region": "hem",
+    "crop": [
+      114,
+      351,
+      343,
+      436
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "face_hair",
+    "crop": [
+      224,
+      98,
+      293,
+      177
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "face_hair",
+    "crop": [
+      222,
+      90,
+      288,
+      169
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/02.png",
+    "region": "face_hair",
+    "crop": [
+      265,
+      110,
+      332,
+      189
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "shared-anim/thoma/swing/02.png",
+    "region": "face_hair",
+    "crop": [
+      265,
+      110,
+      332,
+      189
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "palette",
+    "crop": [
+      165,
+      146,
+      331,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "palette",
+    "crop": [
+      162,
+      143,
+      332,
+      431
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/02.png",
+    "region": "palette",
+    "crop": [
+      152,
+      150,
+      351,
+      439
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "shared-anim/thoma/swing/02.png",
+    "region": "palette",
+    "crop": [
+      114,
+      150,
+      343,
+      438
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/02.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "shared-anim/thoma/swing/02.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/02.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "shared-anim/thoma/swing/02.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/02.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "shared-anim/thoma/swing/02.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/02.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/02.png",
+    "source": "shared-anim/thoma/swing/02.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "stole",
+    "crop": [
+      191,
+      153,
+      317,
+      392
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "stole",
+    "crop": [
+      188,
+      150,
+      317,
+      389
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/03.png",
+    "region": "stole",
+    "crop": [
+      207,
+      158,
+      331,
+      397
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "shared-anim/thoma/swing/03.png",
+    "region": "stole",
+    "crop": [
+      212,
+      158,
+      320,
+      397
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "embroidery",
+    "crop": [
+      222,
+      339,
+      257,
+      382
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "embroidery",
+    "crop": [
+      222,
+      336,
+      257,
+      379
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/03.png",
+    "region": "embroidery",
+    "crop": [
+      218,
+      344,
+      262,
+      387
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "shared-anim/thoma/swing/03.png",
+    "region": "embroidery",
+    "crop": [
+      220,
+      344,
+      261,
+      387
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "cuffs",
+    "crop": [
+      153,
+      211,
+      333,
+      284
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "cuffs",
+    "crop": [
+      152,
+      208,
+      332,
+      281
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/03.png",
+    "region": "cuffs",
+    "crop": [
+      276,
+      179,
+      336,
+      274
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "shared-anim/thoma/swing/03.png",
+    "region": "cuffs",
+    "crop": [
+      276,
+      179,
+      336,
+      273
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "hem",
+    "crop": [
+      163,
+      347,
+      327,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "hem",
+    "crop": [
+      160,
+      343,
+      330,
+      429
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/03.png",
+    "region": "hem",
+    "crop": [
+      146,
+      352,
+      344,
+      438
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "shared-anim/thoma/swing/03.png",
+    "region": "hem",
+    "crop": [
+      117,
+      352,
+      337,
+      438
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "face_hair",
+    "crop": [
+      224,
+      98,
+      293,
+      177
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "face_hair",
+    "crop": [
+      222,
+      90,
+      288,
+      169
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/03.png",
+    "region": "face_hair",
+    "crop": [
+      250,
+      109,
+      319,
+      188
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "shared-anim/thoma/swing/03.png",
+    "region": "face_hair",
+    "crop": [
+      250,
+      109,
+      319,
+      188
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "palette",
+    "crop": [
+      165,
+      146,
+      331,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "palette",
+    "crop": [
+      162,
+      143,
+      332,
+      431
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/03.png",
+    "region": "palette",
+    "crop": [
+      147,
+      151,
+      347,
+      439
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "shared-anim/thoma/swing/03.png",
+    "region": "palette",
+    "crop": [
+      117,
+      151,
+      336,
+      440
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/03.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "shared-anim/thoma/swing/03.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/03.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "shared-anim/thoma/swing/03.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/03.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "shared-anim/thoma/swing/03.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/03.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/03.png",
+    "source": "shared-anim/thoma/swing/03.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "stole",
+    "crop": [
+      191,
+      153,
+      317,
+      392
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "stole",
+    "crop": [
+      188,
+      150,
+      317,
+      389
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/04.png",
+    "region": "stole",
+    "crop": [
+      177,
+      161,
+      337,
+      400
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "shared-anim/thoma/swing/04.png",
+    "region": "stole",
+    "crop": [
+      181,
+      161,
+      330,
+      400
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "embroidery",
+    "crop": [
+      222,
+      339,
+      257,
+      382
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "embroidery",
+    "crop": [
+      222,
+      336,
+      257,
+      379
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/04.png",
+    "region": "embroidery",
+    "crop": [
+      188,
+      347,
+      239,
+      390
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "shared-anim/thoma/swing/04.png",
+    "region": "embroidery",
+    "crop": [
+      191,
+      347,
+      238,
+      390
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "cuffs",
+    "crop": [
+      153,
+      211,
+      333,
+      284
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "cuffs",
+    "crop": [
+      152,
+      208,
+      332,
+      281
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/04.png",
+    "region": "cuffs",
+    "crop": [
+      173,
+      198,
+      336,
+      304
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "shared-anim/thoma/swing/04.png",
+    "region": "cuffs",
+    "crop": [
+      173,
+      198,
+      336,
+      304
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "hem",
+    "crop": [
+      163,
+      347,
+      327,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "hem",
+    "crop": [
+      160,
+      343,
+      330,
+      429
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/04.png",
+    "region": "hem",
+    "crop": [
+      113,
+      355,
+      319,
+      440
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "shared-anim/thoma/swing/04.png",
+    "region": "hem",
+    "crop": [
+      109,
+      355,
+      307,
+      440
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "face_hair",
+    "crop": [
+      224,
+      98,
+      293,
+      177
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "face_hair",
+    "crop": [
+      222,
+      90,
+      288,
+      169
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/04.png",
+    "region": "face_hair",
+    "crop": [
+      276,
+      118,
+      342,
+      197
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "shared-anim/thoma/swing/04.png",
+    "region": "face_hair",
+    "crop": [
+      276,
+      118,
+      342,
+      197
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "palette",
+    "crop": [
+      165,
+      146,
+      331,
+      430
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "palette",
+    "crop": [
+      162,
+      143,
+      332,
+      431
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/04.png",
+    "region": "palette",
+    "crop": [
+      113,
+      154,
+      336,
+      442
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "shared-anim/thoma/swing/04.png",
+    "region": "palette",
+    "crop": [
+      109,
+      154,
+      329,
+      442
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/04.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "shared-anim/thoma/swing/04.png",
+    "region": "seams",
+    "crop": [
+      190,
+      145,
+      337,
+      235
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/04.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "shared-anim/thoma/swing/04.png",
+    "region": "waist_seam",
+    "crop": [
+      180,
+      227,
+      322,
+      286
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/04.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "shared-anim/thoma/swing/04.png",
+    "region": "bag",
+    "crop": [
+      175,
+      242,
+      250,
+      345
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/idle/01.png",
+    "source": "shared-anim/thoma/idle/01.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/05.png",
+    "source": "shared-anim/thoma/swing/05.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "godot-spike/docs/evidence/spike02-a5/baseline-a4/04.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  },
+  {
+    "frame": "thoma/swing/04.png",
+    "source": "shared-anim/thoma/swing/04.png",
+    "region": "feet",
+    "crop": [
+      100,
+      375,
+      420,
+      470
+    ],
+    "scale": 1
+  }
+]

@@ -19,8 +19,12 @@ POSES = copy.deepcopy(a4.POSES)
 # Recover body avoids idle mace occlusion through the satchel. Both references
 # still supply their original face and cuff pixels as in the A4 rig.
 HEM_EASE = {'00':.70,'01':.48,'02':.98,'03':.82,'04':.48}
-CLONE = {'source':[(182,329),(207,329),(220,362),(193,362)],
-         'target':[(187,307),(209,310),(229,341),(212,343)]}
+CLONES = [
+    {'source':rect(181,345,207,381),
+     'target':[(188,304),(219,310),(222,353),(201,345)]},
+    {'source':rect(235,271,252,308),
+     'target':[(219,311),(239,319),(249,353),(222,351)]},
+]
 
 def transform_body(im,p,hem=True):
     """Unit-scale upper garment; horizontal ease ONLY below all motif rows."""
@@ -71,9 +75,10 @@ def build(index,old):
     body=cut(ref,a4.ref_poly('recover','body'))
     # Recover mace occludes a small plain lower-band patch, NOT the satchel.
     # Use undecorated ivory cloth, not the old A4 bag-bearing source.
-    part=a4.perspective(ref,CLONE['source'],CLONE['target'])
-    m=mask(CLONE['target']);m=m.filter(ImageFilter.GaussianBlur(.7))
-    alpha=body.getchannel('A');body.paste(part,(0,0),m);body.putalpha(alpha)
+    for patch in CLONES:
+        part=a4.perspective(ref,patch['source'],patch['target'])
+        m=mask(patch['target']);m=m.filter(ImageFilter.GaussianBlur(.7))
+        alpha=body.getchannel('A');body.paste(part,(0,0),m);body.putalpha(alpha)
     body=transform_body(body,p)
     # Upper cape silhouette is retained from A4, ending before the satchel.
     # A4 head-clear prevents a duplicate face behind the translated reference.
@@ -104,6 +109,9 @@ def build(index,old):
     out.paste(blurred,(0,0),seam.point(lambda a:a//2))
     protected=Image.new('L',SIZE)
     for poly in p['weapon']:protected=ImageChops.lighter(protected,mask(poly))
+    head_mask=Image.new('L',SIZE)
+    head_mask.paste(mask(a4.ref_poly(p['ref'],'face-hair')),tuple(p['head']))
+    protected=ImageChops.lighter(protected,head_mask)
     # Preserve entire fixed feet, not a newly invented boot or changed stance.
     for poly in p['feet']:protected=ImageChops.lighter(protected,mask(poly))
     protected=ImageChops.lighter(protected,mask(rect(0,444,511,511)))
@@ -125,15 +133,15 @@ def controls():
     write(OUT/'rig-controls.json',{'base':'../spike02-a4/reference-regions/rig-controls.json',
         'poses':POSES,'body_reference':a4.REFS['recover'],'body_horizontal_scale':1.0,
         'hem_start_source_y':382,'hem_end_source_y':425,'hem_ease':HEM_EASE,
-        'plain_cloth_occlusion_patch':CLONE,'seam_blur_radius':.75,'canvas':[512,512],'pivot':[256,464]})
+        'plain_cloth_occlusion_patches':CLONES,'seam_blur_radius':.75,'canvas':[512,512],'pivot':[256,464]})
     measurements=[]
     for index,p in POSES.items():
         # Local mapping at same y: source horizontal 25px motif and 12px
         # horizontal feature spacing, independent of shear translation.
         motif=a4.REGIONS['embroidery'];width=motif[1][0]-motif[0][0]
         measurements.append({'frame':index,'reference':a4.REFS['recover'],'reference_roi':[226,340,251,373],
-            'reference_motif_roi_width_px':width,'reference_feature_spacing_px':12,
-            'a4_width_px':width*1.15,'a5_width_px':width,'a5_spacing_px':12,
+            'reference_motif_roi_width_px':width,
+            'a4_width_px':width*1.15,'a5_width_px':width,'horizontal_spacing_scale':1.0,
             'horizontal_change_percent':0,'tolerance_percent':5,'result':'PASS',
             'metric':'analytical local horizontal mapping of committed reference motif ROI; not a perceptual score'})
     write(OUT/'scale-measurement.json',measurements)

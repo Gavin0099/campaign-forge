@@ -1,0 +1,132 @@
+{
+  "authority": "model inspection; not human playtest",
+  "pairs": [
+    {
+      "from": "thoma/idle/01.png",
+      "to": "thoma/swing/00.png",
+      "region_mean_rgb_delta": {
+        "stole": 11.3477,
+        "embroidery": 2.3871,
+        "cuffs": 31.1651,
+        "hem": 4.3124,
+        "face_hair": 0.4521,
+        "palette": 10.9543
+      },
+      "garment_silhouette_iou": 0.702557,
+      "silhouette_crop": [
+        100,
+        275,
+        420,
+        440
+      ],
+      "visual_result": "FAIL",
+      "reason": "Pose-specific sleeve/shoulder fold orientation and lower-hem sweep still pop; numerical proxies do not establish continuity."
+    },
+    {
+      "from": "thoma/swing/00.png",
+      "to": "thoma/swing/01.png",
+      "region_mean_rgb_delta": {
+        "stole": 5.0581,
+        "embroidery": 0.1285,
+        "cuffs": 1.6389,
+        "hem": 0.3544,
+        "face_hair": 0.8692,
+        "palette": 6.153
+      },
+      "garment_silhouette_iou": 0.727237,
+      "silhouette_crop": [
+        100,
+        275,
+        420,
+        440
+      ],
+      "visual_result": "FAIL",
+      "reason": "Pose-specific sleeve/shoulder fold orientation and lower-hem sweep still pop; numerical proxies do not establish continuity."
+    },
+    {
+      "from": "thoma/swing/01.png",
+      "to": "thoma/swing/02.png",
+      "region_mean_rgb_delta": {
+        "stole": 18.4352,
+        "embroidery": 0.2753,
+        "cuffs": 42.7686,
+        "hem": 7.8941,
+        "face_hair": 6.1931,
+        "palette": 1.1575
+      },
+      "garment_silhouette_iou": 0.799952,
+      "silhouette_crop": [
+        100,
+        275,
+        420,
+        440
+      ],
+      "visual_result": "FAIL",
+      "reason": "Pose-specific sleeve/shoulder fold orientation and lower-hem sweep still pop; numerical proxies do not establish continuity."
+    },
+    {
+      "from": "thoma/swing/02.png",
+      "to": "thoma/swing/03.png",
+      "region_mean_rgb_delta": {
+        "stole": 1.7876,
+        "embroidery": 0.0,
+        "cuffs": 13.8887,
+        "hem": 3.1806,
+        "face_hair": 1.1703,
+        "palette": 0.9897
+      },
+      "garment_silhouette_iou": 0.903331,
+      "silhouette_crop": [
+        100,
+        275,
+        420,
+        440
+      ],
+      "visual_result": "FAIL",
+      "reason": "Pose-specific sleeve/shoulder fold orientation and lower-hem sweep still pop; numerical proxies do not establish continuity."
+    },
+    {
+      "from": "thoma/swing/03.png",
+      "to": "thoma/swing/04.png",
+      "region_mean_rgb_delta": {
+        "stole": 15.344,
+        "embroidery": 0.0436,
+        "cuffs": 0.9111,
+        "hem": 11.6354,
+        "face_hair": 1.2851,
+        "palette": 2.1144
+      },
+      "garment_silhouette_iou": 0.628581,
+      "silhouette_crop": [
+        100,
+        275,
+        420,
+        440
+      ],
+      "visual_result": "FAIL",
+      "reason": "Pose-specific sleeve/shoulder fold orientation and lower-hem sweep still pop; numerical proxies do not establish continuity."
+    },
+    {
+      "from": "thoma/swing/04.png",
+      "to": "thoma/swing/05.png",
+      "region_mean_rgb_delta": {
+        "stole": 5.7495,
+        "embroidery": 23.0632,
+        "cuffs": 14.6401,
+        "hem": 10.7735,
+        "face_hair": 0.1013,
+        "palette": 0.8042
+      },
+      "garment_silhouette_iou": 0.638437,
+      "silhouette_crop": [
+        100,
+        275,
+        420,
+        440
+      ],
+      "visual_result": "FAIL",
+      "reason": "Pose-specific sleeve/shoulder fold orientation and lower-hem sweep still pop; numerical proxies do not establish continuity."
+    }
+  ],
+  "limits": "Mean RGB includes changing occlusion. IoU is fixed-canvas garment crop, not registered perceptual similarity; no threshold used to approve art."
+}
