@@ -1,0 +1,283 @@
+{
+  "version": 1,
+  "characters": {
+    "thoma": {
+      "canvas_size": [
+        512,
+        512
+      ],
+      "pivot": [
+        256,
+        464
+      ],
+      "reference_height_px": 360,
+      "facing": "right"
+    },
+    "knight-a": {
+      "canvas_size": [
+        512,
+        512
+      ],
+      "pivot": [
+        256,
+        464
+      ],
+      "reference_height_px": 360,
+      "facing": "left"
+    },
+    "knight-b": {
+      "canvas_size": [
+        512,
+        512
+      ],
+      "pivot": [
+        256,
+        464
+      ],
+      "reference_height_px": 360,
+      "facing": "left"
+    }
+  },
+  "sequences": {
+    "thoma.idle": {
+      "character": "thoma",
+      "frames": [
+        {
+          "path": "thoma/idle/01.png",
+          "duration_ms": 100
+        }
+      ],
+      "loop": false
+    },
+    "knight-a.idle": {
+      "character": "knight-a",
+      "frames": [
+        {
+          "path": "knight-a/idle/00.png",
+          "duration_ms": 100
+        }
+      ],
+      "loop": false
+    },
+    "knight-b.idle": {
+      "character": "knight-b",
+      "frames": [
+        {
+          "path": "knight-b/idle/00.png",
+          "duration_ms": 100
+        }
+      ],
+      "loop": false
+    },
+    "thoma.swing": {
+      "character": "thoma",
+      "frames": [
+        {
+          "path": "thoma/swing/00.png",
+          "duration_ms": 180,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "path": "thoma/swing/01.png",
+          "duration_ms": 70,
+          "offset": [
+            40,
+            70
+          ]
+        },
+        {
+          "path": "thoma/swing/02.png",
+          "duration_ms": 40,
+          "offset": [
+            70,
+            160
+          ]
+        },
+        {
+          "path": "thoma/swing/03.png",
+          "duration_ms": 80,
+          "offset": [
+            100,
+            220
+          ]
+        },
+        {
+          "path": "thoma/swing/04.png",
+          "duration_ms": 100,
+          "offset": [
+            80,
+            160
+          ]
+        },
+        {
+          "path": "thoma/swing/05.png",
+          "duration_ms": 150,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "loop": false,
+      "contact_frame_index": 3,
+      "reduced_frame_indices": [
+        0,
+        3,
+        5
+      ],
+      "reduced_duration_ms": 100,
+      "events": [
+        {
+          "frame": 3,
+          "type": "spark",
+          "anchor": [
+            455,
+            196
+          ]
+        },
+        {
+          "frame": 3,
+          "type": "sfx",
+          "anchor": [
+            455,
+            196
+          ]
+        }
+      ]
+    },
+    "knight-a.hit": {
+      "character": "knight-a",
+      "frames": [
+        {
+          "path": "knight-a/hit/00.png",
+          "duration_ms": 90
+        },
+        {
+          "path": "knight-a/hit/01.png",
+          "duration_ms": 130
+        },
+        {
+          "path": "knight-a/hit/02.png",
+          "duration_ms": 140
+        }
+      ],
+      "loop": false
+    },
+    "knight-a.stagger": {
+      "character": "knight-a",
+      "frames": [
+        {
+          "path": "knight-a/stagger/00.png",
+          "duration_ms": 70
+        },
+        {
+          "path": "knight-a/stagger/01.png",
+          "duration_ms": 140
+        },
+        {
+          "path": "knight-a/stagger/02.png",
+          "duration_ms": 150
+        }
+      ],
+      "loop": false,
+      "events": [
+        {
+          "frame": 1,
+          "type": "dust",
+          "anchor": [
+            256,
+            460
+          ]
+        }
+      ]
+    },
+    "knight-b.hit": {
+      "character": "knight-b",
+      "frames": [
+        {
+          "path": "knight-b/hit/00.png",
+          "duration_ms": 90
+        },
+        {
+          "path": "knight-b/hit/01.png",
+          "duration_ms": 130
+        },
+        {
+          "path": "knight-b/hit/02.png",
+          "duration_ms": 140
+        }
+      ],
+      "loop": false
+    },
+    "knight-b.stagger": {
+      "character": "knight-b",
+      "frames": [
+        {
+          "path": "knight-b/stagger/00.png",
+          "duration_ms": 70
+        },
+        {
+          "path": "knight-b/stagger/01.png",
+          "duration_ms": 140
+        },
+        {
+          "path": "knight-b/stagger/02.png",
+          "duration_ms": 150
+        }
+      ],
+      "loop": false,
+      "events": [
+        {
+          "frame": 1,
+          "type": "dust",
+          "anchor": [
+            256,
+            460
+          ]
+        }
+      ]
+    }
+  },
+  "impact": {
+    "hitstop_ms": 80,
+    "shake": {
+      "strength_px": 3.4,
+      "duration_ms": 200,
+      "decay": 2
+    },
+    "flash_ms": 35,
+    "knockback_ms": 220,
+    "blocked_shove_ms": 60,
+    "blocked_recoil_ms": 160,
+    "blocked_shove_px": 6,
+    "settle_ms": 180,
+    "reduced_knockback_ms": 30
+  },
+  "camera": {
+    "zoom": 1.4,
+    "in_ms": 240,
+    "out_ms": 180,
+    "focus": "attacker_target_midpoint",
+    "focus_weight": 0.52
+  },
+  "scenarios": {
+    "open": {
+      "setup_index": 0,
+      "reaction": "hit",
+      "movement": "knockback"
+    },
+    "unit-blocked": {
+      "setup_index": 1,
+      "reaction": "stagger",
+      "movement": "knockback_blocked"
+    },
+    "terrain-blocked": {
+      "setup_index": 2,
+      "reaction": "stagger",
+      "movement": "knockback_blocked"
+    }
+  }
+}

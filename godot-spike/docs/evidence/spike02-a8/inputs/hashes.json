@@ -1,0 +1,26 @@
+[
+  {
+    "path": "godot-spike/docs/evidence/spike02-a8/inputs/anchors-2x.png",
+    "sha256": "fa1eea52c8367f2b36f5ac7fc0c271991fe725d30129658c383f9d1fdb48a603"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike02-a8/inputs/sheet-canvas.png",
+    "sha256": "e58a487b69ab5d3ecf283754a4b9c63fa7084fc25493ab1261d61ebdc7fd2454"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike02-a8/inputs/sheet-layout.json",
+    "sha256": "70c11b42df716cbf42ec7300fc8ebda2256d711a9f9d73168d7149c259d27925"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike02-a8/inputs/sheet-mask.png",
+    "sha256": "5322f385d5e1b7cdace3649a5b22d54e1d0e87046f6c84553817f97147b26201"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike02-a8/inputs/sheet-prompt.txt",
+    "sha256": "864580b5ce064f4cc991c95dd943a0a526c30bbd3f597830faa3aabf4504b94d"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike02-a8/inputs/spec-crops.png",
+    "sha256": "90cbfe6c72fddc924283aeadd0b4f7c4fe2ba5f345de157b556337eaed431599"
+  }
+]

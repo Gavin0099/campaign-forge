@@ -1,0 +1,38 @@
+[
+  {
+    "path": "godot-spike/docs/evidence/spike02-a8/baseline-a7/00.png",
+    "sha256": "15de2abfa371f64128cdbf2fb8cf25175cc4ca33edd07c4c1aebe72872195c2f"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike02-a8/baseline-a7/01.png",
+    "sha256": "04e70b804a28124bee6c9f6b3c38070336c6e44ea6f646899826f4fe1317f4da"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike02-a8/baseline-a7/02.png",
+    "sha256": "fcad56a9948ecb7ca9608354ecc2dbddccce2fb941275e0c982b123a04788af4"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike02-a8/baseline-a7/03.png",
+    "sha256": "746d8ebb880b1065fa9565856d75d128860e677cb59ad01fd61c232a556c7712"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike02-a8/baseline-a7/04.png",
+    "sha256": "9f2c7c110199648b853b7e1e472d6c4425e5fc4dbaa3cafdc15845d15d7e86cc"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike02-a8/baseline-a7/05.png",
+    "sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike02-a8/baseline-a7/frame-audit.json",
+    "sha256": "a3b8b0d99116168ef12cdae6fb626c79d1ded284a0e4a1521aac7dd69be15028"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike02-a8/baseline-a7/idle-01.png",
+    "sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike02-a8/baseline-a7/manifest.json",
+    "sha256": "ac9f0a10b3ca7556ee04336cbb81d6c660bfa2406e1b5282b7802d8fc68a3eea"
+  }
+]

@@ -1,0 +1,106 @@
+{
+  "size": [
+    2048,
+    1024
+  ],
+  "panel_size": [
+    512,
+    512
+  ],
+  "layout": "4+3 row-major; lower-right eighth cell intentionally empty; 2:1 avoids 7:1 tool aspect limits",
+  "background": "transparent straight alpha",
+  "mask": "white editable; black fixed; native tool has no mask parameter: supply as supporting image and prose constraint, never claim enforced masking",
+  "panels": [
+    {
+      "panel": 1,
+      "frame": "idle/01",
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "fixed": true,
+      "source": "shared-anim/thoma/idle/01.png",
+      "source_sha256": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808"
+    },
+    {
+      "panel": 2,
+      "frame": "swing/00",
+      "rect": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "fixed": false,
+      "source": "docs/art-briefs/thoma-swing/guides/swing-00-guide.png",
+      "source_sha256": "649be09cb9a06a8e888dcf23e822274d8594f497ad466d50788b1e81e0da1481"
+    },
+    {
+      "panel": 3,
+      "frame": "swing/01",
+      "rect": [
+        1024,
+        0,
+        1536,
+        512
+      ],
+      "fixed": false,
+      "source": "docs/art-briefs/thoma-swing/guides/swing-01-guide.png",
+      "source_sha256": "0da7d643325d178438f9fdf7aaa533d3f23bc45e05efc598dbbf51183bf0ba0d"
+    },
+    {
+      "panel": 4,
+      "frame": "swing/02",
+      "rect": [
+        1536,
+        0,
+        2048,
+        512
+      ],
+      "fixed": false,
+      "source": "docs/art-briefs/thoma-swing/guides/swing-02-guide.png",
+      "source_sha256": "ed6fe6c1e419cb522275abefe723a7598fb9ba857d7de4209acce48e1d6e9894"
+    },
+    {
+      "panel": 5,
+      "frame": "swing/03",
+      "rect": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "fixed": false,
+      "source": "docs/art-briefs/thoma-swing/guides/swing-03-guide.png",
+      "source_sha256": "68c6f6129275366ad6ac13df033bd9a48561a43ce7a57f592b9c0f78c56f72a5"
+    },
+    {
+      "panel": 6,
+      "frame": "swing/04",
+      "rect": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "fixed": false,
+      "source": "docs/art-briefs/thoma-swing/guides/swing-04-guide.png",
+      "source_sha256": "bf791849a119d248e8a0f6a3cf65412a36978ea153587be0196ef32d78c45c2c"
+    },
+    {
+      "panel": 7,
+      "frame": "swing/05",
+      "rect": [
+        1024,
+        512,
+        1536,
+        1024
+      ],
+      "fixed": true,
+      "source": "shared-anim/thoma/swing/05.png",
+      "source_sha256": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+    }
+  ]
+}
