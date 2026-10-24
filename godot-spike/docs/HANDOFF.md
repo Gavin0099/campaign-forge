@@ -1226,3 +1226,210 @@ report-only missing_canonical_memory advisory; no hook bypass or SessionEnd.
 Task DONE is not SessionEnd.**
 
 Final W6 actual-handoff check: `GODOT --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gtest=res://tests/test_a5_contract.gd -gexit` passed **6/6 tests, 540 assertions, exit 0** after this section and its exact table were written. [Final log](evidence/spike02-a5/handoff-table-check.log).
+
+## spike-02 A6
+
+**W1–W6 delivered for review; engineering passes, art remains PARTIAL.**
+Complete frame generation repairs the recurring A5 floating sleeve/hem pieces
+and detached boots. All five motion frames still have botanical motif/fringe,
+face and sequence fidelity failures and remain **PLACEHOLDER**. Frame04 also
+misses A5's follow-through mace-head height by about19px: the requested exact
+painted mace pose geometry is **not fully met**. No false all-art PASS is claimed.
+Human hit-feel/playtest remains **HUMAN_PENDING**, Owner art approval pending.
+Owner accepted Godot/P010; React and Phase B are **CANCELLED**. Thoma's short
+one-handed flanged mace remains **APPROVED canon**. No decision record edited.
+
+### Run and method
+
+Use this worktree on `codex/godot-spike`. `GODOT` is the Owner's existing
+`C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe`.
+
+```text
+GODOT --headless --path godot-spike -s res://tools/sync_shared_anim.gd
+GODOT --headless --path godot-spike --import
+GODOT --path godot-spike --resolution 1280x720
+```
+
+Choose a target/preview and confirm, or use R to replay the scoped attack;
+1/2/3 choose the existing fixtures, M toggles Reduced Motion, F1 diagnostics.
+This remains a one-attack art spike, not a full tactical battle.
+
+[METHOD](evidence/spike02-a6/METHOD.md) defines the bounded proof and cleanup.
+Built-in image_gen generated each full figure independently with exactly
+idle/01 + swing/05 for costume/face/palette/style/mace and A5 same-index ONLY
+for pose/silhouette. No cutout rig, costume-piece transfer or region warp.
+Only whole-frame uniform scale/translate, alpha cleanup and recorded idle
+palette remap were used. [All raw candidates](evidence/spike02-a6/candidates/)
+are unchanged; [exact prompts/settings/reference/raw/runtime hashes](../../shared-anim/a6-swing-prompts.json)
+and [SOURCES](../../shared-anim/SOURCES.md#spike-02-a6--complete-per-frame-regeneration)
+retain every attempt and cleanup mask. Seed/model/quality were not exposed.
+
+W1's [swing02 proof](evidence/spike02-a6/proof-02.png) clearly beats A5: no loose
+offhand cuff fragment, triangular hem scrap or disconnected right boot, while
+retaining the two-band stole/teal robe/ivory cuffs/satchel/pendant design.
+Gate PASS permitted W2; it did not approve exact motifs or a finished sequence.
+All A5 live PNGs are preserved byte for byte in [baseline-a5](evidence/spike02-a6/baseline-a5/)
+with hashes; no archive is referenced by the manifest. Idle01/recover05 remain
+byte-identical. Original atlases were neither moved nor edited.
+
+| Frame | Attempts / adopted | Reason |
+| --- | --- | --- |
+| swing/00 | 1/4, attempt1 | Whole wind-up removes detached shoe/broken hem |
+| swing/02 | 2/4, attempt1 | Best W1 anatomy/costume proof; attempt2's shoulder/stole/wrist drift was worse |
+| swing/03 | 1/4, attempt1 | Continuous contact arm/body; uniform transform anchors head center at [455,196] |
+| swing/04 | 1/4, attempt1 | Continuous follow-through body/boots; mace-head height still fails A5 pose fidelity |
+| swing/01 | 1/4, attempt1 | Authorized exception: old01 visibly pops in bag/hem/cuff proportions between new00/02 |
+| idle/01, swing/05 | 0, unchanged | Fixed costume/style endpoints |
+
+Generation order after W1 proof:00 → adopt completed02 →03 →04 →01. No frame
+was started before the previous candidate/transform/pick was recorded.
+The01 exception is demonstrated in [before](evidence/spike02-a6/01-neighbours-before.png)
+and [after](evidence/spike02-a6/01-neighbours-after.png) equal-scale neighbour
+comparisons; A5's single-frame PASS does not imply a match to new neighbours.
+
+### Audited frame table
+
+All results are model observations, not Owner approval. Reference endpoint
+PASS preserves the byte-identical endpoint; failing adjacent transitions are
+assigned to the generated motion frames. No complete sequence PASS is claimed.
+
+| Frame | Status | Stole | Embroidery | Cuffs | Hem | Face/hair | Palette | Seams | Bag count | Feet | Mace | Sequence | Reason |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `thoma/idle/01.png` | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | 1 PASS | PASS | PASS | PASS | Byte-identical reference endpoint; motion transition failures remain assigned to motion frames; not Owner approval. |
+| `thoma/swing/00.png` | PLACEHOLDER | PASS | FAIL | PASS | PASS | FAIL | PASS | PASS | 1 PASS | PASS | PASS | FAIL | Structural fragments/feet repaired; generated motif/fringe and face fidelity still drift; sequence retains visible pops. |
+| `thoma/swing/01.png` | PLACEHOLDER | PASS | FAIL | PASS | PASS | FAIL | PASS | PASS | 1 PASS | PASS | PASS | FAIL | Structural fragments/feet repaired; generated motif/fringe and face fidelity still drift; sequence retains visible pops. |
+| `thoma/swing/02.png` | PLACEHOLDER | PASS | FAIL | PASS | PASS | FAIL | PASS | PASS | 1 PASS | PASS | PASS | FAIL | Structural fragments/feet repaired; generated motif/fringe and face fidelity still drift; sequence retains visible pops. |
+| `thoma/swing/03.png` | PLACEHOLDER | PASS | FAIL | PASS | PASS | FAIL | PASS | PASS | 1 PASS | PASS | PASS | FAIL | Structural fragments/feet repaired; generated motif/fringe and face fidelity still drift; sequence retains visible pops. |
+| `thoma/swing/04.png` | PLACEHOLDER | PASS | FAIL | PASS | PASS | FAIL | PASS | PASS | 1 PASS | PASS | FAIL | FAIL | Structural fragments/feet repaired; generated motif/fringe and face fidelity still drift; sequence retains visible pops. Follow-through mace-head height differs from A5. |
+| `thoma/swing/05.png` | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | 1 PASS | PASS | PASS | PASS | Byte-identical reference endpoint; motion transition failures remain assigned to motion frames; not Owner approval. |
+
+[Region check](evidence/spike02-a6/region-check.png):200 unscaled crops, including
+stole, embroidery, cuffs, hem, seams, bag, feet, face/hair, palette and mace,
+against idle/recover/A5, plus actual native720p replay crops.
+[Sequence strip](evidence/spike02-a6/sequence-strip.png),
+[seven-frame style check](../../shared-anim/thoma-weapon-style-check.png),
+[rendered A5-vs-A6](evidence/spike02-a6/contact-sheet-a5-vs-a6.png) and
+[separate equal-scale asset comparison](evidence/spike02-a6/asset-sheet-a5-vs-a6.png)
+allow source and in-game checks independently.
+[Full per-check reasons](../../shared-anim/frame-audit.json),
+[geometry landmarks](evidence/spike02-a6/geometry-check.json) and
+[model observations](evidence/spike02-a6/W3-OBSERVATIONS.md) preserve failures.
+
+Real playback is backed by [all59 decoded rendered frames](evidence/spike02-a6/playback-every-frame.png),
+[seven actual keyposes](evidence/spike02-a6/playback-keyframes.png),
+[raw selected rendered PNGs](evidence/spike02-a6/sequence-runtime/) and
+[post-draw trace/check](evidence/spike02-a6/playback-check.json).
+No duplicate bag, floating cuff/boot or new01 cutout seam flashes observed.
+Motif/fringe/shading changes and hem/stance width still pop; sequence FAIL.
+Six adjacent pairs record region RGB delta, garment IoU and character-height
+delta in [sequence-check.json](evidence/spike02-a6/sequence-check.json).
+These proxies include pose/occlusion; they cannot approve cloth continuity.
+The crop GIF is a preview with quantized GIF timing; AVI/trace is authoritative.
+
+### Engineering and timing
+
+**55/55 GUT tests,2,772 assertions, exit0**; [full log](evidence/spike02-a6/test-run.log).
+48 prior tests retained; A5 art/protection assertions now read immutable A5
+bytes. Seven A6 tests cover fixed endpoints/manifest/timing, all archive-path
+exclusions, bounded retained attempts/three reference hashes/raw/runtime hashes,
+canvas/ground/contact, audit/table/all-PASS gates/bag count and actual playback
+evidence. They explicitly retain04's geometry failure. Source/copied parity:
+66 files. [Reproduction](evidence/spike02-a6/reproduction.log) rebuilds all five
+adopted PNGs and masks exactly from raw files/settings, with no costume transfer.
+
+Manifest is unchanged:512x512 canvas, pivot[256,464], contact index3 and
+anchor[455,196], durations **180/70/40/80/100/150ms**, same offsets/camera/
+impact/scenarios, Reduced Motion[0,3,5] excludes smear02. Whole-figure measured
+head-to-ground348.369–356.224px is within360+/-18px; opaque soles y463–464.
+Manual raw landmarks have +/-3px selection uncertainty. Generated mace/hand
+pixels differ; fixed manifest contracts do not certify exact painted geometry.
+
+| Resolution/mode | Open | Unit blocked | Terrain blocked |
+| --- | --- | --- | --- |
+| 720p normal | 0.947969s | 0.945312s | 0.951975s |
+| 720p Reduced Motion | 0.752756s | 0.761012s | 0.752048s |
+| 1080p normal | 0.942829s | 0.943195s | 0.949734s |
+| 1080p Reduced Motion | 0.756074s | 0.760203s | 0.756672s |
+
+All12 no-readback runs finish below **1.7s**, return input-ready and trigger
+contact/SFX/VFX in one process frame. Screenshot replays are excluded.
+Each resolution produced13 real screenshots with
+`CAPTURE_COMPLETE A6 movie=false runs=6 shots=13 pass=true`.
+[VERIFICATION](VERIFICATION.md#spike-02-a6) links poses at native720p/1080p,
+actual commands and real exits; [720p](evidence/spike02-a6/timing.json),
+[1080p](evidence/spike02-a6/timing-1080p.json),
+[source hashes](evidence/spike02-a6/source-hashes.json),
+[package audit](evidence/spike02-a6/evidence-audit.json).
+
+[Complete60FPS movie](evidence/spike02-a6/attack-60fps.avi), captured inW3 and
+retained unchanged forW5:59 native1280x720 frames, **7,272,456 bytes**, no frame
+subsampling/transcoding. Strike2→ready57 is **0.916667s**, contact20–24 is
+five identical decoded RGB frames/**83.333ms**, frame25 resumes.
+[MOVIE](evidence/spike02-a6/MOVIE.md), [hashes](evidence/spike02-a6/movie-index.json).
+One untraced terminal movie frame exactly equals the preceding traced ready
+image;58 genuine trace records were kept. The initial59-vs58 assertion failure
+is retained, not hidden or replaced by an invented trace. Encoding wall time
+is not gameplay latency; Dummy audio is not a speaker/headphone audition.
+
+### Open questions and resource self-check
+
+- **Art NOT complete:** five PLACEHOLDER frames; exact motif/fringe and face
+  matching and continuous sequence fidelity remain open.04's mace pose geometry
+  remains an explicit unmet requirement. No patch re-compositing was attempted.
+- **HUMAN_PENDING:** hit feel, real player motion readability and physical audio.
+  Model inspection, GUT and recorded synthetic input are not human acceptance.
+- Owner art approval remains pending. This task stops for review; no further
+  generation, other characters, PhaseB/React work or follow-up scope is assumed.
+
+Against [RESOURCE-CHECKLIST](../../docs/review/RESOURCE-CHECKLIST.md). Relevant
+[game-feel](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/skills/disciplines/game-feel/SKILL.md)
+and [game-ui-ux](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd/skills/disciplines/game-ui-ux/SKILL.md)
+were read for scoped verification. No new effect/UI feature, reference-repo
+code, commercial art, engine/addon/dependency or other character was introduced.
+
+| Resource item | Result | Evidence / scoped exception |
+| --- | --- | --- |
+| A prototype-fast | PASS, scoped criterion | Bounded02 proof gate, max4 attempts, raw candidates retained; relative structure improves, final rejection conditions remain explicit |
+| A level-design | N/A | No map/routes/objectives/placements changed |
+| A game-ai | N/A | No autonomous AI authorized |
+| A game-ui-ux | PASS for tested scope | Event-driven HUD unchanged; actual720p/1080p captures and existing keyboard/focus tests; no complete movement/threat UI claim |
+| A game-feel | PASS engineering, HUMAN_PENDING | Same-event impact,83.333ms decoded hold, return-ready, Reduced Motion; all source/sequence art failures remain open |
+| B Grid-Tactics separation | PASS criterion | Existing pure rules/view separation unchanged, no borrowed code/assets |
+| B HopeMetal attribution | N/A | No borrowed pattern/code/art in this segment |
+| B new engine/dependency | PASS | Existing Owner-approved Godot4.7.2/GDScript/GUT/Pillow only; nothing installed |
+| C full3–5minute battle | N/A, explicit scope exception | Single-attack frame-regeneration segment, no full-battle claim |
+| C understandable enemies | N/A, explicit scope exception | Three existing fixtures, no autonomous turn |
+| C win/lose | N/A, explicit scope exception | No complete battle system authorized |
+| C two tactical choices | N/A, explicit scope exception | Demonstration fixtures are not a tactical choice loop |
+| C restart/change strategy | PASS replay, N/A strategy | Real repeated R/fixture-switch input; no strategy loop claim |
+| C no duplicate/stuck/invalid resolution | PASS tested paths |55 tests,12 timed rendered runs and complete movie return to input-ready |
+| C720p/1080p/basic keyboard | PASS automated |26 actual native screenshots, capture dispatches keyboard events, retained focus/input tests; no manual playtest claim |
+| C automation versus human | PASS | Engineering/data checks, model art failures and HUMAN_PENDING stated independently |
+| D SRD/rules | N/A new content, PASS scope | No new rules/WotC/SRD content or G005 change |
+| D authorization/write boundary | PASS scope | Only shared-anim/ and godot-spike/ changed after438e801; no ui-prototype/story/decisions/other worktree; commit-only |
+| D exact painted mace geometry | FAIL, explained |04 generated head about19px high; fixed contact03/manifest unchanged; geometry failure retained in audit, not waived by tests |
+
+No unexplained C/D failure. Explained geometry failure means this is not ready
+for art acceptance. Root PLAN/memory/shared files are outside this narrow
+authorization; this handoff and VERIFICATION record the milestone. No new
+agent was spawned. Normal hooks ran with report-only missing_canonical_memory;
+no hook bypass, global trust edit or SessionEnd/canonical-closeout claim.
+
+| Step | Commit |
+| --- | --- |
+| W1 proof/method | `4559e5d` |
+| W2 complete frames/A5 baseline | `fa6fad8` |
+| W3 region/real-playback audit | `785c2b8` |
+| W4 sync/import/55 tests | `771c3d3` |
+| W5 verification/screenshots/movie | `a581bc2` |
+| W6 handoff | This commit |
+
+**STOP after this W6 commit and wait for review. No push, main merge, PR,
+stash, Actions, deployment or PhaseB. Task DONE is not SessionEnd.**
+
+Final W6 check after writing this actual section and table:
+`GODOT --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gtest=res://tests/test_a6_contract.gd -gexit`
+passed **7/7 tests, 636 assertions, exit 0**. The handoff is normalized to LF
+so the heading/table check executes against the actual section, rather than
+being skipped by a CRLF heading mismatch.
+[Final log](evidence/spike02-a6/handoff-table-check.log).

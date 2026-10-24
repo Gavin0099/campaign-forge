@@ -1,0 +1,35 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+---  GUT  ---
+[INFO]:  using [C:/Users/daish/AppData/Roaming/Godot/app_userdata/Campaign Forge — Impact Study] for temporary output.
+Godot version:  4.7.2
+GUT version:  9.7.1
+
+
+res://tests/test_a6_contract.gd
+* test_a6_immutable_endpoints_match_fixed_a5_sha256
+* test_a6_complete_manifest_matches_a5_and_excludes_all_baselines
+* test_a6_every_attempt_retained_three_reference_hashes_bounded_and_runtime_bound
+* test_a6_pass_requires_every_check_and_table_handoff_agreement
+* test_a6_canvas_ground_scale_contact_anchor_and_honest_geometry_limit
+* test_a6_a5_byte_baselines_are_evidence_only
+* test_a6_real_playback_trace_and_six_proxy_pairs_preserve_failures
+7/7 passed.
+
+
+
+
+==============================================
+= Run Summary
+==============================================
+
+Totals
+------
+Scripts               1
+Tests                 7
+Passing Tests         7
+Asserts             636
+Time              0.484s
+
+
+---- All tests passed! ----
