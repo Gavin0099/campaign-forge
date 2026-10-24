@@ -1,0 +1,139 @@
+﻿Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 Core Profile Context 26.10.1.261008 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon 780M Graphics
+
+Movie Maker mode enabled, recording movie in 1280×720 @ 60 FPS...
+Godot_v4.7.2-stable_win64_console.exe : ERROR: Condition "f.is_null()" is true. Returning: ERR_CANT_OPEN
+At line:2 char:1
++ & 'C:/Users/daish/AppData/Local/Microsoft/WinGet/Packages/GodotEngine ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ERROR: Conditio...: ERR_CANT_OPEN:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+   at: write_begin (modules/jpg/movie_writer_mjpeg.cpp:65)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=2.5296 limit=1.700 hp=4 cell=(1, 6)
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+CAPTURE_COMPLETE A8 movie=true runs=1 shots=0 pass=true
+ERROR: Condition "f.is_null()" is true. Returning: ERR_UNCONFIGURED
+   at: write_frame (modules/jpg/movie_writer_mjpeg.cpp:196)
+--------------------------------------------------------------------------------
+Done recording movie at path: res://.godot/spike02-a8-movie/attack.avi
+59 frames at 60 FPS (movie length: 00:00:00:59), recorded in 00:00:06 (16% of real-time speed).
+CPU render time: 0.02 seconds (average: 0.30 ms/frame)
+GPU render time: 0.03 seconds (average: 0.46 ms/frame)
+Encoding time: 0.01 seconds (average: 0.19 ms/frame)
+--------------------------------------------------------------------------------

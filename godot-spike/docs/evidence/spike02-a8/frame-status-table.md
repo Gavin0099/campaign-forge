@@ -1,0 +1,9 @@
+| Frame | Status | face_hair | stole | embroidery | tassels | cuffs | hem | palette | seams | bag_count | feet | mace | landmarks | sequence | Reason |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `thoma/idle/01.png` | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | 1 PASS | PASS | PASS | PASS | PASS | Immutable appearance endpoint; not Owner art approval. |
+| `thoma/swing/00.png` | PLACEHOLDER | FAIL | FAIL | FAIL | FAIL | PASS | PASS | PASS | FAIL | 1 PASS | PASS | FAIL | FAIL | FAIL | Shared sheet improves surface consistency; anchor identity, stole/motif/fringe, weapon integration and full pose/sequence still fail. |
+| `thoma/swing/01.png` | PLACEHOLDER | FAIL | FAIL | FAIL | FAIL | PASS | PASS | PASS | FAIL | 1 PASS | PASS | FAIL | FAIL | FAIL | Shared sheet improves surface consistency; anchor identity, stole/motif/fringe, weapon integration and full pose/sequence still fail. |
+| `thoma/swing/02.png` | PLACEHOLDER | FAIL | FAIL | FAIL | FAIL | PASS | PASS | PASS | FAIL | 1 PASS | PASS | FAIL | FAIL | FAIL | Shared sheet improves surface consistency; anchor identity, stole/motif/fringe, weapon integration and full pose/sequence still fail. |
+| `thoma/swing/03.png` | PLACEHOLDER | FAIL | FAIL | FAIL | FAIL | PASS | PASS | PASS | FAIL | 1 PASS | PASS | FAIL | FAIL | FAIL | Shared sheet improves surface consistency; anchor identity, stole/motif/fringe, weapon integration and full pose/sequence still fail. |
+| `thoma/swing/04.png` | PLACEHOLDER | FAIL | FAIL | FAIL | FAIL | PASS | PASS | PASS | FAIL | 1 PASS | PASS | FAIL | FAIL | FAIL | Shared sheet improves surface consistency; anchor identity, stole/motif/fringe, weapon integration and full pose/sequence still fail. |
+| `thoma/swing/05.png` | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | 1 PASS | PASS | PASS | PASS | PASS | Immutable appearance endpoint; not Owner art approval. |

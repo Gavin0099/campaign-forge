@@ -1,0 +1,156 @@
+{
+  "capture_complete": true,
+  "source_movie_sha256": "6e9c35229f2819167286a8c213e5a40b8ffb43978fb1a73cac45a65d5ce00ee3",
+  "fps": 60,
+  "frames": 59,
+  "traced_frames": 58,
+  "untraced_terminal_frames": 1,
+  "terminal_pixels_equal_previous_ready": true,
+  "selected": [
+    {
+      "path": "thoma/idle/01.png",
+      "movie_frame": 1,
+      "file": "sequence-runtime/idle.png",
+      "decoded_rgb_sha256": "f4a091c395f90898f10517fa0e6127b0d6471fb42e34e07ff6e1a8700c7a1def",
+      "trace": {
+        "body_transform": [
+          -0.133062228560448,
+          0.133062228560448,
+          406.983947753906,
+          192.699127197266
+        ],
+        "hold": false,
+        "index": 0,
+        "path": "thoma/idle/01.png",
+        "phase": "ready",
+        "process_frame": 1
+      }
+    },
+    {
+      "path": "thoma/swing/00.png",
+      "movie_frame": 7,
+      "file": "sequence-runtime/00.png",
+      "decoded_rgb_sha256": "b4c61c3222a49b075d65fc1641929e2e6f02a406ca3fc4477228b0848d214b9f",
+      "trace": {
+        "body_transform": [
+          -0.151543080806732,
+          0.151543080806732,
+          433.79345703125,
+          188.656692504883
+        ],
+        "hold": false,
+        "index": 0,
+        "path": "thoma/swing/00.png",
+        "phase": "windup",
+        "process_frame": 7
+      }
+    },
+    {
+      "path": "thoma/swing/01.png",
+      "movie_frame": 15,
+      "file": "sequence-runtime/01.png",
+      "decoded_rgb_sha256": "3710e89acdf02f624a851547cb81e24b7dfa2443c204149fe43ce0ec6ee7b246",
+      "trace": {
+        "body_transform": [
+          -0.186204969882965,
+          0.186204969882965,
+          515.546936035156,
+          206.733154296875
+        ],
+        "hold": false,
+        "index": 1,
+        "path": "thoma/swing/01.png",
+        "phase": "lunge",
+        "process_frame": 15
+      }
+    },
+    {
+      "path": "thoma/swing/02.png",
+      "movie_frame": 19,
+      "file": "sequence-runtime/02.png",
+      "decoded_rgb_sha256": "3ae83ea799f7210ba58150099ec54d65f9ff391e53cdc760ec5760e66e20b33d",
+      "trace": {
+        "body_transform": [
+          -0.186287134885788,
+          0.186287134885788,
+          510.226806640625,
+          223.536254882813
+        ],
+        "hold": false,
+        "index": 2,
+        "path": "thoma/swing/02.png",
+        "phase": "lunge",
+        "process_frame": 19
+      }
+    },
+    {
+      "path": "thoma/swing/03.png",
+      "movie_frame": 24,
+      "file": "sequence-runtime/03.png",
+      "decoded_rgb_sha256": "43cac60eab2a254032e94197194899c058477b400fe3cd9c07ec9510d1d7bfdd",
+      "trace": {
+        "body_transform": [
+          -0.186287134885788,
+          0.186287134885788,
+          499.878173828125,
+          237.093475341797
+        ],
+        "hold": true,
+        "index": 3,
+        "path": "thoma/swing/03.png",
+        "phase": "contact",
+        "process_frame": 24
+      }
+    },
+    {
+      "path": "thoma/swing/04.png",
+      "movie_frame": 32,
+      "file": "sequence-runtime/04.png",
+      "decoded_rgb_sha256": "2b55b99604b4e08b308351cd9623d5abdc4a34a01a525148a4ee0065e8f21b55",
+      "trace": {
+        "body_transform": [
+          -0.186287134885788,
+          0.186287134885788,
+          507.907409667969,
+          223.019790649414
+        ],
+        "hold": false,
+        "index": 4,
+        "path": "thoma/swing/04.png",
+        "phase": "knockback",
+        "process_frame": 32
+      }
+    },
+    {
+      "path": "thoma/swing/05.png",
+      "movie_frame": 46,
+      "file": "sequence-runtime/05.png",
+      "decoded_rgb_sha256": "46d45d9974029cb87cd0299d279ae8cee0a3e38ab411a6f1d602a395ed1cb8d4",
+      "trace": {
+        "body_transform": [
+          -0.186287134885788,
+          0.186287134885788,
+          523.266906738281,
+          193.730316162109
+        ],
+        "hold": false,
+        "index": 5,
+        "path": "thoma/swing/05.png",
+        "phase": "knockback",
+        "process_frame": 46
+      }
+    }
+  ],
+  "observations": {
+    "face_hair": "FAIL: grey crown and beard/face differ from anchors; sheet-to-anchor texture swaps remain.",
+    "embroidery_tassels": "FAIL: generated sprig scale and fairly regular fringe differ from anchor; native size cannot waive source1x defects.",
+    "cuffs": "PASS: continuous flared ivory cuffs with no detached wrists; temporal garment shift remains in sequence gate.",
+    "hem_outline_shoes": "FAIL: shoes remain connected, but hem breadth/stance still jumps.",
+    "bag_count": "PASS: one satchel and one cloth roll in every shared-sheet pose.",
+    "colour_flicker": "FAIL: source palette families stable but changing surface texture/occlusion gives region RGB deltas.",
+    "seams": "FAIL: local reconstructed weapon joins remain; source1x failures cannot be waived at720p."
+  },
+  "result": "FAIL",
+  "authority": "model inspection of actual decoded consecutive frames; human hit-feel HUMAN_PENDING; Owner art approval pending",
+  "limits": "GIF timing quantizes60FPS; AVI and trace are the timing authority. Small displayed sprites conceal source defects and cannot turn a failed check into PASS."
+}
