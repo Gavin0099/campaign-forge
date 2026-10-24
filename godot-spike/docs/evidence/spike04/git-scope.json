@@ -1,0 +1,9 @@
+{
+  "protected_diff_exit": 0,
+  "base": "a0ae42c",
+  "historical_profile_blob": "0ff0e9048f9808a0c87f8d3cc2d5836b87cf4725",
+  "push_performed": false,
+  "branch": "codex/godot-spike",
+  "preserved_profile_blob": "0ff0e9048f9808a0c87f8d3cc2d5836b87cf4725",
+  "profile_byte_match": true
+}

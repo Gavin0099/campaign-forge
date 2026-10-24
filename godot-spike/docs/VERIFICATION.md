@@ -1359,3 +1359,92 @@ The [evidence index](evidence/spike03/README.md), [movie notes](evidence/spike03
 the review trail. No human feel/scale/art approval, production audio, commercial
 quality, full battle or migration is claimed. W7 refreshes source hashes after
 the metadata-only handoff addition, then commits and stops without push.
+
+## spike-04
+
+Binding brief: `docs/tasks/godot-spike-04-bigmap-24x18.md`, Owner confirmation
+2026-10-24 21:26 Asia/Taipei. Clean start `cbf3608` on `a0ae42c`;
+branch `codex/godot-spike`, worktree `D:\campaign-forge\scratch\godot-spike`.
+W1–W8 local commits only. Main scene remains11×9 Skirmish. Field24x18 uses a
+new pure rules module and no mockup dependency. No shared PLAN/memory changes.
+
+Commands below use the actual full executable paths because PATH/sandbox access
+was insufficient. Scoped elevation was used; no tools were installed or trust
+settings changed. Initial `git fetch origin` failed sandbox metadata access;
+the scoped elevated retry exited0 with no unexpected remote commits. No push.
+
+```powershell
+$godotExe = 'C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe'
+$pyExe = 'C:\Users\daish\AppData\Local\Programs\Python\Python312\python.exe'
+& $godotExe --headless --path godot-spike --import
+& $godotExe --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gdir=res://tests -gexit
+& $godotExe --headless --path godot-spike -s res://tools/autoplay_field.gd
+& $godotExe --path godot-spike --resolution 1280x720 --audio-driver Dummy --max-fps 60 -s res://tools/capture_field.gd -- --mode=stills
+& $godotExe --path godot-spike --resolution 1280x720 --audio-driver Dummy --fixed-fps 60 --write-movie res://.godot/spike04-field/sequence.avi -s res://tools/capture_field.gd -- --mode=sequence
+& $godotExe --path godot-spike --resolution 1280x720 --audio-driver Dummy --fixed-fps 60 --write-movie res://.godot/spike04-field/enemy.avi -s res://tools/capture_field.gd -- --mode=enemy
+& $godotExe --path godot-spike --resolution 1920x1080 --audio-driver Dummy --max-fps 60 -s res://tools/capture_field.gd -- --mode=1080
+& $godotExe --path godot-spike --resolution 1280x720 --audio-driver Dummy --max-fps 60 -s res://tools/capture_field.gd -- --mode=perf
+& $godotExe --path godot-spike --resolution 1280x720 --audio-driver Dummy --max-fps 60 -s res://tools/capture_field.gd -- --mode=debug
+& $pyExe godot-spike/tools/package_field_evidence.py
+& $pyExe godot-spike/tools/audit_spike04.py
+git diff --stat a0ae42c..HEAD
+git diff --exit-code a0ae42c -- shared-anim ui-prototype docs/art-briefs docs/proposals godot-spike/art/anim-shared godot-spike/scripts/rules/grid_rules.gd
+git diff --check
+```
+
+| Check actually run | Result / exit | Evidence under `docs/evidence/spike04/` |
+| --- | --- | --- |
+| W1 import / complete GUT | 0 /0;91/91,8,996 assertions | `w1-import.log`, `w1-tests.log` |
+| Default,crit,Reduced × three Skirmish setups; fixed60FPS `capture_spike04.gd -- --timing` | 0;9/9≤1.7s,Reduced≤normal,HP4/cells identical | `hitfeel/timing.json` and its logs |
+| W1 movies with `--impact-profile=spike03` versus default, normal/crit | all0; four native720p AVIs/±8 strips | `hitfeel/` |
+| Rules / battle / camera / UI / policies focused GUT | final0;12/12,5/5,6/6,6/6,3/3 respectively | `w2-rules.log`, `w6-battle-handler-final.log`, `w4-camera-final.log`, `w5-ui.log`, `w6-policy-tests.log` |
+| Initial and retuned headless autoplay | both0;initial lose7/6/3;final win12/lose7/lose3,contact2 | `autoplay/initial/`, `autoplay/*.json`, `w6-autoplay*.log` |
+| Continuous real scene road battle | 0;win12,warning4,arrival5;48 normal attack wall samples≤.893s | `capture-stills.json`, `runtime-battle.json`, `runtime-attack-timings.json`, `w6-full-battle-final.log` |
+| Final parsed operating sequence, enemy AVI, native1080p,debug,unrecorded perf | all0;sequence requires every input check | `w6-sequence-verified.log`, `w6-enemy-final.log`, `w6-1080-final.log`, `w6-debug.log`, `w6-performance-clean.log` |
+| W7 final headless import / full GUT | **0 /0;123/123,10,310 assertions,21 scripts** | `w7-import.log`, `test-run.log`, `w7-exit-codes.json` |
+| Offline packaging / audit | 0 /0;native AVI headers/dimensions,scope,profiles,70 copied shared files and A9 rules hashes | `movie-index.json`, `audit.json`, `source-hashes.json`, `git-scope.json` |
+| Git protected diff / whitespace | 0 /0 after raw-log whitespace normalization | `git-scope.json`, `changed-paths.txt`, `diff-stat.txt` |
+
+The preserved `impact_profile_spike03.tres` has the same Git blob as the original
+`a0ae42c` tuned profile. Baseline unchanged; old profile tests re-point only to
+that preserved resource and explicitly select it for their historical behavior.
+Separate new tests enforce .8 flash,22 sparks/7 spokes/crit1.3,fonts24/30,
+direction bias. Hitstop/shake/recoil/dust/zoom/SFX retain original configuration;
+crit dust count shares the required lower global particle multiplier.
+Skirmish changes are limited to profile selection/directional spark emission.
+Its HUD, animation manifest, frames,11×9 rules/results/timings and G005 stay.
+
+Runtime capture is an automated operator. The continuous battle uses actual
+scene select/choose/confirm/wait/end-turn, and the operating movie parses real
+keyboard/mouse events. Movie combat resumes a reachable turn2 road snapshot;
+it is explicitly not a continuous movie. PNGs are runtime readbacks; camera
+strip decodes native AVI frames. ffmpeg unavailable, so AVI+PNG supplied.
+Performance was separately sampled without recording/readback: scroll19.666ms
+mean/42.897ms worst,normal enemy22.776/30.366ms,fast22.521/32.135ms. Enemy
+turn2 normal2.188s /2×1.433s. These short AMD780M GL samples do not prove steady60.
+
+Failures are retained, not counted as acceptance: first W3 smoke exited0 despite
+a parse error; initial teardown and float/input test failures were fixed. An
+early movie used encoder wall time as attack time. A later synthetic click run
+failed because global mouse position was stale and aborted on an empty timing
+array while claiming success. The scene now uses event.position, capture guards
+empty timings and requires every check; the final parsed movie is clean.
+The added GUT mouse test calls the scene handler because GUT's own headless GUI
+intercepts viewport clicks; full event routing is proven by the rendered movie.
+Early shutdown audio leaks were diagnosed as unfinished placeholder playback;
+final captures wait/free audio and have clean logs. All final logs are checked
+for errors as well as exit codes. PowerShell UTF16/ANSI logs were normalized
+to UTF8 with error text/results retained.
+
+Road estimate12.9–21.2min assumes15–25s think/living ally phase and measured
+normal enemy mean1.999s; fixed six allies instead yields18.4–30.4min. The two
+losing policies end sooner. This is no human pacing/balance validation; ranged
+60% kill share, early scout deaths and bypassable reinforcement guards remain
+risks. Gavin's full battle, camera comfort,96px legibility, toned impact and art
+judgment are **HUMAN_PENDING**. Dummy audio was not auditioned.
+
+No governance code changed. Normal commits report only the existing nonblocking
+`missing_canonical_memory` advisory; no hooks bypassed. No lifecycle/full
+automatic-adoption claim, session closeout, other-worktree identity claim,
+push,PR,merge,32×24,S4 or formal story/rules approval is made. W8 refreshes only
+evidence hashes/scope after the handoff addition, commits and stops.
