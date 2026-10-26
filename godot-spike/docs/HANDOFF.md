@@ -2683,3 +2683,276 @@ defensive地形僅作地標；射程採無LOS；增援占位採BFS／延後；�
 **W8交接commit後停止，等待review；不push、merge、PR、stash或自動開下一段。
 沒有其他worktree寫入、正式世界觀／故事／S4變更。這是task DONE，不是SessionEnd，
 不觸發canonical daily closeout，也不宣稱治理完整自動導入。**
+
+## spike-05
+
+本段依Gavin2026-10-26 10:19授權，在`codex/godot-spike`完成W1–W8；
+24×18，沒有新美術投資。敵軍啟動、推進、護衛與增援追擊已實作；遠程LOS與掩護
+接入純規則、預覽及威脅；閃白／數字再降，鏡頭保護完整行動角色，標籤去重疊。
+**工程檢查147/147通過；完整初始部署的獲勝策略尚未驗證，三個固定策略都敗。
+本段不能判定平衡、美術或人類可玩性已通過。**
+
+證據入口：[README](evidence/spike05/README.md)、[WORK](evidence/spike05/WORK.md)、
+[PACING](evidence/spike05/PACING.md)、[PERFORMANCE](evidence/spike05/PERFORMANCE.md)、
+[MOVIE](evidence/spike05/MOVIE.md)、[稽核](evidence/spike05/audit.json)、
+[測試](evidence/spike05/test-run.log)。以下數字都是spike測試值，沒有正式設定或S4決策。
+
+### 執行與操作
+
+從本worktree以PowerShell執行；預設主場景仍是小型Skirmish，Field須指定場景。
+
+```powershell
+$godot='C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe'
+& $godot --path godot-spike res://scenes/levels/Field24x18.tscn
+& $godot --path godot-spike res://scenes/levels/Field24x18.tscn -- --impact-profile=spike04
+& $godot --path godot-spike -- --impact-profile=spike03
+& $godot --path godot-spike -- --impact-profile=a9_baseline
+```
+
+不帶profile參數＝spike05 default；後兩例載入Skirmish，可在場景參數後加同樣旗標
+比較Field。未知參數安全回預設。四種profile均有載入／選擇測試。
+
+| 輸入 | 功能 |
+| --- | --- |
+| 滑鼠左鍵、Tab | 選擇／輪替存活未完成單位 |
+| I/J/K/L、Enter | 網格游標、確認移動或攻擊；移動／技能預覽後才確認 |
+| T、Esc、Space、N | 輪替合法攻擊目標、取消預覽、待機、結束回合 |
+| WASD／方向鍵、中鍵拖曳、滾輪 | 捲動、拖曳、游標附近縮放；名義倍率.8/1/1.2 |
+| O、F／Home、E | 全圖閱讀模式、定位選取者、切換邊緣捲動（預設OFF） |
+| 小地圖點擊、P | 定位／顯示切換 |
+| G、V | 網格、含LOS的敵人可移動後攻擊威脅 |
+| M、C | Reduced Motion、下次攻擊crit展示；crit沒有新增傷害規則 |
+| B、Shift、X | 切換2×、按住2×、跳過敵方移動展示；預設正常速度 |
+| F1、R | 技術資訊／即時telemetry、重新開始 |
+
+忙碌時鎖定戰術輸入；F1是技術檢查，不是玩家必開介面。Reduced關閉閃白、震動及
+zoom punch，保留較短hitstop；必要的HUD安全取景仍可直接定位。Esc撤銷尚未確認的
+移動／攻擊；已確認動作不回滾。實際parsed滑鼠／Esc／Enter流程見
+[操作AVI](evidence/spike05/select-move-ranged-60fps.avi)。
+
+### AI狀態、啟動及護衛
+
+距離均為網格Manhattan；不是畫面像素或遮蔽視野。seed24018；無全域RNG。
+非正式戰鬥規則，不推導其他關卡。
+
+| 狀態／觸發 | 行為與記錄 |
+| --- | --- |
+| guard | 未啟動守衛；仍計真idle，不藏成有效行動 |
+| activation | 我軍進入任一組員半徑6；組員被打；受擊組與任一同側組員相距≤5而連帶警戒；或turn4全面出發；任一成立便鎖定，不回guard |
+| advance | 共享反向Dijkstra向合法攻擊位置推進；同伴距離微小懲罰最多.72成本，優先實際前進，形成鬆散隊形而非編隊引擎 |
+| regroup | 半徑3內我軍數>敵支援數+1，且完全無近支援、有遠方騎士，向最近支援靠攏一次；之後恢復推進，避免無限反覆。擁塞無攻擊路徑時嘗試側向合法格 |
+| attack | 當前有合法目標先打，避免穿過近戰；移動後再檢查並攻擊 |
+| bodyguard-intercept | reserve兩騎士追截距領袖≤6的我軍，通常限定領袖半徑3內；一次regroup可例外離開範圍，下一次恢復護衛 |
+| bodyguard-hold | 無接近威脅且已在半徑3，或邊界內無更好進展，明列保護理由；不偽裝成前進 |
+| counter | 領袖有相鄰合法目標便反擊；HP≤4且半徑3內至少兩我軍時優先尋找安全退格 |
+| step-back／leader-hold | 無可反擊目標或低血被圍時，最近我軍距離≤2才嘗試一個相鄰合法空格，提高最近距離，且距原指揮點≤2；沒有更安全格就明列持位。不是任意逃跑 |
+| intercept | 增援休息後主動追截最接近領袖的我軍；若半徑6尚無目標，沿共享圖追最近可攻位置 |
+
+可攻擊者的focus依序：**絕對HP較低 → 距領袖≤4 → 距攻擊者近 →
+遠程／高機動同級優先 → id**。這是合法候選內排序；不隔著近戰無條件跳射後排。
+反向距離圖按兵種／陣營／occupancy revision／追截目標共用，移動或死亡後失效；
+不為每個候選目的格重建全圖。規則複製輸入，產生intent/move/attack事件，動畫只播放結果。
+
+增援仍turn4預告、turn5從(23,4)/(23,5)/(23,6)進三騎士，出生回合不行動；
+入場占用處理沿用spike04。全編制scripted bypass從turn5附近滲透位置開始，
+turn7首次交戰（任一方攻擊都算），不是完整起手戰役；
+[隔離追擊截圖](evidence/spike05/reinforcement-interception.png)另證明增援在兩個可行動
+回合內主動出手。首輪全probe沒有錄到敵增援出手、exit1，失敗證據保留；最終改用
+原地圖、原數值的thoma／leader／wave隔離fixture，不把我軍先射增援當作敵軍出手。
+三條西側短戰鬥在波次接近前已結束，所以wave仍never。**未證明無法繞過**；
+目標仍斬首，沒有強制清波或改入場時間。
+
+### LOS／掩護及地形
+
+新增`field_sight.gd`純函式：網格中心到中心的整數supercover，射程仍Manhattan2–3，
+相鄰不能射。中間峭壁`^`、深水岸`~`、存活單位皆阻擋；忽略射手／目標本身。
+中間或目標格森林`f`提供**傷害−1、最低1**，多片森林不疊加；沒有機率。
+終點格不作阻擋格，但目標森林仍有掩護。
+
+```text
+射手 A —— ^／~／其他存活單位 —— B：不可射
+射手 A —— f —— B：可射，2→1
+射手 A —— . —— B(f)：可射，2→1
+精確斜角 A(0,0) → B(2,2)：經過角點時，先檢查x側格，再y側格；兩側都算
+```
+
+`attack_info`同時供攻擊判定、候選、高亮、preview、hover、V overlay、AI與autoplay。
+V包含成本合法移動後的合法攻擊，沒有出生回合增援威脅；不是只畫距離菱形。
+目前敵編制無遠程，若用同API遠程也受相同限制。實例：
+[(14,8)→(16,8)深岸阻擋](evidence/spike05/los-blocked.png)、
+[(11,6)→(14,6)森林掩護](evidence/spike05/cover-preview.png)、
+[威脅](evidence/spike05/threat-los.png)。零實際blocked shots是合法射擊結果，
+不是零阻擋機會；W1 counterfactual road3/flank1/turtle1。
+
+**本段地形／部署變更清單：空。**沒有加淺灘、開森林、移敵人或調HP／傷害。
+高機動仍move6、森林額外成本沿用；退路不足先保留風險，採scout-retreat探測，
+避免在沒有人工判定前改圖製造勝利。
+
+### 閃白、數字與攻擊時序
+
+| 項目 | spike04 | spike05 default |
+| --- | --- | --- |
+| flash_mix | .8 | .6 |
+| hold / fade |16.67 /80ms |0 /60ms |
+| crit multiplier /最高mix |1.2 |1.2；field最高.72，Skirmish只延長fade |
+| sparks / spokes |22 /7 |18 /6 |
+| normal /crit字級 |24 /30 |21 /26（−12.5%／−13.3%） |
+| number位置／短pop |頭頂外、原scale |相同 |
+| hitstop normal/crit/Reduced |110/170/80ms |相同 |
+| directional shake normal/crit |8/12px |相同 |
+| recoil /streak /方向bias |9px /22px /.8 |相同 |
+| dust /zoom punch /knockback /SFX |原值 |相同 |
+
+spike04先逐byte保存為`impact_profile_spike04.tres`，Git blob與舊default一致；
+a9_baseline／spike03未變。Field與Skirmish同profile。看
+[四列比較strip](evidence/spike05/hitfeel/impact-strip-spike04-vs-spike05.png)：
+contact frame0018及±8張顯示.6較保留目標深色細節、沒有新增hold；仍有明顯接觸亮色，
+是否足夠淡由Gavin判斷。比較用原生720p60FPS正常／crit各兩套AVI，不是生成圖。
+
+[timing.json](evidence/spike05/hitfeel/timing.json)：3個Skirmish setup×normal/crit/Reduced，
+HP4與(1,6)/(1,5)/(3,4)一致；固定60Hz分別.950／1.016667／.716667s，
+wall均≤1.7s、Reduced≤normal；Field40次實際攻擊maxwall.902s，皆達≤1.2s目標。
+動畫180/70/40/80/100/150ms、contact3、anchor(455,196)未改。
+音效只有Dummy driver觸發，沒有試聽。
+
+### 鏡頭與HUD
+
+720p邏輯安全區(52,230,1176,304)，留開頂部HUD／小地圖與底面板；每角色估計框
+(-58,-124,116,140)，另留16px震動預算，涵蓋96px人物、頭／HP／badge。
+選取follow、移動、攻擊preview、敵人預pan、接觸均保護行動者／目標完整框；
+雙方距離大會暫時縮小實際zoom以容納，保存玩家名義zoom供結束後還原。
+回原視角仍受安全區限制。四角／各zoom／crit／遠程雙人／preview立即取景皆有測試。
+呈現邊界四周增加留白（左右／上500px、下400px），仍clamp，沒有加網格格數。
+手動探索會清除follow保護；無關的畫外單位可能被裁切，不代表選取者仍被裁切。
+
+O仍為閱讀模式：固定14px我軍方形／敵三角、18px領袖菱形，4格HP pips與群組標籤；
+重疊marker移位並畫連線。一般模式用螢幕空間兵種＋目前HP短牌，完整選取名稱在HUD。
+候選槽及有限fallback依序避開人物、重要prop代理框、畫外指示與先前標籤；
+低優先超額標籤可被抑制，JSON明列suppressed，不假稱所有名稱永遠可見。
+小地圖維持原座標轉換測試，方5px／三角6px／菱10px可區別，點擊定位有效。
+三個明亮入口改一個半徑12、alpha.55群組圈；預告回合／種類／出生休息文字保留。
+見[O](evidence/spike05/overview.png)、[密集牌](evidence/spike05/dense-labels.png)、
+[邊緣](evidence/spike05/edge-safe.png)、[1080p](evidence/spike05/deployment-1080.png)。
+截圖狀態牌框交集0，真人可讀性與鏡頭舒適度另驗。
+
+### 節奏、兵種與效能
+
+| 策略 | before→after結果／回合 | 首接觸 | true idle before→after | after估分鐘 |
+| --- | --- | --- | --- | --- |
+| road |勝12→敗8 |2→2 |66/97→20/77（68.0%→26.0%） |10.0–16.3 |
+| flank |敗7→敗7 |2→2 |45/68→24/69（66.2%→34.8%） |9.9–16.2 |
+| turtle |敗3→敗6 |2→2 |22/26→26/55（84.6%→47.3%） |9.3–15.3 |
+| bypass（scripted中段） |N/A→敗7 |5 |0/29 |4.4–7.1，非整場 |
+| scout-retreat |N/A→敗9 |2 |26/88 |13.3–21.8 |
+
+按組idle、所有策略兵種傷害／擊殺／死亡回合、wave與LOS完整表見PACING。
+true idle＝有實際觀測到可行動phase、不能攻擊、未移動／攻擊、無明確持位角色；
+guard仍算，出生與terminal後未輪到者排除。W1保存JSON不改，以相同觀測定義重算
+before／after。舊72 no-target包含已移動者，不能當真idle。Turtle時間變長，
+總idle22→26、比率下降；不宣稱每條絕對值下降。五條after軌跡沒有無理由的active停留。
+
+road近戰／遠程／高機動傷害占比53.1/31.2/15.6%→42.9/23.8/33.3%，
+擊殺40/60/0%→66.7/16.7/16.7%；scout死亡3/4→4/5，仍早死。
+scout-retreat保命到終局、傷害僅4.5%且0擊殺，角色用途待設計。遠程變化受AI與LOS
+同時影響，不能歸因單一機制。Flank7與turtle6仍崩，策略弱點與難度混合；
+沒有調低敵數值解決。**沒有找到新AI下原始部署完整勝局**；
+[staged win](evidence/spike05/win-staged-terminal.png)只驗證斬首與結果畫面，
+[lose](evidence/spike05/lose.png)才是連續road實跑。
+
+估算用turns×(實測敵phase均值＋該回合平均存活我軍×假設15–25秒)，
+before1.999s、after3.456164s（8個正常phase，含最後部分phase）。
+未含閱讀／選單與真人失誤；bypass只觀測中段，不能比整場。15–25min未成立，
+road反而失去勝局。這是下一輪平衡與人類試玩的已知限制。
+
+同機AMD780M、Godot4.7.2 GL Compatibility、720p限60，無錄影／讀回的短樣本：
+
+| 操作 | before mean/worst ms | after mean/worst ms（n） | mean差 |
+| --- | --- | --- | --- |
+| scroll |19.666/42.897 |20.703/30.588（90） |+1.037ms |
+| normal enemy |22.776/30.366 |23.509/33.983（46） |+.733ms |
+| 2× enemy |22.521/32.135 |23.124/29.606（30） |+.603ms |
+
+正常／2× turn2呈現1.336／.951s。均值退步如實保留；含排程、camera安全與label工作，
+未隔離AI因果，不保證穩定60FPS。Movie固定時鐘不當效能；ffmpeg缺席，用Godot
+60FPS AVI與Pillow PNG strips，沒有新增依賴。攻擊時間樣本含一張melee contact讀回，
+效能樣本無讀回，兩者不可混用。
+
+### PLACEHOLDER、風險與HUMAN_PENDING
+
+地形／props是既有展示地標，守備高地尚無額外戰鬥bonus；Thoma素材重用作我軍
+兵種stand-in、騎士作敵軍stand-in，非新角色美術。A9 swing仍開發PLACEHOLDER，
+所有swing／idle／knight PNG、共享素材及manifest未動；SFX為既有原創合成placeholder。
+無商業素材、新圖、新正式故事、11×9／G005／L03規則變更。
+
+風險：原始整場可勝性未驗證；壓力變高，三個簡單policy不足以區分策略問題／難度；
+增援不能保證必打；cover與嚴格corner規則可能令人困惑；高機動保命與貢獻有取捨；
+安全鏡頭會因遠距配對自動退zoom，標籤代理框未涵蓋每種未來prop；
+低優先標籤可抑制、重要角色閱讀仍需人工；短效能樣本均值略退步；
+自動strip判斷不能代替Owner的美術／感受判定。
+
+**HUMAN_PENDING**：Gavin以原始部署盲玩road／flank／turtle各一次，記錄實際分鐘、
+每位傷亡、困惑位置、勝敗原因及想重玩的策略；分別判定移動與攻擊時的鏡頭舒適度、
+O標記／HP可讀性、密集牌／增援提示及更淡的normal／crit接觸感。另試聽SFX。
+模型操作、測試147通過、stagedwin與已保存舊roadwin都不算這些人工驗收。
+
+### 給Gavin的一行可答問題
+
+1. 勝利維持「擊敗領袖」，或改「佔點」？未答維持斬首；Thoma倒下／超15回合敗。
+2. 移動近戰4／遠程3／高機動6是否保留？未答照舊。
+3. 邊緣捲動預設OFF是否保留？未答OFF。
+4. 敵phase預設正常或2×？未答正常。
+5. 增援是否必須交戰？未答只主動追截，不強制目標。
+6. 24×18是否通過，之後可否考慮32×24？本段仍未授權32×24。
+7. LOS採「峭壁／深岸／單位阻擋，森林−1掩護，斜角兩側檢查」可否保留？未答維持測試值。
+8. 高機動優先設計側翼輸出、誘敵偵察、或撤退保命？本段無傷害／HP buff或改路。
+9. 下輪先驗證可勝路線與難度，還是維持目前壓力做盲測？本段不自動接續。
+
+### Resource自查（docs/review/RESOURCE-CHECKLIST.md）
+
+| 條目 | 結論／證據 |
+| --- | --- |
+| A prototype-fast | PASS：W1 WORK先訂keep/discard，Owner W1–W8單一spike；不擴張引擎／素材 |
+| A level-design | FAIL／已知限制：地圖／可達性測試仍過，三個初始策略全敗，無新完整win；staged不算。無正式故事雙分支。PACING明列，待Owner決定下一輪 |
+| A game-ai | PASS工程：顯式啟動、focus／護衛／增援、確定性與輸入不變測試；理解程度HUMAN_PENDING |
+| A game-ui-ux | PASS工程：共用合法性與LOS、V／preview／hover，720p1080p、overview／edge／dense實圖及安全／去重疊測試；真人待驗 |
+| A game-feel | PASS工程／HUMAN_PENDING感受：04→05strip、9組timing、40次field attack；保留hitstop/shake/recoil/dust |
+| B Grid-Tactics | PASS架構／N/A新借用：pure state→events→animation；未新增複製程式、美術或外部依賴 |
+| B HopeMetal MIT | N/A：本輪無借用程式／資產，無新增授權依賴 |
+| B engine/dependency | PASS：Owner核准Godot4.7.2獨立PoC、既有GUT，Python僅離線Pillow，無新addon |
+| C 單人完整3–5分鐘 | FAIL／已知限制：Owner15–25min覆蓋通用3–5；估算不足驗收，真人全場待測。PACING與HUMAN_PENDING明列 |
+| C 敵行為可理解 | PASS工程：intent／activation理由、AI測試／實際enemy AVI；真人判讀待驗 |
+| C 可勝可敗 | FAIL／已知限制：terminalwin／lose規則有測，連續road敗8；尚無新AI原始部署整場win，不足整體可玩驗收 |
+| C 兩戰術不同結果 | PASS工程：road／flank／turtle終局回合與傷亡不同，scout-retreat保命但低傷害；無正式故事分支宣稱 |
+| C restart改策略 | PASS工程：既有R／UI restart與測試；真人重玩HUMAN_PENDING |
+| C 無重複／卡回合／非法／中斷 | PASS已測範圍：147tests、scene連續lose8、preview／cancel／confirm、busy鎖、wave休息；不聲稱窮盡 |
+| C 720p／1080p／鍵盤 | PASS工程：native畫面、parsed Esc／Enter AVI與minimap／camera測試；舒適度待驗 |
+| C 自動／人工分開 | PASS：自動操作具名、fixture標示、失敗保留；無人工回饋或Owner美術通過宣稱 |
+| D SRD／來源／adaptation | PASS界線／N/A新增SRD：無新WotC IP／第三方規則，美術未動；所有Field／LOS值標測試，L03／G005未改 |
+| D 授權／Git／故事 | PASS：僅godot-spike變更、brief先存；正常local commit，無push／PR／merge／stash／Actions／部署／32×24／故事定案／S4 |
+
+指定五個公開skill唯讀固定版本與方法見README，未安裝。架構reference本輪沒有新借用；
+本機external-executable-trust-audit用在Owner提供的明確執行檔路徑與離線證據工具，
+不宣稱完成整個工具鏈信任根稽核。C與A的FAIL均有上述明確證據／限制，
+**不建議當作整體玩法PASS合入依據**；模型review不是Owner批准或人類測試。
+
+模糊處採最保守做法：不改地形／部署；森林用固定−1而非隨機；corner兩側阻擋；
+wave交戰分開記「任一方首次交戰」與「敵增援出手」；勝圖明示terminalfixture；
+不為新AI修改數值獲勝。milestone留本project WORK與本交接，沒有寫共用PLAN／memory；
+正常hooks只有既有missing_canonical_memory非阻擋advisory，沒有bypass。
+
+### 本段commit
+
+| W | 本地commit |
+| --- | --- |
+| W1 baseline／idle telemetry | `1e86503` |
+| W2 AI pressure／leader／wave | `bfc94f4` |
+| W3 LOS／cover共用規則 | `81312d0` |
+| W4 flash／numbers／比較證據 | `afb4e9b` |
+| W5 camera／overview／labels | `d2907dd` |
+| W6 pacing／performance／runtime | `bbe7bfe` |
+| W7 全測試／scope／hash | `0505825` |
+| W8 本交接／文件hash刷新 | 本commit |
+
+**W8 handoff commit後停止，等待review。只有local commits，沒有push、merge、PR、
+git stash或後續slice。Task DONE不是SessionEnd，不執行canonical daily closeout；
+沒有完整治理自動導入或人類／Owner驗收宣稱。**

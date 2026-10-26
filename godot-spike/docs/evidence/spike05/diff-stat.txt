@@ -2,13 +2,17 @@
  godot-spike/config/impact_profile.tres             |   16 +-
  godot-spike/config/impact_profile_spike04.tres     |   43 +
  godot-spike/data/levels/field_24x18.gd             |    8 +-
+ godot-spike/docs/VERIFICATION.md                   |   80 +
  godot-spike/docs/evidence/spike05/MOVIE.md         |   15 +
  godot-spike/docs/evidence/spike05/PACING.md        |   73 +
  godot-spike/docs/evidence/spike05/PERFORMANCE.md   |   27 +
- godot-spike/docs/evidence/spike05/WORK.md          |   23 +
+ godot-spike/docs/evidence/spike05/README.md        |   53 +
+ godot-spike/docs/evidence/spike05/WORK.md          |   25 +
  godot-spike/docs/evidence/spike05/arrival.png      |  Bin 0 -> 345416 bytes
  .../capture-intercept-full-probe-failed.json       |   11 +
  .../attempts/intercept-full-probe-failed.log       |    4 +
+ .../spike05/attempts/w7-audit-schema-failed.log    |   13 +
+ godot-spike/docs/evidence/spike05/audit.json       |  408 ++
  .../docs/evidence/spike05/autoplay/bypass.json     | 3380 +++++++++
  .../docs/evidence/spike05/autoplay/flank.json      | 6111 +++++++++++++++
  .../docs/evidence/spike05/autoplay/road.json       | 6753 +++++++++++++++++
@@ -31,10 +35,12 @@
  .../docs/evidence/spike05/capture-sequence.json    |  158 +
  .../docs/evidence/spike05/capture-sight.json       |   98 +
  .../evidence/spike05/capture-source-hashes.json    |  110 +
+ .../docs/evidence/spike05/changed-paths.txt        |  353 +
  .../docs/evidence/spike05/cover-preview.png        |  Bin 0 -> 626290 bytes
  godot-spike/docs/evidence/spike05/dense-labels.png |  Bin 0 -> 422764 bytes
  .../docs/evidence/spike05/deployment-1080.png      |  Bin 0 -> 821785 bytes
  godot-spike/docs/evidence/spike05/deployment.png   |  Bin 0 -> 429612 bytes
+ godot-spike/docs/evidence/spike05/diff-stat.txt    |  353 +
  godot-spike/docs/evidence/spike05/edge-safe.png    |  Bin 0 -> 200608 bytes
  .../evidence/spike05/enemy-advancing-front.png     |  Bin 0 -> 489314 bytes
  .../docs/evidence/spike05/enemy-frames/0000.png    |  Bin 0 -> 615420 bytes
@@ -46,6 +52,7 @@
  .../evidence/spike05/enemy-phase-60fps-strip.png   |  Bin 0 -> 588352 bytes
  .../docs/evidence/spike05/enemy-phase-60fps.avi    |  Bin 0 -> 10130644 bytes
  .../docs/evidence/spike05/field-melee-hit.png      |  Bin 0 -> 629582 bytes
+ godot-spike/docs/evidence/spike05/git-scope.json   |   10 +
  .../docs/evidence/spike05/hitfeel/field-hit.log    |    2 +
  .../evidence/spike05/hitfeel/field-melee-hit.png   |  Bin 0 -> 603243 bytes
  .../hitfeel/impact-strip-spike04-vs-spike05.png    |  Bin 0 -> 7699868 bytes
@@ -293,7 +300,10 @@
  .../docs/evidence/spike05/sequence-frames/0086.png |  Bin 0 -> 685187 bytes
  .../docs/evidence/spike05/sequence-frames/0108.png |  Bin 0 -> 4321 bytes
  godot-spike/docs/evidence/spike05/sequence.json    |   21 +
+ .../docs/evidence/spike05/source-hashes.json       | 3537 +++++++++
+ godot-spike/docs/evidence/spike05/test-run.log     |  312 +
  godot-spike/docs/evidence/spike05/threat-los.png   |  Bin 0 -> 491803 bytes
+ .../docs/evidence/spike05/untracked-paths.txt      |   22 +
  godot-spike/docs/evidence/spike05/w2/flank.json    | 6042 +++++++++++++++
  godot-spike/docs/evidence/spike05/w2/road.json     | 6406 ++++++++++++++++
  godot-spike/docs/evidence/spike05/w2/turtle.json   | 6473 ++++++++++++++++
@@ -321,6 +331,9 @@
  godot-spike/docs/evidence/spike05/w6-sequence.log  |   12 +
  .../docs/evidence/spike05/w6-sight-final.log       |    4 +
  godot-spike/docs/evidence/spike05/w6-sight.log     |    4 +
+ godot-spike/docs/evidence/spike05/w7-audit-run.log |  Bin 0 -> 156 bytes
+ .../docs/evidence/spike05/w7-exit-codes.json       |    4 +
+ godot-spike/docs/evidence/spike05/w7-import.log    |   44 +
  godot-spike/docs/evidence/spike05/warning.png      |  Bin 0 -> 500763 bytes
  .../docs/evidence/spike05/win-staged-terminal.png  |  Bin 0 -> 418044 bytes
  godot-spike/scripts/impact/impact_profile.gd       |    1 +
@@ -330,24 +343,34 @@
  godot-spike/scripts/levels/field_hud.gd            |   12 +-
  godot-spike/scripts/levels/field_indicators.gd     |   15 +-
  godot-spike/scripts/levels/field_labels.gd         |  111 +
+ godot-spike/scripts/levels/field_labels.gd.uid     |    1 +
  godot-spike/scripts/levels/field_minimap.gd        |    8 +-
  godot-spike/scripts/levels/field_telemetry.gd      |   50 +-
  godot-spike/scripts/rules/field_rules.gd           |  187 +-
  godot-spike/scripts/rules/field_sight.gd           |   41 +
+ godot-spike/scripts/rules/field_sight.gd.uid       |    1 +
  godot-spike/tests/test_field_ai.gd                 |  105 +
- godot-spike/tests/test_field_autoplay.gd           |   37 +-
+ godot-spike/tests/test_field_ai.gd.uid             |    1 +
+ godot-spike/tests/test_field_autoplay.gd           |   61 +-
  godot-spike/tests/test_field_camera.gd             |    3 +-
  godot-spike/tests/test_field_los.gd                |   79 +
+ godot-spike/tests/test_field_los.gd.uid            |    1 +
  godot-spike/tests/test_field_rules.gd              |    3 +-
  godot-spike/tests/test_field_ui.gd                 |   25 +-
- godot-spike/tests/test_field_visibility.gd         |   81 +
+ godot-spike/tests/test_field_visibility.gd         |   97 +
+ godot-spike/tests/test_field_visibility.gd.uid     |    1 +
  godot-spike/tests/test_spike04_profile.gd          |    3 +-
  godot-spike/tests/test_spike05_profile.gd          |   17 +
+ godot-spike/tests/test_spike05_profile.gd.uid      |    1 +
+ godot-spike/tools/audit_spike05.py                 |  137 +
  godot-spike/tools/autoplay_field.gd                |   11 +-
  godot-spike/tools/capture_field05.gd               |  270 +
+ godot-spike/tools/capture_field05.gd.uid           |    1 +
  godot-spike/tools/capture_hit_field05.gd           |   21 +
+ godot-spike/tools/capture_hit_field05.gd.uid       |    1 +
  godot-spike/tools/capture_spike05.gd               |  158 +
+ godot-spike/tools/capture_spike05.gd.uid           |    1 +
  godot-spike/tools/field_policy.gd                  |   24 +-
  godot-spike/tools/package_spike05_field.py         |  185 +
  godot-spike/tools/package_spike05_hitfeel.py       |   40 +
- 352 files changed, 95934 insertions(+), 87 deletions(-)
+ 375 files changed, 101311 insertions(+), 87 deletions(-)

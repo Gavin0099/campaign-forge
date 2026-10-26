@@ -471,8 +471,8 @@
   },
   {
     "path": "godot-spike/docs/evidence/spike05/audit.json",
-    "sha256_working_tree": "4bc034cf183d92460b9c0f4faf3a4d6b74b882c2791c51449b19b3e112b39542",
-    "sha256_git_lf": "4bc034cf183d92460b9c0f4faf3a4d6b74b882c2791c51449b19b3e112b39542"
+    "sha256_working_tree": "30e87230d96f4dcfe985ac0a7acd000a133548892aa14154503f13e47575c4d4",
+    "sha256_git_lf": "30e87230d96f4dcfe985ac0a7acd000a133548892aa14154503f13e47575c4d4"
   },
   {
     "path": "godot-spike/docs/evidence/spike05/autoplay/bypass.json",
@@ -586,8 +586,8 @@
   },
   {
     "path": "godot-spike/docs/evidence/spike05/changed-paths.txt",
-    "sha256_working_tree": "9efb408b2282bdd649c0566c1570451bd1ab2a4d414fa98cbd5c9c8d87c1f5d5",
-    "sha256_git_lf": "4d91608b567f0fd70286c8d0b3ec03aeaffa883d94c992e38450b4817770d969"
+    "sha256_working_tree": "7f3c9c8d551cde40a2bae063bea2769edcdf36c3a32d866c7d7e40f2cee3b67d",
+    "sha256_git_lf": "f037eeaa2a04fab7e6d136e32b8eca072765abb1be52a64d1ad8e12fb2d858fb"
   },
   {
     "path": "godot-spike/docs/evidence/spike05/cover-preview.png",
@@ -611,8 +611,8 @@
   },
   {
     "path": "godot-spike/docs/evidence/spike05/diff-stat.txt",
-    "sha256_working_tree": "0273e5b37e0f04353d6181844faa794d487eda041234db4ce0f87633ea2dccb9",
-    "sha256_git_lf": "4f30c673c2768dc40c4983718a2b24c032f042767615fc09bef889200c9d2011"
+    "sha256_working_tree": "4bc97bf719b722ddb00226bce550b6f6fc0c7688d7b5243a1d2ec1030b776028",
+    "sha256_git_lf": "457bb68bf8b9c3f223693865110d6a6b1a8b5a05cfce77171cd05b2f6aa107dd"
   },
   {
     "path": "godot-spike/docs/evidence/spike05/edge-safe.png",
@@ -671,8 +671,8 @@
   },
   {
     "path": "godot-spike/docs/evidence/spike05/git-scope.json",
-    "sha256_working_tree": "4e2d9f862cb95d545e5c5a6961ade8d8531da3cf5a22cfde01f34e0bd6bb1172",
-    "sha256_git_lf": "4e2d9f862cb95d545e5c5a6961ade8d8531da3cf5a22cfde01f34e0bd6bb1172"
+    "sha256_working_tree": "5910b3e9561201706d03311e52fd79bf712429f78abd17881fb5052d37743194",
+    "sha256_git_lf": "5910b3e9561201706d03311e52fd79bf712429f78abd17881fb5052d37743194"
   },
   {
     "path": "godot-spike/docs/evidence/spike05/hitfeel/field-hit.log",
@@ -1941,8 +1941,8 @@
   },
   {
     "path": "godot-spike/docs/evidence/spike05/untracked-paths.txt",
-    "sha256_working_tree": "e7d6b31d53cd8763dd4cf2504debbbb7652cdb85b3664a9536d71eeec59c8943",
-    "sha256_git_lf": "13613a98034c8004edc89729c2f459e85a9ca1e655b6486894ffb9235d0b7356"
+    "sha256_working_tree": "c8a1dbf65c03e16cc32c7fc85e64041450e4f56113353d128f7bd67381857672",
+    "sha256_git_lf": "c8a1dbf65c03e16cc32c7fc85e64041450e4f56113353d128f7bd67381857672"
   },
   {
     "path": "godot-spike/docs/evidence/spike05/w2/flank.json",
@@ -2101,13 +2101,13 @@
   },
   {
     "path": "godot-spike/docs/evidence/spike05/WORK.md",
-    "sha256_working_tree": "386e89ce3de8abc337276752bf3127af1cfb823b4c81323d3a3febdbad172858",
-    "sha256_git_lf": "38b0c507f093b061d63cd2778ddc1494262f1133199d7259a9521cdf0f5ab222"
+    "sha256_working_tree": "a090f16e78189ca3c9a9c73df16131fe0984d7387b69d2d1570e40e96f043166",
+    "sha256_git_lf": "bca83687b96a97d169e5586a60fc2400d8d80d547dac940a2a2bc70e50e2ac30"
   },
   {
     "path": "godot-spike/docs/HANDOFF.md",
-    "sha256_working_tree": "40eb3122c00a97fc936d9db8c59e3e9a369d61ddc5bb1c907ffe6ceda8f33412",
-    "sha256_git_lf": "40eb3122c00a97fc936d9db8c59e3e9a369d61ddc5bb1c907ffe6ceda8f33412"
+    "sha256_working_tree": "5cf9108f226272b36ce8b9e665b537d8f8d990c214e5185a6f37a90268a30e65",
+    "sha256_git_lf": "5cf9108f226272b36ce8b9e665b537d8f8d990c214e5185a6f37a90268a30e65"
   },
   {
     "path": "godot-spike/docs/VERIFICATION.md",
@@ -2751,8 +2751,8 @@
   },
   {
     "path": "godot-spike/tools/audit_spike05.py",
-    "sha256_working_tree": "8a093cbe3a06a8f8a4aec40658bef459be4a081ec226780b0082cbbf75db4b44",
-    "sha256_git_lf": "8a093cbe3a06a8f8a4aec40658bef459be4a081ec226780b0082cbbf75db4b44"
+    "sha256_working_tree": "53cedcd737f2dfbd079a613582df368c9b6396433d3ac57db162d2ff4aa4bbf3",
+    "sha256_git_lf": "53cedcd737f2dfbd079a613582df368c9b6396433d3ac57db162d2ff4aa4bbf3"
   },
   {
     "path": "godot-spike/tools/autoplay_field.gd",

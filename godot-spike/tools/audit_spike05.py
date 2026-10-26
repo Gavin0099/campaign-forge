@@ -56,6 +56,7 @@ def main():
     assert scope['protected_diff_exit'] == scope['diff_check_exit'] == 0
     assert scope['profile_byte_match'] and scope['historical_profile_blob'] == scope['preserved_profile_blob']
     paths = set(text(OUT / 'changed-paths.txt').splitlines() + text(OUT / 'untracked-paths.txt').splitlines())
+    paths.discard('')  # A clean untracked snapshot is valid on handoff refresh.
     for name in paths:
         assert name.startswith('godot-spike/') or name == 'docs/tasks/godot-spike-05-ai-los-polish.md', name
         assert not name.startswith(('godot-spike/art/', 'godot-spike/scripts/rules/grid_rules.gd')), name
