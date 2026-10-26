@@ -275,3 +275,14 @@ Git protected diff and whitespace exit0; onlygodot-spike/ and the pre-existing
 brief differ from6ee5cb7. Source hashes use working bytes and normalizedLF;
 no self-hash/audit stdout. W8 refreshes documents/scope/hashes only.
 No new process/agent/dependency, push/PR/merge/stash or session closeout.
+
+## W8 — handoff
+
+Traditional Chinese spike-06 handoff adds run/control/profile/variant commands,
+every tuning value and rationale, intended route, full before/after summary,
+wave/scout roles, clocks/flash correction, frame regression, explicit misses,
+PLACEHOLDER/HUMAN_PENDING, six one-line future review questions, resource
+checklist and W1–W8 commit table. Answered defaults are not reopened.
+W8 changes only documents and refreshed scope/audit/hash metadata; W6 runtime
+freeze remains identical and full GUT is not repeated without a code change.
+Stop after the local handoff commit; no push/merge/PR/stash or future segment.

@@ -1,10 +1,10 @@
 {
   "branch": "codex/godot-spike",
-  "snapshot_head": "c32399032b80c73ca1d5fd8ab0345e75d5aad319",
+  "snapshot_head": "a89e2b006b6ca1c369cd2d70877f0af73e208d53",
   "scope_base": "6ee5cb7",
   "protected_diff_exit": 0,
   "diff_check_exit": 0,
   "historical_profile_blob": "65883cfef205855bfef691380b5dc7d09beb5a07",
   "preserved_profile_blob": "65883cfef205855bfef691380b5dc7d09beb5a07",
-  "note": "HEAD precedes containing evidence commit. Changed-paths includes current working diff; untracked separate. W8 metadata refresh only."
+  "note": "W8 metadata-only refresh. HEAD precedes handoff commit; changed-paths includes working diff. Runtime unchanged since W6."
 }

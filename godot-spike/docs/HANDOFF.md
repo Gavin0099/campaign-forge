@@ -2956,3 +2956,332 @@ wave交戰分開記「任一方首次交戰」與「敵增援出手」；勝圖�
 **W8 handoff commit後停止，等待review。只有local commits，沒有push、merge、PR、
 git stash或後續slice。Task DONE不是SessionEnd，不執行canonical daily closeout；
 沒有完整治理自動導入或人類／Owner驗收宣稱。**
+
+## spike-06
+
+本段已建立可重現的完整勝路：20固定種子的支援側翼策略勝14局（70%），
+勝局全部與援軍交戰；實際scene從初始部署連續操作於T13勝利。
+GUT **165/165、11,749 assertions**，scope／evidence audit exit0。
+15–25分鐘全面估算門檻仍FAIL，影格時間明顯退步，真人盲玩與0.5閃白判斷待驗。
+這是本地工程與玩法探針結果，沒有Owner遊玩、美術通過或正式規則定案。
+
+Owner Gavin Wu／Gavin0099於2026-10-26 19:17 Asia/Taipei授權本段；
+brief8010bde、前版6ee5cb7，worktree `D:\campaign-forge\scratch\godot-spike`，
+branch `codex/godot-spike`。僅godot-spike/，W1–W8逐步commit，**不push**。
+沒有改main／其他worktree／共用PLAN或memory，沒有新增代理或正式故事／S4。
+
+### 先給盲玩者
+
+**Gavin若要盲測，先只讀此小節與下一節操作，不讀後面的「勝路」與數據。**
+請road／flank／turtle各玩一次，記實際分鐘、每位傷亡、困惑位置、勝敗原因及
+下一次想改的策略；記錄斥候定位、援軍預告與到場是否看得懂。
+之後再對照自動策略。另判定0.5閃白、V圖例、O標籤、鏡頭舒適度與SFX。
+全部標 **HUMAN_PENDING**，自動操作與模型看圖不能代填真人回饋。
+
+### 啟動、操作與重跑
+
+```powershell
+$godot='C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe'
+$python='C:\Users\daish\AppData\Local\Programs\Python\Python312\python.exe'
+& $godot --path godot-spike res://scenes/levels/Field24x18.tscn
+# 舊資料（也可配舊profile）；R重啟沿用variant
+& $godot --path godot-spike res://scenes/levels/Field24x18.tscn -- --variant=spike05 --impact-profile=spike05
+# 單獨比較profile：a9_baseline / spike03 / spike04 / spike05；省略參數為新default
+& $godot --path godot-spike -- --impact-profile=spike05
+# 上一行進原本Skirmish；明指Field scene才能進大場
+
+# Before重跑，另寫ignored .godot目錄，避免覆蓋已提交證據
+& $godot --headless --path godot-spike -s res://tools/autoplay_field.gd -- --variant=spike05 --seeds=fixed --output=res://.godot/spike06-before/
+& $godot --headless --path godot-spike -s res://tools/autoplay_field.gd -- --seeds=fixed --enemy-mean=1.47633625 --output=res://.godot/spike06-after/
+& $python godot-spike/tools/summarize_spike06.py .godot/spike06-after
+# 也支援 --seeds=24018,1001 或 --seeds=1001:1019，--policies=road,flank
+& $godot --headless --path godot-spike --import
+& $godot --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gdir=res://tests -gexit
+```
+
+滑鼠選隊員／落點／目標，Enter或再點確認；Esc／右鍵取消預覽。
+Tab換隊員、IJKL移游標、Enter選擇／確認、T換攻擊目標、Space等待、N結束回合、
+R重新部署。WASD／方向鍵捲動，中鍵拖曳，滾輪縮放，O全圖／點地圖返回，
+F定位、P收合小地圖；E邊緣捲動預設OFF。G格線、V威脅／圖例、M Reduced Motion、
+B切2×、Shift按住加速、X略敵移動、F1 debug、C下一擊crit展示。
+敵phase預設正常；勝利仍擊敗領袖，Thoma倒下或超15回合敗。
+
+V六色：青綠移動、暗紅敵威脅、橘可攻擊、灰LOS阻擋、金森林−1、紫斥候鄰格攔截。
+斥候攻後若剩撤離預算，HUD顯示可移格；等候會結束撤離。這不是再次攻擊。
+O群組標籤13→15px、112→144px，沿用有限去重疊；終局隱藏world nameplates，
+避免蓋住勝敗文字。沒有新美術。
+
+### 根因與每項調整（全為spike測試值）
+
+舊operator只向最近attack slot衝刺，scout移6把自己送到移4近戰之前；
+不判斷危險、保護Thoma或先殺可殺目標，甚至總優先領袖。另一方面，
+11騎士＋領袖及3援軍合計94HP對我方40HP，T4全體march疊加連鎖警戒，
+不留局部人數優勢。全敗同時包含operator錯誤與壓力堆疊，不能僅據此說AI作弊。
+
+先補kill priority／傷兵撤退／screen cohesion，再依序試部署、march時點、
+敵數。較強operator配原部署也未證明勝路；前推部署候選仍敗，六騎士候選
+20seed僅45% road勝。保留所有試驗於WORK與w2-*，不假稱最優解／單一因果。
+選五騎士時W2 road85%；W3入口、W4 kit及operator改動後，最終支援側翼70%。
+
+| 項目 | spike05 → spike06 | 原因 |
+| --- | --- | --- |
+| Thoma部署 | (3,9) → (3,10) | 後移半步，讓guard先形成道路屏障 |
+| guard部署 | (3,10) → (4,9) | 道路前排 |
+| bow-1／bow-2 | (2,8)/(2,11) → (3,8)/(3,11) | 緊跟屏障提供支援 |
+| scout-1／scout-2 | (3,7)/(3,12) → (2,8)/(2,11) | 後排側翼起步，避免孤立前衝 |
+| 全體march | T4 → T6 | 開局先處理局部；半徑6感知／群組受擊／連鎖警戒仍即時啟動 |
+| knight-4 south | (12,15) present → omitted | 少一名同時南面壓力 |
+| knight-6／7 flank | (19,4)/(20,4) present → omitted | 留一名北側interceptor，減少三人疊壓 |
+| knight-10／11 rear | (22,14)/(23,15) present → omitted | 不與已預告三援軍再疊完整後備波 |
+| knight-9 reserve | (19,10) present → omitted | 六騎士45%未過門檻，保留knight-8單bodyguard |
+| 初始騎士／領袖／援軍 | 11/1/3 → 5/1/3 | 降同時兵力，不改留下單位的HP／base damage |
+| 援軍entry | (23,4)/(23,5)/(23,6) → (23,8)/(23,9)/(23,10) | 東側渡口接近領袖交戰線，縮短追擊距離 |
+| 援軍標示 | 東北入口 → 東側渡口入口 | HUD／warning與真實entry一致 |
+| scout kit | 無 → 半血收割＋1／鄰格停步／攻後最多2成本撤離 | 側翼、攔截、收割後能回到屏障 |
+| road／flank operator | 無危險直衝 → kill優先、傷兵／Thoma保護、scout貼screen、預留撤離並評估leader hold／擊退 | 先補明顯操作錯誤，不加玩家隱藏規則 |
+
+沒有地形格、留下敵人的座標／group、HP、base damage、move4/3/6、射程、
+alert6／chain5／support3／bodyguard3／intercept6、leader contest2／counter／
+step-back／hold參數、wave T4預告／T5到場／出生休息、15回合與斬首目標的變更。
+純supercover LOS、峭壁／深岸／活單位阻擋、森林−1 min1、斜角兩側檢查保持。
+新增scout finisher是明示條件加成，不是base stat傷害上調。grid_rules.gd未動。
+
+### 勝路與風險
+
+指定勝路為**近戰護著雙弓沿主道路推進，斥候靠北側y7附近支援側翼**。
+先集中消滅當前局部敵人，別為領袖放棄可殺目標；Thoma受傷先退，guard接前線。
+scout可走完整6成本趕路，但要打完撤離就盡量只花≤4；貼著screen找殘血收割，
+把紫色控制區放在敵軍接近弓手／援軍追路上。到渡口再一起壓領袖，容許擊退
+改變counter距離。這是operator的策略說明，不是每格固定答案或人類最佳路線證明。
+
+最終road50%勝，flank70%；road仍有過度集中／時間不夠的風險。
+turtle讓敵軍與援軍逐步包上、失去局部優勢；scout-retreat兩scout全活但少了
+收割／攔截支援，Thoma常先崩，兩者20種子均0勝。這些是naive probe，不代表
+所有真人龜陣都不可能贏。scout仍可T3陣亡，不能當肉盾或無代價誘敵。
+
+### 援軍
+
+T4持續預告，T5由(23,8)/(23,9)/(23,10)進場，出生回合休息，之後沿原AI
+追截我方／領袖附近攻擊者。沒有強制擊殺wave的目標，沒有teleport或強制交戰。
+flank19/20局曾碰wave、14/14勝局都碰；首次任一方交戰T7[6–8]，
+wave自己出手T7[6–9]、被打T8[7–9]。具名事件分開記錄，不把僅到場算交戰。
+
+scripted bypass從T5預放到東側，不是從我方原部署打過去：20/20勝，
+T7[6–9]，平均死0.70（近戰.05／弓.50／斥候.15），17/20與wave交戰。
+種子1014／1015／1017仍T6零死、沒碰wave。**繞過仍可能，免費繞後反例未消除**；
+不能拿這個部分起點的100%勝率宣稱完整最佳路線，也不能宣稱入口調整封死繞路。
+本輪用最小entry槓桿，保留反例供難度review，未再加未必要的強制交戰規則。
+
+### 斥候kit與實測角色
+
+半血定義currentHP≤50% maxHP，近戰收割加1（base2仍不變），3HP騎士可收掉；
+preview／hover與實際傷害共源。四個正交鄰格為控制區，敵人**進入時結束移動**，
+仍能攻擊；從已受控起點離開可以。無reaction傷害，多人控制只記一個來源。
+AI合法reach／threat也經同一函數，並非只畫圖阻嚇。
+
+攻擊後可選一次 `min(2,6−已花移動成本)` 撤離；總成本≤6、地形加權計算。
+完整移6後無撤離；原地攻擊也只有2，不能補走6、重複撤、再攻擊。
+等待消耗機會，下回合重置；保留spike05 variant無kit。
+測過full remaining撤離候選，最後保留較小的cap2，沒有暗中給更多移動。
+
+| flank職業／版本 | 傷害／占比 | kills／占比 | 收割 | 攔截 | 平均死 | 死亡回合中位[範圍] | living unit-turns |
+| --- | --- | --- | ---: | ---: | ---: | --- | ---: |
+| 近戰before | 175/39.6% | 9/20.9% | 9 | 0 | 1.95 | 5[4–7] | 186 |
+| 近戰after | 390/39.4% | 42/28.2% | 42 | 0 | .45 | 9[6–10] | 468 |
+| 遠程before | 155/35.1% | 34/79.1% | 34 | 0 | 0 | — | 204 |
+| 遠程after | 352/35.6% | 46/30.9% | 46 | 0 | .50 | 9[7–13] | 452 |
+| 斥候before | 112/25.3% | 0/0% | 0 | 0 | 1.05 | 2[2–5] | 146 |
+| 斥候after | 248/25.1% | 61/40.9% | 61 | 87 | 1.15 | 8[3–14] | 364 |
+
+近戰是最高傷害與屏障，遠程是受LOS限制的持續支援，斥候lead收割／攔截，
+不是最高傷害。收割定義是對已受傷敵人的致命一下，各職業同定義，baseline由
+原damage events重算；intercept是移動在scout控制區結束，不等於一定少吃一次攻擊。
+死亡中位僅算死者，存活者censored，不能解讀成全員必活8回合。
+與舊default24018的T4–5相比確實更久；20seed baseline中位其實T2，非4–5。
+平均死者反而1.05→1.15，戰鬥更長、兵力／部署／policy也改，不能把差別全歸kit。
+
+### 多種子before／after與時間
+
+固定24018、1001–1019。AI原有seed小tie-break＋policy同職業出手順序／同分目標
+hash；24018保留舊順序，傷害固定、無部署jitter。W1與W6的spike05各100組
+trace、commands、終局、傷亡、archetypes、unit-turns、wave逐一相同。
+24018重現road敗8／flank敗7／turtle敗6／retreat敗9／bypass敗7。
+distinct traces每20組before10/9/14/9/8，after20/20/12/14/10（以下表順序），
+不是把同一場重印20次，也不代表抽到20種真人水平。
+
+| 策略／版本 | 勝率 | 勝回合中位[範圍] | 敗回合中位[範圍] | 平均死亡近／弓／斥 | wave總／勝局 | true idle | 分鐘估算中位區間；全範圍 |
+| --- | ---: | --- | --- | --- | --- | ---: | --- |
+| road before | 0% | — | 6[5–8] | 1.60/.45/1.85 | 0%/— | 37.1% | 7.3–12.0；6.8–16.3 |
+| road after | 50% | 14[10–15] | 14.5[7–16] | .70/.65/1.50 | 100%/100% | 26.9% | 17.5–28.9；10.7–35.0 |
+| flank before | 0% | — | 5[5–7] | 1.95/0/1.05 | 0%/— | 43.2% | 6.8–11.1；6.8–16.2 |
+| flank after | 70% | 13[7–15] | 16[7–16] | .45/.50/1.15 | 95%/100% | 30.0% | 17.2–28.4；9.9–33.7 |
+| turtle before | 0% | — | 8[6–10] | 1.15/.20/1.80 | 30%/— | 32.6% | 10.7–17.5；9.3–22.2 |
+| turtle after | 0% | — | 12[9–16] | 1.10/1.05/1.45 | 100%/— | 31.7% | 14.8–24.5；12.2–29.6 |
+| scout-retreat before | 0% | — | 5[5–9] | 2/.30/.90 | 0%/— | 40.0% | 6.8–11.1；6.8–21.8 |
+| scout-retreat after | 0% | — | 8[6–10] | 1.85/.10/0 | 80%/— | 28.6% | 12.2–20.2；8.6–24.4 |
+| scripted bypass before | 0% | — | 6[5–7] | 1/.50/.90 | 20%/— | 0% | 3.3–5.3；1.8–7.1（部分起點） |
+| scripted bypass after | 100% | 7[6–9] | — | .05/.50/.15 | 85%/85% | 6.9% | 4.7–7.7；3.1–11.5（部分起點） |
+
+T16是超15回合終局紀錄，沒有額外可玩的第16回合。true idle沿spike05定義，
+只算eligible且已observed的敵人，無移動／攻擊、無可達攻擊、非明示role hold；
+inactive guard算，出生休息／terminal未處理尾段不算。群組明細見
+[PACING](evidence/spike06/PACING.md)。新flank idle288/961≈29.97%，不放寬35%門檻。
+LOS所有100after實際阻擋射擊0，flank phase-start blocked機會43；是當下射程內
+blocked pair，不是全部可能路徑。policy／部署／兵力一起變，無孤立LOS因果宣稱。
+
+估算＝(終局回合×enemy mean＋living ally unit-turns×假設15–25秒思考)/60。
+before mean3.456164s，after獨立無錄影連續勝局12個normal phase mean1.47633625s。
+玩家回合勝仍保守算一個enemy phase；bypass部分起點不可當全場分鐘比較。
+flank中位17.2–28.4，整個envelope9.9–33.7，**0/20完整區間落於15–25**，
+時間目標FAIL，沒有靠HP填充。真人分鐘未知；只有14勝的回合中位13，不保證
+人人玩得快／有趣。勝率≥60、weak多敗、非全T8前勝、idle≤35、wave勝局≥70、
+scout定位與較晚死亡門檻均PASS；整體好玩與商業品質仍未驗收。
+
+### hit feel與實際時鐘
+
+| 層 | spike05 → spike06 |
+| --- | --- |
+| flash_mix | .6 → **.5** |
+| hold／fade | 0／60ms → 相同；沒有換45ms |
+| crit multiplier | 1.2 → 相同；profile理論乘積.72→.6，非field實際亮度 |
+| field實際normal／crit峰值 | 兩者均.6 → 兩者均.5（adapter從未乘crit亮度） |
+| hitstop normal／crit／Reduced | 110／170／80ms → 相同 |
+| directional shake normal／crit | 8／12px，decay4 → 相同 |
+| recoil／streak／bias | 9／22px／.8 → 相同 |
+| sparks／spokes | 18／6 → 相同 |
+| normal／crit number | 21／26px → 相同 |
+| dust／zoom .06／knockback／layered SFX | 相同 |
+
+先byte-for-byte保存spike05 resource，blob與6ee5cb7 default同為
+65883cfef205855bfef691380b5dc7d09beb5a07。五profile載入／選擇與所有其他exported
+值相等都有測試。舊handoff的field「crit .72」不符合adapter實作，這裡明確更正；
+Skirmish的crit multiplier作用於fade duration，沒有為湊亮度描述改其他層。
+
+[前後contact±8總strip](evidence/spike06/hitfeel/impact-strip-spike05-vs-spike06.png)、
+[field hit](evidence/spike06/hitfeel/field-melee-hit.png)、
+[timing](evidence/spike06/hitfeel/timing.json)。normal／crit各兩套contact still與AVI。
+模型看圖仍見凍結幀明顯接觸閃光，不能因此宣稱Owner接受0.5。
+
+三Skirmish setup的HP4、cells(1,6)/(1,5)/(3,4)不變；fixed60 simulation秒為
+normal.950／crit1.016667／Reduced.716667。**fixed60 wall單獨跑也超hard1.7**，
+normal最多1.886456／crit1.971366；保留alone JSON及先前並行觀察，不把並行
+當已證實原因。另獨立real-time無錄影／readback九組wall max.8570／.9276／
+.6681s，Reduced每setup≤normal；field41次max.943979，皆過實際hard1.7／target1.2。
+錄影或固定模擬時鐘wall超標仍是已知限制，兩種時鐘分列，不能刪掉不利測量。
+
+### 效能與畫面證據
+
+| Native720p操作 | spike05 mean/worst ms | spike06 n／mean/worst ms |
+| --- | --- | --- |
+| scroll | 20.703/30.588 | 54／34.007/46.443 |
+| enemy normal | 23.509/33.983 | 70／34.053/47.043 |
+| enemy2× | 23.124/29.606 | 43／34.585/45.572 |
+
+AMD780M GL Compatibility，無錄影／readback／其他Godot程序，max60FPS，
+normal與2×用同個真實可達wave state。平均+13.304／10.544／11.461ms是
+**明顯退步**，不是pass60FPS；舊測T2、新測援軍階段，工作量不同，無單一歸因。
+[PERFORMANCE](evidence/spike06/PERFORMANCE.md)保留frame samples與各職業attack latency。
+
+[連續winT13](evidence/spike06/win-continuous.png)、
+[連續road1001 loseT8](evidence/spike06/lose.png)、
+[1080p](evidence/spike06/deployment-1080.png)、
+[midbattle](evidence/spike06/route-midbattle.png)、
+[wave](evidence/spike06/reinforcement-engaging.png)、
+[ZoC](evidence/spike06/scout-zoc-preview.png)、
+[legend](evidence/spike06/threat-legend.png)、[overview](evidence/spike06/overview.png)。
+win／lose確實由初始部署一路操作，非終局fixture；其他shots詳
+[README index](evidence/spike06/README.md)。兩段60FPS native AVI＋PNG strip是
+可達snapshot續播（snapshot保存state／commands），無stagedHP：
+[wave strip](evidence/spike06/enemy-wave-60fps-strip.png)及
+[scout flank→finish→retreat](evidence/spike06/scout-flank-finish-retreat-60fps-strip.png)。
+ffmpeg未安裝，使用Godot MJPEG AVI＋Pillow提PNG；60FPS為simulation clock，
+不是此PC實際render FPS。Dummy音效未試聽。
+
+### 驗證、保護範圍與PLACEHOLDER
+
+W7 import0／GUT0，30 scripts、165 passing、11,749 assertions、104.245s；
+新增18 tests，舊147保留。歷史部署／18 actors／T4march／NE warning／autoplay
+測試固定在保留spike05 variant／operator，profile歷史值固定spike05 resource，
+新default獨立測合法性／wave／scout／HUD，沒有刪除或弱化斷言。
+最終audit0驗70份共用動畫bytes、A9 grid_rules、W6 runtime freeze、100舊trace、
+native dimensions／plate overlaps、AVI hashes、時鐘／scope。完整命令與失敗保留見
+[VERIFICATION](VERIFICATION.md)的spike-06與[WORK](evidence/spike06/WORK.md)。
+
+git diff6ee5cb7保護路徑exit0，只有godot-spike/與W1前既有brief；
+ui-prototype／docs/art-briefs／docs/proposals／shared-anim／framePNG／11×9
+Skirmish三setup／grid_rules未動，唯一共用presentation改動為flash_mix。
+source-hashes是包含檔案commit前working bytes＋normalizedLF，排除self／audit stdout；
+W8只改本交接／文件與metadata，沒有偷偷重調規則或換美術。
+
+仍為PLACEHOLDER：terrain／props既有展示素材、全我方共用Thoma stand-in、
+敵騎士兩stand-in、A9 swing development frames（本輪無任何frame改動）、
+SFX與所有Field測試數值。沒有新canon；Thoma已核准短單手flanged mace不變。
+24×18 only、無fog，32×24未授權，正式戰鬥／故事／S4沒有新增授權。
+
+### 風險與給Gavin的一行可答問題
+
+70%是20固定seed的competent heuristic結果，包含policy改進，非真人難度分布；
+有T7快勝／T15壓線／超15敗，六敵初始數量也可能讓真人覺得稀疏。
+scout仍早死且長戰平均死者未降低；ZoC只停步仍可被打。Bypass仍有免費避wave反例。
+時間估算FAIL與影格退步保留；固定時鐘wall超標和真人感受需要獨立判斷。
+正常hooks僅既有missing_canonical_memory非阻擋advisory，沒有bypass，
+不宣稱治理全自動完成或session end。
+
+以下只是交接問題，不在本輪自動執行，也不重問已答defaults：
+
+1. 難度review是否先以目前flank14/20可勝、naive多敗作為盲測起點？答「是／需更易／需更難」。
+2. 斥候「半血＋1、鄰格停步、攻後剩餘最多2成本撤離」是否保留到下一次測試？答「留／改哪項」。
+3. 三個scripted零死避wave反例可否先保留，下一輪只驗真人能否從初始部署重現？答「可／優先補此項」。
+4. 15–25min區間未全面達標，是否先收真人分鐘再考慮節奏改動？答「先盲玩／另指示」。
+5. 影格約34ms退步是否排為後續profile優先項？答「優先／排後」。
+6. 0.5閃白及V／O可讀性人工判斷為何？答「接受／需改哪個」。
+
+### Resource自查（docs/review/RESOURCE-CHECKLIST.md）
+
+| 條目 | 結論與證據 |
+| --- | --- |
+| A prototype-fast | PASS：WORK在W2前固定keep/discard／勝率／idle／wave／kit門檻；僅Owner W1–W8，無新素材／引擎擴張 |
+| A level-design | PASS已測範圍：部署／leader／entry可達測試、14/20 flank勝與scene連續win13；無本輪故事雙分支，N/A；bypass反例／真人理解待驗 |
+| A game-ai | PASS工程：原顯式activation／hold／counter／pursuit，reach納ZoC；determinism／immutability測試與wave AVI；理解HUMAN_PENDING |
+| A game-ui-ux | PASS工程：preview／hover／damage／ZoC／threat共源，六色legend、O15px、720/1080native、parsedEsc/Enter；HUMAN_PENDING舒適度 |
+| A game-feel | PASS真實時鐘工程／FAIL已解釋限制：Skirmish9＋field41實際≤1.7；fixed60 wall可超1.7，保留。0.5前後strip／其他層不變；感受未驗 |
+| B Grid-Tactics | PASS架構／N/A借用：pure rules state→events→view，無新增複製code／art，不下載無license素材 |
+| B HopeMetal MIT | N/A：本輪無新增借用程式／資產，無新增授權依賴 |
+| B 無新引擎／依賴 | PASS：Owner已核准Godot4.7.2獨立spike，既有GUT／離線Python Pillow，無addon |
+| C 單人完整3–5分鐘 | FAIL／已解釋：Owner本輪15–25min覆蓋通用3–5；估算0/20全面達標，真人分鐘待測，不能以自動勝替代 |
+| C 敵行為可理解 | PASS工程：intent與warning理由可見、AI／ZoC純規則測試及wave AVI；真人判讀未驗 |
+| C 可勝可敗 | PASS工程：同原始部署實際flank win13／road lose8，100after終局／零illegal，非staged terminalwin |
+| C 兩戰術不同結果 | PASS工程：flank70／road50／turtle0，貢獻／傷亡不同；非正式故事分支或真人勝率 |
+| C 可重開換策略 | PASS工程：原R／button restart測試保留，variant restart維持；人類重玩未驗 |
+| C 無重複／卡回合／非法／中斷 | PASS已測：165tests、scene連續勝敗、parsed preview/cancel、cap2 budget／不可重複、100runs零illegal；非窮盡證明 |
+| C 720／1080／鍵盤 | PASS工程：native圖片、parsed mouse/Esc/Enter scout AVI、既有keyboard/camera測試全過；效能退步另列，無60FPS保證 |
+| C 自動／人工分開 | PASS：capture mode與snapshot標明、HUMAN_PENDING盲玩未代填、失敗保留；模型review不是Owner批准 |
+| D SRD／來源／adaptation | PASS授權界線／N/A新增SRD：無WotC IP／外來規則或美術；自創spike kit、未改L03/G005。checklist所引RULE-ADAPTATION-CONTRACT.md在checkout不存在，未虛稱審過 |
+| D AGENTS／Git／故事 | PASS：Owner明確指定本worktree／brief範圍，僅godot-spike正常commits，無push／PR／merge／stash／Actions／部署／32×24／canon/S4 |
+
+五個公開skill唯讀固定版方法與來源見[README](evidence/spike06/README.md)，未安裝或抄用素材。
+本機[external-executable-trust-audit](C:/Users/daish/.codex/skills/external-executable-trust-audit/SKILL.md)
+用於明確Owner執行檔與離線工具；未宣稱PATH／DLL／Git全信任根審核。
+沒有叫Claude或GPT代理review，此自查不冒充獨立review。所有C／D未過項均已解釋；
+**建議review本輪工程結果與人工待驗項，不把audit pass當整體遊戲通過。**
+
+### 保守選擇與commit表
+
+不動terrain／leader參數，先較強operator再部署／時點／敵數，wave僅移entry；
+kit用小cap2不擴move6；不為達分鐘填HP；不因三個bypass反例擅加forced objective；
+field crit實作與舊文件矛盾時保留adapter、據實更正描述；影格與固定時鐘wall
+不利結果全列。共享PLAN／memory不在本段scope，milestone留WORK／本交接。
+
+| W | 本地commit |
+| --- | --- |
+| W1 多種子baseline／preserved05 | `5cff31f` |
+| W2 根因／部署／可靠路線 | `535d951` |
+| W3 東側援軍entry | `29ec69f` |
+| W4 scout收割／控制／撤離 | `c0bfab0` |
+| W5 flash0.5／HUD／hit evidence | `75a37fc` |
+| W6 final100＋recheck100／real runtime | `c323990` |
+| W7 165tests／scope／hash audit | `a89e2b0` |
+| W8 本交接／文件hash刷新 | 本commit |
+
+**W8 handoff commit後停止。沒有push、merge、PR、git stash或未授權後續工作。
+Task DONE不是SessionEnd；沒有canonical closeout、完整治理自動導入、人類／Owner批准宣稱。**

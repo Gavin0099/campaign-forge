@@ -1001,8 +1001,8 @@
   },
   {
     "path": "godot-spike/docs/evidence/spike06/audit.json",
-    "sha256_working_tree": "86fea18e7a4b9c1d372ebc85128632cccc0be4e41c37afacd1f4a2445e5d8ce5",
-    "sha256_git_lf": "86fea18e7a4b9c1d372ebc85128632cccc0be4e41c37afacd1f4a2445e5d8ce5"
+    "sha256_working_tree": "79362a0e84981ac8ee17fddae1a721a31face1981b5702971603536b4c14f834",
+    "sha256_git_lf": "79362a0e84981ac8ee17fddae1a721a31face1981b5702971603536b4c14f834"
   },
   {
     "path": "godot-spike/docs/evidence/spike06/baseline/aggregate.json",
@@ -2081,8 +2081,8 @@
   },
   {
     "path": "godot-spike/docs/evidence/spike06/changed-paths.txt",
-    "sha256_working_tree": "cce659a1aba831083611df2b27bb7da2ca01d9fba481d64eb593606ce1b9630e",
-    "sha256_git_lf": "29e559dd5326b3064071a62c646914eb9e08cbae2a42746081c5ffaef720eaa8"
+    "sha256_working_tree": "94b3f189b25c8f994af011ccf2fb3c5972e0ee19a65eb8992f0313acb93356e3",
+    "sha256_git_lf": "74078d55f3f47aa37690bb3e85a1b388bff3b17fd86f2cf5c8ea4b343a3930c2"
   },
   {
     "path": "godot-spike/docs/evidence/spike06/deployment-1080.png",
@@ -2096,8 +2096,8 @@
   },
   {
     "path": "godot-spike/docs/evidence/spike06/diff-stat.txt",
-    "sha256_working_tree": "ddef8e3fc96d0b7285b15c674bbe5c4b0a82289e34bf5c6954db2bdc1394d90e",
-    "sha256_git_lf": "d04ac3e9fcdfa6a8fe3db0d7e73f97d9865b8293e89fe73b23e7fd74d82de1da"
+    "sha256_working_tree": "78e110f25fef7c863f779d6357744c5d82f627a4eaaea0984489df65aaceb386",
+    "sha256_git_lf": "f00f4a4cedf72bd0755e2d82c86b1d89da8a51bba5924219570e7d705b0e68c0"
   },
   {
     "path": "godot-spike/docs/evidence/spike06/enemy-frames/0000.png",
@@ -2161,8 +2161,8 @@
   },
   {
     "path": "godot-spike/docs/evidence/spike06/git-scope.json",
-    "sha256_working_tree": "39a789833441cf9bf8c2c445202d6ba660fd0c6c21a7600fd7cb306e9b003ae1",
-    "sha256_git_lf": "39a789833441cf9bf8c2c445202d6ba660fd0c6c21a7600fd7cb306e9b003ae1"
+    "sha256_working_tree": "4a39f54d7d7ee6d96223ece81a7a3c9ce51385317a40c83ff23b823d1ddf58e8",
+    "sha256_git_lf": "4a39f54d7d7ee6d96223ece81a7a3c9ce51385317a40c83ff23b823d1ddf58e8"
   },
   {
     "path": "godot-spike/docs/evidence/spike06/hitfeel/field-hit.log",
@@ -3516,8 +3516,8 @@
   },
   {
     "path": "godot-spike/docs/evidence/spike06/untracked-paths.txt",
-    "sha256_working_tree": "e49496207fa35608108f771d26853241216ece2adc6dec30366dfce9ea42ffb2",
-    "sha256_git_lf": "67a7f4f84a38fb81430e2282b98d300a43ca116012b739bdd720bc9300ff2b11"
+    "sha256_working_tree": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "sha256_git_lf": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
   },
   {
     "path": "godot-spike/docs/evidence/spike06/w1-aggregate.log",
@@ -5161,13 +5161,13 @@
   },
   {
     "path": "godot-spike/docs/evidence/spike06/WORK.md",
-    "sha256_working_tree": "2b0f44724fba48a4e230fc14d44d382e1d6ba1d06b3a05598de632e348ed8a47",
-    "sha256_git_lf": "054ce7ae2bab9d2a743f24bd83ad8d7cde4b6a795d3aeaeef74df44bf163ed4d"
+    "sha256_working_tree": "2aec9bc24e49c592ef48965c279037322a27efd687e1f39cbed0f87dea26d8ac",
+    "sha256_git_lf": "a6350cbf2ece672272d1809c2b86a3d05bdf99c23f52a04ee3f324385238062a"
   },
   {
     "path": "godot-spike/docs/HANDOFF.md",
-    "sha256_working_tree": "5cf9108f226272b36ce8b9e665b537d8f8d990c214e5185a6f37a90268a30e65",
-    "sha256_git_lf": "5cf9108f226272b36ce8b9e665b537d8f8d990c214e5185a6f37a90268a30e65"
+    "sha256_working_tree": "d8ef51b5345445d6979dd30af694687c8939037bf86c947ba4305f45005a7865",
+    "sha256_git_lf": "d8ef51b5345445d6979dd30af694687c8939037bf86c947ba4305f45005a7865"
   },
   {
     "path": "godot-spike/docs/VERIFICATION.md",
