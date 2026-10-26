@@ -135,6 +135,8 @@ func test_reinforcements_warn_one_full_turn_then_arrive_and_rest() -> void:
 
 func test_occupied_entry_fallback_is_nearest_legal_cell() -> void:
 	var s := fixture()
+	# Historical northeast fallback pin; tuned edge entries tested separately.
+	s.level.entries=preload("res://data/levels/field_24x18_spike05.gd").ENTRIES.duplicate()
 	s.units[1].cell=s.level.entries[0]
 	assert_eq(Rules.entry_fallback(s,s.level.entries[0]),Vector2i(23,3))
 	assert_eq(Rules.occupant(s,Rules.entry_fallback(s,s.level.entries[0])),{})

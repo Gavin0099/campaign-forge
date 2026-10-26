@@ -1,0 +1,3515 @@
+{
+	"ally_deaths": [
+		{
+			"id": "guard",
+			"kind": "melee",
+			"turn": 7
+		},
+		{
+			"id": "scout-2",
+			"kind": "mobile",
+			"turn": 8
+		}
+	],
+	"archetypes": {
+		"knight": {
+			"attacks": 14,
+			"average_move_per_unit_turn": 1.15,
+			"damage_dealt": 28,
+			"damage_taken": 40,
+			"idle_turns": 2,
+			"kills": 2,
+			"move_steps": 23,
+			"moves": 10,
+			"side": "enemy",
+			"unit_turns": 20
+		},
+		"leader": {
+			"attacks": 0,
+			"average_move_per_unit_turn": 0.5,
+			"damage_dealt": 0,
+			"damage_taken": 10,
+			"idle_turns": 0,
+			"kills": 0,
+			"move_steps": 2,
+			"moves": 2,
+			"side": "enemy",
+			"unit_turns": 4
+		},
+		"melee": {
+			"attacks": 7,
+			"average_move_per_unit_turn": 2.0,
+			"damage_dealt": 14,
+			"damage_share": 0.28,
+			"damage_taken": 14,
+			"idle_turns": 1,
+			"kill_share": 0.285714285714286,
+			"kills": 2,
+			"move_steps": 16,
+			"moves": 7,
+			"side": "ally",
+			"unit_turns": 8
+		},
+		"mobile": {
+			"attacks": 8,
+			"average_move_per_unit_turn": 3.88888888888889,
+			"damage_dealt": 16,
+			"damage_share": 0.32,
+			"damage_taken": 10,
+			"idle_turns": 0,
+			"kill_share": 0.142857142857143,
+			"kills": 1,
+			"move_steps": 35,
+			"moves": 8,
+			"side": "ally",
+			"unit_turns": 9
+		},
+		"ranged": {
+			"attacks": 10,
+			"average_move_per_unit_turn": 0.8,
+			"damage_dealt": 20,
+			"damage_share": 0.4,
+			"damage_taken": 4,
+			"idle_turns": 0,
+			"kill_share": 0.571428571428571,
+			"kills": 4,
+			"move_steps": 8,
+			"moves": 3,
+			"side": "ally",
+			"unit_turns": 10
+		}
+	},
+	"battle_length_estimate_minutes": [
+		7.2684246,
+		11.7684246
+	],
+	"commands": [
+		{
+			"command": {
+				"to": "(19, 10)",
+				"type": "move",
+				"unit": "guard"
+			},
+			"turn": 5
+		},
+		{
+			"command": {
+				"type": "wait",
+				"unit": "guard"
+			},
+			"turn": 5
+		},
+		{
+			"command": {
+				"to": "(19, 7)",
+				"type": "move",
+				"unit": "thoma"
+			},
+			"turn": 5
+		},
+		{
+			"command": {
+				"target": "knight-8",
+				"type": "attack",
+				"unit": "thoma"
+			},
+			"turn": 5
+		},
+		{
+			"command": {
+				"target": "knight-8",
+				"type": "attack",
+				"unit": "bow-1"
+			},
+			"turn": 5
+		},
+		{
+			"command": {
+				"target": "knight-2",
+				"type": "attack",
+				"unit": "bow-2"
+			},
+			"turn": 5
+		},
+		{
+			"command": {
+				"to": "(18, 9)",
+				"type": "move",
+				"unit": "scout-1"
+			},
+			"turn": 5
+		},
+		{
+			"command": {
+				"target": "knight-8",
+				"type": "attack",
+				"unit": "scout-1"
+			},
+			"turn": 5
+		},
+		{
+			"command": {
+				"to": "(19, 9)",
+				"type": "move",
+				"unit": "scout-2"
+			},
+			"turn": 5
+		},
+		{
+			"command": {
+				"target": "leader",
+				"type": "attack",
+				"unit": "scout-2"
+			},
+			"turn": 5
+		},
+		{
+			"command": {
+				"to": "(22, 10)",
+				"type": "move",
+				"unit": "guard"
+			},
+			"turn": 6
+		},
+		{
+			"command": {
+				"target": "leader",
+				"type": "attack",
+				"unit": "guard"
+			},
+			"turn": 6
+		},
+		{
+			"command": {
+				"to": "(19, 7)",
+				"type": "move",
+				"unit": "thoma"
+			},
+			"turn": 6
+		},
+		{
+			"command": {
+				"target": "knight-5",
+				"type": "attack",
+				"unit": "thoma"
+			},
+			"turn": 6
+		},
+		{
+			"command": {
+				"target": "knight-2",
+				"type": "attack",
+				"unit": "bow-1"
+			},
+			"turn": 6
+		},
+		{
+			"command": {
+				"target": "knight-2",
+				"type": "attack",
+				"unit": "bow-2"
+			},
+			"turn": 6
+		},
+		{
+			"command": {
+				"to": "(16, 7)",
+				"type": "move",
+				"unit": "scout-1"
+			},
+			"turn": 6
+		},
+		{
+			"command": {
+				"target": "knight-5",
+				"type": "attack",
+				"unit": "scout-1"
+			},
+			"turn": 6
+		},
+		{
+			"command": {
+				"to": "(15, 9)",
+				"type": "move",
+				"unit": "scout-2"
+			},
+			"turn": 6
+		},
+		{
+			"command": {
+				"target": "knight-1",
+				"type": "attack",
+				"unit": "scout-2"
+			},
+			"turn": 6
+		},
+		{
+			"command": {
+				"target": "reinforcement-1",
+				"type": "attack",
+				"unit": "guard"
+			},
+			"turn": 7
+		},
+		{
+			"command": {
+				"to": "(19, 7)",
+				"type": "move",
+				"unit": "thoma"
+			},
+			"turn": 7
+		},
+		{
+			"command": {
+				"target": "knight-5",
+				"type": "attack",
+				"unit": "thoma"
+			},
+			"turn": 7
+		},
+		{
+			"command": {
+				"target": "knight-1",
+				"type": "attack",
+				"unit": "bow-1"
+			},
+			"turn": 7
+		},
+		{
+			"command": {
+				"target": "knight-1",
+				"type": "attack",
+				"unit": "bow-2"
+			},
+			"turn": 7
+		},
+		{
+			"command": {
+				"to": "(20, 8)",
+				"type": "move",
+				"unit": "scout-1"
+			},
+			"turn": 7
+		},
+		{
+			"command": {
+				"target": "reinforcement-0",
+				"type": "attack",
+				"unit": "scout-1"
+			},
+			"turn": 7
+		},
+		{
+			"command": {
+				"to": "(13, 13)",
+				"type": "move",
+				"unit": "scout-2"
+			},
+			"turn": 7
+		},
+		{
+			"command": {
+				"target": "knight-3",
+				"type": "attack",
+				"unit": "scout-2"
+			},
+			"turn": 7
+		},
+		{
+			"command": {
+				"to": "(20, 8)",
+				"type": "move",
+				"unit": "thoma"
+			},
+			"turn": 8
+		},
+		{
+			"command": {
+				"target": "reinforcement-0",
+				"type": "attack",
+				"unit": "thoma"
+			},
+			"turn": 8
+		},
+		{
+			"command": {
+				"to": "(18, 10)",
+				"type": "move",
+				"unit": "bow-1"
+			},
+			"turn": 8
+		},
+		{
+			"command": {
+				"target": "reinforcement-1",
+				"type": "attack",
+				"unit": "bow-1"
+			},
+			"turn": 8
+		},
+		{
+			"command": {
+				"to": "(19, 9)",
+				"type": "move",
+				"unit": "bow-2"
+			},
+			"turn": 8
+		},
+		{
+			"command": {
+				"target": "reinforcement-1",
+				"type": "attack",
+				"unit": "bow-2"
+			},
+			"turn": 8
+		},
+		{
+			"command": {
+				"to": "(23, 8)",
+				"type": "move",
+				"unit": "scout-1"
+			},
+			"turn": 8
+		},
+		{
+			"command": {
+				"target": "leader",
+				"type": "attack",
+				"unit": "scout-1"
+			},
+			"turn": 8
+		},
+		{
+			"command": {
+				"to": "(13, 13)",
+				"type": "move",
+				"unit": "scout-2"
+			},
+			"turn": 8
+		},
+		{
+			"command": {
+				"target": "knight-3",
+				"type": "attack",
+				"unit": "scout-2"
+			},
+			"turn": 8
+		},
+		{
+			"command": {
+				"to": "(20, 8)",
+				"type": "move",
+				"unit": "thoma"
+			},
+			"turn": 9
+		},
+		{
+			"command": {
+				"target": "reinforcement-0",
+				"type": "attack",
+				"unit": "thoma"
+			},
+			"turn": 9
+		},
+		{
+			"command": {
+				"to": "(21, 10)",
+				"type": "move",
+				"unit": "bow-1"
+			},
+			"turn": 9
+		},
+		{
+			"command": {
+				"target": "leader",
+				"type": "attack",
+				"unit": "bow-1"
+			},
+			"turn": 9
+		},
+		{
+			"command": {
+				"target": "leader",
+				"type": "attack",
+				"unit": "bow-2"
+			},
+			"turn": 9
+		}
+	],
+	"context": "SCRIPTED mid-battle probe at turn5, not deployment-to-result",
+	"definitions": {
+		"average_move": "Actual traversed cells / living unit phases, including zero-move turns; weighted costs recorded separately.",
+		"idle_turns": "No enemy in attack range from any cost-legal destination at phase start; may still move toward contact."
+	},
+	"deliberate_holds": [
+		{
+			"attacks": 0,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "leader",
+			"id": "leader",
+			"kind": "leader",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "leader holds command point",
+			"side": "enemy",
+			"turn": 6
+		},
+		{
+			"attacks": 0,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "leader",
+			"id": "leader",
+			"kind": "leader",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "leader holds command point",
+			"side": "enemy",
+			"turn": 7
+		}
+	],
+	"enemy_idle_by_group": {
+		"flank": 0,
+		"front": 0,
+		"leader": 0,
+		"rear": 0,
+		"reinforcements": 0,
+		"reserve": 0,
+		"south": 1
+	},
+	"enemy_phase_seconds": [],
+	"estimate_enemy_mean_seconds": 3.456164,
+	"estimate_enemy_mean_source": "spike05 measured normal phase mean",
+	"final_units": [
+		{
+			"acted": true,
+			"ai": "guard",
+			"born_turn": 0,
+			"cell": "(20, 8)",
+			"group": "party",
+			"hp": 2,
+			"id": "thoma",
+			"kind": "melee",
+			"max_hp": 8,
+			"moved": true,
+			"side": "ally",
+			"threatened": true
+		},
+		{
+			"acted": false,
+			"ai": "guard",
+			"born_turn": 0,
+			"cell": "(22, 10)",
+			"group": "party",
+			"hp": 0,
+			"id": "guard",
+			"kind": "melee",
+			"max_hp": 8,
+			"moved": false,
+			"side": "ally",
+			"threatened": true
+		},
+		{
+			"acted": true,
+			"ai": "guard",
+			"born_turn": 0,
+			"cell": "(21, 10)",
+			"group": "party",
+			"hp": 4,
+			"id": "bow-1",
+			"kind": "ranged",
+			"max_hp": 6,
+			"moved": true,
+			"side": "ally",
+			"threatened": true
+		},
+		{
+			"acted": true,
+			"ai": "guard",
+			"born_turn": 0,
+			"cell": "(19, 9)",
+			"group": "party",
+			"hp": 4,
+			"id": "bow-2",
+			"kind": "ranged",
+			"max_hp": 6,
+			"moved": true,
+			"side": "ally",
+			"threatened": true
+		},
+		{
+			"acted": false,
+			"ai": "guard",
+			"born_turn": 0,
+			"cell": "(23, 7)",
+			"group": "party",
+			"hp": 2,
+			"id": "scout-1",
+			"kind": "mobile",
+			"max_hp": 6,
+			"moved": false,
+			"side": "ally",
+			"threatened": true
+		},
+		{
+			"acted": false,
+			"ai": "guard",
+			"born_turn": 0,
+			"cell": "(13, 12)",
+			"group": "party",
+			"hp": 0,
+			"id": "scout-2",
+			"kind": "mobile",
+			"max_hp": 6,
+			"moved": false,
+			"side": "ally",
+			"threatened": true
+		},
+		{
+			"acted": false,
+			"ai": "attack",
+			"born_turn": 0,
+			"cell": "(15, 10)",
+			"group": "front",
+			"hp": 0,
+			"id": "knight-1",
+			"kind": "knight",
+			"max_hp": 6,
+			"moved": false,
+			"side": "enemy",
+			"threatened": true
+		},
+		{
+			"acted": false,
+			"ai": "advance",
+			"born_turn": 0,
+			"cell": "(15, 9)",
+			"group": "front",
+			"hp": 0,
+			"id": "knight-2",
+			"kind": "knight",
+			"max_hp": 6,
+			"moved": false,
+			"side": "enemy",
+			"threatened": true
+		},
+		{
+			"acted": false,
+			"ai": "advance",
+			"born_turn": 0,
+			"cell": "(13, 14)",
+			"group": "south",
+			"hp": 2,
+			"id": "knight-3",
+			"kind": "knight",
+			"max_hp": 6,
+			"moved": false,
+			"side": "enemy",
+			"threatened": true
+		},
+		{
+			"acted": false,
+			"ai": "attack",
+			"born_turn": 0,
+			"cell": "(17, 7)",
+			"group": "flank",
+			"hp": 0,
+			"id": "knight-5",
+			"kind": "knight",
+			"max_hp": 6,
+			"moved": false,
+			"side": "enemy",
+			"threatened": true
+		},
+		{
+			"acted": false,
+			"ai": "guard",
+			"born_turn": 0,
+			"cell": "(19, 9)",
+			"group": "reserve",
+			"hp": 0,
+			"id": "knight-8",
+			"kind": "knight",
+			"max_hp": 6,
+			"moved": false,
+			"side": "enemy",
+			"threatened": true
+		},
+		{
+			"acted": false,
+			"ai": "step-back",
+			"born_turn": 0,
+			"cell": "(22, 9)",
+			"group": "leader",
+			"hp": 0,
+			"id": "leader",
+			"kind": "leader",
+			"max_hp": 10,
+			"moved": false,
+			"side": "enemy",
+			"threatened": true
+		},
+		{
+			"acted": false,
+			"ai": "attack",
+			"born_turn": 5,
+			"cell": "(22, 8)",
+			"group": "reinforcements",
+			"hp": 0,
+			"id": "reinforcement-0",
+			"kind": "knight",
+			"max_hp": 6,
+			"moved": false,
+			"side": "enemy",
+			"threatened": true
+		},
+		{
+			"acted": false,
+			"ai": "intercept",
+			"born_turn": 5,
+			"cell": "(21, 10)",
+			"group": "reinforcements",
+			"hp": 0,
+			"id": "reinforcement-1",
+			"kind": "knight",
+			"max_hp": 6,
+			"moved": false,
+			"side": "enemy",
+			"threatened": true
+		},
+		{
+			"acted": false,
+			"ai": "intercept",
+			"born_turn": 5,
+			"cell": "(23, 9)",
+			"group": "reinforcements",
+			"hp": 6,
+			"id": "reinforcement-2",
+			"kind": "knight",
+			"max_hp": 6,
+			"moved": false,
+			"side": "enemy",
+			"threatened": false
+		}
+	],
+	"first_contact_side": "ally",
+	"first_contact_turn": 5,
+	"illegal_commands": [],
+	"living_ally_unit_turns": 27,
+	"los_blocked_opportunities": 1,
+	"los_blocked_shots": 0,
+	"policy": "bypass",
+	"ranged_shots": [
+		{
+			"cover": false,
+			"reason": "視線暢通",
+			"source": "bow-1",
+			"target": "knight-8",
+			"turn": 5,
+			"would_block": false
+		},
+		{
+			"cover": false,
+			"reason": "視線暢通",
+			"source": "bow-2",
+			"target": "knight-2",
+			"turn": 5,
+			"would_block": false
+		},
+		{
+			"cover": false,
+			"reason": "視線暢通",
+			"source": "bow-1",
+			"target": "knight-2",
+			"turn": 6,
+			"would_block": false
+		},
+		{
+			"cover": false,
+			"reason": "視線暢通",
+			"source": "bow-2",
+			"target": "knight-2",
+			"turn": 6,
+			"would_block": false
+		},
+		{
+			"cover": false,
+			"reason": "視線暢通",
+			"source": "bow-1",
+			"target": "knight-1",
+			"turn": 7,
+			"would_block": false
+		},
+		{
+			"cover": false,
+			"reason": "視線暢通",
+			"source": "bow-2",
+			"target": "knight-1",
+			"turn": 7,
+			"would_block": false
+		},
+		{
+			"cover": false,
+			"reason": "視線暢通",
+			"source": "bow-1",
+			"target": "reinforcement-1",
+			"turn": 8,
+			"would_block": false
+		},
+		{
+			"cover": false,
+			"reason": "視線暢通",
+			"source": "bow-2",
+			"target": "reinforcement-1",
+			"turn": 8,
+			"would_block": false
+		},
+		{
+			"cover": false,
+			"reason": "視線暢通",
+			"source": "bow-1",
+			"target": "leader",
+			"turn": 9,
+			"would_block": false
+		},
+		{
+			"cover": false,
+			"reason": "視線暢通",
+			"source": "bow-2",
+			"target": "leader",
+			"turn": 9,
+			"would_block": false
+		}
+	],
+	"reinforcement_first_attack_turn": 6,
+	"reinforcement_first_attacked_turn": 7,
+	"reinforcement_first_engage_turn": 6,
+	"seed": 1010,
+	"status": "win",
+	"trace": [
+		{
+			"event": {
+				"cost": 4,
+				"path": [
+					"(17, 10)",
+					"(17, 11)",
+					"(18, 11)",
+					"(19, 11)",
+					"(19, 10)"
+				],
+				"type": "move",
+				"unit": "guard"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"type": "wait",
+				"unit": "guard"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"cost": 4,
+				"path": [
+					"(17, 9)",
+					"(17, 8)",
+					"(17, 7)",
+					"(18, 7)",
+					"(19, 7)"
+				],
+				"type": "move",
+				"unit": "thoma"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "melee",
+				"sight_reason": "近戰接觸",
+				"target": "knight-8",
+				"type": "attack",
+				"unit": "thoma"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 4,
+				"source": "thoma",
+				"type": "damage",
+				"unit": "knight-8"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"from": "(19, 8)",
+				"to": "(19, 9)",
+				"type": "knockback",
+				"unit": "knight-8"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "ranged",
+				"sight_reason": "視線暢通",
+				"target": "knight-8",
+				"type": "attack",
+				"unit": "bow-1"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 2,
+				"source": "bow-1",
+				"type": "damage",
+				"unit": "knight-8"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "ranged",
+				"sight_reason": "視線暢通",
+				"target": "knight-2",
+				"type": "attack",
+				"unit": "bow-2"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 4,
+				"source": "bow-2",
+				"type": "damage",
+				"unit": "knight-2"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"cost": 1,
+				"path": [
+					"(18, 8)",
+					"(18, 9)"
+				],
+				"type": "move",
+				"unit": "scout-1"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "mobile",
+				"sight_reason": "近戰接觸",
+				"target": "knight-8",
+				"type": "attack",
+				"unit": "scout-1"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 0,
+				"source": "scout-1",
+				"type": "damage",
+				"unit": "knight-8"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"blocker": "unit",
+				"blocker_id": "leader",
+				"from": "(19, 9)",
+				"into": "(20, 9)",
+				"type": "knockback_blocked",
+				"unit": "knight-8"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"cost": 6,
+				"path": [
+					"(18, 10)",
+					"(17, 10)",
+					"(17, 9)",
+					"(17, 8)",
+					"(18, 8)",
+					"(19, 8)",
+					"(19, 9)"
+				],
+				"type": "move",
+				"unit": "scout-2"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "mobile",
+				"sight_reason": "近戰接觸",
+				"target": "leader",
+				"type": "attack",
+				"unit": "scout-2"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 8,
+				"source": "scout-2",
+				"type": "damage",
+				"unit": "leader"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"from": "(20, 9)",
+				"to": "(21, 9)",
+				"type": "knockback",
+				"unit": "leader"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"phase": "enemy",
+				"turn": 5,
+				"type": "phase"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "shared distance map; loose-front cohesion",
+				"role_hold": false,
+				"state": "advance",
+				"type": "intent",
+				"unit": "knight-1"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"cost": 3,
+				"path": [
+					"(14, 8)",
+					"(14, 9)",
+					"(15, 9)",
+					"(15, 10)"
+				],
+				"type": "move",
+				"unit": "knight-1"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"reason": "low HP > leader threat > closest > exposed class > id",
+				"state": "attack",
+				"target": "bow-2",
+				"type": "intent",
+				"unit": "knight-1"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "knight",
+				"sight_reason": "近戰接觸",
+				"target": "bow-2",
+				"type": "attack",
+				"unit": "knight-1"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 4,
+				"source": "knight-1",
+				"type": "damage",
+				"unit": "bow-2"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"from": "(16, 10)",
+				"to": "(17, 10)",
+				"type": "knockback",
+				"unit": "bow-2"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "shared distance map; loose-front cohesion",
+				"role_hold": false,
+				"state": "advance",
+				"type": "intent",
+				"unit": "knight-2"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"cost": 2,
+				"path": [
+					"(14, 10)",
+					"(14, 9)",
+					"(15, 9)"
+				],
+				"type": "move",
+				"unit": "knight-2"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"reason": "low HP > leader threat > closest > exposed class > id",
+				"state": "attack",
+				"target": "bow-1",
+				"type": "intent",
+				"unit": "knight-2"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "knight",
+				"sight_reason": "近戰接觸",
+				"target": "bow-1",
+				"type": "attack",
+				"unit": "knight-2"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 4,
+				"source": "knight-2",
+				"type": "damage",
+				"unit": "bow-1"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"from": "(16, 9)",
+				"to": "(17, 9)",
+				"type": "knockback",
+				"unit": "bow-1"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"reason": "hold until radius 6 / group attacked",
+				"state": "guard",
+				"type": "intent",
+				"unit": "knight-3"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"activation": "Manhattan sight 6",
+				"reason": "shared distance map; loose-front cohesion",
+				"role_hold": false,
+				"state": "advance",
+				"type": "intent",
+				"unit": "knight-5"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"cost": 4,
+				"path": [
+					"(18, 3)",
+					"(18, 4)",
+					"(18, 5)",
+					"(18, 6)",
+					"(18, 7)"
+				],
+				"type": "move",
+				"unit": "knight-5"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"reason": "low HP > leader threat > closest > exposed class > id",
+				"state": "attack",
+				"target": "thoma",
+				"type": "intent",
+				"unit": "knight-5"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "knight",
+				"sight_reason": "近戰接觸",
+				"target": "thoma",
+				"type": "attack",
+				"unit": "knight-5"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 6,
+				"source": "knight-5",
+				"type": "damage",
+				"unit": "thoma"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"from": "(19, 7)",
+				"to": "(20, 7)",
+				"type": "knockback",
+				"unit": "thoma"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "safer adjacent within hold radius 2",
+				"role_hold": false,
+				"state": "step-back",
+				"type": "intent",
+				"unit": "leader"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"cost": 1,
+				"path": [
+					"(21, 9)",
+					"(22, 9)"
+				],
+				"type": "move",
+				"unit": "leader"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"type": "wait",
+				"unit": "leader"
+			},
+			"turn": 5
+		},
+		{
+			"event": {
+				"phase": "player",
+				"turn": 6,
+				"type": "phase"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cost": 3,
+				"path": [
+					"(19, 10)",
+					"(20, 10)",
+					"(21, 10)",
+					"(22, 10)"
+				],
+				"type": "move",
+				"unit": "guard"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "melee",
+				"sight_reason": "近戰接觸",
+				"target": "leader",
+				"type": "attack",
+				"unit": "guard"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 6,
+				"source": "guard",
+				"type": "damage",
+				"unit": "leader"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"from": "(22, 9)",
+				"to": "(22, 8)",
+				"type": "knockback",
+				"unit": "leader"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cost": 1,
+				"path": [
+					"(20, 7)",
+					"(19, 7)"
+				],
+				"type": "move",
+				"unit": "thoma"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "melee",
+				"sight_reason": "近戰接觸",
+				"target": "knight-5",
+				"type": "attack",
+				"unit": "thoma"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 4,
+				"source": "thoma",
+				"type": "damage",
+				"unit": "knight-5"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"from": "(18, 7)",
+				"to": "(17, 7)",
+				"type": "knockback",
+				"unit": "knight-5"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "ranged",
+				"sight_reason": "視線暢通",
+				"target": "knight-2",
+				"type": "attack",
+				"unit": "bow-1"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 2,
+				"source": "bow-1",
+				"type": "damage",
+				"unit": "knight-2"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "ranged",
+				"sight_reason": "視線暢通",
+				"target": "knight-2",
+				"type": "attack",
+				"unit": "bow-2"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 0,
+				"source": "bow-2",
+				"type": "damage",
+				"unit": "knight-2"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cost": 4,
+				"path": [
+					"(18, 9)",
+					"(18, 8)",
+					"(17, 8)",
+					"(16, 8)",
+					"(16, 7)"
+				],
+				"type": "move",
+				"unit": "scout-1"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "mobile",
+				"sight_reason": "近戰接觸",
+				"target": "knight-5",
+				"type": "attack",
+				"unit": "scout-1"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 2,
+				"source": "scout-1",
+				"type": "damage",
+				"unit": "knight-5"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"from": "(17, 7)",
+				"to": "(18, 7)",
+				"type": "knockback",
+				"unit": "knight-5"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cost": 6,
+				"path": [
+					"(19, 9)",
+					"(19, 8)",
+					"(18, 8)",
+					"(17, 8)",
+					"(16, 8)",
+					"(16, 9)",
+					"(15, 9)"
+				],
+				"type": "move",
+				"unit": "scout-2"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "mobile",
+				"sight_reason": "近戰接觸",
+				"target": "knight-1",
+				"type": "attack",
+				"unit": "scout-2"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 4,
+				"source": "scout-2",
+				"type": "damage",
+				"unit": "knight-1"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"blocker": "terrain",
+				"from": "(15, 10)",
+				"into": "(15, 11)",
+				"type": "knockback_blocked",
+				"unit": "knight-1"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"phase": "enemy",
+				"turn": 6,
+				"type": "phase"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "legal target before movement",
+				"role_hold": false,
+				"state": "attack",
+				"type": "intent",
+				"unit": "knight-1"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"reason": "low HP > leader threat > closest > exposed class > id",
+				"state": "attack",
+				"target": "scout-2",
+				"type": "intent",
+				"unit": "knight-1"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "knight",
+				"sight_reason": "近戰接觸",
+				"target": "scout-2",
+				"type": "attack",
+				"unit": "knight-1"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 4,
+				"source": "knight-1",
+				"type": "damage",
+				"unit": "scout-2"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"blocker": "terrain",
+				"from": "(15, 9)",
+				"into": "(15, 8)",
+				"type": "knockback_blocked",
+				"unit": "scout-2"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"activation": "turn 6 march timer",
+				"reason": "shared distance map; loose-front cohesion",
+				"role_hold": false,
+				"state": "advance",
+				"type": "intent",
+				"unit": "knight-3"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cost": 4,
+				"path": [
+					"(11, 15)",
+					"(12, 15)",
+					"(13, 15)",
+					"(13, 14)"
+				],
+				"type": "move",
+				"unit": "knight-3"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"type": "wait",
+				"unit": "knight-3"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "legal target before movement",
+				"role_hold": false,
+				"state": "attack",
+				"type": "intent",
+				"unit": "knight-5"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"reason": "low HP > leader threat > closest > exposed class > id",
+				"state": "attack",
+				"target": "thoma",
+				"type": "intent",
+				"unit": "knight-5"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "knight",
+				"sight_reason": "近戰接觸",
+				"target": "thoma",
+				"type": "attack",
+				"unit": "knight-5"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 4,
+				"source": "knight-5",
+				"type": "damage",
+				"unit": "thoma"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"from": "(19, 7)",
+				"to": "(20, 7)",
+				"type": "knockback",
+				"unit": "thoma"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "leader holds command point",
+				"role_hold": true,
+				"state": "leader-hold",
+				"type": "intent",
+				"unit": "leader"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"type": "wait",
+				"unit": "leader"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "leader approach interception",
+				"role_hold": false,
+				"state": "intercept",
+				"type": "intent",
+				"unit": "reinforcement-0"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cost": 4,
+				"path": [
+					"(23, 8)",
+					"(23, 7)",
+					"(22, 7)",
+					"(21, 7)",
+					"(21, 8)"
+				],
+				"type": "move",
+				"unit": "reinforcement-0"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"type": "wait",
+				"unit": "reinforcement-0"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "leader approach interception",
+				"role_hold": false,
+				"state": "intercept",
+				"type": "intent",
+				"unit": "reinforcement-1"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cost": 3,
+				"path": [
+					"(23, 9)",
+					"(22, 9)",
+					"(21, 9)",
+					"(21, 10)"
+				],
+				"type": "move",
+				"unit": "reinforcement-1"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"reason": "low HP > leader threat > closest > exposed class > id",
+				"state": "attack",
+				"target": "guard",
+				"type": "intent",
+				"unit": "reinforcement-1"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "knight",
+				"sight_reason": "近戰接觸",
+				"target": "guard",
+				"type": "attack",
+				"unit": "reinforcement-1"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 6,
+				"source": "reinforcement-1",
+				"type": "damage",
+				"unit": "guard"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"blocker": "unit",
+				"blocker_id": "reinforcement-2",
+				"from": "(22, 10)",
+				"into": "(23, 10)",
+				"type": "knockback_blocked",
+				"unit": "guard"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "legal target before movement",
+				"role_hold": false,
+				"state": "attack",
+				"type": "intent",
+				"unit": "reinforcement-2"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"reason": "low HP > leader threat > closest > exposed class > id",
+				"state": "attack",
+				"target": "guard",
+				"type": "intent",
+				"unit": "reinforcement-2"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "knight",
+				"sight_reason": "近戰接觸",
+				"target": "guard",
+				"type": "attack",
+				"unit": "reinforcement-2"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 4,
+				"source": "reinforcement-2",
+				"type": "damage",
+				"unit": "guard"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"blocker": "unit",
+				"blocker_id": "reinforcement-1",
+				"from": "(22, 10)",
+				"into": "(21, 10)",
+				"type": "knockback_blocked",
+				"unit": "guard"
+			},
+			"turn": 6
+		},
+		{
+			"event": {
+				"phase": "player",
+				"turn": 7,
+				"type": "phase"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "melee",
+				"sight_reason": "近戰接觸",
+				"target": "reinforcement-1",
+				"type": "attack",
+				"unit": "guard"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 4,
+				"source": "guard",
+				"type": "damage",
+				"unit": "reinforcement-1"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"from": "(21, 10)",
+				"to": "(20, 10)",
+				"type": "knockback",
+				"unit": "reinforcement-1"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"cost": 1,
+				"path": [
+					"(20, 7)",
+					"(19, 7)"
+				],
+				"type": "move",
+				"unit": "thoma"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "melee",
+				"sight_reason": "近戰接觸",
+				"target": "knight-5",
+				"type": "attack",
+				"unit": "thoma"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 0,
+				"source": "thoma",
+				"type": "damage",
+				"unit": "knight-5"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"from": "(18, 7)",
+				"to": "(17, 7)",
+				"type": "knockback",
+				"unit": "knight-5"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "ranged",
+				"sight_reason": "視線暢通",
+				"target": "knight-1",
+				"type": "attack",
+				"unit": "bow-1"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 2,
+				"source": "bow-1",
+				"type": "damage",
+				"unit": "knight-1"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "ranged",
+				"sight_reason": "視線暢通",
+				"target": "knight-1",
+				"type": "attack",
+				"unit": "bow-2"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 0,
+				"source": "bow-2",
+				"type": "damage",
+				"unit": "knight-1"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"cost": 5,
+				"path": [
+					"(16, 7)",
+					"(17, 7)",
+					"(18, 7)",
+					"(18, 8)",
+					"(19, 8)",
+					"(20, 8)"
+				],
+				"type": "move",
+				"unit": "scout-1"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "mobile",
+				"sight_reason": "近戰接觸",
+				"target": "reinforcement-0",
+				"type": "attack",
+				"unit": "scout-1"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 4,
+				"source": "scout-1",
+				"type": "damage",
+				"unit": "reinforcement-0"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"blocker": "unit",
+				"blocker_id": "leader",
+				"from": "(21, 8)",
+				"into": "(22, 8)",
+				"type": "knockback_blocked",
+				"unit": "reinforcement-0"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"cost": 6,
+				"path": [
+					"(15, 9)",
+					"(14, 9)",
+					"(13, 9)",
+					"(13, 10)",
+					"(13, 11)",
+					"(13, 12)",
+					"(13, 13)"
+				],
+				"type": "move",
+				"unit": "scout-2"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "mobile",
+				"sight_reason": "近戰接觸",
+				"target": "knight-3",
+				"type": "attack",
+				"unit": "scout-2"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 4,
+				"source": "scout-2",
+				"type": "damage",
+				"unit": "knight-3"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"from": "(13, 14)",
+				"to": "(13, 15)",
+				"type": "knockback",
+				"unit": "knight-3"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"phase": "enemy",
+				"turn": 7,
+				"type": "phase"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "shared distance map; loose-front cohesion",
+				"role_hold": false,
+				"state": "advance",
+				"type": "intent",
+				"unit": "knight-3"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"cost": 1,
+				"path": [
+					"(13, 15)",
+					"(13, 14)"
+				],
+				"type": "move",
+				"unit": "knight-3"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"reason": "low HP > leader threat > closest > exposed class > id",
+				"state": "attack",
+				"target": "scout-2",
+				"type": "intent",
+				"unit": "knight-3"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "knight",
+				"sight_reason": "近戰接觸",
+				"target": "scout-2",
+				"type": "attack",
+				"unit": "knight-3"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 2,
+				"source": "knight-3",
+				"type": "damage",
+				"unit": "scout-2"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"from": "(13, 13)",
+				"to": "(13, 12)",
+				"type": "knockback",
+				"unit": "scout-2"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "leader holds command point",
+				"role_hold": true,
+				"state": "leader-hold",
+				"type": "intent",
+				"unit": "leader"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"type": "wait",
+				"unit": "leader"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "legal target before movement",
+				"role_hold": false,
+				"state": "attack",
+				"type": "intent",
+				"unit": "reinforcement-0"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"reason": "low HP > leader threat > closest > exposed class > id",
+				"state": "attack",
+				"target": "scout-1",
+				"type": "intent",
+				"unit": "reinforcement-0"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "knight",
+				"sight_reason": "近戰接觸",
+				"target": "scout-1",
+				"type": "attack",
+				"unit": "reinforcement-0"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 4,
+				"source": "reinforcement-0",
+				"type": "damage",
+				"unit": "scout-1"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"from": "(20, 8)",
+				"to": "(19, 8)",
+				"type": "knockback",
+				"unit": "scout-1"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "leader approach interception",
+				"role_hold": false,
+				"state": "intercept",
+				"type": "intent",
+				"unit": "reinforcement-1"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"cost": 1,
+				"path": [
+					"(20, 10)",
+					"(21, 10)"
+				],
+				"type": "move",
+				"unit": "reinforcement-1"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"reason": "low HP > leader threat > closest > exposed class > id",
+				"state": "attack",
+				"target": "guard",
+				"type": "intent",
+				"unit": "reinforcement-1"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "knight",
+				"sight_reason": "近戰接觸",
+				"target": "guard",
+				"type": "attack",
+				"unit": "reinforcement-1"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 2,
+				"source": "reinforcement-1",
+				"type": "damage",
+				"unit": "guard"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"blocker": "unit",
+				"blocker_id": "reinforcement-2",
+				"from": "(22, 10)",
+				"into": "(23, 10)",
+				"type": "knockback_blocked",
+				"unit": "guard"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "legal target before movement",
+				"role_hold": false,
+				"state": "attack",
+				"type": "intent",
+				"unit": "reinforcement-2"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"reason": "low HP > leader threat > closest > exposed class > id",
+				"state": "attack",
+				"target": "guard",
+				"type": "intent",
+				"unit": "reinforcement-2"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "knight",
+				"sight_reason": "近戰接觸",
+				"target": "guard",
+				"type": "attack",
+				"unit": "reinforcement-2"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 0,
+				"source": "reinforcement-2",
+				"type": "damage",
+				"unit": "guard"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"blocker": "unit",
+				"blocker_id": "reinforcement-1",
+				"from": "(22, 10)",
+				"into": "(21, 10)",
+				"type": "knockback_blocked",
+				"unit": "guard"
+			},
+			"turn": 7
+		},
+		{
+			"event": {
+				"phase": "player",
+				"turn": 8,
+				"type": "phase"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"cost": 2,
+				"path": [
+					"(19, 7)",
+					"(20, 7)",
+					"(20, 8)"
+				],
+				"type": "move",
+				"unit": "thoma"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "melee",
+				"sight_reason": "近戰接觸",
+				"target": "reinforcement-0",
+				"type": "attack",
+				"unit": "thoma"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 2,
+				"source": "thoma",
+				"type": "damage",
+				"unit": "reinforcement-0"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"blocker": "unit",
+				"blocker_id": "leader",
+				"from": "(21, 8)",
+				"into": "(22, 8)",
+				"type": "knockback_blocked",
+				"unit": "reinforcement-0"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"cost": 2,
+				"path": [
+					"(17, 9)",
+					"(18, 9)",
+					"(18, 10)"
+				],
+				"type": "move",
+				"unit": "bow-1"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "ranged",
+				"sight_reason": "視線暢通",
+				"target": "reinforcement-1",
+				"type": "attack",
+				"unit": "bow-1"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 2,
+				"source": "bow-1",
+				"type": "damage",
+				"unit": "reinforcement-1"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"cost": 3,
+				"path": [
+					"(17, 10)",
+					"(17, 9)",
+					"(18, 9)",
+					"(19, 9)"
+				],
+				"type": "move",
+				"unit": "bow-2"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "ranged",
+				"sight_reason": "視線暢通",
+				"target": "reinforcement-1",
+				"type": "attack",
+				"unit": "bow-2"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 0,
+				"source": "bow-2",
+				"type": "damage",
+				"unit": "reinforcement-1"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"cost": 6,
+				"path": [
+					"(19, 8)",
+					"(19, 7)",
+					"(20, 7)",
+					"(21, 7)",
+					"(22, 7)",
+					"(23, 7)",
+					"(23, 8)"
+				],
+				"type": "move",
+				"unit": "scout-1"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "mobile",
+				"sight_reason": "近戰接觸",
+				"target": "leader",
+				"type": "attack",
+				"unit": "scout-1"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 4,
+				"source": "scout-1",
+				"type": "damage",
+				"unit": "leader"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"blocker": "unit",
+				"blocker_id": "reinforcement-0",
+				"from": "(22, 8)",
+				"into": "(21, 8)",
+				"type": "knockback_blocked",
+				"unit": "leader"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"cost": 1,
+				"path": [
+					"(13, 12)",
+					"(13, 13)"
+				],
+				"type": "move",
+				"unit": "scout-2"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "mobile",
+				"sight_reason": "近戰接觸",
+				"target": "knight-3",
+				"type": "attack",
+				"unit": "scout-2"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 2,
+				"source": "scout-2",
+				"type": "damage",
+				"unit": "knight-3"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"from": "(13, 14)",
+				"to": "(13, 15)",
+				"type": "knockback",
+				"unit": "knight-3"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"phase": "enemy",
+				"turn": 8,
+				"type": "phase"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "shared distance map; loose-front cohesion",
+				"role_hold": false,
+				"state": "advance",
+				"type": "intent",
+				"unit": "knight-3"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"cost": 1,
+				"path": [
+					"(13, 15)",
+					"(13, 14)"
+				],
+				"type": "move",
+				"unit": "knight-3"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"reason": "low HP > leader threat > closest > exposed class > id",
+				"state": "attack",
+				"target": "scout-2",
+				"type": "intent",
+				"unit": "knight-3"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "knight",
+				"sight_reason": "近戰接觸",
+				"target": "scout-2",
+				"type": "attack",
+				"unit": "knight-3"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 0,
+				"source": "knight-3",
+				"type": "damage",
+				"unit": "scout-2"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"from": "(13, 13)",
+				"to": "(13, 12)",
+				"type": "knockback",
+				"unit": "scout-2"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "safer adjacent within hold radius 2",
+				"role_hold": false,
+				"state": "step-back",
+				"type": "intent",
+				"unit": "leader"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"cost": 1,
+				"path": [
+					"(22, 8)",
+					"(22, 9)"
+				],
+				"type": "move",
+				"unit": "leader"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"type": "wait",
+				"unit": "leader"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "legal target before movement",
+				"role_hold": false,
+				"state": "attack",
+				"type": "intent",
+				"unit": "reinforcement-0"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"reason": "low HP > leader threat > closest > exposed class > id",
+				"state": "attack",
+				"target": "thoma",
+				"type": "intent",
+				"unit": "reinforcement-0"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "knight",
+				"sight_reason": "近戰接觸",
+				"target": "thoma",
+				"type": "attack",
+				"unit": "reinforcement-0"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 2,
+				"source": "reinforcement-0",
+				"type": "damage",
+				"unit": "thoma"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"from": "(20, 8)",
+				"to": "(19, 8)",
+				"type": "knockback",
+				"unit": "thoma"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"activation": "latched / attacked group or neighbour",
+				"reason": "leader approach interception",
+				"role_hold": false,
+				"state": "intercept",
+				"type": "intent",
+				"unit": "reinforcement-2"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"cost": 1,
+				"path": [
+					"(23, 10)",
+					"(23, 9)"
+				],
+				"type": "move",
+				"unit": "reinforcement-2"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"reason": "low HP > leader threat > closest > exposed class > id",
+				"state": "attack",
+				"target": "scout-1",
+				"type": "intent",
+				"unit": "reinforcement-2"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "knight",
+				"sight_reason": "近戰接觸",
+				"target": "scout-1",
+				"type": "attack",
+				"unit": "reinforcement-2"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 2,
+				"source": "reinforcement-2",
+				"type": "damage",
+				"unit": "scout-1"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"from": "(23, 8)",
+				"to": "(23, 7)",
+				"type": "knockback",
+				"unit": "scout-1"
+			},
+			"turn": 8
+		},
+		{
+			"event": {
+				"phase": "player",
+				"turn": 9,
+				"type": "phase"
+			},
+			"turn": 9
+		},
+		{
+			"event": {
+				"cost": 1,
+				"path": [
+					"(19, 8)",
+					"(20, 8)"
+				],
+				"type": "move",
+				"unit": "thoma"
+			},
+			"turn": 9
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "melee",
+				"sight_reason": "近戰接觸",
+				"target": "reinforcement-0",
+				"type": "attack",
+				"unit": "thoma"
+			},
+			"turn": 9
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 0,
+				"source": "thoma",
+				"type": "damage",
+				"unit": "reinforcement-0"
+			},
+			"turn": 9
+		},
+		{
+			"event": {
+				"from": "(21, 8)",
+				"to": "(22, 8)",
+				"type": "knockback",
+				"unit": "reinforcement-0"
+			},
+			"turn": 9
+		},
+		{
+			"event": {
+				"cost": 3,
+				"path": [
+					"(18, 10)",
+					"(19, 10)",
+					"(20, 10)",
+					"(21, 10)"
+				],
+				"type": "move",
+				"unit": "bow-1"
+			},
+			"turn": 9
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "ranged",
+				"sight_reason": "視線暢通",
+				"target": "leader",
+				"type": "attack",
+				"unit": "bow-1"
+			},
+			"turn": 9
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 2,
+				"source": "bow-1",
+				"type": "damage",
+				"unit": "leader"
+			},
+			"turn": 9
+		},
+		{
+			"event": {
+				"cover": false,
+				"kind": "ranged",
+				"sight_reason": "視線暢通",
+				"target": "leader",
+				"type": "attack",
+				"unit": "bow-2"
+			},
+			"turn": 9
+		},
+		{
+			"event": {
+				"amount": 2,
+				"hp_after": 0,
+				"source": "bow-2",
+				"type": "damage",
+				"unit": "leader"
+			},
+			"turn": 9
+		},
+		{
+			"event": {
+				"reason": "leader_defeated",
+				"status": "win",
+				"type": "result"
+			},
+			"turn": 9
+		}
+	],
+	"trace_hash": "df9b7aae1093ff9ae98337b3fc6c244e3de15d809592873667fdaaf202a86b00",
+	"turns_to_result": 9,
+	"unit_turns": [
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "thoma",
+			"kind": "melee",
+			"move_cost": 4,
+			"move_steps": 4,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 5
+		},
+		{
+			"attacks": 0,
+			"could_reach_target": false,
+			"eligible": true,
+			"group": "party",
+			"id": "guard",
+			"kind": "melee",
+			"move_cost": 4,
+			"move_steps": 4,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 5
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "bow-1",
+			"kind": "ranged",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 5
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "bow-2",
+			"kind": "ranged",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 5
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "scout-1",
+			"kind": "mobile",
+			"move_cost": 1,
+			"move_steps": 1,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 5
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "scout-2",
+			"kind": "mobile",
+			"move_cost": 6,
+			"move_steps": 6,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 5
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "front",
+			"id": "knight-1",
+			"kind": "knight",
+			"move_cost": 3,
+			"move_steps": 3,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 5
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "front",
+			"id": "knight-2",
+			"kind": "knight",
+			"move_cost": 2,
+			"move_steps": 2,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 5
+		},
+		{
+			"attacks": 0,
+			"could_reach_target": false,
+			"eligible": true,
+			"group": "south",
+			"id": "knight-3",
+			"kind": "knight",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 5
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "flank",
+			"id": "knight-5",
+			"kind": "knight",
+			"move_cost": 4,
+			"move_steps": 4,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 5
+		},
+		{
+			"attacks": 0,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "leader",
+			"id": "leader",
+			"kind": "leader",
+			"move_cost": 1,
+			"move_steps": 1,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 5
+		},
+		{
+			"attacks": 0,
+			"could_reach_target": true,
+			"eligible": false,
+			"group": "reinforcements",
+			"id": "reinforcement-0",
+			"kind": "knight",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": false,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 5
+		},
+		{
+			"attacks": 0,
+			"could_reach_target": true,
+			"eligible": false,
+			"group": "reinforcements",
+			"id": "reinforcement-1",
+			"kind": "knight",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": false,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 5
+		},
+		{
+			"attacks": 0,
+			"could_reach_target": true,
+			"eligible": false,
+			"group": "reinforcements",
+			"id": "reinforcement-2",
+			"kind": "knight",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": false,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 5
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "thoma",
+			"kind": "melee",
+			"move_cost": 1,
+			"move_steps": 1,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 6
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "guard",
+			"kind": "melee",
+			"move_cost": 3,
+			"move_steps": 3,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 6
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "bow-1",
+			"kind": "ranged",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 6
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "bow-2",
+			"kind": "ranged",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 6
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "scout-1",
+			"kind": "mobile",
+			"move_cost": 4,
+			"move_steps": 4,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 6
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "scout-2",
+			"kind": "mobile",
+			"move_cost": 6,
+			"move_steps": 6,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 6
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "front",
+			"id": "knight-1",
+			"kind": "knight",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 6
+		},
+		{
+			"attacks": 0,
+			"could_reach_target": false,
+			"eligible": true,
+			"group": "south",
+			"id": "knight-3",
+			"kind": "knight",
+			"move_cost": 4,
+			"move_steps": 3,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 6
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "flank",
+			"id": "knight-5",
+			"kind": "knight",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 6
+		},
+		{
+			"attacks": 0,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "leader",
+			"id": "leader",
+			"kind": "leader",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "leader holds command point",
+			"side": "enemy",
+			"turn": 6
+		},
+		{
+			"attacks": 0,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "reinforcements",
+			"id": "reinforcement-0",
+			"kind": "knight",
+			"move_cost": 4,
+			"move_steps": 4,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 6
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "reinforcements",
+			"id": "reinforcement-1",
+			"kind": "knight",
+			"move_cost": 3,
+			"move_steps": 3,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 6
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "reinforcements",
+			"id": "reinforcement-2",
+			"kind": "knight",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 6
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "thoma",
+			"kind": "melee",
+			"move_cost": 1,
+			"move_steps": 1,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 7
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "guard",
+			"kind": "melee",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 7
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "bow-1",
+			"kind": "ranged",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 7
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "bow-2",
+			"kind": "ranged",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 7
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "scout-1",
+			"kind": "mobile",
+			"move_cost": 5,
+			"move_steps": 5,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 7
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "scout-2",
+			"kind": "mobile",
+			"move_cost": 6,
+			"move_steps": 6,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 7
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "south",
+			"id": "knight-3",
+			"kind": "knight",
+			"move_cost": 1,
+			"move_steps": 1,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 7
+		},
+		{
+			"attacks": 0,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "leader",
+			"id": "leader",
+			"kind": "leader",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "leader holds command point",
+			"side": "enemy",
+			"turn": 7
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "reinforcements",
+			"id": "reinforcement-0",
+			"kind": "knight",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 7
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "reinforcements",
+			"id": "reinforcement-1",
+			"kind": "knight",
+			"move_cost": 1,
+			"move_steps": 1,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 7
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "reinforcements",
+			"id": "reinforcement-2",
+			"kind": "knight",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 7
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "thoma",
+			"kind": "melee",
+			"move_cost": 2,
+			"move_steps": 2,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 8
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "bow-1",
+			"kind": "ranged",
+			"move_cost": 2,
+			"move_steps": 2,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 8
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "bow-2",
+			"kind": "ranged",
+			"move_cost": 3,
+			"move_steps": 3,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 8
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "scout-1",
+			"kind": "mobile",
+			"move_cost": 6,
+			"move_steps": 6,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 8
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "scout-2",
+			"kind": "mobile",
+			"move_cost": 1,
+			"move_steps": 1,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 8
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "south",
+			"id": "knight-3",
+			"kind": "knight",
+			"move_cost": 1,
+			"move_steps": 1,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 8
+		},
+		{
+			"attacks": 0,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "leader",
+			"id": "leader",
+			"kind": "leader",
+			"move_cost": 1,
+			"move_steps": 1,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 8
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "reinforcements",
+			"id": "reinforcement-0",
+			"kind": "knight",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 8
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "reinforcements",
+			"id": "reinforcement-2",
+			"kind": "knight",
+			"move_cost": 1,
+			"move_steps": 1,
+			"observed": true,
+			"role_reason": "",
+			"side": "enemy",
+			"turn": 8
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "thoma",
+			"kind": "melee",
+			"move_cost": 1,
+			"move_steps": 1,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 9
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "bow-1",
+			"kind": "ranged",
+			"move_cost": 3,
+			"move_steps": 3,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 9
+		},
+		{
+			"attacks": 1,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "bow-2",
+			"kind": "ranged",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": true,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 9
+		},
+		{
+			"attacks": 0,
+			"could_reach_target": true,
+			"eligible": true,
+			"group": "party",
+			"id": "scout-1",
+			"kind": "mobile",
+			"move_cost": 0,
+			"move_steps": 0,
+			"observed": false,
+			"role_reason": "",
+			"side": "ally",
+			"turn": 9
+		}
+	],
+	"variant": "default"
+}

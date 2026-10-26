@@ -109,3 +109,23 @@ All17 road wins engage the original east wave. Therefore the locked W2 win,
 weak-route, decisive-turn and idle thresholds pass without stat inflation.
 Estimates range14.0–35.8min; 15–25min is NOT a universal pass. W2 pure tests
 3/3,38 assertions exit0. JSON and failed/intermediate candidates retained.
+
+## W3 — reinforcement entry adjustment
+
+W2's continuous road wins all fought the wave, but the scripted infiltration
+probe bypassed it in10/20 seeds:100% win,T7–9,mean0.65 casualties. That is a
+counterexample to meaningful pursuit on the fast approach, despite being an
+artificial mid-battle placement, not an optimal full route. Smallest lever:
+entries (23,4)/(23,5)/(23,6) -> (23,8)/(23,9)/(23,10), all map-edge/passable,
+near the leader's east approach. Label now says east crossing rather than NE.
+WarningT4,arrivalT5,birth rest,three original knights,closest-to-leader attacker
+pursuit,leader/objective all unchanged. No forced-engagement gate.
+
+Final20-seed road14/20=70% wins,T10–15(median12),idle30.02%,wave engagement
+100% in runs/wins. Scripted bypass18/20=90% wins,T7–10(median8),mean1.95
+casualties vs0.65 before;100% attacked/attacking wave. Bypass is possible but
+not free/no-wave. It remains an artificially advanced start, so its higher win
+rate does not establish a superior initial-deployment strategy. W6 rechecks
+with final kit. Two GUT tests/19 assertions pass on both initial/final entries:
+visible warning before legal rested arrivals; full continuous road has enemy
+wave attack and ally wave attack, not only a pursuit isolation fixture.

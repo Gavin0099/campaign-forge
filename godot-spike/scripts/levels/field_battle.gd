@@ -296,7 +296,7 @@ func play_events(events: Array) -> void:
 				next_crit=false
 				await impact.play(event,damage,movement)
 			"reinforcement_warning":
-				hud.notice.text="增援預告：第 %d 回合，東北入口，3 名騎士；到場當回合不行動" % event.turn
+				hud.notice.text="增援預告：第 %d 回合，%s，3 名騎士；到場當回合不行動" % [event.turn,state.level.get("entry_label","東北入口")]
 				camera.follow(center(event.entries[0]))
 			"reinforcement_arrival":
 				hud.notice.text="增援到場：%s（本回合休息）" % event.unit

@@ -116,7 +116,7 @@ func update_state() -> void:
 	end_button.disabled=battle.busy or s.status!="playing"
 	result_panel.visible=s.status!="playing"
 	if s.warned and not s.spawned:
-		notice.text="增援：第 %d 回合，東北入口，3 名騎士（到場當回合休息）" % s.level.reinforcement_turn
+		notice.text="增援：第 %d 回合，%s，3 名騎士（到場當回合休息）" % [s.level.reinforcement_turn,s.level.get("entry_label","東北入口")]
 	if result_panel.visible:
 		result_label.text=("勝利・領袖已敗" if s.status=="win" else "敗北・重新整隊")+" · 第 %d 回合" % s.turn
 		result_label.add_theme_font_size_override("font_size",22)
