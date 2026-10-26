@@ -5,6 +5,9 @@ const Sight = preload("res://scripts/rules/field_sight.gd")
 var deaths: Array = []
 var ranged_shots: Array = []
 var reinforcement_first_engage := -1
+var reinforcement_first_attack := -1
+var reinforcement_first_attacked := -1
+var los_opportunities := 0
 var estimate_enemy_mean := 1.999
 var estimate_source := "spike04 measured normal presentation"
 var first_contact_turn := -1
@@ -24,6 +27,9 @@ func register(s: Dictionary, side: String) -> void:
 		if u.hp<=0 or u.side!=side: continue
 		var key := "%d:%s" % [s.turn,u.id]
 		if unit_turns.has(key): continue
+		if u.kind=="ranged":
+			for target in s.units:
+				if Rules.in_range(s.level,u,target) and not Rules.attack_info(s,u,target).legal: los_opportunities+=1
 		var reachable := Rules.reach(s,u.id)
 		var could_attack := false
 		for p in reachable.costs:
@@ -64,6 +70,8 @@ func record(before: Dictionary, events: Array, after: Dictionary) -> void:
 			if unit_turns.has(key): unit_turns[key].attacks+=1
 			if roster[e.unit].group=="reinforcements" or roster[e.target].group=="reinforcements":
 				if reinforcement_first_engage<0: reinforcement_first_engage=turn
+			if roster[e.unit].group=="reinforcements" and reinforcement_first_attack<0: reinforcement_first_attack=turn
+			if roster[e.target].group=="reinforcements" and reinforcement_first_attacked<0: reinforcement_first_attacked=turn
 			if roster[e.unit].kind=="ranged":
 				var sight := Sight.check(spatial,Rules.unit(spatial,e.unit),Rules.unit(spatial,e.target))
 				ranged_shots.append({"turn":turn,"source":e.unit,"target":e.target,"would_block":not sight.clear,"cover":sight.cover,"reason":sight.reason})
@@ -107,6 +115,7 @@ func summary() -> Dictionary:
 			archetypes[kind].damage_share=archetypes[kind].damage_dealt/maxf(1,ally_damage)
 			archetypes[kind].kill_share=archetypes[kind].kills/maxf(1,ally_kills)
 	return {"first_contact_turn":first_contact_turn,"first_contact_side":first_contact_side,
+		"reinforcement_first_attack_turn":reinforcement_first_attack,"reinforcement_first_attacked_turn":reinforcement_first_attacked,"los_blocked_opportunities":los_opportunities,
 		"enemy_idle_by_group":idle,"deliberate_holds":deliberate,"reinforcement_first_engage_turn":reinforcement_first_engage,
 		"ally_deaths":deaths,"ranged_shots":ranged_shots,"los_blocked_shots":ranged_shots.filter(func(r):return r.would_block).size(),
 		"living_ally_unit_turns":living_turns,

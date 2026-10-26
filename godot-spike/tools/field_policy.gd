@@ -1,9 +1,13 @@
 extends RefCounted
 ## Reproducible test policies, not enemy rules or human strategy claims.
 const Rules = preload("res://scripts/rules/field_rules.gd")
+const Data = preload("res://data/levels/field_24x18.gd")
+const OldData = preload("res://data/levels/field_24x18_spike05.gd")
 
-static func start(policy: String) -> Dictionary:
-	var s := Rules.initial()
+static func start(policy: String, seed_value: int = 24018, variant: String = "default") -> Dictionary:
+	var level := OldData.build() if variant=="spike05" else Data.build()
+	level.seed=seed_value
+	var s := Rules.initial(level)
 	if policy=="bypass":
 		var placements := {"thoma":Vector2i(17,9),"guard":Vector2i(17,10),"bow-1":Vector2i(16,9),"bow-2":Vector2i(16,10),"scout-1":Vector2i(18,8),"scout-2":Vector2i(18,10)}
 		for id in placements: Rules.unit(s,id).cell=placements[id]
@@ -18,7 +22,8 @@ static func target(s: Dictionary, id: String) -> String:
 		if a=="leader" or b=="leader": return a=="leader"
 		var aa := Rules.unit(s,a)
 		var bb := Rules.unit(s,b)
-		return aa.hp<bb.hp if aa.hp!=bb.hp else a<b)
+		if aa.hp!=bb.hp: return aa.hp<bb.hp
+		return a<b if s.level.seed==24018 else tie(s,a)<tie(s,b))
 	return candidates[0] if not candidates.is_empty() else ""
 
 static func command(s: Dictionary, id: String, policy: String) -> Dictionary:
@@ -67,4 +72,14 @@ static func order(s: Dictionary) -> Array:
 	for kind in ["melee","ranged","mobile"]:
 		for u in s.units:
 			if u.side=="ally" and u.hp>0 and u.kind==kind: ids.append(u.id)
+	if s.level.seed!=24018:
+		# Same class priority; seeded ordering only among equally ranked allies.
+		ids.sort_custom(func(a,b):
+			var ranks := {"melee":0,"ranged":1,"mobile":2}
+			var aa: int = ranks[Rules.unit(s,a).kind]
+			var bb: int = ranks[Rules.unit(s,b).kind]
+			return aa<bb if aa!=bb else tie(s,a)<tie(s,b))
 	return ids
+
+static func tie(s: Dictionary, key: String) -> int:
+	return ("%d:%d:%s" % [s.level.seed,s.turn,key]).hash()
