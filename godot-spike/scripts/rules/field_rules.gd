@@ -120,6 +120,12 @@ static func attack(s: Dictionary, id: String, target_id: String) -> Dictionary:
 	unit(next,id).moved=true
 	unit(next,id).acted=true
 	next.groups[victim.group]="alert"
+	# Alert neighbours of the attacked group, measured before knockback/death.
+	for member in s.units:
+		if member.group!=victim.group: continue
+		for neighbour in s.units:
+			if neighbour.side==victim.side and neighbour.hp>0 and distance(member.cell,neighbour.cell)<=s.level.ai.neighbour_radius:
+				next.groups[neighbour.group]="alert"
 	var events: Array = [{"type":"attack","unit":id,"target":target_id,"kind":u.kind},
 		{"type":"damage","unit":target_id,"source":id,"amount":amount,"hp_after":target.hp}]
 	if s.level.stats[u.kind].knockback:
@@ -191,7 +197,7 @@ static func next_turn(s: Dictionary) -> Dictionary:
 	events.append({"type":"phase","phase":"player","turn":next.turn})
 	return result(next,events)
 
-static func distance_map(s: Dictionary, kind: String, side: String) -> Dictionary:
+static func distance_map(s: Dictionary, kind: String, side: String, target_id: String = "") -> Dictionary:
 	# Shared reverse Dijkstra to all legal attack slots, not per destination/target.
 	# A phase-local cache keys kind+occupancy_revision and is invalidated on moves/death.
 	var costs := {}
@@ -199,6 +205,7 @@ static func distance_map(s: Dictionary, kind: String, side: String) -> Dictionar
 	var stats: Dictionary = s.level.stats[kind]
 	for target in s.units:
 		if target.hp<=0 or target.side==side: continue
+		if not target_id.is_empty() and target.id!=target_id: continue
 		for dy in range(-int(stats.max_range),int(stats.max_range)+1):
 			for dx in range(-int(stats.max_range),int(stats.max_range)+1):
 				var p: Vector2i = target.cell+Vector2i(dx,dy)
@@ -240,6 +247,110 @@ static func best_move(s: Dictionary, id: String, cache: Dictionary, waypoint: Ve
 			best=p
 	return best
 
+static func focus_targets(s: Dictionary, id: String, candidates: Array) -> Array:
+	var u := unit(s,id)
+	var ordered := candidates.duplicate()
+	ordered.sort_custom(func(a,b):
+		var aa := unit(s,a)
+		var bb := unit(s,b)
+		if aa.hp!=bb.hp: return aa.hp<bb.hp
+		var ta := distance(aa.cell,unit(s,"leader").cell)<=4
+		var tb := distance(bb.cell,unit(s,"leader").cell)<=4
+		if ta!=tb: return ta
+		var da := distance(u.cell,aa.cell)
+		var db := distance(u.cell,bb.cell)
+		if da!=db: return da<db
+		var ea: bool = aa.kind in ["ranged","mobile"]
+		var eb: bool = bb.kind in ["ranged","mobile"]
+		if ea!=eb: return ea
+		return a<b)
+	return ordered
+
+static func activation(s: Dictionary, u: Dictionary) -> String:
+	if s.groups.get(u.group,"")=="alert": return "latched / attacked group or neighbour"
+	if u.group=="reinforcements": return "arrival rested; intercept leader approach"
+	if s.turn>=s.level.ai.march_turn: return "turn 4 march timer"
+	for ally in s.units:
+		if ally.side=="ally" and ally.hp>0 and distance(u.cell,ally.cell)<=s.level.alert_radius: return "Manhattan sight 6"
+	return ""
+
+static func ai_plan(s: Dictionary, id: String, cache: Dictionary) -> Dictionary:
+	var u := unit(s,id)
+	var leader := unit(s,"leader")
+	var available := targets(s,id)
+	var nearby_allies: Array = s.units.filter(func(v):return v.hp>0 and v.side=="ally" and distance(v.cell,u.cell)<=3)
+	var friends: Array = s.units.filter(func(v):return v.hp>0 and v.side=="enemy" and v.id!=id and v.kind!="leader")
+	var state_name := "advance"
+	var role_reason := ""
+	var waypoint := Vector2i(-1,-1)
+	if u.kind=="leader":
+		# Counter unless low HP and surrounded. Retreat exactly one adjacent cell,
+		# stay within 2 of the authored point, improve nearest opponent distance.
+		if not available.is_empty() and not (u.hp<=4 and nearby_allies.size()>=2):
+			return {"state":"counter","to":u.cell,"reason":"adjacent counter","role_hold":false}
+		var best: Vector2i = u.cell
+		var safety := 999
+		for ally in s.units:
+			if ally.side=="ally" and ally.hp>0: safety=mini(safety,distance(u.cell,ally.cell))
+		for dir in DIRS:
+			var p: Vector2i = u.cell+dir
+			if cost(s.level,p,u.kind)==0 or not occupant(s,p).is_empty() or distance(p,s.level.hold_point)>2: continue
+			var value := 999
+			for ally in s.units:
+				if ally.side=="ally" and ally.hp>0: value=mini(value,distance(p,ally.cell))
+			if safety<=2 and value>safety:
+				best=p
+				safety=value
+		return {"state":"step-back" if best!=u.cell else "leader-hold","to":best,"reason":"safer adjacent within hold radius 2" if best!=u.cell else "leader holds command point","role_hold":best==u.cell}
+	if not available.is_empty(): return {"state":"attack","to":u.cell,"reason":"legal target before movement","role_hold":false}
+	var interceptors: Array = s.units.filter(func(v):return v.hp>0 and v.side=="ally" and distance(v.cell,leader.cell)<=s.level.ai.intercept_radius)
+	if u.group=="reserve":
+		state_name="bodyguard-intercept"
+		if interceptors.is_empty():
+			if distance(u.cell,leader.cell)<=s.level.ai.bodyguard_radius:
+				return {"state":"bodyguard-hold","to":u.cell,"reason":"bodyguard within leader radius 3","role_hold":true}
+			waypoint=leader.cell
+	elif u.group=="reinforcements": state_name="intercept"
+	# One regroup movement per activation; then resume advance. No oscillating
+	# infinite regroup loop. Immediate reachable attacks always take precedence.
+	var support: Array = friends.filter(func(v):return distance(v.cell,u.cell)<=s.level.ai.support_radius)
+	if nearby_allies.size()>support.size()+1 and support.is_empty() and not friends.is_empty() and not u.get("regrouped",false):
+		friends.sort_custom(func(a,b):return distance(a.cell,u.cell)<distance(b.cell,u.cell) if distance(a.cell,u.cell)!=distance(b.cell,u.cell) else a.id<b.id)
+		waypoint=friends[0].cell
+		state_name="regroup"
+		role_reason="outnumbered locally; one regroup toward nearest supporting knight"
+	var target_id := ""
+	if state_name in ["intercept","bodyguard-intercept"] and not interceptors.is_empty():
+		interceptors.sort_custom(func(a,b):return distance(a.cell,leader.cell)<distance(b.cell,leader.cell) if distance(a.cell,leader.cell)!=distance(b.cell,leader.cell) else a.id<b.id)
+		target_id=interceptors[0].id
+	var key := "%s:%s:%d:%s" % [u.kind,u.side,s.occupancy_revision,target_id]
+	if not cache.has(key): cache[key]=distance_map(s,u.kind,u.side,target_id)
+	var distances: Dictionary = cache[key]
+	var reachable := reach(s,id)
+	var best: Vector2i = u.cell
+	var score := INF
+	for p in reachable.costs:
+		if u.group=="reserve" and state_name!="regroup" and distance(p,leader.cell)>s.level.ai.bodyguard_radius: continue
+		var progress: float = distances.get(p,10000)
+		if waypoint.x>=0: progress=distance(p,waypoint)
+		var cohesion := 0.0
+		if not friends.is_empty():
+			var nearest := 999
+			for mate in friends: nearest=mini(nearest,distance(p,mate.cell))
+			cohesion=minf(6,nearest)*.12 # less than one path-cost step: loose front
+		var value: float = progress+cohesion+float((p.x*31+p.y*17+int(s.level.seed))%101)*.0001
+		if value<score:
+			score=value
+			best=p
+	# If a lane is blocked, try a legal lateral regroup step instead of silent idle.
+	if best==u.cell and waypoint.x<0 and reachable.costs.size()>1 and not distances.has(u.cell):
+		for p in reachable.costs:
+			if p!=u.cell and distance(p,leader.cell)<=distance(u.cell,leader.cell):
+				best=p
+				state_name="regroup"
+				break
+	return {"state":state_name,"to":best,"reason":role_reason if not role_reason.is_empty() else ("leader approach interception" if target_id!="" else "shared distance map; loose-front cohesion"),"role_hold":false}
+
 static func enemy_phase(s: Dictionary) -> Dictionary:
 	if s.phase!="player" or s.status!="playing": return reject(s,"cannot-end-turn")
 	var next := s.duplicate(true)
@@ -249,40 +360,36 @@ static func enemy_phase(s: Dictionary) -> Dictionary:
 		if u.side=="ally":
 			u.moved=true
 			u.acted=true
-	# Alert whole groups before anyone moves: understandable, no cascade by order.
+	# Activation snapshots before movement; groups latch and never deactivate.
+	var reasons := {}
 	for u in next.units:
 		if u.side!="enemy" or u.hp<=0: continue
-		for ally in next.units:
-			if ally.side=="ally" and ally.hp>0 and distance(u.cell,ally.cell)<=next.level.alert_radius: next.groups[u.group]="alert"
+		var reason := activation(s,u)
+		if not reason.is_empty():
+			next.groups[u.group]="alert"
+			reasons[u.group]=reason
 	var cache := {}
 	for original in s.units:
 		var u := unit(next,original.id)
 		if u.side!="enemy" or not allowed(next,u): continue
 		var active: bool = next.groups.get(u.group,"guard")=="alert"
-		if u.kind=="leader":
-			active=u.threatened
-			for ally in next.units:
-				if ally.side=="ally" and ally.hp>0 and distance(ally.cell,next.level.hold_point)<=next.level.leader_contest_radius: active=true
 		if not active:
 			u.ai="guard"
 			events.append({"type":"intent","unit":u.id,"state":"guard","reason":"hold until radius %d / group attacked" % next.level.alert_radius})
 			continue
-		u.ai="approach"
-		events.append({"type":"intent","unit":u.id,"state":"alert","reason":"group attacked or radius entered"})
-		if targets(next,u.id).is_empty():
-			var to := best_move(next,u.id,cache)
-			if to!=u.cell:
-				var moved := move(next,u.id,to)
-				if moved.ok:
-					next=moved.state
-					events.append_array(moved.events)
+		var plan := ai_plan(next,u.id,cache)
+		u.ai=plan.state
+		if plan.state=="regroup": u.regrouped=true
+		events.append({"type":"intent","unit":u.id,"state":plan.state,"reason":plan.reason,"activation":reasons.get(u.group,"group latched"),"role_hold":plan.role_hold})
+		if plan.to!=u.cell:
+			var moved := move(next,u.id,plan.to)
+			if moved.ok:
+				next=moved.state
+				events.append_array(moved.events)
 		var available := targets(next,u.id)
 		if not available.is_empty():
-			available.sort_custom(func(a,b):
-				var aa := unit(next,a)
-				var bb := unit(next,b)
-				return aa.hp<bb.hp if aa.hp!=bb.hp else a<b)
-			events.append({"type":"intent","unit":u.id,"state":"attack","target":available[0],"reason":"lowest HP in range, then id"})
+			available=focus_targets(next,u.id,available)
+			events.append({"type":"intent","unit":u.id,"state":"attack","target":available[0],"reason":"low HP > leader threat > closest > exposed class > id"})
 			var hit := attack(next,u.id,available[0])
 			next=hit.state
 			events.append_array(hit.events)

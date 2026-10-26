@@ -3,7 +3,9 @@ extends RefCounted
 const SIZE = Vector2i(24,18)
 const TURN_LIMIT = 15
 const SEED = 24018
-const ALERT_RADIUS = 4
+const ALERT_RADIUS = 6
+## SPIKE05 AI test values, not canon. Manhattan distances; activation latches.
+const AI = {"march_turn":4,"neighbour_radius":5,"support_radius":3,"bodyguard_radius":3,"intercept_radius":6}
 const LEADER_CONTEST_RADIUS = 2
 const REINFORCEMENT_TURN = 5
 const ENTRIES = [Vector2i(23,4),Vector2i(23,5),Vector2i(23,6)]
@@ -53,7 +55,7 @@ static func build() -> Dictionary:
 			row += tile
 		rows.append(row)
 	return {"size":SIZE,"rows":rows,"stats":STATS.duplicate(true),"terrain":TERRAIN.duplicate(true),
-		"turn_limit":TURN_LIMIT,"seed":SEED,"alert_radius":ALERT_RADIUS,"leader_contest_radius":LEADER_CONTEST_RADIUS,
+		"turn_limit":TURN_LIMIT,"seed":SEED,"alert_radius":ALERT_RADIUS,"ai":AI.duplicate(true),"leader_contest_radius":LEADER_CONTEST_RADIUS,
 		"objective":"defeat_leader","hold_point":Vector2i(20,9),"reinforcement_turn":REINFORCEMENT_TURN,
 		"entries":ENTRIES.duplicate(),"reinforcement_kinds":["knight","knight","knight"],
 		"deployment":DEPLOYMENT.duplicate(true),"label":"PLACEHOLDER / SPIKE TEST VALUES","line_of_sight":"none; Manhattan range only"}

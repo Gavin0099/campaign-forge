@@ -1,0 +1,11 @@
+﻿# spike05 work record
+
+W1: baseline reproduced at 905c0ce code on db47f3a. Keep criterion: real pressure + legal LOS + readable presentation with frozen stats/rules boundaries. Discard/rework if active path-capable enemies silently idle, blockers permit shots, actors clip or timings exceed1.7s. Human fun/art/pacing pending. No art investment.
+
+W2: 7/7 new AI tests (28 assertions) and 12/12 field rules (265 assertions), Godot exit0. Initial three policies now road lose8, flank lose7, turtle lose8; preserved in w2/. No HP/damage/objective/position/terrain change. Old road win assertion is intentionally evaluated against reproduced W1 JSON, with every old acceptance assertion retained; live pressure behavior has a separate terminal/contact/class test. Generic leader alert assertion re-pointed to explicit leader states. These are behavior-pin migrations, not claims the old strategy still wins.
+
+AI test values: Manhattan sight6, any attacked group alerts all enemy groups within5 of any group member, activation latches, all march from turn4. Front advance uses shared reverse-Dijkstra distances keyed kind/side/occupancy revision/target. Loose-front cohesion adds <1 path cost; isolated outnumbered knight regroups once toward nearest friend. Target order lowHP → within4 of leader → closest → ranged/mobile tie → id; attacks in current range precede movement, so melee cannot be ignored. Reserve knights stay within3 of leader and intercept enemies within6. Leader counters adjacent; when lowHP<=4 and >=2 enemies within3, retreats one safer adjacent cell within2 of point, else explicit hold. Wave warning4/arrival5 unchanged, born-turn cannot act; afterward pursues allied approach closest to leader. No global RNG.
+
+Timing/role distinction: inactive guards count true idle; bodyguard/leader deliberate holds logged separately. No claim of zero inactive idle or zero role holds. Genuine unreachable congestion remains visible.
+
+Scope-specific milestones live here and in final HANDOFF only: Owner restricts writes to godot-spike/, so shared root PLAN/memory/ui-prototype are not edited.

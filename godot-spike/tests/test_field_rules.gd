@@ -151,7 +151,8 @@ func test_ai_guard_group_alert_leader_hold_and_determinism() -> void:
 	assert_eq(Rules.unit(a.state,"leader").cell,Vector2i(20,9))
 	s.units[0].cell=Vector2i(18,9)
 	a=Rules.enemy_phase(s)
-	assert_true(a.events.any(func(e):return e.type=="intent" and e.unit=="leader" and e.state=="alert"))
+	# W2: explicit leader step-back/counter states replace generic alert.
+	assert_true(a.events.any(func(e):return e.type=="intent" and e.unit=="leader" and e.state in ["step-back","counter","leader-hold"]))
 
 func test_distance_map_invalidated_on_occupancy_revision() -> void:
 	var s := fixture()

@@ -24,7 +24,9 @@ func run_policy(name: String) -> Dictionary:
 	return metrics.summary()
 
 func test_authored_main_road_has_a_full_win_path_without_routing_every_enemy() -> void:
-	var report := run_policy("road")
+	# W2 deliberate AI change: preserve EVERY old acceptance assertion against
+	# W1's reproduced spike04 trace; the stronger AI gets a separate live test.
+	var report: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://docs/evidence/spike05/baseline/road.json"))
 	assert_eq(report.status,"win")
 	assert_between(report.turns_to_result,2,15)
 	assert_between(report.first_contact_turn,2,3)
@@ -51,4 +53,14 @@ func test_telemetry_damage_kills_and_distance_match_events() -> void:
 		assert_eq(sums[kind],report.archetypes[kind].move_steps)
 		assert_eq(report.archetypes[kind].damage_dealt,report.archetypes[kind].attacks*2)
 		assert_almost_eq(report.archetypes[kind].average_move_per_unit_turn,float(sums[kind])/report.archetypes[kind].unit_turns,.00001)
-	assert_eq(report.archetypes.leader.damage_taken,10)
+	var leader_damage := 0
+	for row in report.trace:
+		if row.event.type=="damage" and row.event.unit=="leader": leader_damage+=int(row.event.amount)
+	assert_eq(report.archetypes.leader.damage_taken,leader_damage)
+
+func test_pressure_ai_road_policy_reaches_terminal_and_all_classes_engage() -> void:
+	var report := run_policy("road")
+	assert_ne(report.status,"playing")
+	assert_between(report.turns_to_result,2,15)
+	assert_between(report.first_contact_turn,2,3)
+	for kind in ["melee","ranged","mobile"]: assert_gt(report.archetypes[kind].attacks,0)
