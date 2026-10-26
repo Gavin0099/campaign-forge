@@ -4,7 +4,8 @@ const Policy = preload("res://tools/field_policy.gd")
 const Telemetry = preload("res://scripts/levels/field_telemetry.gd")
 
 func run_policy(name: String) -> Dictionary:
-	var s := Rules.initial()
+	# Historical spike05 policy/result pins retain exact old deployment and operator.
+	var s := Policy.start(name,24018,"spike05")
 	var metrics := Telemetry.new()
 	metrics.register(s,"ally")
 	while s.status=="playing" and s.turn<=15:

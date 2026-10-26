@@ -6,6 +6,10 @@ func before_each() -> void:
 	process_mode=Node.PROCESS_MODE_ALWAYS
 	field=add_child_autofree(Scene.instantiate())
 	await get_tree().process_frame
+	# Retain the exact original dense 18-marker fixture after roster tuning.
+	field.state=field.Rules.initial(preload("res://data/levels/field_24x18_spike05.gd").build())
+	field.build_units()
+	field.refresh()
 
 func after_each() -> void:
 	get_tree().paused=false

@@ -2,7 +2,8 @@ extends "res://addons/gut/test.gd"
 const R = preload("res://scripts/rules/field_rules.gd")
 
 func board() -> Dictionary:
-	var s := R.initial()
+	# Preserve T4 timer and historical AI fixtures; tuned data tested separately.
+	var s := R.initial(preload("res://data/levels/field_24x18_spike05.gd").build())
 	for y in range(18): s.level.rows[y]=".".repeat(24)
 	s.units=[R.make_unit("thoma","ally","melee",Vector2i(2,9),"party",s.level),
 		R.make_unit("a","enemy","knight",Vector2i(12,9),"front",s.level),

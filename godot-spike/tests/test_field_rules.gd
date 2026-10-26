@@ -10,7 +10,8 @@ func fixture(kind: String = "melee") -> Dictionary:
 	return s
 
 func test_map_dimensions_costs_paths_and_party() -> void:
-	var s := Rules.initial()
+	# Historical authored-data assertions stay on the preserved spike05 variant.
+	var s := Rules.initial(preload("res://data/levels/field_24x18_spike05.gd").build())
 	assert_eq(s.level.size,Vector2i(24,18))
 	assert_eq(s.level.rows.size(),18)
 	for row in s.level.rows: assert_eq(row.length(),24)

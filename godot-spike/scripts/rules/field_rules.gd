@@ -295,7 +295,7 @@ static func focus_targets(s: Dictionary, id: String, candidates: Array) -> Array
 static func activation(s: Dictionary, u: Dictionary) -> String:
 	if s.groups.get(u.group,"")=="alert": return "latched / attacked group or neighbour"
 	if u.group=="reinforcements": return "arrival rested; intercept leader approach"
-	if s.turn>=s.level.ai.march_turn: return "turn 4 march timer"
+	if s.turn>=s.level.ai.march_turn: return "turn %d march timer" % s.level.ai.march_turn
 	for ally in s.units:
 		if ally.side=="ally" and ally.hp>0 and distance(u.cell,ally.cell)<=s.level.alert_radius: return "Manhattan sight 6"
 	return ""

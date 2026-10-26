@@ -7,6 +7,10 @@ func before_each() -> void:
 	process_mode=Node.PROCESS_MODE_ALWAYS
 	battle=add_child_autofree(Scene.instantiate())
 	await get_tree().process_frame
+	# Keep original 18-actor scene/projection acceptance; default has tuned roster.
+	battle.state=Rules.initial(preload("res://data/levels/field_24x18_spike05.gd").build())
+	battle.build_units()
+	battle.refresh()
 
 func after_each() -> void:
 	get_tree().paused=false
