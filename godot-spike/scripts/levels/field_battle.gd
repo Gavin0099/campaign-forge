@@ -167,11 +167,7 @@ func refresh() -> void:
 	if threat_visible:
 		for enemy in state.units:
 			if enemy.side!="enemy" or enemy.hp<=0: continue
-			var nav := Rules.reach(state,enemy.id)
-			for p in nav.costs:
-				for dir in Rules.DIRS:
-					var at: Vector2i = p+dir
-					if Rules.inside(state.level,at): threat_cells[at]=true
+			threat_cells.merge(Rules.threat(state,enemy.id))
 	ground.queue_redraw()
 	hud.update_state()
 	hud.hover(cursor_cell)
@@ -204,7 +200,8 @@ func choose(cell: Vector2i) -> void:
 			return
 		pending={"type":"attack","target":u.id}
 		preview_path.clear()
-		hud.notice.text="攻擊預測：%s → %s　傷害 2　Enter／再點確認" % [selected_id,display_name(u)]
+		var info := Rules.attack_info(state,Rules.unit(state,selected_id),u)
+		hud.notice.text="攻擊：%s → %s　傷害 %d · %s　Enter 確認" % [selected_id,display_name(u),info.damage,info.reason]
 	elif move_cells.has(cell) and Rules.unit(state,selected_id).cell!=cell:
 		if pending.get("to")==cell:
 			confirm()

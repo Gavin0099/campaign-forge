@@ -131,4 +131,8 @@ func hover(cell: Vector2i) -> void:
 	inspect.text="%s (%d,%d)　成本 %d%s" % [battle.state.level.terrain[tile].name,cell.x,cell.y,battle.Rules.cost(battle.state.level,cell,"melee"),"／高機動森林3" if tile=="f" else ""]
 	if not u.is_empty():
 		var stats: Dictionary = battle.state.level.stats[u.kind]
-		inspect.text+="　｜%s・%s HP%d/%d　移%d／射程%d–%d　%s" % [battle.display_name(u),battle.kind_name(u.kind),u.hp,u.max_hp,stats.move,stats.min_range,stats.max_range,"警戒4格／同群受擊追擊" if u.side=="enemy" else "我方"]
+		inspect.text+="　｜%s・%s HP%d/%d　移%d／射程%d–%d" % [battle.display_name(u),battle.kind_name(u.kind),u.hp,u.max_hp,stats.move,stats.min_range,stats.max_range]
+		var shooter: Dictionary = battle.Rules.unit(battle.state,battle.selected_id)
+		if not shooter.is_empty() and shooter.side!=u.side:
+			var info: Dictionary = battle.Rules.attack_info(battle.state,shooter,u)
+			inspect.text+=" · "+info.reason

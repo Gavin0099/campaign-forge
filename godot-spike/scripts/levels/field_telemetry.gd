@@ -28,7 +28,7 @@ func register(s: Dictionary, side: String) -> void:
 			var hypothetical: Dictionary = u.duplicate(true)
 			hypothetical.cell=p
 			for target in s.units:
-				if Rules.in_range(s.level,hypothetical,target): could_attack=true
+				if Rules.attack_info(s,hypothetical,target).legal: could_attack=true
 		unit_turns[key]={"turn":s.turn,"id":u.id,"side":u.side,"kind":u.kind,"group":u.group,"eligible":u.born_turn<s.turn,"move_steps":0,"move_cost":0,"attacks":0,"role_reason":"","could_reach_target":could_attack}
 		ensure(u.kind,u.side)
 		totals[u.kind].unit_turns+=1

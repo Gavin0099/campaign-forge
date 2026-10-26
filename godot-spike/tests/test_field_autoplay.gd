@@ -51,7 +51,14 @@ func test_telemetry_damage_kills_and_distance_match_events() -> void:
 	for row in report.unit_turns: sums[row.kind]=sums.get(row.kind,0)+row.move_steps
 	for kind in ["melee","ranged","mobile"]:
 		assert_eq(sums[kind],report.archetypes[kind].move_steps)
-		assert_eq(report.archetypes[kind].damage_dealt,report.archetypes[kind].attacks*2)
+		# W3 forest cover / overkill cap: validate exact event amounts, not 2 per shot.
+		var event_damage := 0
+		for row in report.trace:
+			if row.event.type=="damage":
+				var source: String = row.event.source
+				var source_kind := "melee" if source in ["thoma","guard"] else ("ranged" if source.begins_with("bow") else "mobile")
+				if source_kind==kind and not source.begins_with("knight") and source!="leader" and not source.begins_with("reinforcement"): event_damage+=int(row.event.amount)
+		assert_eq(report.archetypes[kind].damage_dealt,event_damage)
 		assert_almost_eq(report.archetypes[kind].average_move_per_unit_turn,float(sums[kind])/report.archetypes[kind].unit_turns,.00001)
 	var leader_damage := 0
 	for row in report.trace:

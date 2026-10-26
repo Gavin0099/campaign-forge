@@ -1,4 +1,26 @@
 extends "res://addons/gut/test.gd"
+
+func test_los_blocked_is_not_offered_and_cover_preview_and_hover_match_rules() -> void:
+	var field = add_child_autofree(preload("res://scenes/levels/Field24x18.tscn").instantiate())
+	await get_tree().process_frame
+	var s: Dictionary = field.Rules.initial()
+	for y in range(18): s.level.rows[y]=".".repeat(24)
+	s.units=[field.Rules.make_unit("thoma","ally","ranged",Vector2i(4,9),"party",s.level),field.Rules.make_unit("target","enemy","knight",Vector2i(7,9),"front",s.level),field.Rules.make_unit("leader","enemy","leader",Vector2i(20,9),"leader",s.level)]
+	s.level.rows[9]=".....^"+".".repeat(18)
+	field.state=s
+	field.build_units()
+	field.refresh()
+	assert_false(field.attack_targets.has("target"))
+	field.choose(Vector2i(7,9))
+	assert_true(field.pending.is_empty())
+	field.hud.hover(Vector2i(7,9))
+	assert_true(field.hud.inspect.text.contains("阻擋"))
+	field.state.level.rows[9]=".....f"+".".repeat(18)
+	field.refresh()
+	field.choose(Vector2i(7,9))
+	assert_eq(field.pending.target,"target")
+	assert_true(field.hud.notice.text.contains("傷害 1"))
+	assert_true(field.hud.notice.text.contains("掩護"))
 const Scene = preload("res://scenes/levels/Field24x18.tscn")
 const Rules = preload("res://scripts/rules/field_rules.gd")
 var battle

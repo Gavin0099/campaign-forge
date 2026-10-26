@@ -1,6 +1,7 @@
 extends RefCounted
 ## Pure, deterministic field rules. No nodes, animation, I/O or shared mutable cache.
 const Data = preload("res://data/levels/field_24x18.gd")
+const Sight = preload("res://scripts/rules/field_sight.gd")
 const DIRS = [Vector2i.UP,Vector2i.LEFT,Vector2i.RIGHT,Vector2i.DOWN]
 
 static func make_unit(id: String, side: String, kind: String, cell: Vector2i, group: String, level: Dictionary, born: int = 0) -> Dictionary:
@@ -97,7 +98,29 @@ static func targets(s: Dictionary, id: String) -> Array:
 	var found: Array = []
 	var u := unit(s,id)
 	for other in s.units:
-		if in_range(s.level,u,other): found.append(other.id)
+		if attack_info(s,u,other).legal: found.append(other.id)
+	return found
+
+static func attack_info(s: Dictionary, a: Dictionary, b: Dictionary) -> Dictionary:
+	if not in_range(s.level,a,b): return {"legal":false,"damage":0,"cover":false,"reason":"不在射程／同陣營"}
+	var sight := {"clear":true,"cover":false,"reason":"近戰接觸"}
+	if a.kind=="ranged": sight=Sight.check(s,a,b)
+	return {"legal":sight.clear,"damage":maxi(1,int(s.level.stats[a.kind].damage)-(1 if sight.cover else 0)) if sight.clear else 0,"cover":sight.cover,"reason":sight.reason}
+
+static func threat(s: Dictionary, id: String) -> Dictionary:
+	var found := {}
+	var u := unit(s,id)
+	if u.is_empty() or u.hp<=0 or u.born_turn>=s.turn: return found
+	var stats: Dictionary = s.level.stats[u.kind]
+	for p in reach(s,id).costs:
+		var hypothetical := u.duplicate(true)
+		hypothetical.cell=p
+		for y in range(-int(stats.max_range),int(stats.max_range)+1):
+			for x in range(-int(stats.max_range),int(stats.max_range)+1):
+				var at: Vector2i = p+Vector2i(x,y)
+				if not inside(s.level,at) or cost(s.level,at,"melee")==0: continue
+				var target := {"id":"threat-probe","side":"ally" if u.side=="enemy" else "enemy","hp":1,"cell":at}
+				if attack_info(s,hypothetical,target).legal: found[at]=true
 	return found
 
 static func terminal(s: Dictionary, events: Array) -> void:
@@ -111,10 +134,12 @@ static func terminal(s: Dictionary, events: Array) -> void:
 static func attack(s: Dictionary, id: String, target_id: String) -> Dictionary:
 	var u := unit(s,id)
 	var victim := unit(s,target_id)
-	if not allowed(s,u) or not in_range(s.level,u,victim): return reject(s,"illegal-attack")
+	if not allowed(s,u): return reject(s,"illegal-attack")
+	var info := attack_info(s,u,victim)
+	if not info.legal: return reject(s,info.reason)
 	var next := s.duplicate(true)
 	var target := unit(next,target_id)
-	var amount := mini(int(s.level.stats[u.kind].damage),int(target.hp))
+	var amount := mini(int(info.damage),int(target.hp))
 	target.hp-=amount
 	target.threatened=true
 	unit(next,id).moved=true
@@ -126,7 +151,7 @@ static func attack(s: Dictionary, id: String, target_id: String) -> Dictionary:
 		for neighbour in s.units:
 			if neighbour.side==victim.side and neighbour.hp>0 and distance(member.cell,neighbour.cell)<=s.level.ai.neighbour_radius:
 				next.groups[neighbour.group]="alert"
-	var events: Array = [{"type":"attack","unit":id,"target":target_id,"kind":u.kind},
+	var events: Array = [{"type":"attack","unit":id,"target":target_id,"kind":u.kind,"cover":info.cover,"sight_reason":info.reason},
 		{"type":"damage","unit":target_id,"source":id,"amount":amount,"hp_after":target.hp}]
 	if s.level.stats[u.kind].knockback:
 		var into: Vector2i = victim.cell+(victim.cell-u.cell)
@@ -211,6 +236,7 @@ static func distance_map(s: Dictionary, kind: String, side: String, target_id: S
 				var p: Vector2i = target.cell+Vector2i(dx,dy)
 				var d := distance(p,target.cell)
 				if d<stats.min_range or d>stats.max_range or cost(s.level,p,kind)==0 or not occupant(s,p).is_empty(): continue
+				if kind=="ranged" and not Sight.check(s,{"id":"path-probe","cell":p},target).clear: continue
 				if not costs.has(p):
 					costs[p]=0
 					open.append(p)

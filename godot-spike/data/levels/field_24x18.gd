@@ -58,4 +58,4 @@ static func build() -> Dictionary:
 		"turn_limit":TURN_LIMIT,"seed":SEED,"alert_radius":ALERT_RADIUS,"ai":AI.duplicate(true),"leader_contest_radius":LEADER_CONTEST_RADIUS,
 		"objective":"defeat_leader","hold_point":Vector2i(20,9),"reinforcement_turn":REINFORCEMENT_TURN,
 		"entries":ENTRIES.duplicate(),"reinforcement_kinds":["knight","knight","knight"],
-		"deployment":DEPLOYMENT.duplicate(true),"label":"PLACEHOLDER / SPIKE TEST VALUES","line_of_sight":"none; Manhattan range only"}
+		"deployment":DEPLOYMENT.duplicate(true),"label":"PLACEHOLDER / SPIKE TEST VALUES","line_of_sight":"centre supercover; cliff/deep water/units block intermediate; forest line/target cover -1 min1; exact corners check both sides"}
