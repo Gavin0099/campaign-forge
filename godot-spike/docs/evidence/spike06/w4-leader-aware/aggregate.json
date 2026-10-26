@@ -1,0 +1,131 @@
+{
+  "seeds": [
+    24018,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015,
+    1016,
+    1017,
+    1018,
+    1019
+  ],
+  "variant": "default",
+  "variation": "AI coordinate tie-break + same-class policy action/target tie ordering; seed24018 retains historical ordering. Fixed damage; no jitter.",
+  "policies": {
+    "road": {
+      "runs": 20,
+      "win_rate": 0.5,
+      "win_turns": {
+        "median": 14.0,
+        "min": 10,
+        "max": 15
+      },
+      "loss_turns": {
+        "median": 14.5,
+        "min": 7,
+        "max": 16
+      },
+      "first_contact": {
+        "median": 2.0,
+        "min": 2,
+        "max": 2
+      },
+      "mean_casualties": 2.85,
+      "reinforcement_engagement_rate": 1,
+      "reinforcement_engagement_in_wins": 1.0,
+      "wave_first_engage": {
+        "median": 7.0,
+        "min": 6,
+        "max": 8
+      },
+      "wave_first_attack": {
+        "median": 7.0,
+        "min": 6,
+        "max": 9
+      },
+      "wave_first_attacked": {
+        "median": 8,
+        "min": 7,
+        "max": 9
+      },
+      "idle_by_group": {
+        "flank": 98,
+        "front": 40,
+        "leader": 74,
+        "rear": 0,
+        "reinforcements": 0,
+        "reserve": 55,
+        "south": 20
+      },
+      "observed_enemy_turns": 1066,
+      "true_idle_share": 0.2692307692307692,
+      "classes": {
+        "melee": {
+          "damage": 389,
+          "kills": 35,
+          "mean_casualties": 0.7,
+          "death_turns": {
+            "median": 9.5,
+            "min": 7,
+            "max": 15
+          },
+          "living_unit_turns": 486,
+          "finishing_kills": 35,
+          "intercepts": 0,
+          "damage_share": 0.39213709677419356,
+          "kill_share": 0.2413793103448276
+        },
+        "ranged": {
+          "damage": 368,
+          "kills": 40,
+          "mean_casualties": 0.65,
+          "death_turns": {
+            "median": 11,
+            "min": 7,
+            "max": 13
+          },
+          "living_unit_turns": 474,
+          "finishing_kills": 40,
+          "intercepts": 0,
+          "damage_share": 0.3709677419354839,
+          "kill_share": 0.27586206896551724
+        },
+        "mobile": {
+          "damage": 235,
+          "kills": 70,
+          "mean_casualties": 1.5,
+          "death_turns": {
+            "median": 8.0,
+            "min": 3,
+            "max": 13
+          },
+          "living_unit_turns": 354,
+          "finishing_kills": 70,
+          "intercepts": 100,
+          "damage_share": 0.2368951612903226,
+          "kill_share": 0.4827586206896552
+        }
+      },
+      "los_blocked_shots": 0,
+      "los_blocked_opportunities": 62,
+      "length_minutes": [
+        10.9032191333333,
+        35.4473743333333
+      ],
+      "distinct_traces": 20,
+      "illegal_commands": 0
+    }
+  }
+}

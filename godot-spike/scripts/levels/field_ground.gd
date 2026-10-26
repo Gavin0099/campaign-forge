@@ -24,6 +24,9 @@ func _draw() -> void:
 		draw_colored_polygon(battle.diamond(cell),Color(0.45,0.69,0.63,0.28))
 	for cell in battle.threat_cells:
 		draw_colored_polygon(battle.diamond(cell),Color(0.74,0.34,0.26,0.18))
+	if battle.threat_visible:
+		for cell in battle.Rules.zoc_cells(battle.state):
+			draw_colored_polygon(battle.diamond(cell),Color(0.58,0.44,0.82,0.32))
 	for id in battle.attack_targets:
 		var target: Dictionary = battle.Rules.unit(battle.state,id)
 		draw_colored_polygon(battle.diamond(target.cell),Color(0.85,0.44,0.27,0.38))

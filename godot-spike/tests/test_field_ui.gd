@@ -85,7 +85,8 @@ func test_objective_panel_turn_limit_and_hover_show_real_values() -> void:
 	assert_true(battle.hud.inspect.text.contains("2–3"))
 
 func test_warning_marker_precedes_arrival_and_tracks_announced_entries() -> void:
-	var s: Dictionary = battle.state.duplicate(true)
+	# Preserve the original northeast-text pin; new east-entry HUD is tested separately.
+	var s: Dictionary = Rules.initial(preload("res://data/levels/field_24x18_spike05.gd").build())
 	s.turn=3
 	var warning := Rules.enemy_phase(s)
 	var event: Dictionary = warning.events.filter(func(e):return e.type=="reinforcement_warning")[0]

@@ -14,6 +14,7 @@ func test_warning_visible_a_full_turn_before_legal_rested_arrival() -> void:
 	field.refresh()
 	assert_true(field.hud.notice.visible)
 	assert_true(field.hud.notice.text.contains("第 5 回合"))
+	assert_true(field.hud.notice.text.contains("東側渡口"))
 	assert_eq(field.hud.warning_entries(),s.level.entries)
 	var arrived := R.next_turn(warning.state)
 	assert_eq(arrived,R.next_turn(warning.state))

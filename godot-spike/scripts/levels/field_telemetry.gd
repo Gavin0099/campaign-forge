@@ -8,6 +8,9 @@ var reinforcement_first_engage := -1
 var reinforcement_first_attack := -1
 var reinforcement_first_attacked := -1
 var los_opportunities := 0
+var finishing_kills := {"melee":0,"ranged":0,"mobile":0}
+var intercepts := {"melee":0,"ranged":0,"mobile":0}
+var disengages := 0
 var estimate_enemy_mean := 1.999
 var estimate_source := "spike04 measured normal presentation"
 var first_contact_turn := -1
@@ -50,6 +53,8 @@ func record(before: Dictionary, events: Array, after: Dictionary) -> void:
 		roster[u.id]=u
 		ensure(u.kind,u.side)
 	for e in events:
+		if e.type=="intercept": intercepts[roster[e.source].kind]+=1
+		if e.type=="disengage": disengages+=1
 		if e.type in ["intent","move","attack","wait"]:
 			var key := "%d:%s" % [turn,e.unit]
 			if unit_turns.has(key): unit_turns[key].observed=true
@@ -80,6 +85,7 @@ func record(before: Dictionary, events: Array, after: Dictionary) -> void:
 				first_contact_side=roster[e.unit].side
 			totals[roster[e.unit].kind].attacks+=1
 		if e.type=="damage":
+			if e.hp_after==0 and roster[e.source].side=="ally" and Rules.unit(spatial,e.unit).hp<Rules.unit(spatial,e.unit).max_hp: finishing_kills[roster[e.source].kind]+=1
 			Rules.unit(spatial,e.unit).hp=e.hp_after
 			totals[roster[e.source].kind].damage_dealt+=e.amount
 			totals[roster[e.unit].kind].damage_taken+=e.amount
@@ -115,6 +121,7 @@ func summary() -> Dictionary:
 			archetypes[kind].damage_share=archetypes[kind].damage_dealt/maxf(1,ally_damage)
 			archetypes[kind].kill_share=archetypes[kind].kills/maxf(1,ally_kills)
 	return {"first_contact_turn":first_contact_turn,"first_contact_side":first_contact_side,
+		"finishing_kills":finishing_kills,"intercepts":intercepts,"disengages":disengages,
 		"reinforcement_first_attack_turn":reinforcement_first_attack,"reinforcement_first_attacked_turn":reinforcement_first_attacked,"los_blocked_opportunities":los_opportunities,
 		"enemy_idle_by_group":idle,"deliberate_holds":deliberate,"reinforcement_first_engage_turn":reinforcement_first_engage,
 		"ally_deaths":deaths,"ranged_shots":ranged_shots,"los_blocked_shots":ranged_shots.filter(func(r):return r.would_block).size(),

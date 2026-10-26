@@ -169,9 +169,9 @@ func refresh() -> void:
 	attack_targets.clear()
 	threat_cells.clear()
 	var u := Rules.unit(state,selected_id)
-	if not busy and Rules.allowed(state,u) and u.side=="ally":
-		if not u.moved: move_cells=Rules.reach(state,selected_id).costs
-		attack_targets=Rules.targets(state,selected_id)
+	if not busy and not u.is_empty() and u.side=="ally":
+		if Rules.can_move(state,u): move_cells=Rules.reach(state,selected_id).costs
+		if Rules.allowed(state,u): attack_targets=Rules.targets(state,selected_id)
 	if threat_visible:
 		for enemy in state.units:
 			if enemy.side!="enemy" or enemy.hp<=0: continue

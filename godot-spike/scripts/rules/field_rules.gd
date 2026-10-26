@@ -46,19 +46,48 @@ static func allowed(s: Dictionary, u: Dictionary) -> bool:
 static func reject(s: Dictionary, reason: String) -> Dictionary:
 	return {"ok":false,"state":s.duplicate(true),"events":[],"reason":reason}
 
+static func scout_kit(s: Dictionary, u: Dictionary) -> bool:
+	return not u.is_empty() and u.kind=="mobile" and u.side=="ally" and s.level.get("scout_kit",false)
+
+static func can_escape(s: Dictionary, u: Dictionary) -> bool:
+	return scout_kit(s,u) and u.hp>0 and s.phase=="player" and s.status=="playing" and u.get("retreat_left",0)>0
+
+static func can_move(s: Dictionary, u: Dictionary) -> bool:
+	return (allowed(s,u) and not u.moved) or can_escape(s,u)
+
+static func zoc_sources(s: Dictionary, cell: Vector2i, moving_side: String) -> Array:
+	var sources: Array = []
+	if not s.level.get("scout_kit",false) or moving_side=="ally": return sources
+	for u in s.units:
+		if u.hp>0 and u.side!=moving_side and scout_kit(s,u) and distance(cell,u.cell)==1: sources.append(u.id)
+	sources.sort()
+	return sources
+
+static func zoc_cells(s: Dictionary) -> Dictionary:
+	var cells := {}
+	for u in s.units:
+		if not scout_kit(s,u) or u.hp<=0: continue
+		for dir in DIRS:
+			var p: Vector2i = u.cell+dir
+			if cost(s.level,p,"knight")>0: cells[p]=true
+	return cells
+
 static func result(s: Dictionary, events: Array) -> Dictionary:
 	return {"ok":true,"state":s,"events":events}
 
 static func reach(s: Dictionary, id: String, budget: int = -1) -> Dictionary:
 	var u := unit(s,id)
 	if u.is_empty() or u.hp<=0: return {"costs":{},"parents":{}}
-	if budget<0: budget = s.level.stats[u.kind].move
+	if budget<0: budget = int(u.retreat_left) if can_escape(s,u) else int(s.level.stats[u.kind].move)
 	var costs := {u.cell:0}
 	var parents := {}
 	var open: Array = [u.cell]
 	while not open.is_empty():
 		open.sort_custom(func(a,b): return costs[a]<costs[b])
 		var here: Vector2i = open.pop_front()
+		# Entering scout control ends this move; leaving an initial controlled cell
+		# remains possible. No damage, reaction strike or global RNG.
+		if here!=u.cell and not zoc_sources(s,here,u.side).is_empty(): continue
 		for direction in DIRS:
 			var next: Vector2i = here+direction
 			var step := cost(s.level,next,u.kind)
@@ -78,15 +107,23 @@ static func path_to(reachable: Dictionary, start: Vector2i, to: Vector2i) -> Arr
 
 static func move(s: Dictionary, id: String, to: Vector2i) -> Dictionary:
 	var u := unit(s,id)
-	if not allowed(s,u) or u.moved: return reject(s,"cannot-move")
+	if not can_move(s,u): return reject(s,"cannot-move")
 	var reachable := reach(s,id)
 	var path := path_to(reachable,u.cell,to)
 	if path.size()<2: return reject(s,"illegal-move")
 	var next := s.duplicate(true)
 	unit(next,id).cell=to
 	unit(next,id).moved=true
+	var events: Array = [{"type":"move","unit":id,"path":path,"cost":reachable.costs[to]}]
+	if scout_kit(s,u):
+		unit(next,id).move_spent=int(u.get("move_spent",0))+int(reachable.costs[to])
+		if can_escape(s,u):
+			unit(next,id).retreat_left=0
+			events.append({"type":"disengage","unit":id,"cost":reachable.costs[to]})
+	var control := zoc_sources(s,to,u.side)
+	if not control.is_empty(): events.append({"type":"intercept","unit":id,"source":control[0],"sources":control,"cell":to})
 	next.occupancy_revision+=1
-	return result(next,[{"type":"move","unit":id,"path":path,"cost":reachable.costs[to]}])
+	return result(next,events)
 
 static func in_range(level: Dictionary, attacker: Dictionary, target: Dictionary) -> bool:
 	if attacker.is_empty() or target.is_empty() or attacker.hp<=0 or target.hp<=0 or attacker.side==target.side: return false
@@ -105,7 +142,8 @@ static func attack_info(s: Dictionary, a: Dictionary, b: Dictionary) -> Dictiona
 	if not in_range(s.level,a,b): return {"legal":false,"damage":0,"cover":false,"reason":"不在射程／同陣營"}
 	var sight := {"clear":true,"cover":false,"reason":"近戰接觸"}
 	if a.kind=="ranged": sight=Sight.check(s,a,b)
-	return {"legal":sight.clear,"damage":maxi(1,int(s.level.stats[a.kind].damage)-(1 if sight.cover else 0)) if sight.clear else 0,"cover":sight.cover,"reason":sight.reason}
+	var finisher: bool = scout_kit(s,a) and b.hp*2<=b.get("max_hp",b.hp)
+	return {"legal":sight.clear,"damage":maxi(1,int(s.level.stats[a.kind].damage)+(1 if finisher else 0)-(1 if sight.cover else 0)) if sight.clear else 0,"cover":sight.cover,"finisher":finisher,"reason":sight.reason+(" · 收割 +1（半血以下）" if finisher else "")}
 
 static func threat(s: Dictionary, id: String) -> Dictionary:
 	var found := {}
@@ -144,6 +182,7 @@ static func attack(s: Dictionary, id: String, target_id: String) -> Dictionary:
 	target.threatened=true
 	unit(next,id).moved=true
 	unit(next,id).acted=true
+	if scout_kit(s,u): unit(next,id).retreat_left=mini(2,maxi(0,int(s.level.stats[u.kind].move)-int(u.get("move_spent",0))))
 	next.groups[victim.group]="alert"
 	# Alert neighbours of the attacked group, measured before knockback/death.
 	for member in s.units:
@@ -153,6 +192,7 @@ static func attack(s: Dictionary, id: String, target_id: String) -> Dictionary:
 				next.groups[neighbour.group]="alert"
 	var events: Array = [{"type":"attack","unit":id,"target":target_id,"kind":u.kind,"cover":info.cover,"sight_reason":info.reason},
 		{"type":"damage","unit":target_id,"source":id,"amount":amount,"hp_after":target.hp}]
+	if scout_kit(s,u): events[0].finisher=info.finisher
 	if s.level.stats[u.kind].knockback:
 		var into: Vector2i = victim.cell+(victim.cell-u.cell)
 		var blocker := occupant(s,into,target_id)
@@ -168,10 +208,11 @@ static func attack(s: Dictionary, id: String, target_id: String) -> Dictionary:
 	return result(next,events)
 
 static func wait(s: Dictionary, id: String) -> Dictionary:
-	if not allowed(s,unit(s,id)): return reject(s,"cannot-wait")
+	if not allowed(s,unit(s,id)) and not can_escape(s,unit(s,id)): return reject(s,"cannot-wait")
 	var next := s.duplicate(true)
 	unit(next,id).acted=true
 	unit(next,id).moved=true
+	if scout_kit(s,unit(s,id)): unit(next,id).retreat_left=0
 	return result(next,[{"type":"wait","unit":id}])
 
 static func entry_fallback(s: Dictionary, requested: Vector2i) -> Vector2i:
@@ -199,6 +240,9 @@ static func next_turn(s: Dictionary) -> Dictionary:
 	for u in next.units:
 		u.moved=false
 		u.acted=false
+		if scout_kit(next,u):
+			u.move_spent=0
+			u.retreat_left=0
 	if not next.warned and next.turn>=next.level.reinforcement_turn-1:
 		next.warned=true
 		events.append({"type":"reinforcement_warning","turn":next.level.reinforcement_turn,"entries":next.level.entries.duplicate(),"kinds":next.level.reinforcement_kinds.duplicate(),"announced_on":next.turn})

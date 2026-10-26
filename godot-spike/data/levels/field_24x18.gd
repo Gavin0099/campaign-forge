@@ -48,7 +48,7 @@ static func build() -> Dictionary:
 			if x in [20,21] and y in [9,10]: tile = "d"
 			row += tile
 		rows.append(row)
-	return {"size":SIZE,"rows":rows,"stats":STATS.duplicate(true),"terrain":TERRAIN.duplicate(true),
+	return {"size":SIZE,"rows":rows,"stats":STATS.duplicate(true),"terrain":TERRAIN.duplicate(true),"scout_kit":true,
 		"turn_limit":TURN_LIMIT,"seed":SEED,"alert_radius":ALERT_RADIUS,"ai":AI.duplicate(true),"leader_contest_radius":LEADER_CONTEST_RADIUS,
 		"objective":"defeat_leader","hold_point":Vector2i(20,9),"reinforcement_turn":REINFORCEMENT_TURN,
 		"entries":ENTRIES.duplicate(),"entry_label":"東側渡口入口","reinforcement_kinds":["knight","knight","knight"],

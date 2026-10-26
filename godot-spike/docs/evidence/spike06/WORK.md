@@ -129,3 +129,40 @@ rate does not establish a superior initial-deployment strategy. W6 rechecks
 with final kit. Two GUT tests/19 assertions pass on both initial/final entries:
 visible warning before legal rested arrivals; full continuous road has enemy
 wave attack and ally wave attack, not only a pursuit isolation fixture.
+
+## W4 — scout kit and operator experiments
+
+Final spike test kit (allies/mobile, default only; spike05 kit absent):
+- finisher +1 vs current HP <=50% max HP; base damage remains2, so a3HP
+  knight can be finished. No bonus at >half, no raw stat/HP change.
+- four orthogonal adjacent cells are control zones. An enemy entering one
+  stops its movement there and may still attack; it can leave a controlled
+  starting cell. No reaction damage/forced objective. AI uses the same reach.
+- after one attack, one optional disengage of min(2,6-movement_cost_spent).
+  Full6 before strike leaves0; strike before moving permits2, no second attack,
+  no repeated retreat. Wait ends it, next turn resets. Weighted terrain counts.
+- preview/hover display actual +1; action state exposes remaining retreat,
+  cancel preserves state; V draws purple control. Ground threat uses the same
+  controlled reach. Events distinguish intercept/disengage from damage.
+
+Operator mistakes exposed by experiments: first cap2 policy was too passive
++ used only4 travel;20% road wins. Full travel6, healthy flank attacks and
+advance-aware retreat improved it; leader-aware hold/knockback evaluation then
+reached50% road,70% flank. A full-remaining-move escape trial was not retained;
+final cap2 keeps the smaller kit. Experiments retained in w4-* folders/logs.
+Final intended route is supported main-road advance with scouts screening
+north (flank policy's y7 preference), not the old unsupported north sprint.
+Its20 seeds:14 wins=70%, win median13[7–15],idle29.97%,wave100% of wins.
+Melee39.39% damage,ranged35.56%,mobile25.05%; mobile61 finishing kills vs
+42/46,87 intercepts,median deathT8 vs spike05'sT4–5 (some still dieT3).
+Scouts are not highest damage; mobile living-unit-turns364, not invulnerable.
+Road50% remains riskier; W6 repeats every policy rather than claiming all pass.
+
+Six new pure/UI tests44 assertions pass. Initial test failures were fixture
+errors (a blocked full-move route and an alternate legal route around control)
+and autofree while signal emitter was locked; corrected fixtures/unwind frame,
+failed log retained. Full regression found one historical NE-label pin after
+entry changed east; preserved original fixture/NE assertion, added east-label
+assertion to new test. Final focused15/15,125 assertions exit0. Full W4 run
+on the intermediate full-remaining trial is retained and not final acceptance;
+W7 runs the final entire suite. grid_rules.gd untouched.

@@ -111,8 +111,11 @@ func update_state() -> void:
 	objective.text="目標：擊敗領袖 ◆　失敗：托瑪倒下／超過 %d 回合　｜24×18・無迷霧・測試值" % s.level.turn_limit
 	var u: Dictionary = battle.Rules.unit(s,battle.selected_id)
 	selected.text="選擇隊員" if u.is_empty() else "%s　%s　HP %d/%d　移動 %d　射程 %d–%d　%s" % [battle.display_name(u),battle.kind_name(u.kind),u.hp,u.max_hp,s.level.stats[u.kind].move,s.level.stats[u.kind].min_range,s.level.stats[u.kind].max_range,"已行動" if u.acted else ("已移動／可攻擊或等待" if u.moved else "可移動後攻擊或等待")]
+	if battle.Rules.scout_kit(s,u):
+		selected.text="%s HP%d/%d · 移6 · 半血收割+1／鄰格攔截 · %s" % [u.id,u.hp,u.max_hp,"可撤離≤%d格" % u.get("retreat_left",0) if battle.Rules.can_escape(s,u) else ("已行動" if u.acted else "攻後剩餘移動撤離≤2格")]
+	selected.add_theme_font_size_override("font_size",17 if battle.Rules.scout_kit(s,u) else 20)
 	confirm_button.disabled=battle.busy or battle.pending.is_empty() or s.status!="playing"
-	wait_button.disabled=battle.busy or u.is_empty() or u.get("acted",true) or u.get("side","")!="ally" or s.phase!="player" or s.status!="playing"
+	wait_button.disabled=battle.busy or u.is_empty() or (u.get("acted",true) and not battle.Rules.can_escape(s,u)) or u.get("side","")!="ally" or s.phase!="player" or s.status!="playing"
 	end_button.disabled=battle.busy or s.status!="playing"
 	result_panel.visible=s.status!="playing"
 	if s.warned and not s.spawned:
@@ -136,6 +139,7 @@ func hover(cell: Vector2i) -> void:
 	if not u.is_empty():
 		var stats: Dictionary = battle.state.level.stats[u.kind]
 		inspect.text+="　｜%s・%s HP%d/%d　移%d／射程%d–%d" % [battle.display_name(u),battle.kind_name(u.kind),u.hp,u.max_hp,stats.move,stats.min_range,stats.max_range]
+		if battle.Rules.scout_kit(battle.state,u): inspect.text+=" · 收割半血+1／鄰格停步／攻後撤≤2（總移≤6）"
 		var shooter: Dictionary = battle.Rules.unit(battle.state,battle.selected_id)
 		if not shooter.is_empty() and shooter.side!=u.side:
 			var info: Dictionary = battle.Rules.attack_info(battle.state,shooter,u)
