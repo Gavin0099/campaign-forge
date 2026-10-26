@@ -1,0 +1,13 @@
+python.exe : Traceback (most recent call last):
+At line:2 char:1
++ & 'C:\Users\daish\AppData\Local\Programs\Python\Python312\python.exe' ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+  File "D:\campaign-forge\scratch\godot-spike\godot-spike\tools\audit_spike05.py", line 137, in <module>
+    main()
+  File "D:\campaign-forge\scratch\godot-spike\godot-spike\tools\audit_spike05.py", line 87, in main
+    assert Image.open(OUT / shot['file']).size == tuple(shot['resolution'])
+                            ~~~~^^^^^^^^
+KeyError: 'file'

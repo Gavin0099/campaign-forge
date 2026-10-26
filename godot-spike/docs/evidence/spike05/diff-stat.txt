@@ -1,0 +1,353 @@
+ docs/tasks/godot-spike-05-ai-los-polish.md         |  175 +
+ godot-spike/config/impact_profile.tres             |   16 +-
+ godot-spike/config/impact_profile_spike04.tres     |   43 +
+ godot-spike/data/levels/field_24x18.gd             |    8 +-
+ godot-spike/docs/evidence/spike05/MOVIE.md         |   15 +
+ godot-spike/docs/evidence/spike05/PACING.md        |   73 +
+ godot-spike/docs/evidence/spike05/PERFORMANCE.md   |   27 +
+ godot-spike/docs/evidence/spike05/WORK.md          |   23 +
+ godot-spike/docs/evidence/spike05/arrival.png      |  Bin 0 -> 345416 bytes
+ .../capture-intercept-full-probe-failed.json       |   11 +
+ .../attempts/intercept-full-probe-failed.log       |    4 +
+ .../docs/evidence/spike05/autoplay/bypass.json     | 3380 +++++++++
+ .../docs/evidence/spike05/autoplay/flank.json      | 6111 +++++++++++++++
+ .../docs/evidence/spike05/autoplay/road.json       | 6753 +++++++++++++++++
+ .../evidence/spike05/autoplay/scout-retreat.json   | 7748 ++++++++++++++++++++
+ .../docs/evidence/spike05/autoplay/turtle.json     | 4885 ++++++++++++
+ .../docs/evidence/spike05/baseline/BASELINE.md     |   18 +
+ .../docs/evidence/spike05/baseline/flank.json      | 5206 +++++++++++++
+ .../evidence/spike05/baseline/original/flank.json  | 4629 ++++++++++++
+ .../evidence/spike05/baseline/original/road.json   | 6227 ++++++++++++++++
+ .../evidence/spike05/baseline/original/turtle.json | 1910 +++++
+ .../docs/evidence/spike05/baseline/road.json       | 6956 ++++++++++++++++++
+ .../docs/evidence/spike05/baseline/turtle.json     | 2168 ++++++
+ .../docs/evidence/spike05/capture-1080.json        |   52 +
+ .../docs/evidence/spike05/capture-enemy.json       |   66 +
+ .../docs/evidence/spike05/capture-intercept.json   |  110 +
+ .../docs/evidence/spike05/capture-perf.json        |    9 +
+ godot-spike/docs/evidence/spike05/capture-qa.json  |  366 +
+ .../docs/evidence/spike05/capture-result.json      |   33 +
+ .../docs/evidence/spike05/capture-runtime.json     |  202 +
+ .../docs/evidence/spike05/capture-sequence.json    |  158 +
+ .../docs/evidence/spike05/capture-sight.json       |   98 +
+ .../evidence/spike05/capture-source-hashes.json    |  110 +
+ .../docs/evidence/spike05/cover-preview.png        |  Bin 0 -> 626290 bytes
+ godot-spike/docs/evidence/spike05/dense-labels.png |  Bin 0 -> 422764 bytes
+ .../docs/evidence/spike05/deployment-1080.png      |  Bin 0 -> 821785 bytes
+ godot-spike/docs/evidence/spike05/deployment.png   |  Bin 0 -> 429612 bytes
+ godot-spike/docs/evidence/spike05/edge-safe.png    |  Bin 0 -> 200608 bytes
+ .../evidence/spike05/enemy-advancing-front.png     |  Bin 0 -> 489314 bytes
+ .../docs/evidence/spike05/enemy-frames/0000.png    |  Bin 0 -> 615420 bytes
+ .../docs/evidence/spike05/enemy-frames/0019.png    |  Bin 0 -> 752815 bytes
+ .../docs/evidence/spike05/enemy-frames/0038.png    |  Bin 0 -> 713725 bytes
+ .../docs/evidence/spike05/enemy-frames/0058.png    |  Bin 0 -> 688010 bytes
+ .../docs/evidence/spike05/enemy-frames/0077.png    |  Bin 0 -> 658624 bytes
+ .../docs/evidence/spike05/enemy-frames/0097.png    |  Bin 0 -> 4321 bytes
+ .../evidence/spike05/enemy-phase-60fps-strip.png   |  Bin 0 -> 588352 bytes
+ .../docs/evidence/spike05/enemy-phase-60fps.avi    |  Bin 0 -> 10130644 bytes
+ .../docs/evidence/spike05/field-melee-hit.png      |  Bin 0 -> 629582 bytes
+ .../docs/evidence/spike05/hitfeel/field-hit.log    |    2 +
+ .../evidence/spike05/hitfeel/field-melee-hit.png   |  Bin 0 -> 603243 bytes
+ .../hitfeel/impact-strip-spike04-vs-spike05.png    |  Bin 0 -> 7699868 bytes
+ .../docs/evidence/spike05/hitfeel/spike04-crit.log |   13 +
+ .../spike05/hitfeel/spike04-crit/attack-60fps.avi  |  Bin 0 -> 8027342 bytes
+ .../spike05/hitfeel/spike04-crit/contact.png       |  Bin 0 -> 1467357 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0010.png   |  Bin 0 -> 1253447 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0011.png   |  Bin 0 -> 1261720 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0012.png   |  Bin 0 -> 1266868 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0013.png   |  Bin 0 -> 1268281 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0014.png   |  Bin 0 -> 1268213 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0015.png   |  Bin 0 -> 1268203 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0016.png   |  Bin 0 -> 1268346 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0017.png   |  Bin 0 -> 1268346 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0018.png   |  Bin 0 -> 1437110 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0019.png   |  Bin 0 -> 1437110 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0020.png   |  Bin 0 -> 1437110 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0021.png   |  Bin 0 -> 1437110 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0022.png   |  Bin 0 -> 1437110 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0023.png   |  Bin 0 -> 1437110 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0024.png   |  Bin 0 -> 1437110 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0025.png   |  Bin 0 -> 1437110 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0026.png   |  Bin 0 -> 1437110 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0027.png   |  Bin 0 -> 1437110 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0028.png   |  Bin 0 -> 1437110 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0029.png   |  Bin 0 -> 1426530 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0030.png   |  Bin 0 -> 1417290 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0031.png   |  Bin 0 -> 1410419 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0032.png   |  Bin 0 -> 1406502 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0033.png   |  Bin 0 -> 1406197 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0034.png   |  Bin 0 -> 1405216 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0035.png   |  Bin 0 -> 1406315 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0036.png   |  Bin 0 -> 1406143 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0037.png   |  Bin 0 -> 1406070 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0038.png   |  Bin 0 -> 1405081 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0039.png   |  Bin 0 -> 1405331 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0040.png   |  Bin 0 -> 1405046 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0041.png   |  Bin 0 -> 1405310 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0042.png   |  Bin 0 -> 1404718 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0043.png   |  Bin 0 -> 1404749 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0044.png   |  Bin 0 -> 1404609 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0045.png   |  Bin 0 -> 1404746 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0046.png   |  Bin 0 -> 1404509 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0047.png   |  Bin 0 -> 1404495 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0048.png   |  Bin 0 -> 1404319 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0049.png   |  Bin 0 -> 1404183 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0050.png   |  Bin 0 -> 1404114 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0051.png   |  Bin 0 -> 1402282 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0052.png   |  Bin 0 -> 1393399 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0053.png   |  Bin 0 -> 1372943 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0054.png   |  Bin 0 -> 1313422 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0055.png   |  Bin 0 -> 1238685 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0056.png   |  Bin 0 -> 1141498 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0057.png   |  Bin 0 -> 1047852 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0058.png   |  Bin 0 -> 980942 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0059.png   |  Bin 0 -> 934192 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0060.png   |  Bin 0 -> 908381 bytes
+ .../spike05/hitfeel/spike04-crit/frames/0061.png   |  Bin 0 -> 903072 bytes
+ .../spike05/hitfeel/spike04-crit/impact-strip.png  |  Bin 0 -> 1825684 bytes
+ .../spike05/hitfeel/spike04-crit/timeline.json     | 2594 +++++++
+ .../evidence/spike05/hitfeel/spike04-normal.log    |   13 +
+ .../hitfeel/spike04-normal/attack-60fps.avi        |  Bin 0 -> 7481220 bytes
+ .../spike05/hitfeel/spike04-normal/contact.png     |  Bin 0 -> 1469345 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0010.png |  Bin 0 -> 1253447 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0011.png |  Bin 0 -> 1261720 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0012.png |  Bin 0 -> 1266868 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0013.png |  Bin 0 -> 1268281 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0014.png |  Bin 0 -> 1268213 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0015.png |  Bin 0 -> 1268203 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0016.png |  Bin 0 -> 1268346 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0017.png |  Bin 0 -> 1268346 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0018.png |  Bin 0 -> 1439174 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0019.png |  Bin 0 -> 1439174 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0020.png |  Bin 0 -> 1439174 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0021.png |  Bin 0 -> 1439174 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0022.png |  Bin 0 -> 1439174 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0023.png |  Bin 0 -> 1439174 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0024.png |  Bin 0 -> 1439174 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0025.png |  Bin 0 -> 1426512 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0026.png |  Bin 0 -> 1418675 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0027.png |  Bin 0 -> 1410531 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0028.png |  Bin 0 -> 1406818 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0029.png |  Bin 0 -> 1406733 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0030.png |  Bin 0 -> 1406691 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0031.png |  Bin 0 -> 1406351 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0032.png |  Bin 0 -> 1407172 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0033.png |  Bin 0 -> 1405945 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0034.png |  Bin 0 -> 1406577 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0035.png |  Bin 0 -> 1405358 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0036.png |  Bin 0 -> 1405179 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0037.png |  Bin 0 -> 1405383 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0038.png |  Bin 0 -> 1404723 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0039.png |  Bin 0 -> 1404837 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0040.png |  Bin 0 -> 1404761 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0041.png |  Bin 0 -> 1404355 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0042.png |  Bin 0 -> 1404386 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0043.png |  Bin 0 -> 1404348 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0044.png |  Bin 0 -> 1404259 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0045.png |  Bin 0 -> 1404140 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0046.png |  Bin 0 -> 1404109 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0047.png |  Bin 0 -> 1402282 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0048.png |  Bin 0 -> 1393399 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0049.png |  Bin 0 -> 1372943 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0050.png |  Bin 0 -> 1313422 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0051.png |  Bin 0 -> 1238685 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0052.png |  Bin 0 -> 1141498 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0053.png |  Bin 0 -> 1047852 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0054.png |  Bin 0 -> 980942 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0055.png |  Bin 0 -> 934192 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0056.png |  Bin 0 -> 908381 bytes
+ .../spike05/hitfeel/spike04-normal/frames/0057.png |  Bin 0 -> 903072 bytes
+ .../hitfeel/spike04-normal/impact-strip.png        |  Bin 0 -> 2022557 bytes
+ .../spike05/hitfeel/spike04-normal/timeline.json   | 2414 ++++++
+ .../docs/evidence/spike05/hitfeel/spike05-crit.log |   13 +
+ .../spike05/hitfeel/spike05-crit/attack-60fps.avi  |  Bin 0 -> 8027986 bytes
+ .../spike05/hitfeel/spike05-crit/contact.png       |  Bin 0 -> 1467956 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0010.png   |  Bin 0 -> 1253447 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0011.png   |  Bin 0 -> 1261720 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0012.png   |  Bin 0 -> 1266868 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0013.png   |  Bin 0 -> 1268281 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0014.png   |  Bin 0 -> 1268213 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0015.png   |  Bin 0 -> 1268203 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0016.png   |  Bin 0 -> 1268346 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0017.png   |  Bin 0 -> 1268346 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0018.png   |  Bin 0 -> 1437441 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0019.png   |  Bin 0 -> 1437441 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0020.png   |  Bin 0 -> 1437441 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0021.png   |  Bin 0 -> 1437441 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0022.png   |  Bin 0 -> 1437441 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0023.png   |  Bin 0 -> 1437441 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0024.png   |  Bin 0 -> 1437441 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0025.png   |  Bin 0 -> 1437441 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0026.png   |  Bin 0 -> 1437441 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0027.png   |  Bin 0 -> 1437441 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0028.png   |  Bin 0 -> 1437441 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0029.png   |  Bin 0 -> 1427065 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0030.png   |  Bin 0 -> 1417678 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0031.png   |  Bin 0 -> 1411100 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0032.png   |  Bin 0 -> 1407091 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0033.png   |  Bin 0 -> 1407008 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0034.png   |  Bin 0 -> 1405556 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0035.png   |  Bin 0 -> 1406350 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0036.png   |  Bin 0 -> 1406227 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0037.png   |  Bin 0 -> 1406194 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0038.png   |  Bin 0 -> 1405049 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0039.png   |  Bin 0 -> 1405103 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0040.png   |  Bin 0 -> 1405217 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0041.png   |  Bin 0 -> 1405436 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0042.png   |  Bin 0 -> 1404895 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0043.png   |  Bin 0 -> 1404735 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0044.png   |  Bin 0 -> 1404592 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0045.png   |  Bin 0 -> 1404506 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0046.png   |  Bin 0 -> 1404456 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0047.png   |  Bin 0 -> 1404284 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0048.png   |  Bin 0 -> 1404164 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0049.png   |  Bin 0 -> 1404120 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0050.png   |  Bin 0 -> 1404053 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0051.png   |  Bin 0 -> 1402282 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0052.png   |  Bin 0 -> 1393399 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0053.png   |  Bin 0 -> 1372943 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0054.png   |  Bin 0 -> 1313422 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0055.png   |  Bin 0 -> 1238685 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0056.png   |  Bin 0 -> 1141498 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0057.png   |  Bin 0 -> 1047852 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0058.png   |  Bin 0 -> 980942 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0059.png   |  Bin 0 -> 934192 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0060.png   |  Bin 0 -> 908381 bytes
+ .../spike05/hitfeel/spike05-crit/frames/0061.png   |  Bin 0 -> 903072 bytes
+ .../spike05/hitfeel/spike05-crit/impact-strip.png  |  Bin 0 -> 1827527 bytes
+ .../spike05/hitfeel/spike05-crit/timeline.json     | 2594 +++++++
+ .../evidence/spike05/hitfeel/spike05-normal.log    |   13 +
+ .../hitfeel/spike05-normal/attack-60fps.avi        |  Bin 0 -> 7481658 bytes
+ .../spike05/hitfeel/spike05-normal/contact.png     |  Bin 0 -> 1470026 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0010.png |  Bin 0 -> 1253447 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0011.png |  Bin 0 -> 1261720 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0012.png |  Bin 0 -> 1266868 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0013.png |  Bin 0 -> 1268281 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0014.png |  Bin 0 -> 1268213 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0015.png |  Bin 0 -> 1268203 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0016.png |  Bin 0 -> 1268346 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0017.png |  Bin 0 -> 1268346 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0018.png |  Bin 0 -> 1439628 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0019.png |  Bin 0 -> 1439628 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0020.png |  Bin 0 -> 1439628 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0021.png |  Bin 0 -> 1439628 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0022.png |  Bin 0 -> 1439628 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0023.png |  Bin 0 -> 1439628 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0024.png |  Bin 0 -> 1439628 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0025.png |  Bin 0 -> 1427013 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0026.png |  Bin 0 -> 1419782 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0027.png |  Bin 0 -> 1411135 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0028.png |  Bin 0 -> 1407819 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0029.png |  Bin 0 -> 1407023 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0030.png |  Bin 0 -> 1406538 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0031.png |  Bin 0 -> 1406370 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0032.png |  Bin 0 -> 1407274 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0033.png |  Bin 0 -> 1406127 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0034.png |  Bin 0 -> 1406931 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0035.png |  Bin 0 -> 1405570 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0036.png |  Bin 0 -> 1405192 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0037.png |  Bin 0 -> 1405128 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0038.png |  Bin 0 -> 1404580 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0039.png |  Bin 0 -> 1404458 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0040.png |  Bin 0 -> 1404400 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0041.png |  Bin 0 -> 1404345 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0042.png |  Bin 0 -> 1404416 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0043.png |  Bin 0 -> 1404290 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0044.png |  Bin 0 -> 1404195 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0045.png |  Bin 0 -> 1404158 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0046.png |  Bin 0 -> 1404099 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0047.png |  Bin 0 -> 1402282 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0048.png |  Bin 0 -> 1393399 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0049.png |  Bin 0 -> 1372943 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0050.png |  Bin 0 -> 1313422 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0051.png |  Bin 0 -> 1238685 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0052.png |  Bin 0 -> 1141498 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0053.png |  Bin 0 -> 1047852 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0054.png |  Bin 0 -> 980942 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0055.png |  Bin 0 -> 934192 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0056.png |  Bin 0 -> 908381 bytes
+ .../spike05/hitfeel/spike05-normal/frames/0057.png |  Bin 0 -> 903072 bytes
+ .../hitfeel/spike05-normal/impact-strip.png        |  Bin 0 -> 2024802 bytes
+ .../spike05/hitfeel/spike05-normal/timeline.json   | 2414 ++++++
+ .../docs/evidence/spike05/hitfeel/timing.json      |  544 ++
+ .../docs/evidence/spike05/hitfeel/timing.log       |   13 +
+ godot-spike/docs/evidence/spike05/los-blocked.png  |  Bin 0 -> 462953 bytes
+ godot-spike/docs/evidence/spike05/lose.png         |  Bin 0 -> 451940 bytes
+ .../docs/evidence/spike05/metrics-summary.json     |  100 +
+ godot-spike/docs/evidence/spike05/movie-index.json |   22 +
+ godot-spike/docs/evidence/spike05/overview.png     |  Bin 0 -> 236834 bytes
+ godot-spike/docs/evidence/spike05/performance.json |  700 ++
+ .../docs/evidence/spike05/ranged-contact.png       |  Bin 0 -> 652818 bytes
+ .../evidence/spike05/ranged-move-confirmed.png     |  Bin 0 -> 479520 bytes
+ .../docs/evidence/spike05/ranged-preview.png       |  Bin 0 -> 651465 bytes
+ .../docs/evidence/spike05/ranged-return.png        |  Bin 0 -> 472103 bytes
+ .../spike05/reinforcement-interception.png         |  Bin 0 -> 636089 bytes
+ .../evidence/spike05/runtime-attack-timings.json   |  282 +
+ .../docs/evidence/spike05/runtime-battle.json      | 5934 +++++++++++++++
+ .../spike05/select-move-ranged-60fps-strip.png     |  Bin 0 -> 608391 bytes
+ .../evidence/spike05/select-move-ranged-60fps.avi  |  Bin 0 -> 11326590 bytes
+ .../docs/evidence/spike05/sequence-frames/0000.png |  Bin 0 -> 615420 bytes
+ .../docs/evidence/spike05/sequence-frames/0021.png |  Bin 0 -> 672910 bytes
+ .../docs/evidence/spike05/sequence-frames/0043.png |  Bin 0 -> 752732 bytes
+ .../docs/evidence/spike05/sequence-frames/0064.png |  Bin 0 -> 763329 bytes
+ .../docs/evidence/spike05/sequence-frames/0086.png |  Bin 0 -> 685187 bytes
+ .../docs/evidence/spike05/sequence-frames/0108.png |  Bin 0 -> 4321 bytes
+ godot-spike/docs/evidence/spike05/sequence.json    |   21 +
+ godot-spike/docs/evidence/spike05/threat-los.png   |  Bin 0 -> 491803 bytes
+ godot-spike/docs/evidence/spike05/w2/flank.json    | 6042 +++++++++++++++
+ godot-spike/docs/evidence/spike05/w2/road.json     | 6406 ++++++++++++++++
+ godot-spike/docs/evidence/spike05/w2/turtle.json   | 6473 ++++++++++++++++
+ godot-spike/docs/evidence/spike05/w5-camera.log    |   34 +
+ godot-spike/docs/evidence/spike05/w5-qa.log        |    4 +
+ godot-spike/docs/evidence/spike05/w5-tests.log     |   35 +
+ godot-spike/docs/evidence/spike05/w5-ui.log        |   35 +
+ .../docs/evidence/spike05/w6-1080-final.log        |    4 +
+ godot-spike/docs/evidence/spike05/w6-1080.log      |    4 +
+ .../docs/evidence/spike05/w6-autoplay-final.log    |    7 +
+ godot-spike/docs/evidence/spike05/w6-autoplay.log  |    7 +
+ .../docs/evidence/spike05/w6-enemy-final.log       |   12 +
+ godot-spike/docs/evidence/spike05/w6-enemy.log     |   12 +
+ .../docs/evidence/spike05/w6-exit-codes.json       |   14 +
+ .../docs/evidence/spike05/w6-intercept-final.log   |    4 +
+ godot-spike/docs/evidence/spike05/w6-intercept.log |    4 +
+ .../docs/evidence/spike05/w6-perf-final.log        |    4 +
+ godot-spike/docs/evidence/spike05/w6-perf.log      |    4 +
+ godot-spike/docs/evidence/spike05/w6-qa-final.log  |    4 +
+ .../docs/evidence/spike05/w6-result-final.log      |    4 +
+ godot-spike/docs/evidence/spike05/w6-result.log    |    4 +
+ .../docs/evidence/spike05/w6-runtime-final.log     |    4 +
+ godot-spike/docs/evidence/spike05/w6-runtime.log   |    4 +
+ .../docs/evidence/spike05/w6-sequence-final.log    |   12 +
+ godot-spike/docs/evidence/spike05/w6-sequence.log  |   12 +
+ .../docs/evidence/spike05/w6-sight-final.log       |    4 +
+ godot-spike/docs/evidence/spike05/w6-sight.log     |    4 +
+ godot-spike/docs/evidence/spike05/warning.png      |  Bin 0 -> 500763 bytes
+ .../docs/evidence/spike05/win-staged-terminal.png  |  Bin 0 -> 418044 bytes
+ godot-spike/scripts/impact/impact_profile.gd       |    1 +
+ godot-spike/scripts/levels/field_battle.gd         |   33 +-
+ godot-spike/scripts/levels/field_camera.gd         |   58 +-
+ godot-spike/scripts/levels/field_ground.gd         |   10 +-
+ godot-spike/scripts/levels/field_hud.gd            |   12 +-
+ godot-spike/scripts/levels/field_indicators.gd     |   15 +-
+ godot-spike/scripts/levels/field_labels.gd         |  111 +
+ godot-spike/scripts/levels/field_minimap.gd        |    8 +-
+ godot-spike/scripts/levels/field_telemetry.gd      |   50 +-
+ godot-spike/scripts/rules/field_rules.gd           |  187 +-
+ godot-spike/scripts/rules/field_sight.gd           |   41 +
+ godot-spike/tests/test_field_ai.gd                 |  105 +
+ godot-spike/tests/test_field_autoplay.gd           |   37 +-
+ godot-spike/tests/test_field_camera.gd             |    3 +-
+ godot-spike/tests/test_field_los.gd                |   79 +
+ godot-spike/tests/test_field_rules.gd              |    3 +-
+ godot-spike/tests/test_field_ui.gd                 |   25 +-
+ godot-spike/tests/test_field_visibility.gd         |   81 +
+ godot-spike/tests/test_spike04_profile.gd          |    3 +-
+ godot-spike/tests/test_spike05_profile.gd          |   17 +
+ godot-spike/tools/autoplay_field.gd                |   11 +-
+ godot-spike/tools/capture_field05.gd               |  270 +
+ godot-spike/tools/capture_hit_field05.gd           |   21 +
+ godot-spike/tools/capture_spike05.gd               |  158 +
+ godot-spike/tools/field_policy.gd                  |   24 +-
+ godot-spike/tools/package_spike05_field.py         |  185 +
+ godot-spike/tools/package_spike05_hitfeel.py       |   40 +
+ 352 files changed, 95934 insertions(+), 87 deletions(-)

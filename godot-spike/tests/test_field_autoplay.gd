@@ -71,3 +71,27 @@ func test_pressure_ai_road_policy_reaches_terminal_and_all_classes_engage() -> v
 	assert_between(report.turns_to_result,2,15)
 	assert_between(report.first_contact_turn,2,3)
 	for kind in ["melee","ranged","mobile"]: assert_gt(report.archetypes[kind].attacks,0)
+
+func test_terminal_before_later_enemy_does_not_inflate_true_idle() -> void:
+	var s := Rules.initial()
+	s.units=[Rules.make_unit("thoma","ally","melee",Vector2i(3,9),"party",s.level),Rules.make_unit("knight","enemy","knight",Vector2i(4,9),"front",s.level),Rules.make_unit("leader","enemy","leader",Vector2i(20,9),"leader",s.level)]
+	s.units[0].hp=2
+	var metrics := Telemetry.new()
+	metrics.register(s,"ally")
+	var resolved := Rules.enemy_phase(s)
+	metrics.record(s,resolved.events,resolved.state)
+	var report := metrics.summary()
+	assert_eq(report.status,"lose")
+	assert_eq(report.enemy_idle_by_group.leader,0)
+	assert_eq(report.ally_deaths,[{"id":"thoma","kind":"melee","turn":1}])
+	var leader_rows: Array = report.unit_turns.filter(func(row):return row.id=="leader")
+	assert_false(leader_rows[0].observed)
+
+func test_after_traces_have_no_silent_active_idle_and_wave_bypass_is_contested() -> void:
+	for name in ["road","flank","turtle","bypass","scout-retreat"]:
+		var report: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://docs/evidence/spike05/autoplay/"+name+".json"))
+		for row in report.unit_turns:
+			if row.side!="enemy" or not row.eligible or not row.observed or row.move_steps>0 or row.attacks>0 or row.role_reason!="": continue
+			var intents: Array = report.trace.filter(func(r):return r.turn==row.turn and r.event.type=="intent" and r.event.unit==row.id)
+			assert_true(intents.all(func(r):return r.event.state=="guard"),"only inactive guards may silently wait")
+		if name=="bypass": assert_between(int(report.reinforcement_first_engage_turn),6,8)

@@ -1448,3 +1448,83 @@ No governance code changed. Normal commits report only the existing nonblocking
 automatic-adoption claim, session closeout, other-worktree identity claim,
 push,PR,merge,32×24,S4 or formal story/rules approval is made. W8 refreshes only
 evidence hashes/scope after the handoff addition, commits and stops.
+
+## spike-05
+
+Owner2026-10-26 10:19授權；worktree `scratch/godot-spike`，branch
+`codex/godot-spike`，baseline905c0ce，brief commit db47f3a。只改godot-spike/，
+保留24×18與spike04未答預設。W1–W8逐步本地commit，不push。
+
+### 實際命令與結果
+
+以下PowerShell變數只為呈現實際使用的完整路徑，沒有PATH fallback。
+Godot sandbox初次解析失敗後，以同一路徑escalation執行；Git metadata在本worktree
+外的共用.git，fetch與commit也需escalation。沒有改全域信任、登入或hook。
+
+```powershell
+$godot='C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe'
+$python='C:\Users\daish\AppData\Local\Programs\Python\Python312\python.exe'
+& $godot --headless --path godot-spike --import
+& $godot --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gdir=res://tests -gexit
+& $python godot-spike/tools/package_spike05_hitfeel.py
+& $python godot-spike/tools/package_spike05_field.py
+& $python godot-spike/tools/audit_spike05.py
+git diff --check
+git diff --stat 905c0ce..HEAD
+git diff --exit-code 905c0ce -- shared-anim ui-prototype docs/art-briefs docs/proposals godot-spike/art godot-spike/scripts/rules/grid_rules.gd godot-spike/scripts/skirmish.gd godot-spike/scenes/Skirmish.tscn godot-spike/config/impact_profile_a9_baseline.tres godot-spike/config/impact_profile_spike03.tres
+```
+
+| Check | Actual result / evidence |
+| --- | --- |
+| W7 import | exit0, evidence/spike05/w7-import.log |
+| W7 full GUT | exit0; **25 scripts /147 tests /147 passing /11,492 assertions /99.538s**; test-run.log, w7-exit-codes.json |
+| W4/W6 offline packaging | exit0; native PNG/AVI, timing and reports; w4/w6 logs |
+| W6 capture modes | qa/sight/sequence/enemy/intercept-final/result/1080/runtime/perf/autoplay exit0; w6-exit-codes.json |
+| Preserved failed capture | first full-probe intercept exit1 (ally attacked first); attempts/ keeps failed JSON/log; later isolated pursuit capture exit0 |
+| W7 offline audit | initial exit1: audit expected nonexistent shot.file, corrected to real shot.name+'.png'; failed log retained attempts/w7-audit-schema-failed.log. Final exit0 in w7-audit-run.log; audit.json |
+| Git protected scope / whitespace | exit0 / exit0; git-scope.json + changed-paths.txt/untracked-paths.txt/diff-stat.txt |
+| Historical profile | spike04 copy Git blob exactly equals905c0ce default `07e34c5ccb0c9ca08fd0d32b63d543e35796d363` |
+
+Audit verifies actual capture dimensions/checks/zero label overlaps, W6 source freeze,
+AVI hashes60FPS720p, three baseline results, five after results, nine Skirmish timing
+cases,40 field attack samples and protected A9 bytes. `source-hashes.json` includes
+working SHA256 and normalized-LF SHA256; excludes self-hash/audit stdout. Scope snapshot
+HEAD is the preceding commit; changed-paths also includes the current uncommitted diff.
+W8 refreshes metadata after handoff without changing runtime code/evidence conditions.
+
+### Regression and behavioral pin changes
+
+All previous123 tests retained, plus24. Recorded migrations: historical default values
+now assert preservedspike04 profile; old roadwin assertions still run on reproducedW1
+JSON, while a new live test checks pressure/contact/terminal; live damage sums actual
+events because cover/overkill can yield1 instead of2; old fixed leaderdamage10 remains
+on baseline. Generic leader alert asserts explicit counter/step-back/hold states;
+camera exact-center expectations now use HUD-aware safe_position, with clamps and
+return checks retained. JSON numeric casts remove type warnings without changing bounds.
+See WORK.md and test diff. No test deleted to obtain the new count.
+
+New tests cover each activation, latching, focus, regroup/cohesion, bodyguard, leader,
+wave rest/pursuit, determinism/immutability; LOS forest/cliff/deepbank/unit/corner/range;
+profile selection/preserved layers; every edge/zoom and preview-before-confirmation,
+overview/marker/label avoidance; terminal-tail idle accounting and five final traces.
+
+Skirmish three setups: HP4, cells(1,6)/(1,5)/(3,4); fixed60Hz input-ready normal.950s,
+crit1.016667s,Reduced.716667s; all wall times≤1.7s, Reduced≤normal. Field40 actual
+attacks maxwall.902s. All target≤1.2s. Frame durations180/70/40/80/100/150,contact3,
+anchor(455,196), grid_rules, all authoredfield terrain/deployment/stats unchanged.
+Historical a9/spike03 untouched, spike04 loadable, crit effective mix≤.72.
+
+### Limits
+
+All three initial policies now lose8/7/6. No complete initial-deployment winning policy
+was established; staged terminalwin proves result handling only. Road idle66/97→20/77,
+but stronger pressure plusLOS confounds policy quality and difficulty. Wave engagement7
+in scripted bypass and isolated enemy pursuit do not prove unavoidable engagement.
+15–25min target unverified; road estimate10.0–16.3min. No terrain/stat/objective changes
+to manufacture wins. Performance mean regresses+1.037/.733/.603ms for scroll/normal/2×;
+short scheduling-inclusive samples do not isolate AI cost or establish60FPS.
+
+All screenshots/AVIs are runtime, automated operator only. HUMAN_PENDING: full battles,
+readability/camera comfort/feel, art and sound. No governance code, canonical memory,
+SessionEnd receipt, external reviewer, other-worktree write,32×24,formal story/S4,
+push/merge/PR/Actions/stash is claimed. Resource self-check and open questions in HANDOFF.

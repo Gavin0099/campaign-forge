@@ -1,0 +1,3537 @@
+[
+  {
+    "path": "docs/tasks/godot-spike-05-ai-los-polish.md",
+    "sha256_working_tree": "d28f9327431d456d2e29c0bde534bb092b6e714e53cc14753861dccccba57975",
+    "sha256_git_lf": "d28f9327431d456d2e29c0bde534bb092b6e714e53cc14753861dccccba57975"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/a2-generation-prompts.json",
+    "sha256_working_tree": "a5c0ed40286be5b5bcc74f373087d793c66baa8aba0d1e44733277bd7dfc0010",
+    "sha256_git_lf": "1de791f7786cfbfdb780e72427e812a8a8864ebeca698a0cca86766871bc7d54"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/a2-retry-prompt.json",
+    "sha256_working_tree": "eee84851094b23132ed5a0bfb530bbe149bf8432a901ccb585728d982d9357c4",
+    "sha256_git_lf": "68dc168b60ebcf62a9a489ca226d8990e49deb7a715eb0e3df88086ba3672b0c"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/a2-swing-prompts.json",
+    "sha256_working_tree": "d12577e1871a711266bd3bab21b1976b32f86168afc0d112d3f8f270181abc7f",
+    "sha256_git_lf": "49d55d34800ad636622953da5fb66ba16a2ba8feef3df75e2955426cb6878e3b"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/a3-swing-prompts.json",
+    "sha256_working_tree": "43c9643628994824299714c49abe658ce46c49afd243f195664540bbc9e2830a",
+    "sha256_git_lf": "43c9643628994824299714c49abe658ce46c49afd243f195664540bbc9e2830a"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/a4-swing-prompts.json",
+    "sha256_working_tree": "5ca3fea3b413d37628a961d1ced4931c208126612b5769b99c83f77e068310eb",
+    "sha256_git_lf": "5ca3fea3b413d37628a961d1ced4931c208126612b5769b99c83f77e068310eb"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/a5-swing-prompts.json",
+    "sha256_working_tree": "e8c21b294c034e5c249ee19803198ffc733258ae32501d31bdb20131b6f8da43",
+    "sha256_git_lf": "e8c21b294c034e5c249ee19803198ffc733258ae32501d31bdb20131b6f8da43"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/a6-swing-prompts.json",
+    "sha256_working_tree": "ca2e2e4c83046910b028f28a684fb7663cef3561164408174cffaec84820a84f",
+    "sha256_git_lf": "ca2e2e4c83046910b028f28a684fb7663cef3561164408174cffaec84820a84f"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/a7-swing-prompts.json",
+    "sha256_working_tree": "d35facf74f01ce05fec5b23fac733b54e57a0ff569227a92b55921413d8c6f5a",
+    "sha256_git_lf": "d35facf74f01ce05fec5b23fac733b54e57a0ff569227a92b55921413d8c6f5a"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/a8-swing-prompts.json",
+    "sha256_working_tree": "7926c473e30c8d1448f1d0c28181b06ece7b0c6d0d6bb1192a6c7b2af1e83723",
+    "sha256_git_lf": "703847ff50a9edf84f284ea309292830c83f8127e7cf05c8455826aa67249ef5"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/contact-sheet.png",
+    "sha256_working_tree": "992a6554ae0871cae73feceaa3b73ab29d5c4196ca9adc1ab2325b3fbaca303e",
+    "sha256_git_lf": "992a6554ae0871cae73feceaa3b73ab29d5c4196ca9adc1ab2325b3fbaca303e"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/frame-audit.json",
+    "sha256_working_tree": "479e128c372db3578a3dc490ed26be4156d3bcd85812f8ee362eb25072bed8c5",
+    "sha256_git_lf": "f55811691131c0bd207a7bc8acf7679ee5bd9aab6a88ba513d2b32cc3a5e7453"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/generation-prompts.json",
+    "sha256_working_tree": "20bf9c7cd31cb363d2b244e84c343375605a8157cd191a1b42422cbf45a7ebcb",
+    "sha256_git_lf": "03e9f0c3aa8a72413b8a814ee86995691b4a32e094d2cd2e7d6fb3d6c5274574"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/knight-a/hit/00.png",
+    "sha256_working_tree": "6ebef74b6cf9520b5f5a243fb4d9bf669bf78bc6c52f9d6b99ce8202619d2b41",
+    "sha256_git_lf": "6ebef74b6cf9520b5f5a243fb4d9bf669bf78bc6c52f9d6b99ce8202619d2b41"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/knight-a/hit/01.png",
+    "sha256_working_tree": "9fbf4a41ffcc16d7c0e75a1f74a182ef33eed4c869f934341cf81e2692b85179",
+    "sha256_git_lf": "9fbf4a41ffcc16d7c0e75a1f74a182ef33eed4c869f934341cf81e2692b85179"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/knight-a/hit/02.png",
+    "sha256_working_tree": "0465fee5877109acb6723c56ebe71134f0d3fcc9ab6e6b9505d7be534f4523bb",
+    "sha256_git_lf": "0465fee5877109acb6723c56ebe71134f0d3fcc9ab6e6b9505d7be534f4523bb"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/knight-a/idle/00.png",
+    "sha256_working_tree": "0ca4807cc16f63dba0b3a15bfaaa1d1a534892151db7dfb339e6c5c2b6edf791",
+    "sha256_git_lf": "0ca4807cc16f63dba0b3a15bfaaa1d1a534892151db7dfb339e6c5c2b6edf791"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/knight-a/stagger/00.png",
+    "sha256_working_tree": "2cfe6ceb5de5380888937e1ec790102372b4efe5a2f7126a711780915f2948b6",
+    "sha256_git_lf": "2cfe6ceb5de5380888937e1ec790102372b4efe5a2f7126a711780915f2948b6"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/knight-a/stagger/01.png",
+    "sha256_working_tree": "b4ec94ff31941285ebd450a706d0565c23745ad2757bcd9229c55797a4b1773b",
+    "sha256_git_lf": "b4ec94ff31941285ebd450a706d0565c23745ad2757bcd9229c55797a4b1773b"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/knight-a/stagger/02.png",
+    "sha256_working_tree": "62594f3aaef1f3a70fdae0a1965c7649f8badf0a112afced863cf85b44e24dd6",
+    "sha256_git_lf": "62594f3aaef1f3a70fdae0a1965c7649f8badf0a112afced863cf85b44e24dd6"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/knight-a2-edits.json",
+    "sha256_working_tree": "b16f995f3ad25686e05ce32d0e5b650d502818e52a6cc7bbbdb1bda633adc673",
+    "sha256_git_lf": "790ce38eb7f7b76dfe04f27c0714563d143d774593888225925511eb6b02043a"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/knight-b/hit/00.png",
+    "sha256_working_tree": "cc853f78528c4c8391d70606eb4e4da39565ea5d73e568664620ba06c39ab5bd",
+    "sha256_git_lf": "cc853f78528c4c8391d70606eb4e4da39565ea5d73e568664620ba06c39ab5bd"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/knight-b/hit/01.png",
+    "sha256_working_tree": "2b54bc88debb009b1a15164a6c40e07f1438eb5be33cb7bb0b0c632e85a7ae9e",
+    "sha256_git_lf": "2b54bc88debb009b1a15164a6c40e07f1438eb5be33cb7bb0b0c632e85a7ae9e"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/knight-b/hit/02.png",
+    "sha256_working_tree": "e14b7ba82c075fef7a4f94d14c0309fec15316c73eddd0c3437e0d39b8e4a7cd",
+    "sha256_git_lf": "e14b7ba82c075fef7a4f94d14c0309fec15316c73eddd0c3437e0d39b8e4a7cd"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/knight-b/idle/00.png",
+    "sha256_working_tree": "e71644dfef36fcb0cc1babd3db63ab9791ade1d1fbd7445601b77f51612e97b5",
+    "sha256_git_lf": "e71644dfef36fcb0cc1babd3db63ab9791ade1d1fbd7445601b77f51612e97b5"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/knight-b/stagger/00.png",
+    "sha256_working_tree": "e5164c1a931d13ffdfcabffb345a2c2ff57f6f6f87e115aae3bc19c1fc7538e6",
+    "sha256_git_lf": "e5164c1a931d13ffdfcabffb345a2c2ff57f6f6f87e115aae3bc19c1fc7538e6"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/knight-b/stagger/01.png",
+    "sha256_working_tree": "aaea5183f82ec03d531770331835530bfb841d3909bcf88875d2f2301d8a49cf",
+    "sha256_git_lf": "aaea5183f82ec03d531770331835530bfb841d3909bcf88875d2f2301d8a49cf"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/knight-b/stagger/02.png",
+    "sha256_working_tree": "4c2dc1cad19b6a6f11a6727d689e53ea124d0644e698925311db4fdb6290e138",
+    "sha256_git_lf": "4c2dc1cad19b6a6f11a6727d689e53ea124d0644e698925311db4fdb6290e138"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/knight-generation-prompts.json",
+    "sha256_working_tree": "6db965813b6179252519093d39a379a7736f23d60184ef0c422147de1de30e30",
+    "sha256_git_lf": "6db965813b6179252519093d39a379a7736f23d60184ef0c422147de1de30e30"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/manifest.json",
+    "sha256_working_tree": "ac9f0a10b3ca7556ee04336cbb81d6c660bfa2406e1b5282b7802d8fc68a3eea",
+    "sha256_git_lf": "f754e21d12fb771e34faf882953a4910556da7bbc9868b9e364572d05b9b150b"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/manifest.schema.json",
+    "sha256_working_tree": "fe64327043a5a4cf24b4501af2107abcdacc359b7da66f644c638cabe603690c",
+    "sha256_git_lf": "fb408d7e549ba7a68f131334bae1536bc13ea95b2145891142e221fcc35ce377"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/knight-a-hit-00.png",
+    "sha256_working_tree": "10260a5c1dd3cfdc7ed5eb70da250e74c7f7d1b36543bfee56d078eaff900a79",
+    "sha256_git_lf": "10260a5c1dd3cfdc7ed5eb70da250e74c7f7d1b36543bfee56d078eaff900a79"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/knight-a-hit-01.png",
+    "sha256_working_tree": "f528b4c5b14bd1dbc5eeba2e6a3e0c8e889c4bce684b0cab16ec3a506cfb592b",
+    "sha256_git_lf": "f528b4c5b14bd1dbc5eeba2e6a3e0c8e889c4bce684b0cab16ec3a506cfb592b"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/knight-a-hit-02.png",
+    "sha256_working_tree": "1596e1e438609947b652f20302c8735233247bd400c495125b18eb7743cce376",
+    "sha256_git_lf": "1596e1e438609947b652f20302c8735233247bd400c495125b18eb7743cce376"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/knight-a-stagger-00.png",
+    "sha256_working_tree": "2f32cc1dc5d47df2f0e40df3bc7790e38c26a2f5dd86ec778f52ee5559a9d299",
+    "sha256_git_lf": "2f32cc1dc5d47df2f0e40df3bc7790e38c26a2f5dd86ec778f52ee5559a9d299"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/knight-a-stagger-01.png",
+    "sha256_working_tree": "b7bc8fd69682eda80f00c74a26d7993726add31bf1b678323bc968b55399bbc2",
+    "sha256_git_lf": "b7bc8fd69682eda80f00c74a26d7993726add31bf1b678323bc968b55399bbc2"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/knight-a-stagger-02.png",
+    "sha256_working_tree": "7fa1a592fce21df8a5b08076f666b5e77db0cc29fc02b1521ffc931729cfc2cf",
+    "sha256_git_lf": "7fa1a592fce21df8a5b08076f666b5e77db0cc29fc02b1521ffc931729cfc2cf"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-a3-swing-00-attempt1.png",
+    "sha256_working_tree": "e0f0159ed683807366afe3350b3944a147e6565e5b576b39a8dd9f0e6efd00e0",
+    "sha256_git_lf": "e0f0159ed683807366afe3350b3944a147e6565e5b576b39a8dd9f0e6efd00e0"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-a3-swing-01-attempt1.png",
+    "sha256_working_tree": "804668a246aeb3330726d7dca2f9f270d393cd70a30496efb49dc12a48ce51ca",
+    "sha256_git_lf": "804668a246aeb3330726d7dca2f9f270d393cd70a30496efb49dc12a48ce51ca"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-a3-swing-02-attempt1.png",
+    "sha256_working_tree": "ba4fa98a9585520c21c9ab64dedd592578b7cd6bab75d2a700f5d64a52628525",
+    "sha256_git_lf": "ba4fa98a9585520c21c9ab64dedd592578b7cd6bab75d2a700f5d64a52628525"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-a3-swing-03-attempt1.png",
+    "sha256_working_tree": "beb43bf73db79d2c91103c0550dc9ca92421f8bc0fa7fc255b8d31209aa883b6",
+    "sha256_git_lf": "beb43bf73db79d2c91103c0550dc9ca92421f8bc0fa7fc255b8d31209aa883b6"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-a3-swing-04-attempt1.png",
+    "sha256_working_tree": "5ebcce2dd61852d41056f79f86a625add621994cd5fff3a56a4526b1b6115738",
+    "sha256_git_lf": "5ebcce2dd61852d41056f79f86a625add621994cd5fff3a56a4526b1b6115738"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-mace-idle-01.png",
+    "sha256_working_tree": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5",
+    "sha256_git_lf": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-mace-swing-00.png",
+    "sha256_working_tree": "3bc1b5ef510e6b24ebd9625becd39c8370293fa23747c082a29e380e3997ff20",
+    "sha256_git_lf": "3bc1b5ef510e6b24ebd9625becd39c8370293fa23747c082a29e380e3997ff20"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-mace-swing-01.png",
+    "sha256_working_tree": "0e138449eaa3634f1af7ee8944b6b2273921d12b58452b7cf7f112d93e8fd8ba",
+    "sha256_git_lf": "0e138449eaa3634f1af7ee8944b6b2273921d12b58452b7cf7f112d93e8fd8ba"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-mace-swing-02-attempt2.png",
+    "sha256_working_tree": "274edae4742a67aedd787cb20e6e8b6ff12dce900a2797ac11d22300608b0551",
+    "sha256_git_lf": "274edae4742a67aedd787cb20e6e8b6ff12dce900a2797ac11d22300608b0551"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-mace-swing-03.png",
+    "sha256_working_tree": "aca010f6472a7aff8b164ee9ea0ae92e12f2f62b44eb19d286b1ba5ca5380ea8",
+    "sha256_git_lf": "aca010f6472a7aff8b164ee9ea0ae92e12f2f62b44eb19d286b1ba5ca5380ea8"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-mace-swing-04.png",
+    "sha256_working_tree": "eacc1d40c1b6e70d14d265ec57b81a9bcfcc44406f19afa1e84e44029a89a7bf",
+    "sha256_git_lf": "eacc1d40c1b6e70d14d265ec57b81a9bcfcc44406f19afa1e84e44029a89a7bf"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-mace-swing-05.png",
+    "sha256_working_tree": "e89296c8cd0a799e8d5302caf1f611aaa241e84f2a2c4ff56f8b77f4153f31dd",
+    "sha256_git_lf": "e89296c8cd0a799e8d5302caf1f611aaa241e84f2a2c4ff56f8b77f4153f31dd"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-swing-00.png",
+    "sha256_working_tree": "9b9abc677d83bdb671515bf64953acb3d85eddac73b7d96118aba20862a7ca97",
+    "sha256_git_lf": "9b9abc677d83bdb671515bf64953acb3d85eddac73b7d96118aba20862a7ca97"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-swing-01.png",
+    "sha256_working_tree": "fb72c1459e526cfbdfe93555edbcf1e626fd00d28cc7c7a1702d01ba753ae788",
+    "sha256_git_lf": "fb72c1459e526cfbdfe93555edbcf1e626fd00d28cc7c7a1702d01ba753ae788"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-swing-02.png",
+    "sha256_working_tree": "8a94a4e381d89005669c9200f925054a8e1aa53d7bbca76d4f0aadb22aff50ae",
+    "sha256_git_lf": "8a94a4e381d89005669c9200f925054a8e1aa53d7bbca76d4f0aadb22aff50ae"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-swing-03.png",
+    "sha256_working_tree": "e1007e646772e9b5b3d7f56aa8cb4e770249724b0e4699ff864e1d2f46747c06",
+    "sha256_git_lf": "e1007e646772e9b5b3d7f56aa8cb4e770249724b0e4699ff864e1d2f46747c06"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-swing-04.png",
+    "sha256_working_tree": "c4bf92b69f8bee4bc8dd4dccdc9bed90fcf00ac17806b76d0155d8f1a28b827c",
+    "sha256_git_lf": "c4bf92b69f8bee4bc8dd4dccdc9bed90fcf00ac17806b76d0155d8f1a28b827c"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/raw/thoma-swing-05.png",
+    "sha256_working_tree": "9a8e01df6a7e3273664fc9536f5a0dd74ef43180bba69c684ba3061eac998851",
+    "sha256_git_lf": "9a8e01df6a7e3273664fc9536f5a0dd74ef43180bba69c684ba3061eac998851"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/README.md",
+    "sha256_working_tree": "3d4f31a814e770c02e8ec88d325eff6c7a50d6c92b5b3c93e2c014749d5e895f",
+    "sha256_git_lf": "d41ba9b09b4fcd431ad7e439e7ae4643189092ee7b3b4d2308d4a2229f9cde9a"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/references/knight-a.png",
+    "sha256_working_tree": "d8243331a939ea2359ec5dd6549e99a152d8eebb53481221ecbabc4cc77f4576",
+    "sha256_git_lf": "d8243331a939ea2359ec5dd6549e99a152d8eebb53481221ecbabc4cc77f4576"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/references/sword-reference.png",
+    "sha256_working_tree": "e25f94a801ed7573cacaa3c128cf98716e59bcd647c50c314bfcc5904ff91f23",
+    "sha256_git_lf": "e25f94a801ed7573cacaa3c128cf98716e59bcd647c50c314bfcc5904ff91f23"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/references/thoma.png",
+    "sha256_working_tree": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90",
+    "sha256_git_lf": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/SOURCES.md",
+    "sha256_working_tree": "c9acdd09a8860a305314c5d2ad256d4891b4a026da1c0c90738c18bfcd56ce4c",
+    "sha256_git_lf": "fbfcca5e8f08231f8afcc28267439775e90381aa0a5b25ad9d3cc92bf74c64ac"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/thoma/idle/00.png",
+    "sha256_working_tree": "4214584c64eb57e3d63bdbb9975a2a0d41ee76cd4c6087b61485e795abe23400",
+    "sha256_git_lf": "4214584c64eb57e3d63bdbb9975a2a0d41ee76cd4c6087b61485e795abe23400"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/thoma/idle/01.png",
+    "sha256_working_tree": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "sha256_git_lf": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/thoma/swing/00.png",
+    "sha256_working_tree": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+    "sha256_git_lf": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/thoma/swing/01.png",
+    "sha256_working_tree": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
+    "sha256_git_lf": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/thoma/swing/02.png",
+    "sha256_working_tree": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+    "sha256_git_lf": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/thoma/swing/03.png",
+    "sha256_working_tree": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+    "sha256_git_lf": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/thoma/swing/04.png",
+    "sha256_working_tree": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
+    "sha256_git_lf": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/thoma/swing/05.png",
+    "sha256_working_tree": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "sha256_git_lf": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/thoma-appearance-spec.json",
+    "sha256_working_tree": "bb0c9ff5949c659f35a892ad4e2b38aa28bb645fd8b4a81fbdf6f76c01ddb163",
+    "sha256_git_lf": "bb0c9ff5949c659f35a892ad4e2b38aa28bb645fd8b4a81fbdf6f76c01ddb163"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/thoma-appearance-spec.md",
+    "sha256_working_tree": "338cc220b2abbb6aba79e258eacc77ba5f48016de77a7408b6d65360cb79a804",
+    "sha256_git_lf": "338cc220b2abbb6aba79e258eacc77ba5f48016de77a7408b6d65360cb79a804"
+  },
+  {
+    "path": "godot-spike/art/anim-shared/thoma-weapon-style-check.png",
+    "sha256_working_tree": "f1a2e301db3848aed463f0fbb0c3e53c617c1d6c674e804df1d42ba059882afc",
+    "sha256_git_lf": "f1a2e301db3848aed463f0fbb0c3e53c617c1d6c674e804df1d42ba059882afc"
+  },
+  {
+    "path": "godot-spike/art/bigmap/bank.png",
+    "sha256_working_tree": "ee44e410a76c7d464293d515f7b471b3874e19863b61a73aab533da42577e06e",
+    "sha256_git_lf": "ee44e410a76c7d464293d515f7b471b3874e19863b61a73aab533da42577e06e"
+  },
+  {
+    "path": "godot-spike/art/bigmap/banner.png",
+    "sha256_working_tree": "c884b0c53a54384d3b974d66e35bc5b34dd9dc87992fe2ddaebfe03cbb24bb56",
+    "sha256_git_lf": "c884b0c53a54384d3b974d66e35bc5b34dd9dc87992fe2ddaebfe03cbb24bb56"
+  },
+  {
+    "path": "godot-spike/art/bigmap/cliff.png",
+    "sha256_working_tree": "3de66584cc3b54e33370953cf7b6806771c455169592d9a819584def3f7bee0a",
+    "sha256_git_lf": "3de66584cc3b54e33370953cf7b6806771c455169592d9a819584def3f7bee0a"
+  },
+  {
+    "path": "godot-spike/art/bigmap/crossing.png",
+    "sha256_working_tree": "ef9e97ffe7da9de7088599e286da9d70a0f5b0a29de6ede409f2acdbb1206a91",
+    "sha256_git_lf": "ef9e97ffe7da9de7088599e286da9d70a0f5b0a29de6ede409f2acdbb1206a91"
+  },
+  {
+    "path": "godot-spike/art/bigmap/defense.png",
+    "sha256_working_tree": "42b49673af3d95c7cb0cbf74399f5d73f2e5f7ea4a7ce4cfc24279cc81fd2d49",
+    "sha256_git_lf": "42b49673af3d95c7cb0cbf74399f5d73f2e5f7ea4a7ce4cfc24279cc81fd2d49"
+  },
+  {
+    "path": "godot-spike/art/bigmap/ford.png",
+    "sha256_working_tree": "31afadf22c791776bfe09398790ae548b707add6525622d66ec79a98cc3f0953",
+    "sha256_git_lf": "31afadf22c791776bfe09398790ae548b707add6525622d66ec79a98cc3f0953"
+  },
+  {
+    "path": "godot-spike/art/bigmap/forest.png",
+    "sha256_working_tree": "f709375744204139efa71a13aada3cc63f3bc3bce90a8c7a3986b77d87887b75",
+    "sha256_git_lf": "f709375744204139efa71a13aada3cc63f3bc3bce90a8c7a3986b77d87887b75"
+  },
+  {
+    "path": "godot-spike/art/bigmap/plain.png",
+    "sha256_working_tree": "6550a636a74d7d2f674b16633d95839f3c75a6b35ff08e38cee783811b53dbbe",
+    "sha256_git_lf": "6550a636a74d7d2f674b16633d95839f3c75a6b35ff08e38cee783811b53dbbe"
+  },
+  {
+    "path": "godot-spike/art/bigmap/road.png",
+    "sha256_working_tree": "fea53873054e9577e0d856c0e2382a0ce078fb100b05576a10a9e21d3aa8debb",
+    "sha256_git_lf": "fea53873054e9577e0d856c0e2382a0ce078fb100b05576a10a9e21d3aa8debb"
+  },
+  {
+    "path": "godot-spike/art/bigmap/rock.png",
+    "sha256_working_tree": "e7e46794d9c6ce3ff1ed4297df9710e8b6fae47837689edec8ab771f2e310489",
+    "sha256_git_lf": "e7e46794d9c6ce3ff1ed4297df9710e8b6fae47837689edec8ab771f2e310489"
+  },
+  {
+    "path": "godot-spike/art/bigmap/SOURCES.md",
+    "sha256_working_tree": "3f928510e9f997aa051b3d7cb1242c35ada0d436bc20ae59cf424462418a4869",
+    "sha256_git_lf": "3f928510e9f997aa051b3d7cb1242c35ada0d436bc20ae59cf424462418a4869"
+  },
+  {
+    "path": "godot-spike/art/bigmap/tree.png",
+    "sha256_working_tree": "0cbf03459d2caae9ef543b2e6458ed4e2a9ccb95a263d8a03f357894acc2a925",
+    "sha256_git_lf": "0cbf03459d2caae9ef543b2e6458ed4e2a9ccb95a263d8a03f357894acc2a925"
+  },
+  {
+    "path": "godot-spike/art/bigmap/water.png",
+    "sha256_working_tree": "b454002a9220af905758c640a0c765fc34927653c3330a1086ca228f0203172d",
+    "sha256_git_lf": "b454002a9220af905758c640a0c765fc34927653c3330a1086ca228f0203172d"
+  },
+  {
+    "path": "godot-spike/config/impact_profile.tres",
+    "sha256_working_tree": "011c73d879442bd899ded25cc9ae40aefa05e8839c4f897fede73254d5467c5f",
+    "sha256_git_lf": "011c73d879442bd899ded25cc9ae40aefa05e8839c4f897fede73254d5467c5f"
+  },
+  {
+    "path": "godot-spike/config/impact_profile_a9_baseline.tres",
+    "sha256_working_tree": "a080f88ba5953395cbc26c8e6d7e8067376b215560460ea301c5022b50dd053a",
+    "sha256_git_lf": "a080f88ba5953395cbc26c8e6d7e8067376b215560460ea301c5022b50dd053a"
+  },
+  {
+    "path": "godot-spike/config/impact_profile_spike03.tres",
+    "sha256_working_tree": "110040412bff567b8cc978fe898dabfd891e358bf2a4221d0fad2362a6b55bf5",
+    "sha256_git_lf": "110040412bff567b8cc978fe898dabfd891e358bf2a4221d0fad2362a6b55bf5"
+  },
+  {
+    "path": "godot-spike/config/impact_profile_spike04.tres",
+    "sha256_working_tree": "f54958b8783c32cb89b35ae20b4e7f93d9ca9fed7ccf1dd1a01a22dd3e0959a6",
+    "sha256_git_lf": "f54958b8783c32cb89b35ae20b4e7f93d9ca9fed7ccf1dd1a01a22dd3e0959a6"
+  },
+  {
+    "path": "godot-spike/data/levels/field_24x18.gd",
+    "sha256_working_tree": "bf4865a49c7bb3cfa18d30f4f20b7935660327256b09eae4668b6a7158e2edbd",
+    "sha256_git_lf": "bf4865a49c7bb3cfa18d30f4f20b7935660327256b09eae4668b6a7158e2edbd"
+  },
+  {
+    "path": "godot-spike/data/levels/field_24x18.gd.uid",
+    "sha256_working_tree": "c2ff70d23dfbb96705ac8a15e7ccdd2d51c9a49720989cb1abb660e7bd468c64",
+    "sha256_git_lf": "c2ff70d23dfbb96705ac8a15e7ccdd2d51c9a49720989cb1abb660e7bd468c64"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/arrival.png",
+    "sha256_working_tree": "3d1ccfd6066d11502875717456d63d8e91207d19bcb51ecd05a10c4879ab53c5",
+    "sha256_git_lf": "3d1ccfd6066d11502875717456d63d8e91207d19bcb51ecd05a10c4879ab53c5"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/attempts/capture-intercept-full-probe-failed.json",
+    "sha256_working_tree": "0a217b5f48a6e88bcab73265d39829c6a7d787ce9d616fa3a91383c9a6815a56",
+    "sha256_git_lf": "0a217b5f48a6e88bcab73265d39829c6a7d787ce9d616fa3a91383c9a6815a56"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/attempts/intercept-full-probe-failed.log",
+    "sha256_working_tree": "c319a90892acbd2e6115946febf71899fb6fc77c66c6a96dbd3b2e6158199918",
+    "sha256_git_lf": "c319a90892acbd2e6115946febf71899fb6fc77c66c6a96dbd3b2e6158199918"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/attempts/w7-audit-schema-failed.log",
+    "sha256_working_tree": "fdf1f73b3f2040e4cb435e0f639be1441c802ce265b261690d57bf13bc42a481",
+    "sha256_git_lf": "fdf1f73b3f2040e4cb435e0f639be1441c802ce265b261690d57bf13bc42a481"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/audit.json",
+    "sha256_working_tree": "4bc034cf183d92460b9c0f4faf3a4d6b74b882c2791c51449b19b3e112b39542",
+    "sha256_git_lf": "4bc034cf183d92460b9c0f4faf3a4d6b74b882c2791c51449b19b3e112b39542"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/autoplay/bypass.json",
+    "sha256_working_tree": "2e82b5bcbef30d04d01100188b476e5573ef402e2b056745538e12987575d031",
+    "sha256_git_lf": "2e82b5bcbef30d04d01100188b476e5573ef402e2b056745538e12987575d031"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/autoplay/flank.json",
+    "sha256_working_tree": "b177552ff1627d9674cde4975e0990e4adf25e49bfd7bcbe4a5eb71ed1cd4100",
+    "sha256_git_lf": "b177552ff1627d9674cde4975e0990e4adf25e49bfd7bcbe4a5eb71ed1cd4100"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/autoplay/road.json",
+    "sha256_working_tree": "1e07dc32669ab731f654bf1d7e5f4226af97ff213bc3ace30a2438c9818d3549",
+    "sha256_git_lf": "1e07dc32669ab731f654bf1d7e5f4226af97ff213bc3ace30a2438c9818d3549"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/autoplay/scout-retreat.json",
+    "sha256_working_tree": "d61ade2ac985f4720a2d966d4900c1651757ec3994e0215783b4921e05c32c56",
+    "sha256_git_lf": "d61ade2ac985f4720a2d966d4900c1651757ec3994e0215783b4921e05c32c56"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/autoplay/turtle.json",
+    "sha256_working_tree": "e153b1821df98732224328fe77ab5cfd2a8c5d2838dc7ef35656d35028d309e3",
+    "sha256_git_lf": "e153b1821df98732224328fe77ab5cfd2a8c5d2838dc7ef35656d35028d309e3"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/baseline/BASELINE.md",
+    "sha256_working_tree": "b32b6a7740123f3b59aafbeaea7670a0770966c560336430840929763b906fed",
+    "sha256_git_lf": "17232068ce0684e550dea9bc1698d0098bc40049a5179e5ce06258f08e24a804"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/baseline/flank.json",
+    "sha256_working_tree": "74299917a6a375c2d9a3ac8d0ae8554cfca4f2fc71afdebcb42e8753d4619a6c",
+    "sha256_git_lf": "74299917a6a375c2d9a3ac8d0ae8554cfca4f2fc71afdebcb42e8753d4619a6c"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/baseline/original/flank.json",
+    "sha256_working_tree": "48d4f1b415150c96c578d82da2d43503946f353e0675e4316c888685db1671ca",
+    "sha256_git_lf": "48d4f1b415150c96c578d82da2d43503946f353e0675e4316c888685db1671ca"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/baseline/original/road.json",
+    "sha256_working_tree": "f2a51f814a6c89b8ff6997014c7fd5d0a6704435be694822e1e4f5263fe3cc35",
+    "sha256_git_lf": "f2a51f814a6c89b8ff6997014c7fd5d0a6704435be694822e1e4f5263fe3cc35"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/baseline/original/turtle.json",
+    "sha256_working_tree": "654db12a02911aa59ccc5d791e477aa3be40a56a9bf6e3782f2fa8155324496a",
+    "sha256_git_lf": "654db12a02911aa59ccc5d791e477aa3be40a56a9bf6e3782f2fa8155324496a"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/baseline/road.json",
+    "sha256_working_tree": "8d52a4550dba175f44b507046bc0e4d159c2f5ea13aff0b9700c4a10470791c6",
+    "sha256_git_lf": "8d52a4550dba175f44b507046bc0e4d159c2f5ea13aff0b9700c4a10470791c6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/baseline/turtle.json",
+    "sha256_working_tree": "b427bb849cc7c0ee1edf29732b2c879682f258f600887479c43918ab76446584",
+    "sha256_git_lf": "b427bb849cc7c0ee1edf29732b2c879682f258f600887479c43918ab76446584"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/capture-1080.json",
+    "sha256_working_tree": "7cbbb6fdd9d7130fa5a18fbf835e5dead7a01dcbb27cbf2dd80c3dc975f4cde5",
+    "sha256_git_lf": "7cbbb6fdd9d7130fa5a18fbf835e5dead7a01dcbb27cbf2dd80c3dc975f4cde5"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/capture-enemy.json",
+    "sha256_working_tree": "7ad2e858eb130ae074b371c007644cf08585f794ef77cb90f594fef96ab72375",
+    "sha256_git_lf": "7ad2e858eb130ae074b371c007644cf08585f794ef77cb90f594fef96ab72375"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/capture-intercept.json",
+    "sha256_working_tree": "39790c9c9d4f9358c08ea57b4bf837b6d6494f7771f63c16555c4ce4bd933eea",
+    "sha256_git_lf": "39790c9c9d4f9358c08ea57b4bf837b6d6494f7771f63c16555c4ce4bd933eea"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/capture-perf.json",
+    "sha256_working_tree": "27d0fe0bff045f7497bbf0f04cfbe9ff9943b9bb3c43a742a8bbe800ed6bfab7",
+    "sha256_git_lf": "27d0fe0bff045f7497bbf0f04cfbe9ff9943b9bb3c43a742a8bbe800ed6bfab7"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/capture-qa.json",
+    "sha256_working_tree": "f852c73503328b3fb96a7afbe7f68917d7618d5b5ce10ef6747cf343c62f40c2",
+    "sha256_git_lf": "f852c73503328b3fb96a7afbe7f68917d7618d5b5ce10ef6747cf343c62f40c2"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/capture-result.json",
+    "sha256_working_tree": "dc6e78628e1e9cc33adda5230bb939d24af54c07adbf22aff15d767d2bb4a018",
+    "sha256_git_lf": "dc6e78628e1e9cc33adda5230bb939d24af54c07adbf22aff15d767d2bb4a018"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/capture-runtime.json",
+    "sha256_working_tree": "fe2f55d37d9a3e0012dfd2dd6e300d1f5fbf45ab3a9b33ee478ca93d952c5d6b",
+    "sha256_git_lf": "fe2f55d37d9a3e0012dfd2dd6e300d1f5fbf45ab3a9b33ee478ca93d952c5d6b"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/capture-sequence.json",
+    "sha256_working_tree": "8fbd6c33f2cf55f43956720bd6a50acd160ef15a94f92fb9c97e7c7a4e940f87",
+    "sha256_git_lf": "8fbd6c33f2cf55f43956720bd6a50acd160ef15a94f92fb9c97e7c7a4e940f87"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/capture-sight.json",
+    "sha256_working_tree": "2796fbca6264ed520a77e63b8035d999fd95f0e39415a9bb6b24b6568105ff4c",
+    "sha256_git_lf": "2796fbca6264ed520a77e63b8035d999fd95f0e39415a9bb6b24b6568105ff4c"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/capture-source-hashes.json",
+    "sha256_working_tree": "a9d2bb4fee4789a68b92adf0fb470395685e97500e8a32d42964d7554d4dd565",
+    "sha256_git_lf": "00e8f259a60c33aa13dd6efd20c4ae06ec7760a4c7c2b9dd9d9d56ba1780d5ef"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/changed-paths.txt",
+    "sha256_working_tree": "9efb408b2282bdd649c0566c1570451bd1ab2a4d414fa98cbd5c9c8d87c1f5d5",
+    "sha256_git_lf": "4d91608b567f0fd70286c8d0b3ec03aeaffa883d94c992e38450b4817770d969"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/cover-preview.png",
+    "sha256_working_tree": "92f8ca497d27bc5d8bcb7a0c9e11f69b055def8d0fe321a3e42cbddf9e03de0b",
+    "sha256_git_lf": "92f8ca497d27bc5d8bcb7a0c9e11f69b055def8d0fe321a3e42cbddf9e03de0b"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/dense-labels.png",
+    "sha256_working_tree": "7dd1e30d929003ca6ad4f431df579d5fe8fd38a815574d6ae485d1f530f4be7a",
+    "sha256_git_lf": "7dd1e30d929003ca6ad4f431df579d5fe8fd38a815574d6ae485d1f530f4be7a"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/deployment-1080.png",
+    "sha256_working_tree": "4e2f2f09ebd9449df9334283c33507830d05d1b10c41587dbdfdff49e02ac908",
+    "sha256_git_lf": "4e2f2f09ebd9449df9334283c33507830d05d1b10c41587dbdfdff49e02ac908"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/deployment.png",
+    "sha256_working_tree": "6e3710fd71f140ddb383385a7d44a2d0f4729f5e7456d6006a817bde70774ce7",
+    "sha256_git_lf": "6e3710fd71f140ddb383385a7d44a2d0f4729f5e7456d6006a817bde70774ce7"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/diff-stat.txt",
+    "sha256_working_tree": "0273e5b37e0f04353d6181844faa794d487eda041234db4ce0f87633ea2dccb9",
+    "sha256_git_lf": "4f30c673c2768dc40c4983718a2b24c032f042767615fc09bef889200c9d2011"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/edge-safe.png",
+    "sha256_working_tree": "a87f8229856d36d331be3ef79ee396e1770f66081373b517dd94cd81d0223c69",
+    "sha256_git_lf": "a87f8229856d36d331be3ef79ee396e1770f66081373b517dd94cd81d0223c69"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/enemy-advancing-front.png",
+    "sha256_working_tree": "cff7584af5faae6b18929bfac2b8be9a06f9b260b664b693fe47f5d5779d8d2e",
+    "sha256_git_lf": "cff7584af5faae6b18929bfac2b8be9a06f9b260b664b693fe47f5d5779d8d2e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/enemy-frames/0000.png",
+    "sha256_working_tree": "731d9b20bd20e2c1a2b30edbced8bf5b491c2f179c6e2f2109c2590bc6c3726e",
+    "sha256_git_lf": "731d9b20bd20e2c1a2b30edbced8bf5b491c2f179c6e2f2109c2590bc6c3726e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/enemy-frames/0019.png",
+    "sha256_working_tree": "1f63c44d1487b9ff38a373c2ebfefeba694cd20116505497f2ccd4acc22f48a5",
+    "sha256_git_lf": "1f63c44d1487b9ff38a373c2ebfefeba694cd20116505497f2ccd4acc22f48a5"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/enemy-frames/0038.png",
+    "sha256_working_tree": "6adbb0443f21ab4682742d8500edf7c9dcb9276b20bcf862040ae607f8f036ab",
+    "sha256_git_lf": "6adbb0443f21ab4682742d8500edf7c9dcb9276b20bcf862040ae607f8f036ab"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/enemy-frames/0058.png",
+    "sha256_working_tree": "eb0ece39185c09b078a51fc20c098b74fb33b1bf47ae6ccafb13865abafeafdf",
+    "sha256_git_lf": "eb0ece39185c09b078a51fc20c098b74fb33b1bf47ae6ccafb13865abafeafdf"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/enemy-frames/0077.png",
+    "sha256_working_tree": "ce1c2da93b04c2d01ca3ef86c06fc5e967569e5c8597327d549796ead385961a",
+    "sha256_git_lf": "ce1c2da93b04c2d01ca3ef86c06fc5e967569e5c8597327d549796ead385961a"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/enemy-frames/0097.png",
+    "sha256_working_tree": "43a07b339f5e34d4421b9cb11482ea951ccccf26c69fbdea7ce4858d0a2a82a3",
+    "sha256_git_lf": "43a07b339f5e34d4421b9cb11482ea951ccccf26c69fbdea7ce4858d0a2a82a3"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/enemy-phase-60fps-strip.png",
+    "sha256_working_tree": "a3251702ebe1d0253bc503ff05f14015155a9b95acdb7532acc133966d5fa8b6",
+    "sha256_git_lf": "a3251702ebe1d0253bc503ff05f14015155a9b95acdb7532acc133966d5fa8b6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/enemy-phase-60fps.avi",
+    "sha256_working_tree": "7adca8955fe565c2bb83ca2006f8149a931cc4eed6f4547fd289f87e5ba108d3",
+    "sha256_git_lf": "7adca8955fe565c2bb83ca2006f8149a931cc4eed6f4547fd289f87e5ba108d3"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/field-melee-hit.png",
+    "sha256_working_tree": "c4f1ad920f00bfac534b7061f6b10e208b173ce28162307e5f9bb8ab3e4f01b0",
+    "sha256_git_lf": "c4f1ad920f00bfac534b7061f6b10e208b173ce28162307e5f9bb8ab3e4f01b0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/git-scope.json",
+    "sha256_working_tree": "4e2d9f862cb95d545e5c5a6961ade8d8531da3cf5a22cfde01f34e0bd6bb1172",
+    "sha256_git_lf": "4e2d9f862cb95d545e5c5a6961ade8d8531da3cf5a22cfde01f34e0bd6bb1172"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/field-hit.log",
+    "sha256_working_tree": "b7c99270b731c2e1069ad92e4e924ccdfb0543a8c1957d7a5079d18857df69e8",
+    "sha256_git_lf": "b7c99270b731c2e1069ad92e4e924ccdfb0543a8c1957d7a5079d18857df69e8"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/field-melee-hit.png",
+    "sha256_working_tree": "5bdad3b344fb447705d23365a689b64649accbb5c4860e595d53b427263c7eaa",
+    "sha256_git_lf": "5bdad3b344fb447705d23365a689b64649accbb5c4860e595d53b427263c7eaa"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/impact-strip-spike04-vs-spike05.png",
+    "sha256_working_tree": "0e2e6d67265c495de608d8fd709b1b5224b91905c772ebfe9506fca5bbcc34af",
+    "sha256_git_lf": "0e2e6d67265c495de608d8fd709b1b5224b91905c772ebfe9506fca5bbcc34af"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/attack-60fps.avi",
+    "sha256_working_tree": "cfb4028af5468d1e570a90fd9f29690da3917a652ce4f1abaa5704769241bcff",
+    "sha256_git_lf": "cfb4028af5468d1e570a90fd9f29690da3917a652ce4f1abaa5704769241bcff"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/contact.png",
+    "sha256_working_tree": "f6ccbd5c9e8618ed126889aab775029cd62281759b96c279a021550e94591619",
+    "sha256_git_lf": "f6ccbd5c9e8618ed126889aab775029cd62281759b96c279a021550e94591619"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0010.png",
+    "sha256_working_tree": "31a5f44c8c1ff20b985a8f5fd669e5ca8a41f41bbe35f65079f012904eddc88e",
+    "sha256_git_lf": "31a5f44c8c1ff20b985a8f5fd669e5ca8a41f41bbe35f65079f012904eddc88e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0011.png",
+    "sha256_working_tree": "01ede3fcb095f02769daf7596629c81a048dc3d18eae1adf4ed638ca99549d2e",
+    "sha256_git_lf": "01ede3fcb095f02769daf7596629c81a048dc3d18eae1adf4ed638ca99549d2e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0012.png",
+    "sha256_working_tree": "25f68e7aa07408fd8a37aa3bb6a0aa9988400da5f80f5f2c06b1fbcf23f055af",
+    "sha256_git_lf": "25f68e7aa07408fd8a37aa3bb6a0aa9988400da5f80f5f2c06b1fbcf23f055af"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0013.png",
+    "sha256_working_tree": "4af08dec57b9517dfea6e557155f21ebd28350b97aba1e9933652a9f02e48fd1",
+    "sha256_git_lf": "4af08dec57b9517dfea6e557155f21ebd28350b97aba1e9933652a9f02e48fd1"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0014.png",
+    "sha256_working_tree": "d9281e2a790304e9c1a270d42f185cff302fe40f5f1bf33a7d38497e658f94f5",
+    "sha256_git_lf": "d9281e2a790304e9c1a270d42f185cff302fe40f5f1bf33a7d38497e658f94f5"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0015.png",
+    "sha256_working_tree": "870c66989efc7d6c883540583c6e2e59537d9346896c09280eb0270624742680",
+    "sha256_git_lf": "870c66989efc7d6c883540583c6e2e59537d9346896c09280eb0270624742680"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0016.png",
+    "sha256_working_tree": "c69582c91307233c65d03c59c7008ea4e5ee56dfb72ec9ca29931f0e98860398",
+    "sha256_git_lf": "c69582c91307233c65d03c59c7008ea4e5ee56dfb72ec9ca29931f0e98860398"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0017.png",
+    "sha256_working_tree": "c69582c91307233c65d03c59c7008ea4e5ee56dfb72ec9ca29931f0e98860398",
+    "sha256_git_lf": "c69582c91307233c65d03c59c7008ea4e5ee56dfb72ec9ca29931f0e98860398"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0018.png",
+    "sha256_working_tree": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6",
+    "sha256_git_lf": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0019.png",
+    "sha256_working_tree": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6",
+    "sha256_git_lf": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0020.png",
+    "sha256_working_tree": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6",
+    "sha256_git_lf": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0021.png",
+    "sha256_working_tree": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6",
+    "sha256_git_lf": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0022.png",
+    "sha256_working_tree": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6",
+    "sha256_git_lf": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0023.png",
+    "sha256_working_tree": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6",
+    "sha256_git_lf": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0024.png",
+    "sha256_working_tree": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6",
+    "sha256_git_lf": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0025.png",
+    "sha256_working_tree": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6",
+    "sha256_git_lf": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0026.png",
+    "sha256_working_tree": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6",
+    "sha256_git_lf": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0027.png",
+    "sha256_working_tree": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6",
+    "sha256_git_lf": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0028.png",
+    "sha256_working_tree": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6",
+    "sha256_git_lf": "7d54b24fb3f42acfaecc55bd63e1237da4ef19212b38fdc8b4b6b6847e9087c6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0029.png",
+    "sha256_working_tree": "aa2cf88dd175448f371a3addf1f0bc1624ace3f4fef3201a7dddfb8ac7a8eeb4",
+    "sha256_git_lf": "aa2cf88dd175448f371a3addf1f0bc1624ace3f4fef3201a7dddfb8ac7a8eeb4"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0030.png",
+    "sha256_working_tree": "454dc9852bf98b52c93bcff9210bd547311b1da198d7e1a0611c71ebb18924ca",
+    "sha256_git_lf": "454dc9852bf98b52c93bcff9210bd547311b1da198d7e1a0611c71ebb18924ca"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0031.png",
+    "sha256_working_tree": "06128e6f02308db847208f1c6654e0ff1aaac520e75ca94d072ad5438221e4ed",
+    "sha256_git_lf": "06128e6f02308db847208f1c6654e0ff1aaac520e75ca94d072ad5438221e4ed"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0032.png",
+    "sha256_working_tree": "124806349247ddc83decc5ad39f9e1abade5cf37d2e4c3734ad65a99053fb511",
+    "sha256_git_lf": "124806349247ddc83decc5ad39f9e1abade5cf37d2e4c3734ad65a99053fb511"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0033.png",
+    "sha256_working_tree": "98149d8073d4d17463ad7df13123328180c591e3da27af548bc2278832d784e7",
+    "sha256_git_lf": "98149d8073d4d17463ad7df13123328180c591e3da27af548bc2278832d784e7"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0034.png",
+    "sha256_working_tree": "85da8f97b1b2c79484d95904cb059a085aba822becf21495e03d9460d2a1c442",
+    "sha256_git_lf": "85da8f97b1b2c79484d95904cb059a085aba822becf21495e03d9460d2a1c442"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0035.png",
+    "sha256_working_tree": "75f6bc56a99c1962799ca31a5c5a575716d1ba623f2089a89789e12bf4edcdd2",
+    "sha256_git_lf": "75f6bc56a99c1962799ca31a5c5a575716d1ba623f2089a89789e12bf4edcdd2"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0036.png",
+    "sha256_working_tree": "a2487a21c7bdee444846d5a2469bc584e9e9c8612f12b7a3fd8902dd45ccd8f5",
+    "sha256_git_lf": "a2487a21c7bdee444846d5a2469bc584e9e9c8612f12b7a3fd8902dd45ccd8f5"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0037.png",
+    "sha256_working_tree": "20b9bd08cb1e27591f4abf82d52b728fd68f9c0644dd868b84c6f0ca3bd33867",
+    "sha256_git_lf": "20b9bd08cb1e27591f4abf82d52b728fd68f9c0644dd868b84c6f0ca3bd33867"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0038.png",
+    "sha256_working_tree": "9b6f1de03657f8c69131f1fa089b9d8175287d9af4c38ed0304f6f554bdc609d",
+    "sha256_git_lf": "9b6f1de03657f8c69131f1fa089b9d8175287d9af4c38ed0304f6f554bdc609d"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0039.png",
+    "sha256_working_tree": "af046417a852a4aece1597d6448b43091ebcff27cef89fa0285889a2bc494b1b",
+    "sha256_git_lf": "af046417a852a4aece1597d6448b43091ebcff27cef89fa0285889a2bc494b1b"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0040.png",
+    "sha256_working_tree": "2d2e801a9880b92b4d7bd4cbc036700e3d004375645582f27b0a6c33a2d5194d",
+    "sha256_git_lf": "2d2e801a9880b92b4d7bd4cbc036700e3d004375645582f27b0a6c33a2d5194d"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0041.png",
+    "sha256_working_tree": "30f5f53a1127e4ed8e84cf843cf4316851a712059883e2980944f085c2589f51",
+    "sha256_git_lf": "30f5f53a1127e4ed8e84cf843cf4316851a712059883e2980944f085c2589f51"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0042.png",
+    "sha256_working_tree": "eae436332be12843f3f438dc3228bffdb54437d7fb827a96c33bda8a6d613b7a",
+    "sha256_git_lf": "eae436332be12843f3f438dc3228bffdb54437d7fb827a96c33bda8a6d613b7a"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0043.png",
+    "sha256_working_tree": "8dbdc56f5dbc467870c136016afaf3d215065cfec32eea0aa74cddaf08580d96",
+    "sha256_git_lf": "8dbdc56f5dbc467870c136016afaf3d215065cfec32eea0aa74cddaf08580d96"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0044.png",
+    "sha256_working_tree": "8948ff47724b4a415f5f4a99be34f1d849bcb86e41208cbeedd6bb3bdee72965",
+    "sha256_git_lf": "8948ff47724b4a415f5f4a99be34f1d849bcb86e41208cbeedd6bb3bdee72965"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0045.png",
+    "sha256_working_tree": "1f434572eb1f03159b0295fc5cb7d29d557878fe42e05fb67410216c293b291d",
+    "sha256_git_lf": "1f434572eb1f03159b0295fc5cb7d29d557878fe42e05fb67410216c293b291d"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0046.png",
+    "sha256_working_tree": "593aced8d464c025740bf62ae0521b875af4d4768e57d78714e1043dc1dc9831",
+    "sha256_git_lf": "593aced8d464c025740bf62ae0521b875af4d4768e57d78714e1043dc1dc9831"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0047.png",
+    "sha256_working_tree": "03a05267b6f2fd6be017eac9fe700c7fd17840209e7cdc788b35a837ec5b103c",
+    "sha256_git_lf": "03a05267b6f2fd6be017eac9fe700c7fd17840209e7cdc788b35a837ec5b103c"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0048.png",
+    "sha256_working_tree": "7be732a021b564f07f39d9c44a3fe9b84d1fa6b46ad989ac35aa672ebf923ea2",
+    "sha256_git_lf": "7be732a021b564f07f39d9c44a3fe9b84d1fa6b46ad989ac35aa672ebf923ea2"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0049.png",
+    "sha256_working_tree": "095b244e3431e65c8033ea25fd8a342eed0a8c0e74046f170a5ede6a63ce13be",
+    "sha256_git_lf": "095b244e3431e65c8033ea25fd8a342eed0a8c0e74046f170a5ede6a63ce13be"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0050.png",
+    "sha256_working_tree": "3ac6b9b42ba716ec3ec00e5be5166506acd051cc1805463c439b014a3259c907",
+    "sha256_git_lf": "3ac6b9b42ba716ec3ec00e5be5166506acd051cc1805463c439b014a3259c907"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0051.png",
+    "sha256_working_tree": "8f48e9b5d60d721717299fab310c051874f1104896b3c6d576524096cef1b5bb",
+    "sha256_git_lf": "8f48e9b5d60d721717299fab310c051874f1104896b3c6d576524096cef1b5bb"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0052.png",
+    "sha256_working_tree": "cc66c9e6571202c90ca58faaddfb47adc03655e677b007150a0aef9e66787193",
+    "sha256_git_lf": "cc66c9e6571202c90ca58faaddfb47adc03655e677b007150a0aef9e66787193"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0053.png",
+    "sha256_working_tree": "3b88d58eefadb136fa104fdc1ee7624d800a8627c75648a086e0431f474fe7b8",
+    "sha256_git_lf": "3b88d58eefadb136fa104fdc1ee7624d800a8627c75648a086e0431f474fe7b8"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0054.png",
+    "sha256_working_tree": "7998999c0c5f1f6f009759e183c8bb7c76d8f1acf5960378114419de9bf11586",
+    "sha256_git_lf": "7998999c0c5f1f6f009759e183c8bb7c76d8f1acf5960378114419de9bf11586"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0055.png",
+    "sha256_working_tree": "2826837ef75b7c5a1f9ea2904a323ece8a91c0bc88c222e05d6284bbe25c48b8",
+    "sha256_git_lf": "2826837ef75b7c5a1f9ea2904a323ece8a91c0bc88c222e05d6284bbe25c48b8"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0056.png",
+    "sha256_working_tree": "4c364ed0a75d941f6e158afa5b7dcf4c53158d9acd5bd295928272e7ffdf78ca",
+    "sha256_git_lf": "4c364ed0a75d941f6e158afa5b7dcf4c53158d9acd5bd295928272e7ffdf78ca"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0057.png",
+    "sha256_working_tree": "290481ac53dfe7b7dd1c572132ae6a7653e1d567aeeae359757e87201f73863d",
+    "sha256_git_lf": "290481ac53dfe7b7dd1c572132ae6a7653e1d567aeeae359757e87201f73863d"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0058.png",
+    "sha256_working_tree": "fb76535b06b41154630f9ef933e13b2eff19a08f83d2ffc45a164423a0aa2770",
+    "sha256_git_lf": "fb76535b06b41154630f9ef933e13b2eff19a08f83d2ffc45a164423a0aa2770"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0059.png",
+    "sha256_working_tree": "ac5b70328c323ef6fe7dc5fa233902b1043bb706840e97f5148bb0eade867115",
+    "sha256_git_lf": "ac5b70328c323ef6fe7dc5fa233902b1043bb706840e97f5148bb0eade867115"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0060.png",
+    "sha256_working_tree": "85338e03289c51381665ae1244bcef4a6858b3003d99f68e8031ab2299d7507e",
+    "sha256_git_lf": "85338e03289c51381665ae1244bcef4a6858b3003d99f68e8031ab2299d7507e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/frames/0061.png",
+    "sha256_working_tree": "ee125429c1bd244f685736038f3eac9f20871ed3fda0ac22a776a3ccd7cee2c6",
+    "sha256_git_lf": "ee125429c1bd244f685736038f3eac9f20871ed3fda0ac22a776a3ccd7cee2c6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/impact-strip.png",
+    "sha256_working_tree": "784684f9e8ea151c2b13960c505da42391d145af49fe9e52acab2383f68fe125",
+    "sha256_git_lf": "784684f9e8ea151c2b13960c505da42391d145af49fe9e52acab2383f68fe125"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit/timeline.json",
+    "sha256_working_tree": "fec2ced63e722273f87b7c0cf00a40e26226cb1e20b605186541e3bfa8f57116",
+    "sha256_git_lf": "fec2ced63e722273f87b7c0cf00a40e26226cb1e20b605186541e3bfa8f57116"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-crit.log",
+    "sha256_working_tree": "9d1a275e8fa5e7f45a47e62e734f77708fccc490d8a7e6739703e622699d3946",
+    "sha256_git_lf": "9d1a275e8fa5e7f45a47e62e734f77708fccc490d8a7e6739703e622699d3946"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/attack-60fps.avi",
+    "sha256_working_tree": "51cab68c96a08533ec562becaa1b81155b5173030bec8a27d86b9ff148db6508",
+    "sha256_git_lf": "51cab68c96a08533ec562becaa1b81155b5173030bec8a27d86b9ff148db6508"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/contact.png",
+    "sha256_working_tree": "f060aaa8e7dff0e26a2acab0e629f8100aa45d9cb858f69e591aa845737e0142",
+    "sha256_git_lf": "f060aaa8e7dff0e26a2acab0e629f8100aa45d9cb858f69e591aa845737e0142"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0010.png",
+    "sha256_working_tree": "31a5f44c8c1ff20b985a8f5fd669e5ca8a41f41bbe35f65079f012904eddc88e",
+    "sha256_git_lf": "31a5f44c8c1ff20b985a8f5fd669e5ca8a41f41bbe35f65079f012904eddc88e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0011.png",
+    "sha256_working_tree": "01ede3fcb095f02769daf7596629c81a048dc3d18eae1adf4ed638ca99549d2e",
+    "sha256_git_lf": "01ede3fcb095f02769daf7596629c81a048dc3d18eae1adf4ed638ca99549d2e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0012.png",
+    "sha256_working_tree": "25f68e7aa07408fd8a37aa3bb6a0aa9988400da5f80f5f2c06b1fbcf23f055af",
+    "sha256_git_lf": "25f68e7aa07408fd8a37aa3bb6a0aa9988400da5f80f5f2c06b1fbcf23f055af"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0013.png",
+    "sha256_working_tree": "4af08dec57b9517dfea6e557155f21ebd28350b97aba1e9933652a9f02e48fd1",
+    "sha256_git_lf": "4af08dec57b9517dfea6e557155f21ebd28350b97aba1e9933652a9f02e48fd1"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0014.png",
+    "sha256_working_tree": "d9281e2a790304e9c1a270d42f185cff302fe40f5f1bf33a7d38497e658f94f5",
+    "sha256_git_lf": "d9281e2a790304e9c1a270d42f185cff302fe40f5f1bf33a7d38497e658f94f5"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0015.png",
+    "sha256_working_tree": "870c66989efc7d6c883540583c6e2e59537d9346896c09280eb0270624742680",
+    "sha256_git_lf": "870c66989efc7d6c883540583c6e2e59537d9346896c09280eb0270624742680"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0016.png",
+    "sha256_working_tree": "c69582c91307233c65d03c59c7008ea4e5ee56dfb72ec9ca29931f0e98860398",
+    "sha256_git_lf": "c69582c91307233c65d03c59c7008ea4e5ee56dfb72ec9ca29931f0e98860398"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0017.png",
+    "sha256_working_tree": "c69582c91307233c65d03c59c7008ea4e5ee56dfb72ec9ca29931f0e98860398",
+    "sha256_git_lf": "c69582c91307233c65d03c59c7008ea4e5ee56dfb72ec9ca29931f0e98860398"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0018.png",
+    "sha256_working_tree": "58e0d44c0ed3c35cf50ed62990bb7d3a8a3073c6ae182d586fb0614b9c47b013",
+    "sha256_git_lf": "58e0d44c0ed3c35cf50ed62990bb7d3a8a3073c6ae182d586fb0614b9c47b013"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0019.png",
+    "sha256_working_tree": "58e0d44c0ed3c35cf50ed62990bb7d3a8a3073c6ae182d586fb0614b9c47b013",
+    "sha256_git_lf": "58e0d44c0ed3c35cf50ed62990bb7d3a8a3073c6ae182d586fb0614b9c47b013"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0020.png",
+    "sha256_working_tree": "58e0d44c0ed3c35cf50ed62990bb7d3a8a3073c6ae182d586fb0614b9c47b013",
+    "sha256_git_lf": "58e0d44c0ed3c35cf50ed62990bb7d3a8a3073c6ae182d586fb0614b9c47b013"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0021.png",
+    "sha256_working_tree": "58e0d44c0ed3c35cf50ed62990bb7d3a8a3073c6ae182d586fb0614b9c47b013",
+    "sha256_git_lf": "58e0d44c0ed3c35cf50ed62990bb7d3a8a3073c6ae182d586fb0614b9c47b013"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0022.png",
+    "sha256_working_tree": "58e0d44c0ed3c35cf50ed62990bb7d3a8a3073c6ae182d586fb0614b9c47b013",
+    "sha256_git_lf": "58e0d44c0ed3c35cf50ed62990bb7d3a8a3073c6ae182d586fb0614b9c47b013"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0023.png",
+    "sha256_working_tree": "58e0d44c0ed3c35cf50ed62990bb7d3a8a3073c6ae182d586fb0614b9c47b013",
+    "sha256_git_lf": "58e0d44c0ed3c35cf50ed62990bb7d3a8a3073c6ae182d586fb0614b9c47b013"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0024.png",
+    "sha256_working_tree": "58e0d44c0ed3c35cf50ed62990bb7d3a8a3073c6ae182d586fb0614b9c47b013",
+    "sha256_git_lf": "58e0d44c0ed3c35cf50ed62990bb7d3a8a3073c6ae182d586fb0614b9c47b013"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0025.png",
+    "sha256_working_tree": "8ee559eadf223de020bf57841e83cb170a24c689097e176c34563956f896e543",
+    "sha256_git_lf": "8ee559eadf223de020bf57841e83cb170a24c689097e176c34563956f896e543"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0026.png",
+    "sha256_working_tree": "5b0d6395d049b0ee32680af2292e35093602564348a5d82180fd8e81e94e0a39",
+    "sha256_git_lf": "5b0d6395d049b0ee32680af2292e35093602564348a5d82180fd8e81e94e0a39"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0027.png",
+    "sha256_working_tree": "bfc6597bf0c1706bb596491dee4065548ca3929e075d7b6985edda1ba0b9b61f",
+    "sha256_git_lf": "bfc6597bf0c1706bb596491dee4065548ca3929e075d7b6985edda1ba0b9b61f"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0028.png",
+    "sha256_working_tree": "f9687f16fc57898754dc68cb9ef4c37b2ebc52f1a11f0faf7ace260da6580905",
+    "sha256_git_lf": "f9687f16fc57898754dc68cb9ef4c37b2ebc52f1a11f0faf7ace260da6580905"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0029.png",
+    "sha256_working_tree": "a294ff10cbe6985d6be3815ab275ab4d4cec518b7e8e67f2d415370ee68247cd",
+    "sha256_git_lf": "a294ff10cbe6985d6be3815ab275ab4d4cec518b7e8e67f2d415370ee68247cd"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0030.png",
+    "sha256_working_tree": "2ca67b5f1968d57500f66d2fae84f67a79161accaec3ca943ed52bd4c9e31262",
+    "sha256_git_lf": "2ca67b5f1968d57500f66d2fae84f67a79161accaec3ca943ed52bd4c9e31262"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0031.png",
+    "sha256_working_tree": "d688bd1cc11951cb40bd65f668a36587092c771d7dd6ab06e5c0ef99953155eb",
+    "sha256_git_lf": "d688bd1cc11951cb40bd65f668a36587092c771d7dd6ab06e5c0ef99953155eb"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0032.png",
+    "sha256_working_tree": "573cc2d25f8a971a78d37edf585cba6998bc4613081eb8dcd7d0d7c871d1e431",
+    "sha256_git_lf": "573cc2d25f8a971a78d37edf585cba6998bc4613081eb8dcd7d0d7c871d1e431"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0033.png",
+    "sha256_working_tree": "647e32a5f16bca358f51b82d903836fed6c7abf1eef5301a42eac8f8330bc1d0",
+    "sha256_git_lf": "647e32a5f16bca358f51b82d903836fed6c7abf1eef5301a42eac8f8330bc1d0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0034.png",
+    "sha256_working_tree": "b31ca72a776c7c9917fe011994a6f62908adfa1e27899cfe12dc46c530e887a3",
+    "sha256_git_lf": "b31ca72a776c7c9917fe011994a6f62908adfa1e27899cfe12dc46c530e887a3"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0035.png",
+    "sha256_working_tree": "7c5fb32410537915182fa88e835cca4ef6e5d369c2c3ab83eb84414ebcdbebb3",
+    "sha256_git_lf": "7c5fb32410537915182fa88e835cca4ef6e5d369c2c3ab83eb84414ebcdbebb3"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0036.png",
+    "sha256_working_tree": "5c3524826e66e75b159a6b2bc41e72d493143c432c2554f38141b4177afefc6f",
+    "sha256_git_lf": "5c3524826e66e75b159a6b2bc41e72d493143c432c2554f38141b4177afefc6f"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0037.png",
+    "sha256_working_tree": "595db36b72bacc13234db5788e34183c7a77e1f087bba82f3cf3e1df58c797fb",
+    "sha256_git_lf": "595db36b72bacc13234db5788e34183c7a77e1f087bba82f3cf3e1df58c797fb"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0038.png",
+    "sha256_working_tree": "15cf572538801d7958e7c1528d7dbca2fe670bdfde14f82b14248e57ae3ad2c3",
+    "sha256_git_lf": "15cf572538801d7958e7c1528d7dbca2fe670bdfde14f82b14248e57ae3ad2c3"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0039.png",
+    "sha256_working_tree": "e9763bb6c925fb78dc5b4abe6589c0d105264b2907dd698c1da01f405dd9a09f",
+    "sha256_git_lf": "e9763bb6c925fb78dc5b4abe6589c0d105264b2907dd698c1da01f405dd9a09f"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0040.png",
+    "sha256_working_tree": "3077d6984f3f05c887d3c18b93e13a69f1381116ee93772766771bf7861231c1",
+    "sha256_git_lf": "3077d6984f3f05c887d3c18b93e13a69f1381116ee93772766771bf7861231c1"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0041.png",
+    "sha256_working_tree": "82eb90f9520083423321f5549fc537a618f64527833858fe3d417bf6467ca27e",
+    "sha256_git_lf": "82eb90f9520083423321f5549fc537a618f64527833858fe3d417bf6467ca27e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0042.png",
+    "sha256_working_tree": "1427bc392780bde1999bef6d632b5915289cc3601d641b28bfb459bf707f26d6",
+    "sha256_git_lf": "1427bc392780bde1999bef6d632b5915289cc3601d641b28bfb459bf707f26d6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0043.png",
+    "sha256_working_tree": "284e7196a7f45525b1bb84d2da1859a2818766bd98e3a2d3113ebe5dbe65f35c",
+    "sha256_git_lf": "284e7196a7f45525b1bb84d2da1859a2818766bd98e3a2d3113ebe5dbe65f35c"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0044.png",
+    "sha256_working_tree": "d02cdd8a74239e9e91b7ec789eb0ac3f515160510dfdc0f173e6406ab21a4061",
+    "sha256_git_lf": "d02cdd8a74239e9e91b7ec789eb0ac3f515160510dfdc0f173e6406ab21a4061"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0045.png",
+    "sha256_working_tree": "7ee89c7b26e5b56541ea32dbdda9f944ddecf99f4b4451a25344bcae4e22994b",
+    "sha256_git_lf": "7ee89c7b26e5b56541ea32dbdda9f944ddecf99f4b4451a25344bcae4e22994b"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0046.png",
+    "sha256_working_tree": "cf5748f34dbe554ab9ba6c75e2417738297ddad2aaa4fc4e47d3d9b17a24a99b",
+    "sha256_git_lf": "cf5748f34dbe554ab9ba6c75e2417738297ddad2aaa4fc4e47d3d9b17a24a99b"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0047.png",
+    "sha256_working_tree": "8f48e9b5d60d721717299fab310c051874f1104896b3c6d576524096cef1b5bb",
+    "sha256_git_lf": "8f48e9b5d60d721717299fab310c051874f1104896b3c6d576524096cef1b5bb"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0048.png",
+    "sha256_working_tree": "cc66c9e6571202c90ca58faaddfb47adc03655e677b007150a0aef9e66787193",
+    "sha256_git_lf": "cc66c9e6571202c90ca58faaddfb47adc03655e677b007150a0aef9e66787193"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0049.png",
+    "sha256_working_tree": "3b88d58eefadb136fa104fdc1ee7624d800a8627c75648a086e0431f474fe7b8",
+    "sha256_git_lf": "3b88d58eefadb136fa104fdc1ee7624d800a8627c75648a086e0431f474fe7b8"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0050.png",
+    "sha256_working_tree": "7998999c0c5f1f6f009759e183c8bb7c76d8f1acf5960378114419de9bf11586",
+    "sha256_git_lf": "7998999c0c5f1f6f009759e183c8bb7c76d8f1acf5960378114419de9bf11586"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0051.png",
+    "sha256_working_tree": "2826837ef75b7c5a1f9ea2904a323ece8a91c0bc88c222e05d6284bbe25c48b8",
+    "sha256_git_lf": "2826837ef75b7c5a1f9ea2904a323ece8a91c0bc88c222e05d6284bbe25c48b8"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0052.png",
+    "sha256_working_tree": "4c364ed0a75d941f6e158afa5b7dcf4c53158d9acd5bd295928272e7ffdf78ca",
+    "sha256_git_lf": "4c364ed0a75d941f6e158afa5b7dcf4c53158d9acd5bd295928272e7ffdf78ca"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0053.png",
+    "sha256_working_tree": "290481ac53dfe7b7dd1c572132ae6a7653e1d567aeeae359757e87201f73863d",
+    "sha256_git_lf": "290481ac53dfe7b7dd1c572132ae6a7653e1d567aeeae359757e87201f73863d"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0054.png",
+    "sha256_working_tree": "fb76535b06b41154630f9ef933e13b2eff19a08f83d2ffc45a164423a0aa2770",
+    "sha256_git_lf": "fb76535b06b41154630f9ef933e13b2eff19a08f83d2ffc45a164423a0aa2770"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0055.png",
+    "sha256_working_tree": "ac5b70328c323ef6fe7dc5fa233902b1043bb706840e97f5148bb0eade867115",
+    "sha256_git_lf": "ac5b70328c323ef6fe7dc5fa233902b1043bb706840e97f5148bb0eade867115"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0056.png",
+    "sha256_working_tree": "85338e03289c51381665ae1244bcef4a6858b3003d99f68e8031ab2299d7507e",
+    "sha256_git_lf": "85338e03289c51381665ae1244bcef4a6858b3003d99f68e8031ab2299d7507e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/frames/0057.png",
+    "sha256_working_tree": "ee125429c1bd244f685736038f3eac9f20871ed3fda0ac22a776a3ccd7cee2c6",
+    "sha256_git_lf": "ee125429c1bd244f685736038f3eac9f20871ed3fda0ac22a776a3ccd7cee2c6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/impact-strip.png",
+    "sha256_working_tree": "03c021e660f8b4f30fcd7ef5c7efa69af8c45ce59f0dbd8592ad9c0441153713",
+    "sha256_git_lf": "03c021e660f8b4f30fcd7ef5c7efa69af8c45ce59f0dbd8592ad9c0441153713"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal/timeline.json",
+    "sha256_working_tree": "530c9e34f3b8d48101108fbce15e59a38bb69c7fb7f7819a0b657a9a6172ebc1",
+    "sha256_git_lf": "530c9e34f3b8d48101108fbce15e59a38bb69c7fb7f7819a0b657a9a6172ebc1"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike04-normal.log",
+    "sha256_working_tree": "cf22093ad7d1682e6802f510e18dd062f7c8268f09088468112fae558de6971d",
+    "sha256_git_lf": "cf22093ad7d1682e6802f510e18dd062f7c8268f09088468112fae558de6971d"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/attack-60fps.avi",
+    "sha256_working_tree": "99c852314e6ec0c3f70e19cf99c2a31c13648592e26516fd2d587c1a13abc85a",
+    "sha256_git_lf": "99c852314e6ec0c3f70e19cf99c2a31c13648592e26516fd2d587c1a13abc85a"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/contact.png",
+    "sha256_working_tree": "0825898d0ca47bf39fa40fd6b0c1343f1a8ec62317a5e35edc5ca3762f6d8ae9",
+    "sha256_git_lf": "0825898d0ca47bf39fa40fd6b0c1343f1a8ec62317a5e35edc5ca3762f6d8ae9"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0010.png",
+    "sha256_working_tree": "31a5f44c8c1ff20b985a8f5fd669e5ca8a41f41bbe35f65079f012904eddc88e",
+    "sha256_git_lf": "31a5f44c8c1ff20b985a8f5fd669e5ca8a41f41bbe35f65079f012904eddc88e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0011.png",
+    "sha256_working_tree": "01ede3fcb095f02769daf7596629c81a048dc3d18eae1adf4ed638ca99549d2e",
+    "sha256_git_lf": "01ede3fcb095f02769daf7596629c81a048dc3d18eae1adf4ed638ca99549d2e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0012.png",
+    "sha256_working_tree": "25f68e7aa07408fd8a37aa3bb6a0aa9988400da5f80f5f2c06b1fbcf23f055af",
+    "sha256_git_lf": "25f68e7aa07408fd8a37aa3bb6a0aa9988400da5f80f5f2c06b1fbcf23f055af"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0013.png",
+    "sha256_working_tree": "4af08dec57b9517dfea6e557155f21ebd28350b97aba1e9933652a9f02e48fd1",
+    "sha256_git_lf": "4af08dec57b9517dfea6e557155f21ebd28350b97aba1e9933652a9f02e48fd1"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0014.png",
+    "sha256_working_tree": "d9281e2a790304e9c1a270d42f185cff302fe40f5f1bf33a7d38497e658f94f5",
+    "sha256_git_lf": "d9281e2a790304e9c1a270d42f185cff302fe40f5f1bf33a7d38497e658f94f5"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0015.png",
+    "sha256_working_tree": "870c66989efc7d6c883540583c6e2e59537d9346896c09280eb0270624742680",
+    "sha256_git_lf": "870c66989efc7d6c883540583c6e2e59537d9346896c09280eb0270624742680"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0016.png",
+    "sha256_working_tree": "c69582c91307233c65d03c59c7008ea4e5ee56dfb72ec9ca29931f0e98860398",
+    "sha256_git_lf": "c69582c91307233c65d03c59c7008ea4e5ee56dfb72ec9ca29931f0e98860398"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0017.png",
+    "sha256_working_tree": "c69582c91307233c65d03c59c7008ea4e5ee56dfb72ec9ca29931f0e98860398",
+    "sha256_git_lf": "c69582c91307233c65d03c59c7008ea4e5ee56dfb72ec9ca29931f0e98860398"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0018.png",
+    "sha256_working_tree": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0",
+    "sha256_git_lf": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0019.png",
+    "sha256_working_tree": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0",
+    "sha256_git_lf": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0020.png",
+    "sha256_working_tree": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0",
+    "sha256_git_lf": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0021.png",
+    "sha256_working_tree": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0",
+    "sha256_git_lf": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0022.png",
+    "sha256_working_tree": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0",
+    "sha256_git_lf": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0023.png",
+    "sha256_working_tree": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0",
+    "sha256_git_lf": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0024.png",
+    "sha256_working_tree": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0",
+    "sha256_git_lf": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0025.png",
+    "sha256_working_tree": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0",
+    "sha256_git_lf": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0026.png",
+    "sha256_working_tree": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0",
+    "sha256_git_lf": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0027.png",
+    "sha256_working_tree": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0",
+    "sha256_git_lf": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0028.png",
+    "sha256_working_tree": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0",
+    "sha256_git_lf": "ae33cc0ea135c91d00fca6a1b2065b301da9b3e5f60ab8632242c617091099f0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0029.png",
+    "sha256_working_tree": "ab5ad80ce1412e41e6b2ffa4495612f6fdea9c47d125671fd8a0b4914d173595",
+    "sha256_git_lf": "ab5ad80ce1412e41e6b2ffa4495612f6fdea9c47d125671fd8a0b4914d173595"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0030.png",
+    "sha256_working_tree": "9ad12aa6f2391085ea1e7d03ac158b00a7c4829b660467c11fd467175b2fce2c",
+    "sha256_git_lf": "9ad12aa6f2391085ea1e7d03ac158b00a7c4829b660467c11fd467175b2fce2c"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0031.png",
+    "sha256_working_tree": "149db30e61d577dabfe7fb268986667a964485eb25c10d27b7ac174e18ad543a",
+    "sha256_git_lf": "149db30e61d577dabfe7fb268986667a964485eb25c10d27b7ac174e18ad543a"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0032.png",
+    "sha256_working_tree": "a10fe1be069ce01c11971830d7b3c016d7c8625e877fcf1b4e9d4caf8327412a",
+    "sha256_git_lf": "a10fe1be069ce01c11971830d7b3c016d7c8625e877fcf1b4e9d4caf8327412a"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0033.png",
+    "sha256_working_tree": "a635c948df7f6a67d29063386987094302cb5db4417bbfd17199bc5eb48780e9",
+    "sha256_git_lf": "a635c948df7f6a67d29063386987094302cb5db4417bbfd17199bc5eb48780e9"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0034.png",
+    "sha256_working_tree": "6ab605e1d04a12902d3eb6af41f4c04281c50c435e524a2c2ff21bbf4b6f758d",
+    "sha256_git_lf": "6ab605e1d04a12902d3eb6af41f4c04281c50c435e524a2c2ff21bbf4b6f758d"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0035.png",
+    "sha256_working_tree": "332490675e785dd837334b47915b2f2f80db315678eb5fbdfdf9125150bbbc11",
+    "sha256_git_lf": "332490675e785dd837334b47915b2f2f80db315678eb5fbdfdf9125150bbbc11"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0036.png",
+    "sha256_working_tree": "7b35f375b570ae62a8d35a6eac2b65f2936a9e9387cc70a3f81bff1d1961fa28",
+    "sha256_git_lf": "7b35f375b570ae62a8d35a6eac2b65f2936a9e9387cc70a3f81bff1d1961fa28"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0037.png",
+    "sha256_working_tree": "0187a471d043588119e035941933944192646d9a9240e98aaa314c6d2f25c9e6",
+    "sha256_git_lf": "0187a471d043588119e035941933944192646d9a9240e98aaa314c6d2f25c9e6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0038.png",
+    "sha256_working_tree": "7dca80d1c96bdd8ed994a2dec4bf479b4b972af5cad8fd4136c7ef4b685de272",
+    "sha256_git_lf": "7dca80d1c96bdd8ed994a2dec4bf479b4b972af5cad8fd4136c7ef4b685de272"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0039.png",
+    "sha256_working_tree": "88adee362b05a9a594f444d6bc8843f799e2ddf49188e7cc70c1b03800e92211",
+    "sha256_git_lf": "88adee362b05a9a594f444d6bc8843f799e2ddf49188e7cc70c1b03800e92211"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0040.png",
+    "sha256_working_tree": "a9963c87353a4e0f2e10ef5b82823a4174338403c8f4e5abd77ee7c98edaeece",
+    "sha256_git_lf": "a9963c87353a4e0f2e10ef5b82823a4174338403c8f4e5abd77ee7c98edaeece"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0041.png",
+    "sha256_working_tree": "d5ae45633e3847c31b6797c6fa4048a86e9de04a0820a145d4c55575bf2b261e",
+    "sha256_git_lf": "d5ae45633e3847c31b6797c6fa4048a86e9de04a0820a145d4c55575bf2b261e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0042.png",
+    "sha256_working_tree": "34c6cdcfc399173cabb4cae6503cd7c7cd94187bb0b6bf8151336835d6053227",
+    "sha256_git_lf": "34c6cdcfc399173cabb4cae6503cd7c7cd94187bb0b6bf8151336835d6053227"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0043.png",
+    "sha256_working_tree": "357fd7475e0048ea353a35d5f6f45723d7ca8fbab15567904ac6550a84db8843",
+    "sha256_git_lf": "357fd7475e0048ea353a35d5f6f45723d7ca8fbab15567904ac6550a84db8843"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0044.png",
+    "sha256_working_tree": "2c335d402194b25685f848e82a6877b710762dc4f70311f81a3173ab318f2cb7",
+    "sha256_git_lf": "2c335d402194b25685f848e82a6877b710762dc4f70311f81a3173ab318f2cb7"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0045.png",
+    "sha256_working_tree": "4a3d6776cbfe8b1c5d9e173e1a078603b0536c4b0bca022f583a663c61316673",
+    "sha256_git_lf": "4a3d6776cbfe8b1c5d9e173e1a078603b0536c4b0bca022f583a663c61316673"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0046.png",
+    "sha256_working_tree": "54960cb99f0f4ae66fd8aea6e5140e34e3c7787fa45cac1d9b22b59fd191ca1c",
+    "sha256_git_lf": "54960cb99f0f4ae66fd8aea6e5140e34e3c7787fa45cac1d9b22b59fd191ca1c"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0047.png",
+    "sha256_working_tree": "ee7d07faa707b06b382b483e9dcf98810d95b56fe240822c47f04c06014c31f9",
+    "sha256_git_lf": "ee7d07faa707b06b382b483e9dcf98810d95b56fe240822c47f04c06014c31f9"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0048.png",
+    "sha256_working_tree": "1301fd59a38e000bb044bd44778b76e4e00fa9ced35ae86fd1f0f8d02d6360b8",
+    "sha256_git_lf": "1301fd59a38e000bb044bd44778b76e4e00fa9ced35ae86fd1f0f8d02d6360b8"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0049.png",
+    "sha256_working_tree": "bc7a44b453fdafaa27acbf4d80da9117d2d0e7ca339d7e30b71262b8e47bd3bf",
+    "sha256_git_lf": "bc7a44b453fdafaa27acbf4d80da9117d2d0e7ca339d7e30b71262b8e47bd3bf"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0050.png",
+    "sha256_working_tree": "03a9198d833db549497929894a7f3392f1d841f7339558be0ed3110bac5145ff",
+    "sha256_git_lf": "03a9198d833db549497929894a7f3392f1d841f7339558be0ed3110bac5145ff"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0051.png",
+    "sha256_working_tree": "8f48e9b5d60d721717299fab310c051874f1104896b3c6d576524096cef1b5bb",
+    "sha256_git_lf": "8f48e9b5d60d721717299fab310c051874f1104896b3c6d576524096cef1b5bb"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0052.png",
+    "sha256_working_tree": "cc66c9e6571202c90ca58faaddfb47adc03655e677b007150a0aef9e66787193",
+    "sha256_git_lf": "cc66c9e6571202c90ca58faaddfb47adc03655e677b007150a0aef9e66787193"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0053.png",
+    "sha256_working_tree": "3b88d58eefadb136fa104fdc1ee7624d800a8627c75648a086e0431f474fe7b8",
+    "sha256_git_lf": "3b88d58eefadb136fa104fdc1ee7624d800a8627c75648a086e0431f474fe7b8"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0054.png",
+    "sha256_working_tree": "7998999c0c5f1f6f009759e183c8bb7c76d8f1acf5960378114419de9bf11586",
+    "sha256_git_lf": "7998999c0c5f1f6f009759e183c8bb7c76d8f1acf5960378114419de9bf11586"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0055.png",
+    "sha256_working_tree": "2826837ef75b7c5a1f9ea2904a323ece8a91c0bc88c222e05d6284bbe25c48b8",
+    "sha256_git_lf": "2826837ef75b7c5a1f9ea2904a323ece8a91c0bc88c222e05d6284bbe25c48b8"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0056.png",
+    "sha256_working_tree": "4c364ed0a75d941f6e158afa5b7dcf4c53158d9acd5bd295928272e7ffdf78ca",
+    "sha256_git_lf": "4c364ed0a75d941f6e158afa5b7dcf4c53158d9acd5bd295928272e7ffdf78ca"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0057.png",
+    "sha256_working_tree": "290481ac53dfe7b7dd1c572132ae6a7653e1d567aeeae359757e87201f73863d",
+    "sha256_git_lf": "290481ac53dfe7b7dd1c572132ae6a7653e1d567aeeae359757e87201f73863d"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0058.png",
+    "sha256_working_tree": "fb76535b06b41154630f9ef933e13b2eff19a08f83d2ffc45a164423a0aa2770",
+    "sha256_git_lf": "fb76535b06b41154630f9ef933e13b2eff19a08f83d2ffc45a164423a0aa2770"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0059.png",
+    "sha256_working_tree": "ac5b70328c323ef6fe7dc5fa233902b1043bb706840e97f5148bb0eade867115",
+    "sha256_git_lf": "ac5b70328c323ef6fe7dc5fa233902b1043bb706840e97f5148bb0eade867115"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0060.png",
+    "sha256_working_tree": "85338e03289c51381665ae1244bcef4a6858b3003d99f68e8031ab2299d7507e",
+    "sha256_git_lf": "85338e03289c51381665ae1244bcef4a6858b3003d99f68e8031ab2299d7507e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/frames/0061.png",
+    "sha256_working_tree": "ee125429c1bd244f685736038f3eac9f20871ed3fda0ac22a776a3ccd7cee2c6",
+    "sha256_git_lf": "ee125429c1bd244f685736038f3eac9f20871ed3fda0ac22a776a3ccd7cee2c6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/impact-strip.png",
+    "sha256_working_tree": "d8e69b5c3dc0ba85c34e32d35970ddf45d552006809db59d7c007c51b03d5940",
+    "sha256_git_lf": "d8e69b5c3dc0ba85c34e32d35970ddf45d552006809db59d7c007c51b03d5940"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit/timeline.json",
+    "sha256_working_tree": "5aad8bee63fd7f9e9a287e641464538df7cca3d2cd9b4954afcb1fc4673d1ac3",
+    "sha256_git_lf": "5aad8bee63fd7f9e9a287e641464538df7cca3d2cd9b4954afcb1fc4673d1ac3"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-crit.log",
+    "sha256_working_tree": "e40cce993cc2364667accd5e75bb548475a7828d1e8803dbf70725abfc641dfc",
+    "sha256_git_lf": "e40cce993cc2364667accd5e75bb548475a7828d1e8803dbf70725abfc641dfc"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/attack-60fps.avi",
+    "sha256_working_tree": "59aebe1ee6b27e6703a57e49615bfe9e011e4b7734e2171a8966aee31fa9e9ff",
+    "sha256_git_lf": "59aebe1ee6b27e6703a57e49615bfe9e011e4b7734e2171a8966aee31fa9e9ff"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/contact.png",
+    "sha256_working_tree": "1f6491e0428f3a84ce6dfbc687163663322b3a4ffe29781704de94e73e19625e",
+    "sha256_git_lf": "1f6491e0428f3a84ce6dfbc687163663322b3a4ffe29781704de94e73e19625e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0010.png",
+    "sha256_working_tree": "31a5f44c8c1ff20b985a8f5fd669e5ca8a41f41bbe35f65079f012904eddc88e",
+    "sha256_git_lf": "31a5f44c8c1ff20b985a8f5fd669e5ca8a41f41bbe35f65079f012904eddc88e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0011.png",
+    "sha256_working_tree": "01ede3fcb095f02769daf7596629c81a048dc3d18eae1adf4ed638ca99549d2e",
+    "sha256_git_lf": "01ede3fcb095f02769daf7596629c81a048dc3d18eae1adf4ed638ca99549d2e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0012.png",
+    "sha256_working_tree": "25f68e7aa07408fd8a37aa3bb6a0aa9988400da5f80f5f2c06b1fbcf23f055af",
+    "sha256_git_lf": "25f68e7aa07408fd8a37aa3bb6a0aa9988400da5f80f5f2c06b1fbcf23f055af"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0013.png",
+    "sha256_working_tree": "4af08dec57b9517dfea6e557155f21ebd28350b97aba1e9933652a9f02e48fd1",
+    "sha256_git_lf": "4af08dec57b9517dfea6e557155f21ebd28350b97aba1e9933652a9f02e48fd1"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0014.png",
+    "sha256_working_tree": "d9281e2a790304e9c1a270d42f185cff302fe40f5f1bf33a7d38497e658f94f5",
+    "sha256_git_lf": "d9281e2a790304e9c1a270d42f185cff302fe40f5f1bf33a7d38497e658f94f5"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0015.png",
+    "sha256_working_tree": "870c66989efc7d6c883540583c6e2e59537d9346896c09280eb0270624742680",
+    "sha256_git_lf": "870c66989efc7d6c883540583c6e2e59537d9346896c09280eb0270624742680"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0016.png",
+    "sha256_working_tree": "c69582c91307233c65d03c59c7008ea4e5ee56dfb72ec9ca29931f0e98860398",
+    "sha256_git_lf": "c69582c91307233c65d03c59c7008ea4e5ee56dfb72ec9ca29931f0e98860398"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0017.png",
+    "sha256_working_tree": "c69582c91307233c65d03c59c7008ea4e5ee56dfb72ec9ca29931f0e98860398",
+    "sha256_git_lf": "c69582c91307233c65d03c59c7008ea4e5ee56dfb72ec9ca29931f0e98860398"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0018.png",
+    "sha256_working_tree": "b337ef0f5cadcb8f60b346ce23955f208a186a158fc39043e5b8c7fd57d61825",
+    "sha256_git_lf": "b337ef0f5cadcb8f60b346ce23955f208a186a158fc39043e5b8c7fd57d61825"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0019.png",
+    "sha256_working_tree": "b337ef0f5cadcb8f60b346ce23955f208a186a158fc39043e5b8c7fd57d61825",
+    "sha256_git_lf": "b337ef0f5cadcb8f60b346ce23955f208a186a158fc39043e5b8c7fd57d61825"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0020.png",
+    "sha256_working_tree": "b337ef0f5cadcb8f60b346ce23955f208a186a158fc39043e5b8c7fd57d61825",
+    "sha256_git_lf": "b337ef0f5cadcb8f60b346ce23955f208a186a158fc39043e5b8c7fd57d61825"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0021.png",
+    "sha256_working_tree": "b337ef0f5cadcb8f60b346ce23955f208a186a158fc39043e5b8c7fd57d61825",
+    "sha256_git_lf": "b337ef0f5cadcb8f60b346ce23955f208a186a158fc39043e5b8c7fd57d61825"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0022.png",
+    "sha256_working_tree": "b337ef0f5cadcb8f60b346ce23955f208a186a158fc39043e5b8c7fd57d61825",
+    "sha256_git_lf": "b337ef0f5cadcb8f60b346ce23955f208a186a158fc39043e5b8c7fd57d61825"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0023.png",
+    "sha256_working_tree": "b337ef0f5cadcb8f60b346ce23955f208a186a158fc39043e5b8c7fd57d61825",
+    "sha256_git_lf": "b337ef0f5cadcb8f60b346ce23955f208a186a158fc39043e5b8c7fd57d61825"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0024.png",
+    "sha256_working_tree": "b337ef0f5cadcb8f60b346ce23955f208a186a158fc39043e5b8c7fd57d61825",
+    "sha256_git_lf": "b337ef0f5cadcb8f60b346ce23955f208a186a158fc39043e5b8c7fd57d61825"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0025.png",
+    "sha256_working_tree": "3432e46d71d2906a4e9f131eccb31445e7467b4284eabd837d61ef837b8f73e3",
+    "sha256_git_lf": "3432e46d71d2906a4e9f131eccb31445e7467b4284eabd837d61ef837b8f73e3"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0026.png",
+    "sha256_working_tree": "49086d3ca563b4c91baf79a51d36cfdaba20a5fd294eb3d0b1cc507f4e8e1bbb",
+    "sha256_git_lf": "49086d3ca563b4c91baf79a51d36cfdaba20a5fd294eb3d0b1cc507f4e8e1bbb"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0027.png",
+    "sha256_working_tree": "ba6f979d2cc2e71c77f1487084f18aa9250a4ed3b337651eed3695a30b028faa",
+    "sha256_git_lf": "ba6f979d2cc2e71c77f1487084f18aa9250a4ed3b337651eed3695a30b028faa"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0028.png",
+    "sha256_working_tree": "e59b5c1d694034664d4ec153a5ea06daa61f855259959bc8892610a269078b9f",
+    "sha256_git_lf": "e59b5c1d694034664d4ec153a5ea06daa61f855259959bc8892610a269078b9f"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0029.png",
+    "sha256_working_tree": "31b1cb0d1ca97466a3c4d27a77aa2b3728da5c06d9612e7f7572c334d46cff84",
+    "sha256_git_lf": "31b1cb0d1ca97466a3c4d27a77aa2b3728da5c06d9612e7f7572c334d46cff84"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0030.png",
+    "sha256_working_tree": "1d329066cffcd3a889bdd1bb5e0a5cb6031c2115f8043879bfdf6e60808e2688",
+    "sha256_git_lf": "1d329066cffcd3a889bdd1bb5e0a5cb6031c2115f8043879bfdf6e60808e2688"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0031.png",
+    "sha256_working_tree": "053bc2bac89910c2e0f1ce1298c2042f96c78ca8163887b0316d02c1ad875a1f",
+    "sha256_git_lf": "053bc2bac89910c2e0f1ce1298c2042f96c78ca8163887b0316d02c1ad875a1f"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0032.png",
+    "sha256_working_tree": "40205ef48d437949c4725c3e5d9685539c7358c7f6480c88f0942d317bde1a6f",
+    "sha256_git_lf": "40205ef48d437949c4725c3e5d9685539c7358c7f6480c88f0942d317bde1a6f"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0033.png",
+    "sha256_working_tree": "644cb9fad42360080895b863154db80dc611b54797748a3ed915406c242c225e",
+    "sha256_git_lf": "644cb9fad42360080895b863154db80dc611b54797748a3ed915406c242c225e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0034.png",
+    "sha256_working_tree": "b674875fa890d90367bce99b375c6445a6183505e62a853c4c4dd0cf23bd597f",
+    "sha256_git_lf": "b674875fa890d90367bce99b375c6445a6183505e62a853c4c4dd0cf23bd597f"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0035.png",
+    "sha256_working_tree": "25eb0d466eb28b21d54dc1c1c42cef784b075537c2cd8c44676a16f0f0d2f45a",
+    "sha256_git_lf": "25eb0d466eb28b21d54dc1c1c42cef784b075537c2cd8c44676a16f0f0d2f45a"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0036.png",
+    "sha256_working_tree": "36cfedfdbaad8784a678037e3c5764ee6afcd3a4ecc8a2332b6247e4b104b22f",
+    "sha256_git_lf": "36cfedfdbaad8784a678037e3c5764ee6afcd3a4ecc8a2332b6247e4b104b22f"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0037.png",
+    "sha256_working_tree": "8253ea4e27fe6419ac6dc9974564a368840d62e49d9e0c73dcf62183fce47ac8",
+    "sha256_git_lf": "8253ea4e27fe6419ac6dc9974564a368840d62e49d9e0c73dcf62183fce47ac8"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0038.png",
+    "sha256_working_tree": "93815c92195f8053f573e04f3eccbafce540f972e5b1a924ae4f040404c0171d",
+    "sha256_git_lf": "93815c92195f8053f573e04f3eccbafce540f972e5b1a924ae4f040404c0171d"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0039.png",
+    "sha256_working_tree": "55bf24aa466874812d090c6c821e5fc77d27f7f35592c1793a38f44b96a354a2",
+    "sha256_git_lf": "55bf24aa466874812d090c6c821e5fc77d27f7f35592c1793a38f44b96a354a2"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0040.png",
+    "sha256_working_tree": "2e9d6be508ca77c966565c5bae7e679d88bf4826d0ff8c07adbcc8164caa6181",
+    "sha256_git_lf": "2e9d6be508ca77c966565c5bae7e679d88bf4826d0ff8c07adbcc8164caa6181"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0041.png",
+    "sha256_working_tree": "9ae17fb2eb0c0fcd6fccaa523067f5a467b8944c131e4c2139684d0ee2dab004",
+    "sha256_git_lf": "9ae17fb2eb0c0fcd6fccaa523067f5a467b8944c131e4c2139684d0ee2dab004"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0042.png",
+    "sha256_working_tree": "d4d2491d625d4c03b6261f157e36641cd625d347a9f63fb41dd4d4114d9267d0",
+    "sha256_git_lf": "d4d2491d625d4c03b6261f157e36641cd625d347a9f63fb41dd4d4114d9267d0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0043.png",
+    "sha256_working_tree": "1bb9d654c9969674bcc84c86714dc34c0ecba03704ff0b3ce7b3a03752468b26",
+    "sha256_git_lf": "1bb9d654c9969674bcc84c86714dc34c0ecba03704ff0b3ce7b3a03752468b26"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0044.png",
+    "sha256_working_tree": "063dabb734982412e58b52e38d9bef6f35cca3b2e257e85b167f701896c273b3",
+    "sha256_git_lf": "063dabb734982412e58b52e38d9bef6f35cca3b2e257e85b167f701896c273b3"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0045.png",
+    "sha256_working_tree": "ba4b4b5a233cbd4b1128f9375fdc25bab2f1e6dfd0deb6bb8464d4fe834b41d2",
+    "sha256_git_lf": "ba4b4b5a233cbd4b1128f9375fdc25bab2f1e6dfd0deb6bb8464d4fe834b41d2"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0046.png",
+    "sha256_working_tree": "ea05471604520dd18f06de78bc980dba5e383600aca2368c8d2290e9319ab134",
+    "sha256_git_lf": "ea05471604520dd18f06de78bc980dba5e383600aca2368c8d2290e9319ab134"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0047.png",
+    "sha256_working_tree": "8f48e9b5d60d721717299fab310c051874f1104896b3c6d576524096cef1b5bb",
+    "sha256_git_lf": "8f48e9b5d60d721717299fab310c051874f1104896b3c6d576524096cef1b5bb"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0048.png",
+    "sha256_working_tree": "cc66c9e6571202c90ca58faaddfb47adc03655e677b007150a0aef9e66787193",
+    "sha256_git_lf": "cc66c9e6571202c90ca58faaddfb47adc03655e677b007150a0aef9e66787193"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0049.png",
+    "sha256_working_tree": "3b88d58eefadb136fa104fdc1ee7624d800a8627c75648a086e0431f474fe7b8",
+    "sha256_git_lf": "3b88d58eefadb136fa104fdc1ee7624d800a8627c75648a086e0431f474fe7b8"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0050.png",
+    "sha256_working_tree": "7998999c0c5f1f6f009759e183c8bb7c76d8f1acf5960378114419de9bf11586",
+    "sha256_git_lf": "7998999c0c5f1f6f009759e183c8bb7c76d8f1acf5960378114419de9bf11586"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0051.png",
+    "sha256_working_tree": "2826837ef75b7c5a1f9ea2904a323ece8a91c0bc88c222e05d6284bbe25c48b8",
+    "sha256_git_lf": "2826837ef75b7c5a1f9ea2904a323ece8a91c0bc88c222e05d6284bbe25c48b8"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0052.png",
+    "sha256_working_tree": "4c364ed0a75d941f6e158afa5b7dcf4c53158d9acd5bd295928272e7ffdf78ca",
+    "sha256_git_lf": "4c364ed0a75d941f6e158afa5b7dcf4c53158d9acd5bd295928272e7ffdf78ca"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0053.png",
+    "sha256_working_tree": "290481ac53dfe7b7dd1c572132ae6a7653e1d567aeeae359757e87201f73863d",
+    "sha256_git_lf": "290481ac53dfe7b7dd1c572132ae6a7653e1d567aeeae359757e87201f73863d"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0054.png",
+    "sha256_working_tree": "fb76535b06b41154630f9ef933e13b2eff19a08f83d2ffc45a164423a0aa2770",
+    "sha256_git_lf": "fb76535b06b41154630f9ef933e13b2eff19a08f83d2ffc45a164423a0aa2770"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0055.png",
+    "sha256_working_tree": "ac5b70328c323ef6fe7dc5fa233902b1043bb706840e97f5148bb0eade867115",
+    "sha256_git_lf": "ac5b70328c323ef6fe7dc5fa233902b1043bb706840e97f5148bb0eade867115"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0056.png",
+    "sha256_working_tree": "85338e03289c51381665ae1244bcef4a6858b3003d99f68e8031ab2299d7507e",
+    "sha256_git_lf": "85338e03289c51381665ae1244bcef4a6858b3003d99f68e8031ab2299d7507e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/frames/0057.png",
+    "sha256_working_tree": "ee125429c1bd244f685736038f3eac9f20871ed3fda0ac22a776a3ccd7cee2c6",
+    "sha256_git_lf": "ee125429c1bd244f685736038f3eac9f20871ed3fda0ac22a776a3ccd7cee2c6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/impact-strip.png",
+    "sha256_working_tree": "b5069a960adcde3ac7ed9cb0a8936c7bf9cd13533f282f204686735a40d125bd",
+    "sha256_git_lf": "b5069a960adcde3ac7ed9cb0a8936c7bf9cd13533f282f204686735a40d125bd"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal/timeline.json",
+    "sha256_working_tree": "e70aad0cd064945ba364fed84db333e3ba3bb9bb794fff841469058a2daf7248",
+    "sha256_git_lf": "e70aad0cd064945ba364fed84db333e3ba3bb9bb794fff841469058a2daf7248"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/spike05-normal.log",
+    "sha256_working_tree": "1dcfbcb0ddbaac0bc720a158ca54cda5f27b52f5bb9f64fa30044027e2c3c276",
+    "sha256_git_lf": "1dcfbcb0ddbaac0bc720a158ca54cda5f27b52f5bb9f64fa30044027e2c3c276"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/timing.json",
+    "sha256_working_tree": "ebdeb5badbbe5f7e61db9e5ac6342067bf7eecf3983a85e01fb9a61560839b8c",
+    "sha256_git_lf": "ebdeb5badbbe5f7e61db9e5ac6342067bf7eecf3983a85e01fb9a61560839b8c"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/hitfeel/timing.log",
+    "sha256_working_tree": "597190894a4335f8fdab319e4b65a8de14b580f9b37526777087f5506183479f",
+    "sha256_git_lf": "597190894a4335f8fdab319e4b65a8de14b580f9b37526777087f5506183479f"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/los-blocked.png",
+    "sha256_working_tree": "229827af925812c09d2f0634b7ac0e132188ec54a8449233df311a9862df04a0",
+    "sha256_git_lf": "229827af925812c09d2f0634b7ac0e132188ec54a8449233df311a9862df04a0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/lose.png",
+    "sha256_working_tree": "4bd012a67a717d8b5a06c15b1c5a388afc31471f65df1308082c911e866a1ce8",
+    "sha256_git_lf": "4bd012a67a717d8b5a06c15b1c5a388afc31471f65df1308082c911e866a1ce8"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/metrics-summary.json",
+    "sha256_working_tree": "8f8b304a7349ebfa64e298ecd7e5b54f0489f3624d964d0a5e71aaf845900e42",
+    "sha256_git_lf": "8f8b304a7349ebfa64e298ecd7e5b54f0489f3624d964d0a5e71aaf845900e42"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/movie-index.json",
+    "sha256_working_tree": "2959b3c80cc0b7d8ab210bab496b86e894d1807eab2e54914c53e5291da8601e",
+    "sha256_git_lf": "2959b3c80cc0b7d8ab210bab496b86e894d1807eab2e54914c53e5291da8601e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/MOVIE.md",
+    "sha256_working_tree": "67406b2f326a74d90c22ee9ef087b0573a11bf6b044b1a44ae914b8decb69d4a",
+    "sha256_git_lf": "67406b2f326a74d90c22ee9ef087b0573a11bf6b044b1a44ae914b8decb69d4a"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/overview.png",
+    "sha256_working_tree": "a13b326bc3acc5fb38e1c6297a62e52f35ccdbfb7b151f3816a7c4e01a5fb8b5",
+    "sha256_git_lf": "a13b326bc3acc5fb38e1c6297a62e52f35ccdbfb7b151f3816a7c4e01a5fb8b5"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/PACING.md",
+    "sha256_working_tree": "048ced53bc2f9cd8f0e343e38f3afe4e53354958653489cf280a73a77e5d1a61",
+    "sha256_git_lf": "048ced53bc2f9cd8f0e343e38f3afe4e53354958653489cf280a73a77e5d1a61"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/performance.json",
+    "sha256_working_tree": "14ee72e59bbfca89ea025ce471ee5f828b277de8e6ead37c636651f735ace873",
+    "sha256_git_lf": "14ee72e59bbfca89ea025ce471ee5f828b277de8e6ead37c636651f735ace873"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/PERFORMANCE.md",
+    "sha256_working_tree": "a85faf7ffc0b93bf7a91c21147781c024527dbb897eaf48ad20375c15213db21",
+    "sha256_git_lf": "a85faf7ffc0b93bf7a91c21147781c024527dbb897eaf48ad20375c15213db21"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/ranged-contact.png",
+    "sha256_working_tree": "0ef46ab3f731855e1cdc1ef3bf8a5d6cd32f7d6bfa47b9c417403e52bde2ffac",
+    "sha256_git_lf": "0ef46ab3f731855e1cdc1ef3bf8a5d6cd32f7d6bfa47b9c417403e52bde2ffac"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/ranged-move-confirmed.png",
+    "sha256_working_tree": "44d3fb9bf69aac423c0e78a912ab77d690dcd45b88ddfafe5adaf51110df5db3",
+    "sha256_git_lf": "44d3fb9bf69aac423c0e78a912ab77d690dcd45b88ddfafe5adaf51110df5db3"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/ranged-preview.png",
+    "sha256_working_tree": "f60a53fa44ad57a571ad71997507940aeccaf19db557a312fb13c22d34e3f3c2",
+    "sha256_git_lf": "f60a53fa44ad57a571ad71997507940aeccaf19db557a312fb13c22d34e3f3c2"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/ranged-return.png",
+    "sha256_working_tree": "69b2f0213c328867605d857f76440c9f0c44d6eef95767381a5e3ac7633e0a6c",
+    "sha256_git_lf": "69b2f0213c328867605d857f76440c9f0c44d6eef95767381a5e3ac7633e0a6c"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/README.md",
+    "sha256_working_tree": "0846f7749deab18d686251cfc0668bee9179385f24bb3e36f0126fdba11d4a89",
+    "sha256_git_lf": "0846f7749deab18d686251cfc0668bee9179385f24bb3e36f0126fdba11d4a89"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/reinforcement-interception.png",
+    "sha256_working_tree": "faf70a4f334ccc30e570063bbb91446efd910adffba3ed700ffeff595fb50bcf",
+    "sha256_git_lf": "faf70a4f334ccc30e570063bbb91446efd910adffba3ed700ffeff595fb50bcf"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/runtime-attack-timings.json",
+    "sha256_working_tree": "5e2ac61d36cdef0957adce873183b1afbe0f67960c90c94307c1773a5705cdae",
+    "sha256_git_lf": "5e2ac61d36cdef0957adce873183b1afbe0f67960c90c94307c1773a5705cdae"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/runtime-battle.json",
+    "sha256_working_tree": "64df62743821a2cf75205ca34ec05f0292281f3b8826094120800677662e9ecc",
+    "sha256_git_lf": "64df62743821a2cf75205ca34ec05f0292281f3b8826094120800677662e9ecc"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/select-move-ranged-60fps-strip.png",
+    "sha256_working_tree": "33ad90f54669dfb3dd0d2953089961a52dc3f126598bade28d8f885236e55fdb",
+    "sha256_git_lf": "33ad90f54669dfb3dd0d2953089961a52dc3f126598bade28d8f885236e55fdb"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/select-move-ranged-60fps.avi",
+    "sha256_working_tree": "0d8ad7c39cf4b583d3f8c4cc4f5560920b6a2dd811ebc563ee142b318b4c3ae1",
+    "sha256_git_lf": "0d8ad7c39cf4b583d3f8c4cc4f5560920b6a2dd811ebc563ee142b318b4c3ae1"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/sequence-frames/0000.png",
+    "sha256_working_tree": "731d9b20bd20e2c1a2b30edbced8bf5b491c2f179c6e2f2109c2590bc6c3726e",
+    "sha256_git_lf": "731d9b20bd20e2c1a2b30edbced8bf5b491c2f179c6e2f2109c2590bc6c3726e"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/sequence-frames/0021.png",
+    "sha256_working_tree": "1c3749933f49e13ddb4567bda5568b80cec7946a7c1467aa15177b5c75c783dc",
+    "sha256_git_lf": "1c3749933f49e13ddb4567bda5568b80cec7946a7c1467aa15177b5c75c783dc"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/sequence-frames/0043.png",
+    "sha256_working_tree": "7d5faede876f880ccd63741d8f0ee641ee1fe42f93a282d832892bc091125d29",
+    "sha256_git_lf": "7d5faede876f880ccd63741d8f0ee641ee1fe42f93a282d832892bc091125d29"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/sequence-frames/0064.png",
+    "sha256_working_tree": "937a64a325380c68373a8a6bb8cf962d4db1ff18a72256a766be7ce23a52a735",
+    "sha256_git_lf": "937a64a325380c68373a8a6bb8cf962d4db1ff18a72256a766be7ce23a52a735"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/sequence-frames/0086.png",
+    "sha256_working_tree": "c7caf7277daf549b673fb53f8c72edf3e762a397fcdde354b2a0c687324f53b6",
+    "sha256_git_lf": "c7caf7277daf549b673fb53f8c72edf3e762a397fcdde354b2a0c687324f53b6"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/sequence-frames/0108.png",
+    "sha256_working_tree": "43a07b339f5e34d4421b9cb11482ea951ccccf26c69fbdea7ce4858d0a2a82a3",
+    "sha256_git_lf": "43a07b339f5e34d4421b9cb11482ea951ccccf26c69fbdea7ce4858d0a2a82a3"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/sequence.json",
+    "sha256_working_tree": "aba7776c980ca0a9a140d41f149984fdd01fd2fb0bc0de798644e6df99da9d25",
+    "sha256_git_lf": "aba7776c980ca0a9a140d41f149984fdd01fd2fb0bc0de798644e6df99da9d25"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/test-run.log",
+    "sha256_working_tree": "03c0bdf780b76beed2dc79bd2cc1395f1a1b1ac202889beb6f924c6ea3e47402",
+    "sha256_git_lf": "03c0bdf780b76beed2dc79bd2cc1395f1a1b1ac202889beb6f924c6ea3e47402"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/threat-los.png",
+    "sha256_working_tree": "2abd05509a7d910c950ac59bf622b8ba6602fc9c8a1b23e8d2bf9d8accf04436",
+    "sha256_git_lf": "2abd05509a7d910c950ac59bf622b8ba6602fc9c8a1b23e8d2bf9d8accf04436"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/untracked-paths.txt",
+    "sha256_working_tree": "e7d6b31d53cd8763dd4cf2504debbbb7652cdb85b3664a9536d71eeec59c8943",
+    "sha256_git_lf": "13613a98034c8004edc89729c2f459e85a9ca1e655b6486894ffb9235d0b7356"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w2/flank.json",
+    "sha256_working_tree": "2500c881b154c042c5e49a085f10c9a012e1aff27774738ba38db5fd4c864051",
+    "sha256_git_lf": "2500c881b154c042c5e49a085f10c9a012e1aff27774738ba38db5fd4c864051"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w2/road.json",
+    "sha256_working_tree": "f4d14c4fad9391efd292fe7130facd7aa7ed678ff50e566425417fa0298603b7",
+    "sha256_git_lf": "f4d14c4fad9391efd292fe7130facd7aa7ed678ff50e566425417fa0298603b7"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w2/turtle.json",
+    "sha256_working_tree": "87224184d9f664363c241a889c3af814dac8a0a5a3a78432ae8558dd6264d615",
+    "sha256_git_lf": "87224184d9f664363c241a889c3af814dac8a0a5a3a78432ae8558dd6264d615"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w5-camera.log",
+    "sha256_working_tree": "6f31fd37e6e5090e2d5d9fd172fdc9a4c80b8b9ad265f61366ae8485bf8c97d8",
+    "sha256_git_lf": "6f31fd37e6e5090e2d5d9fd172fdc9a4c80b8b9ad265f61366ae8485bf8c97d8"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w5-qa.log",
+    "sha256_working_tree": "86db163cd62951f7ad9dc440cc2a9572ad177fe7e4aef606b82c13bda406fe77",
+    "sha256_git_lf": "86db163cd62951f7ad9dc440cc2a9572ad177fe7e4aef606b82c13bda406fe77"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w5-tests.log",
+    "sha256_working_tree": "c07589b55666cc60e45938a7ab1aed7f51ffc20e2a1d3ec11deb9e7a67562132",
+    "sha256_git_lf": "c07589b55666cc60e45938a7ab1aed7f51ffc20e2a1d3ec11deb9e7a67562132"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w5-ui.log",
+    "sha256_working_tree": "8699fd86deeee26202691fe80978bb66d5a26eaffa97c4cb77e2d9f409edcafc",
+    "sha256_git_lf": "8699fd86deeee26202691fe80978bb66d5a26eaffa97c4cb77e2d9f409edcafc"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-1080-final.log",
+    "sha256_working_tree": "f8ab4370798df3c8b84d011914beff2e7e7cb500eb8ef5cf75aafc67fa6df74f",
+    "sha256_git_lf": "f8ab4370798df3c8b84d011914beff2e7e7cb500eb8ef5cf75aafc67fa6df74f"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-1080.log",
+    "sha256_working_tree": "f8ab4370798df3c8b84d011914beff2e7e7cb500eb8ef5cf75aafc67fa6df74f",
+    "sha256_git_lf": "f8ab4370798df3c8b84d011914beff2e7e7cb500eb8ef5cf75aafc67fa6df74f"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-autoplay-final.log",
+    "sha256_working_tree": "765166fe6db019830875625ecd870028e4c1649dd5e71dad2a3263d0e3b83e26",
+    "sha256_git_lf": "765166fe6db019830875625ecd870028e4c1649dd5e71dad2a3263d0e3b83e26"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-autoplay.log",
+    "sha256_working_tree": "765166fe6db019830875625ecd870028e4c1649dd5e71dad2a3263d0e3b83e26",
+    "sha256_git_lf": "765166fe6db019830875625ecd870028e4c1649dd5e71dad2a3263d0e3b83e26"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-enemy-final.log",
+    "sha256_working_tree": "e5e37d8fd53677943adcda1addf5c938ec7b6a3f3c9ffd3ec311b358d967b9f8",
+    "sha256_git_lf": "e5e37d8fd53677943adcda1addf5c938ec7b6a3f3c9ffd3ec311b358d967b9f8"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-enemy.log",
+    "sha256_working_tree": "cc49f2ccfb84680d4892953d84513fdc1c144786515518c17983524a74748a47",
+    "sha256_git_lf": "cc49f2ccfb84680d4892953d84513fdc1c144786515518c17983524a74748a47"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-exit-codes.json",
+    "sha256_working_tree": "a9ca72fccb310cfefef30327f6866eb17189629e119eb55edd6abc29fb33b277",
+    "sha256_git_lf": "2f0f3e6ae2bc7198900861e2279bef965db312aff20647165d7eea081ccdfe62"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-intercept-final.log",
+    "sha256_working_tree": "aeb216ed6db029c14af24891600a887b3dd0d94a86efa69196b6ec7f289731bc",
+    "sha256_git_lf": "aeb216ed6db029c14af24891600a887b3dd0d94a86efa69196b6ec7f289731bc"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-intercept.log",
+    "sha256_working_tree": "aeb216ed6db029c14af24891600a887b3dd0d94a86efa69196b6ec7f289731bc",
+    "sha256_git_lf": "aeb216ed6db029c14af24891600a887b3dd0d94a86efa69196b6ec7f289731bc"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-perf-final.log",
+    "sha256_working_tree": "bfc1a59c4a8db54adea62c4d524af36de03626eaf70abdce770727a375ba1cef",
+    "sha256_git_lf": "bfc1a59c4a8db54adea62c4d524af36de03626eaf70abdce770727a375ba1cef"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-perf.log",
+    "sha256_working_tree": "bfc1a59c4a8db54adea62c4d524af36de03626eaf70abdce770727a375ba1cef",
+    "sha256_git_lf": "bfc1a59c4a8db54adea62c4d524af36de03626eaf70abdce770727a375ba1cef"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-qa-final.log",
+    "sha256_working_tree": "86db163cd62951f7ad9dc440cc2a9572ad177fe7e4aef606b82c13bda406fe77",
+    "sha256_git_lf": "86db163cd62951f7ad9dc440cc2a9572ad177fe7e4aef606b82c13bda406fe77"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-result-final.log",
+    "sha256_working_tree": "60c2b4dfe10256b5883c6a8630d8b944dd43aa4f2f1679d849dd5b10a890b4d8",
+    "sha256_git_lf": "60c2b4dfe10256b5883c6a8630d8b944dd43aa4f2f1679d849dd5b10a890b4d8"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-result.log",
+    "sha256_working_tree": "60c2b4dfe10256b5883c6a8630d8b944dd43aa4f2f1679d849dd5b10a890b4d8",
+    "sha256_git_lf": "60c2b4dfe10256b5883c6a8630d8b944dd43aa4f2f1679d849dd5b10a890b4d8"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-runtime-final.log",
+    "sha256_working_tree": "36ecb3f951139eae3c7aaacbeada4b2d38ec573df1958619728888f395dcdb40",
+    "sha256_git_lf": "36ecb3f951139eae3c7aaacbeada4b2d38ec573df1958619728888f395dcdb40"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-runtime.log",
+    "sha256_working_tree": "36ecb3f951139eae3c7aaacbeada4b2d38ec573df1958619728888f395dcdb40",
+    "sha256_git_lf": "36ecb3f951139eae3c7aaacbeada4b2d38ec573df1958619728888f395dcdb40"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-sequence-final.log",
+    "sha256_working_tree": "356fec04682d6266d84173e3136bd5ca5632ff846d991d8e529014e5b4d3c03b",
+    "sha256_git_lf": "356fec04682d6266d84173e3136bd5ca5632ff846d991d8e529014e5b4d3c03b"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-sequence.log",
+    "sha256_working_tree": "c6df431da93822c5a4c2d4d42b9fe2404fc9972d596525f7e468815c2b4c4a29",
+    "sha256_git_lf": "c6df431da93822c5a4c2d4d42b9fe2404fc9972d596525f7e468815c2b4c4a29"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-sight-final.log",
+    "sha256_working_tree": "ac1d5333a473fde71c73d05d50885bb4ba683bdc4a214fc38cfaf1743290b3b0",
+    "sha256_git_lf": "ac1d5333a473fde71c73d05d50885bb4ba683bdc4a214fc38cfaf1743290b3b0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w6-sight.log",
+    "sha256_working_tree": "ac1d5333a473fde71c73d05d50885bb4ba683bdc4a214fc38cfaf1743290b3b0",
+    "sha256_git_lf": "ac1d5333a473fde71c73d05d50885bb4ba683bdc4a214fc38cfaf1743290b3b0"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w7-exit-codes.json",
+    "sha256_working_tree": "65bb30824c360084e2902e1f751534ce31a24b9aecf56b820cb0a5ef41ad9b19",
+    "sha256_git_lf": "65bb30824c360084e2902e1f751534ce31a24b9aecf56b820cb0a5ef41ad9b19"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/w7-import.log",
+    "sha256_working_tree": "91826ebadd97b7bfadc29d8b958690af90ca6d302ce604ae396498138a89d197",
+    "sha256_git_lf": "91826ebadd97b7bfadc29d8b958690af90ca6d302ce604ae396498138a89d197"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/warning.png",
+    "sha256_working_tree": "49fe2b579e1f5e8de770a71bfd0f22da8f7193e9530657ada77a0621975066be",
+    "sha256_git_lf": "49fe2b579e1f5e8de770a71bfd0f22da8f7193e9530657ada77a0621975066be"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/win-staged-terminal.png",
+    "sha256_working_tree": "5b239692800263faae59da4bb301e2ddc97b367d7a3c83f760ed1d76eebaba13",
+    "sha256_git_lf": "5b239692800263faae59da4bb301e2ddc97b367d7a3c83f760ed1d76eebaba13"
+  },
+  {
+    "path": "godot-spike/docs/evidence/spike05/WORK.md",
+    "sha256_working_tree": "386e89ce3de8abc337276752bf3127af1cfb823b4c81323d3a3febdbad172858",
+    "sha256_git_lf": "38b0c507f093b061d63cd2778ddc1494262f1133199d7259a9521cdf0f5ab222"
+  },
+  {
+    "path": "godot-spike/docs/HANDOFF.md",
+    "sha256_working_tree": "40eb3122c00a97fc936d9db8c59e3e9a369d61ddc5bb1c907ffe6ceda8f33412",
+    "sha256_git_lf": "40eb3122c00a97fc936d9db8c59e3e9a369d61ddc5bb1c907ffe6ceda8f33412"
+  },
+  {
+    "path": "godot-spike/docs/VERIFICATION.md",
+    "sha256_working_tree": "08b534376afdee3c473fc8195bcc51a66a0147648c4ecb4352d96fb31faf6f93",
+    "sha256_git_lf": "08b534376afdee3c473fc8195bcc51a66a0147648c4ecb4352d96fb31faf6f93"
+  },
+  {
+    "path": "godot-spike/project.godot",
+    "sha256_working_tree": "b52226cd0e48d69c6763aae6d3defb2dbf2d9bbb0690074b90750051d071bdcd",
+    "sha256_git_lf": "b52226cd0e48d69c6763aae6d3defb2dbf2d9bbb0690074b90750051d071bdcd"
+  },
+  {
+    "path": "godot-spike/scenes/levels/Field24x18.tscn",
+    "sha256_working_tree": "f73dd0d59d6f15ac6690a3a3340f5763e6effbca7282db538944331ceb2b8cab",
+    "sha256_git_lf": "f73dd0d59d6f15ac6690a3a3340f5763e6effbca7282db538944331ceb2b8cab"
+  },
+  {
+    "path": "godot-spike/scenes/mockups/BigMapMockup.tscn",
+    "sha256_working_tree": "7b6c4479e49f03c634e4f0ff7d7e6be3ea25524377877a63dc2cf883a4f3090c",
+    "sha256_git_lf": "7b6c4479e49f03c634e4f0ff7d7e6be3ea25524377877a63dc2cf883a4f3090c"
+  },
+  {
+    "path": "godot-spike/scenes/Skirmish.tscn",
+    "sha256_working_tree": "9ab889b6fa9f42a4305cb51b178efafc00b155be9237c7aa93d905ec8ed5ab14",
+    "sha256_git_lf": "9ab889b6fa9f42a4305cb51b178efafc00b155be9237c7aa93d905ec8ed5ab14"
+  },
+  {
+    "path": "godot-spike/scripts/anim/anim_manifest.gd",
+    "sha256_working_tree": "098478742de8091238e706ea4545403eb482280ae1036ef1e543948f7fd8f724",
+    "sha256_git_lf": "098478742de8091238e706ea4545403eb482280ae1036ef1e543948f7fd8f724"
+  },
+  {
+    "path": "godot-spike/scripts/anim/anim_manifest.gd.uid",
+    "sha256_working_tree": "45b0755ae259f0cbbf479df4220a9ccc12eb61e8a90b5a3777de0c2479e6d9b8",
+    "sha256_git_lf": "45b0755ae259f0cbbf479df4220a9ccc12eb61e8a90b5a3777de0c2479e6d9b8"
+  },
+  {
+    "path": "godot-spike/scripts/anim/frame_player.gd",
+    "sha256_working_tree": "1934e9250c03d9e34b06502d1cc4bd076489f8431d97a8ac7f7dfa3524a7016e",
+    "sha256_git_lf": "1934e9250c03d9e34b06502d1cc4bd076489f8431d97a8ac7f7dfa3524a7016e"
+  },
+  {
+    "path": "godot-spike/scripts/anim/frame_player.gd.uid",
+    "sha256_working_tree": "cf73b2b58a46a9d703c6340e0cb5955daacab65eccd89d5b5b67fa343f1b2e29",
+    "sha256_git_lf": "cf73b2b58a46a9d703c6340e0cb5955daacab65eccd89d5b5b67fa343f1b2e29"
+  },
+  {
+    "path": "godot-spike/scripts/anim/world_particles.gd",
+    "sha256_working_tree": "05f1a8cd50f76509272ed67fe1afcfd1a5631cf235e3f834b293c060af140be3",
+    "sha256_git_lf": "05f1a8cd50f76509272ed67fe1afcfd1a5631cf235e3f834b293c060af140be3"
+  },
+  {
+    "path": "godot-spike/scripts/anim/world_particles.gd.uid",
+    "sha256_working_tree": "8b950ced6f58ad3846f9938252ba7f01c7b961f1a918d17f997e8f1bfa0d64fd",
+    "sha256_git_lf": "8b950ced6f58ad3846f9938252ba7f01c7b961f1a918d17f997e8f1bfa0d64fd"
+  },
+  {
+    "path": "godot-spike/scripts/battle_hud.gd",
+    "sha256_working_tree": "6155c463a59d8140802771347c92979cab1f1d3fd380652b2c5a362879bd351d",
+    "sha256_git_lf": "6155c463a59d8140802771347c92979cab1f1d3fd380652b2c5a362879bd351d"
+  },
+  {
+    "path": "godot-spike/scripts/battle_hud.gd.uid",
+    "sha256_working_tree": "e04a7caa4b40fb24fe45b798cd59af883fa123b37977640c7d209c10b5ad1e1a",
+    "sha256_git_lf": "e04a7caa4b40fb24fe45b798cd59af883fa123b37977640c7d209c10b5ad1e1a"
+  },
+  {
+    "path": "godot-spike/scripts/capture_a2.gd",
+    "sha256_working_tree": "c35d41c7dd77f497e85316727a9e5403c8a8b5eda5778d2662665864d256ae77",
+    "sha256_git_lf": "c35d41c7dd77f497e85316727a9e5403c8a8b5eda5778d2662665864d256ae77"
+  },
+  {
+    "path": "godot-spike/scripts/capture_a2.gd.uid",
+    "sha256_working_tree": "a6df9647d21edafbcf3cfa2b78c1f5c488228a8a2b3bd7cc52aac89e96f29c53",
+    "sha256_git_lf": "a6df9647d21edafbcf3cfa2b78c1f5c488228a8a2b3bd7cc52aac89e96f29c53"
+  },
+  {
+    "path": "godot-spike/scripts/capture_run.gd",
+    "sha256_working_tree": "7b58da46d7a70dd6c5e3a21c98f2de76881358273f6c27f7388a74e18f94905c",
+    "sha256_git_lf": "7b58da46d7a70dd6c5e3a21c98f2de76881358273f6c27f7388a74e18f94905c"
+  },
+  {
+    "path": "godot-spike/scripts/capture_run.gd.uid",
+    "sha256_working_tree": "5bad16d599283eb48f1ad27f082bae2584cf1e88e62c313a1fc76fd5ebb47344",
+    "sha256_git_lf": "5bad16d599283eb48f1ad27f082bae2584cf1e88e62c313a1fc76fd5ebb47344"
+  },
+  {
+    "path": "godot-spike/scripts/capture_spike02.gd",
+    "sha256_working_tree": "2025c807894ace8dc28a5114d05930baec0d536fc1a16c8efe57922f8c413350",
+    "sha256_git_lf": "2025c807894ace8dc28a5114d05930baec0d536fc1a16c8efe57922f8c413350"
+  },
+  {
+    "path": "godot-spike/scripts/capture_spike02.gd.uid",
+    "sha256_working_tree": "6d71e35fac9fd67cd23b1dfb43dec65253ebbc0568a0ecd9aa32bac07f576245",
+    "sha256_git_lf": "6d71e35fac9fd67cd23b1dfb43dec65253ebbc0568a0ecd9aa32bac07f576245"
+  },
+  {
+    "path": "godot-spike/scripts/impact/impact_profile.gd",
+    "sha256_working_tree": "96d8b20a6c8b4da6dc921cfa0a0f86abc7045f2dac8cf7809b378a1dff962b4f",
+    "sha256_git_lf": "96d8b20a6c8b4da6dc921cfa0a0f86abc7045f2dac8cf7809b378a1dff962b4f"
+  },
+  {
+    "path": "godot-spike/scripts/impact/impact_profile.gd.uid",
+    "sha256_working_tree": "1ed404c0e7f3930bcdf0384ff50008a99a2e826f7fe9868bceb3e838b2fb4708",
+    "sha256_git_lf": "1ed404c0e7f3930bcdf0384ff50008a99a2e826f7fe9868bceb3e838b2fb4708"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_battle.gd",
+    "sha256_working_tree": "92b22fb66bc05727653207fafd451bc6ce0a9559b3934a8dcff176be237edd78",
+    "sha256_git_lf": "92b22fb66bc05727653207fafd451bc6ce0a9559b3934a8dcff176be237edd78"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_battle.gd.uid",
+    "sha256_working_tree": "e7140359d38a48d68fd20e8a1f67a1f17a4dc0ed2d0c6dfc30b3a581253f657a",
+    "sha256_git_lf": "e7140359d38a48d68fd20e8a1f67a1f17a4dc0ed2d0c6dfc30b3a581253f657a"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_camera.gd",
+    "sha256_working_tree": "5a9a016925cb7bdb5e7444369ff5b78c981ccc1885814d380d023746f8b083fa",
+    "sha256_git_lf": "5a9a016925cb7bdb5e7444369ff5b78c981ccc1885814d380d023746f8b083fa"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_camera.gd.uid",
+    "sha256_working_tree": "7dfcc6a239088e7339f26a1373257d8a4dbd0426c407020d0ad167c9d0d17659",
+    "sha256_git_lf": "7dfcc6a239088e7339f26a1373257d8a4dbd0426c407020d0ad167c9d0d17659"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_ground.gd",
+    "sha256_working_tree": "888e3b0756c647dfc26346df9929a0849fdd6bf8bd53a0409df14238192a5dbd",
+    "sha256_git_lf": "888e3b0756c647dfc26346df9929a0849fdd6bf8bd53a0409df14238192a5dbd"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_ground.gd.uid",
+    "sha256_working_tree": "6b31b82f9e188a670629160e249305a0dbde62c1801b39afd06ebfc7c0d61dae",
+    "sha256_git_lf": "6b31b82f9e188a670629160e249305a0dbde62c1801b39afd06ebfc7c0d61dae"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_hud.gd",
+    "sha256_working_tree": "e38add63c0c10316063e89cbb7b0814228075bcd7ce5325f6fc9b42d75e9feb5",
+    "sha256_git_lf": "e38add63c0c10316063e89cbb7b0814228075bcd7ce5325f6fc9b42d75e9feb5"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_hud.gd.uid",
+    "sha256_working_tree": "66f4f0c388baeffb5967fbbe6a48ee253afd7fcf496f31321d03cb10cdea73fd",
+    "sha256_git_lf": "66f4f0c388baeffb5967fbbe6a48ee253afd7fcf496f31321d03cb10cdea73fd"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_impact.gd",
+    "sha256_working_tree": "897b93a141e06dbd11f7d8a75e00e32c8e3350b2d11f611806ceac00dd75ca42",
+    "sha256_git_lf": "897b93a141e06dbd11f7d8a75e00e32c8e3350b2d11f611806ceac00dd75ca42"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_impact.gd.uid",
+    "sha256_working_tree": "57491b3e135c4d95d75b31cef8a33548b0fadc261d7f17e0744f4ddad45f5249",
+    "sha256_git_lf": "57491b3e135c4d95d75b31cef8a33548b0fadc261d7f17e0744f4ddad45f5249"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_indicators.gd",
+    "sha256_working_tree": "05417a12a58a9a170a7aa39071c9267567bdd511af8ba5f3f400b00d85f368ee",
+    "sha256_git_lf": "05417a12a58a9a170a7aa39071c9267567bdd511af8ba5f3f400b00d85f368ee"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_indicators.gd.uid",
+    "sha256_working_tree": "3dfacba7304aa19033a47f02be86c51a5d262638f3adef2a2ad0037c3eeca8c2",
+    "sha256_git_lf": "3dfacba7304aa19033a47f02be86c51a5d262638f3adef2a2ad0037c3eeca8c2"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_labels.gd",
+    "sha256_working_tree": "56505d230f8d18b13d21641163a99b33c72dcc1590d253a3ac4d262445d549fc",
+    "sha256_git_lf": "56505d230f8d18b13d21641163a99b33c72dcc1590d253a3ac4d262445d549fc"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_labels.gd.uid",
+    "sha256_working_tree": "5a6c45b20b626a53d98a4f88d400b757b99b442cba08d8bd12f7c7eadbde5e50",
+    "sha256_git_lf": "5a6c45b20b626a53d98a4f88d400b757b99b442cba08d8bd12f7c7eadbde5e50"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_minimap.gd",
+    "sha256_working_tree": "89c35fe047a9948cd0fd56dcecec563d5ef6350f6d00941c444a63d9c36147a6",
+    "sha256_git_lf": "89c35fe047a9948cd0fd56dcecec563d5ef6350f6d00941c444a63d9c36147a6"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_minimap.gd.uid",
+    "sha256_working_tree": "795c2999fa2b11c3b24ebd3c46f76f324f86b7ac705da2e852f4ad8b5ecb7669",
+    "sha256_git_lf": "795c2999fa2b11c3b24ebd3c46f76f324f86b7ac705da2e852f4ad8b5ecb7669"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_telemetry.gd",
+    "sha256_working_tree": "d60c16c3f74bcd0bfe172d755ad1b06aeecf633da7aa31adca92bad681912b27",
+    "sha256_git_lf": "d60c16c3f74bcd0bfe172d755ad1b06aeecf633da7aa31adca92bad681912b27"
+  },
+  {
+    "path": "godot-spike/scripts/levels/field_telemetry.gd.uid",
+    "sha256_working_tree": "eae6bfaf4db0977a4ee1cbee6b474eb770fd6931248fa2416abbd2dd48db29d1",
+    "sha256_git_lf": "eae6bfaf4db0977a4ee1cbee6b474eb770fd6931248fa2416abbd2dd48db29d1"
+  },
+  {
+    "path": "godot-spike/scripts/mockups/big_map_mockup.gd",
+    "sha256_working_tree": "08e962d36a7ca46566ec9f1182bab2d4e2299cd44cbe06fb4f6548d7c827c241",
+    "sha256_git_lf": "08e962d36a7ca46566ec9f1182bab2d4e2299cd44cbe06fb4f6548d7c827c241"
+  },
+  {
+    "path": "godot-spike/scripts/mockups/big_map_mockup.gd.uid",
+    "sha256_working_tree": "36df02495d67ff88dd118661a9f999cca496df383b24dfb83c29d3ed67e9c70d",
+    "sha256_git_lf": "36df02495d67ff88dd118661a9f999cca496df383b24dfb83c29d3ed67e9c70d"
+  },
+  {
+    "path": "godot-spike/scripts/readability_a2.gd",
+    "sha256_working_tree": "10d0fffc64f2fc4e2ba20f292b1425a437e447cf6df9cbbc25d0bb7895ae2cd9",
+    "sha256_git_lf": "10d0fffc64f2fc4e2ba20f292b1425a437e447cf6df9cbbc25d0bb7895ae2cd9"
+  },
+  {
+    "path": "godot-spike/scripts/readability_a2.gd.uid",
+    "sha256_working_tree": "cb3e165ab1249fe0228b984b73eabbccd0e063c0857231b7d1c258d9796f0395",
+    "sha256_git_lf": "cb3e165ab1249fe0228b984b73eabbccd0e063c0857231b7d1c258d9796f0395"
+  },
+  {
+    "path": "godot-spike/scripts/readability_run.gd",
+    "sha256_working_tree": "3e55b41159ebc0846971f72eb07de4749f25499737afea2fbbac7244bcb84bc6",
+    "sha256_git_lf": "3e55b41159ebc0846971f72eb07de4749f25499737afea2fbbac7244bcb84bc6"
+  },
+  {
+    "path": "godot-spike/scripts/readability_run.gd.uid",
+    "sha256_working_tree": "ff761e43b139e1a2ab0f160e0578d83349fa03574a4df95b9b7b9584ab51238f",
+    "sha256_git_lf": "ff761e43b139e1a2ab0f160e0578d83349fa03574a4df95b9b7b9584ab51238f"
+  },
+  {
+    "path": "godot-spike/scripts/rules/field_rules.gd",
+    "sha256_working_tree": "189d335f9c985f83589b0f3b3a992df447200bc79563056ef4804ba6bd82d326",
+    "sha256_git_lf": "189d335f9c985f83589b0f3b3a992df447200bc79563056ef4804ba6bd82d326"
+  },
+  {
+    "path": "godot-spike/scripts/rules/field_rules.gd.uid",
+    "sha256_working_tree": "63a7873d57ee66050936ad295ec0573b850efc0c3d9dfa8e8b87d207041fe08e",
+    "sha256_git_lf": "63a7873d57ee66050936ad295ec0573b850efc0c3d9dfa8e8b87d207041fe08e"
+  },
+  {
+    "path": "godot-spike/scripts/rules/field_sight.gd",
+    "sha256_working_tree": "1847879f96d8420704ec1b2f7f9be0fa60bba7d22227ab0ee3da63c5b86a8b0d",
+    "sha256_git_lf": "1847879f96d8420704ec1b2f7f9be0fa60bba7d22227ab0ee3da63c5b86a8b0d"
+  },
+  {
+    "path": "godot-spike/scripts/rules/field_sight.gd.uid",
+    "sha256_working_tree": "16cd90f46dcc31141e9ecc7198549932950691be0abc46cd0ac338b75b16bacc",
+    "sha256_git_lf": "16cd90f46dcc31141e9ecc7198549932950691be0abc46cd0ac338b75b16bacc"
+  },
+  {
+    "path": "godot-spike/scripts/rules/grid_rules.gd",
+    "sha256_working_tree": "c3d539e3cbfafc8db11262c9fb23ee9345e127cdde0966b363287ae0ca9b59b6",
+    "sha256_git_lf": "c3d539e3cbfafc8db11262c9fb23ee9345e127cdde0966b363287ae0ca9b59b6"
+  },
+  {
+    "path": "godot-spike/scripts/rules/grid_rules.gd.uid",
+    "sha256_working_tree": "b206b77138d82cdbedc2dfe135b05a7708fa2be73d542a5e045bdeded15a4f9c",
+    "sha256_git_lf": "b206b77138d82cdbedc2dfe135b05a7708fa2be73d542a5e045bdeded15a4f9c"
+  },
+  {
+    "path": "godot-spike/scripts/skirmish.gd",
+    "sha256_working_tree": "ae5878abc279eabe7af25283c605b96b275ae28217b94684a0082cb3fe0f90fd",
+    "sha256_git_lf": "2b01c52251868fbb6abf9accb4e332bb426495cde99e9d417f921d067f884e47"
+  },
+  {
+    "path": "godot-spike/scripts/skirmish.gd.uid",
+    "sha256_working_tree": "1bfa03eef667b3d4760cb87349770658649f587df86568119ac753cc744c6fcc",
+    "sha256_git_lf": "1bfa03eef667b3d4760cb87349770658649f587df86568119ac753cc744c6fcc"
+  },
+  {
+    "path": "godot-spike/shaders/hit_flash.gdshader",
+    "sha256_working_tree": "32a96b3843653b4f4528b6941415beb9c4d467b1390cb0da80d64c69e5cd1382",
+    "sha256_git_lf": "2d17667a08dd14b9e9ed849a597c25dd68032e00f55f404889532d9474c7aa50"
+  },
+  {
+    "path": "godot-spike/shaders/hit_flash.gdshader.uid",
+    "sha256_working_tree": "f5640d480e27f1072028c2b2ca0e970119cdd2f27f8c18a6c70eeb32b49ae9e1",
+    "sha256_git_lf": "f5640d480e27f1072028c2b2ca0e970119cdd2f27f8c18a6c70eeb32b49ae9e1"
+  },
+  {
+    "path": "godot-spike/tests/test_a2_hud.gd",
+    "sha256_working_tree": "de95a599835e1b77312603fc53dfa278091bc2a2a9343651f2a606c53dcc0e6b",
+    "sha256_git_lf": "37d294e89fd247d6881c06a6e9a573bcce4fb8ae8850fed864b5d6e303d54132"
+  },
+  {
+    "path": "godot-spike/tests/test_a2_hud.gd.uid",
+    "sha256_working_tree": "6d85d19d51fa915755762592a2668bf80e353a975a5e140c430971db190e31e3",
+    "sha256_git_lf": "6d85d19d51fa915755762592a2668bf80e353a975a5e140c430971db190e31e3"
+  },
+  {
+    "path": "godot-spike/tests/test_a3_contract.gd",
+    "sha256_working_tree": "3ca323f55893493d3fedc19071f4ca38d08b56aea77661ab6e2c268529fb886f",
+    "sha256_git_lf": "3ca323f55893493d3fedc19071f4ca38d08b56aea77661ab6e2c268529fb886f"
+  },
+  {
+    "path": "godot-spike/tests/test_a3_contract.gd.uid",
+    "sha256_working_tree": "7097587e74000c07afa8daedd848f8bebea5b1b8e78e001f6215abe87c99c52a",
+    "sha256_git_lf": "7097587e74000c07afa8daedd848f8bebea5b1b8e78e001f6215abe87c99c52a"
+  },
+  {
+    "path": "godot-spike/tests/test_a4_contract.gd",
+    "sha256_working_tree": "938eb66a76287ad717a43f05ce3b41e062c42c3eb6b676fea1815259ce0ca71c",
+    "sha256_git_lf": "938eb66a76287ad717a43f05ce3b41e062c42c3eb6b676fea1815259ce0ca71c"
+  },
+  {
+    "path": "godot-spike/tests/test_a4_contract.gd.uid",
+    "sha256_working_tree": "e8b28856294052a097dfbfb54f4d9dcf7a25b68e6c453c3945890211bfda4a17",
+    "sha256_git_lf": "e8b28856294052a097dfbfb54f4d9dcf7a25b68e6c453c3945890211bfda4a17"
+  },
+  {
+    "path": "godot-spike/tests/test_a5_contract.gd",
+    "sha256_working_tree": "827a4630c32cb42c75e88277b5b1e6100a3db1d69dd6dfc7a9df7337c8ed605e",
+    "sha256_git_lf": "827a4630c32cb42c75e88277b5b1e6100a3db1d69dd6dfc7a9df7337c8ed605e"
+  },
+  {
+    "path": "godot-spike/tests/test_a5_contract.gd.uid",
+    "sha256_working_tree": "40e95c215ab2315f009a1ca60ae8cd390ce583855bb8d211cd1297626bd44a51",
+    "sha256_git_lf": "40e95c215ab2315f009a1ca60ae8cd390ce583855bb8d211cd1297626bd44a51"
+  },
+  {
+    "path": "godot-spike/tests/test_a6_contract.gd",
+    "sha256_working_tree": "e2421a14a7889f5ab604a05f7cee4dbdce689b2341c25139bb8e9b7bacd86d6e",
+    "sha256_git_lf": "e2421a14a7889f5ab604a05f7cee4dbdce689b2341c25139bb8e9b7bacd86d6e"
+  },
+  {
+    "path": "godot-spike/tests/test_a6_contract.gd.uid",
+    "sha256_working_tree": "5503c1bac71675abf900deee8974b6c8d3b47d5a60f2ad48470219adadf974c2",
+    "sha256_git_lf": "5503c1bac71675abf900deee8974b6c8d3b47d5a60f2ad48470219adadf974c2"
+  },
+  {
+    "path": "godot-spike/tests/test_a7_contract.gd",
+    "sha256_working_tree": "7898918bc8116ec5227530e08a814c84455fff30224903c37a703efd3f07dc77",
+    "sha256_git_lf": "7898918bc8116ec5227530e08a814c84455fff30224903c37a703efd3f07dc77"
+  },
+  {
+    "path": "godot-spike/tests/test_a7_contract.gd.uid",
+    "sha256_working_tree": "d01bf646b79dd9ca375726c23317a320023c81c7f87df1a89746d1d4b1249b29",
+    "sha256_git_lf": "d01bf646b79dd9ca375726c23317a320023c81c7f87df1a89746d1d4b1249b29"
+  },
+  {
+    "path": "godot-spike/tests/test_a8_contract.gd",
+    "sha256_working_tree": "8cc3276ba1948862bea2320018d91b69786521ec285dd9791c158bad854e46f1",
+    "sha256_git_lf": "8cc3276ba1948862bea2320018d91b69786521ec285dd9791c158bad854e46f1"
+  },
+  {
+    "path": "godot-spike/tests/test_a8_contract.gd.uid",
+    "sha256_working_tree": "bd8d582576cf568785f38de5b7786406a5ff2d82ec69214c1e138e522d24e075",
+    "sha256_git_lf": "bd8d582576cf568785f38de5b7786406a5ff2d82ec69214c1e138e522d24e075"
+  },
+  {
+    "path": "godot-spike/tests/test_a9_contract.gd",
+    "sha256_working_tree": "4407e0348f897f5142f4b80f5d40126820f32b862cb1edb693b5d4e46a3592c9",
+    "sha256_git_lf": "4407e0348f897f5142f4b80f5d40126820f32b862cb1edb693b5d4e46a3592c9"
+  },
+  {
+    "path": "godot-spike/tests/test_a9_contract.gd.uid",
+    "sha256_working_tree": "070b2a2b4086482198702c0ffead1bd0e204341780bd914bb22356514ba28f83",
+    "sha256_git_lf": "070b2a2b4086482198702c0ffead1bd0e204341780bd914bb22356514ba28f83"
+  },
+  {
+    "path": "godot-spike/tests/test_big_map_mockup.gd",
+    "sha256_working_tree": "3db0d8a072ce3d3eedcf14e9ecd649c7c55b4cceafa0ce0e0f127f14b0fa3217",
+    "sha256_git_lf": "3db0d8a072ce3d3eedcf14e9ecd649c7c55b4cceafa0ce0e0f127f14b0fa3217"
+  },
+  {
+    "path": "godot-spike/tests/test_big_map_mockup.gd.uid",
+    "sha256_working_tree": "7308027b909fe1cf49bb8373468fd63bda81d333ec12206d3f5e27d7be2fae93",
+    "sha256_git_lf": "7308027b909fe1cf49bb8373468fd63bda81d333ec12206d3f5e27d7be2fae93"
+  },
+  {
+    "path": "godot-spike/tests/test_field_ai.gd",
+    "sha256_working_tree": "c54e3331853635103ededbf17b6a7f6e907ab64d5a0a83aa4c5b3511fc621306",
+    "sha256_git_lf": "c54e3331853635103ededbf17b6a7f6e907ab64d5a0a83aa4c5b3511fc621306"
+  },
+  {
+    "path": "godot-spike/tests/test_field_ai.gd.uid",
+    "sha256_working_tree": "ffe75d357c140b54b13c7f05e163b2633c0e5b26baa26c1aae314e3fed6c1b1e",
+    "sha256_git_lf": "ffe75d357c140b54b13c7f05e163b2633c0e5b26baa26c1aae314e3fed6c1b1e"
+  },
+  {
+    "path": "godot-spike/tests/test_field_autoplay.gd",
+    "sha256_working_tree": "e8fe81be57ca2a521901588c9713a24c33efae5dc3119f879e7667f4da26aa2e",
+    "sha256_git_lf": "e8fe81be57ca2a521901588c9713a24c33efae5dc3119f879e7667f4da26aa2e"
+  },
+  {
+    "path": "godot-spike/tests/test_field_autoplay.gd.uid",
+    "sha256_working_tree": "a9314a6bb8202aea41ab36770e595efe52c541e7a8087a5e1b70999afcf3012e",
+    "sha256_git_lf": "a9314a6bb8202aea41ab36770e595efe52c541e7a8087a5e1b70999afcf3012e"
+  },
+  {
+    "path": "godot-spike/tests/test_field_battle.gd",
+    "sha256_working_tree": "be593274e14a6686650fb9ef0b4a9c32ceb9efa4f119d2ff880ef7f65cd4346f",
+    "sha256_git_lf": "be593274e14a6686650fb9ef0b4a9c32ceb9efa4f119d2ff880ef7f65cd4346f"
+  },
+  {
+    "path": "godot-spike/tests/test_field_battle.gd.uid",
+    "sha256_working_tree": "18ec44d49209b6bec8305965f66bd3364fc4685ed3a2cbc8bf890b76b082057d",
+    "sha256_git_lf": "18ec44d49209b6bec8305965f66bd3364fc4685ed3a2cbc8bf890b76b082057d"
+  },
+  {
+    "path": "godot-spike/tests/test_field_camera.gd",
+    "sha256_working_tree": "4c7518c2ca38132e62fedef603e9d98b97d6bd96800b4a349cbf341e0a47e696",
+    "sha256_git_lf": "4c7518c2ca38132e62fedef603e9d98b97d6bd96800b4a349cbf341e0a47e696"
+  },
+  {
+    "path": "godot-spike/tests/test_field_camera.gd.uid",
+    "sha256_working_tree": "53146d5e0055a4984acf7a8dae15c5e53f2f01b4846ff72cf8e9dbe00daba5d3",
+    "sha256_git_lf": "53146d5e0055a4984acf7a8dae15c5e53f2f01b4846ff72cf8e9dbe00daba5d3"
+  },
+  {
+    "path": "godot-spike/tests/test_field_los.gd",
+    "sha256_working_tree": "b1c8dab3eda0e967d906db30452591b01b31908dbc16d3d13241efd40b95c531",
+    "sha256_git_lf": "b1c8dab3eda0e967d906db30452591b01b31908dbc16d3d13241efd40b95c531"
+  },
+  {
+    "path": "godot-spike/tests/test_field_los.gd.uid",
+    "sha256_working_tree": "587eee055bff1ec7f50176c4ec7b51b846cffa3130a44e732bfd2f5cc64a991d",
+    "sha256_git_lf": "587eee055bff1ec7f50176c4ec7b51b846cffa3130a44e732bfd2f5cc64a991d"
+  },
+  {
+    "path": "godot-spike/tests/test_field_rules.gd",
+    "sha256_working_tree": "958a8629b5a7160350ba1704bc993c15f6bd785ad98c03bd5adfb7561b6d02f9",
+    "sha256_git_lf": "958a8629b5a7160350ba1704bc993c15f6bd785ad98c03bd5adfb7561b6d02f9"
+  },
+  {
+    "path": "godot-spike/tests/test_field_rules.gd.uid",
+    "sha256_working_tree": "192004ebcc7de64edc8d47824862c41143eaf2473e1485cc4559412d47ef79a6",
+    "sha256_git_lf": "192004ebcc7de64edc8d47824862c41143eaf2473e1485cc4559412d47ef79a6"
+  },
+  {
+    "path": "godot-spike/tests/test_field_ui.gd",
+    "sha256_working_tree": "8b1cdbfe52310245b5c1bad97754085623a82266ab003cbc39abc34bc5115382",
+    "sha256_git_lf": "8b1cdbfe52310245b5c1bad97754085623a82266ab003cbc39abc34bc5115382"
+  },
+  {
+    "path": "godot-spike/tests/test_field_ui.gd.uid",
+    "sha256_working_tree": "708d85c6a808eeb02acbbcba932d998561dbbcb2d87296f58715fff3774eaea0",
+    "sha256_git_lf": "708d85c6a808eeb02acbbcba932d998561dbbcb2d87296f58715fff3774eaea0"
+  },
+  {
+    "path": "godot-spike/tests/test_field_visibility.gd",
+    "sha256_working_tree": "b66dc7063ad33eefe04d38b35c1079507c32ad00c2f06506935710d6464337f3",
+    "sha256_git_lf": "b66dc7063ad33eefe04d38b35c1079507c32ad00c2f06506935710d6464337f3"
+  },
+  {
+    "path": "godot-spike/tests/test_field_visibility.gd.uid",
+    "sha256_working_tree": "a5930f079d3ac51a8fb7d4f64f1ff4cab7daaa04aed21a30561bfefd77bff933",
+    "sha256_git_lf": "a5930f079d3ac51a8fb7d4f64f1ff4cab7daaa04aed21a30561bfefd77bff933"
+  },
+  {
+    "path": "godot-spike/tests/test_grid_rules.gd",
+    "sha256_working_tree": "f3daf37e1905fe8bf4e7bb160aeb760743d2a25e8f9c8159038c2fd4936fab5c",
+    "sha256_git_lf": "f3daf37e1905fe8bf4e7bb160aeb760743d2a25e8f9c8159038c2fd4936fab5c"
+  },
+  {
+    "path": "godot-spike/tests/test_grid_rules.gd.uid",
+    "sha256_working_tree": "972d31bb27898d21d8cb0d236029a954287032f5d57206b699bc32540fe00444",
+    "sha256_git_lf": "972d31bb27898d21d8cb0d236029a954287032f5d57206b699bc32540fe00444"
+  },
+  {
+    "path": "godot-spike/tests/test_manifest.gd",
+    "sha256_working_tree": "fc4d1408601ef5d3d51151daec5d89862ef3004b1da11e5ee93b3be3d260b585",
+    "sha256_git_lf": "fc4d1408601ef5d3d51151daec5d89862ef3004b1da11e5ee93b3be3d260b585"
+  },
+  {
+    "path": "godot-spike/tests/test_manifest.gd.uid",
+    "sha256_working_tree": "ebaa044a209eb14c4f5dd0138ba4f17e3ecc9e10c921fc966ffade9c2641e7f2",
+    "sha256_git_lf": "ebaa044a209eb14c4f5dd0138ba4f17e3ecc9e10c921fc966ffade9c2641e7f2"
+  },
+  {
+    "path": "godot-spike/tests/test_playback.gd",
+    "sha256_working_tree": "2df10d5061bba6f8c7fe0a8b3b976a45160ed89739ac87992c51c6b59cecf9bf",
+    "sha256_git_lf": "2df10d5061bba6f8c7fe0a8b3b976a45160ed89739ac87992c51c6b59cecf9bf"
+  },
+  {
+    "path": "godot-spike/tests/test_playback.gd.uid",
+    "sha256_working_tree": "f218d9bdecb7ce4f00a3386226756113d3c9610000a71e375a25a311d8ca82e8",
+    "sha256_git_lf": "f218d9bdecb7ce4f00a3386226756113d3c9610000a71e375a25a311d8ca82e8"
+  },
+  {
+    "path": "godot-spike/tests/test_shared_hashes.gd",
+    "sha256_working_tree": "d6f2cd903a48a65efb0d8d6adade749a7e683cf87d2debec8159252252ebcec4",
+    "sha256_git_lf": "d6f2cd903a48a65efb0d8d6adade749a7e683cf87d2debec8159252252ebcec4"
+  },
+  {
+    "path": "godot-spike/tests/test_shared_hashes.gd.uid",
+    "sha256_working_tree": "ad61506817a430d57de7990ee8821083a36decb39e13ee3423aa2a669bac7c06",
+    "sha256_git_lf": "ad61506817a430d57de7990ee8821083a36decb39e13ee3423aa2a669bac7c06"
+  },
+  {
+    "path": "godot-spike/tests/test_spike02.gd",
+    "sha256_working_tree": "895516e82a49c946ef75475a1dc769688ed5a7f6781e79bef0876578c110f292",
+    "sha256_git_lf": "895516e82a49c946ef75475a1dc769688ed5a7f6781e79bef0876578c110f292"
+  },
+  {
+    "path": "godot-spike/tests/test_spike02.gd.uid",
+    "sha256_working_tree": "5fa682f27b724dd9ff255f6a0c9da977111118354568ee61588e745b14311bc9",
+    "sha256_git_lf": "5fa682f27b724dd9ff255f6a0c9da977111118354568ee61588e745b14311bc9"
+  },
+  {
+    "path": "godot-spike/tests/test_spike03_impact.gd",
+    "sha256_working_tree": "dd028ef7367b81b4a818609b6203136cc6c383b49169235f3d13094bdfeaa385",
+    "sha256_git_lf": "dd028ef7367b81b4a818609b6203136cc6c383b49169235f3d13094bdfeaa385"
+  },
+  {
+    "path": "godot-spike/tests/test_spike03_impact.gd.uid",
+    "sha256_working_tree": "e53b9ea0081c83cc8e91d09570946df229a889ffeb5095b1367db020f81d8f0d",
+    "sha256_git_lf": "e53b9ea0081c83cc8e91d09570946df229a889ffeb5095b1367db020f81d8f0d"
+  },
+  {
+    "path": "godot-spike/tests/test_spike04_profile.gd",
+    "sha256_working_tree": "39870d74124250f5f663ac4b6061f8fe27ce7e15a402072590f6480be6828fea",
+    "sha256_git_lf": "39870d74124250f5f663ac4b6061f8fe27ce7e15a402072590f6480be6828fea"
+  },
+  {
+    "path": "godot-spike/tests/test_spike04_profile.gd.uid",
+    "sha256_working_tree": "8bd767be7ed66217136ebd340cf4adf375cb796063c6dff284e2414f4cc432b6",
+    "sha256_git_lf": "8bd767be7ed66217136ebd340cf4adf375cb796063c6dff284e2414f4cc432b6"
+  },
+  {
+    "path": "godot-spike/tests/test_spike05_profile.gd",
+    "sha256_working_tree": "f821eacd6d6b24157ec9a925ce3440a39f59db9fa7cc688c0c9a32340bb00548",
+    "sha256_git_lf": "f821eacd6d6b24157ec9a925ce3440a39f59db9fa7cc688c0c9a32340bb00548"
+  },
+  {
+    "path": "godot-spike/tests/test_spike05_profile.gd.uid",
+    "sha256_working_tree": "6e5ff20dc3a176ad9657ebe61aa89039c7a2d4d8979e2b4302e5bdb14a01861b",
+    "sha256_git_lf": "6e5ff20dc3a176ad9657ebe61aa89039c7a2d4d8979e2b4302e5bdb14a01861b"
+  },
+  {
+    "path": "godot-spike/tools/a3_style_check.py",
+    "sha256_working_tree": "7c2db32b4b68f93b6ab47a22423b0fb92ce3e5807d72c2a80df1f50454c81f9c",
+    "sha256_git_lf": "7c2db32b4b68f93b6ab47a22423b0fb92ce3e5807d72c2a80df1f50454c81f9c"
+  },
+  {
+    "path": "godot-spike/tools/a4_contact_sheet.py",
+    "sha256_working_tree": "2651dabefe85a207a970505eeaf47a38471daa7ab58914e71a2d0b37fde0a55d",
+    "sha256_git_lf": "2651dabefe85a207a970505eeaf47a38471daa7ab58914e71a2d0b37fde0a55d"
+  },
+  {
+    "path": "godot-spike/tools/a4_style_check.py",
+    "sha256_working_tree": "ab1832b8ea2a66c5cc55daadc19ddb49afc7ae86e476ef6458b73aba7b7b3581",
+    "sha256_git_lf": "ab1832b8ea2a66c5cc55daadc19ddb49afc7ae86e476ef6458b73aba7b7b3581"
+  },
+  {
+    "path": "godot-spike/tools/a5_audit.py",
+    "sha256_working_tree": "8f04eb5f9b796e79baefa1d6cc141629d49d342da35e2d38c3592885da8d493e",
+    "sha256_git_lf": "8f04eb5f9b796e79baefa1d6cc141629d49d342da35e2d38c3592885da8d493e"
+  },
+  {
+    "path": "godot-spike/tools/a5_contact_sheet.py",
+    "sha256_working_tree": "0889ae1f42ffd6902da56a998ceae1dd2e426ed22853c6fa8a36751c6498f498",
+    "sha256_git_lf": "0889ae1f42ffd6902da56a998ceae1dd2e426ed22853c6fa8a36751c6498f498"
+  },
+  {
+    "path": "godot-spike/tools/a5_style_check.py",
+    "sha256_working_tree": "c687880e243b5eb4802bb9fee1fe4b6921c6e31b0caa8828874205e6aa58d889",
+    "sha256_git_lf": "c687880e243b5eb4802bb9fee1fe4b6921c6e31b0caa8828874205e6aa58d889"
+  },
+  {
+    "path": "godot-spike/tools/a6_contact_sheet.py",
+    "sha256_working_tree": "c3213d59cb52026dfad2d8f4b3b2d0f9eb6570ba43e1dadabf37c6a561969e49",
+    "sha256_git_lf": "c3213d59cb52026dfad2d8f4b3b2d0f9eb6570ba43e1dadabf37c6a561969e49"
+  },
+  {
+    "path": "godot-spike/tools/a6_playback_check.py",
+    "sha256_working_tree": "b4724b319ba80ca9dc0ba935e4a062e186b83f1ec509c7d3c89d288453de1b60",
+    "sha256_git_lf": "b4724b319ba80ca9dc0ba935e4a062e186b83f1ec509c7d3c89d288453de1b60"
+  },
+  {
+    "path": "godot-spike/tools/a6_style_check.py",
+    "sha256_working_tree": "7ac7ebded759e4ef654486aa2c5af3d27eef786848a95839e1c0403d0f02cce7",
+    "sha256_git_lf": "7ac7ebded759e4ef654486aa2c5af3d27eef786848a95839e1c0403d0f02cce7"
+  },
+  {
+    "path": "godot-spike/tools/a6_w2_compare.py",
+    "sha256_working_tree": "d1d1300e287571957b1f56965254aa165495743d0c928fe0beef4a1285000162",
+    "sha256_git_lf": "d1d1300e287571957b1f56965254aa165495743d0c928fe0beef4a1285000162"
+  },
+  {
+    "path": "godot-spike/tools/a7_contact_sheet.py",
+    "sha256_working_tree": "ca5e3aef463b0114b15dfcd3938c57c62ebd648747d191d320e4bbfe51d91001",
+    "sha256_git_lf": "ca5e3aef463b0114b15dfcd3938c57c62ebd648747d191d320e4bbfe51d91001"
+  },
+  {
+    "path": "godot-spike/tools/a7_playback_check.py",
+    "sha256_working_tree": "ab9afc82254ea8c8fc1019ef7eb2bfbe0bb50776591f3ca0cda2cb2151807da7",
+    "sha256_git_lf": "ab9afc82254ea8c8fc1019ef7eb2bfbe0bb50776591f3ca0cda2cb2151807da7"
+  },
+  {
+    "path": "godot-spike/tools/a7_style_check.py",
+    "sha256_working_tree": "1a809ee67d96fa225fa16054c1d2fffe067d7143550bc88b6e4ba75aeb74f1d8",
+    "sha256_git_lf": "1a809ee67d96fa225fa16054c1d2fffe067d7143550bc88b6e4ba75aeb74f1d8"
+  },
+  {
+    "path": "godot-spike/tools/a8_contact_sheet.py",
+    "sha256_working_tree": "e407cdd75a9f344c2a58245f854f42bdc122f0edb73850935f9682f145a9c60d",
+    "sha256_git_lf": "95216b0cfd1c9299f117be92495a28eed9e08a0c44a3541d02c9d90a2104fd15"
+  },
+  {
+    "path": "godot-spike/tools/a8_playback_check.py",
+    "sha256_working_tree": "873954cedd1cef443cfa81093bb65b81b37c671cdc46586be9af02eadabb5a38",
+    "sha256_git_lf": "da12c308af39501f9754968673583a6877aa0b43172b12bbab28938ec8e9fa91"
+  },
+  {
+    "path": "godot-spike/tools/a8_style_check.py",
+    "sha256_working_tree": "55e77e14c9cceb58c2158632c2b62d5a12d2920d43c114601a40ab92d4e64811",
+    "sha256_git_lf": "55e77e14c9cceb58c2158632c2b62d5a12d2920d43c114601a40ab92d4e64811"
+  },
+  {
+    "path": "godot-spike/tools/a9_contact_sheet.py",
+    "sha256_working_tree": "6fac192d321b12007155e6b06aae80e79005dcad0e872c00d30bd00b4382632e",
+    "sha256_git_lf": "93b2a6d72f1e809c76d0b3e1fd52356df79c854f03b9fa49522d1cd306d656c0"
+  },
+  {
+    "path": "godot-spike/tools/a9_playback_check.py",
+    "sha256_working_tree": "e8543b7ac9bdb6cef857053a90215708b1051fe6544ab69e82a8b31f0eedb3ba",
+    "sha256_git_lf": "e8543b7ac9bdb6cef857053a90215708b1051fe6544ab69e82a8b31f0eedb3ba"
+  },
+  {
+    "path": "godot-spike/tools/a9_style_check.py",
+    "sha256_working_tree": "c243adb20ee5a26f443b775cb7126b06227855f9eaf4d3a68bda1e5955436ac4",
+    "sha256_git_lf": "c243adb20ee5a26f443b775cb7126b06227855f9eaf4d3a68bda1e5955436ac4"
+  },
+  {
+    "path": "godot-spike/tools/adopt_a6_frame.py",
+    "sha256_working_tree": "b142e6c781748baf7622fbe3091e4c698497366da5898e584ce296aab3b6e13d",
+    "sha256_git_lf": "b142e6c781748baf7622fbe3091e4c698497366da5898e584ce296aab3b6e13d"
+  },
+  {
+    "path": "godot-spike/tools/adopt_a8_sheet.py",
+    "sha256_working_tree": "f53b14e7a7b63eb1f46c729d948c598ebe4ecad4c85c72c7665fcefe0fb322b2",
+    "sha256_git_lf": "f53b14e7a7b63eb1f46c729d948c598ebe4ecad4c85c72c7665fcefe0fb322b2"
+  },
+  {
+    "path": "godot-spike/tools/audit_spike03.py",
+    "sha256_working_tree": "21a5954b89e47d712cae4e76b2a46df5b9b751f8006c92b0609e46c2691e6fbd",
+    "sha256_git_lf": "21a5954b89e47d712cae4e76b2a46df5b9b751f8006c92b0609e46c2691e6fbd"
+  },
+  {
+    "path": "godot-spike/tools/audit_spike04.py",
+    "sha256_working_tree": "69ab0550d33e42f81acc352e87738b6bef700b4acf29e7e536c93c0ba85ef8a4",
+    "sha256_git_lf": "69ab0550d33e42f81acc352e87738b6bef700b4acf29e7e536c93c0ba85ef8a4"
+  },
+  {
+    "path": "godot-spike/tools/audit_spike05.py",
+    "sha256_working_tree": "8a093cbe3a06a8f8a4aec40658bef459be4a081ec226780b0082cbbf75db4b44",
+    "sha256_git_lf": "8a093cbe3a06a8f8a4aec40658bef459be4a081ec226780b0082cbbf75db4b44"
+  },
+  {
+    "path": "godot-spike/tools/autoplay_field.gd",
+    "sha256_working_tree": "9ccf3c8922663f40851fec7a19c68858069babc54ae280a786b6807714121869",
+    "sha256_git_lf": "9ccf3c8922663f40851fec7a19c68858069babc54ae280a786b6807714121869"
+  },
+  {
+    "path": "godot-spike/tools/autoplay_field.gd.uid",
+    "sha256_working_tree": "f8cf355937987e6ffb619a2ccae56902f4580a734f49dcde8880ff44d35bc821",
+    "sha256_git_lf": "f8cf355937987e6ffb619a2ccae56902f4580a734f49dcde8880ff44d35bc821"
+  },
+  {
+    "path": "godot-spike/tools/build_a2_ui.py",
+    "sha256_working_tree": "5be806c1a5815a13b99a288ca51e5e4b3d619df7f9f4bd868cafeea77caebb3e",
+    "sha256_git_lf": "5be806c1a5815a13b99a288ca51e5e4b3d619df7f9f4bd868cafeea77caebb3e"
+  },
+  {
+    "path": "godot-spike/tools/build_a7_spec.py",
+    "sha256_working_tree": "e58eb45d2c2f3950b0e7f149b0a6be9974979d8196003d59162975e3ba18c29a",
+    "sha256_git_lf": "e58eb45d2c2f3950b0e7f149b0a6be9974979d8196003d59162975e3ba18c29a"
+  },
+  {
+    "path": "godot-spike/tools/build_manifest.py",
+    "sha256_working_tree": "148a11aef452332be8917d38b1ff424127166cf15101092145db1ac2507da1e5",
+    "sha256_git_lf": "b954e07ce8e5a7fb52a846781cf4d68054fc201168f25152f6790ad33dc0d455"
+  },
+  {
+    "path": "godot-spike/tools/capture_a3.gd",
+    "sha256_working_tree": "86698e29478aeb99030a54631364476644cbab002e5fb89d3e925fbfe7c22d2a",
+    "sha256_git_lf": "86698e29478aeb99030a54631364476644cbab002e5fb89d3e925fbfe7c22d2a"
+  },
+  {
+    "path": "godot-spike/tools/capture_a3.gd.uid",
+    "sha256_working_tree": "8ff3c9eaa9b7a58ecf6acd3ad05a3744ede015ec5c6858fb8448b76267d09bb9",
+    "sha256_git_lf": "8ff3c9eaa9b7a58ecf6acd3ad05a3744ede015ec5c6858fb8448b76267d09bb9"
+  },
+  {
+    "path": "godot-spike/tools/capture_a4.gd",
+    "sha256_working_tree": "318694d79af03d8a0b1bed7353f38bb8ac7e05df96a31e6dae7036f584326079",
+    "sha256_git_lf": "318694d79af03d8a0b1bed7353f38bb8ac7e05df96a31e6dae7036f584326079"
+  },
+  {
+    "path": "godot-spike/tools/capture_a4.gd.uid",
+    "sha256_working_tree": "f1c42161cc0e065ed353700319abb0f9bd7831d5f975439a2b85c939a7db2ef4",
+    "sha256_git_lf": "f1c42161cc0e065ed353700319abb0f9bd7831d5f975439a2b85c939a7db2ef4"
+  },
+  {
+    "path": "godot-spike/tools/capture_a5.gd",
+    "sha256_working_tree": "76b45ef04b832650e04af7aa60818101b3edefd6987c61b79cf42203b1197316",
+    "sha256_git_lf": "76b45ef04b832650e04af7aa60818101b3edefd6987c61b79cf42203b1197316"
+  },
+  {
+    "path": "godot-spike/tools/capture_a5.gd.uid",
+    "sha256_working_tree": "dd2451bf010d2f4ceeebd18231f5eeaa83b0636f0464c01e10da0afc1f3bd8ee",
+    "sha256_git_lf": "dd2451bf010d2f4ceeebd18231f5eeaa83b0636f0464c01e10da0afc1f3bd8ee"
+  },
+  {
+    "path": "godot-spike/tools/capture_a6.gd",
+    "sha256_working_tree": "3f8b7eb09e6ec62ec8b7e7c3f13b538b3519d7540cdf7daff0bbcaf98d5f9a58",
+    "sha256_git_lf": "3f8b7eb09e6ec62ec8b7e7c3f13b538b3519d7540cdf7daff0bbcaf98d5f9a58"
+  },
+  {
+    "path": "godot-spike/tools/capture_a6.gd.uid",
+    "sha256_working_tree": "c9a64d996e682a6c903ca475bc9b95ea9d7b76110d8f76065036cfbfebc95c82",
+    "sha256_git_lf": "c9a64d996e682a6c903ca475bc9b95ea9d7b76110d8f76065036cfbfebc95c82"
+  },
+  {
+    "path": "godot-spike/tools/capture_a7.gd",
+    "sha256_working_tree": "90c689fb56c911a23bc0bbb92dccc7d585c0af4fb58214662e8dd72df81bd25e",
+    "sha256_git_lf": "90c689fb56c911a23bc0bbb92dccc7d585c0af4fb58214662e8dd72df81bd25e"
+  },
+  {
+    "path": "godot-spike/tools/capture_a7.gd.uid",
+    "sha256_working_tree": "12c5b0fd3e6aaa8e62bc228c305058ab2edc29a784cd875e4cdcc43d21ae336a",
+    "sha256_git_lf": "12c5b0fd3e6aaa8e62bc228c305058ab2edc29a784cd875e4cdcc43d21ae336a"
+  },
+  {
+    "path": "godot-spike/tools/capture_a8.gd",
+    "sha256_working_tree": "70eb69e018d2827846f101bcef284b0148d9d53f72c9ce3cc5091dd85b2cd382",
+    "sha256_git_lf": "cda297b413d8f549aee83f248ba870192279254e1fc7d8279c7ba98249f96adc"
+  },
+  {
+    "path": "godot-spike/tools/capture_a8.gd.uid",
+    "sha256_working_tree": "70096133e0dcf309a8219781332aa19fd5f6510b9d7bbb75b00cf3331f1d20e5",
+    "sha256_git_lf": "70096133e0dcf309a8219781332aa19fd5f6510b9d7bbb75b00cf3331f1d20e5"
+  },
+  {
+    "path": "godot-spike/tools/capture_a9.gd",
+    "sha256_working_tree": "8405709a4d63387e7fb0c2c806dc9b05dec543b3994feaa3556c518d3fcfb6ae",
+    "sha256_git_lf": "8405709a4d63387e7fb0c2c806dc9b05dec543b3994feaa3556c518d3fcfb6ae"
+  },
+  {
+    "path": "godot-spike/tools/capture_a9.gd.uid",
+    "sha256_working_tree": "676f3a139b4ad880fcad97ccd2612a2e8c5ea04aa765abd7755a2254ea9313b0",
+    "sha256_git_lf": "676f3a139b4ad880fcad97ccd2612a2e8c5ea04aa765abd7755a2254ea9313b0"
+  },
+  {
+    "path": "godot-spike/tools/capture_big_map.gd",
+    "sha256_working_tree": "2277ee32c36a33f24b69d3700b1a1177c048541300b2bb4c1efdbfeb8a014299",
+    "sha256_git_lf": "2277ee32c36a33f24b69d3700b1a1177c048541300b2bb4c1efdbfeb8a014299"
+  },
+  {
+    "path": "godot-spike/tools/capture_big_map.gd.uid",
+    "sha256_working_tree": "e9b69645ed3d6f90c7205371eecd459d7b7d8bb9cf651da856f1066c0e8b6f2c",
+    "sha256_git_lf": "e9b69645ed3d6f90c7205371eecd459d7b7d8bb9cf651da856f1066c0e8b6f2c"
+  },
+  {
+    "path": "godot-spike/tools/capture_field.gd",
+    "sha256_working_tree": "69db4afedc0c1ebe845e3e5e9b85226c6835b65b45a00068514689d99b403ae4",
+    "sha256_git_lf": "69db4afedc0c1ebe845e3e5e9b85226c6835b65b45a00068514689d99b403ae4"
+  },
+  {
+    "path": "godot-spike/tools/capture_field.gd.uid",
+    "sha256_working_tree": "67598c65a76ca1acee025d1f0724e4dcdfd85f6ac38602af2975b58c737cf7dd",
+    "sha256_git_lf": "67598c65a76ca1acee025d1f0724e4dcdfd85f6ac38602af2975b58c737cf7dd"
+  },
+  {
+    "path": "godot-spike/tools/capture_field05.gd",
+    "sha256_working_tree": "2d2d7a19a1eaabb58fdfbe97f44f6b25cff11e83bc9c8a4324ca23d119107ff6",
+    "sha256_git_lf": "2d2d7a19a1eaabb58fdfbe97f44f6b25cff11e83bc9c8a4324ca23d119107ff6"
+  },
+  {
+    "path": "godot-spike/tools/capture_field05.gd.uid",
+    "sha256_working_tree": "4e477eb41e63997c7780277708a55524d23840356a0d06c0aeca8972b5da41f4",
+    "sha256_git_lf": "4e477eb41e63997c7780277708a55524d23840356a0d06c0aeca8972b5da41f4"
+  },
+  {
+    "path": "godot-spike/tools/capture_field_stage.gd",
+    "sha256_working_tree": "07dd5d808f07377fe8deeadba81cd3ea0501a9a9ca84fcbf33bdc00042ce54bd",
+    "sha256_git_lf": "07dd5d808f07377fe8deeadba81cd3ea0501a9a9ca84fcbf33bdc00042ce54bd"
+  },
+  {
+    "path": "godot-spike/tools/capture_field_stage.gd.uid",
+    "sha256_working_tree": "3fe6594bf92c3deae956dddcfae01371f62dfe0504365ef28e236132c21033b7",
+    "sha256_git_lf": "3fe6594bf92c3deae956dddcfae01371f62dfe0504365ef28e236132c21033b7"
+  },
+  {
+    "path": "godot-spike/tools/capture_hit_field05.gd",
+    "sha256_working_tree": "44b171c8eab3bd1687c6b6b644fccace6726b3fbef18e4a87abf58377ef2cbc1",
+    "sha256_git_lf": "44b171c8eab3bd1687c6b6b644fccace6726b3fbef18e4a87abf58377ef2cbc1"
+  },
+  {
+    "path": "godot-spike/tools/capture_hit_field05.gd.uid",
+    "sha256_working_tree": "6d40a49bd08ee7a4eedf375be09e80b12c1d46b23368518ef7e6b408008a2356",
+    "sha256_git_lf": "6d40a49bd08ee7a4eedf375be09e80b12c1d46b23368518ef7e6b408008a2356"
+  },
+  {
+    "path": "godot-spike/tools/capture_spike03.gd",
+    "sha256_working_tree": "006d5682f03eb8f21236632aa1701dc2186f099b6bde71f4517073cae7207f16",
+    "sha256_git_lf": "006d5682f03eb8f21236632aa1701dc2186f099b6bde71f4517073cae7207f16"
+  },
+  {
+    "path": "godot-spike/tools/capture_spike03.gd.uid",
+    "sha256_working_tree": "a67e063d9d83daafc887703b8b3480d525478ac83ea58e105196f9a4de724ba4",
+    "sha256_git_lf": "a67e063d9d83daafc887703b8b3480d525478ac83ea58e105196f9a4de724ba4"
+  },
+  {
+    "path": "godot-spike/tools/capture_spike04.gd",
+    "sha256_working_tree": "ce101ecc192581099905efd81b32b2d98fd826e3b3a33118d20aeecc65c51ef4",
+    "sha256_git_lf": "ce101ecc192581099905efd81b32b2d98fd826e3b3a33118d20aeecc65c51ef4"
+  },
+  {
+    "path": "godot-spike/tools/capture_spike04.gd.uid",
+    "sha256_working_tree": "96e4b76617588b1687be206267c79773721b9a749f66a1845a62746edc74849e",
+    "sha256_git_lf": "96e4b76617588b1687be206267c79773721b9a749f66a1845a62746edc74849e"
+  },
+  {
+    "path": "godot-spike/tools/capture_spike05.gd",
+    "sha256_working_tree": "801005c06c9fd5beb8f35c475c5b0aa1b12fe6a53514382032bf6499210bc858",
+    "sha256_git_lf": "801005c06c9fd5beb8f35c475c5b0aa1b12fe6a53514382032bf6499210bc858"
+  },
+  {
+    "path": "godot-spike/tools/capture_spike05.gd.uid",
+    "sha256_working_tree": "22d36577af7ae44dc9c522ef6b540c1acd68d2875ca5c975d43d37e2b1730f1d",
+    "sha256_git_lf": "22d36577af7ae44dc9c522ef6b540c1acd68d2875ca5c975d43d37e2b1730f1d"
+  },
+  {
+    "path": "godot-spike/tools/check_a4_reproduction.py",
+    "sha256_working_tree": "bcd7ecf8576ebf15c06b1b666cec33360d1f1364c764c7c2baa76bc10afc7b33",
+    "sha256_git_lf": "bcd7ecf8576ebf15c06b1b666cec33360d1f1364c764c7c2baa76bc10afc7b33"
+  },
+  {
+    "path": "godot-spike/tools/check_a5_reproduction.py",
+    "sha256_working_tree": "d12d2c47e1ab921b784229c23107518c6e82a892b365afccfd80bce19ca60241",
+    "sha256_git_lf": "d12d2c47e1ab921b784229c23107518c6e82a892b365afccfd80bce19ca60241"
+  },
+  {
+    "path": "godot-spike/tools/check_a6_reproduction.py",
+    "sha256_working_tree": "5858449fabe68112040df995046fce3252f5da3c417df0426e5a7c6da3a83e12",
+    "sha256_git_lf": "5858449fabe68112040df995046fce3252f5da3c417df0426e5a7c6da3a83e12"
+  },
+  {
+    "path": "godot-spike/tools/create_a6_capture.py",
+    "sha256_working_tree": "b8c5c8b0485c9363be659ee127bb267bb4c7c91122ef61804f87947444664ab3",
+    "sha256_git_lf": "b8c5c8b0485c9363be659ee127bb267bb4c7c91122ef61804f87947444664ab3"
+  },
+  {
+    "path": "godot-spike/tools/create_a6_package.py",
+    "sha256_working_tree": "c6ad45c96afe7c576878a974766f8d60ac2e8b2f37070316b9911c9b5c67ff6e",
+    "sha256_git_lf": "c6ad45c96afe7c576878a974766f8d60ac2e8b2f37070316b9911c9b5c67ff6e"
+  },
+  {
+    "path": "godot-spike/tools/create_a7_capture.py",
+    "sha256_working_tree": "ee744c96b342e2bca990612a7413331b884e8077e40c9bac479a069deaca5999",
+    "sha256_git_lf": "ee744c96b342e2bca990612a7413331b884e8077e40c9bac479a069deaca5999"
+  },
+  {
+    "path": "godot-spike/tools/document_a9.py",
+    "sha256_working_tree": "f62571977a1cf6d6eea1550514ba79a20787cf939469d04a0e69a9afa1c54b45",
+    "sha256_git_lf": "f62571977a1cf6d6eea1550514ba79a20787cf939469d04a0e69a9afa1c54b45"
+  },
+  {
+    "path": "godot-spike/tools/field_policy.gd",
+    "sha256_working_tree": "48fe0f37995fda211116be338e755664a00f0b5ccab9aed1175fdf81b5c80701",
+    "sha256_git_lf": "48fe0f37995fda211116be338e755664a00f0b5ccab9aed1175fdf81b5c80701"
+  },
+  {
+    "path": "godot-spike/tools/field_policy.gd.uid",
+    "sha256_working_tree": "22750616fa02f1f4ed4617240c9b0cc9dddd0dcbe14c3b47b2ff86e9183407de",
+    "sha256_git_lf": "22750616fa02f1f4ed4617240c9b0cc9dddd0dcbe14c3b47b2ff86e9183407de"
+  },
+  {
+    "path": "godot-spike/tools/fix_a9_regions.py",
+    "sha256_working_tree": "bc4ee52ab4d0d784d255791f06334c1830e2f7e26e85184bee4f4715a7e1b745",
+    "sha256_git_lf": "bc4ee52ab4d0d784d255791f06334c1830e2f7e26e85184bee4f4715a7e1b745"
+  },
+  {
+    "path": "godot-spike/tools/make_field_art.py",
+    "sha256_working_tree": "d7d8a684efc4934a102c3951f3d4e93bacb899b776da0a3c16e1b2b65f34d9d6",
+    "sha256_git_lf": "d7d8a684efc4934a102c3951f3d4e93bacb899b776da0a3c16e1b2b65f34d9d6"
+  },
+  {
+    "path": "godot-spike/tools/measure_a3_readability.py",
+    "sha256_working_tree": "09962c1eb225801490aff5d4ea31aa8e7e90680dc14dc78a9a86b83498c05328",
+    "sha256_git_lf": "09962c1eb225801490aff5d4ea31aa8e7e90680dc14dc78a9a86b83498c05328"
+  },
+  {
+    "path": "godot-spike/tools/measure_readability.py",
+    "sha256_working_tree": "83eae6a59bec587ec7da3ca088da1dd06d098a173f5d08e1addb4037df0cb397",
+    "sha256_git_lf": "83eae6a59bec587ec7da3ca088da1dd06d098a173f5d08e1addb4037df0cb397"
+  },
+  {
+    "path": "godot-spike/tools/normalize_a6_logs.py",
+    "sha256_working_tree": "52597f6953c7d212759dd7be0af4d0a7f234d173a3d6240f3a9457a58afcf81a",
+    "sha256_git_lf": "52597f6953c7d212759dd7be0af4d0a7f234d173a3d6240f3a9457a58afcf81a"
+  },
+  {
+    "path": "godot-spike/tools/normalize_a7_logs.py",
+    "sha256_working_tree": "305fe6ade206553061673e4aee873fce3849a8e22f6af2a1c1c75cf266c8a5a6",
+    "sha256_git_lf": "305fe6ade206553061673e4aee873fce3849a8e22f6af2a1c1c75cf266c8a5a6"
+  },
+  {
+    "path": "godot-spike/tools/package_a2_evidence.py",
+    "sha256_working_tree": "716a8e5a83cbbb98e6c43d5ed4cc24ee68b3efc127ba99079856bc325904f18e",
+    "sha256_git_lf": "716a8e5a83cbbb98e6c43d5ed4cc24ee68b3efc127ba99079856bc325904f18e"
+  },
+  {
+    "path": "godot-spike/tools/package_a3_evidence.py",
+    "sha256_working_tree": "ace86d8c969abca966e2afea586473e9c563cc71bd7f5c501848a08084b674ba",
+    "sha256_git_lf": "ace86d8c969abca966e2afea586473e9c563cc71bd7f5c501848a08084b674ba"
+  },
+  {
+    "path": "godot-spike/tools/package_a4_evidence.py",
+    "sha256_working_tree": "14e4f253820b909073874aff6d5eda53ae34ea6bc079d5bd920809344068ef52",
+    "sha256_git_lf": "14e4f253820b909073874aff6d5eda53ae34ea6bc079d5bd920809344068ef52"
+  },
+  {
+    "path": "godot-spike/tools/package_a5_evidence.py",
+    "sha256_working_tree": "4171d5ebc456f597cedb59409d6a4777201fd15050a7f351afdfedfec48b0bbf",
+    "sha256_git_lf": "4171d5ebc456f597cedb59409d6a4777201fd15050a7f351afdfedfec48b0bbf"
+  },
+  {
+    "path": "godot-spike/tools/package_a6_evidence.py",
+    "sha256_working_tree": "2413981251b4a8688528641a4757c9e9f24d5171b81ebbaed9bfa4cf44e022c5",
+    "sha256_git_lf": "2413981251b4a8688528641a4757c9e9f24d5171b81ebbaed9bfa4cf44e022c5"
+  },
+  {
+    "path": "godot-spike/tools/package_a7_evidence.py",
+    "sha256_working_tree": "917fea56ddb19d23dc7a8a434fb912c31c5a4eb1d249fad422adaa7acfc0478a",
+    "sha256_git_lf": "917fea56ddb19d23dc7a8a434fb912c31c5a4eb1d249fad422adaa7acfc0478a"
+  },
+  {
+    "path": "godot-spike/tools/package_a8_evidence.py",
+    "sha256_working_tree": "62e5d053440d55574e3e2290b1c35a18db85181275a0abea798f652e2d9cf09d",
+    "sha256_git_lf": "62e5d053440d55574e3e2290b1c35a18db85181275a0abea798f652e2d9cf09d"
+  },
+  {
+    "path": "godot-spike/tools/package_a9_evidence.py",
+    "sha256_working_tree": "83fa3375611769476287b95a1a086aaafe42e8217980e9e8c598bde94fdd3134",
+    "sha256_git_lf": "83fa3375611769476287b95a1a086aaafe42e8217980e9e8c598bde94fdd3134"
+  },
+  {
+    "path": "godot-spike/tools/package_field_evidence.py",
+    "sha256_working_tree": "bce628c0d5769f76d4a9827b1f727bf9d3fe1e50fb8f24bb2fe2aa3a1aa0bfc7",
+    "sha256_git_lf": "bce628c0d5769f76d4a9827b1f727bf9d3fe1e50fb8f24bb2fe2aa3a1aa0bfc7"
+  },
+  {
+    "path": "godot-spike/tools/package_spike02_evidence.py",
+    "sha256_working_tree": "237a0e9f3e20512983864b83c88ad53ea50a01fe954c65fd00178d97b8ad4a95",
+    "sha256_git_lf": "237a0e9f3e20512983864b83c88ad53ea50a01fe954c65fd00178d97b8ad4a95"
+  },
+  {
+    "path": "godot-spike/tools/package_spike03.py",
+    "sha256_working_tree": "1e4dc8325389181a593998804cc40fd6c1eabfc2ab4be1317c2e0de8d68bd799",
+    "sha256_git_lf": "1e4dc8325389181a593998804cc40fd6c1eabfc2ab4be1317c2e0de8d68bd799"
+  },
+  {
+    "path": "godot-spike/tools/package_spike04_hitfeel.py",
+    "sha256_working_tree": "280fe7c7b6285d34c0486466d35a581323027980cd6b4a81807ef994619dce2f",
+    "sha256_git_lf": "280fe7c7b6285d34c0486466d35a581323027980cd6b4a81807ef994619dce2f"
+  },
+  {
+    "path": "godot-spike/tools/package_spike05_field.py",
+    "sha256_working_tree": "b1457df62b7e7a81e1d3b7a90a7ecd9cf6c0686880b0907259717c1b5e81451b",
+    "sha256_git_lf": "b1457df62b7e7a81e1d3b7a90a7ecd9cf6c0686880b0907259717c1b5e81451b"
+  },
+  {
+    "path": "godot-spike/tools/package_spike05_hitfeel.py",
+    "sha256_working_tree": "75d366a701ed745b81282d1b00f213b933bf00fab25111bb8a23386c05d4ae43",
+    "sha256_git_lf": "75d366a701ed745b81282d1b00f213b933bf00fab25111bb8a23386c05d4ae43"
+  },
+  {
+    "path": "godot-spike/tools/prepare_a2_frames.py",
+    "sha256_working_tree": "ab2d8de573dd62b2c350edb1080617703e9616a139f552deb1b88e0f109c0016",
+    "sha256_git_lf": "a64c9d388afd1ed7fcf0d988cf54a6d5576a5627f05dc5964f6f96f148774734"
+  },
+  {
+    "path": "godot-spike/tools/prepare_a2_knight.py",
+    "sha256_working_tree": "477dff33e33aaebb9ee2ebdec6e39d6b09f604157938bc508924018289303cc9",
+    "sha256_git_lf": "477dff33e33aaebb9ee2ebdec6e39d6b09f604157938bc508924018289303cc9"
+  },
+  {
+    "path": "godot-spike/tools/prepare_a3_frames.py",
+    "sha256_working_tree": "9cf6afb73e1d640cb38f682eba3237538956529c05ea658b8d39a324d26dc7a0",
+    "sha256_git_lf": "9cf6afb73e1d640cb38f682eba3237538956529c05ea658b8d39a324d26dc7a0"
+  },
+  {
+    "path": "godot-spike/tools/prepare_a4_frames.py",
+    "sha256_working_tree": "7595c4e3bcc6502ea14b038e7429e0ed81388fe10ce662135ef21325009976bf",
+    "sha256_git_lf": "7595c4e3bcc6502ea14b038e7429e0ed81388fe10ce662135ef21325009976bf"
+  },
+  {
+    "path": "godot-spike/tools/prepare_a5_frames.py",
+    "sha256_working_tree": "183ecc35831ea67088eb0ed1a460865e3dcf6d246e5516ddb815c687074fd602",
+    "sha256_git_lf": "89fcba652ce31f4276d5d1b9e1afcc81ffc83d7ee35d3c84cdfe4bc6640f701b"
+  },
+  {
+    "path": "godot-spike/tools/prepare_a6_frames.py",
+    "sha256_working_tree": "db6b18d17577a5b2bcb892f664f6fc4fe83a00ee280bf4eacc3363218c26d3de",
+    "sha256_git_lf": "db6b18d17577a5b2bcb892f664f6fc4fe83a00ee280bf4eacc3363218c26d3de"
+  },
+  {
+    "path": "godot-spike/tools/prepare_a7_frames.py",
+    "sha256_working_tree": "1c872601e9fbd03e87756264a00c9540b25b1d0807a72b199884c913286903d0",
+    "sha256_git_lf": "1c872601e9fbd03e87756264a00c9540b25b1d0807a72b199884c913286903d0"
+  },
+  {
+    "path": "godot-spike/tools/prepare_a8_sheet.py",
+    "sha256_working_tree": "8130bc7a10782dee22cfc1e23ed4507e946c389e3b5de40ca0de35fef110b72d",
+    "sha256_git_lf": "8130bc7a10782dee22cfc1e23ed4507e946c389e3b5de40ca0de35fef110b72d"
+  },
+  {
+    "path": "godot-spike/tools/prepare_a9_capture.py",
+    "sha256_working_tree": "c23b498db28197707554ed570090511e97dc8577d27ee2a572f1ad2c56b65616",
+    "sha256_git_lf": "c23b498db28197707554ed570090511e97dc8577d27ee2a572f1ad2c56b65616"
+  },
+  {
+    "path": "godot-spike/tools/prepare_a9_regions.py",
+    "sha256_working_tree": "33bdcb56fe01be33a3a9fc1d926e9370511302c68260029166db563d5a260757",
+    "sha256_git_lf": "33bdcb56fe01be33a3a9fc1d926e9370511302c68260029166db563d5a260757"
+  },
+  {
+    "path": "godot-spike/tools/prepare_frames.py",
+    "sha256_working_tree": "760d355c0e8ac96d0e4ff0e77d6af9d841441eb09d43a7e4db82c6d1d1ae8a5c",
+    "sha256_git_lf": "760d355c0e8ac96d0e4ff0e77d6af9d841441eb09d43a7e4db82c6d1d1ae8a5c"
+  },
+  {
+    "path": "godot-spike/tools/readability_a3.gd",
+    "sha256_working_tree": "f6dfb2b09b21bbaa2f8bc9fe78442c8287bf7394511ec702c46c9cff5c9dafe9",
+    "sha256_git_lf": "f6dfb2b09b21bbaa2f8bc9fe78442c8287bf7394511ec702c46c9cff5c9dafe9"
+  },
+  {
+    "path": "godot-spike/tools/readability_a3.gd.uid",
+    "sha256_working_tree": "843410d69f144ee004cedf1a4835d0d0781983ef3be0e2c292dda51bf7426d32",
+    "sha256_git_lf": "843410d69f144ee004cedf1a4835d0d0781983ef3be0e2c292dda51bf7426d32"
+  },
+  {
+    "path": "godot-spike/tools/record_a6_provenance.py",
+    "sha256_working_tree": "960fd43914ddc9524bd6f3fcf237797c6889fb1ac1141772c0c8fff4eefc6b58",
+    "sha256_git_lf": "960fd43914ddc9524bd6f3fcf237797c6889fb1ac1141772c0c8fff4eefc6b58"
+  },
+  {
+    "path": "godot-spike/tools/refine_a7_followthrough.py",
+    "sha256_working_tree": "d28f2eb97a3280e0b7981ccadd3e956e253dd161d24d176a6263bdb4f0057c90",
+    "sha256_git_lf": "d28f2eb97a3280e0b7981ccadd3e956e253dd161d24d176a6263bdb4f0057c90"
+  },
+  {
+    "path": "godot-spike/tools/sync_shared_anim.gd",
+    "sha256_working_tree": "66dd8a4ca8cf168a567e16d46109820fdef9eeb5428cf466c51ae2798a381a45",
+    "sha256_git_lf": "66dd8a4ca8cf168a567e16d46109820fdef9eeb5428cf466c51ae2798a381a45"
+  },
+  {
+    "path": "godot-spike/tools/sync_shared_anim.gd.uid",
+    "sha256_working_tree": "bee3a9b80f26733c43802413a55388b44a0d8d1c3ebaff8fe924dd9f5abc7f7b",
+    "sha256_git_lf": "bee3a9b80f26733c43802413a55388b44a0d8d1c3ebaff8fe924dd9f5abc7f7b"
+  },
+  {
+    "path": "godot-spike/tools/update_a6_historical_tests.py",
+    "sha256_working_tree": "00eea75f47737cb657c13fa42976af9c3e353aa29c78242b25e6a93a774406f0",
+    "sha256_git_lf": "00eea75f47737cb657c13fa42976af9c3e353aa29c78242b25e6a93a774406f0"
+  },
+  {
+    "path": "godot-spike/tools/update_a7_historical_tests.py",
+    "sha256_working_tree": "62085d0bd9ef0cc36170bb7c4958040120775e456d6ba1dd10de5042de25ae2f",
+    "sha256_git_lf": "62085d0bd9ef0cc36170bb7c4958040120775e456d6ba1dd10de5042de25ae2f"
+  },
+  {
+    "path": "godot-spike/tools/update_a8_historical_tests.py",
+    "sha256_working_tree": "ec68c707bac44aa980fc7a73f291a85dd919dbb9f4a2c91bc42129be55e1a186",
+    "sha256_git_lf": "ec68c707bac44aa980fc7a73f291a85dd919dbb9f4a2c91bc42129be55e1a186"
+  },
+  {
+    "path": "godot-spike/tools/update_a9_historical_tests.py",
+    "sha256_working_tree": "d44007bd07c3bd0d5b7ecad3ca2a45cd2d86001b69b1a0e7bdb70a62dbbf6139",
+    "sha256_git_lf": "d44007bd07c3bd0d5b7ecad3ca2a45cd2d86001b69b1a0e7bdb70a62dbbf6139"
+  },
+  {
+    "path": "shared-anim/a2-generation-prompts.json",
+    "sha256_working_tree": "a5c0ed40286be5b5bcc74f373087d793c66baa8aba0d1e44733277bd7dfc0010",
+    "sha256_git_lf": "1de791f7786cfbfdb780e72427e812a8a8864ebeca698a0cca86766871bc7d54"
+  },
+  {
+    "path": "shared-anim/a2-retry-prompt.json",
+    "sha256_working_tree": "eee84851094b23132ed5a0bfb530bbe149bf8432a901ccb585728d982d9357c4",
+    "sha256_git_lf": "68dc168b60ebcf62a9a489ca226d8990e49deb7a715eb0e3df88086ba3672b0c"
+  },
+  {
+    "path": "shared-anim/a2-swing-prompts.json",
+    "sha256_working_tree": "d12577e1871a711266bd3bab21b1976b32f86168afc0d112d3f8f270181abc7f",
+    "sha256_git_lf": "49d55d34800ad636622953da5fb66ba16a2ba8feef3df75e2955426cb6878e3b"
+  },
+  {
+    "path": "shared-anim/a3-swing-prompts.json",
+    "sha256_working_tree": "43c9643628994824299714c49abe658ce46c49afd243f195664540bbc9e2830a",
+    "sha256_git_lf": "43c9643628994824299714c49abe658ce46c49afd243f195664540bbc9e2830a"
+  },
+  {
+    "path": "shared-anim/a4-swing-prompts.json",
+    "sha256_working_tree": "5ca3fea3b413d37628a961d1ced4931c208126612b5769b99c83f77e068310eb",
+    "sha256_git_lf": "5ca3fea3b413d37628a961d1ced4931c208126612b5769b99c83f77e068310eb"
+  },
+  {
+    "path": "shared-anim/a5-swing-prompts.json",
+    "sha256_working_tree": "e8c21b294c034e5c249ee19803198ffc733258ae32501d31bdb20131b6f8da43",
+    "sha256_git_lf": "e8c21b294c034e5c249ee19803198ffc733258ae32501d31bdb20131b6f8da43"
+  },
+  {
+    "path": "shared-anim/a6-swing-prompts.json",
+    "sha256_working_tree": "ca2e2e4c83046910b028f28a684fb7663cef3561164408174cffaec84820a84f",
+    "sha256_git_lf": "ca2e2e4c83046910b028f28a684fb7663cef3561164408174cffaec84820a84f"
+  },
+  {
+    "path": "shared-anim/a7-swing-prompts.json",
+    "sha256_working_tree": "d35facf74f01ce05fec5b23fac733b54e57a0ff569227a92b55921413d8c6f5a",
+    "sha256_git_lf": "d35facf74f01ce05fec5b23fac733b54e57a0ff569227a92b55921413d8c6f5a"
+  },
+  {
+    "path": "shared-anim/a8-swing-prompts.json",
+    "sha256_working_tree": "7926c473e30c8d1448f1d0c28181b06ece7b0c6d0d6bb1192a6c7b2af1e83723",
+    "sha256_git_lf": "703847ff50a9edf84f284ea309292830c83f8127e7cf05c8455826aa67249ef5"
+  },
+  {
+    "path": "shared-anim/contact-sheet.png",
+    "sha256_working_tree": "992a6554ae0871cae73feceaa3b73ab29d5c4196ca9adc1ab2325b3fbaca303e",
+    "sha256_git_lf": "992a6554ae0871cae73feceaa3b73ab29d5c4196ca9adc1ab2325b3fbaca303e"
+  },
+  {
+    "path": "shared-anim/frame-audit.json",
+    "sha256_working_tree": "479e128c372db3578a3dc490ed26be4156d3bcd85812f8ee362eb25072bed8c5",
+    "sha256_git_lf": "f55811691131c0bd207a7bc8acf7679ee5bd9aab6a88ba513d2b32cc3a5e7453"
+  },
+  {
+    "path": "shared-anim/generation-prompts.json",
+    "sha256_working_tree": "20bf9c7cd31cb363d2b244e84c343375605a8157cd191a1b42422cbf45a7ebcb",
+    "sha256_git_lf": "03e9f0c3aa8a72413b8a814ee86995691b4a32e094d2cd2e7d6fb3d6c5274574"
+  },
+  {
+    "path": "shared-anim/knight-a/hit/00.png",
+    "sha256_working_tree": "6ebef74b6cf9520b5f5a243fb4d9bf669bf78bc6c52f9d6b99ce8202619d2b41",
+    "sha256_git_lf": "6ebef74b6cf9520b5f5a243fb4d9bf669bf78bc6c52f9d6b99ce8202619d2b41"
+  },
+  {
+    "path": "shared-anim/knight-a/hit/01.png",
+    "sha256_working_tree": "9fbf4a41ffcc16d7c0e75a1f74a182ef33eed4c869f934341cf81e2692b85179",
+    "sha256_git_lf": "9fbf4a41ffcc16d7c0e75a1f74a182ef33eed4c869f934341cf81e2692b85179"
+  },
+  {
+    "path": "shared-anim/knight-a/hit/02.png",
+    "sha256_working_tree": "0465fee5877109acb6723c56ebe71134f0d3fcc9ab6e6b9505d7be534f4523bb",
+    "sha256_git_lf": "0465fee5877109acb6723c56ebe71134f0d3fcc9ab6e6b9505d7be534f4523bb"
+  },
+  {
+    "path": "shared-anim/knight-a/idle/00.png",
+    "sha256_working_tree": "0ca4807cc16f63dba0b3a15bfaaa1d1a534892151db7dfb339e6c5c2b6edf791",
+    "sha256_git_lf": "0ca4807cc16f63dba0b3a15bfaaa1d1a534892151db7dfb339e6c5c2b6edf791"
+  },
+  {
+    "path": "shared-anim/knight-a/stagger/00.png",
+    "sha256_working_tree": "2cfe6ceb5de5380888937e1ec790102372b4efe5a2f7126a711780915f2948b6",
+    "sha256_git_lf": "2cfe6ceb5de5380888937e1ec790102372b4efe5a2f7126a711780915f2948b6"
+  },
+  {
+    "path": "shared-anim/knight-a/stagger/01.png",
+    "sha256_working_tree": "b4ec94ff31941285ebd450a706d0565c23745ad2757bcd9229c55797a4b1773b",
+    "sha256_git_lf": "b4ec94ff31941285ebd450a706d0565c23745ad2757bcd9229c55797a4b1773b"
+  },
+  {
+    "path": "shared-anim/knight-a/stagger/02.png",
+    "sha256_working_tree": "62594f3aaef1f3a70fdae0a1965c7649f8badf0a112afced863cf85b44e24dd6",
+    "sha256_git_lf": "62594f3aaef1f3a70fdae0a1965c7649f8badf0a112afced863cf85b44e24dd6"
+  },
+  {
+    "path": "shared-anim/knight-a2-edits.json",
+    "sha256_working_tree": "b16f995f3ad25686e05ce32d0e5b650d502818e52a6cc7bbbdb1bda633adc673",
+    "sha256_git_lf": "790ce38eb7f7b76dfe04f27c0714563d143d774593888225925511eb6b02043a"
+  },
+  {
+    "path": "shared-anim/knight-b/hit/00.png",
+    "sha256_working_tree": "cc853f78528c4c8391d70606eb4e4da39565ea5d73e568664620ba06c39ab5bd",
+    "sha256_git_lf": "cc853f78528c4c8391d70606eb4e4da39565ea5d73e568664620ba06c39ab5bd"
+  },
+  {
+    "path": "shared-anim/knight-b/hit/01.png",
+    "sha256_working_tree": "2b54bc88debb009b1a15164a6c40e07f1438eb5be33cb7bb0b0c632e85a7ae9e",
+    "sha256_git_lf": "2b54bc88debb009b1a15164a6c40e07f1438eb5be33cb7bb0b0c632e85a7ae9e"
+  },
+  {
+    "path": "shared-anim/knight-b/hit/02.png",
+    "sha256_working_tree": "e14b7ba82c075fef7a4f94d14c0309fec15316c73eddd0c3437e0d39b8e4a7cd",
+    "sha256_git_lf": "e14b7ba82c075fef7a4f94d14c0309fec15316c73eddd0c3437e0d39b8e4a7cd"
+  },
+  {
+    "path": "shared-anim/knight-b/idle/00.png",
+    "sha256_working_tree": "e71644dfef36fcb0cc1babd3db63ab9791ade1d1fbd7445601b77f51612e97b5",
+    "sha256_git_lf": "e71644dfef36fcb0cc1babd3db63ab9791ade1d1fbd7445601b77f51612e97b5"
+  },
+  {
+    "path": "shared-anim/knight-b/stagger/00.png",
+    "sha256_working_tree": "e5164c1a931d13ffdfcabffb345a2c2ff57f6f6f87e115aae3bc19c1fc7538e6",
+    "sha256_git_lf": "e5164c1a931d13ffdfcabffb345a2c2ff57f6f6f87e115aae3bc19c1fc7538e6"
+  },
+  {
+    "path": "shared-anim/knight-b/stagger/01.png",
+    "sha256_working_tree": "aaea5183f82ec03d531770331835530bfb841d3909bcf88875d2f2301d8a49cf",
+    "sha256_git_lf": "aaea5183f82ec03d531770331835530bfb841d3909bcf88875d2f2301d8a49cf"
+  },
+  {
+    "path": "shared-anim/knight-b/stagger/02.png",
+    "sha256_working_tree": "4c2dc1cad19b6a6f11a6727d689e53ea124d0644e698925311db4fdb6290e138",
+    "sha256_git_lf": "4c2dc1cad19b6a6f11a6727d689e53ea124d0644e698925311db4fdb6290e138"
+  },
+  {
+    "path": "shared-anim/knight-generation-prompts.json",
+    "sha256_working_tree": "6db965813b6179252519093d39a379a7736f23d60184ef0c422147de1de30e30",
+    "sha256_git_lf": "6db965813b6179252519093d39a379a7736f23d60184ef0c422147de1de30e30"
+  },
+  {
+    "path": "shared-anim/manifest.json",
+    "sha256_working_tree": "ac9f0a10b3ca7556ee04336cbb81d6c660bfa2406e1b5282b7802d8fc68a3eea",
+    "sha256_git_lf": "f754e21d12fb771e34faf882953a4910556da7bbc9868b9e364572d05b9b150b"
+  },
+  {
+    "path": "shared-anim/manifest.schema.json",
+    "sha256_working_tree": "fe64327043a5a4cf24b4501af2107abcdacc359b7da66f644c638cabe603690c",
+    "sha256_git_lf": "fb408d7e549ba7a68f131334bae1536bc13ea95b2145891142e221fcc35ce377"
+  },
+  {
+    "path": "shared-anim/raw/knight-a-hit-00.png",
+    "sha256_working_tree": "10260a5c1dd3cfdc7ed5eb70da250e74c7f7d1b36543bfee56d078eaff900a79",
+    "sha256_git_lf": "10260a5c1dd3cfdc7ed5eb70da250e74c7f7d1b36543bfee56d078eaff900a79"
+  },
+  {
+    "path": "shared-anim/raw/knight-a-hit-01.png",
+    "sha256_working_tree": "f528b4c5b14bd1dbc5eeba2e6a3e0c8e889c4bce684b0cab16ec3a506cfb592b",
+    "sha256_git_lf": "f528b4c5b14bd1dbc5eeba2e6a3e0c8e889c4bce684b0cab16ec3a506cfb592b"
+  },
+  {
+    "path": "shared-anim/raw/knight-a-hit-02.png",
+    "sha256_working_tree": "1596e1e438609947b652f20302c8735233247bd400c495125b18eb7743cce376",
+    "sha256_git_lf": "1596e1e438609947b652f20302c8735233247bd400c495125b18eb7743cce376"
+  },
+  {
+    "path": "shared-anim/raw/knight-a-stagger-00.png",
+    "sha256_working_tree": "2f32cc1dc5d47df2f0e40df3bc7790e38c26a2f5dd86ec778f52ee5559a9d299",
+    "sha256_git_lf": "2f32cc1dc5d47df2f0e40df3bc7790e38c26a2f5dd86ec778f52ee5559a9d299"
+  },
+  {
+    "path": "shared-anim/raw/knight-a-stagger-01.png",
+    "sha256_working_tree": "b7bc8fd69682eda80f00c74a26d7993726add31bf1b678323bc968b55399bbc2",
+    "sha256_git_lf": "b7bc8fd69682eda80f00c74a26d7993726add31bf1b678323bc968b55399bbc2"
+  },
+  {
+    "path": "shared-anim/raw/knight-a-stagger-02.png",
+    "sha256_working_tree": "7fa1a592fce21df8a5b08076f666b5e77db0cc29fc02b1521ffc931729cfc2cf",
+    "sha256_git_lf": "7fa1a592fce21df8a5b08076f666b5e77db0cc29fc02b1521ffc931729cfc2cf"
+  },
+  {
+    "path": "shared-anim/raw/thoma-a3-swing-00-attempt1.png",
+    "sha256_working_tree": "e0f0159ed683807366afe3350b3944a147e6565e5b576b39a8dd9f0e6efd00e0",
+    "sha256_git_lf": "e0f0159ed683807366afe3350b3944a147e6565e5b576b39a8dd9f0e6efd00e0"
+  },
+  {
+    "path": "shared-anim/raw/thoma-a3-swing-01-attempt1.png",
+    "sha256_working_tree": "804668a246aeb3330726d7dca2f9f270d393cd70a30496efb49dc12a48ce51ca",
+    "sha256_git_lf": "804668a246aeb3330726d7dca2f9f270d393cd70a30496efb49dc12a48ce51ca"
+  },
+  {
+    "path": "shared-anim/raw/thoma-a3-swing-02-attempt1.png",
+    "sha256_working_tree": "ba4fa98a9585520c21c9ab64dedd592578b7cd6bab75d2a700f5d64a52628525",
+    "sha256_git_lf": "ba4fa98a9585520c21c9ab64dedd592578b7cd6bab75d2a700f5d64a52628525"
+  },
+  {
+    "path": "shared-anim/raw/thoma-a3-swing-03-attempt1.png",
+    "sha256_working_tree": "beb43bf73db79d2c91103c0550dc9ca92421f8bc0fa7fc255b8d31209aa883b6",
+    "sha256_git_lf": "beb43bf73db79d2c91103c0550dc9ca92421f8bc0fa7fc255b8d31209aa883b6"
+  },
+  {
+    "path": "shared-anim/raw/thoma-a3-swing-04-attempt1.png",
+    "sha256_working_tree": "5ebcce2dd61852d41056f79f86a625add621994cd5fff3a56a4526b1b6115738",
+    "sha256_git_lf": "5ebcce2dd61852d41056f79f86a625add621994cd5fff3a56a4526b1b6115738"
+  },
+  {
+    "path": "shared-anim/raw/thoma-mace-idle-01.png",
+    "sha256_working_tree": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5",
+    "sha256_git_lf": "54196207e94c527120a44642e0ad68c79f9424e93d52e378d8268faf45a37db5"
+  },
+  {
+    "path": "shared-anim/raw/thoma-mace-swing-00.png",
+    "sha256_working_tree": "3bc1b5ef510e6b24ebd9625becd39c8370293fa23747c082a29e380e3997ff20",
+    "sha256_git_lf": "3bc1b5ef510e6b24ebd9625becd39c8370293fa23747c082a29e380e3997ff20"
+  },
+  {
+    "path": "shared-anim/raw/thoma-mace-swing-01.png",
+    "sha256_working_tree": "0e138449eaa3634f1af7ee8944b6b2273921d12b58452b7cf7f112d93e8fd8ba",
+    "sha256_git_lf": "0e138449eaa3634f1af7ee8944b6b2273921d12b58452b7cf7f112d93e8fd8ba"
+  },
+  {
+    "path": "shared-anim/raw/thoma-mace-swing-02-attempt2.png",
+    "sha256_working_tree": "274edae4742a67aedd787cb20e6e8b6ff12dce900a2797ac11d22300608b0551",
+    "sha256_git_lf": "274edae4742a67aedd787cb20e6e8b6ff12dce900a2797ac11d22300608b0551"
+  },
+  {
+    "path": "shared-anim/raw/thoma-mace-swing-03.png",
+    "sha256_working_tree": "aca010f6472a7aff8b164ee9ea0ae92e12f2f62b44eb19d286b1ba5ca5380ea8",
+    "sha256_git_lf": "aca010f6472a7aff8b164ee9ea0ae92e12f2f62b44eb19d286b1ba5ca5380ea8"
+  },
+  {
+    "path": "shared-anim/raw/thoma-mace-swing-04.png",
+    "sha256_working_tree": "eacc1d40c1b6e70d14d265ec57b81a9bcfcc44406f19afa1e84e44029a89a7bf",
+    "sha256_git_lf": "eacc1d40c1b6e70d14d265ec57b81a9bcfcc44406f19afa1e84e44029a89a7bf"
+  },
+  {
+    "path": "shared-anim/raw/thoma-mace-swing-05.png",
+    "sha256_working_tree": "e89296c8cd0a799e8d5302caf1f611aaa241e84f2a2c4ff56f8b77f4153f31dd",
+    "sha256_git_lf": "e89296c8cd0a799e8d5302caf1f611aaa241e84f2a2c4ff56f8b77f4153f31dd"
+  },
+  {
+    "path": "shared-anim/raw/thoma-swing-00.png",
+    "sha256_working_tree": "9b9abc677d83bdb671515bf64953acb3d85eddac73b7d96118aba20862a7ca97",
+    "sha256_git_lf": "9b9abc677d83bdb671515bf64953acb3d85eddac73b7d96118aba20862a7ca97"
+  },
+  {
+    "path": "shared-anim/raw/thoma-swing-01.png",
+    "sha256_working_tree": "fb72c1459e526cfbdfe93555edbcf1e626fd00d28cc7c7a1702d01ba753ae788",
+    "sha256_git_lf": "fb72c1459e526cfbdfe93555edbcf1e626fd00d28cc7c7a1702d01ba753ae788"
+  },
+  {
+    "path": "shared-anim/raw/thoma-swing-02.png",
+    "sha256_working_tree": "8a94a4e381d89005669c9200f925054a8e1aa53d7bbca76d4f0aadb22aff50ae",
+    "sha256_git_lf": "8a94a4e381d89005669c9200f925054a8e1aa53d7bbca76d4f0aadb22aff50ae"
+  },
+  {
+    "path": "shared-anim/raw/thoma-swing-03.png",
+    "sha256_working_tree": "e1007e646772e9b5b3d7f56aa8cb4e770249724b0e4699ff864e1d2f46747c06",
+    "sha256_git_lf": "e1007e646772e9b5b3d7f56aa8cb4e770249724b0e4699ff864e1d2f46747c06"
+  },
+  {
+    "path": "shared-anim/raw/thoma-swing-04.png",
+    "sha256_working_tree": "c4bf92b69f8bee4bc8dd4dccdc9bed90fcf00ac17806b76d0155d8f1a28b827c",
+    "sha256_git_lf": "c4bf92b69f8bee4bc8dd4dccdc9bed90fcf00ac17806b76d0155d8f1a28b827c"
+  },
+  {
+    "path": "shared-anim/raw/thoma-swing-05.png",
+    "sha256_working_tree": "9a8e01df6a7e3273664fc9536f5a0dd74ef43180bba69c684ba3061eac998851",
+    "sha256_git_lf": "9a8e01df6a7e3273664fc9536f5a0dd74ef43180bba69c684ba3061eac998851"
+  },
+  {
+    "path": "shared-anim/README.md",
+    "sha256_working_tree": "3d4f31a814e770c02e8ec88d325eff6c7a50d6c92b5b3c93e2c014749d5e895f",
+    "sha256_git_lf": "d41ba9b09b4fcd431ad7e439e7ae4643189092ee7b3b4d2308d4a2229f9cde9a"
+  },
+  {
+    "path": "shared-anim/references/knight-a.png",
+    "sha256_working_tree": "d8243331a939ea2359ec5dd6549e99a152d8eebb53481221ecbabc4cc77f4576",
+    "sha256_git_lf": "d8243331a939ea2359ec5dd6549e99a152d8eebb53481221ecbabc4cc77f4576"
+  },
+  {
+    "path": "shared-anim/references/sword-reference.png",
+    "sha256_working_tree": "e25f94a801ed7573cacaa3c128cf98716e59bcd647c50c314bfcc5904ff91f23",
+    "sha256_git_lf": "e25f94a801ed7573cacaa3c128cf98716e59bcd647c50c314bfcc5904ff91f23"
+  },
+  {
+    "path": "shared-anim/references/thoma.png",
+    "sha256_working_tree": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90",
+    "sha256_git_lf": "ae5897b5037e60d99c057ce389b767ef4ecff766e531df1a44c55478cd28af90"
+  },
+  {
+    "path": "shared-anim/rejected/thoma-mace-swing-02-attempt1.png",
+    "sha256_working_tree": "6cfdb628aac040081ecca0544a9faae3946731510c6f4669951a9a3e87055c7c",
+    "sha256_git_lf": "6cfdb628aac040081ecca0544a9faae3946731510c6f4669951a9a3e87055c7c"
+  },
+  {
+    "path": "shared-anim/SOURCES.md",
+    "sha256_working_tree": "c9acdd09a8860a305314c5d2ad256d4891b4a026da1c0c90738c18bfcd56ce4c",
+    "sha256_git_lf": "fbfcca5e8f08231f8afcc28267439775e90381aa0a5b25ad9d3cc92bf74c64ac"
+  },
+  {
+    "path": "shared-anim/thoma/idle/00.png",
+    "sha256_working_tree": "4214584c64eb57e3d63bdbb9975a2a0d41ee76cd4c6087b61485e795abe23400",
+    "sha256_git_lf": "4214584c64eb57e3d63bdbb9975a2a0d41ee76cd4c6087b61485e795abe23400"
+  },
+  {
+    "path": "shared-anim/thoma/idle/01.png",
+    "sha256_working_tree": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808",
+    "sha256_git_lf": "c109ac1680fbe9b93e8282cf9d2962b4dd0fb9c1e3251b6ef2c7517cc9b3a808"
+  },
+  {
+    "path": "shared-anim/thoma/swing/00.png",
+    "sha256_working_tree": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f",
+    "sha256_git_lf": "4d868166af7cec70502c377d7b3f38842aef18196bf14e63dd70a4abfb09ce1f"
+  },
+  {
+    "path": "shared-anim/thoma/swing/01.png",
+    "sha256_working_tree": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137",
+    "sha256_git_lf": "5f7f25f7ce89d82fcf3903faf3e0bc15d474b56b647ea9ffebfb43412ce87137"
+  },
+  {
+    "path": "shared-anim/thoma/swing/02.png",
+    "sha256_working_tree": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0",
+    "sha256_git_lf": "f7c4067e4b781eb491a2b6747478c90b8df1b937aca3b714c524b471f852c5b0"
+  },
+  {
+    "path": "shared-anim/thoma/swing/03.png",
+    "sha256_working_tree": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644",
+    "sha256_git_lf": "14b9fa2ca183db29908f1b0b30dde7b4386df26987b03f8ab9aa1e269c20e644"
+  },
+  {
+    "path": "shared-anim/thoma/swing/04.png",
+    "sha256_working_tree": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7",
+    "sha256_git_lf": "f9511153fe4716a3b0be3d717c1223d631aa458193bad12c019d61d68f383ed7"
+  },
+  {
+    "path": "shared-anim/thoma/swing/05.png",
+    "sha256_working_tree": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf",
+    "sha256_git_lf": "f0187ad4e82b45ac9c3495ca0c374f0aad868bc3d41be6ecfc4ebb6c13addebf"
+  },
+  {
+    "path": "shared-anim/thoma-appearance-spec.json",
+    "sha256_working_tree": "bb0c9ff5949c659f35a892ad4e2b38aa28bb645fd8b4a81fbdf6f76c01ddb163",
+    "sha256_git_lf": "bb0c9ff5949c659f35a892ad4e2b38aa28bb645fd8b4a81fbdf6f76c01ddb163"
+  },
+  {
+    "path": "shared-anim/thoma-appearance-spec.md",
+    "sha256_working_tree": "338cc220b2abbb6aba79e258eacc77ba5f48016de77a7408b6d65360cb79a804",
+    "sha256_git_lf": "338cc220b2abbb6aba79e258eacc77ba5f48016de77a7408b6d65360cb79a804"
+  },
+  {
+    "path": "shared-anim/thoma-weapon-style-check.png",
+    "sha256_working_tree": "f1a2e301db3848aed463f0fbb0c3e53c617c1d6c674e804df1d42ba059882afc",
+    "sha256_git_lf": "f1a2e301db3848aed463f0fbb0c3e53c617c1d6c674e804df1d42ba059882afc"
+  }
+]

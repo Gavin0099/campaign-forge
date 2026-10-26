@@ -79,3 +79,19 @@ func test_dense_labels_and_reinforcement_marker_declutter() -> void:
 	var entries: Array = field.hud.indicators.items
 	for i in range(entries.size()):
 		for j in range(i): assert_false(entries[i].rect.intersects(entries[j].rect))
+
+func test_attack_preview_fits_both_actors_immediately_before_confirm() -> void:
+	var r = field.Rules
+	var s: Dictionary = r.initial()
+	s.units=[r.make_unit("thoma","ally","ranged",Vector2i(20,17),"party",s.level),r.make_unit("target","enemy","knight",Vector2i(23,17),"front",s.level),r.make_unit("leader","enemy","leader",Vector2i(20,9),"leader",s.level)]
+	field.state=s
+	field.build_units()
+	field.camera.base_zoom=1.2
+	field.select_unit("thoma")
+	var original: Dictionary = field.state.duplicate(true)
+	field.choose(Vector2i(23,17))
+	assert_eq(field.pending.get("target"),"target")
+	assert_eq(field.state,original,"preview never resolves")
+	field.camera.sync()
+	for id in ["thoma","target"]:
+		assert_true(field.camera.SAFE.encloses(field.camera.screen_actor(field.actors[id].position,field.camera.position,field.camera.zoom.x)))
