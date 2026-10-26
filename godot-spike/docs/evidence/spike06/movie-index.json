@@ -1,0 +1,22 @@
+{
+  "enemy-wave-60fps": {
+    "fps": 60.00240009600384,
+    "frames": 178,
+    "resolution": [
+      1280,
+      720
+    ],
+    "bytes": 18699790,
+    "sha256": "438cdf2c14466cc1a894c221675d2178daa4d249ce1fc10b42264d9b853006f2"
+  },
+  "scout-flank-finish-retreat-60fps": {
+    "fps": 60.00240009600384,
+    "frames": 126,
+    "resolution": [
+      1280,
+      720
+    ],
+    "bytes": 14161172,
+    "sha256": "b48fca5b50e0d9e8ef9ffd174822d3a02353619a7444def386d595ef73cb1ad5"
+  }
+}

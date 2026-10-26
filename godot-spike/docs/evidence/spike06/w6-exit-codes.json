@@ -1,0 +1,19 @@
+{
+  "toolchain": "Godot 4.7.2 console; exact Owner path",
+  "final_modes": {
+    "measure": 0,
+    "perf": 0,
+    "runtime": 0,
+    "lose": 0,
+    "qa": 0,
+    "1080": 0,
+    "enemy": 0,
+    "scout": 0
+  },
+  "baseline_recheck": 0,
+  "after_pending": false,
+  "note": "Actual process exits observed in the W6 execution outputs. after is filled only on completion. measure/perf/runtime/lose were repeated after the terminal-only label fix.",
+  "after": 0,
+  "package_final": 0,
+  "package_first": 1
+}

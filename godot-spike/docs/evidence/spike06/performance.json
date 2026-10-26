@@ -1,0 +1,688 @@
+{
+	"method": "Native720p GL Compatibility max60FPS, no fixed clock/movie/readbacks or concurrent Godot. Wall frame intervals incl UI/rules/pacing. Wave-engaging reached phase; spike05 sampled T2 so workloads differ.",
+	"phases": [
+		{
+			"fast": false,
+			"seconds": 2.584324,
+			"skip_move": false,
+			"turn": 8
+		},
+		{
+			"fast": true,
+			"seconds": 1.721092,
+			"skip_move": false,
+			"turn": 8
+		}
+	],
+	"renderer": "AMD Radeon 780M Graphics",
+	"samples": [
+		{
+			"ms": 40.493,
+			"phase": "scroll"
+		},
+		{
+			"ms": 30.529,
+			"phase": "scroll"
+		},
+		{
+			"ms": 36.465,
+			"phase": "scroll"
+		},
+		{
+			"ms": 33.665,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.398,
+			"phase": "scroll"
+		},
+		{
+			"ms": 34.833,
+			"phase": "scroll"
+		},
+		{
+			"ms": 33.486,
+			"phase": "scroll"
+		},
+		{
+			"ms": 30.49,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.126,
+			"phase": "scroll"
+		},
+		{
+			"ms": 38.596,
+			"phase": "scroll"
+		},
+		{
+			"ms": 32.307,
+			"phase": "scroll"
+		},
+		{
+			"ms": 46.443,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.123,
+			"phase": "scroll"
+		},
+		{
+			"ms": 45.798,
+			"phase": "scroll"
+		},
+		{
+			"ms": 39.664,
+			"phase": "scroll"
+		},
+		{
+			"ms": 43.81,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.129,
+			"phase": "scroll"
+		},
+		{
+			"ms": 30.563,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.72,
+			"phase": "scroll"
+		},
+		{
+			"ms": 30.59,
+			"phase": "scroll"
+		},
+		{
+			"ms": 35.052,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.816,
+			"phase": "scroll"
+		},
+		{
+			"ms": 30.666,
+			"phase": "scroll"
+		},
+		{
+			"ms": 30.511,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.257,
+			"phase": "scroll"
+		},
+		{
+			"ms": 35.664,
+			"phase": "scroll"
+		},
+		{
+			"ms": 30.316,
+			"phase": "scroll"
+		},
+		{
+			"ms": 30.61,
+			"phase": "scroll"
+		},
+		{
+			"ms": 45.117,
+			"phase": "scroll"
+		},
+		{
+			"ms": 34.817,
+			"phase": "scroll"
+		},
+		{
+			"ms": 32.274,
+			"phase": "scroll"
+		},
+		{
+			"ms": 35.945,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.824,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.769,
+			"phase": "scroll"
+		},
+		{
+			"ms": 37.47,
+			"phase": "scroll"
+		},
+		{
+			"ms": 30.925,
+			"phase": "scroll"
+		},
+		{
+			"ms": 30.628,
+			"phase": "scroll"
+		},
+		{
+			"ms": 38.084,
+			"phase": "scroll"
+		},
+		{
+			"ms": 32.515,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.066,
+			"phase": "scroll"
+		},
+		{
+			"ms": 32.445,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.083,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.813,
+			"phase": "scroll"
+		},
+		{
+			"ms": 38.397,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.841,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.536,
+			"phase": "scroll"
+		},
+		{
+			"ms": 40.283,
+			"phase": "scroll"
+		},
+		{
+			"ms": 33.928,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.009,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.202,
+			"phase": "scroll"
+		},
+		{
+			"ms": 31.018,
+			"phase": "scroll"
+		},
+		{
+			"ms": 38.404,
+			"phase": "scroll"
+		},
+		{
+			"ms": 30.555,
+			"phase": "scroll"
+		},
+		{
+			"ms": 30.332,
+			"phase": "scroll"
+		},
+		{
+			"ms": 35.543,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 42.174,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 30.34,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 30.582,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 30.328,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 31.142,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 31.009,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 39.222,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 31.118,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 32.3,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 33.658,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 31.384,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 37.12,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 31.928,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 30.523,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 37.052,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 32.217,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 35.078,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 33.746,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 33.38,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 34.449,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 34.515,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 30.423,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 34.608,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 30.458,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 46.568,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 30.59,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 41.653,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 31.429,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 30.517,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 32.171,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 31.405,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 32.004,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 31.315,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 32.042,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 31.86,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 31.351,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 47.043,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 34.394,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 35.125,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 30.812,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 35.867,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 31.277,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 31.751,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 31.163,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 39.779,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 36.645,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 30.443,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 36.233,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 30.947,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 33.366,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 35.199,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 32.095,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 33.591,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 32.764,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 37.806,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 30.873,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 30.462,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 34.595,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 31.242,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 30.728,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 41.022,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 44.874,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 35.865,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 33.666,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 32.044,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 31.34,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 35.271,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 32.051,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 46.208,
+			"phase": "enemy-normal"
+		},
+		{
+			"ms": 37.955,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 31.053,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 35.066,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 34.473,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 39.506,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 39.391,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 39.455,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 34.532,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 30.579,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 32.522,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 31.352,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 33.313,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 34.579,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 31.043,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 45.572,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 39.206,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 31.119,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 36.394,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 33.959,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 30.845,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 34.07,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 30.749,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 33.78,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 31.734,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 31.719,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 38.544,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 31.97,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 35.514,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 43.797,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 40.65,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 30.786,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 34.541,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 31.581,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 31.558,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 36.388,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 30.549,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 35.898,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 31.161,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 30.818,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 34.73,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 37.155,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 33.8,
+			"phase": "enemy-fast"
+		},
+		{
+			"ms": 33.761,
+			"phase": "enemy-fast"
+		}
+	]
+}

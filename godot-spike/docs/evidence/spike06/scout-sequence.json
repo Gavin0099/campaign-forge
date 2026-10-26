@@ -1,0 +1,23 @@
+{
+	"checks": {
+		"budget": true,
+		"cancel": true,
+		"escape_available": true,
+		"escape_move": true,
+		"finished": true,
+		"finisher_preview": true,
+		"flank": true,
+		"move_preview": true,
+		"scout_hit": true
+	},
+	"context": "Reachable continuous flank seed24018 snapshot, before scout flank move; not a continuous movie",
+	"timings": [
+		{
+			"crit": false,
+			"kind": "mobile",
+			"process_seconds": 0.966666666666668,
+			"reduced": false,
+			"wall_seconds": 4.812495
+		}
+	]
+}

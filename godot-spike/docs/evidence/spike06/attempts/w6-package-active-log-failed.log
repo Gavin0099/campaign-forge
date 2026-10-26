@@ -1,0 +1,22 @@
+python.exe : Traceback (most recent call last):
+At line:7 char:1
++ & 'C:\Users\daish\AppData\Local\Programs\Python\Python312\python.exe' ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+  File "D:\campaign-forge\scratch\godot-spike\godot-spike\tools\package_spike06_field.py", line 177, in <module>
+    reports();movies();normalize_logs();freeze()
+                       ^^^^^^^^^^^^^^^^
+  File "D:\campaign-forge\scratch\godot-spike\godot-spike\tools\package_spike06_field.py", line 166, in normalize_logs
+    write(p,'\n'.join(line.rstrip() for line in value.splitlines()).rstrip())
+  File "D:\campaign-forge\scratch\godot-spike\godot-spike\tools\package_spike06_field.py", line 21, in write
+    path.write_text(value+'\n',encoding='utf-8',newline='\n')
+  File "C:\Users\daish\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daish\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'D:\\campaign-forge\\scratch\\godot-spike\\godot-spike\\docs\\evidence\\
+spike06\\w6-package.log'

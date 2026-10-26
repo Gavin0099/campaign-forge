@@ -1,0 +1,502 @@
+[
+  {
+    "policy": "road",
+    "seed": 24018,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1001,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1002,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1003,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1004,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1005,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1006,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1007,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1008,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1009,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1010,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1011,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1012,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1013,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1014,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1015,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1016,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1017,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1018,
+    "trace_matches": true
+  },
+  {
+    "policy": "road",
+    "seed": 1019,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 24018,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1001,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1002,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1003,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1004,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1005,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1006,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1007,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1008,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1009,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1010,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1011,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1012,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1013,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1014,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1015,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1016,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1017,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1018,
+    "trace_matches": true
+  },
+  {
+    "policy": "flank",
+    "seed": 1019,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 24018,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1001,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1002,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1003,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1004,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1005,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1006,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1007,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1008,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1009,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1010,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1011,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1012,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1013,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1014,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1015,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1016,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1017,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1018,
+    "trace_matches": true
+  },
+  {
+    "policy": "turtle",
+    "seed": 1019,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 24018,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1001,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1002,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1003,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1004,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1005,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1006,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1007,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1008,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1009,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1010,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1011,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1012,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1013,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1014,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1015,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1016,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1017,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1018,
+    "trace_matches": true
+  },
+  {
+    "policy": "scout-retreat",
+    "seed": 1019,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 24018,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1001,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1002,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1003,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1004,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1005,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1006,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1007,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1008,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1009,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1010,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1011,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1012,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1013,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1014,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1015,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1016,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1017,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1018,
+    "trace_matches": true
+  },
+  {
+    "policy": "bypass",
+    "seed": 1019,
+    "trace_matches": true
+  }
+]

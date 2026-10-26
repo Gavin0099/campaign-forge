@@ -40,6 +40,8 @@ func refresh_layout() -> void:
 	markers.clear()
 	suppressed.clear()
 	if not is_instance_valid(battle.hud): return
+	# Terminal modal owns the centre; world plates must not cover its result text.
+	if battle.state.status!="playing": return
 	for indicator in battle.hud.indicators.items: obstacles.append(indicator.rect)
 	var zoom_value: float = battle.camera.zoom.x
 	var overview: bool = battle.camera.overview

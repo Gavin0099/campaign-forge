@@ -1,0 +1,11 @@
+{
+  "intended_flank_win_ge_60": true,
+  "wave_ge_70_of_wins": true,
+  "idle_le_35": true,
+  "not_all_wins_before8": true,
+  "scout_not_top_damage": true,
+  "scout_leads_finishers": true,
+  "scout_death_median_later": true,
+  "naive_policy_loses_majority": true,
+  "all_intended_estimate_intervals_inside_15_25": false
+}

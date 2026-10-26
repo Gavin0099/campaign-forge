@@ -146,7 +146,7 @@ Final spike test kit (allies/mobile, default only; spike05 kit absent):
   controlled reach. Events distinguish intercept/disengage from damage.
 
 Operator mistakes exposed by experiments: first cap2 policy was too passive
-+ used only4 travel;20% road wins. Full travel6, healthy flank attacks and
+and used only4 travel;20% road wins. Full travel6, healthy flank attacks and
 advance-aware retreat improved it; leader-aware hold/knockback evaluation then
 reached50% road,70% flank. A full-remaining-move escape trial was not retained;
 final cap2 keeps the smaller kit. Experiments retained in w4-* folders/logs.
@@ -203,3 +203,61 @@ legend+dense historical camera/label tests10/10,1142assertions,exit0.
 Real-time uncaptured nine-case gameplay wall maxima: normal.8570s,crit.9276s,
 Reduced.6681s; all <=1.7 and target1.2,Reduced<=normal by setup. Packaging
 asserts all nine and retains fixed-clock and runtime fields separately.
+
+## W6 — final multi-seed and real-scene evidence
+
+Same20 seeds/all5 policies repeated on default, and100 spike05 recheck runs.
+All100 old trace hashes, commands, outcomes, casualties, archetypes, unit-turns
+and wave engagement match W1 exactly. No jitter or random damage was added.
+Final intended flank70% wins, win13[7–15], true idle29.97%, wave95% overall /
+100% of14 wins; road50%, turtle0%, scout-retreat0%. Weak policies still lose.
+All actual blocked LOS shots0; intended flank43 blocked phase-start opportunities.
+This is a supported-route operator, not an optimal solver or human difficulty
+distribution. Both policy and level changed, so no isolated causal AI/LOS claim.
+
+Flank class aggregate: melee390 damage39.39% /42 kills; ranged352/35.56% /
+46 kills; mobile248/25.05% /61 kills. Mobile leads61 finishing kills and87
+intercepts, not damage. Conditional mobile death median8[3–14], baseline2[2–5]
+across20 (the old default seed was4–5). Mobile living-unit-turns146 ->364,
+mean deaths1.05 ->1.15: survival lasts longer, not fewer casualties or immunity.
+Full table includes all classes/policies, death censoring and confounds.
+
+Bypass remains a scriptedT5 probe,100% winT6–9,mean0.70 casualties,85% wave
+engagement. Three no-wave counterexamples are explicitly listed in PACING.
+Do not present it as a full attainable route, or claim engagement is forced /
+that all bypass exploits are eliminated. No extra forced engagement lever.
+
+Native real-time continuous flank24018 winsT13; continuous road1001 loses.
+Independent no-recording/readback/concurrent-Godot measurement:12 normal
+enemy phases mean1.47633625s,41 field attacks max wall.943979s. Estimate uses
+this mean and actual living-ally turns × assumed15–25s thinking. Intended
+median interval17.2–28.4min, full envelope9.9–33.7min: universal15–25min FAIL.
+No HP inflation. Human minutes pending; bypass minutes are partial-start only.
+
+Fresh native720p uncaptured frame samples: scroll54 frames mean34.007/worst
+46.443ms, enemy-normal70 mean34.053/worst47.043ms, 2x43 mean34.585/worst
+45.572ms. Old means20.703/23.509/23.124ms: material observed regressions.
+Normal/2x use the same reached wave state; old sample wasT2, workloads differ.
+These short wall intervals include UI/rules/scheduling, do not isolate a cause
+or prove steady60FPS. Movies are60 simulationFPS, not performance evidence.
+
+Proof:720p deployment/midbattle/warning/arrival/wave/scout/ZoC/legend/overview,
+1080p deployment, real continuous win/loss; wave and scout parsed-input native
+AVIs with nine-frame PNG strips. Movies resume states actually reached by the
+flank operator; snapshots retain commands/state, no edited HP/terrain. Scout
+sequence verifies move preview -> Esc -> move confirm -> finisher -> retreat
+budget via real parsed mouse/Enter. Dummy audio recorded, not auditioned.
+
+Visual QA found world nameplates obscuring the result modal despite plate-to-
+plate overlap count0. Small terminal-only fix suppresses those plates after
+win/loss. Terminal captures and uncaptured measurements repeated after fix;
+earlier values1.481857s/.965102s and ~35ms were superseded observations, not
+final figures. No combat or art change. Final source freeze records runtime
+and GDScript operators; offline docs/packaging/tests may be added in W7/W8.
+PNG inspection confirms larger O labels and readable terminal text; flash and
+all final human readability/comfort/commercial art judgments HUMAN_PENDING.
+Logs normalized UTF8/ANSI/trailing whitespace only, historical errors retained.
+First offline packaging exit1 tried to normalize its own stdout log while
+Windows held it open. Failed log retained under attempts/. Exclude live
+packaging/audit stdout from in-process normalization; final packaging exit0.
+No game/capture failure or evidence relabelling; reports/AVIs verified again.

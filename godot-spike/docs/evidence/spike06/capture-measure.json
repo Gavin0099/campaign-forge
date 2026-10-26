@@ -1,0 +1,10 @@
+{
+	"checks": {
+		"terminal": true
+	},
+	"engine": "4.7.2-stable (official)",
+	"human": "HUMAN_PENDING",
+	"mode": "measure",
+	"pass": true,
+	"shots": []
+}

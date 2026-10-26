@@ -1,0 +1,24 @@
+{
+  "enemy_mean_seconds": 1.47633625,
+  "performance": {
+    "scroll": {
+      "n": 54,
+      "mean_ms": 34.007407407407406,
+      "worst_ms": 46.443,
+      "mean_delta_ms": 13.304496296296296
+    },
+    "enemy-normal": {
+      "n": 70,
+      "mean_ms": 34.05347142857143,
+      "worst_ms": 47.043,
+      "mean_delta_ms": 10.544384472049689
+    },
+    "enemy-fast": {
+      "n": 43,
+      "mean_ms": 34.585279069767445,
+      "worst_ms": 45.572,
+      "mean_delta_ms": 11.461145736434112
+    }
+  },
+  "attack_samples": 41
+}

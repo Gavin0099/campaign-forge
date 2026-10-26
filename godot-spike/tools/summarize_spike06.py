@@ -9,7 +9,17 @@ ROOT = Path(__file__).resolve().parents[1]
 def span(values):
     return {'median': stats.median(values), 'min': min(values), 'max': max(values)} if values else None
 
-def aggregate(folder):
+def finishes(row, kind):
+    if 'finishing_kills' in row:
+        return row['finishing_kills'].get(kind,0)
+    units = {u['id']:u for u in row['final_units']}
+    return sum(e['event']['type']=='damage' and e['event']['hp_after']==0
+        and units[e['event']['source']]['side']=='ally'
+        and units[e['event']['source']]['kind']==kind
+        and e['event']['amount']<units[e['event']['unit']]['max_hp']
+        for e in row['trace'] if e['event']['type']=='damage')
+
+def aggregate(folder, write=True, verbose=True):
     index = json.loads((folder/'index.json').read_text(encoding='utf-8-sig'))
     runs = [json.loads((folder/p).read_text(encoding='utf-8-sig')) for p in index['runs']]
     result = {'seeds': index['seeds'], 'variant': index['variant'], 'variation': index['variation'], 'policies': {}}
@@ -26,7 +36,7 @@ def aggregate(folder):
                 'mean_casualties':sum(sum(d['kind']==kind for d in r['ally_deaths']) for r in rows)/len(rows),
                 'death_turns':span([d['turn'] for r in rows for d in r['ally_deaths'] if d['kind']==kind]),
                 'living_unit_turns':sum(r['archetypes'].get(kind,{}).get('unit_turns',0) for r in rows),
-                'finishing_kills':sum(r.get('finishing_kills',{}).get(kind,0) for r in rows),
+                'finishing_kills':sum(finishes(r,kind) for r in rows),
                 'intercepts':sum(r.get('intercepts',{}).get(kind,0) for r in rows)}
         for c in classes.values():
             c['damage_share']=c['damage']/max(1,sum(v['damage'] for v in classes.values()))
@@ -45,10 +55,14 @@ def aggregate(folder):
             'classes':classes,'los_blocked_shots':sum(r['los_blocked_shots'] for r in rows),
             'los_blocked_opportunities':sum(r['los_blocked_opportunities'] for r in rows),
             'length_minutes':[min(r['battle_length_estimate_minutes'][0] for r in rows),max(r['battle_length_estimate_minutes'][1] for r in rows)],
+            'median_length_minutes':[stats.median(r['battle_length_estimate_minutes'][i] for r in rows) for i in (0,1)],
+            'length_intervals_inside_target':sum(15<=r['battle_length_estimate_minutes'][0] and r['battle_length_estimate_minutes'][1]<=25 for r in rows),
             'distinct_traces':len({r['trace_hash'] for r in rows}),
             'illegal_commands':sum(len(r['illegal_commands']) for r in rows)}
-    (folder/'aggregate.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
-    print(json.dumps(result['policies'],indent=2))
+    if write:
+        (folder/'aggregate.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+    if verbose:
+        print(json.dumps(result['policies'],indent=2))
     return result
 
 if __name__=='__main__':
