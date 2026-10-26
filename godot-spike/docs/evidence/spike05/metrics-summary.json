@@ -1,0 +1,100 @@
+{
+  "enemy_mean_seconds": 3.45616425,
+  "performance": {
+    "scroll": {
+      "samples": 90,
+      "mean_ms": 20.70291111111111,
+      "worst_ms": 30.588,
+      "before_mean_ms": 19.66633898305085,
+      "delta_ms": 1.0365721280602607
+    },
+    "enemy-normal": {
+      "samples": 46,
+      "mean_ms": 23.509086956521738,
+      "worst_ms": 33.983,
+      "before_mean_ms": 22.77618604651163,
+      "delta_ms": 0.7329009100101089
+    },
+    "enemy-fast": {
+      "samples": 30,
+      "mean_ms": 23.124133333333333,
+      "worst_ms": 29.606,
+      "before_mean_ms": 22.521185185185185,
+      "delta_ms": 0.6029481481481476
+    }
+  },
+  "idle_recomputed": {
+    "road/before": {
+      "front": 2,
+      "flank": 9,
+      "south": 4,
+      "reserve": 4,
+      "rear": 22,
+      "leader": 7,
+      "reinforcements": 18
+    },
+    "road/after": {
+      "front": 0,
+      "flank": 6,
+      "south": 2,
+      "reserve": 4,
+      "rear": 6,
+      "leader": 2,
+      "reinforcements": 0
+    },
+    "flank/before": {
+      "front": 2,
+      "flank": 6,
+      "south": 4,
+      "reserve": 12,
+      "rear": 12,
+      "leader": 6,
+      "reinforcements": 3
+    },
+    "flank/after": {
+      "front": 0,
+      "flank": 9,
+      "south": 2,
+      "reserve": 4,
+      "rear": 6,
+      "leader": 3,
+      "reinforcements": 0
+    },
+    "turtle/before": {
+      "front": 2,
+      "flank": 6,
+      "south": 4,
+      "reserve": 4,
+      "rear": 4,
+      "leader": 2,
+      "reinforcements": 0
+    },
+    "turtle/after": {
+      "front": 0,
+      "flank": 9,
+      "south": 2,
+      "reserve": 6,
+      "rear": 6,
+      "leader": 3,
+      "reinforcements": 0
+    },
+    "bypass/after": {
+      "front": 0,
+      "flank": 0,
+      "south": 0,
+      "reserve": 0,
+      "rear": 0,
+      "leader": 0,
+      "reinforcements": 0
+    },
+    "scout-retreat/after": {
+      "front": 0,
+      "flank": 9,
+      "south": 2,
+      "reserve": 6,
+      "rear": 6,
+      "leader": 3,
+      "reinforcements": 0
+    }
+  }
+}

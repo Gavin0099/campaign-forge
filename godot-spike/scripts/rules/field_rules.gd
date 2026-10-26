@@ -375,6 +375,8 @@ static func ai_plan(s: Dictionary, id: String, cache: Dictionary) -> Dictionary:
 				best=p
 				state_name="regroup"
 				break
+	if u.group=="reserve" and best==u.cell:
+		return {"state":"bodyguard-hold","to":best,"reason":"hold protection radius 3 boundary; do not chase beyond leader","role_hold":true}
 	return {"state":state_name,"to":best,"reason":role_reason if not role_reason.is_empty() else ("leader approach interception" if target_id!="" else "shared distance map; loose-front cohesion"),"role_hold":false}
 
 static func enemy_phase(s: Dictionary) -> Dictionary:

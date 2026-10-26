@@ -1,0 +1,110 @@
+﻿{
+    "files":  [
+                  {
+                      "path":  "godot-spike/scripts/levels/field_battle.gd",
+                      "sha256":  "92b22fb66bc05727653207fafd451bc6ce0a9559b3934a8dcff176be237edd78",
+                      "bytes":  15768
+                  },
+                  {
+                      "path":  "godot-spike/scripts/levels/field_camera.gd",
+                      "sha256":  "5a9a016925cb7bdb5e7444369ff5b78c981ccc1885814d380d023746f8b083fa",
+                      "bytes":  9440
+                  },
+                  {
+                      "path":  "godot-spike/scripts/levels/field_ground.gd",
+                      "sha256":  "888e3b0756c647dfc26346df9929a0849fdd6bf8bd53a0409df14238192a5dbd",
+                      "bytes":  1837
+                  },
+                  {
+                      "path":  "godot-spike/scripts/levels/field_hud.gd",
+                      "sha256":  "e38add63c0c10316063e89cbb7b0814228075bcd7ce5325f6fc9b42d75e9feb5",
+                      "bytes":  7668
+                  },
+                  {
+                      "path":  "godot-spike/scripts/levels/field_impact.gd",
+                      "sha256":  "897b93a141e06dbd11f7d8a75e00e32c8e3350b2d11f611806ceac00dd75ca42",
+                      "bytes":  9196
+                  },
+                  {
+                      "path":  "godot-spike/scripts/levels/field_indicators.gd",
+                      "sha256":  "05417a12a58a9a170a7aa39071c9267567bdd511af8ba5f3f400b00d85f368ee",
+                      "bytes":  3254
+                  },
+                  {
+                      "path":  "godot-spike/scripts/levels/field_labels.gd",
+                      "sha256":  "56505d230f8d18b13d21641163a99b33c72dcc1590d253a3ac4d262445d549fc",
+                      "bytes":  5275
+                  },
+                  {
+                      "path":  "godot-spike/scripts/levels/field_minimap.gd",
+                      "sha256":  "89c35fe047a9948cd0fd56dcecec563d5ef6350f6d00941c444a63d9c36147a6",
+                      "bytes":  2509
+                  },
+                  {
+                      "path":  "godot-spike/scripts/levels/field_telemetry.gd",
+                      "sha256":  "d60c16c3f74bcd0bfe172d755ad1b06aeecf633da7aa31adca92bad681912b27",
+                      "bytes":  6275
+                  },
+                  {
+                      "path":  "godot-spike/scripts/rules/field_rules.gd",
+                      "sha256":  "189d335f9c985f83589b0f3b3a992df447200bc79563056ef4804ba6bd82d326",
+                      "bytes":  20158
+                  },
+                  {
+                      "path":  "godot-spike/scripts/rules/field_sight.gd",
+                      "sha256":  "1847879f96d8420704ec1b2f7f9be0fa60bba7d22227ab0ee3da63c5b86a8b0d",
+                      "bytes":  1415
+                  },
+                  {
+                      "path":  "godot-spike/scripts/rules/grid_rules.gd",
+                      "sha256":  "c3d539e3cbfafc8db11262c9fb23ee9345e127cdde0966b363287ae0ca9b59b6",
+                      "bytes":  4084
+                  },
+                  {
+                      "path":  "godot-spike/scripts/impact/impact_profile.gd",
+                      "sha256":  "96d8b20a6c8b4da6dc921cfa0a0f86abc7045f2dac8cf7809b378a1dff962b4f",
+                      "bytes":  6566
+                  },
+                  {
+                      "path":  "godot-spike/config/impact_profile.tres",
+                      "sha256":  "011c73d879442bd899ded25cc9ae40aefa05e8839c4f897fede73254d5467c5f",
+                      "bytes":  1144
+                  },
+                  {
+                      "path":  "godot-spike/config/impact_profile_a9_baseline.tres",
+                      "sha256":  "a080f88ba5953395cbc26c8e6d7e8067376b215560460ea301c5022b50dd053a",
+                      "bytes":  277
+                  },
+                  {
+                      "path":  "godot-spike/config/impact_profile_spike03.tres",
+                      "sha256":  "110040412bff567b8cc978fe898dabfd891e358bf2a4221d0fad2362a6b55bf5",
+                      "bytes":  1126
+                  },
+                  {
+                      "path":  "godot-spike/config/impact_profile_spike04.tres",
+                      "sha256":  "f54958b8783c32cb89b35ae20b4e7f93d9ca9fed7ccf1dd1a01a22dd3e0959a6",
+                      "bytes":  1150
+                  },
+                  {
+                      "path":  "godot-spike/data/levels/field_24x18.gd",
+                      "sha256":  "bf4865a49c7bb3cfa18d30f4f20b7935660327256b09eae4668b6a7158e2edbd",
+                      "bytes":  3477
+                  },
+                  {
+                      "path":  "godot-spike/tools/capture_field05.gd",
+                      "sha256":  "2d2d7a19a1eaabb58fdfbe97f44f6b25cff11e83bc9c8a4324ca23d119107ff6",
+                      "bytes":  10490
+                  },
+                  {
+                      "path":  "godot-spike/tools/autoplay_field.gd",
+                      "sha256":  "9ccf3c8922663f40851fec7a19c68858069babc54ae280a786b6807714121869",
+                      "bytes":  2868
+                  },
+                  {
+                      "path":  "godot-spike/tools/field_policy.gd",
+                      "sha256":  "48fe0f37995fda211116be338e755664a00f0b5ccab9aed1175fdf81b5c80701",
+                      "bytes":  2997
+                  }
+              ],
+    "scope":  "W6 final runtime capture/pacing/performance source; historical Skirmish W4 unaffected by field changes"
+}

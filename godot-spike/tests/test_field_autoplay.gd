@@ -28,12 +28,12 @@ func test_authored_main_road_has_a_full_win_path_without_routing_every_enemy() -
 	# W1's reproduced spike04 trace; the stronger AI gets a separate live test.
 	var report: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://docs/evidence/spike05/baseline/road.json"))
 	assert_eq(report.status,"win")
-	assert_between(report.turns_to_result,2,15)
-	assert_between(report.first_contact_turn,2,3)
-	assert_gt(report.archetypes.melee.attacks,0)
-	assert_gt(report.archetypes.ranged.attacks,0)
-	assert_gt(report.archetypes.mobile.attacks,0)
-	assert_eq(report.archetypes.leader.damage_taken,10)
+	assert_between(int(report.turns_to_result),2,15)
+	assert_between(int(report.first_contact_turn),2,3)
+	assert_gt(int(report.archetypes.melee.attacks),0)
+	assert_gt(int(report.archetypes.ranged.attacks),0)
+	assert_gt(int(report.archetypes.mobile.attacks),0)
+	assert_eq(int(report.archetypes.leader.damage_taken),10)
 	assert_true(report.trace.any(func(r):return r.event.type=="reinforcement_warning"))
 	assert_true(report.trace.any(func(r):return r.event.type=="reinforcement_arrival"))
 

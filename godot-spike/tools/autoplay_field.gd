@@ -6,13 +6,19 @@ func _initialize() -> void:
 	call_deferred("run")
 func run() -> void:
 	var out := "res://docs/evidence/spike04/autoplay/"
+	var policies := PackedStringArray(["road","flank","turtle"])
+	var enemy_mean := 1.999
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--output="): out=arg.trim_prefix("--output=")
+		if arg.begins_with("--policies="): policies=arg.trim_prefix("--policies=").split(",")
+		if arg.begins_with("--enemy-mean="): enemy_mean=arg.trim_prefix("--enemy-mean=").to_float()
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(out))
 	var failed := false
-	for name in ["road","flank","turtle"]:
-		var s := Rules.initial()
+	for name in policies:
+		var s := Policy.start(name)
 		var telemetry := Telemetry.new()
+		telemetry.estimate_enemy_mean=enemy_mean
+		telemetry.estimate_source="spike05 runtime-battle.json measured normal phase mean" if not is_equal_approx(enemy_mean,1.999) else "spike04 measured normal presentation"
 		telemetry.register(s,"ally")
 		var commands: Array = []
 		var started := Time.get_ticks_usec()
@@ -36,6 +42,7 @@ func run() -> void:
 			s=resolved.state
 		var report := telemetry.summary()
 		report.policy=name
+		report.context="SCRIPTED infiltration at arrival turn5; six allies near approach, original enemy roster/stats/terrain. Not a deployment-to-result strategy." if name=="bypass" else "Full deployment with fixed original data; automated policy, not a human."
 		report.commands=commands
 		report.seed=s.level.seed
 		report.final_units=s.units

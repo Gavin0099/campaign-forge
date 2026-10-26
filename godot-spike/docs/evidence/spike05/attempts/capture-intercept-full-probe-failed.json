@@ -1,0 +1,11 @@
+{
+	"checks": {
+		"reinforcement_attack": false
+	},
+	"engine": "4.7.2-stable (official)",
+	"human": "HUMAN_PENDING",
+	"mode": "intercept",
+	"pass": false,
+	"renderer": "AMD Radeon 780M Graphics",
+	"shots": []
+}

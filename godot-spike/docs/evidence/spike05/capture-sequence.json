@@ -1,0 +1,158 @@
+{
+	"checks": {
+		"parsed_attack_confirm": true,
+		"parsed_attack_preview": true,
+		"parsed_cancel": true,
+		"parsed_move_confirm": true,
+		"parsed_move_preview": true,
+		"parsed_select": true,
+		"timing": true
+	},
+	"engine": "4.7.2-stable (official)",
+	"human": "HUMAN_PENDING",
+	"mode": "sequence",
+	"pass": true,
+	"renderer": "AMD Radeon 780M Graphics",
+	"shots": [
+		{
+			"label_overlaps": 0,
+			"labels": [
+				{
+					"anchor": "(663.8016, 286.0579)",
+					"color": "(0.5961, 0.7882, 0.7451, 1.0)",
+					"id": "bow-1",
+					"rect": "[P: (621.8016, 258.0579), S: (84.0, 22.0)]",
+					"text": "BOW 6/6"
+				},
+				{
+					"anchor": "(903.8016, 427.8079)",
+					"color": "(0.8667, 0.6118, 0.4941, 1.0)",
+					"id": "target",
+					"rect": "[P: (861.8016, 399.8079), S: (84.0, 22.0)]",
+					"text": "× 6/6"
+				},
+				{
+					"anchor": "(503.8016, 286.0579)",
+					"color": "(0.5961, 0.7882, 0.7451, 1.0)",
+					"id": "thoma",
+					"rect": "[P: (461.8016, 258.0579), S: (84.0, 22.0)]",
+					"text": "M 8/8"
+				}
+			],
+			"markers": [],
+			"name": "ranged-move-confirmed",
+			"resolution": [
+				1280,
+				720
+			],
+			"suppressed": [],
+			"turn": 1,
+			"zoom": 1.0
+		},
+		{
+			"label_overlaps": 0,
+			"labels": [
+				{
+					"anchor": "(651.9854, 271.1003)",
+					"color": "(0.5961, 0.7882, 0.7451, 1.0)",
+					"id": "bow-1",
+					"rect": "[P: (609.9854, 243.1003), S: (84.0, 22.0)]",
+					"text": "BOW 6/6"
+				},
+				{
+					"anchor": "(883.6802, 407.945)",
+					"color": "(0.8667, 0.6118, 0.4941, 1.0)",
+					"id": "target",
+					"rect": "[P: (841.6802, 379.945), S: (84.0, 22.0)]",
+					"text": "× 6/6"
+				},
+				{
+					"anchor": "(497.5222, 271.1003)",
+					"color": "(0.5961, 0.7882, 0.7451, 1.0)",
+					"id": "thoma",
+					"rect": "[P: (455.5222, 243.1003), S: (84.0, 22.0)]",
+					"text": "M 8/8"
+				}
+			],
+			"markers": [],
+			"name": "ranged-preview",
+			"resolution": [
+				1280,
+				720
+			],
+			"suppressed": [],
+			"turn": 1,
+			"zoom": 0.965394854545593
+		},
+		{
+			"label_overlaps": 0,
+			"labels": [
+				{
+					"anchor": "(584.0324, 267.1727)",
+					"color": "(0.5961, 0.7882, 0.7451, 1.0)",
+					"id": "bow-1",
+					"rect": "[P: (542.0324, 239.1727), S: (84.0, 22.0)]",
+					"text": "BOW 6/6"
+				},
+				{
+					"anchor": "(815.7272, 404.0175)",
+					"color": "(0.8667, 0.6118, 0.4941, 1.0)",
+					"id": "target",
+					"rect": "[P: (773.7272, 376.0175), S: (84.0, 22.0)]",
+					"text": "× 4/6"
+				},
+				{
+					"anchor": "(429.5693, 267.1727)",
+					"color": "(0.5961, 0.7882, 0.7451, 1.0)",
+					"id": "thoma",
+					"rect": "[P: (387.5693, 239.1727), S: (84.0, 22.0)]",
+					"text": "M 8/8"
+				}
+			],
+			"markers": [],
+			"name": "ranged-contact",
+			"resolution": [
+				1280,
+				720
+			],
+			"suppressed": [],
+			"turn": 1,
+			"zoom": 0.965394854545593
+		},
+		{
+			"label_overlaps": 0,
+			"labels": [
+				{
+					"anchor": "(648.0991, 262.25)",
+					"color": "(0.5961, 0.7882, 0.7451, 1.0)",
+					"id": "bow-1",
+					"rect": "[P: (606.0991, 234.25), S: (84.0, 22.0)]",
+					"text": "BOW 6/6"
+				},
+				{
+					"anchor": "(888.0991, 404.0)",
+					"color": "(0.8667, 0.6118, 0.4941, 1.0)",
+					"id": "target",
+					"rect": "[P: (846.0991, 376.0), S: (84.0, 22.0)]",
+					"text": "× 4/6"
+				},
+				{
+					"anchor": "(488.0991, 262.25)",
+					"color": "(0.5961, 0.7882, 0.7451, 1.0)",
+					"id": "thoma",
+					"rect": "[P: (446.0991, 234.25), S: (84.0, 22.0)]",
+					"text": "M 8/8"
+				}
+			],
+			"markers": [],
+			"name": "ranged-return",
+			"resolution": [
+				1280,
+				720
+			],
+			"suppressed": [],
+			"turn": 1,
+			"zoom": 1.0
+		}
+	]
+}

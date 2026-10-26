@@ -207,6 +207,7 @@ func choose(cell: Vector2i) -> void:
 			confirm()
 			return
 		pending={"type":"attack","target":u.id}
+		camera.protect([selected_id,u.id])
 		preview_path.clear()
 		var info := Rules.attack_info(state,Rules.unit(state,selected_id),u)
 		hud.notice.text="攻擊：%s → %s　傷害 %d · %s　Enter 確認" % [selected_id,display_name(u),info.damage,info.reason]
@@ -244,7 +245,7 @@ func accept(resolved: Dictionary) -> void:
 	busy=false
 	build_units()
 	refresh()
-	telemetry.write("res://.godot/spike04/live-telemetry.json")
+	telemetry.write("res://.godot/spike05/live-telemetry.json")
 	action_finished.emit()
 
 func playback_speed() -> float:
@@ -285,6 +286,7 @@ func play_events(events: Array) -> void:
 				if state.phase=="enemy":
 					hud.notice.text="敵方攻擊：%s → %s" % [event.unit,event.target]
 					camera.follow(actors[event.target].position)
+					camera.protect([event.unit,event.target])
 					if not reduced_motion: await get_tree().create_timer(.24/playback_speed(),false).timeout
 				camera.protect([event.unit,event.target])
 				var damage: Dictionary = events[i+1]
@@ -302,12 +304,13 @@ func play_events(events: Array) -> void:
 func end_turn() -> void:
 	if busy or state.status!="playing": return
 	var started := Time.get_ticks_usec()
+	var acting_turn: int = state.turn
 	var resolved := Rules.enemy_phase(state)
 	await accept(resolved)
-	var metric := {"turn":state.turn-1,"seconds":(Time.get_ticks_usec()-started)/1000000.0,"fast":fast_forward,"skip_move":skip_enemy_movement}
+	var metric := {"turn":acting_turn,"seconds":(Time.get_ticks_usec()-started)/1000000.0,"fast":fast_forward,"skip_move":skip_enemy_movement}
 	enemy_times.append(metric)
 	telemetry.enemy_phases.append(metric)
-	telemetry.write("res://.godot/spike04/live-telemetry.json")
+	telemetry.write("res://.godot/spike05/live-telemetry.json")
 
 func restart() -> void:
 	if busy: return

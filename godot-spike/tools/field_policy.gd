@@ -2,6 +2,16 @@ extends RefCounted
 ## Reproducible test policies, not enemy rules or human strategy claims.
 const Rules = preload("res://scripts/rules/field_rules.gd")
 
+static func start(policy: String) -> Dictionary:
+	var s := Rules.initial()
+	if policy=="bypass":
+		var placements := {"thoma":Vector2i(17,9),"guard":Vector2i(17,10),"bow-1":Vector2i(16,9),"bow-2":Vector2i(16,10),"scout-1":Vector2i(18,8),"scout-2":Vector2i(18,10)}
+		for id in placements: Rules.unit(s,id).cell=placements[id]
+		s.turn=4
+		s.warned=true
+		s=Rules.next_turn(s).state
+	return s
+
 static func target(s: Dictionary, id: String) -> String:
 	var candidates := Rules.targets(s,id)
 	candidates.sort_custom(func(a,b):
@@ -14,11 +24,23 @@ static func target(s: Dictionary, id: String) -> String:
 static func command(s: Dictionary, id: String, policy: String) -> Dictionary:
 	var u := Rules.unit(s,id)
 	if not Rules.allowed(s,u): return {}
+	if policy=="scout-retreat" and u.kind=="mobile" and u.hp<=4 and not u.moved:
+		var safest: Vector2i = u.cell
+		var best := -INF
+		for p in Rules.reach(s,id).costs:
+			var nearest := 999
+			for foe in s.units:
+				if foe.hp>0 and foe.side=="enemy": nearest=mini(nearest,Rules.distance(p,foe.cell))
+			var value := nearest-.1*Rules.distance(p,Rules.unit(s,"thoma").cell)
+			if value>best:
+				best=value
+				safest=p
+		if safest!=u.cell: return {"type":"move","unit":id,"to":safest}
 	var victim := target(s,id)
 	if victim!="": return {"type":"attack","unit":id,"target":victim}
 	if not u.moved:
 		var waypoint := Vector2i(-1,-1)
-		if policy=="flank" and u.kind=="mobile" and u.cell.x<17:
+		if policy in ["flank","scout-retreat"] and u.kind=="mobile" and u.cell.x<17:
 			waypoint=Vector2i(16,5) if u.cell.y<=6 or u.cell.x<12 else Vector2i(14,5)
 		if policy=="turtle" and s.turn<=3:
 			waypoint=Vector2i(10,9 if u.id in ["thoma","bow-1","scout-1"] else 10)

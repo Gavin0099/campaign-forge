@@ -1,0 +1,21 @@
+{
+	"checks": {
+		"parsed_attack_confirm": true,
+		"parsed_attack_preview": true,
+		"parsed_cancel": true,
+		"parsed_move_confirm": true,
+		"parsed_move_preview": true,
+		"parsed_select": true,
+		"timing": true
+	},
+	"context": "Scripted four-unit actual field fixture, original stats/terrain. Parsed select→move preview→Esc→move confirm→ranged attack; not a full battle.",
+	"timings": [
+		{
+			"crit": false,
+			"kind": "ranged",
+			"process_seconds": 0.833333333333334,
+			"reduced": false,
+			"wall_seconds": 2.706461
+		}
+	]
+}

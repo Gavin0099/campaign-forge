@@ -74,7 +74,7 @@ func test_dense_labels_and_reinforcement_marker_declutter() -> void:
 	var marker: Dictionary = field.hud.warning_marker()
 	assert_eq(marker.count,3)
 	assert_eq(marker.cell,field.state.level.entries[1])
-	assert_lt(marker.radius,22)
+	assert_lt(marker.radius,22.0)
 	assert_lt(marker.alpha,.7)
 	var entries: Array = field.hud.indicators.items
 	for i in range(entries.size()):

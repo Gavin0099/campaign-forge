@@ -5,6 +5,8 @@ const Sight = preload("res://scripts/rules/field_sight.gd")
 var deaths: Array = []
 var ranged_shots: Array = []
 var reinforcement_first_engage := -1
+var estimate_enemy_mean := 1.999
+var estimate_source := "spike04 measured normal presentation"
 var first_contact_turn := -1
 var first_contact_side := ""
 var unit_turns := {}
@@ -29,7 +31,7 @@ func register(s: Dictionary, side: String) -> void:
 			hypothetical.cell=p
 			for target in s.units:
 				if Rules.attack_info(s,hypothetical,target).legal: could_attack=true
-		unit_turns[key]={"turn":s.turn,"id":u.id,"side":u.side,"kind":u.kind,"group":u.group,"eligible":u.born_turn<s.turn,"move_steps":0,"move_cost":0,"attacks":0,"role_reason":"","could_reach_target":could_attack}
+		unit_turns[key]={"turn":s.turn,"id":u.id,"side":u.side,"kind":u.kind,"group":u.group,"eligible":u.born_turn<s.turn,"observed":false,"move_steps":0,"move_cost":0,"attacks":0,"role_reason":"","could_reach_target":could_attack}
 		ensure(u.kind,u.side)
 		totals[u.kind].unit_turns+=1
 		if not could_attack: totals[u.kind].idle_turns+=1
@@ -42,6 +44,9 @@ func record(before: Dictionary, events: Array, after: Dictionary) -> void:
 		roster[u.id]=u
 		ensure(u.kind,u.side)
 	for e in events:
+		if e.type in ["intent","move","attack","wait"]:
+			var key := "%d:%s" % [turn,e.unit]
+			if unit_turns.has(key): unit_turns[key].observed=true
 		if e.type=="phase":
 			turn=int(e.turn)
 			register(before if e.phase=="enemy" else after,"enemy" if e.phase=="enemy" else "ally")
@@ -85,7 +90,7 @@ func summary() -> Dictionary:
 	var idle := {"front":0,"flank":0,"south":0,"reserve":0,"rear":0,"leader":0,"reinforcements":0}
 	var deliberate: Array = []
 	for row in unit_turns.values():
-		if row.side!="enemy" or not row.eligible: continue
+		if row.side!="enemy" or not row.eligible or not row.observed: continue
 		if not row.role_reason.is_empty(): deliberate.append(row)
 		elif not row.could_reach_target and row.move_steps==0 and row.attacks==0: idle[row.group]=idle.get(row.group,0)+1
 	var ally_damage := 0.0
@@ -105,8 +110,8 @@ func summary() -> Dictionary:
 		"enemy_idle_by_group":idle,"deliberate_holds":deliberate,"reinforcement_first_engage_turn":reinforcement_first_engage,
 		"ally_deaths":deaths,"ranged_shots":ranged_shots,"los_blocked_shots":ranged_shots.filter(func(r):return r.would_block).size(),
 		"living_ally_unit_turns":living_turns,
-		"battle_length_estimate_minutes":[(final_turn*1.999+living_turns*15)/60.0,(final_turn*1.999+living_turns*25)/60.0],
-		"estimate_enemy_mean_seconds":1.999,"estimate_enemy_mean_source":"spike04 measured normal presentation; replace with spike05 measured mean for after table",
+		"battle_length_estimate_minutes":[(final_turn*estimate_enemy_mean+living_turns*15)/60.0,(final_turn*estimate_enemy_mean+living_turns*25)/60.0],
+		"estimate_enemy_mean_seconds":estimate_enemy_mean,"estimate_enemy_mean_source":estimate_source,
 		"unit_turns":unit_turns.values(),"archetypes":archetypes,"enemy_phase_seconds":enemy_phases.duplicate(true),
 		"turns_to_result":final_turn,"status":final_status,"trace":trace.duplicate(true),
 		"definitions":{"idle_turns":"No enemy in attack range from any cost-legal destination at phase start; may still move toward contact.",

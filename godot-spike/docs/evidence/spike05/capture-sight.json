@@ -1,0 +1,98 @@
+{
+	"checks": {
+		"blocked": true,
+		"cover": true,
+		"threat": true
+	},
+	"engine": "4.7.2-stable (official)",
+	"human": "HUMAN_PENDING",
+	"mode": "sight",
+	"pass": true,
+	"renderer": "AMD Radeon 780M Graphics",
+	"shots": [
+		{
+			"label_overlaps": 0,
+			"labels": [
+				{
+					"anchor": "(640.0, 272.0)",
+					"color": "(0.5961, 0.7882, 0.7451, 1.0)",
+					"id": "bow-1",
+					"rect": "[P: (598.0, 244.0), S: (84.0, 22.0)]",
+					"text": "BOW 6/6"
+				},
+				{
+					"anchor": "(800.0, 366.5)",
+					"color": "(0.8667, 0.6118, 0.4941, 1.0)",
+					"id": "target",
+					"rect": "[P: (758.0, 338.5), S: (84.0, 22.0)]",
+					"text": "× 6/6"
+				}
+			],
+			"markers": [],
+			"name": "los-blocked",
+			"resolution": [
+				1280,
+				720
+			],
+			"suppressed": [],
+			"turn": 1,
+			"zoom": 1.0
+		},
+		{
+			"label_overlaps": 0,
+			"labels": [
+				{
+					"anchor": "(640.0, 272.0)",
+					"color": "(0.5961, 0.7882, 0.7451, 1.0)",
+					"id": "bow-1",
+					"rect": "[P: (598.0, 244.0), S: (84.0, 22.0)]",
+					"text": "BOW 6/6"
+				},
+				{
+					"anchor": "(800.0, 366.5)",
+					"color": "(0.8667, 0.6118, 0.4941, 1.0)",
+					"id": "target",
+					"rect": "[P: (758.0, 338.5), S: (84.0, 22.0)]",
+					"text": "× 6/6"
+				}
+			],
+			"markers": [],
+			"name": "threat-los",
+			"resolution": [
+				1280,
+				720
+			],
+			"suppressed": [],
+			"turn": 1,
+			"zoom": 1.0
+		},
+		{
+			"label_overlaps": 0,
+			"labels": [
+				{
+					"anchor": "(640.0, 271.1003)",
+					"color": "(0.5961, 0.7882, 0.7451, 1.0)",
+					"id": "bow-1",
+					"rect": "[P: (492.0, 243.1003), S: (84.0, 22.0)]",
+					"text": "BOW 6/6"
+				},
+				{
+					"anchor": "(871.6948, 407.945)",
+					"color": "(0.8667, 0.6118, 0.4941, 1.0)",
+					"id": "target",
+					"rect": "[P: (829.6948, 379.945), S: (84.0, 22.0)]",
+					"text": "× 6/6"
+				}
+			],
+			"markers": [],
+			"name": "cover-preview",
+			"resolution": [
+				1280,
+				720
+			],
+			"suppressed": [],
+			"turn": 1,
+			"zoom": 0.965394854545593
+		}
+	]
+}

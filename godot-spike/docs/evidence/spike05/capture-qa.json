@@ -1,4 +1,5 @@
 {
+	"checks": {},
 	"engine": "4.7.2-stable (official)",
 	"human": "HUMAN_PENDING",
 	"mode": "qa",

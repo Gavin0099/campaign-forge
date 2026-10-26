@@ -123,7 +123,7 @@ func update_state() -> void:
 		result_panel.get_child(result_panel.get_child_count()-1).grab_focus()
 	debug.visible=battle.debug_visible
 	debug.text="F1 DEBUG  ·  PLACEHOLDER\nzoom %.2f · 96px figures · 160×94.5px diamond\nM Reduced Motion: %s · B fast: %s · X skip move: %s\nAttacks: %d · last %.3fs" % [battle.camera.zoom.x,battle.reduced_motion,battle.fast_forward,battle.skip_enemy_movement,battle.attack_timings.size(),battle.impact.last_seconds]
-	debug.text+="\nFirst contact: turn %d · JSON: .godot/spike04/live-telemetry.json" % battle.telemetry.first_contact_turn
+	debug.text+="\nFirst contact: turn %d · JSON: .godot/spike05/live-telemetry.json" % battle.telemetry.first_contact_turn
 	debug.text+="\nResult: %s / turn%d · last enemy phase %.3fs" % [s.status,s.turn,0.0 if battle.enemy_times.is_empty() else battle.enemy_times.back().seconds]
 	for kind in battle.telemetry.totals:
 		var t: Dictionary = battle.telemetry.totals[kind]

@@ -76,7 +76,8 @@ func refresh_layout() -> void:
 			var p := screen(battle.actors[u.id].position)
 			if not Rect2(0,220,1280,320).has_point(p-Vector2(0,48)*zoom_value): continue
 			var kind: String = {"melee":"M","ranged":"BOW","mobile":"BOOT","knight":"×","leader":"◆"}[u.kind]
-			place(u.id,"%s %d/%d" % [kind,u.hp,u.max_hp],p-Vector2(0,98)*zoom_value,battle.TEAL if u.side=="ally" else battle.CLAY,84)
+			var hp_text: String = battle.actors[u.id].get_node("HP").text
+			place(u.id,"%s %s" % [kind,hp_text],p-Vector2(0,98)*zoom_value,battle.TEAL if u.side=="ally" else battle.CLAY,84)
 	else:
 		var groups := {}
 		for u in alive:

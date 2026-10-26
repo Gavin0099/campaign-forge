@@ -1,0 +1,22 @@
+{
+  "enemy-phase-60fps": {
+    "fps": 60.00240009600384,
+    "frames": 98,
+    "resolution": [
+      1280,
+      720
+    ],
+    "bytes": 10130644,
+    "sha256": "7adca8955fe565c2bb83ca2006f8149a931cc4eed6f4547fd289f87e5ba108d3"
+  },
+  "select-move-ranged-60fps": {
+    "fps": 60.00240009600384,
+    "frames": 109,
+    "resolution": [
+      1280,
+      720
+    ],
+    "bytes": 11326590,
+    "sha256": "0d8ad7c39cf4b583d3f8c4cc4f5560920b6a2dd811ebc563ee142b318b4c3ae1"
+  }
+}
