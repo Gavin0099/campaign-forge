@@ -47,10 +47,10 @@ func _draw() -> void:
 			draw_colored_polygon(PackedVector2Array([at+Vector2(0,-5),at+Vector2(5,0),at+Vector2(0,5),at-Vector2(5,0)]),battle.BRASS)
 		elif u.side=="ally": draw_rect(Rect2(at-Vector2(2.5,2.5),Vector2(5,5)),battle.TEAL)
 		else: draw_colored_polygon(PackedVector2Array([at+Vector2(0,-3),at+Vector2(3,3),at+Vector2(-3,3)]),battle.CLAY)
-	for entry in battle.hud.warning_entries():
-		var at: Vector2 = world_to_map(battle.center(entry))
-		draw_line(at-Vector2(4,0),at+Vector2(4,0),battle.BRASS,2)
-		draw_line(at-Vector2(0,4),at+Vector2(0,4),battle.BRASS,2)
+	var marker: Dictionary = battle.hud.warning_marker()
+	if not marker.is_empty():
+		var at: Vector2 = world_to_map(battle.center(marker.cell))
+		draw_arc(at,3,0,TAU,12,Color(battle.BRASS,.6),1)
 	draw_rect(viewport_rect(),battle.BONE,false,1.2)
 
 func _process(_delta: float) -> void:

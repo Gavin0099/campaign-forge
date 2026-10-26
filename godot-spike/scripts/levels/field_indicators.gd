@@ -43,11 +43,16 @@ func refresh_items() -> void:
 		if item.is_empty(): continue
 		item.label=target.label
 		item.id=target.id
-		# Keep labels disjoint; arrow direction still points at the true target.
-		for previous in items:
-			if item.rect.intersects(previous.rect):
-				item.rect.position.y=clampf(previous.rect.position.y-40,SAFE.position.y,SAFE.end.y-36)
-		items.append(item)
+		# Try finite slots until ALL previous rectangles are clear, not just last.
+		var placed := false
+		for y in range(236,500,40):
+			var candidate := Rect2(Vector2(item.rect.position.x,y),item.rect.size)
+			if items.any(func(previous):return candidate.grow(3).intersects(previous.rect)): continue
+			item.rect=candidate
+			item.point=candidate.get_center()
+			placed=true
+			break
+		if placed: items.append(item)
 
 func centre_item(item: Dictionary) -> void:
 	if battle.camera.overview: battle.camera.toggle_overview()

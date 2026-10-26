@@ -98,6 +98,10 @@ func warning_entries() -> Array:
 	if not warning.is_empty(): return warning.entries
 	return battle.state.level.entries if battle.state.warned else []
 
+func warning_marker() -> Dictionary:
+	var entries := warning_entries()
+	return {} if entries.is_empty() else {"cell":entries[1],"count":entries.size(),"radius":12.0,"alpha":.55}
+
 func on_event(event: Dictionary) -> void:
 	if event.type=="reinforcement_warning": warning=event.duplicate(true)
 

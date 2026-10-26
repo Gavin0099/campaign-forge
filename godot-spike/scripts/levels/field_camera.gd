@@ -3,6 +3,10 @@ extends Camera2D
 var battle
 const STEPS = [0.8,1.0,1.2]
 const VIEW = Vector2(1280,720)
+## Logical 720p canvas: below top HUD/minimap, above bottom hints/panel.
+const SAFE = Rect2(52,230,1176,304)
+const ACTOR = Rect2(-58,-124,116,140)
+var protected_ids: Array = []
 var base_position := Vector2.ZERO
 var base_zoom := 1.0
 var zoom_index := 1
@@ -35,8 +39,14 @@ func clamp_at(at: Vector2, zoom_value: float = -1) -> Vector2:
 
 func sync() -> void:
 	zoom=Vector2.ONE*(focus_zoom+punch if focusing else base_zoom)
+	var points := actor_points()
+	if not overview and not points.is_empty():
+		var extent := Rect2(points[0]+ACTOR.position,ACTOR.size)
+		for point in points.slice(1): extent=extent.merge(Rect2(point+ACTOR.position,ACTOR.size))
+		zoom=Vector2.ONE*minf(zoom.x,minf((SAFE.size.x-32)/extent.size.x,(SAFE.size.y-32)/extent.size.y))
 	base_position=clamp_at(base_position,base_zoom)
 	position=clamp_at(base_position+focus_offset)
+	if not overview and not protected_ids.is_empty(): position=safe_position(position,zoom.x,actor_points())
 	var raw := Vector2.ZERO
 	if shake_remaining>0 and not battle.reduced_motion and shake_profile!=null:
 		var t := 1.0-shake_remaining/(shake_profile.shake_duration_ms/1000)
@@ -44,19 +54,48 @@ func sync() -> void:
 	offset=clamp_at(position+raw)-position
 	force_update_scroll()
 
+func actor_points() -> Array:
+	var points: Array = []
+	for id in protected_ids:
+		if battle.actors.has(id): points.append(battle.actors[id].position)
+	return points
+
+func screen_actor(at: Vector2, camera_at: Vector2, scale_value: float) -> Rect2:
+	return Rect2((at+ACTOR.position-camera_at)*scale_value+VIEW/2,ACTOR.size*scale_value)
+
+func safe_position(at: Vector2, scale_value: float, points: Array) -> Vector2:
+	if points.is_empty(): return clamp_at(at,scale_value)
+	var rect := screen_actor(points[0],at,scale_value)
+	for p in points.slice(1): rect=rect.merge(screen_actor(p,at,scale_value))
+	var shift := Vector2.ZERO
+	var inset := SAFE.grow(-16)
+	for axis in range(2):
+		if rect.position[axis]<inset.position[axis]: shift[axis]=(rect.position[axis]-inset.position[axis])/scale_value
+		elif rect.end[axis]>inset.end[axis]: shift[axis]=(rect.end[axis]-inset.end[axis])/scale_value
+	return clamp_at(at+shift,scale_value)
+
+func protect(ids: Array) -> void:
+	protected_ids=ids.duplicate()
+	if overview: toggle_overview()
+	base_position=safe_position(base_position,base_zoom,actor_points())
+	sync()
+
 func pan_to(at: Vector2) -> void:
 	if follow_tween: follow_tween.kill()
+	protected_ids.clear() # Manual exploration may deliberately leave units offscreen.
 	base_position=clamp_at(at,base_zoom)
 	sync()
 
 func follow(at: Vector2) -> void:
 	if overview: toggle_overview()
 	if follow_tween: follow_tween.kill()
+	protected_ids.clear()
+	var destination := safe_position(at,base_zoom,[at])
 	if battle.reduced_motion:
-		pan_to(at)
+		pan_to(destination)
 		return
 	follow_tween=create_tween()
-	follow_tween.tween_property(self,"base_position",clamp_at(at,base_zoom),.22).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	follow_tween.tween_property(self,"base_position",destination,.22).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 
 func toggle_overview() -> void:
 	if focusing: return
@@ -89,14 +128,24 @@ func screen_to_world(screen: Vector2) -> Vector2:
 func begin_attack(at: Vector2, profile: ImpactProfile) -> void:
 	if follow_tween: follow_tween.kill()
 	attack_saved={"position":base_position,"zoom":base_zoom,"overview":overview}
-	if battle.reduced_motion: return
+	var points := actor_points()
+	base_position=safe_position(base_position,base_zoom,points)
+	if battle.reduced_motion:
+		sync()
+		return
 	focusing=true
 	focus_zoom=base_zoom
 	focus_offset=Vector2.ZERO
 	if focus_tween: focus_tween.kill()
 	focus_tween=create_tween().set_parallel(true)
 	focus_tween.tween_property(self,"focus_offset",(at-base_position)*profile.focus_weight,profile.camera_in_ms/1000).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
-	focus_tween.tween_property(self,"focus_zoom",base_zoom*profile.attack_zoom,profile.camera_in_ms/1000)
+	var desired_zoom: float = base_zoom*profile.attack_zoom
+	if not points.is_empty():
+		var extent := Rect2(points[0]+ACTOR.position,ACTOR.size)
+		for point in points.slice(1): extent=extent.merge(Rect2(point+ACTOR.position,ACTOR.size))
+		# Leave room for shake + zoom punch, while retaining every contact actor.
+		desired_zoom=minf(desired_zoom,minf((SAFE.size.x-32)/extent.size.x,(SAFE.size.y-32)/extent.size.y)-profile.zoom_punch)
+	focus_tween.tween_property(self,"focus_zoom",desired_zoom,profile.camera_in_ms/1000)
 
 func end_attack() -> void:
 	if focus_tween: focus_tween.kill()
@@ -136,6 +185,7 @@ func finish_return() -> void:
 	shake_remaining=0
 	punch=0
 	sync()
+	protected_ids.clear()
 
 func _process(delta: float) -> void:
 	if get_tree().paused: return

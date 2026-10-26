@@ -105,7 +105,8 @@ func test_attack_returns_to_pre_attack_scroll_position() -> void:
 func test_reduced_motion_snaps_follow_and_suppresses_shake_zoom() -> void:
 	battle.reduced_motion=true
 	cam.follow(battle.center(Vector2i(16,9)))
-	assert_eq(cam.position,cam.clamp_at(battle.center(Vector2i(16,9))))
+	# W5: follow destinations include full-figure/HUD safe margins.
+	assert_eq(cam.position,cam.safe_position(battle.center(Vector2i(16,9)),cam.base_zoom,[battle.center(Vector2i(16,9))]))
 	var before: Vector2 = cam.position
 	cam.begin_attack(battle.center(Vector2i(18,9)),battle.impact.profile)
 	cam.kick(Vector2.RIGHT,battle.impact.profile,true)

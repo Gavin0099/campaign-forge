@@ -38,6 +38,7 @@ var attack_timings: Array = []
 var enemy_times: Array = []
 var last_events: Array = []
 var telemetry = preload("res://scripts/levels/field_telemetry.gd").new()
+var labels
 
 func center(cell: Vector2i) -> Vector2:
 	return Vector2(state.level.size.y*HALF.x+(cell.x-cell.y)*HALF.x,(cell.x+cell.y+1)*HALF.y)
@@ -54,7 +55,7 @@ func world_cell(at: Vector2) -> Vector2i:
 func world_bounds() -> Rect2:
 	# Empty perimeter is part of the authored navigable bounds: HUD-safe access
 	# to edge tiles without ever exposing outside the battlefield camera bounds.
-	return Rect2(Vector2(-120,-180),HALF*(state.level.size.x+state.level.size.y)+Vector2(240,360))
+	return Rect2(Vector2(-500,-500),HALF*(state.level.size.x+state.level.size.y)+Vector2(1000,900))
 
 func make_label(parent: Node, text: String, at: Vector2, size: int, color: Color = BONE) -> Label:
 	var label := Label.new()
@@ -99,6 +100,10 @@ func _ready() -> void:
 	hud=preload("res://scripts/levels/field_hud.gd").new()
 	hud.battle=self
 	add_child(hud)
+	labels=preload("res://scripts/levels/field_labels.gd").new()
+	labels.battle=self
+	labels.mouse_filter=Control.MOUSE_FILTER_IGNORE
+	hud.root.add_child(labels)
 	pan_to(center(cursor_cell))
 	telemetry.register(state,"ally")
 	refresh()
@@ -151,8 +156,10 @@ func build_units() -> void:
 		var badge: String = {"melee":"M","ranged":"BOW 〉","mobile":"BOOT ⇥","knight":"×","leader":"◆ LEADER"}[u.kind]
 		var tag := make_label(actor,badge,Vector2(-66,-68),14,TEAL if u.side=="ally" else CLAY)
 		tag.name="Badge"
+		tag.hide() # One screen-space nameplate owns layout at every zoom.
 		var hp := make_label(actor,"%d/%d" % [u.hp,u.max_hp],Vector2(-22,-112),14)
 		hp.name="HP"
+		hp.hide()
 		actors[u.id]=actor
 		players[u.id]=player
 
@@ -181,6 +188,7 @@ func select_unit(id: String) -> void:
 	cursor_cell=u.cell
 	cancel()
 	camera.follow(center(u.cell))
+	camera.protect([id])
 
 func cancel() -> void:
 	pending.clear()
@@ -267,7 +275,9 @@ func play_events(events: Array) -> void:
 				hud.notice.text="敵方回合　B／Shift 加速 · X 略過移動" if event.phase=="enemy" else "我方回合"
 				hud.update_state()
 			"move":
-				if state.phase=="player": camera.follow(center(event.path.back()))
+				# Both player and enemy movement follow the complete actor, HUD-aware.
+				camera.follow(center(event.path.back()))
+				camera.protect([event.unit])
 				await animate_move(event.unit,event.path)
 			"intent":
 				if event.state!="guard": hud.notice.text="%s：%s" % [event.unit,event.get("reason",event.state)]
@@ -276,6 +286,7 @@ func play_events(events: Array) -> void:
 					hud.notice.text="敵方攻擊：%s → %s" % [event.unit,event.target]
 					camera.follow(actors[event.target].position)
 					if not reduced_motion: await get_tree().create_timer(.24/playback_speed(),false).timeout
+				camera.protect([event.unit,event.target])
 				var damage: Dictionary = events[i+1]
 				var movement: Dictionary = events[i+2] if i+2<events.size() and events[i+2].type in ["knockback","knockback_blocked"] else {}
 				impact.crit=next_crit

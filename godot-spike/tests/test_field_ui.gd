@@ -70,7 +70,8 @@ func test_indicators_only_outside_tactical_view_right_direction_and_safe() -> vo
 	battle.reduced_motion=true
 	var world: Vector2 = battle.center(Vector2i(17,9))
 	indicators.centre_item(indicators.indicator(world))
-	assert_eq(camera.base_position,camera.clamp_at(world))
+	# W5: indicator follow now places the whole figure below top HUD.
+	assert_eq(camera.base_position,camera.safe_position(world,camera.base_zoom,[world]))
 
 func test_objective_panel_turn_limit_and_hover_show_real_values() -> void:
 	battle.hud.update_state()
