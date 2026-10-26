@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="ImpactProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/impact/impact_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+resource_name = "Spike04 toned contact — presentation only"
+attacker_hitstop_ms = 110.0
+target_hitstop_ms = 110.0
+crit_hitstop_multiplier = 1.5454545454545454
+directional_shake = true
+shake_strength_px = 8.0
+shake_decay = 4.0
+crit_shake_multiplier = 1.5
+flash_mix = 0.8
+flash_color = Color(1, 0.98, 0.91, 1)
+flash_hold_ms = 16.666667
+flash_ms = 80.0
+crit_flash_multiplier = 1.2
+recoil_px = 9.0
+zoom_punch = 0.06
+number_from_target = true
+number_font_px = 24
+crit_number_font_px = 30
+number_offset_y = -112.0
+number_backing = false
+number_scale = 1.6
+crit_number_scale_multiplier = 1.125
+spoke_count = 7
+spoke_width = 2.0
+spoke_outer_px = 16.0
+spoke_color = Color(1, 0.96, 0.78, 1)
+streak_length_px = 22.0
+spark_count = 22
+crit_particle_multiplier = 1.3
+spark_direction_bias = 0.8
+dust_on_contact = true
+fixed_particle_seed = true
+spark_velocity_min = 75.0
+spark_velocity_max = 170.0
+spark_scale_min = 0.8
+spark_scale_max = 2.0
+layered_sfx = true

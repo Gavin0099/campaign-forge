@@ -1,6 +1,7 @@
 extends "res://addons/gut/test.gd"
 const Old = preload("res://config/impact_profile_spike03.tres")
-const Toned = preload("res://config/impact_profile.tres")
+## W4: historical spike04 profile pins now reference the byte-preserved resource.
+const Toned = preload("res://config/impact_profile_spike04.tres")
 
 func test_toned_values_and_preserved_contact_layers() -> void:
 	assert_almost_eq(Toned.flash_mix,0.8,0.02)
