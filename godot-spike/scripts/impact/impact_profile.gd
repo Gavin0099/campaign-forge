@@ -116,4 +116,5 @@ static func from_args(args: PackedStringArray) -> ImpactProfile:
 		if arg == "--impact-profile=a9_baseline": return load("res://config/impact_profile_a9_baseline.tres")
 		if arg == "--impact-profile=spike03": return load("res://config/impact_profile_spike03.tres")
 		if arg == "--impact-profile=spike04": return load("res://config/impact_profile_spike04.tres")
+		if arg == "--impact-profile=spike05": return load("res://config/impact_profile_spike05.tres")
 	return load("res://config/impact_profile.tres")

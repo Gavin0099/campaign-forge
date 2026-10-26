@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1")
-resource_name = "Spike05 toned contact — presentation only"
+resource_name = "Spike06 toned contact — presentation only"
 attacker_hitstop_ms = 110.0
 target_hitstop_ms = 110.0
 crit_hitstop_multiplier = 1.5454545454545454
@@ -12,7 +12,7 @@ directional_shake = true
 shake_strength_px = 8.0
 shake_decay = 4.0
 crit_shake_multiplier = 1.5
-flash_mix = 0.6
+flash_mix = 0.5
 flash_color = Color(1, 0.98, 0.91, 1)
 flash_hold_ms = 0.0
 flash_ms = 60.0

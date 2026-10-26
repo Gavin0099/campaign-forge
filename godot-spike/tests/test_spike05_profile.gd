@@ -1,6 +1,6 @@
 extends "res://addons/gut/test.gd"
 const Old = preload("res://config/impact_profile_spike04.tres")
-const Toned = preload("res://config/impact_profile.tres")
+const Toned = preload("res://config/impact_profile_spike05.tres") # historical .6 byte-preserved
 
 func test_flash_and_numbers_lower_but_other_layers_identical() -> void:
 	assert_almost_eq(Toned.flash_mix,.6,.001)
@@ -14,4 +14,4 @@ func test_four_profiles_are_selectable_without_changing_unknown_arg_fallback() -
 	for suffix in ["a9_baseline","spike03","spike04",""]:
 		var profile := ImpactProfile.from_args(PackedStringArray([] if suffix=="" else ["--impact-profile="+suffix]))
 		assert_eq(profile.resource_path,"res://config/impact_profile"+("_"+suffix if suffix else "")+".tres")
-	assert_eq(ImpactProfile.from_args(PackedStringArray(["--impact-profile=invalid"])),Toned)
+	assert_eq(ImpactProfile.from_args(PackedStringArray(["--impact-profile=invalid"])),load("res://config/impact_profile.tres"))

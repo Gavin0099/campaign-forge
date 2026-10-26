@@ -166,3 +166,40 @@ entry changed east; preserved original fixture/NE assertion, added east-label
 assertion to new test. Final focused15/15,125 assertions exit0. Full W4 run
 on the intermediate full-remaining trial is retained and not final acceptance;
 W7 runs the final entire suite. grid_rules.gd untouched.
+
+## W5 — flash .5 and cheap HUD
+
+Original default copied byte-for-byte before edit to impact_profile_spike05.tres;
+Git blob matches6ee5cb7 default65883cfef205855bfef691380b5dc7d09beb5a07.
+Only exported flash_mix .6 -> .5. Hold0/fade60ms,crit multiplier1.2,numbers21/26,
+hitstop110/170/80,shake8/12,recoil9,streak22,bias.8,sparks18/spokes6,dust,
+knockback,zoom andSFX all equal (enumerated-property test). No45ms experiment.
+
+Code inspection corrects the prior handoff's field .72 claim: field adapter
+sets shader mix directly and never multiplies crit brightness. Actual default
+field normal AND crit maximum is .5 (was.6); .6 is the new profile product
+ceiling (.5×1.2), not a measured brighter field flash. Skirmish crit uses1.2
+on fade duration, not mix. Preserve those adapter behaviours to keep all other
+layers unchanged. Do not claim an unimplemented .72->.6 brightness change.
+
+Native normal/crit spike05/spike06 four60FPS AVIs plus contact±8 stack recorded;
+field hit PNG recorded. Visual inspection: .5 still has a conspicuous contact
+flash during frozen frames; no claim of human art/feel acceptance. Fixed60
+simulation timing unchanged normal.950/crit1.016667/Reduced.716667. First
+wall run exceeded1.7s under concurrent capture; alone ALSO exceeds1.7s
+(normal up to1.886456,crit1.971366). Therefore concurrency is not established
+as the cause. Fixed-clock presentation advances slower than real time on this
+PC. Retain alone JSON/log and first observed table; independent no-recording
+real-time-clock nine-case run is the gameplay wall bound check. No game timing
+or animation frame changes to conceal this distinction.
+
+V now includes six actual colour meanings (move,enemy threat,legal attack,
+blocked LOS,forest cover,scout control); blocked/cover target highlights use
+attack_info. O group labels13->15px,112->144px, same finite overlap avoidance.
+No art. Historical spike05 profile-value tests now bind preserved resource;
+unknown-argument fallback continues to assert current default. Final profile+
+legend+dense historical camera/label tests10/10,1142assertions,exit0.
+
+Real-time uncaptured nine-case gameplay wall maxima: normal.8570s,crit.9276s,
+Reduced.6681s; all <=1.7 and target1.2,Reduced<=normal by setup. Packaging
+asserts all nine and retains fixed-clock and runtime fields separately.

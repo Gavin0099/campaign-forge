@@ -86,7 +86,7 @@ func refresh_layout() -> void:
 			groups[u.group].count+=1
 		for group in groups:
 			var g: Dictionary = groups[group]
-			place(group,"%s ×%d" % [group,g.count],g.sum/g.count,battle.TEAL if g.ally else battle.CLAY,112)
+			place(group,"%s ×%d" % [group,g.count],g.sum/g.count,battle.TEAL if g.ally else battle.CLAY,144)
 	var entries: Array = battle.hud.warning_entries()
 	if not entries.is_empty(): place("wave","T5 增援 ×3",screen(battle.center(entries[1])),Color(battle.BRASS,.8),112)
 
@@ -108,4 +108,4 @@ func _draw() -> void:
 		draw_line(item.anchor,item.rect.get_center(),Color(item.color,.4),1,true)
 		draw_rect(item.rect,Color("14201f"))
 		draw_rect(item.rect,item.color*.7,false,1)
-		draw_string(battle.hud.root.theme.default_font,item.rect.position+Vector2(5,16),item.text,HORIZONTAL_ALIGNMENT_LEFT,item.rect.size.x-10,13,item.color)
+		draw_string(battle.hud.root.theme.default_font,item.rect.position+Vector2(5,16),item.text,HORIZONTAL_ALIGNMENT_LEFT,item.rect.size.x-10,15 if battle.camera.overview else 13,item.color)

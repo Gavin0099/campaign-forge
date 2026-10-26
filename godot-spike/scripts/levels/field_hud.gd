@@ -18,6 +18,7 @@ var indicators
 var warning := {}
 var minimap_collapsed := false
 var camera_hints: Label
+var threat_legend: Control
 
 func panel(at: Vector2, dimensions: Vector2) -> Panel:
 	var p := Panel.new()
@@ -58,6 +59,12 @@ func _ready() -> void:
 	title=label(top,"",Vector2(16,9),24,Color("d2b777"))
 	objective=label(top,"",Vector2(18,44),17)
 	notice=label(root,"",Vector2(34,122),20,Color("e5be7c"))
+	threat_legend=Control.new()
+	threat_legend.position=Vector2(34,158)
+	threat_legend.mouse_filter=Control.MOUSE_FILTER_IGNORE
+	root.add_child(threat_legend)
+	var entries := [["移動","73b0a1"],["敵威脅","bd5742"],["可攻擊","d97045"],["LOS阻擋","909999"],["森林−1","d2b777"],["斥候攔截","9470d1"]]
+	for i in range(entries.size()): label(threat_legend,"■ "+entries[i][0],Vector2(i*142,0),15,Color(entries[i][1]))
 	var bottom := panel(Vector2(18,572),Vector2(1244,132))
 	selected=label(bottom,"",Vector2(16,9),20,Color("d2b777"))
 	inspect=label(bottom,"",Vector2(16,41),16)
@@ -107,6 +114,7 @@ func on_event(event: Dictionary) -> void:
 
 func update_state() -> void:
 	var s: Dictionary = battle.state
+	threat_legend.visible=battle.threat_visible
 	title.text="渡口・PLACEHOLDER  |  第 %d / %d 回合・%s" % [s.turn,s.level.turn_limit,"戰鬥結束" if s.status!="playing" else ("我方" if s.phase=="player" else "敵方")]
 	objective.text="目標：擊敗領袖 ◆　失敗：托瑪倒下／超過 %d 回合　｜24×18・無迷霧・測試值" % s.level.turn_limit
 	var u: Dictionary = battle.Rules.unit(s,battle.selected_id)

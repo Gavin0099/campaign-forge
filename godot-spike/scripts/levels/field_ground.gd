@@ -27,6 +27,16 @@ func _draw() -> void:
 	if battle.threat_visible:
 		for cell in battle.Rules.zoc_cells(battle.state):
 			draw_colored_polygon(battle.diamond(cell),Color(0.58,0.44,0.82,0.32))
+		var selected: Dictionary = battle.Rules.unit(battle.state,battle.selected_id)
+		if not selected.is_empty() and selected.kind=="ranged":
+			for foe in battle.state.units:
+				if not battle.Rules.in_range(battle.state.level,selected,foe): continue
+				var info: Dictionary = battle.Rules.attack_info(battle.state,selected,foe)
+				if not info.legal: draw_colored_polygon(battle.diamond(foe.cell),Color(.56,.60,.60,.40))
+				elif info.cover:
+					var border: PackedVector2Array = battle.diamond(foe.cell)
+					border.append(border[0])
+					draw_polyline(border,Color("d2b777"),3,true)
 	for id in battle.attack_targets:
 		var target: Dictionary = battle.Rules.unit(battle.state,id)
 		draw_colored_polygon(battle.diamond(target.cell),Color(0.85,0.44,0.27,0.38))
