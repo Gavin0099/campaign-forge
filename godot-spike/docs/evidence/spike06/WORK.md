@@ -261,3 +261,17 @@ First offline packaging exit1 tried to normalize its own stdout log while
 Windows held it open. Failed log retained under attempts/. Exclude live
 packaging/audit stdout from in-process normalization; final packaging exit0.
 No game/capture failure or evidence relabelling; reports/AVIs verified again.
+
+## W7 — regression and scope
+
+Headless import exit0; full GUT exit0,30 scripts/165 tests/all165 passing,
+11,749 assertions,104.245s. All historical147 retained +18 new. Generated
+Godot UID files committed with scripts/tests; no authored art/frame change.
+Offline evidence audit exit0 verifies W6 source freeze, all100 baseline traces,
+runtime win13/loss, native dimensions/zero plate overlaps, AVI hashes/60FPS,
+both Skirmish clocks separately,41 real-time field attacks, protected shared
+animation bytes and grid_rules against A9, plus honest failed design target.
+Git protected diff and whitespace exit0; onlygodot-spike/ and the pre-existing
+brief differ from6ee5cb7. Source hashes use working bytes and normalizedLF;
+no self-hash/audit stdout. W8 refreshes documents/scope/hashes only.
+No new process/agent/dependency, push/PR/merge/stash or session closeout.

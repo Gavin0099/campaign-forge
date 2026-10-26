@@ -1528,3 +1528,94 @@ All screenshots/AVIs are runtime, automated operator only. HUMAN_PENDING: full b
 readability/camera comfort/feel, art and sound. No governance code, canonical memory,
 SessionEnd receipt, external reviewer, other-worktree write,32×24,formal story/S4,
 push/merge/PR/Actions/stash is claimed. Resource self-check and open questions in HANDOFF.
+
+## spike-06
+
+Owner2026-10-26 19:17授權，brief8010bde／base6ee5cb7，worktree
+`scratch/godot-spike`、branch `codex/godot-spike`。僅godot-spike/；W1–W8
+逐步本地commit，沒有push。24×18與已答defaults保持，無新美術／HP填充。
+
+### 實際執行與exit codes
+
+Godot／Python均以Owner指定完整路徑執行；sandbox解析失敗後用同路徑escalation。
+共用.git metadata的正常commit也需escalation；沒有全域trust或hooks bypass。
+
+```powershell
+$godot='C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe'
+$python='C:\Users\daish\AppData\Local\Programs\Python\Python312\python.exe'
+& $godot --headless --path godot-spike --import
+& $godot --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gdir=res://tests -gexit
+& $godot --headless --path godot-spike -s res://tools/autoplay_field.gd -- --variant=spike05 --seeds=fixed --output=res://docs/evidence/spike06/baseline-recheck/
+& $godot --headless --path godot-spike -s res://tools/autoplay_field.gd -- --seeds=fixed --enemy-mean=1.47633625 --output=res://docs/evidence/spike06/after/
+& $godot --path godot-spike --resolution 1280x720 --audio-driver Dummy --max-fps 60 -s res://tools/capture_field06.gd -- --mode=measure
+& $godot --path godot-spike --resolution 1280x720 --audio-driver Dummy --max-fps 60 -s res://tools/capture_field06.gd -- --mode=perf
+# 其他實際mode: runtime,lose,qa,1080；1080以--resolution1920x1080
+& $godot --path godot-spike --resolution 1280x720 --audio-driver Dummy --fixed-fps 60 --write-movie res://.godot/spike06-field/enemy.avi -s res://tools/capture_field06.gd -- --mode=enemy
+# 同命令scout.avi / --mode=scout
+& $godot --path godot-spike --resolution 1280x720 --audio-driver Dummy --max-fps 60 -s res://tools/capture_spike06.gd -- --wall-timing
+# 固定模擬時鐘另用--fixed-fps60及--timing，不加--wall-timing
+& $python godot-spike/tools/package_spike06_hitfeel.py
+& $python godot-spike/tools/package_spike06_field.py
+& $python godot-spike/tools/audit_spike06.py
+git diff --check
+git diff --stat 6ee5cb7..HEAD
+git diff --exit-code 6ee5cb7 -- shared-anim ui-prototype docs/art-briefs docs/proposals godot-spike/art godot-spike/scripts/rules/grid_rules.gd godot-spike/scripts/skirmish.gd godot-spike/scenes/Skirmish.tscn godot-spike/config/impact_profile_a9_baseline.tres godot-spike/config/impact_profile_spike03.tres godot-spike/config/impact_profile_spike04.tres
+```
+
+| 驗證 | 真實結果／證據 |
+| --- | --- |
+| W7 import | exit0；evidence/spike06/w7-import.log |
+| W7 full GUT | exit0，**30 scripts /165 tests /165 passing /11,749 assertions /104.245s**；test-run.log、w7-exit-codes.json |
+| W1與W6舊版 | 各100組；W6全部trace／commands／outcomes／casualties／archetypes／unit-turns／wave與W1相同；baseline-recheck/comparison.json |
+| W6 tuned | 100組exit0、零illegal commands；after/，20固定種子×5policy |
+| W6 runtime | measure/perf/runtime/lose/qa/1080/enemy/scout全exit0；w6-exit-codes.json、capture-*.json |
+| W5 hitfeel | 四normal／crit前後AVI＋strips、九組固定時鐘＋九組獨立real-time；w5-*.log與hitfeel/ |
+| W6 packaging | 首次exit1：Windows鎖定自身stdout；attempts/w6-package-active-log-failed.log保留；排除live log後exit0，w6-package.log |
+| W7 offline audit／scope | audit exit0，w7-audit-run.log／audit.json；protected diff0／whitespace0，git-scope.json；final source freeze全部一致 |
+| Preserved profile | 6ee5cb7 default與spike05 copy Git blob均65883cfef205855bfef691380b5dc7d09beb5a07 |
+
+### 回歸與測試pin遷移
+
+舊147tests全部保留，新增18。歷史18-actor／舊部署／T4 march／NE wave／autoplay
+結果fixture明指保留spike05資料／operator；舊profile值明指spike05 resource。
+未知profile fallback仍檢查current default。新default另測部署可走、領袖／入口可達、
+wave整場交戰、kit閾值／移動預算／不可重複／ZoC／AI／immutability與UI實際預覽。
+沒有刪斷言或改成虛構結果。W4中途有fixture／fullremaining候選的失敗log，
+WORK已區分；最終165全綠才算本輪驗收。
+
+Skirmish規則與三setup維持HP4、cell(1,6)/(1,5)/(3,4)，damage2、G005、
+knockback、walkability、180/70/40/80/100/150ms、contact3／anchor(455,196)未改。
+九組固定60Hz input-ready normal.950／crit1.016667／Reduced.716667s；
+**固定模擬時鐘wall normal／crit即使單獨跑也會超1.7s**，最長1.971366s，
+保留timing-fixed60-alone.json與觀察紀錄，沒有隱去或歸因為已證實的並行問題。
+獨立無錄影／readback的real-time九組wall maxima normal.8570／crit.9276／
+Reduced.6681s，各setup Reduced≤normal；field另41次max.943979s。
+實際遊戲時鐘均過hard1.7／target1.2；錄影模擬時鐘wall不可冒充實際輸入延遲。
+
+default僅flash_mix .6→.5；其他exported值全部相等測試。五profiles selectable。
+修正舊說法：field crit沒有乘亮度，實際normal／crit mix均.5；.6是.5×1.2理論乘積，
+Skirmish crit multiplier用於fade duration。保留adapter現況，不改額外效果。
+
+### 已知未通過與限制
+
+flank70%勝率、14勝全部援軍交戰、idle29.97%、scout61收割／87攔截且25.05%
+傷害非最高。真人難度與理解未驗；turtle／scout-retreat仍全敗。scriptedT5 bypass
+100%勝、85%交戰，其中1014/1015/1017勝T6零死且沒碰wave，是保留反例，
+不能宣稱不可繞過或最佳路線已證明。
+
+15–25min全面估算門檻**FAIL：0/20區間完全落內**；flank中位17.2–28.4min，
+全範圍9.9–33.7。使用新實測enemy mean1.47633625s與15–25s／living ally假設；
+不是人類實際分鐘，未填HP。效能亦有明顯退步：scroll34.007/46.443ms、
+normal34.053/47.043、2×34.585/45.572（mean/worst），舊mean20.703/23.509/23.124。
+前後工作量不同，不能單獨歸因或宣稱穩定60FPS。
+
+PNG／AVI均執行畫面；兩段AVI從真實可達snapshot續播，win／lose則整場從初始部署
+連續操作。終局world plates擋文字已最小修正、重錄，零plate間重疊不等於全部UI驗收。
+source-hashes包含working bytes／normalizedLF；capture freeze固定W6 runtime，W7/W8
+僅驗證／文件；scope HEAD是包含檔案之前commit，另含uncommitted paths。
+
+HUMAN_PENDING：blind road/flank/turtle、實際分鐘、傷亡／困惑／勝敗理由、scout／wave
+理解、鏡頭／標籤／閃白／legend／SFX。無新SRD／IP；checklist引用的
+docs/design/RULE-ADAPTATION-CONTRACT.md在本checkout不存在，本輪僅自創spike kit，
+不宣稱已通過不存在文件的審核。無global trust、canonical SessionEnd、另一worktree
+寫入、代理／外部reviewer、main／push／merge／PR／stash／Actions／部署／32×24／S4。

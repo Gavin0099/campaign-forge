@@ -1,0 +1,350 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+---  GUT  ---
+[INFO]:  using [C:/Users/daish/AppData/Roaming/Godot/app_userdata/Campaign Forge — Impact Study] for temporary output.
+Godot version:  4.7.2
+GUT version:  9.7.1
+
+
+res://tests/test_a2_hud.gd
+* test_default_hud_has_no_diagnostics_and_f1_reveals_them
+* test_help_hidden_and_h_question_shift_slash_escape_toggle
+* test_forecast_matches_each_rules_result_and_rendered_labels
+* test_armed_confirmation_locks_and_forecast_hides_at_contact
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8263 limit=1.700 hp=4 cell=(1, 6)
+* test_weapon_manifest_schema_fields_hashes_and_no_smear_in_reduced
+* test_knight_textures_differ_in_every_idle_hit_and_stagger_frame
+* test_a2_timing_all_setups_normal_and_reduced_under_budget
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8219 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.8066 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.7950 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.6179 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=true elapsed_wall_s=0.6255 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=true elapsed_wall_s=0.6221 limit=1.700 hp=4 cell=(3, 4)
+* test_cjk_glyphs_and_transient_banner
+* test_real_space_press_release_arms_once_then_confirms_once
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9439 limit=1.700 hp=4 cell=(1, 6)
+9/9 passed.
+
+
+res://tests/test_a3_contract.gd
+* test_entire_manifest_matches_preserved_a2_contract
+* test_approved_weapon_and_handoff_table_match_audit
+* test_five_repaints_preserve_alpha_and_protected_contact_geometry
+* test_baseline_hashes_and_bounded_generation_attempts
+4/4 passed.
+
+
+res://tests/test_a4_contract.gd
+* test_immutable_references_match_a3_fixed_hashes
+* test_complete_a3_manifest_and_no_archived_frames
+* test_rebuilt_frames_preserve_mace_grip_contact_and_grounded_feet
+* test_region_status_and_handoff_table_cannot_claim_partial_pass
+* test_provenance_archive_masks_and_generation_bounds
+5/5 passed.
+
+
+res://tests/test_a5_contract.gd
+* test_a5_immutable_references_and_entire_manifest_match_a4
+* test_a5_raw_mace_grip_face_feet_protection_and_rebuilt_canvas
+* test_a5_all_pass_gates_and_table_agreement
+* test_a5_seam_masks_are_narrow_declared_bands_with_bounded_area
+* test_a5_baseline_provenance_and_unit_embroidery_scale
+* test_a5_six_sequence_pairs_have_colour_and_outline_evidence
+6/6 passed.
+
+
+res://tests/test_a6_contract.gd
+* test_a6_immutable_endpoints_match_fixed_a5_sha256
+* test_a6_complete_manifest_matches_a5_and_excludes_all_baselines
+* test_a6_every_attempt_retained_three_reference_hashes_bounded_and_runtime_bound
+* test_a6_pass_requires_every_check_and_table_handoff_agreement
+* test_a6_canvas_ground_scale_contact_anchor_and_honest_geometry_limit
+* test_a6_a5_byte_baselines_are_evidence_only
+* test_a6_real_playback_trace_and_six_proxy_pairs_preserve_failures
+7/7 passed.
+
+
+res://tests/test_a7_contract.gd
+* test_a7_endpoints_and_manifest_are_exactly_fixed
+* test_a7_spec_and_five_complete_pose_targets_bind_anchor_pixels
+* test_a7_attempts_bounded_ordered_and_every_adoption_bound
+* test_a7_honest_placeholder_gates_match_table_and_final_handoff
+* test_a7_canvas_ground_and_foot_region_preserved
+* test_a7_contact_and_lowered_mace_pixels_are_preserved
+* test_a7_real_playback_and_all_adjacent_measured_proxies_exist
+* test_a7_failures_are_not_disguised_by_geometry_pass
+8/8 passed.
+
+
+res://tests/test_a8_contract.gd
+* test_a8_anchors_and_all_mechanics_remain_exact
+* test_a8_canvas_rgba_ground_and_nonempty_foot_pixels
+* test_a8_mace_centres_are_measured_from_final_pixels_and_contact_is_opaque
+* test_a8_live_manifest_never_references_any_archived_baseline
+* test_a8_placeholder_is_exactly_the_complete_brief_gate_and_matches_handoff
+* test_a8_one_shared_sheet_inputs_and_every_final_adoption_are_hash_bound
+* test_a8_real_playback_and_every_requested_landmark_have_evidence
+* test_a8_sheet_layout_contains_exact_fixed_anchor_pixels_and_five_open_cells
+8/8 passed.
+
+
+res://tests/test_a9_contract.gd
+* test_a9_immutable_anchors_and_full_manifest_contract
+* test_a9_canvas_rgba_ground_and_foot_occupancy
+* test_a9_independent_final_mace_centres_and_opaque_contact
+* test_a9_baselines_are_hashed_and_never_runtime_references
+* test_a9_placeholder_gate_and_handoff_match_every_item
+* test_a9_every_region_attempt_is_bounded_hash_bound_and_at_most_three
+* test_a9_final_pixels_outside_kept_masks_are_exactly_a8
+* test_a9_actual_movie_region_flicker_and_landmark_evidence_exist
+8/8 passed.
+
+
+res://tests/test_big_map_mockup.gd
+* test_mockup_loads_and_clamps_at_all_sizes_and_zooms
+1/1 passed.
+
+
+res://tests/test_field_ai.gd
+* test_sight_timer_attacked_neighbour_and_latched_activation
+* test_active_advances_with_cohesion_and_never_mutates_input
+* test_outnumbered_regroups_once_then_advances
+* test_focus_priority_and_exposed_tie_break
+* test_bodyguard_stays_near_leader_and_intercepts
+* test_leader_counters_or_steps_one_cell_back_when_surrounded_low
+* test_reinforcement_bypass_intercept_engages_within_two_eligible_turns
+7/7 passed.
+
+
+res://tests/test_field_autoplay.gd
+* test_authored_main_road_has_a_full_win_path_without_routing_every_enemy
+* test_two_other_policies_reach_distinct_terminal_outcomes_deterministically
+* test_telemetry_damage_kills_and_distance_match_events
+* test_pressure_ai_road_policy_reaches_terminal_and_all_classes_engage
+* test_terminal_before_later_enemy_does_not_inflate_true_idle
+* test_after_traces_have_no_silent_active_idle_and_wave_bypass_is_contested
+6/6 passed.
+
+
+res://tests/test_field_battle.gd
+* test_separate_scene_projection_figures_and_main_scene_unchanged
+* test_preview_cancel_move_and_single_attack_resolution
+* test_field_melee_ranged_crit_reduced_budget_and_rest
+* test_parsed_keyboard_select_cursor_wait_end_turn_and_restart
+* test_mouse_handler_uses_event_position_for_preview_and_confirm
+5/5 passed.
+
+
+res://tests/test_field_camera.gd
+* test_clamps_all_four_corners_each_zoom_and_shake
+* test_parsed_wasd_arrows_pan_expected_zoom_scaled_distance
+* test_middle_drag_and_wheel_cursor_anchor
+* test_o_overview_fits_and_restores_exact_previous_position_and_zoom
+* test_attack_returns_to_pre_attack_scroll_position
+* test_reduced_motion_snaps_follow_and_suppresses_shake_zoom
+6/6 passed.
+
+
+res://tests/test_field_los.gd
+* test_clear_range_limits_and_no_input_mutation
+* test_cliff_deep_water_and_unit_between_block_but_endpoint_is_not_blocker
+* test_forest_line_or_target_cover_is_deterministic_one_damage_minimum
+* test_exact_corner_checks_both_sides_symmetrically
+* test_threat_and_preview_agree_on_stationary_ranged_blocked_and_cover
+* test_enemy_ranged_and_policy_use_same_los
+6/6 passed.
+
+
+res://tests/test_field_rules.gd
+* test_map_dimensions_costs_paths_and_party
+* test_archetype_ranges_and_terrain_costs
+* test_ranged_min_max_no_adjacent_no_knockback
+* test_melee_knockback_and_both_blockers_match_small_semantics
+* test_move_then_act_once_no_move_after_wait_or_attack
+* test_enemy_phase_order_and_next_turn_resets_actions
+* test_non_rout_objective_win_and_loss_precedence
+* test_reinforcements_warn_one_full_turn_then_arrive_and_rest
+* test_occupied_entry_fallback_is_nearest_legal_cell
+* test_ai_guard_group_alert_leader_hold_and_determinism
+* test_distance_map_invalidated_on_occupancy_revision
+* test_every_public_command_preserves_inputs_and_rejects_wrong_side
+12/12 passed.
+
+
+res://tests/test_field_ui.gd
+* test_los_blocked_is_not_offered_and_cover_preview_and_hover_match_rules
+* test_minimap_round_trip_and_click_camera
+* test_minimap_viewport_rect_matches_zoom_camera_and_offset
+* test_indicators_only_outside_tactical_view_right_direction_and_safe
+* test_objective_panel_turn_limit_and_hover_show_real_values
+* test_warning_marker_precedes_arrival_and_tracks_announced_entries
+* test_win_lose_result_screens_come_from_rules_and_restart
+7/7 passed.
+
+
+res://tests/test_field_visibility.gd
+* test_full_actor_inside_hud_safe_rect_at_all_edges_zoom_steps_and_focus
+* test_distant_ranged_pair_fits_without_clipping_even_during_focus_transition
+* test_overview_markers_are_constant_pixel_shapes_with_hp_and_group_labels
+* test_dense_labels_and_reinforcement_marker_declutter
+* test_attack_preview_fits_both_actors_immediately_before_confirm
+5/5 passed.
+
+
+res://tests/test_grid_rules.gd
+* test_adjacent_attack_event_order_hp_and_immutability
+* test_nonadjacent_and_diagonal_attacks_are_rejected
+* test_destroyed_crossing_blocks_knockback
+* test_water_blocks_knockback
+* test_unit_blocker_preserves_both_positions
+* test_all_four_map_edges_block_knockback
+* test_open_route_terrain_matches_source_contract
+* test_bfs_detours_without_passing_through_units
+* test_invalid_moves_and_disconnected_bank_rejected
+* test_invalid_combatants_and_lethal_damage_are_bounded
+10/10 passed.
+
+
+res://tests/test_manifest.gd
+* test_valid_manifest_and_every_frame_contract
+* test_invalid_manifest_rejected_without_partial_data
+* test_reduced_keyposes_keep_contact_and_omit_smear
+3/3 passed.
+
+
+res://tests/test_playback.gd
+* test_all_three_normal_sequences_and_replay
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8255 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.8135 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.7892 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.8242 limit=1.700 hp=4 cell=(3, 4)
+* test_all_three_reduced_motion_sequences
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.6236 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=true elapsed_wall_s=0.6208 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=true elapsed_wall_s=0.6224 limit=1.700 hp=4 cell=(3, 4)
+* test_keyboard_controls_and_diagnostic_default
+SEQUENCE setup=2 reduced=true elapsed_wall_s=0.6246 limit=1.700 hp=4 cell=(1, 5)
+* test_procedural_audio_is_deterministic_non_silent_pcm
+4/4 passed.
+
+
+res://tests/test_shared_hashes.gd
+* test_shared_copy_hash_parity
+1/1 passed.
+
+
+res://tests/test_spike02.gd
+* test_whole_frame_hitstop_and_ui_progress_over_real_hold
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8707 limit=1.700 hp=4 cell=(1, 6)
+* test_contact_triggers_share_exact_process_frame
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8623 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.6727 limit=1.700 hp=4 cell=(1, 6)
+* test_generic_event_dispatch_reordered_and_unknown_event
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8668 limit=1.700 hp=4 cell=(1, 6)
+* test_knight_identity_and_debug_visibility
+* test_frame_player_offsets_and_mirror_are_pivot_relative
+* test_first_frame_uses_only_time_after_play
+6/6 passed.
+
+
+res://tests/test_spike03_impact.gd
+* test_both_profiles_load_and_every_export_is_in_range
+* test_baseline_reproduces_the_a9_manifest_and_all_visual_audio_constants
+* test_contact_bundle_same_frame_and_both_hitstop_minimums
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8522 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9513 limit=1.700 hp=4 cell=(1, 6)
+* test_directional_first_kick_envelope_decays_and_ends_at_zero
+* test_reduced_motion_never_changes_camera_or_recoils
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.6652 limit=1.700 hp=4 cell=(1, 6)
+* test_flash_number_recoil_and_particles_return_to_rest_and_free
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8515 limit=1.700 hp=4 cell=(1, 6)
+* test_sfx_hooks_once_at_preparation_contact_and_landing
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8378 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8812 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.8170 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.8724 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.8115 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.8594 limit=1.700 hp=4 cell=(3, 4)
+* test_all_modes_three_setups_budget_rules_and_reduced_no_slower
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8311 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.8215 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.8259 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8639 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=false elapsed_wall_s=0.8658 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=false elapsed_wall_s=0.8737 limit=1.700 hp=4 cell=(3, 4)
+SEQUENCE setup=1 reduced=true elapsed_wall_s=0.6248 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=2 reduced=true elapsed_wall_s=0.6320 limit=1.700 hp=4 cell=(1, 5)
+SEQUENCE setup=3 reduced=true elapsed_wall_s=0.6239 limit=1.700 hp=4 cell=(3, 4)
+* test_crit_key_is_next_hit_only_and_locked_during_attack
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.9286 limit=1.700 hp=4 cell=(1, 6)
+SEQUENCE setup=1 reduced=false elapsed_wall_s=0.8464 limit=1.700 hp=4 cell=(1, 6)
+9/9 passed.
+
+
+res://tests/test_spike04_profile.gd
+* test_toned_values_and_preserved_contact_layers
+* test_all_three_profiles_select_with_user_args
+2/2 passed.
+
+
+res://tests/test_spike05_profile.gd
+* test_flash_and_numbers_lower_but_other_layers_identical
+* test_four_profiles_are_selectable_without_changing_unknown_arg_fallback
+2/2 passed.
+
+
+res://tests/test_spike06_balance.gd
+* test_data_frozen_stats_objective_and_every_spawn_legal
+* test_leader_and_entries_reachable_on_empty_board
+* test_tuned_ai_deterministic_and_commands_preserve_input
+3/3 passed.
+
+
+res://tests/test_spike06_harness.gd
+* test_fixed_seeds_and_range_parser
+* test_same_seed_same_commands_events_and_result
+* test_default_seed_reproduces_historical_results
+* test_nondefault_seeds_vary_only_equal_class_order
+4/4 passed.
+
+
+res://tests/test_spike06_profile.gd
+* test_only_flash_mix_changes_among_all_exported_impact_values
+* test_all_five_profiles_select_and_unknown_is_default
+* test_threat_legend_is_visible_with_overlay_and_hidden_without
+3/3 passed.
+
+
+res://tests/test_spike06_scout.gd
+* test_finisher_threshold_and_class_and_variant_boundaries
+* test_attack_then_escape_total_budget_and_no_second_attack
+* test_full_move_has_no_escape_and_wait_consumes_escape
+* test_zoc_stops_entry_but_can_leave_starting_control
+* test_ai_uses_controlled_reach_and_is_immutable
+* test_preview_hover_escape_and_overlay_use_same_rules
+6/6 passed.
+
+
+res://tests/test_spike06_wave.gd
+* test_warning_visible_a_full_turn_before_legal_rested_arrival
+* test_actual_continuous_route_wave_attacks_and_is_attacked
+2/2 passed.
+
+
+
+
+==============================================
+= Run Summary
+==============================================
+
+Totals
+------
+Scripts              30
+Tests               165
+Passing Tests       165
+Asserts           11749
+Time              104.245s
+
+
+---- All tests passed! ----

@@ -1,0 +1,967 @@
+ docs/tasks/godot-spike-06-balance-winroute.md      |   186 +
+ godot-spike/config/impact_profile.tres             |     4 +-
+ godot-spike/config/impact_profile_spike05.tres     |    43 +
+ godot-spike/data/levels/field_24x18.gd             |    28 +-
+ godot-spike/data/levels/field_24x18_spike05.gd     |    61 +
+ godot-spike/docs/evidence/spike06/MOVIE.md         |    12 +
+ godot-spike/docs/evidence/spike06/PACING.md        |    98 +
+ godot-spike/docs/evidence/spike06/PERFORMANCE.md   |    20 +
+ godot-spike/docs/evidence/spike06/WORK.md          |   263 +
+ .../docs/evidence/spike06/after/aggregate.json     |   552 +
+ godot-spike/docs/evidence/spike06/after/index.json |   135 +
+ .../evidence/spike06/after/runs/bypass-1001.json   |  2607 +++++
+ .../evidence/spike06/after/runs/bypass-1002.json   |  2607 +++++
+ .../evidence/spike06/after/runs/bypass-1003.json   |  2607 +++++
+ .../evidence/spike06/after/runs/bypass-1004.json   |  2607 +++++
+ .../evidence/spike06/after/runs/bypass-1005.json   |  2607 +++++
+ .../evidence/spike06/after/runs/bypass-1006.json   |  2607 +++++
+ .../evidence/spike06/after/runs/bypass-1007.json   |  2607 +++++
+ .../evidence/spike06/after/runs/bypass-1008.json   |  2607 +++++
+ .../evidence/spike06/after/runs/bypass-1009.json   |  2441 ++++
+ .../evidence/spike06/after/runs/bypass-1010.json   |  2441 ++++
+ .../evidence/spike06/after/runs/bypass-1011.json   |  3045 +++++
+ .../evidence/spike06/after/runs/bypass-1012.json   |  3603 ++++++
+ .../evidence/spike06/after/runs/bypass-1013.json   |  3603 ++++++
+ .../evidence/spike06/after/runs/bypass-1014.json   |  1626 +++
+ .../evidence/spike06/after/runs/bypass-1015.json   |  1516 +++
+ .../evidence/spike06/after/runs/bypass-1016.json   |  2362 ++++
+ .../evidence/spike06/after/runs/bypass-1017.json   |  1516 +++
+ .../evidence/spike06/after/runs/bypass-1018.json   |  3166 +++++
+ .../evidence/spike06/after/runs/bypass-1019.json   |  2488 ++++
+ .../evidence/spike06/after/runs/bypass-24018.json  |  3717 ++++++
+ .../evidence/spike06/after/runs/flank-1001.json    |  5142 +++++++++
+ .../evidence/spike06/after/runs/flank-1002.json    |  7617 ++++++++++++
+ .../evidence/spike06/after/runs/flank-1003.json    |  8114 +++++++++++++
+ .../evidence/spike06/after/runs/flank-1004.json    |  7779 +++++++++++++
+ .../evidence/spike06/after/runs/flank-1005.json    |  6972 +++++++++++
+ .../evidence/spike06/after/runs/flank-1006.json    |  7840 +++++++++++++
+ .../evidence/spike06/after/runs/flank-1007.json    |  8109 +++++++++++++
+ .../evidence/spike06/after/runs/flank-1008.json    |  4348 +++++++
+ .../evidence/spike06/after/runs/flank-1009.json    |  8051 +++++++++++++
+ .../evidence/spike06/after/runs/flank-1010.json    |  7673 +++++++++++++
+ .../evidence/spike06/after/runs/flank-1011.json    |  7144 ++++++++++++
+ .../evidence/spike06/after/runs/flank-1012.json    |  7562 ++++++++++++
+ .../evidence/spike06/after/runs/flank-1013.json    |  6030 ++++++++++
+ .../evidence/spike06/after/runs/flank-1014.json    |  6971 +++++++++++
+ .../evidence/spike06/after/runs/flank-1015.json    |  7016 +++++++++++
+ .../evidence/spike06/after/runs/flank-1016.json    |  4364 +++++++
+ .../evidence/spike06/after/runs/flank-1017.json    |  7487 ++++++++++++
+ .../evidence/spike06/after/runs/flank-1018.json    |  7012 +++++++++++
+ .../evidence/spike06/after/runs/flank-1019.json    |  4383 +++++++
+ .../evidence/spike06/after/runs/flank-24018.json   |  7014 +++++++++++
+ .../evidence/spike06/after/runs/road-1001.json     |  5105 ++++++++
+ .../evidence/spike06/after/runs/road-1002.json     |  5188 +++++++++
+ .../evidence/spike06/after/runs/road-1003.json     |  7540 ++++++++++++
+ .../evidence/spike06/after/runs/road-1004.json     |  7473 ++++++++++++
+ .../evidence/spike06/after/runs/road-1005.json     |  7972 +++++++++++++
+ .../evidence/spike06/after/runs/road-1006.json     |  7807 +++++++++++++
+ .../evidence/spike06/after/runs/road-1007.json     |  7759 +++++++++++++
+ .../evidence/spike06/after/runs/road-1008.json     |  7992 +++++++++++++
+ .../evidence/spike06/after/runs/road-1009.json     |  7809 +++++++++++++
+ .../evidence/spike06/after/runs/road-1010.json     |  6231 ++++++++++
+ .../evidence/spike06/after/runs/road-1011.json     |  6109 ++++++++++
+ .../evidence/spike06/after/runs/road-1012.json     |  7824 +++++++++++++
+ .../evidence/spike06/after/runs/road-1013.json     |  7511 ++++++++++++
+ .../evidence/spike06/after/runs/road-1014.json     |  8377 ++++++++++++++
+ .../evidence/spike06/after/runs/road-1015.json     |  7781 +++++++++++++
+ .../evidence/spike06/after/runs/road-1016.json     |  4632 ++++++++
+ .../evidence/spike06/after/runs/road-1017.json     |  7582 ++++++++++++
+ .../evidence/spike06/after/runs/road-1018.json     |  7720 +++++++++++++
+ .../evidence/spike06/after/runs/road-1019.json     |  7967 +++++++++++++
+ .../evidence/spike06/after/runs/road-24018.json    |  8139 +++++++++++++
+ .../spike06/after/runs/scout-retreat-1001.json     |  5354 +++++++++
+ .../spike06/after/runs/scout-retreat-1002.json     |  5320 +++++++++
+ .../spike06/after/runs/scout-retreat-1003.json     |  5354 +++++++++
+ .../spike06/after/runs/scout-retreat-1004.json     |  5822 ++++++++++
+ .../spike06/after/runs/scout-retreat-1005.json     |  6431 +++++++++++
+ .../spike06/after/runs/scout-retreat-1006.json     |  5852 ++++++++++
+ .../spike06/after/runs/scout-retreat-1007.json     |  5360 +++++++++
+ .../spike06/after/runs/scout-retreat-1008.json     |  5360 +++++++++
+ .../spike06/after/runs/scout-retreat-1009.json     |  5360 +++++++++
+ .../spike06/after/runs/scout-retreat-1010.json     |  4800 ++++++++
+ .../spike06/after/runs/scout-retreat-1011.json     |  4800 ++++++++
+ .../spike06/after/runs/scout-retreat-1012.json     |  5296 +++++++++
+ .../spike06/after/runs/scout-retreat-1013.json     |  5239 +++++++++
+ .../spike06/after/runs/scout-retreat-1014.json     |  5239 +++++++++
+ .../spike06/after/runs/scout-retreat-1015.json     |  6210 ++++++++++
+ .../spike06/after/runs/scout-retreat-1016.json     |  6210 ++++++++++
+ .../spike06/after/runs/scout-retreat-1017.json     |  4550 ++++++++
+ .../spike06/after/runs/scout-retreat-1018.json     |  4007 +++++++
+ .../spike06/after/runs/scout-retreat-1019.json     |  4007 +++++++
+ .../spike06/after/runs/scout-retreat-24018.json    |  4468 +++++++
+ .../evidence/spike06/after/runs/turtle-1001.json   |  6121 ++++++++++
+ .../evidence/spike06/after/runs/turtle-1002.json   |  6795 +++++++++++
+ .../evidence/spike06/after/runs/turtle-1003.json   |  5546 +++++++++
+ .../evidence/spike06/after/runs/turtle-1004.json   |  6043 ++++++++++
+ .../evidence/spike06/after/runs/turtle-1005.json   |  5211 +++++++++
+ .../evidence/spike06/after/runs/turtle-1006.json   |  5211 +++++++++
+ .../evidence/spike06/after/runs/turtle-1007.json   |  5211 +++++++++
+ .../evidence/spike06/after/runs/turtle-1008.json   |  5211 +++++++++
+ .../evidence/spike06/after/runs/turtle-1009.json   |  5211 +++++++++
+ .../evidence/spike06/after/runs/turtle-1010.json   |  6693 +++++++++++
+ .../evidence/spike06/after/runs/turtle-1011.json   |  7273 ++++++++++++
+ .../evidence/spike06/after/runs/turtle-1012.json   |  7273 ++++++++++++
+ .../evidence/spike06/after/runs/turtle-1013.json   |  6695 +++++++++++
+ .../evidence/spike06/after/runs/turtle-1014.json   |  7297 ++++++++++++
+ .../evidence/spike06/after/runs/turtle-1015.json   |  6695 +++++++++++
+ .../evidence/spike06/after/runs/turtle-1016.json   |  7297 ++++++++++++
+ .../evidence/spike06/after/runs/turtle-1017.json   |  6695 +++++++++++
+ .../evidence/spike06/after/runs/turtle-1018.json   |  7419 ++++++++++++
+ .../evidence/spike06/after/runs/turtle-1019.json   |  7118 ++++++++++++
+ .../evidence/spike06/after/runs/turtle-24018.json  |  6924 +++++++++++
+ godot-spike/docs/evidence/spike06/arrival.png      |   Bin 0 -> 529433 bytes
+ .../docs/evidence/spike06/attacks-lose.json        |   184 +
+ .../docs/evidence/spike06/attacks-measure.json     |   289 +
+ .../docs/evidence/spike06/attacks-runtime.json     |   289 +
+ .../attempts/w6-package-active-log-failed.log      |    22 +
+ .../spike06/baseline-recheck/aggregate.json        |   508 +
+ .../spike06/baseline-recheck/comparison.json       |   502 +
+ .../evidence/spike06/baseline-recheck/index.json   |   135 +
+ .../spike06/baseline-recheck/runs/bypass-1001.json |  1593 +++
+ .../spike06/baseline-recheck/runs/bypass-1002.json |  1593 +++
+ .../spike06/baseline-recheck/runs/bypass-1003.json |  1593 +++
+ .../spike06/baseline-recheck/runs/bypass-1004.json |  1593 +++
+ .../spike06/baseline-recheck/runs/bypass-1005.json |  1593 +++
+ .../spike06/baseline-recheck/runs/bypass-1006.json |  3562 ++++++
+ .../spike06/baseline-recheck/runs/bypass-1007.json |  3562 ++++++
+ .../spike06/baseline-recheck/runs/bypass-1008.json |  3488 ++++++
+ .../spike06/baseline-recheck/runs/bypass-1009.json |  2499 ++++
+ .../spike06/baseline-recheck/runs/bypass-1010.json |  2499 ++++
+ .../spike06/baseline-recheck/runs/bypass-1011.json |  2499 ++++
+ .../spike06/baseline-recheck/runs/bypass-1012.json |  2583 +++++
+ .../spike06/baseline-recheck/runs/bypass-1013.json |  2583 +++++
+ .../spike06/baseline-recheck/runs/bypass-1014.json |  2495 ++++
+ .../spike06/baseline-recheck/runs/bypass-1015.json |  2495 ++++
+ .../spike06/baseline-recheck/runs/bypass-1016.json |  2495 ++++
+ .../spike06/baseline-recheck/runs/bypass-1017.json |  2495 ++++
+ .../spike06/baseline-recheck/runs/bypass-1018.json |  2381 ++++
+ .../spike06/baseline-recheck/runs/bypass-1019.json |  2495 ++++
+ .../baseline-recheck/runs/bypass-24018.json        |  3391 ++++++
+ .../spike06/baseline-recheck/runs/flank-1001.json  |  4477 ++++++++
+ .../spike06/baseline-recheck/runs/flank-1002.json  |  4477 ++++++++
+ .../spike06/baseline-recheck/runs/flank-1003.json  |  4477 ++++++++
+ .../spike06/baseline-recheck/runs/flank-1004.json  |  4455 +++++++
+ .../spike06/baseline-recheck/runs/flank-1005.json  |  4455 +++++++
+ .../spike06/baseline-recheck/runs/flank-1006.json  |  4455 +++++++
+ .../spike06/baseline-recheck/runs/flank-1007.json  |  4455 +++++++
+ .../spike06/baseline-recheck/runs/flank-1008.json  |  4455 +++++++
+ .../spike06/baseline-recheck/runs/flank-1009.json  |  4369 +++++++
+ .../spike06/baseline-recheck/runs/flank-1010.json  |  4369 +++++++
+ .../spike06/baseline-recheck/runs/flank-1011.json  |  4369 +++++++
+ .../spike06/baseline-recheck/runs/flank-1012.json  |  4372 +++++++
+ .../spike06/baseline-recheck/runs/flank-1013.json  |  4372 +++++++
+ .../spike06/baseline-recheck/runs/flank-1014.json  |  4372 +++++++
+ .../spike06/baseline-recheck/runs/flank-1015.json  |  4372 +++++++
+ .../spike06/baseline-recheck/runs/flank-1016.json  |  4372 +++++++
+ .../spike06/baseline-recheck/runs/flank-1017.json  |  4502 ++++++++
+ .../spike06/baseline-recheck/runs/flank-1018.json  |  4532 ++++++++
+ .../spike06/baseline-recheck/runs/flank-1019.json  |  4532 ++++++++
+ .../spike06/baseline-recheck/runs/flank-24018.json |  6122 ++++++++++
+ .../spike06/baseline-recheck/runs/road-1001.json   |  5921 ++++++++++
+ .../spike06/baseline-recheck/runs/road-1002.json   |  5921 ++++++++++
+ .../spike06/baseline-recheck/runs/road-1003.json   |  5921 ++++++++++
+ .../spike06/baseline-recheck/runs/road-1004.json   |  5992 ++++++++++
+ .../spike06/baseline-recheck/runs/road-1005.json   |  5992 ++++++++++
+ .../spike06/baseline-recheck/runs/road-1006.json   |  5992 ++++++++++
+ .../spike06/baseline-recheck/runs/road-1007.json   |  5992 ++++++++++
+ .../spike06/baseline-recheck/runs/road-1008.json   |  5992 ++++++++++
+ .../spike06/baseline-recheck/runs/road-1009.json   |  4384 +++++++
+ .../spike06/baseline-recheck/runs/road-1010.json   |  4384 +++++++
+ .../spike06/baseline-recheck/runs/road-1011.json   |  4384 +++++++
+ .../spike06/baseline-recheck/runs/road-1012.json   |  5020 ++++++++
+ .../spike06/baseline-recheck/runs/road-1013.json   |  5020 ++++++++
+ .../spike06/baseline-recheck/runs/road-1014.json   |  5020 ++++++++
+ .../spike06/baseline-recheck/runs/road-1015.json   |  5020 ++++++++
+ .../spike06/baseline-recheck/runs/road-1016.json   |  5020 ++++++++
+ .../spike06/baseline-recheck/runs/road-1017.json   |  5020 ++++++++
+ .../spike06/baseline-recheck/runs/road-1018.json   |  5041 ++++++++
+ .../spike06/baseline-recheck/runs/road-1019.json   |  5041 ++++++++
+ .../spike06/baseline-recheck/runs/road-24018.json  |  6764 +++++++++++
+ .../baseline-recheck/runs/scout-retreat-1001.json  |  4457 +++++++
+ .../baseline-recheck/runs/scout-retreat-1002.json  |  4457 +++++++
+ .../baseline-recheck/runs/scout-retreat-1003.json  |  4457 +++++++
+ .../baseline-recheck/runs/scout-retreat-1004.json  |  4435 +++++++
+ .../baseline-recheck/runs/scout-retreat-1005.json  |  4435 +++++++
+ .../baseline-recheck/runs/scout-retreat-1006.json  |  4435 +++++++
+ .../baseline-recheck/runs/scout-retreat-1007.json  |  4435 +++++++
+ .../baseline-recheck/runs/scout-retreat-1008.json  |  4435 +++++++
+ .../baseline-recheck/runs/scout-retreat-1009.json  |  4349 +++++++
+ .../baseline-recheck/runs/scout-retreat-1010.json  |  4349 +++++++
+ .../baseline-recheck/runs/scout-retreat-1011.json  |  4349 +++++++
+ .../baseline-recheck/runs/scout-retreat-1012.json  |  4352 +++++++
+ .../baseline-recheck/runs/scout-retreat-1013.json  |  4352 +++++++
+ .../baseline-recheck/runs/scout-retreat-1014.json  |  4352 +++++++
+ .../baseline-recheck/runs/scout-retreat-1015.json  |  4352 +++++++
+ .../baseline-recheck/runs/scout-retreat-1016.json  |  4352 +++++++
+ .../baseline-recheck/runs/scout-retreat-1017.json  |  6942 +++++++++++
+ .../baseline-recheck/runs/scout-retreat-1018.json  |  6228 ++++++++++
+ .../baseline-recheck/runs/scout-retreat-1019.json  |  6228 ++++++++++
+ .../baseline-recheck/runs/scout-retreat-24018.json |  7759 +++++++++++++
+ .../spike06/baseline-recheck/runs/turtle-1001.json |  7959 +++++++++++++
+ .../spike06/baseline-recheck/runs/turtle-1002.json |  7959 +++++++++++++
+ .../spike06/baseline-recheck/runs/turtle-1003.json |  7959 +++++++++++++
+ .../spike06/baseline-recheck/runs/turtle-1004.json |  5639 +++++++++
+ .../spike06/baseline-recheck/runs/turtle-1005.json |  5639 +++++++++
+ .../spike06/baseline-recheck/runs/turtle-1006.json |  6297 ++++++++++
+ .../spike06/baseline-recheck/runs/turtle-1007.json |  6970 +++++++++++
+ .../spike06/baseline-recheck/runs/turtle-1008.json |  6970 +++++++++++
+ .../spike06/baseline-recheck/runs/turtle-1009.json |  6970 +++++++++++
+ .../spike06/baseline-recheck/runs/turtle-1010.json |  7153 ++++++++++++
+ .../spike06/baseline-recheck/runs/turtle-1011.json |  7153 ++++++++++++
+ .../spike06/baseline-recheck/runs/turtle-1012.json |  8002 +++++++++++++
+ .../spike06/baseline-recheck/runs/turtle-1013.json |  6471 +++++++++++
+ .../spike06/baseline-recheck/runs/turtle-1014.json |  6471 +++++++++++
+ .../spike06/baseline-recheck/runs/turtle-1015.json |  6471 +++++++++++
+ .../spike06/baseline-recheck/runs/turtle-1016.json |  6288 ++++++++++
+ .../spike06/baseline-recheck/runs/turtle-1017.json |  6288 ++++++++++
+ .../spike06/baseline-recheck/runs/turtle-1018.json |  5589 +++++++++
+ .../spike06/baseline-recheck/runs/turtle-1019.json |  5589 +++++++++
+ .../baseline-recheck/runs/turtle-24018.json        |  4896 ++++++++
+ .../docs/evidence/spike06/baseline/BASELINE.md     |    27 +
+ .../docs/evidence/spike06/baseline/aggregate.json  |   483 +
+ .../docs/evidence/spike06/baseline/index.json      |   135 +
+ .../spike06/baseline/runs/bypass-1001.json         |  1582 +++
+ .../spike06/baseline/runs/bypass-1002.json         |  1582 +++
+ .../spike06/baseline/runs/bypass-1003.json         |  1582 +++
+ .../spike06/baseline/runs/bypass-1004.json         |  1582 +++
+ .../spike06/baseline/runs/bypass-1005.json         |  1582 +++
+ .../spike06/baseline/runs/bypass-1006.json         |  3551 ++++++
+ .../spike06/baseline/runs/bypass-1007.json         |  3551 ++++++
+ .../spike06/baseline/runs/bypass-1008.json         |  3477 ++++++
+ .../spike06/baseline/runs/bypass-1009.json         |  2488 ++++
+ .../spike06/baseline/runs/bypass-1010.json         |  2488 ++++
+ .../spike06/baseline/runs/bypass-1011.json         |  2488 ++++
+ .../spike06/baseline/runs/bypass-1012.json         |  2572 +++++
+ .../spike06/baseline/runs/bypass-1013.json         |  2572 +++++
+ .../spike06/baseline/runs/bypass-1014.json         |  2484 ++++
+ .../spike06/baseline/runs/bypass-1015.json         |  2484 ++++
+ .../spike06/baseline/runs/bypass-1016.json         |  2484 ++++
+ .../spike06/baseline/runs/bypass-1017.json         |  2484 ++++
+ .../spike06/baseline/runs/bypass-1018.json         |  2370 ++++
+ .../spike06/baseline/runs/bypass-1019.json         |  2484 ++++
+ .../spike06/baseline/runs/bypass-24018.json        |  3380 ++++++
+ .../evidence/spike06/baseline/runs/flank-1001.json |  4466 +++++++
+ .../evidence/spike06/baseline/runs/flank-1002.json |  4466 +++++++
+ .../evidence/spike06/baseline/runs/flank-1003.json |  4466 +++++++
+ .../evidence/spike06/baseline/runs/flank-1004.json |  4444 +++++++
+ .../evidence/spike06/baseline/runs/flank-1005.json |  4444 +++++++
+ .../evidence/spike06/baseline/runs/flank-1006.json |  4444 +++++++
+ .../evidence/spike06/baseline/runs/flank-1007.json |  4444 +++++++
+ .../evidence/spike06/baseline/runs/flank-1008.json |  4444 +++++++
+ .../evidence/spike06/baseline/runs/flank-1009.json |  4358 +++++++
+ .../evidence/spike06/baseline/runs/flank-1010.json |  4358 +++++++
+ .../evidence/spike06/baseline/runs/flank-1011.json |  4358 +++++++
+ .../evidence/spike06/baseline/runs/flank-1012.json |  4361 +++++++
+ .../evidence/spike06/baseline/runs/flank-1013.json |  4361 +++++++
+ .../evidence/spike06/baseline/runs/flank-1014.json |  4361 +++++++
+ .../evidence/spike06/baseline/runs/flank-1015.json |  4361 +++++++
+ .../evidence/spike06/baseline/runs/flank-1016.json |  4361 +++++++
+ .../evidence/spike06/baseline/runs/flank-1017.json |  4491 ++++++++
+ .../evidence/spike06/baseline/runs/flank-1018.json |  4521 ++++++++
+ .../evidence/spike06/baseline/runs/flank-1019.json |  4521 ++++++++
+ .../spike06/baseline/runs/flank-24018.json         |  6111 ++++++++++
+ .../evidence/spike06/baseline/runs/road-1001.json  |  5910 ++++++++++
+ .../evidence/spike06/baseline/runs/road-1002.json  |  5910 ++++++++++
+ .../evidence/spike06/baseline/runs/road-1003.json  |  5910 ++++++++++
+ .../evidence/spike06/baseline/runs/road-1004.json  |  5981 ++++++++++
+ .../evidence/spike06/baseline/runs/road-1005.json  |  5981 ++++++++++
+ .../evidence/spike06/baseline/runs/road-1006.json  |  5981 ++++++++++
+ .../evidence/spike06/baseline/runs/road-1007.json  |  5981 ++++++++++
+ .../evidence/spike06/baseline/runs/road-1008.json  |  5981 ++++++++++
+ .../evidence/spike06/baseline/runs/road-1009.json  |  4373 +++++++
+ .../evidence/spike06/baseline/runs/road-1010.json  |  4373 +++++++
+ .../evidence/spike06/baseline/runs/road-1011.json  |  4373 +++++++
+ .../evidence/spike06/baseline/runs/road-1012.json  |  5009 ++++++++
+ .../evidence/spike06/baseline/runs/road-1013.json  |  5009 ++++++++
+ .../evidence/spike06/baseline/runs/road-1014.json  |  5009 ++++++++
+ .../evidence/spike06/baseline/runs/road-1015.json  |  5009 ++++++++
+ .../evidence/spike06/baseline/runs/road-1016.json  |  5009 ++++++++
+ .../evidence/spike06/baseline/runs/road-1017.json  |  5009 ++++++++
+ .../evidence/spike06/baseline/runs/road-1018.json  |  5030 ++++++++
+ .../evidence/spike06/baseline/runs/road-1019.json  |  5030 ++++++++
+ .../evidence/spike06/baseline/runs/road-24018.json |  6753 +++++++++++
+ .../spike06/baseline/runs/scout-retreat-1001.json  |  4446 +++++++
+ .../spike06/baseline/runs/scout-retreat-1002.json  |  4446 +++++++
+ .../spike06/baseline/runs/scout-retreat-1003.json  |  4446 +++++++
+ .../spike06/baseline/runs/scout-retreat-1004.json  |  4424 +++++++
+ .../spike06/baseline/runs/scout-retreat-1005.json  |  4424 +++++++
+ .../spike06/baseline/runs/scout-retreat-1006.json  |  4424 +++++++
+ .../spike06/baseline/runs/scout-retreat-1007.json  |  4424 +++++++
+ .../spike06/baseline/runs/scout-retreat-1008.json  |  4424 +++++++
+ .../spike06/baseline/runs/scout-retreat-1009.json  |  4338 +++++++
+ .../spike06/baseline/runs/scout-retreat-1010.json  |  4338 +++++++
+ .../spike06/baseline/runs/scout-retreat-1011.json  |  4338 +++++++
+ .../spike06/baseline/runs/scout-retreat-1012.json  |  4341 +++++++
+ .../spike06/baseline/runs/scout-retreat-1013.json  |  4341 +++++++
+ .../spike06/baseline/runs/scout-retreat-1014.json  |  4341 +++++++
+ .../spike06/baseline/runs/scout-retreat-1015.json  |  4341 +++++++
+ .../spike06/baseline/runs/scout-retreat-1016.json  |  4341 +++++++
+ .../spike06/baseline/runs/scout-retreat-1017.json  |  6931 +++++++++++
+ .../spike06/baseline/runs/scout-retreat-1018.json  |  6217 ++++++++++
+ .../spike06/baseline/runs/scout-retreat-1019.json  |  6217 ++++++++++
+ .../spike06/baseline/runs/scout-retreat-24018.json |  7748 +++++++++++++
+ .../spike06/baseline/runs/turtle-1001.json         |  7948 +++++++++++++
+ .../spike06/baseline/runs/turtle-1002.json         |  7948 +++++++++++++
+ .../spike06/baseline/runs/turtle-1003.json         |  7948 +++++++++++++
+ .../spike06/baseline/runs/turtle-1004.json         |  5628 +++++++++
+ .../spike06/baseline/runs/turtle-1005.json         |  5628 +++++++++
+ .../spike06/baseline/runs/turtle-1006.json         |  6286 ++++++++++
+ .../spike06/baseline/runs/turtle-1007.json         |  6959 +++++++++++
+ .../spike06/baseline/runs/turtle-1008.json         |  6959 +++++++++++
+ .../spike06/baseline/runs/turtle-1009.json         |  6959 +++++++++++
+ .../spike06/baseline/runs/turtle-1010.json         |  7142 ++++++++++++
+ .../spike06/baseline/runs/turtle-1011.json         |  7142 ++++++++++++
+ .../spike06/baseline/runs/turtle-1012.json         |  7991 +++++++++++++
+ .../spike06/baseline/runs/turtle-1013.json         |  6460 +++++++++++
+ .../spike06/baseline/runs/turtle-1014.json         |  6460 +++++++++++
+ .../spike06/baseline/runs/turtle-1015.json         |  6460 +++++++++++
+ .../spike06/baseline/runs/turtle-1016.json         |  6277 ++++++++++
+ .../spike06/baseline/runs/turtle-1017.json         |  6277 ++++++++++
+ .../spike06/baseline/runs/turtle-1018.json         |  5578 +++++++++
+ .../spike06/baseline/runs/turtle-1019.json         |  5578 +++++++++
+ .../spike06/baseline/runs/turtle-24018.json        |  4885 ++++++++
+ .../docs/evidence/spike06/capture-1080.json        |    56 +
+ .../docs/evidence/spike06/capture-enemy.json       |    58 +
+ .../docs/evidence/spike06/capture-lose.json        |    69 +
+ .../docs/evidence/spike06/capture-measure.json     |    10 +
+ .../docs/evidence/spike06/capture-perf.json        |     8 +
+ godot-spike/docs/evidence/spike06/capture-qa.json  |   166 +
+ .../docs/evidence/spike06/capture-runtime.json     |   313 +
+ .../docs/evidence/spike06/capture-scout.json       |   296 +
+ .../evidence/spike06/capture-source-hashes.json    |   249 +
+ .../docs/evidence/spike06/deployment-1080.png      |   Bin 0 -> 821551 bytes
+ godot-spike/docs/evidence/spike06/deployment.png   |   Bin 0 -> 428693 bytes
+ .../docs/evidence/spike06/enemy-frames/0000.png    |   Bin 0 -> 612030 bytes
+ .../docs/evidence/spike06/enemy-frames/0022.png    |   Bin 0 -> 689318 bytes
+ .../docs/evidence/spike06/enemy-frames/0044.png    |   Bin 0 -> 734214 bytes
+ .../docs/evidence/spike06/enemy-frames/0066.png    |   Bin 0 -> 717526 bytes
+ .../docs/evidence/spike06/enemy-frames/0088.png    |   Bin 0 -> 693356 bytes
+ .../docs/evidence/spike06/enemy-frames/0110.png    |   Bin 0 -> 667326 bytes
+ .../docs/evidence/spike06/enemy-frames/0132.png    |   Bin 0 -> 703825 bytes
+ .../docs/evidence/spike06/enemy-frames/0154.png    |   Bin 0 -> 677217 bytes
+ .../docs/evidence/spike06/enemy-frames/0177.png    |   Bin 0 -> 4321 bytes
+ .../evidence/spike06/enemy-wave-60fps-strip.png    |   Bin 0 -> 915636 bytes
+ .../docs/evidence/spike06/enemy-wave-60fps.avi     |   Bin 0 -> 18699790 bytes
+ .../docs/evidence/spike06/enemy-wave-contact.png   |   Bin 0 -> 543801 bytes
+ .../docs/evidence/spike06/hitfeel/field-hit.log    |     2 +
+ .../evidence/spike06/hitfeel/field-melee-hit.png   |   Bin 0 -> 590733 bytes
+ .../hitfeel/impact-strip-spike05-vs-spike06.png    |   Bin 0 -> 7704952 bytes
+ .../evidence/spike06/hitfeel/package-final.log     |     1 +
+ .../docs/evidence/spike06/hitfeel/package.log      |     1 +
+ .../docs/evidence/spike06/hitfeel/spike05-crit.log |    13 +
+ .../spike06/hitfeel/spike05-crit/attack-60fps.avi  |   Bin 0 -> 8027986 bytes
+ .../spike06/hitfeel/spike05-crit/contact.png       |   Bin 0 -> 1467956 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0010.png   |   Bin 0 -> 1253447 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0011.png   |   Bin 0 -> 1261720 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0012.png   |   Bin 0 -> 1266868 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0013.png   |   Bin 0 -> 1268281 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0014.png   |   Bin 0 -> 1268213 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0015.png   |   Bin 0 -> 1268203 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0016.png   |   Bin 0 -> 1268346 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0017.png   |   Bin 0 -> 1268346 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0018.png   |   Bin 0 -> 1437441 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0019.png   |   Bin 0 -> 1437441 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0020.png   |   Bin 0 -> 1437441 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0021.png   |   Bin 0 -> 1437441 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0022.png   |   Bin 0 -> 1437441 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0023.png   |   Bin 0 -> 1437441 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0024.png   |   Bin 0 -> 1437441 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0025.png   |   Bin 0 -> 1437441 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0026.png   |   Bin 0 -> 1437441 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0027.png   |   Bin 0 -> 1437441 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0028.png   |   Bin 0 -> 1437441 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0029.png   |   Bin 0 -> 1427065 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0030.png   |   Bin 0 -> 1417678 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0031.png   |   Bin 0 -> 1411100 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0032.png   |   Bin 0 -> 1407091 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0033.png   |   Bin 0 -> 1407008 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0034.png   |   Bin 0 -> 1405556 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0035.png   |   Bin 0 -> 1406350 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0036.png   |   Bin 0 -> 1406227 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0037.png   |   Bin 0 -> 1406194 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0038.png   |   Bin 0 -> 1405049 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0039.png   |   Bin 0 -> 1405103 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0040.png   |   Bin 0 -> 1405217 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0041.png   |   Bin 0 -> 1405436 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0042.png   |   Bin 0 -> 1404895 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0043.png   |   Bin 0 -> 1404735 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0044.png   |   Bin 0 -> 1404592 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0045.png   |   Bin 0 -> 1404506 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0046.png   |   Bin 0 -> 1404456 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0047.png   |   Bin 0 -> 1404284 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0048.png   |   Bin 0 -> 1404164 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0049.png   |   Bin 0 -> 1404120 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0050.png   |   Bin 0 -> 1404053 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0051.png   |   Bin 0 -> 1402282 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0052.png   |   Bin 0 -> 1393399 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0053.png   |   Bin 0 -> 1372943 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0054.png   |   Bin 0 -> 1313422 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0055.png   |   Bin 0 -> 1238685 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0056.png   |   Bin 0 -> 1141498 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0057.png   |   Bin 0 -> 1047852 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0058.png   |   Bin 0 -> 980942 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0059.png   |   Bin 0 -> 934192 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0060.png   |   Bin 0 -> 908381 bytes
+ .../spike06/hitfeel/spike05-crit/frames/0061.png   |   Bin 0 -> 903072 bytes
+ .../spike06/hitfeel/spike05-crit/impact-strip.png  |   Bin 0 -> 1827527 bytes
+ .../spike06/hitfeel/spike05-crit/timeline.json     |  2594 +++++
+ .../evidence/spike06/hitfeel/spike05-normal.log    |    13 +
+ .../hitfeel/spike05-normal/attack-60fps.avi        |   Bin 0 -> 7481658 bytes
+ .../spike06/hitfeel/spike05-normal/contact.png     |   Bin 0 -> 1470026 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0010.png |   Bin 0 -> 1253447 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0011.png |   Bin 0 -> 1261720 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0012.png |   Bin 0 -> 1266868 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0013.png |   Bin 0 -> 1268281 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0014.png |   Bin 0 -> 1268213 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0015.png |   Bin 0 -> 1268203 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0016.png |   Bin 0 -> 1268346 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0017.png |   Bin 0 -> 1268346 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0018.png |   Bin 0 -> 1439628 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0019.png |   Bin 0 -> 1439628 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0020.png |   Bin 0 -> 1439628 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0021.png |   Bin 0 -> 1439628 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0022.png |   Bin 0 -> 1439628 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0023.png |   Bin 0 -> 1439628 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0024.png |   Bin 0 -> 1439628 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0025.png |   Bin 0 -> 1427013 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0026.png |   Bin 0 -> 1419782 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0027.png |   Bin 0 -> 1411135 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0028.png |   Bin 0 -> 1407819 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0029.png |   Bin 0 -> 1407023 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0030.png |   Bin 0 -> 1406538 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0031.png |   Bin 0 -> 1406370 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0032.png |   Bin 0 -> 1407274 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0033.png |   Bin 0 -> 1406127 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0034.png |   Bin 0 -> 1406931 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0035.png |   Bin 0 -> 1405570 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0036.png |   Bin 0 -> 1405192 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0037.png |   Bin 0 -> 1405128 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0038.png |   Bin 0 -> 1404580 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0039.png |   Bin 0 -> 1404458 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0040.png |   Bin 0 -> 1404400 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0041.png |   Bin 0 -> 1404345 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0042.png |   Bin 0 -> 1404416 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0043.png |   Bin 0 -> 1404290 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0044.png |   Bin 0 -> 1404195 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0045.png |   Bin 0 -> 1404158 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0046.png |   Bin 0 -> 1404099 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0047.png |   Bin 0 -> 1402282 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0048.png |   Bin 0 -> 1393399 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0049.png |   Bin 0 -> 1372943 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0050.png |   Bin 0 -> 1313422 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0051.png |   Bin 0 -> 1238685 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0052.png |   Bin 0 -> 1141498 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0053.png |   Bin 0 -> 1047852 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0054.png |   Bin 0 -> 980942 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0055.png |   Bin 0 -> 934192 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0056.png |   Bin 0 -> 908381 bytes
+ .../spike06/hitfeel/spike05-normal/frames/0057.png |   Bin 0 -> 903072 bytes
+ .../hitfeel/spike05-normal/impact-strip.png        |   Bin 0 -> 2024802 bytes
+ .../spike06/hitfeel/spike05-normal/timeline.json   |  2414 ++++
+ .../docs/evidence/spike06/hitfeel/spike06-crit.log |    13 +
+ .../spike06/hitfeel/spike06-crit/attack-60fps.avi  |   Bin 0 -> 8028212 bytes
+ .../spike06/hitfeel/spike06-crit/contact.png       |   Bin 0 -> 1468099 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0010.png   |   Bin 0 -> 1253447 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0011.png   |   Bin 0 -> 1261720 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0012.png   |   Bin 0 -> 1266868 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0013.png   |   Bin 0 -> 1268281 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0014.png   |   Bin 0 -> 1268213 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0015.png   |   Bin 0 -> 1268203 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0016.png   |   Bin 0 -> 1268346 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0017.png   |   Bin 0 -> 1268346 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0018.png   |   Bin 0 -> 1437331 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0019.png   |   Bin 0 -> 1437331 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0020.png   |   Bin 0 -> 1437331 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0021.png   |   Bin 0 -> 1437331 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0022.png   |   Bin 0 -> 1437331 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0023.png   |   Bin 0 -> 1437331 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0024.png   |   Bin 0 -> 1437331 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0025.png   |   Bin 0 -> 1437331 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0026.png   |   Bin 0 -> 1437331 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0027.png   |   Bin 0 -> 1437331 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0028.png   |   Bin 0 -> 1437331 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0029.png   |   Bin 0 -> 1427208 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0030.png   |   Bin 0 -> 1417773 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0031.png   |   Bin 0 -> 1411188 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0032.png   |   Bin 0 -> 1407116 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0033.png   |   Bin 0 -> 1407008 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0034.png   |   Bin 0 -> 1405556 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0035.png   |   Bin 0 -> 1406350 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0036.png   |   Bin 0 -> 1406227 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0037.png   |   Bin 0 -> 1406194 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0038.png   |   Bin 0 -> 1405049 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0039.png   |   Bin 0 -> 1405103 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0040.png   |   Bin 0 -> 1405217 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0041.png   |   Bin 0 -> 1405436 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0042.png   |   Bin 0 -> 1404895 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0043.png   |   Bin 0 -> 1404735 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0044.png   |   Bin 0 -> 1404592 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0045.png   |   Bin 0 -> 1404506 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0046.png   |   Bin 0 -> 1404456 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0047.png   |   Bin 0 -> 1404284 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0048.png   |   Bin 0 -> 1404164 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0049.png   |   Bin 0 -> 1404120 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0050.png   |   Bin 0 -> 1404053 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0051.png   |   Bin 0 -> 1402282 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0052.png   |   Bin 0 -> 1393399 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0053.png   |   Bin 0 -> 1372943 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0054.png   |   Bin 0 -> 1313422 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0055.png   |   Bin 0 -> 1238685 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0056.png   |   Bin 0 -> 1141498 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0057.png   |   Bin 0 -> 1047852 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0058.png   |   Bin 0 -> 980942 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0059.png   |   Bin 0 -> 934192 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0060.png   |   Bin 0 -> 908381 bytes
+ .../spike06/hitfeel/spike06-crit/frames/0061.png   |   Bin 0 -> 903072 bytes
+ .../spike06/hitfeel/spike06-crit/impact-strip.png  |   Bin 0 -> 1827953 bytes
+ .../spike06/hitfeel/spike06-crit/timeline.json     |  2594 +++++
+ .../evidence/spike06/hitfeel/spike06-normal.log    |    13 +
+ .../hitfeel/spike06-normal/attack-60fps.avi        |   Bin 0 -> 7481946 bytes
+ .../spike06/hitfeel/spike06-normal/contact.png     |   Bin 0 -> 1470206 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0010.png |   Bin 0 -> 1253447 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0011.png |   Bin 0 -> 1261720 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0012.png |   Bin 0 -> 1266868 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0013.png |   Bin 0 -> 1268281 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0014.png |   Bin 0 -> 1268213 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0015.png |   Bin 0 -> 1268203 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0016.png |   Bin 0 -> 1268346 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0017.png |   Bin 0 -> 1268346 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0018.png |   Bin 0 -> 1439771 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0019.png |   Bin 0 -> 1439771 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0020.png |   Bin 0 -> 1439771 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0021.png |   Bin 0 -> 1439771 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0022.png |   Bin 0 -> 1439771 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0023.png |   Bin 0 -> 1439771 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0024.png |   Bin 0 -> 1439771 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0025.png |   Bin 0 -> 1427196 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0026.png |   Bin 0 -> 1419887 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0027.png |   Bin 0 -> 1411203 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0028.png |   Bin 0 -> 1407819 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0029.png |   Bin 0 -> 1407023 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0030.png |   Bin 0 -> 1406538 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0031.png |   Bin 0 -> 1406370 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0032.png |   Bin 0 -> 1407274 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0033.png |   Bin 0 -> 1406127 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0034.png |   Bin 0 -> 1406931 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0035.png |   Bin 0 -> 1405570 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0036.png |   Bin 0 -> 1405192 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0037.png |   Bin 0 -> 1405128 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0038.png |   Bin 0 -> 1404580 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0039.png |   Bin 0 -> 1404458 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0040.png |   Bin 0 -> 1404400 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0041.png |   Bin 0 -> 1404345 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0042.png |   Bin 0 -> 1404416 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0043.png |   Bin 0 -> 1404290 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0044.png |   Bin 0 -> 1404195 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0045.png |   Bin 0 -> 1404158 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0046.png |   Bin 0 -> 1404099 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0047.png |   Bin 0 -> 1402282 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0048.png |   Bin 0 -> 1393399 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0049.png |   Bin 0 -> 1372943 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0050.png |   Bin 0 -> 1313422 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0051.png |   Bin 0 -> 1238685 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0052.png |   Bin 0 -> 1141498 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0053.png |   Bin 0 -> 1047852 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0054.png |   Bin 0 -> 980942 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0055.png |   Bin 0 -> 934192 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0056.png |   Bin 0 -> 908381 bytes
+ .../spike06/hitfeel/spike06-normal/frames/0057.png |   Bin 0 -> 903072 bytes
+ .../hitfeel/spike06-normal/impact-strip.png        |   Bin 0 -> 2025243 bytes
+ .../spike06/hitfeel/spike06-normal/timeline.json   |  2414 ++++
+ .../docs/evidence/spike06/hitfeel/timing-alone.log |    13 +
+ .../hitfeel/timing-concurrent-observation.md       |    12 +
+ .../spike06/hitfeel/timing-fixed60-alone.json      |   544 +
+ .../evidence/spike06/hitfeel/timing-runtime.json   |   544 +
+ .../evidence/spike06/hitfeel/timing-runtime.log    |    13 +
+ .../docs/evidence/spike06/hitfeel/timing.json      |  1084 ++
+ .../docs/evidence/spike06/hitfeel/timing.log       |    13 +
+ .../docs/evidence/spike06/lose-deployment.png      |   Bin 0 -> 428693 bytes
+ godot-spike/docs/evidence/spike06/lose.png         |   Bin 0 -> 458047 bytes
+ .../docs/evidence/spike06/metrics-summary.json     |    24 +
+ godot-spike/docs/evidence/spike06/movie-index.json |    22 +
+ godot-spike/docs/evidence/spike06/overview.png     |   Bin 0 -> 224135 bytes
+ godot-spike/docs/evidence/spike06/performance.json |   688 ++
+ .../evidence/spike06/reinforcement-engaging.png    |   Bin 0 -> 622908 bytes
+ .../docs/evidence/spike06/route-midbattle.png      |   Bin 0 -> 464210 bytes
+ .../docs/evidence/spike06/route-scout-finisher.png |   Bin 0 -> 664831 bytes
+ .../docs/evidence/spike06/runtime-lose.json        |  4192 +++++++
+ .../docs/evidence/spike06/runtime-measure.json     |  5873 ++++++++++
+ .../docs/evidence/spike06/runtime-runtime.json     |  5873 ++++++++++
+ .../docs/evidence/spike06/scout-finisher-hit.png   |   Bin 0 -> 651044 bytes
+ .../scout-flank-finish-retreat-60fps-strip.png     |   Bin 0 -> 1020051 bytes
+ .../spike06/scout-flank-finish-retreat-60fps.avi   |   Bin 0 -> 14161172 bytes
+ .../docs/evidence/spike06/scout-flank-preview.png  |   Bin 0 -> 557685 bytes
+ .../docs/evidence/spike06/scout-frames/0000.png    |   Bin 0 -> 612030 bytes
+ .../docs/evidence/spike06/scout-frames/0015.png    |   Bin 0 -> 734367 bytes
+ .../docs/evidence/spike06/scout-frames/0031.png    |   Bin 0 -> 803144 bytes
+ .../docs/evidence/spike06/scout-frames/0046.png    |   Bin 0 -> 818432 bytes
+ .../docs/evidence/spike06/scout-frames/0062.png    |   Bin 0 -> 826563 bytes
+ .../docs/evidence/spike06/scout-frames/0078.png    |   Bin 0 -> 805887 bytes
+ .../docs/evidence/spike06/scout-frames/0093.png    |   Bin 0 -> 756647 bytes
+ .../docs/evidence/spike06/scout-frames/0109.png    |   Bin 0 -> 770088 bytes
+ .../docs/evidence/spike06/scout-frames/0125.png    |   Bin 0 -> 4321 bytes
+ .../evidence/spike06/scout-retreat-preview.png     |   Bin 0 -> 566925 bytes
+ .../docs/evidence/spike06/scout-retreated.png      |   Bin 0 -> 552035 bytes
+ .../docs/evidence/spike06/scout-sequence.json      |    23 +
+ .../docs/evidence/spike06/scout-zoc-preview.png    |   Bin 0 -> 570171 bytes
+ .../docs/evidence/spike06/snapshot-enemy.json      |   452 +
+ .../docs/evidence/spike06/snapshot-scout.json      |   423 +
+ godot-spike/docs/evidence/spike06/targets.json     |    11 +
+ .../docs/evidence/spike06/threat-legend.png        |   Bin 0 -> 425950 bytes
+ godot-spike/docs/evidence/spike06/w1-aggregate.log |   457 +
+ godot-spike/docs/evidence/spike06/w1-baseline.log  |   102 +
+ godot-spike/docs/evidence/spike06/w1-tests.log     |    32 +
+ .../docs/evidence/spike06/w2-final-summary.log     |   208 +
+ godot-spike/docs/evidence/spike06/w2-final.log     |    42 +
+ .../docs/evidence/spike06/w2-final/aggregate.json  |   234 +
+ .../docs/evidence/spike06/w2-final/index.json      |    72 +
+ .../evidence/spike06/w2-final/runs/road-1001.json  |  5315 +++++++++
+ .../evidence/spike06/w2-final/runs/road-1002.json  |  6496 +++++++++++
+ .../evidence/spike06/w2-final/runs/road-1003.json  |  5850 ++++++++++
+ .../evidence/spike06/w2-final/runs/road-1004.json  |  6660 +++++++++++
+ .../evidence/spike06/w2-final/runs/road-1005.json  |  6048 ++++++++++
+ .../evidence/spike06/w2-final/runs/road-1006.json  |  7476 ++++++++++++
+ .../evidence/spike06/w2-final/runs/road-1007.json  |  5780 ++++++++++
+ .../evidence/spike06/w2-final/runs/road-1008.json  |  6528 +++++++++++
+ .../evidence/spike06/w2-final/runs/road-1009.json  |  6535 +++++++++++
+ .../evidence/spike06/w2-final/runs/road-1010.json  |  8009 +++++++++++++
+ .../evidence/spike06/w2-final/runs/road-1011.json  |  6101 ++++++++++
+ .../evidence/spike06/w2-final/runs/road-1012.json  |  6278 ++++++++++
+ .../evidence/spike06/w2-final/runs/road-1013.json  |  6414 +++++++++++
+ .../evidence/spike06/w2-final/runs/road-1014.json  |  8270 +++++++++++++
+ .../evidence/spike06/w2-final/runs/road-1015.json  |  7289 ++++++++++++
+ .../evidence/spike06/w2-final/runs/road-1016.json  |  7156 ++++++++++++
+ .../evidence/spike06/w2-final/runs/road-1017.json  |  6700 +++++++++++
+ .../evidence/spike06/w2-final/runs/road-1018.json  |  6824 +++++++++++
+ .../evidence/spike06/w2-final/runs/road-1019.json  |  7673 +++++++++++++
+ .../evidence/spike06/w2-final/runs/road-24018.json |  5973 ++++++++++
+ .../spike06/w2-final/runs/turtle-1001.json         |  6982 +++++++++++
+ .../spike06/w2-final/runs/turtle-1002.json         |  6652 +++++++++++
+ .../spike06/w2-final/runs/turtle-1003.json         |  6652 +++++++++++
+ .../spike06/w2-final/runs/turtle-1004.json         |  6513 +++++++++++
+ .../spike06/w2-final/runs/turtle-1005.json         |  6694 +++++++++++
+ .../spike06/w2-final/runs/turtle-1006.json         |  6696 +++++++++++
+ .../spike06/w2-final/runs/turtle-1007.json         |  6802 +++++++++++
+ .../spike06/w2-final/runs/turtle-1008.json         |  6802 +++++++++++
+ .../spike06/w2-final/runs/turtle-1009.json         |  6802 +++++++++++
+ .../spike06/w2-final/runs/turtle-1010.json         |  6717 +++++++++++
+ .../spike06/w2-final/runs/turtle-1011.json         |  6694 +++++++++++
+ .../spike06/w2-final/runs/turtle-1012.json         |  6739 +++++++++++
+ .../spike06/w2-final/runs/turtle-1013.json         |  6735 +++++++++++
+ .../spike06/w2-final/runs/turtle-1014.json         |  6733 +++++++++++
+ .../spike06/w2-final/runs/turtle-1015.json         |  6733 +++++++++++
+ .../spike06/w2-final/runs/turtle-1016.json         |  6733 +++++++++++
+ .../spike06/w2-final/runs/turtle-1017.json         |  6733 +++++++++++
+ .../spike06/w2-final/runs/turtle-1018.json         |  7328 ++++++++++++
+ .../spike06/w2-final/runs/turtle-1019.json         |  7407 ++++++++++++
+ .../spike06/w2-final/runs/turtle-24018.json        |  4988 ++++++++
+ .../docs/evidence/spike06/w2-parse-failed.log      |    26 +
+ godot-spike/docs/evidence/spike06/w2-probes.log    |    14 +
+ godot-spike/docs/evidence/spike06/w2-second.log    |    17 +
+ .../spike06/w2-second/deployment-1001.json         | 10517 +++++++++++++++++
+ .../spike06/w2-second/deployment-1007.json         | 10222 +++++++++++++++++
+ .../spike06/w2-second/deployment-24018.json        |  9943 ++++++++++++++++
+ .../spike06/w2-second/eight-knights-1001.json      |  9033 +++++++++++++++
+ .../spike06/w2-second/eight-knights-1007.json      |  9101 +++++++++++++++
+ .../spike06/w2-second/eight-knights-24018.json     |  8238 +++++++++++++
+ .../spike06/w2-second/policy-only-1001.json        | 10185 ++++++++++++++++
+ .../spike06/w2-second/policy-only-1007.json        | 10293 +++++++++++++++++
+ .../spike06/w2-second/policy-only-24018.json       |  3342 ++++++
+ .../spike06/w2-second/six-knights-1001.json        |  7509 ++++++++++++
+ .../spike06/w2-second/six-knights-1007.json        |  5685 +++++++++
+ .../spike06/w2-second/six-knights-24018.json       |  7006 +++++++++++
+ .../evidence/spike06/w2-second/stagger-1001.json   | 11339 ++++++++++++++++++
+ .../evidence/spike06/w2-second/stagger-1007.json   | 11499 +++++++++++++++++++
+ .../evidence/spike06/w2-second/stagger-24018.json  | 10324 +++++++++++++++++
+ godot-spike/docs/evidence/spike06/w2-tests.log     |    31 +
+ .../docs/evidence/spike06/w2-tuned-summary.log     |   204 +
+ godot-spike/docs/evidence/spike06/w2-tuned.log     |    42 +
+ .../docs/evidence/spike06/w2-tuned/aggregate.json  |   230 +
+ .../docs/evidence/spike06/w2-tuned/index.json      |    72 +
+ .../evidence/spike06/w2-tuned/runs/road-1001.json  |  7509 ++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1002.json  |  7163 ++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1003.json  |  7524 ++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1004.json  |  7402 ++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1005.json  |  8000 +++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1006.json  |  8086 +++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1007.json  |  5685 +++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1008.json  |  7904 +++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1009.json  |  7631 ++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1010.json  |  7602 ++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1011.json  |  7771 +++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1012.json  |  8209 +++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1013.json  |  8637 ++++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1014.json  |  8400 ++++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1015.json  |  7938 +++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1016.json  |  8441 ++++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1017.json  |  8466 ++++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1018.json  |  7665 ++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-1019.json  |  8187 +++++++++++++
+ .../evidence/spike06/w2-tuned/runs/road-24018.json |  7006 +++++++++++
+ .../spike06/w2-tuned/runs/turtle-1001.json         |  7561 ++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1002.json         |  7561 ++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1003.json         |  7561 ++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1004.json         |  6131 ++++++++++
+ .../spike06/w2-tuned/runs/turtle-1005.json         |  7428 ++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1006.json         |  7554 ++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1007.json         |  7554 ++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1008.json         |  7554 ++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1009.json         |  7554 ++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1010.json         |  7531 ++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1011.json         |  7531 ++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1012.json         |  7263 ++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1013.json         |  7389 ++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1014.json         |  7389 ++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1015.json         |  7389 ++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1016.json         |  7389 ++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1017.json         |  7389 ++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1018.json         |  8235 +++++++++++++
+ .../spike06/w2-tuned/runs/turtle-1019.json         |  6649 +++++++++++
+ .../spike06/w2-tuned/runs/turtle-24018.json        |  6424 +++++++++++
+ .../docs/evidence/spike06/w2/deployment-1001.json  |  6941 +++++++++++
+ .../docs/evidence/spike06/w2/deployment-1007.json  | 10607 +++++++++++++++++
+ .../docs/evidence/spike06/w2/deployment-24018.json |  5820 ++++++++++
+ .../evidence/spike06/w2/eight-knights-1001.json    |  4780 ++++++++
+ .../evidence/spike06/w2/eight-knights-1007.json    |  6962 +++++++++++
+ .../evidence/spike06/w2/eight-knights-24018.json   |  7522 ++++++++++++
+ .../docs/evidence/spike06/w2/policy-only-1001.json |  7292 ++++++++++++
+ .../docs/evidence/spike06/w2/policy-only-1007.json |  9927 ++++++++++++++++
+ .../evidence/spike06/w2/policy-only-24018.json     | 10113 ++++++++++++++++
+ .../docs/evidence/spike06/w2/stagger-1001.json     | 10832 +++++++++++++++++
+ .../docs/evidence/spike06/w2/stagger-1007.json     |  6340 ++++++++++
+ .../docs/evidence/spike06/w2/stagger-24018.json    |  7346 ++++++++++++
+ godot-spike/docs/evidence/spike06/w3-bypass.log    |    22 +
+ .../docs/evidence/spike06/w3-bypass/aggregate.json |   123 +
+ .../docs/evidence/spike06/w3-bypass/index.json     |    51 +
+ .../spike06/w3-bypass/runs/bypass-1001.json        |  2150 ++++
+ .../spike06/w3-bypass/runs/bypass-1002.json        |  2150 ++++
+ .../spike06/w3-bypass/runs/bypass-1003.json        |  2150 ++++
+ .../spike06/w3-bypass/runs/bypass-1004.json        |  2150 ++++
+ .../spike06/w3-bypass/runs/bypass-1005.json        |  2150 ++++
+ .../spike06/w3-bypass/runs/bypass-1006.json        |  2150 ++++
+ .../spike06/w3-bypass/runs/bypass-1007.json        |  2150 ++++
+ .../spike06/w3-bypass/runs/bypass-1008.json        |  2150 ++++
+ .../spike06/w3-bypass/runs/bypass-1009.json        |  2832 +++++
+ .../spike06/w3-bypass/runs/bypass-1010.json        |  2832 +++++
+ .../spike06/w3-bypass/runs/bypass-1011.json        |  2828 +++++
+ .../spike06/w3-bypass/runs/bypass-1012.json        |  3396 ++++++
+ .../spike06/w3-bypass/runs/bypass-1013.json        |  3396 ++++++
+ .../spike06/w3-bypass/runs/bypass-1014.json        |  2085 ++++
+ .../spike06/w3-bypass/runs/bypass-1015.json        |  2085 ++++
+ .../spike06/w3-bypass/runs/bypass-1016.json        |  2085 ++++
+ .../spike06/w3-bypass/runs/bypass-1017.json        |  2107 ++++
+ .../spike06/w3-bypass/runs/bypass-1018.json        |  2056 ++++
+ .../spike06/w3-bypass/runs/bypass-1019.json        |  2107 ++++
+ .../spike06/w3-bypass/runs/bypass-24018.json       |  2207 ++++
+ .../docs/evidence/spike06/w3-final-summary.log     |   208 +
+ .../docs/evidence/spike06/w3-final-tests.log       |    30 +
+ godot-spike/docs/evidence/spike06/w3-final.log     |    42 +
+ .../docs/evidence/spike06/w3-final/aggregate.json  |   234 +
+ .../docs/evidence/spike06/w3-final/index.json      |    72 +
+ .../spike06/w3-final/runs/bypass-1001.json         |  3128 +++++
+ .../spike06/w3-final/runs/bypass-1002.json         |  3128 +++++
+ .../spike06/w3-final/runs/bypass-1003.json         |  3128 +++++
+ .../spike06/w3-final/runs/bypass-1004.json         |  3128 +++++
+ .../spike06/w3-final/runs/bypass-1005.json         |  3128 +++++
+ .../spike06/w3-final/runs/bypass-1006.json         |  2337 ++++
+ .../spike06/w3-final/runs/bypass-1007.json         |  2337 ++++
+ .../spike06/w3-final/runs/bypass-1008.json         |  2337 ++++
+ .../spike06/w3-final/runs/bypass-1009.json         |  3515 ++++++
+ .../spike06/w3-final/runs/bypass-1010.json         |  3515 ++++++
+ .../spike06/w3-final/runs/bypass-1011.json         |  3883 +++++++
+ .../spike06/w3-final/runs/bypass-1012.json         |  3828 ++++++
+ .../spike06/w3-final/runs/bypass-1013.json         |  3828 ++++++
+ .../spike06/w3-final/runs/bypass-1014.json         |  2877 +++++
+ .../spike06/w3-final/runs/bypass-1015.json         |  2877 +++++
+ .../spike06/w3-final/runs/bypass-1016.json         |  2877 +++++
+ .../spike06/w3-final/runs/bypass-1017.json         |  2844 +++++
+ .../spike06/w3-final/runs/bypass-1018.json         |  2802 +++++
+ .../spike06/w3-final/runs/bypass-1019.json         |  2875 +++++
+ .../spike06/w3-final/runs/bypass-24018.json        |  2769 +++++
+ .../evidence/spike06/w3-final/runs/road-1001.json  |  6595 +++++++++++
+ .../evidence/spike06/w3-final/runs/road-1002.json  |  6378 ++++++++++
+ .../evidence/spike06/w3-final/runs/road-1003.json  |  6622 +++++++++++
+ .../evidence/spike06/w3-final/runs/road-1004.json  |  6793 +++++++++++
+ .../evidence/spike06/w3-final/runs/road-1005.json  |  5682 +++++++++
+ .../evidence/spike06/w3-final/runs/road-1006.json  |  8058 +++++++++++++
+ .../evidence/spike06/w3-final/runs/road-1007.json  |  6911 +++++++++++
+ .../evidence/spike06/w3-final/runs/road-1008.json  |  7009 +++++++++++
+ .../evidence/spike06/w3-final/runs/road-1009.json  |  7709 +++++++++++++
+ .../evidence/spike06/w3-final/runs/road-1010.json  |  5564 +++++++++
+ .../evidence/spike06/w3-final/runs/road-1011.json  |  6450 +++++++++++
+ .../evidence/spike06/w3-final/runs/road-1012.json  |  7601 ++++++++++++
+ .../evidence/spike06/w3-final/runs/road-1013.json  |  6391 +++++++++++
+ .../evidence/spike06/w3-final/runs/road-1014.json  |  8235 +++++++++++++
+ .../evidence/spike06/w3-final/runs/road-1015.json  |  6421 +++++++++++
+ .../evidence/spike06/w3-final/runs/road-1016.json  |  7636 ++++++++++++
+ .../evidence/spike06/w3-final/runs/road-1017.json  |  7453 ++++++++++++
+ .../evidence/spike06/w3-final/runs/road-1018.json  |  7447 ++++++++++++
+ .../evidence/spike06/w3-final/runs/road-1019.json  |  6282 ++++++++++
+ .../evidence/spike06/w3-final/runs/road-24018.json |  6351 ++++++++++
+ godot-spike/docs/evidence/spike06/w3-summary.log   |    97 +
+ godot-spike/docs/evidence/spike06/w3-tests.log     |    30 +
+ godot-spike/docs/evidence/spike06/w4-canto.log     |    22 +
+ .../docs/evidence/spike06/w4-canto/index.json      |    51 +
+ .../evidence/spike06/w4-canto/runs/road-1001.json  |  8252 +++++++++++++
+ .../evidence/spike06/w4-canto/runs/road-1002.json  |  5188 +++++++++
+ .../evidence/spike06/w4-canto/runs/road-1003.json  |  7540 ++++++++++++
+ .../evidence/spike06/w4-canto/runs/road-1004.json  |  7514 ++++++++++++
+ .../evidence/spike06/w4-canto/runs/road-1005.json  |  5803 ++++++++++
+ .../evidence/spike06/w4-canto/runs/road-1006.json  |  7821 +++++++++++++
+ .../evidence/spike06/w4-canto/runs/road-1007.json  |  7761 +++++++++++++
+ .../evidence/spike06/w4-canto/runs/road-1008.json  |  7728 +++++++++++++
+ .../evidence/spike06/w4-canto/runs/road-1009.json  |  7972 +++++++++++++
+ .../evidence/spike06/w4-canto/runs/road-1010.json  |  7738 +++++++++++++
+ .../evidence/spike06/w4-canto/runs/road-1011.json  |  6109 ++++++++++
+ .../evidence/spike06/w4-canto/runs/road-1012.json  |  7824 +++++++++++++
+ .../evidence/spike06/w4-canto/runs/road-1013.json  |  8716 ++++++++++++++
+ .../evidence/spike06/w4-canto/runs/road-1014.json  |  5072 ++++++++
+ .../evidence/spike06/w4-canto/runs/road-1015.json  |  7781 +++++++++++++
+ .../evidence/spike06/w4-canto/runs/road-1016.json  |  4634 ++++++++
+ .../evidence/spike06/w4-canto/runs/road-1017.json  |  7730 +++++++++++++
+ .../evidence/spike06/w4-canto/runs/road-1018.json  |  7720 +++++++++++++
+ .../evidence/spike06/w4-canto/runs/road-1019.json  |  7969 +++++++++++++
+ .../evidence/spike06/w4-canto/runs/road-24018.json |  5642 +++++++++
+ .../docs/evidence/spike06/w4-final-tests.log       |    51 +
+ godot-spike/docs/evidence/spike06/w4-final.log     |    22 +
+ .../docs/evidence/spike06/w4-final/index.json      |    51 +
+ .../evidence/spike06/w4-final/runs/road-1001.json  |  6107 ++++++++++
+ .../evidence/spike06/w4-final/runs/road-1002.json  |  6386 ++++++++++
+ .../evidence/spike06/w4-final/runs/road-1003.json  |  6263 ++++++++++
+ .../evidence/spike06/w4-final/runs/road-1004.json  |  7747 +++++++++++++
+ .../evidence/spike06/w4-final/runs/road-1005.json  |  7889 +++++++++++++
+ .../evidence/spike06/w4-final/runs/road-1006.json  |  8041 +++++++++++++
+ .../evidence/spike06/w4-final/runs/road-1007.json  |  7734 +++++++++++++
+ .../evidence/spike06/w4-final/runs/road-1008.json  |  7994 +++++++++++++
+ .../evidence/spike06/w4-final/runs/road-1009.json  |  7809 +++++++++++++
+ .../evidence/spike06/w4-final/runs/road-1010.json  |  6244 ++++++++++
+ .../evidence/spike06/w4-final/runs/road-1011.json  |  5617 +++++++++
+ .../evidence/spike06/w4-final/runs/road-1012.json  |  8136 +++++++++++++
+ .../evidence/spike06/w4-final/runs/road-1013.json  |  7494 ++++++++++++
+ .../evidence/spike06/w4-final/runs/road-1014.json  |  8590 ++++++++++++++
+ .../evidence/spike06/w4-final/runs/road-1015.json  |  7770 +++++++++++++
+ .../evidence/spike06/w4-final/runs/road-1016.json  |  7424 ++++++++++++
+ .../evidence/spike06/w4-final/runs/road-1017.json  |  6649 +++++++++++
+ .../evidence/spike06/w4-final/runs/road-1018.json  |  7698 +++++++++++++
+ .../evidence/spike06/w4-final/runs/road-1019.json  |  7960 +++++++++++++
+ .../evidence/spike06/w4-final/runs/road-24018.json |  8133 +++++++++++++
+ .../docs/evidence/spike06/w4-flank-summary.log     |   105 +
+ godot-spike/docs/evidence/spike06/w4-flank.log     |    22 +
+ .../docs/evidence/spike06/w4-flank/aggregate.json  |   131 +
+ .../docs/evidence/spike06/w4-flank/index.json      |    51 +
+ .../evidence/spike06/w4-flank/runs/flank-1001.json |  5142 +++++++++
+ .../evidence/spike06/w4-flank/runs/flank-1002.json |  7617 ++++++++++++
+ .../evidence/spike06/w4-flank/runs/flank-1003.json |  8114 +++++++++++++
+ .../evidence/spike06/w4-flank/runs/flank-1004.json |  7779 +++++++++++++
+ .../evidence/spike06/w4-flank/runs/flank-1005.json |  6972 +++++++++++
+ .../evidence/spike06/w4-flank/runs/flank-1006.json |  7840 +++++++++++++
+ .../evidence/spike06/w4-flank/runs/flank-1007.json |  8109 +++++++++++++
+ .../evidence/spike06/w4-flank/runs/flank-1008.json |  4348 +++++++
+ .../evidence/spike06/w4-flank/runs/flank-1009.json |  8051 +++++++++++++
+ .../evidence/spike06/w4-flank/runs/flank-1010.json |  7673 +++++++++++++
+ .../evidence/spike06/w4-flank/runs/flank-1011.json |  7144 ++++++++++++
+ .../evidence/spike06/w4-flank/runs/flank-1012.json |  7562 ++++++++++++
+ .../evidence/spike06/w4-flank/runs/flank-1013.json |  6030 ++++++++++
+ .../evidence/spike06/w4-flank/runs/flank-1014.json |  6971 +++++++++++
+ .../evidence/spike06/w4-flank/runs/flank-1015.json |  7016 +++++++++++
+ .../evidence/spike06/w4-flank/runs/flank-1016.json |  4364 +++++++
+ .../evidence/spike06/w4-flank/runs/flank-1017.json |  7487 ++++++++++++
+ .../evidence/spike06/w4-flank/runs/flank-1018.json |  7012 +++++++++++
+ .../evidence/spike06/w4-flank/runs/flank-1019.json |  4383 +++++++
+ .../spike06/w4-flank/runs/flank-24018.json         |  7014 +++++++++++
+ .../docs/evidence/spike06/w4-full-tests.log        |   351 +
+ .../docs/evidence/spike06/w4-leader-aware.log      |    22 +
+ .../spike06/w4-leader-aware/aggregate.json         |   131 +
+ .../evidence/spike06/w4-leader-aware/index.json    |    51 +
+ .../spike06/w4-leader-aware/runs/road-1001.json    |  5105 ++++++++
+ .../spike06/w4-leader-aware/runs/road-1002.json    |  5188 +++++++++
+ .../spike06/w4-leader-aware/runs/road-1003.json    |  7540 ++++++++++++
+ .../spike06/w4-leader-aware/runs/road-1004.json    |  7473 ++++++++++++
+ .../spike06/w4-leader-aware/runs/road-1005.json    |  7972 +++++++++++++
+ .../spike06/w4-leader-aware/runs/road-1006.json    |  7807 +++++++++++++
+ .../spike06/w4-leader-aware/runs/road-1007.json    |  7759 +++++++++++++
+ .../spike06/w4-leader-aware/runs/road-1008.json    |  7992 +++++++++++++
+ .../spike06/w4-leader-aware/runs/road-1009.json    |  7809 +++++++++++++
+ .../spike06/w4-leader-aware/runs/road-1010.json    |  6231 ++++++++++
+ .../spike06/w4-leader-aware/runs/road-1011.json    |  6109 ++++++++++
+ .../spike06/w4-leader-aware/runs/road-1012.json    |  7824 +++++++++++++
+ .../spike06/w4-leader-aware/runs/road-1013.json    |  7511 ++++++++++++
+ .../spike06/w4-leader-aware/runs/road-1014.json    |  8377 ++++++++++++++
+ .../spike06/w4-leader-aware/runs/road-1015.json    |  7781 +++++++++++++
+ .../spike06/w4-leader-aware/runs/road-1016.json    |  4632 ++++++++
+ .../spike06/w4-leader-aware/runs/road-1017.json    |  7582 ++++++++++++
+ .../spike06/w4-leader-aware/runs/road-1018.json    |  7720 +++++++++++++
+ .../spike06/w4-leader-aware/runs/road-1019.json    |  7967 +++++++++++++
+ .../spike06/w4-leader-aware/runs/road-24018.json   |  8139 +++++++++++++
+ .../docs/evidence/spike06/w4-leader-summary.log    |   105 +
+ godot-spike/docs/evidence/spike06/w4-road.log      |    22 +
+ .../docs/evidence/spike06/w4-road/index.json       |    51 +
+ .../evidence/spike06/w4-road/runs/road-1001.json   |  8664 ++++++++++++++
+ .../evidence/spike06/w4-road/runs/road-1002.json   |  8086 +++++++++++++
+ .../evidence/spike06/w4-road/runs/road-1003.json   |  8391 ++++++++++++++
+ .../evidence/spike06/w4-road/runs/road-1004.json   |  8014 +++++++++++++
+ .../evidence/spike06/w4-road/runs/road-1005.json   |  7803 +++++++++++++
+ .../evidence/spike06/w4-road/runs/road-1006.json   |  8763 ++++++++++++++
+ .../evidence/spike06/w4-road/runs/road-1007.json   |  4425 +++++++
+ .../evidence/spike06/w4-road/runs/road-1008.json   |  8471 ++++++++++++++
+ .../evidence/spike06/w4-road/runs/road-1009.json   |  8240 +++++++++++++
+ .../evidence/spike06/w4-road/runs/road-1010.json   |  5610 +++++++++
+ .../evidence/spike06/w4-road/runs/road-1011.json   |  8115 +++++++++++++
+ .../evidence/spike06/w4-road/runs/road-1012.json   |  7729 +++++++++++++
+ .../evidence/spike06/w4-road/runs/road-1013.json   |  5156 +++++++++
+ .../evidence/spike06/w4-road/runs/road-1014.json   |  5216 +++++++++
+ .../evidence/spike06/w4-road/runs/road-1015.json   |  5230 +++++++++
+ .../evidence/spike06/w4-road/runs/road-1016.json   |  8414 ++++++++++++++
+ .../evidence/spike06/w4-road/runs/road-1017.json   |  9021 +++++++++++++++
+ .../evidence/spike06/w4-road/runs/road-1018.json   |  6312 ++++++++++
+ .../evidence/spike06/w4-road/runs/road-1019.json   |  8928 ++++++++++++++
+ .../evidence/spike06/w4-road/runs/road-24018.json  |  6355 ++++++++++
+ .../evidence/spike06/w4-tests-fixture-failed.log   |    74 +
+ godot-spike/docs/evidence/spike06/w4-tests.log     |    34 +
+ .../docs/evidence/spike06/w5-profile-tests.log     |    36 +
+ godot-spike/docs/evidence/spike06/w5-tests.log     |    46 +
+ godot-spike/docs/evidence/spike06/w6-1080.log      |     4 +
+ godot-spike/docs/evidence/spike06/w6-after.log     |   102 +
+ .../docs/evidence/spike06/w6-baseline-recheck.log  |   102 +
+ godot-spike/docs/evidence/spike06/w6-enemy.log     |    12 +
+ .../docs/evidence/spike06/w6-exit-codes.json       |    19 +
+ godot-spike/docs/evidence/spike06/w6-lose.log      |     4 +
+ godot-spike/docs/evidence/spike06/w6-measure.log   |     4 +
+ godot-spike/docs/evidence/spike06/w6-package.log   |     1 +
+ godot-spike/docs/evidence/spike06/w6-perf.log      |     4 +
+ godot-spike/docs/evidence/spike06/w6-qa.log        |     4 +
+ godot-spike/docs/evidence/spike06/w6-runtime.log   |     4 +
+ godot-spike/docs/evidence/spike06/w6-scout.log     |    12 +
+ godot-spike/docs/evidence/spike06/warning.png      |   Bin 0 -> 564979 bytes
+ .../docs/evidence/spike06/win-continuous.png       |   Bin 0 -> 402822 bytes
+ godot-spike/scripts/impact/impact_profile.gd       |     1 +
+ godot-spike/scripts/levels/field_battle.gd         |    11 +-
+ godot-spike/scripts/levels/field_ground.gd         |    13 +
+ godot-spike/scripts/levels/field_hud.gd            |    16 +-
+ godot-spike/scripts/levels/field_labels.gd         |     6 +-
+ godot-spike/scripts/levels/field_telemetry.gd      |    16 +
+ godot-spike/scripts/rules/field_rules.gd           |    56 +-
+ godot-spike/tests/test_field_ai.gd                 |     3 +-
+ godot-spike/tests/test_field_autoplay.gd           |     3 +-
+ godot-spike/tests/test_field_battle.gd             |     4 +
+ godot-spike/tests/test_field_rules.gd              |     5 +-
+ godot-spike/tests/test_field_ui.gd                 |     3 +-
+ godot-spike/tests/test_field_visibility.gd         |     4 +
+ godot-spike/tests/test_spike05_profile.gd          |     4 +-
+ godot-spike/tests/test_spike06_balance.gd          |    29 +
+ godot-spike/tests/test_spike06_harness.gd          |    20 +
+ godot-spike/tests/test_spike06_profile.gd          |    25 +
+ godot-spike/tests/test_spike06_scout.gd            |   105 +
+ godot-spike/tests/test_spike06_wave.gd             |    32 +
+ godot-spike/tools/autoplay_field.gd                |    73 +-
+ godot-spike/tools/capture_field06.gd               |   223 +
+ godot-spike/tools/capture_hit_field06.gd           |    21 +
+ godot-spike/tools/capture_spike06.gd               |   161 +
+ godot-spike/tools/field_harness.gd                 |    52 +
+ godot-spike/tools/field_policy.gd                  |   150 +-
+ godot-spike/tools/field_policy_spike05.gd          |    85 +
+ godot-spike/tools/package_spike06_field.py         |   179 +
+ godot-spike/tools/package_spike06_hitfeel.py       |    46 +
+ godot-spike/tools/probe_balance06.gd               |    29 +
+ godot-spike/tools/summarize_spike06.py             |    69 +
+ 966 files changed, 3324784 insertions(+), 121 deletions(-)
