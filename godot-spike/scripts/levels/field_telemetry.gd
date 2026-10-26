@@ -1,6 +1,10 @@
 extends RefCounted
 ## Measurement only. Events supply actions/damage; never changes rules.
 const Rules = preload("res://scripts/rules/field_rules.gd")
+const Sight = preload("res://scripts/rules/field_sight.gd")
+var deaths: Array = []
+var ranged_shots: Array = []
+var reinforcement_first_engage := -1
 var first_contact_turn := -1
 var first_contact_side := ""
 var unit_turns := {}
@@ -25,13 +29,14 @@ func register(s: Dictionary, side: String) -> void:
 			hypothetical.cell=p
 			for target in s.units:
 				if Rules.in_range(s.level,hypothetical,target): could_attack=true
-		unit_turns[key]={"turn":s.turn,"id":u.id,"side":u.side,"kind":u.kind,"move_steps":0,"move_cost":0,"could_reach_target":could_attack}
+		unit_turns[key]={"turn":s.turn,"id":u.id,"side":u.side,"kind":u.kind,"group":u.group,"eligible":u.born_turn<s.turn,"move_steps":0,"move_cost":0,"attacks":0,"role_reason":"","could_reach_target":could_attack}
 		ensure(u.kind,u.side)
 		totals[u.kind].unit_turns+=1
 		if not could_attack: totals[u.kind].idle_turns+=1
 
 func record(before: Dictionary, events: Array, after: Dictionary) -> void:
 	var turn: int = before.turn
+	var spatial := before.duplicate(true)
 	var roster := {}
 	for u in before.units+after.units:
 		roster[u.id]=u
@@ -41,6 +46,7 @@ func record(before: Dictionary, events: Array, after: Dictionary) -> void:
 			turn=int(e.turn)
 			register(before if e.phase=="enemy" else after,"enemy" if e.phase=="enemy" else "ally")
 		if e.type=="move":
+			Rules.unit(spatial,e.unit).cell=e.path.back()
 			var kind: String = roster[e.unit].kind
 			var key := "%d:%s" % [turn,e.unit]
 			if unit_turns.has(key):
@@ -49,23 +55,58 @@ func record(before: Dictionary, events: Array, after: Dictionary) -> void:
 			totals[kind].move_steps+=e.path.size()-1
 			totals[kind].moves+=1
 		if e.type=="attack":
+			var key := "%d:%s" % [turn,e.unit]
+			if unit_turns.has(key): unit_turns[key].attacks+=1
+			if roster[e.unit].group=="reinforcements" or roster[e.target].group=="reinforcements":
+				if reinforcement_first_engage<0: reinforcement_first_engage=turn
+			if roster[e.unit].kind=="ranged":
+				var sight := Sight.check(spatial,Rules.unit(spatial,e.unit),Rules.unit(spatial,e.target))
+				ranged_shots.append({"turn":turn,"source":e.unit,"target":e.target,"would_block":not sight.clear,"cover":sight.cover,"reason":sight.reason})
 			if first_contact_turn<0:
 				first_contact_turn=turn
 				first_contact_side=roster[e.unit].side
 			totals[roster[e.unit].kind].attacks+=1
 		if e.type=="damage":
+			Rules.unit(spatial,e.unit).hp=e.hp_after
 			totals[roster[e.source].kind].damage_dealt+=e.amount
 			totals[roster[e.unit].kind].damage_taken+=e.amount
 			if e.hp_after==0: totals[roster[e.source].kind].kills+=1
+			if e.hp_after==0 and roster[e.unit].side=="ally": deaths.append({"id":e.unit,"kind":roster[e.unit].kind,"turn":turn})
+		if e.type=="knockback": Rules.unit(spatial,e.unit).cell=e.to
+		if e.type=="intent" and e.get("role_hold",false):
+			var key := "%d:%s" % [turn,e.unit]
+			if unit_turns.has(key): unit_turns[key].role_reason=e.reason
 		trace.append({"turn":turn,"event":e.duplicate(true)})
 	final_status=after.status
 	final_turn=after.turn
 
 func summary() -> Dictionary:
 	var archetypes := totals.duplicate(true)
+	var idle := {"front":0,"flank":0,"south":0,"reserve":0,"rear":0,"leader":0,"reinforcements":0}
+	var deliberate: Array = []
+	for row in unit_turns.values():
+		if row.side!="enemy" or not row.eligible: continue
+		if not row.role_reason.is_empty(): deliberate.append(row)
+		elif not row.could_reach_target and row.move_steps==0 and row.attacks==0: idle[row.group]=idle.get(row.group,0)+1
+	var ally_damage := 0.0
+	var ally_kills := 0.0
+	var living_turns := 0
+	for kind in ["melee","ranged","mobile"]:
+		if totals.has(kind):
+			ally_damage+=totals[kind].damage_dealt
+			ally_kills+=totals[kind].kills
+			living_turns+=totals[kind].unit_turns
 	for kind in archetypes:
 		archetypes[kind].average_move_per_unit_turn=float(archetypes[kind].move_steps)/maxi(1,archetypes[kind].unit_turns)
+		if archetypes[kind].side=="ally":
+			archetypes[kind].damage_share=archetypes[kind].damage_dealt/maxf(1,ally_damage)
+			archetypes[kind].kill_share=archetypes[kind].kills/maxf(1,ally_kills)
 	return {"first_contact_turn":first_contact_turn,"first_contact_side":first_contact_side,
+		"enemy_idle_by_group":idle,"deliberate_holds":deliberate,"reinforcement_first_engage_turn":reinforcement_first_engage,
+		"ally_deaths":deaths,"ranged_shots":ranged_shots,"los_blocked_shots":ranged_shots.filter(func(r):return r.would_block).size(),
+		"living_ally_unit_turns":living_turns,
+		"battle_length_estimate_minutes":[(final_turn*1.999+living_turns*15)/60.0,(final_turn*1.999+living_turns*25)/60.0],
+		"estimate_enemy_mean_seconds":1.999,"estimate_enemy_mean_source":"spike04 measured normal presentation; replace with spike05 measured mean for after table",
 		"unit_turns":unit_turns.values(),"archetypes":archetypes,"enemy_phase_seconds":enemy_phases.duplicate(true),
 		"turns_to_result":final_turn,"status":final_status,"trace":trace.duplicate(true),
 		"definitions":{"idle_turns":"No enemy in attack range from any cost-legal destination at phase start; may still move toward contact.",
