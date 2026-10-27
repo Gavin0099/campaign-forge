@@ -98,3 +98,54 @@ it is a test fixture, not a selectable gameplay rules variant.
 Native no-capture field normal/crit/reduced0.949/1.017/0.747s,all<=1.7s;
 Skirmish all9 setups×modes pass<=1.7s with Reduced<=normal (hitfeel/timing-runtime).
 Readbacks0; both commands exit0. Dedicated full verification followsW7.
+
+## W6 supplemental native viewport render timers
+
+Same common states/event replay,3 repetitions/cell, separate sequential native720p runs. RenderingServer viewport measurement enabled explicitly; no movie/readback. Samples are previous completed viewport render CPU/GPU milliseconds, not whole-frame CPU; scopes overlap and must not be added. W4/W5 original tables remain unchanged.
+
+| Build | Workload | Wall mean / p95 / worst | Render CPU mean / p95 / worst | Render GPU mean / p95 / worst |
+| --- | --- | --- | --- | --- |
+| spike05 | scroll-T2 | 24.00 / 29.58 / 50.30 | 8.69 / 11.04 / 37.32 | 5.72 / 11.81 / 18.64 |
+| spike05 | scroll-wave | 24.80 / 29.30 / 30.88 | 9.05 / 10.94 / 11.46 | 5.83 / 12.05 / 17.73 |
+| spike05 | enemy-normal | 25.22 / 30.11 / 38.53 | 8.82 / 10.93 / 11.51 | 5.81 / 11.21 / 18.74 |
+| spike05 | enemy-2x | 25.88 / 30.53 / 33.53 | 9.18 / 11.08 / 11.65 | 6.01 / 12.31 / 15.69 |
+| spike06 | scroll-T2 | 24.32 / 29.32 / 31.23 | 8.63 / 10.95 / 40.26 | 5.66 / 11.13 / 18.16 |
+| spike06 | scroll-wave | 25.10 / 29.11 / 30.32 | 9.04 / 10.81 / 11.67 | 5.92 / 12.28 / 18.95 |
+| spike06 | enemy-normal | 25.66 / 29.89 / 39.70 | 8.99 / 11.06 / 11.61 | 6.07 / 10.73 / 18.65 |
+| spike06 | enemy-2x | 26.11 / 31.07 / 34.31 | 9.13 / 11.15 / 11.43 | 6.45 / 13.77 / 17.41 |
+| before | scroll-T2 | 24.08 / 29.10 / 54.39 | 8.49 / 10.86 / 40.52 | 5.52 / 10.95 / 22.94 |
+| before | scroll-wave | 24.28 / 29.07 / 30.79 | 8.40 / 10.70 / 11.69 | 5.62 / 12.36 / 18.24 |
+| before | enemy-normal | 25.31 / 29.59 / 48.97 | 8.55 / 10.85 / 11.34 | 5.82 / 10.03 / 17.90 |
+| before | enemy-2x | 25.92 / 30.60 / 46.38 | 8.87 / 11.12 / 11.54 | 6.27 / 13.36 / 17.37 |
+| after | scroll-T2 | 16.69 / 27.76 / 38.24 | 7.59 / 10.41 / 36.84 | 4.06 / 10.91 / 21.29 |
+| after | scroll-wave | 16.67 / 29.27 / 31.13 | 7.63 / 10.27 / 16.32 | 4.03 / 10.98 / 16.46 |
+| after | enemy-normal | 16.71 / 28.17 / 46.07 | 8.25 / 10.47 / 12.27 | 4.47 / 11.19 / 16.20 |
+| after | enemy-2x | 16.76 / 29.75 / 37.37 | 8.01 / 10.58 / 11.37 | 4.46 / 11.02 / 17.83 |
+
+### Actual enemy phases including synchronous AI
+
+Same reached input wave state; each build plays its own AI result, and measurement begins BEFORE AI evaluation. First-frame CPU/action spikes are included. Three repeats per speed; no readback/movie/concurrent Godot. Pre-kit05 results may differ; original matched-event table isolates rendering separately.
+
+| Build | Workload | Mean / p95 / worst ms | Render CPU mean | Render GPU mean |
+| --- | --- | --- | --- | --- |
+| spike05 | enemy-normal | 24.80 / 30.25 / 99.16 | 8.24 | 5.62 |
+| spike05 | enemy-2x | 24.79 / 30.21 / 92.21 | 8.07 | 5.92 |
+| spike06 | enemy-normal | 25.23 / 30.73 / 88.89 | 8.78 | 6.00 |
+| spike06 | enemy-2x | 26.69 / 31.26 / 87.58 | 9.06 | 6.35 |
+| after | enemy-normal | 16.85 / 28.99 / 64.28 | 7.67 | 4.23 |
+| after | enemy-2x | 17.03 / 29.70 / 66.80 | 8.00 | 4.49 |
+
+Final native actual enemy-phase check includes synchronous AI in frame intervals:
+normal16.85ms mean,p95 28.99,worst64.28;2x17.03,p95 29.70,worst66.80.
+Minimum23.5mean PASS, strict16.67/all-worst33 FAIL. These supersede any inference
+of full enemy-phase worst from the matched-animation replay39–42ms table. GPU
+render mean4.23/4.49ms,CPU viewport7.67/8.00ms; scoped action AI27–29ms plus
+telemetry/rebuild/draw work cause CPU action boundaries; rendering/host frame
+pacing also varies. GPU sample peaks16–22ms show jitter; no claim stable60FPS,
+GPU-only bottleneck, or that art/renderer changes are necessary/sufficient.
+
+W6 supplement05 scroll was rerun clean after a1.7s offline AVI extraction might
+have overlapped the first supplement's setup/early frames. Summary uses all3 clean
+scroll repeats; original raw attempted run retained. No other Godot ran in any
+native measurement. MovieMaker's CPU/GPU/encoding timings are capture-only and
+never substituted for native performance.

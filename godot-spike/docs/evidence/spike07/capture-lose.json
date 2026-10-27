@@ -1,0 +1,69 @@
+{
+	"checks": {
+		"terminal": true
+	},
+	"engine": "4.7.2-stable (official)",
+	"human": "HUMAN_PENDING",
+	"mode": "lose",
+	"pass": true,
+	"shots": [
+		{
+			"labels": [
+				{
+					"anchor": "(560.0, 309.25)",
+					"color": "(0.5961, 0.7882, 0.7451, 1.0)",
+					"id": "thoma",
+					"rect": "[P: (518.0, 281.25), S: (84.0, 22.0)]",
+					"text": "M 8/8"
+				},
+				{
+					"anchor": "(720.0, 214.75)",
+					"color": "(0.5961, 0.7882, 0.7451, 1.0)",
+					"id": "bow-1",
+					"rect": "[P: (466.0, 238.75), S: (84.0, 22.0)]",
+					"text": "BOW 6/6"
+				},
+				{
+					"anchor": "(480.0, 356.5)",
+					"color": "(0.5961, 0.7882, 0.7451, 1.0)",
+					"id": "bow-2",
+					"rect": "[P: (438.0, 328.5), S: (84.0, 22.0)]",
+					"text": "BOW 6/6"
+				},
+				{
+					"anchor": "(720.0, 309.25)",
+					"color": "(0.5961, 0.7882, 0.7451, 1.0)",
+					"id": "guard",
+					"rect": "[P: (784.0, 281.25), S: (84.0, 22.0)]",
+					"text": "M 8/8"
+				},
+				{
+					"anchor": "(400.0, 309.25)",
+					"color": "(0.5961, 0.7882, 0.7451, 1.0)",
+					"id": "scout-2",
+					"rect": "[P: (358.0, 281.25), S: (84.0, 22.0)]",
+					"text": "BOOT 6/6"
+				}
+			],
+			"name": "lose-deployment",
+			"overlaps": 0,
+			"resolution": [
+				1280,
+				720
+			],
+			"suppressed": [],
+			"turn": 1
+		},
+		{
+			"labels": [],
+			"name": "lose",
+			"overlaps": 0,
+			"resolution": [
+				1280,
+				720
+			],
+			"suppressed": [],
+			"turn": 7
+		}
+	]
+}

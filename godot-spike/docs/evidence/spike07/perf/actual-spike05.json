@@ -1,0 +1,5547 @@
+{
+	"adapter": "AMD Radeon 780M Graphics",
+	"backend": "gl_compatibility",
+	"engine": "4.7.2-stable (official)",
+	"include_ai": true,
+	"method": "Native720p, no readbacks/movie/concurrent Godot. Inclusive CPU scopes overlap; frame wall minus process is NOT GPU time. Identical precomputed event replay, pure AI measured separately.",
+	"mode": "enemy",
+	"render_timers": true,
+	"reports": [
+		{
+			"ai_ms": 33.8,
+			"ai_scopes": {
+				"field_rules.ai_plan": {
+					"calls": 5,
+					"max_usec": 12128,
+					"usec": 32063
+				},
+				"field_rules.distance_map": {
+					"calls": 3,
+					"max_usec": 11718,
+					"usec": 30406
+				},
+				"field_rules.reach": {
+					"calls": 7,
+					"max_usec": 349,
+					"usec": 2102
+				}
+			},
+			"frames": [
+				{
+					"draw_calls": 2245.0,
+					"ms": 57.76,
+					"nodes": 101.0,
+					"objects": 2835.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 5.01700019836426,
+					"render_gpu_ms": 2.91899991035461
+				},
+				{
+					"draw_calls": 2260.0,
+					"ms": 15.26,
+					"nodes": 101.0,
+					"objects": 2917.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 3.61999988555908,
+					"render_gpu_ms": 2.30299997329712
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 14.554,
+					"nodes": 101.0,
+					"objects": 2883.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 4.92000007629395,
+					"render_gpu_ms": 2.09800004959106
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 11.143,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 4.23299980163574,
+					"render_gpu_ms": 3.48099994659424
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 10.182,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 6.0,
+					"render_gpu_ms": 1.94599997997284
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 15.576,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 6.24599981307983,
+					"render_gpu_ms": 5.19000005722046
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 16.61,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 7.1100001335144,
+					"render_gpu_ms": 1.9559999704361
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 16.648,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 6.69600009918213,
+					"render_gpu_ms": 2.79099988937378
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 16.688,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 2.63700008392334,
+					"render_gpu_ms": 3.70799994468689
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 16.633,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 2.71700000762939,
+					"render_gpu_ms": 1.87300002574921
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 16.691,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 4.98799991607666,
+					"render_gpu_ms": 2.51300001144409
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 16.639,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 2.68700003623962,
+					"render_gpu_ms": 1.87999999523163
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 16.688,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 4.34899997711182,
+					"render_gpu_ms": 1.79999995231628
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 16.677,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 3.56599998474121,
+					"render_gpu_ms": 2.56599998474121
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 16.674,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 4.47499990463257,
+					"render_gpu_ms": 1.80599999427795
+				},
+				{
+					"draw_calls": 2244.0,
+					"ms": 16.611,
+					"nodes": 101.0,
+					"objects": 2834.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 6.81599998474121,
+					"render_gpu_ms": 2.95600008964539
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 16.69,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 2.76300001144409,
+					"render_gpu_ms": 2.5090000629425
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 16.662,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 6.75299978256226,
+					"render_gpu_ms": 4.27299976348877
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 16.672,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 5.36899995803833,
+					"render_gpu_ms": 2.1800000667572
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 16.66,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 5.67500019073486,
+					"render_gpu_ms": 2.87700009346008
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 16.66,
+					"nodes": 101.0,
+					"objects": 2940.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 5.42600011825562,
+					"render_gpu_ms": 5.49399995803833
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 16.677,
+					"nodes": 101.0,
+					"objects": 2940.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 4.76100015640259,
+					"render_gpu_ms": 2.51900005340576
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 16.677,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 2.72199988365173,
+					"render_gpu_ms": 2.14199995994568
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 16.679,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 6.24499988555908,
+					"render_gpu_ms": 1.92499995231628
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 16.66,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 5.80299997329712,
+					"render_gpu_ms": 1.942999958992
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 17.143,
+					"nodes": 101.0,
+					"objects": 2888.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 5.37599992752075,
+					"render_gpu_ms": 1.8860000371933
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 16.188,
+					"nodes": 101.0,
+					"objects": 2912.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 6.31699991226196,
+					"render_gpu_ms": 1.73300004005432
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 16.636,
+					"nodes": 101.0,
+					"objects": 2860.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 6.71799993515015,
+					"render_gpu_ms": 3.40100002288818
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 16.703,
+					"nodes": 101.0,
+					"objects": 2860.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 4.78499984741211,
+					"render_gpu_ms": 2.57800006866455
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 16.637,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 3.33800005912781,
+					"render_gpu_ms": 2.69199991226196
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 16.664,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 7.25899982452393,
+					"render_gpu_ms": 3.41499996185303
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 16.667,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 3.33200001716614,
+					"render_gpu_ms": 3.23399996757507
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 16.66,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 6.18400001525879,
+					"render_gpu_ms": 1.99100005626678
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 16.671,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 3.51699995994568,
+					"render_gpu_ms": 2.86100006103516
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 16.7,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 2.67199993133545,
+					"render_gpu_ms": 2.05999994277954
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 16.634,
+					"nodes": 101.0,
+					"objects": 2856.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 2.83200001716614,
+					"render_gpu_ms": 5.2960000038147
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 16.702,
+					"nodes": 101.0,
+					"objects": 2856.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 7.01700019836426,
+					"render_gpu_ms": 1.96700000762939
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 21.769,
+					"nodes": 101.0,
+					"objects": 2856.0,
+					"physics_ms": 0.019,
+					"process_ms": 94.193,
+					"render_cpu_ms": 7.13100004196167,
+					"render_gpu_ms": 2.05900001525879
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 22.453,
+					"nodes": 101.0,
+					"objects": 2856.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 6.46799993515015,
+					"render_gpu_ms": 1.83200001716614
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 24.254,
+					"nodes": 101.0,
+					"objects": 2856.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 5.9520001411438,
+					"render_gpu_ms": 1.95899999141693
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 31.008,
+					"nodes": 102.0,
+					"objects": 2856.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 5.26599979400635,
+					"render_gpu_ms": 1.87899994850159
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 19.444,
+					"nodes": 102.0,
+					"objects": 2856.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 3.44000005722046,
+					"render_gpu_ms": 4.69199991226196
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 24.787,
+					"nodes": 102.0,
+					"objects": 2856.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 7.8439998626709,
+					"render_gpu_ms": 6.15399980545044
+				},
+				{
+					"draw_calls": 2250.0,
+					"ms": 20.786,
+					"nodes": 102.0,
+					"objects": 2843.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 6.83400011062622,
+					"render_gpu_ms": 3.41400003433228
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 29.884,
+					"nodes": 115.0,
+					"objects": 2856.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 10.6149997711182,
+					"render_gpu_ms": 6.54400014877319
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 25.582,
+					"nodes": 115.0,
+					"objects": 2856.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 10.3509998321533,
+					"render_gpu_ms": 4.3439998626709
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 29.254,
+					"nodes": 115.0,
+					"objects": 2856.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 4.30299997329712,
+					"render_gpu_ms": 6.88000011444092
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 27.979,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 8.59000015258789,
+					"render_gpu_ms": 2.98499989509583
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 24.566,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 6.4210000038147,
+					"render_gpu_ms": 4.59499979019165
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 21.707,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 9.77299976348877,
+					"render_gpu_ms": 7.11299991607666
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 25.258,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 8.29300022125244,
+					"render_gpu_ms": 16.6730003356934
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 24.533,
+					"nodes": 114.0,
+					"objects": 2832.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 10.5340003967285,
+					"render_gpu_ms": 4.82200002670288
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 21.99,
+					"nodes": 114.0,
+					"objects": 2832.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 10.1230001449585,
+					"render_gpu_ms": 5.14599990844727
+				},
+				{
+					"draw_calls": 2250.0,
+					"ms": 28.451,
+					"nodes": 106.0,
+					"objects": 2825.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 10.2819995880127,
+					"render_gpu_ms": 3.8989999294281
+				},
+				{
+					"draw_calls": 2250.0,
+					"ms": 27.343,
+					"nodes": 106.0,
+					"objects": 2825.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 5.06300020217896,
+					"render_gpu_ms": 2.92400002479553
+				},
+				{
+					"draw_calls": 2250.0,
+					"ms": 27.78,
+					"nodes": 105.0,
+					"objects": 2825.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 10.6730003356934,
+					"render_gpu_ms": 4.4539999961853
+				},
+				{
+					"draw_calls": 2250.0,
+					"ms": 24.945,
+					"nodes": 105.0,
+					"objects": 2825.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 7.37400007247925,
+					"render_gpu_ms": 5.36999988555908
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 32.432,
+					"nodes": 106.0,
+					"objects": 2849.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 6.2189998626709,
+					"render_gpu_ms": 7.99100017547607
+				},
+				{
+					"draw_calls": 2252.0,
+					"ms": 29.591,
+					"nodes": 106.0,
+					"objects": 2847.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 8.6850004196167,
+					"render_gpu_ms": 6.43400001525879
+				},
+				{
+					"draw_calls": 2252.0,
+					"ms": 29.461,
+					"nodes": 104.0,
+					"objects": 2847.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 8.9680004119873,
+					"render_gpu_ms": 7.05399990081787
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 28.619,
+					"nodes": 103.0,
+					"objects": 2846.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 9.3459997177124,
+					"render_gpu_ms": 2.84400010108948
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 29.818,
+					"nodes": 103.0,
+					"objects": 2846.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 10.3850002288818,
+					"render_gpu_ms": 14.1219997406006
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 24.088,
+					"nodes": 103.0,
+					"objects": 2846.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 9.85200023651123,
+					"render_gpu_ms": 6.89099979400635
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 16.274,
+					"nodes": 102.0,
+					"objects": 2866.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 10.5740003585815,
+					"render_gpu_ms": 6.20300006866455
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 21.653,
+					"nodes": 102.0,
+					"objects": 2917.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 10.4540004730225,
+					"render_gpu_ms": 7.41599988937378
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 16.624,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 10.6379995346069,
+					"render_gpu_ms": 7.00699996948242
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 15.891,
+					"nodes": 102.0,
+					"objects": 2949.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 10.7419996261597,
+					"render_gpu_ms": 3.01600003242493
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 15.934,
+					"nodes": 102.0,
+					"objects": 2973.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 10.0509996414185,
+					"render_gpu_ms": 3.7279999256134
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 17.641,
+					"nodes": 102.0,
+					"objects": 2973.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 4.13399982452393,
+					"render_gpu_ms": 5.97200012207031
+				},
+				{
+					"draw_calls": 2267.0,
+					"ms": 23.828,
+					"nodes": 102.0,
+					"objects": 2974.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 5.41099977493286,
+					"render_gpu_ms": 3.16199994087219
+				},
+				{
+					"draw_calls": 2267.0,
+					"ms": 27.238,
+					"nodes": 102.0,
+					"objects": 2974.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 3.84100008010864,
+					"render_gpu_ms": 3.67000007629395
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 26.914,
+					"nodes": 102.0,
+					"objects": 2950.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 3.92000007629395,
+					"render_gpu_ms": 3.84500002861023
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 25.71,
+					"nodes": 101.0,
+					"objects": 2950.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 3.85700011253357,
+					"render_gpu_ms": 4.20499992370605
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 22.701,
+					"nodes": 101.0,
+					"objects": 2950.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 5.49700021743774,
+					"render_gpu_ms": 4.68200016021729
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 19.806,
+					"nodes": 101.0,
+					"objects": 2950.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 6.41300010681152,
+					"render_gpu_ms": 5.67199993133545
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 24.31,
+					"nodes": 101.0,
+					"objects": 2950.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 6.47700023651123,
+					"render_gpu_ms": 3.77900004386902
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 28.297,
+					"nodes": 101.0,
+					"objects": 2950.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 6.8899998664856,
+					"render_gpu_ms": 9.02299976348877
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 27.033,
+					"nodes": 101.0,
+					"objects": 2896.0,
+					"physics_ms": 0.047,
+					"process_ms": 66.226,
+					"render_cpu_ms": 10.6120004653931,
+					"render_gpu_ms": 6.82800006866455
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 23.652,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 5.92999982833862,
+					"render_gpu_ms": 4.80999994277954
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 26.508,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 7.19500017166138,
+					"render_gpu_ms": 4.76100015640259
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 26.326,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 11.0740003585815,
+					"render_gpu_ms": 7.03999996185303
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 28.92,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 10.3940000534058,
+					"render_gpu_ms": 7.13899993896484
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 23.807,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 8.02099990844727,
+					"render_gpu_ms": 5.48400020599365
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 29.668,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 7.04699993133545,
+					"render_gpu_ms": 5.22599983215332
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 27.682,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 8.4040002822876,
+					"render_gpu_ms": 5.28499984741211
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 27.043,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 10.5699996948242,
+					"render_gpu_ms": 7.05600023269653
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 31.151,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 9.75300025939941,
+					"render_gpu_ms": 4.24599981307983
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 20.494,
+					"nodes": 102.0,
+					"objects": 2909.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 10.1049995422363,
+					"render_gpu_ms": 10.8620004653931
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 26.254,
+					"nodes": 102.0,
+					"objects": 2908.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 10.581000328064,
+					"render_gpu_ms": 9.32600021362305
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 25.368,
+					"nodes": 102.0,
+					"objects": 2857.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 9.74199962615967,
+					"render_gpu_ms": 6.63899993896484
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 28.028,
+					"nodes": 115.0,
+					"objects": 2869.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 10.9670000076294,
+					"render_gpu_ms": 7.06500005722046
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 29.765,
+					"nodes": 115.0,
+					"objects": 2869.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 10.418999671936,
+					"render_gpu_ms": 14.2299995422363
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 23.447,
+					"nodes": 114.0,
+					"objects": 2869.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 5.5460000038147,
+					"render_gpu_ms": 3.36999988555908
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 21.342,
+					"nodes": 114.0,
+					"objects": 2869.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 10.7829999923706,
+					"render_gpu_ms": 5.61999988555908
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 24.86,
+					"nodes": 114.0,
+					"objects": 2869.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 8.01700019836426,
+					"render_gpu_ms": 5.65000009536743
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 29.799,
+					"nodes": 114.0,
+					"objects": 2869.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 8.0290002822876,
+					"render_gpu_ms": 7.43900012969971
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 28.293,
+					"nodes": 114.0,
+					"objects": 2870.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 10.0209999084473,
+					"render_gpu_ms": 4.80200004577637
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 29.976,
+					"nodes": 114.0,
+					"objects": 2869.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 10.5939998626709,
+					"render_gpu_ms": 4.84999990463257
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 27.907,
+					"nodes": 114.0,
+					"objects": 2868.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 7.89799976348877,
+					"render_gpu_ms": 4.09299993515015
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 26.022,
+					"nodes": 113.0,
+					"objects": 2868.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 10.3269996643066,
+					"render_gpu_ms": 7.32000017166138
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 26.748,
+					"nodes": 105.0,
+					"objects": 2861.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 10.7869997024536,
+					"render_gpu_ms": 7.07000017166138
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 28.374,
+					"nodes": 105.0,
+					"objects": 2861.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 9.76900005340576,
+					"render_gpu_ms": 7.45599985122681
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 26.93,
+					"nodes": 105.0,
+					"objects": 2862.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 10.5380001068115,
+					"render_gpu_ms": 13.96399974823
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 20.825,
+					"nodes": 105.0,
+					"objects": 2862.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 9.21500015258789,
+					"render_gpu_ms": 3.74200010299683
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 27.412,
+					"nodes": 106.0,
+					"objects": 2862.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 10.4910001754761,
+					"render_gpu_ms": 7.30499982833862
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 25.391,
+					"nodes": 104.0,
+					"objects": 2860.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 7.53900003433228,
+					"render_gpu_ms": 5.59499979019165
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 24.65,
+					"nodes": 104.0,
+					"objects": 2860.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 9.92399978637695,
+					"render_gpu_ms": 7.07299995422363
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 26.35,
+					"nodes": 103.0,
+					"objects": 2859.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 9.72700023651123,
+					"render_gpu_ms": 4.74399995803833
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 28.062,
+					"nodes": 103.0,
+					"objects": 2859.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 7.80200004577637,
+					"render_gpu_ms": 5.21500015258789
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 23.293,
+					"nodes": 103.0,
+					"objects": 2859.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 8.1870002746582,
+					"render_gpu_ms": 7.11600017547607
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 25.521,
+					"nodes": 102.0,
+					"objects": 2856.0,
+					"physics_ms": 0.054,
+					"process_ms": 32.323,
+					"render_cpu_ms": 8.55099964141846,
+					"render_gpu_ms": 4.09000015258789
+				}
+			],
+			"own_result_sha256": "6d8b8847324a415588c1b8d10253eb5ab9baea2923f2d573e19c9d8727658f69",
+			"repeat": 1,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 111,
+					"max_usec": 136,
+					"usec": 9013
+				},
+				"field_battle.refresh": {
+					"calls": 2,
+					"max_usec": 532,
+					"usec": 640
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 6246,
+					"usec": 6246
+				},
+				"field_hud.hover": {
+					"calls": 2,
+					"max_usec": 17,
+					"usec": 28
+				},
+				"field_hud.update_state": {
+					"calls": 4,
+					"max_usec": 170,
+					"usec": 402
+				},
+				"field_indicators._draw": {
+					"calls": 111,
+					"max_usec": 793,
+					"usec": 13948
+				},
+				"field_indicators._process": {
+					"calls": 111,
+					"max_usec": 279,
+					"usec": 17125
+				},
+				"field_indicators.refresh_items": {
+					"calls": 111,
+					"max_usec": 270,
+					"usec": 16271
+				},
+				"field_labels._draw": {
+					"calls": 111,
+					"max_usec": 328,
+					"usec": 13487
+				},
+				"field_labels._process": {
+					"calls": 111,
+					"max_usec": 647,
+					"usec": 39560
+				},
+				"field_labels.refresh_layout": {
+					"calls": 111,
+					"max_usec": 636,
+					"usec": 38625
+				},
+				"field_minimap._draw": {
+					"calls": 111,
+					"max_usec": 16521,
+					"usec": 1157659
+				},
+				"field_minimap._process": {
+					"calls": 111,
+					"max_usec": 10,
+					"usec": 657
+				},
+				"field_rules.ai_plan": {
+					"calls": 5,
+					"max_usec": 12128,
+					"usec": 32063
+				},
+				"field_rules.distance_map": {
+					"calls": 3,
+					"max_usec": 11718,
+					"usec": 30406
+				},
+				"field_rules.reach": {
+					"calls": 17,
+					"max_usec": 512,
+					"usec": 4942
+				}
+			},
+			"workload": "enemy-normal"
+		},
+		{
+			"ai_ms": 62.362,
+			"ai_scopes": {
+				"field_rules.ai_plan": {
+					"calls": 5,
+					"max_usec": 25939,
+					"usec": 59277
+				},
+				"field_rules.distance_map": {
+					"calls": 3,
+					"max_usec": 24780,
+					"usec": 55952
+				},
+				"field_rules.reach": {
+					"calls": 7,
+					"max_usec": 947,
+					"usec": 4017
+				}
+			},
+			"frames": [
+				{
+					"draw_calls": 2245.0,
+					"ms": 92.209,
+					"nodes": 101.0,
+					"objects": 2835.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 9.82800006866455,
+					"render_gpu_ms": 4.39900016784668
+				},
+				{
+					"draw_calls": 2256.0,
+					"ms": 21.449,
+					"nodes": 101.0,
+					"objects": 2890.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 5.24300003051758,
+					"render_gpu_ms": 4.73099994659424
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 18.933,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 6.81500005722046,
+					"render_gpu_ms": 4.07600021362305
+				},
+				{
+					"draw_calls": 2244.0,
+					"ms": 18.282,
+					"nodes": 101.0,
+					"objects": 2834.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 5.2810001373291,
+					"render_gpu_ms": 6.11700010299683
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 18.793,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 4.20800018310547,
+					"render_gpu_ms": 5.01800012588501
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 26.861,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 7.95100021362305,
+					"render_gpu_ms": 4.70699977874756
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 20.445,
+					"nodes": 101.0,
+					"objects": 2940.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 8.04699993133545,
+					"render_gpu_ms": 5.23299980163574
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 17.502,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 6.60200023651123,
+					"render_gpu_ms": 8.02999973297119
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 17.574,
+					"nodes": 101.0,
+					"objects": 2888.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 6.07299995422363,
+					"render_gpu_ms": 4.88299989700317
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 20.403,
+					"nodes": 101.0,
+					"objects": 2912.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 7.01900005340576,
+					"render_gpu_ms": 7.21700000762939
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 18.902,
+					"nodes": 101.0,
+					"objects": 2912.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 7.83799982070923,
+					"render_gpu_ms": 4.74599981307983
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 21.819,
+					"nodes": 101.0,
+					"objects": 2860.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 8.4350004196167,
+					"render_gpu_ms": 12.5290002822876
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 22.726,
+					"nodes": 101.0,
+					"objects": 2860.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 3.90499997138977,
+					"render_gpu_ms": 5.77400016784668
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 29.426,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 4.11100006103516,
+					"render_gpu_ms": 4.64099979400635
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 25.668,
+					"nodes": 102.0,
+					"objects": 2858.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 7.69500017166138,
+					"render_gpu_ms": 5.06699991226196
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 22.298,
+					"nodes": 102.0,
+					"objects": 2856.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 5.27299976348877,
+					"render_gpu_ms": 4.76200008392334
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 29.729,
+					"nodes": 115.0,
+					"objects": 2869.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 7.75,
+					"render_gpu_ms": 5.75600004196167
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 25.454,
+					"nodes": 115.0,
+					"objects": 2856.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 5.77899980545044,
+					"render_gpu_ms": 6.39699983596802
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 27.373,
+					"nodes": 115.0,
+					"objects": 2856.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 11.0620002746582,
+					"render_gpu_ms": 4.68599987030029
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 25.353,
+					"nodes": 115.0,
+					"objects": 2856.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 9.06700038909912,
+					"render_gpu_ms": 3.39800000190735
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 29.046,
+					"nodes": 115.0,
+					"objects": 2856.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 7.14499998092651,
+					"render_gpu_ms": 3.625
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 29.776,
+					"nodes": 114.0,
+					"objects": 2857.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 10.6429996490479,
+					"render_gpu_ms": 5.17700004577637
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 23.463,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 10.2030000686646,
+					"render_gpu_ms": 11.9409999847412
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 24.631,
+					"nodes": 114.0,
+					"objects": 2832.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 9.21100044250488,
+					"render_gpu_ms": 3.86400008201599
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 33.548,
+					"nodes": 115.0,
+					"objects": 2832.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 10.3999996185303,
+					"render_gpu_ms": 7.14200019836426
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 26.31,
+					"nodes": 107.0,
+					"objects": 2849.0,
+					"physics_ms": 0.054,
+					"process_ms": 233.377,
+					"render_cpu_ms": 10.298999786377,
+					"render_gpu_ms": 7.56799983978271
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 22.7,
+					"nodes": 107.0,
+					"objects": 2849.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 10.1070003509521,
+					"render_gpu_ms": 14.7729997634888
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 26.702,
+					"nodes": 107.0,
+					"objects": 2849.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 8.60999965667725,
+					"render_gpu_ms": 3.45600008964539
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 17.619,
+					"nodes": 106.0,
+					"objects": 2849.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 9.61900043487549,
+					"render_gpu_ms": 7.91200017929077
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 25.491,
+					"nodes": 106.0,
+					"objects": 2849.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 10.5869998931885,
+					"render_gpu_ms": 4.58900022506714
+				},
+				{
+					"draw_calls": 2256.0,
+					"ms": 19.616,
+					"nodes": 104.0,
+					"objects": 2871.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 10.6180000305176,
+					"render_gpu_ms": 5.60599994659424
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 29.617,
+					"nodes": 104.0,
+					"objects": 2924.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 6.45300006866455,
+					"render_gpu_ms": 4.33900022506714
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 24.498,
+					"nodes": 103.0,
+					"objects": 2966.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 9.70400047302246,
+					"render_gpu_ms": 6.3899998664856
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 29.688,
+					"nodes": 103.0,
+					"objects": 2953.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 3.81800007820129,
+					"render_gpu_ms": 4.90899991989136
+				},
+				{
+					"draw_calls": 2268.0,
+					"ms": 27.452,
+					"nodes": 103.0,
+					"objects": 2977.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 10.1960000991821,
+					"render_gpu_ms": 3.07599997520447
+				},
+				{
+					"draw_calls": 2267.0,
+					"ms": 25.23,
+					"nodes": 102.0,
+					"objects": 2974.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 6.07800006866455,
+					"render_gpu_ms": 4.47300004959106
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 23.213,
+					"nodes": 102.0,
+					"objects": 2896.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 11.0260000228882,
+					"render_gpu_ms": 4.50299978256226
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 23.454,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 7.45300006866455,
+					"render_gpu_ms": 13.8990001678467
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 26.023,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 10.3489999771118,
+					"render_gpu_ms": 5.61299991607666
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 20.371,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 10.4359998703003,
+					"render_gpu_ms": 4.13600015640259
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 22.565,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 9.7480001449585,
+					"render_gpu_ms": 3.40899991989136
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 22.238,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 7.71799993515015,
+					"render_gpu_ms": 5.50299978256226
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 23.934,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 7.26900005340576,
+					"render_gpu_ms": 7.45699977874756
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 20.438,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 8.88799953460693,
+					"render_gpu_ms": 6.82399988174438
+				},
+				{
+					"draw_calls": 2274.0,
+					"ms": 30.935,
+					"nodes": 115.0,
+					"objects": 2921.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 6.04099988937378,
+					"render_gpu_ms": 3.26200008392334
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 26.615,
+					"nodes": 115.0,
+					"objects": 2871.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 9.4680004119873,
+					"render_gpu_ms": 4.80299997329712
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 25.189,
+					"nodes": 115.0,
+					"objects": 2871.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 8.55700016021729,
+					"render_gpu_ms": 5.76399993896484
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 24.162,
+					"nodes": 115.0,
+					"objects": 2871.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 6.46000003814697,
+					"render_gpu_ms": 4.7979998588562
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 25.16,
+					"nodes": 115.0,
+					"objects": 2871.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 7.61399984359741,
+					"render_gpu_ms": 7.13800001144409
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 28.521,
+					"nodes": 114.0,
+					"objects": 2871.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 10.1440000534058,
+					"render_gpu_ms": 6.90100002288818
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 22.09,
+					"nodes": 114.0,
+					"objects": 2870.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 10.5170001983643,
+					"render_gpu_ms": 5.33400011062622
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 24.32,
+					"nodes": 114.0,
+					"objects": 2870.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 10.1759996414185,
+					"render_gpu_ms": 5.07399988174438
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 28.725,
+					"nodes": 114.0,
+					"objects": 2869.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 11.2329998016357,
+					"render_gpu_ms": 16.3889999389648
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 29.702,
+					"nodes": 115.0,
+					"objects": 2862.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 10.8009996414185,
+					"render_gpu_ms": 5.15100002288818
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 25.533,
+					"nodes": 107.0,
+					"objects": 2862.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 10.664999961853,
+					"render_gpu_ms": 5.1230001449585
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 24.062,
+					"nodes": 107.0,
+					"objects": 2862.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 7.97100019454956,
+					"render_gpu_ms": 3.44600009918213
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 23.53,
+					"nodes": 106.0,
+					"objects": 2862.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 9.22500038146973,
+					"render_gpu_ms": 4.92199993133545
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 20.199,
+					"nodes": 106.0,
+					"objects": 2862.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 10.003999710083,
+					"render_gpu_ms": 7.21199989318848
+				},
+				{
+					"draw_calls": 2258.0,
+					"ms": 19.787,
+					"nodes": 106.0,
+					"objects": 2863.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 7.21600008010864,
+					"render_gpu_ms": 6.27500009536743
+				},
+				{
+					"draw_calls": 2256.0,
+					"ms": 23.897,
+					"nodes": 104.0,
+					"objects": 2861.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 9.77200031280518,
+					"render_gpu_ms": 4.54500007629395
+				},
+				{
+					"draw_calls": 2258.0,
+					"ms": 27.709,
+					"nodes": 104.0,
+					"objects": 2863.0,
+					"physics_ms": 0.042,
+					"process_ms": 104.906,
+					"render_cpu_ms": 6.37599992752075,
+					"render_gpu_ms": 4.99700021743774
+				}
+			],
+			"own_result_sha256": "6d8b8847324a415588c1b8d10253eb5ab9baea2923f2d573e19c9d8727658f69",
+			"repeat": 1,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 61,
+					"max_usec": 157,
+					"usec": 5121
+				},
+				"field_battle.refresh": {
+					"calls": 2,
+					"max_usec": 552,
+					"usec": 712
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 17357,
+					"usec": 17357
+				},
+				"field_hud.hover": {
+					"calls": 2,
+					"max_usec": 19,
+					"usec": 37
+				},
+				"field_hud.update_state": {
+					"calls": 4,
+					"max_usec": 244,
+					"usec": 548
+				},
+				"field_indicators._draw": {
+					"calls": 61,
+					"max_usec": 216,
+					"usec": 7212
+				},
+				"field_indicators._process": {
+					"calls": 61,
+					"max_usec": 257,
+					"usec": 10650
+				},
+				"field_indicators.refresh_items": {
+					"calls": 61,
+					"max_usec": 249,
+					"usec": 10123
+				},
+				"field_labels._draw": {
+					"calls": 61,
+					"max_usec": 184,
+					"usec": 7052
+				},
+				"field_labels._process": {
+					"calls": 61,
+					"max_usec": 609,
+					"usec": 25177
+				},
+				"field_labels.refresh_layout": {
+					"calls": 61,
+					"max_usec": 596,
+					"usec": 24576
+				},
+				"field_minimap._draw": {
+					"calls": 61,
+					"max_usec": 15285,
+					"usec": 717146
+				},
+				"field_minimap._process": {
+					"calls": 61,
+					"max_usec": 12,
+					"usec": 396
+				},
+				"field_rules.ai_plan": {
+					"calls": 5,
+					"max_usec": 25939,
+					"usec": 59277
+				},
+				"field_rules.distance_map": {
+					"calls": 3,
+					"max_usec": 24780,
+					"usec": 55952
+				},
+				"field_rules.reach": {
+					"calls": 8,
+					"max_usec": 947,
+					"usec": 4367
+				}
+			},
+			"workload": "enemy-2x"
+		},
+		{
+			"ai_ms": 63.985,
+			"ai_scopes": {
+				"field_rules.ai_plan": {
+					"calls": 5,
+					"max_usec": 22454,
+					"usec": 60954
+				},
+				"field_rules.distance_map": {
+					"calls": 3,
+					"max_usec": 21553,
+					"usec": 57926
+				},
+				"field_rules.reach": {
+					"calls": 7,
+					"max_usec": 756,
+					"usec": 3760
+				}
+			},
+			"frames": [
+				{
+					"draw_calls": 2245.0,
+					"ms": 91.078,
+					"nodes": 101.0,
+					"objects": 2835.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 9.55099964141846,
+					"render_gpu_ms": 7.04400014877319
+				},
+				{
+					"draw_calls": 2256.0,
+					"ms": 25.205,
+					"nodes": 101.0,
+					"objects": 2890.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 8.63000011444092,
+					"render_gpu_ms": 4.45900011062622
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 29.094,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 9.6560001373291,
+					"render_gpu_ms": 4.68499994277954
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 27.274,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 9.84700012207031,
+					"render_gpu_ms": 6.92700004577637
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 25.256,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 9.42899990081787,
+					"render_gpu_ms": 5.33099985122681
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 29.294,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 9.96199989318848,
+					"render_gpu_ms": 2.33699989318848
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 23.078,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 10.0920000076294,
+					"render_gpu_ms": 6.80499982833862
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 24.182,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 10.0950002670288,
+					"render_gpu_ms": 6.39499998092651
+				},
+				{
+					"draw_calls": 2244.0,
+					"ms": 23.729,
+					"nodes": 101.0,
+					"objects": 2834.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 8.61400032043457,
+					"render_gpu_ms": 8.52099990844727
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 24.993,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 10.7290000915527,
+					"render_gpu_ms": 6.63600015640259
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 27.047,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 10.6169996261597,
+					"render_gpu_ms": 5.47499990463257
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 23.5,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 8.03499984741211,
+					"render_gpu_ms": 5.97800016403198
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 29.458,
+					"nodes": 101.0,
+					"objects": 2940.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 8.95100021362305,
+					"render_gpu_ms": 4.61399984359741
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 25.38,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 10.2889995574951,
+					"render_gpu_ms": 6.71400022506714
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 25.784,
+					"nodes": 101.0,
+					"objects": 2888.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 10.121000289917,
+					"render_gpu_ms": 6.93400001525879
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 26.134,
+					"nodes": 101.0,
+					"objects": 2912.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 10.1840000152588,
+					"render_gpu_ms": 5.09100008010864
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 25.027,
+					"nodes": 101.0,
+					"objects": 2860.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 10.5830001831055,
+					"render_gpu_ms": 6.92899990081787
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 18.379,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 10.3940000534058,
+					"render_gpu_ms": 6.77299976348877
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 21.232,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 7.31199979782104,
+					"render_gpu_ms": 5.15299987792969
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 27.914,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 10.5679998397827,
+					"render_gpu_ms": 6.00699996948242
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 30.073,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 10.5380001068115,
+					"render_gpu_ms": 4.84499979019165
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 28.669,
+					"nodes": 101.0,
+					"objects": 2856.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 9.79599952697754,
+					"render_gpu_ms": 5.79899978637695
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 29.06,
+					"nodes": 101.0,
+					"objects": 2856.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 4.55700016021729,
+					"render_gpu_ms": 3.08899998664856
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 27.607,
+					"nodes": 101.0,
+					"objects": 2856.0,
+					"physics_ms": 0.057,
+					"process_ms": 224.08,
+					"render_cpu_ms": 9.03600025177002,
+					"render_gpu_ms": 14.6370000839233
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 30.988,
+					"nodes": 102.0,
+					"objects": 2856.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 9.47999954223633,
+					"render_gpu_ms": 6.96600008010864
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 29.35,
+					"nodes": 102.0,
+					"objects": 2856.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.8590002059937,
+					"render_gpu_ms": 6.70100021362305
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 29.717,
+					"nodes": 102.0,
+					"objects": 2856.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.3599996566772,
+					"render_gpu_ms": 6.44399976730347
+				},
+				{
+					"draw_calls": 2250.0,
+					"ms": 28.72,
+					"nodes": 102.0,
+					"objects": 2843.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.8509998321533,
+					"render_gpu_ms": 5.62099981307983
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 32.903,
+					"nodes": 115.0,
+					"objects": 2856.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.5220003128052,
+					"render_gpu_ms": 6.77699995040894
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 26.894,
+					"nodes": 115.0,
+					"objects": 2856.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.4320001602173,
+					"render_gpu_ms": 6.82399988174438
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 28.662,
+					"nodes": 115.0,
+					"objects": 2856.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.2869997024536,
+					"render_gpu_ms": 6.77799987792969
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 24.034,
+					"nodes": 115.0,
+					"objects": 2856.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.5069999694824,
+					"render_gpu_ms": 6.86499977111816
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 24.646,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.7959995269775,
+					"render_gpu_ms": 6.70599985122681
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 29.937,
+					"nodes": 114.0,
+					"objects": 2832.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 9.85700035095215,
+					"render_gpu_ms": 7.11899995803833
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 29.114,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 9.5620002746582,
+					"render_gpu_ms": 10.7910003662109
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 20.99,
+					"nodes": 114.0,
+					"objects": 2832.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 9.76299953460693,
+					"render_gpu_ms": 4.4539999961853
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 28.968,
+					"nodes": 114.0,
+					"objects": 2832.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 9.66100025177002,
+					"render_gpu_ms": 4.34999990463257
+				},
+				{
+					"draw_calls": 2250.0,
+					"ms": 28.473,
+					"nodes": 106.0,
+					"objects": 2825.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.3559999465942,
+					"render_gpu_ms": 7.0149998664856
+				},
+				{
+					"draw_calls": 2250.0,
+					"ms": 26.184,
+					"nodes": 106.0,
+					"objects": 2825.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.835000038147,
+					"render_gpu_ms": 16.6849994659424
+				},
+				{
+					"draw_calls": 2250.0,
+					"ms": 29.806,
+					"nodes": 105.0,
+					"objects": 2825.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 9.93000030517578,
+					"render_gpu_ms": 4.88600015640259
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 32.524,
+					"nodes": 106.0,
+					"objects": 2849.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 6.4520001411438,
+					"render_gpu_ms": 4.5019998550415
+				},
+				{
+					"draw_calls": 2252.0,
+					"ms": 28.305,
+					"nodes": 104.0,
+					"objects": 2847.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 8.7189998626709,
+					"render_gpu_ms": 7.52699995040894
+				},
+				{
+					"draw_calls": 2252.0,
+					"ms": 31.026,
+					"nodes": 104.0,
+					"objects": 2847.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.2399997711182,
+					"render_gpu_ms": 5.18499994277954
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 26.268,
+					"nodes": 103.0,
+					"objects": 2846.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 9.16199970245361,
+					"render_gpu_ms": 7.22100019454956
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 28.465,
+					"nodes": 103.0,
+					"objects": 2846.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.664999961853,
+					"render_gpu_ms": 7.01700019836426
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 27.546,
+					"nodes": 103.0,
+					"objects": 2846.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.2729997634888,
+					"render_gpu_ms": 7.0149998664856
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 25.593,
+					"nodes": 102.0,
+					"objects": 2866.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 9.64599990844727,
+					"render_gpu_ms": 7.38100004196167
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 30.192,
+					"nodes": 102.0,
+					"objects": 2917.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.9980001449585,
+					"render_gpu_ms": 5.54099988937378
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 29.977,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.9930000305176,
+					"render_gpu_ms": 6.63000011444092
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 25.023,
+					"nodes": 102.0,
+					"objects": 2973.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.4610004425049,
+					"render_gpu_ms": 12.378999710083
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 25.274,
+					"nodes": 102.0,
+					"objects": 2973.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 9.01599979400635,
+					"render_gpu_ms": 4.08099985122681
+				},
+				{
+					"draw_calls": 2267.0,
+					"ms": 29.764,
+					"nodes": 102.0,
+					"objects": 2974.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.1510000228882,
+					"render_gpu_ms": 7.01300001144409
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 28.379,
+					"nodes": 102.0,
+					"objects": 2950.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.7290000915527,
+					"render_gpu_ms": 7.36100006103516
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 25.303,
+					"nodes": 101.0,
+					"objects": 2950.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 11.1110000610352,
+					"render_gpu_ms": 14.7150001525879
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 29.805,
+					"nodes": 101.0,
+					"objects": 2950.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 9.80099964141846,
+					"render_gpu_ms": 3.50399994850159
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 24.487,
+					"nodes": 101.0,
+					"objects": 2950.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.3009996414185,
+					"render_gpu_ms": 7.49499988555908
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 24.985,
+					"nodes": 101.0,
+					"objects": 2950.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.7720003128052,
+					"render_gpu_ms": 7.20699977874756
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 30.365,
+					"nodes": 101.0,
+					"objects": 2896.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 9.88000011444092,
+					"render_gpu_ms": 3.4760000705719
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 29.578,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 9.9069995880127,
+					"render_gpu_ms": 7.29199981689453
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 25.199,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.048,
+					"process_ms": 108.496,
+					"render_cpu_ms": 10.956000328064,
+					"render_gpu_ms": 6.13100004196167
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 22.778,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 9.06700038909912,
+					"render_gpu_ms": 3.06800007820129
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 24.214,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 10.6529998779297,
+					"render_gpu_ms": 6.76900005340576
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 24.033,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 10.7340002059937,
+					"render_gpu_ms": 6.87400007247925
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 24.941,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 10.3920001983643,
+					"render_gpu_ms": 7.20599985122681
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 29.056,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 7.40100002288818,
+					"render_gpu_ms": 11.1429996490479
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 20.858,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 9.25500011444092,
+					"render_gpu_ms": 4.31599998474121
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 24.119,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 8.5290002822876,
+					"render_gpu_ms": 2.48300004005432
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 24.315,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 10.2080001831055,
+					"render_gpu_ms": 4.93800020217896
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 22.636,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 10.7270002365112,
+					"render_gpu_ms": 6.97100019454956
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 19.607,
+					"nodes": 102.0,
+					"objects": 2908.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 9.39000034332275,
+					"render_gpu_ms": 5.86999988555908
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 20.089,
+					"nodes": 102.0,
+					"objects": 2857.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 7.13800001144409,
+					"render_gpu_ms": 4.80700016021729
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 24.599,
+					"nodes": 102.0,
+					"objects": 2857.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 10.6370000839233,
+					"render_gpu_ms": 3.8989999294281
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 27.871,
+					"nodes": 115.0,
+					"objects": 2870.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 7.86299991607666,
+					"render_gpu_ms": 4.19299983978271
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 25.776,
+					"nodes": 114.0,
+					"objects": 2870.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 8.58100032806396,
+					"render_gpu_ms": 4.22200012207031
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 20.646,
+					"nodes": 114.0,
+					"objects": 2870.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 5.63800001144409,
+					"render_gpu_ms": 3.55299997329712
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 21.339,
+					"nodes": 114.0,
+					"objects": 2870.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 5.73000001907349,
+					"render_gpu_ms": 6.45300006866455
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 36.202,
+					"nodes": 114.0,
+					"objects": 2870.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 8.19400024414063,
+					"render_gpu_ms": 4.48999977111816
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 25.619,
+					"nodes": 114.0,
+					"objects": 2870.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 6.94399976730347,
+					"render_gpu_ms": 3.83999991416931
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 21.092,
+					"nodes": 114.0,
+					"objects": 2869.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 8.99699974060059,
+					"render_gpu_ms": 5.99300003051758
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 23.076,
+					"nodes": 114.0,
+					"objects": 2868.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 4.75899982452393,
+					"render_gpu_ms": 12.1599998474121
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 28.642,
+					"nodes": 114.0,
+					"objects": 2868.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 4.83400011062622,
+					"render_gpu_ms": 3.84200000762939
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 28.584,
+					"nodes": 106.0,
+					"objects": 2861.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 12.7880001068115,
+					"render_gpu_ms": 4.91400003433228
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 22.482,
+					"nodes": 106.0,
+					"objects": 2861.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 7.84100008010864,
+					"render_gpu_ms": 5.6710000038147
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 23.402,
+					"nodes": 106.0,
+					"objects": 2862.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 4.33500003814697,
+					"render_gpu_ms": 5.125
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 24.59,
+					"nodes": 106.0,
+					"objects": 2862.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 9.76599979400635,
+					"render_gpu_ms": 6.13500022888184
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 23.793,
+					"nodes": 106.0,
+					"objects": 2862.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 10.7390003204346,
+					"render_gpu_ms": 14.7760000228882
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 24.633,
+					"nodes": 106.0,
+					"objects": 2862.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 10.2650003433228,
+					"render_gpu_ms": 3.27300000190735
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 28.921,
+					"nodes": 104.0,
+					"objects": 2860.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 7.73899984359741,
+					"render_gpu_ms": 3.03500008583069
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 26.384,
+					"nodes": 103.0,
+					"objects": 2859.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 10.16100025177,
+					"render_gpu_ms": 6.18800020217896
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 29.286,
+					"nodes": 103.0,
+					"objects": 2859.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 8.06099987030029,
+					"render_gpu_ms": 4.89900016784668
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 30.25,
+					"nodes": 103.0,
+					"objects": 2859.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 7.97399997711182,
+					"render_gpu_ms": 10.0550003051758
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 26.31,
+					"nodes": 102.0,
+					"objects": 2856.0,
+					"physics_ms": 0.051,
+					"process_ms": 32.776,
+					"render_cpu_ms": 9.94999980926514,
+					"render_gpu_ms": 6.88899993896484
+				}
+			],
+			"own_result_sha256": "6d8b8847324a415588c1b8d10253eb5ab9baea2923f2d573e19c9d8727658f69",
+			"repeat": 2,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 92,
+					"max_usec": 286,
+					"usec": 9079
+				},
+				"field_battle.refresh": {
+					"calls": 2,
+					"max_usec": 645,
+					"usec": 803
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 11775,
+					"usec": 11775
+				},
+				"field_hud.hover": {
+					"calls": 2,
+					"max_usec": 19,
+					"usec": 37
+				},
+				"field_hud.update_state": {
+					"calls": 4,
+					"max_usec": 177,
+					"usec": 482
+				},
+				"field_indicators._draw": {
+					"calls": 92,
+					"max_usec": 226,
+					"usec": 10637
+				},
+				"field_indicators._process": {
+					"calls": 92,
+					"max_usec": 278,
+					"usec": 17418
+				},
+				"field_indicators.refresh_items": {
+					"calls": 92,
+					"max_usec": 240,
+					"usec": 16521
+				},
+				"field_labels._draw": {
+					"calls": 92,
+					"max_usec": 205,
+					"usec": 11047
+				},
+				"field_labels._process": {
+					"calls": 92,
+					"max_usec": 608,
+					"usec": 40671
+				},
+				"field_labels.refresh_layout": {
+					"calls": 92,
+					"max_usec": 596,
+					"usec": 39736
+				},
+				"field_minimap._draw": {
+					"calls": 92,
+					"max_usec": 20294,
+					"usec": 1167971
+				},
+				"field_minimap._process": {
+					"calls": 92,
+					"max_usec": 12,
+					"usec": 632
+				},
+				"field_rules.ai_plan": {
+					"calls": 5,
+					"max_usec": 22454,
+					"usec": 60954
+				},
+				"field_rules.distance_map": {
+					"calls": 3,
+					"max_usec": 21553,
+					"usec": 57926
+				},
+				"field_rules.reach": {
+					"calls": 8,
+					"max_usec": 756,
+					"usec": 4166
+				}
+			},
+			"workload": "enemy-normal"
+		},
+		{
+			"ai_ms": 60.332,
+			"ai_scopes": {
+				"field_rules.ai_plan": {
+					"calls": 5,
+					"max_usec": 21338,
+					"usec": 57013
+				},
+				"field_rules.distance_map": {
+					"calls": 3,
+					"max_usec": 20638,
+					"usec": 54141
+				},
+				"field_rules.reach": {
+					"calls": 7,
+					"max_usec": 617,
+					"usec": 3571
+				}
+			},
+			"frames": [
+				{
+					"draw_calls": 2245.0,
+					"ms": 73.818,
+					"nodes": 101.0,
+					"objects": 2835.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 7.6710000038147,
+					"render_gpu_ms": 5.22900009155273
+				},
+				{
+					"draw_calls": 2256.0,
+					"ms": 18.877,
+					"nodes": 101.0,
+					"objects": 2890.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 9.9379997253418,
+					"render_gpu_ms": 6.55499982833862
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 16.859,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 10.3360004425049,
+					"render_gpu_ms": 11.0909996032715
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 18.823,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 6.93400001525879,
+					"render_gpu_ms": 4.95300006866455
+				},
+				{
+					"draw_calls": 2244.0,
+					"ms": 24.351,
+					"nodes": 101.0,
+					"objects": 2834.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 5.19700002670288,
+					"render_gpu_ms": 7.31799983978271
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 26.322,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 3.68899989128113,
+					"render_gpu_ms": 2.83200001716614
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 19.606,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 5.30499982833862,
+					"render_gpu_ms": 2.97499990463257
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 21.157,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 3.85999989509583,
+					"render_gpu_ms": 3.60800004005432
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 18.342,
+					"nodes": 101.0,
+					"objects": 2888.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 5.34200000762939,
+					"render_gpu_ms": 3.48900008201599
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 18.666,
+					"nodes": 101.0,
+					"objects": 2912.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 7.2649998664856,
+					"render_gpu_ms": 6.14699983596802
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 19.751,
+					"nodes": 101.0,
+					"objects": 2912.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 7.95499992370605,
+					"render_gpu_ms": 5.80900001525879
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 27.232,
+					"nodes": 101.0,
+					"objects": 2860.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 5.95599985122681,
+					"render_gpu_ms": 6.7519998550415
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 24.944,
+					"nodes": 101.0,
+					"objects": 2860.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 5.5939998626709,
+					"render_gpu_ms": 5.03700017929077
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 26.541,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 5.52099990844727,
+					"render_gpu_ms": 4.79500007629395
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 21.772,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 4.09800004959106,
+					"render_gpu_ms": 5.1560001373291
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 26.794,
+					"nodes": 102.0,
+					"objects": 2858.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 4.88399982452393,
+					"render_gpu_ms": 6.94299983978271
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 23.039,
+					"nodes": 102.0,
+					"objects": 2856.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 10.9759998321533,
+					"render_gpu_ms": 4.41200017929077
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 25.059,
+					"nodes": 115.0,
+					"objects": 2870.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 11.0699996948242,
+					"render_gpu_ms": 13.3889999389648
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 21.241,
+					"nodes": 115.0,
+					"objects": 2857.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 10.0109996795654,
+					"render_gpu_ms": 3.57800006866455
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 27.448,
+					"nodes": 115.0,
+					"objects": 2857.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 9.28899955749512,
+					"render_gpu_ms": 7.13299989700317
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 23.977,
+					"nodes": 115.0,
+					"objects": 2857.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 6.18599987030029,
+					"render_gpu_ms": 6.5310001373291
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 17.036,
+					"nodes": 115.0,
+					"objects": 2857.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 5.54500007629395,
+					"render_gpu_ms": 3.78900003433228
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 18.865,
+					"nodes": 115.0,
+					"objects": 2857.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 6.2960000038147,
+					"render_gpu_ms": 3.49499988555908
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 23.528,
+					"nodes": 114.0,
+					"objects": 2857.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 6.36700010299683,
+					"render_gpu_ms": 5.12900018692017
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 20.505,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 8.07600021362305,
+					"render_gpu_ms": 3.65899991989136
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 23.899,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 7.26900005340576,
+					"render_gpu_ms": 5.84999990463257
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 21.952,
+					"nodes": 114.0,
+					"objects": 2832.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 4.26100015640259,
+					"render_gpu_ms": 5.15199995040894
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 25.908,
+					"nodes": 115.0,
+					"objects": 2856.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 6.3899998664856,
+					"render_gpu_ms": 6.49399995803833
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 21.854,
+					"nodes": 106.0,
+					"objects": 2849.0,
+					"physics_ms": 0.053,
+					"process_ms": 263.818,
+					"render_cpu_ms": 8.08100032806396,
+					"render_gpu_ms": 5.94700002670288
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 23.017,
+					"nodes": 106.0,
+					"objects": 2849.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 6.92399978637695,
+					"render_gpu_ms": 9.29300022125244
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 22.152,
+					"nodes": 106.0,
+					"objects": 2849.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 7.17999982833862,
+					"render_gpu_ms": 6.28299999237061
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 23.686,
+					"nodes": 106.0,
+					"objects": 2849.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 8.11299991607666,
+					"render_gpu_ms": 3.83699989318848
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 24.051,
+					"nodes": 106.0,
+					"objects": 2849.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 8.67099952697754,
+					"render_gpu_ms": 12.8599996566772
+				},
+				{
+					"draw_calls": 2258.0,
+					"ms": 27.664,
+					"nodes": 106.0,
+					"objects": 2873.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 8.19600009918213,
+					"render_gpu_ms": 5.27600002288818
+				},
+				{
+					"draw_calls": 2256.0,
+					"ms": 27.878,
+					"nodes": 104.0,
+					"objects": 2871.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 9.17700004577637,
+					"render_gpu_ms": 4.08400011062622
+				},
+				{
+					"draw_calls": 2258.0,
+					"ms": 19.022,
+					"nodes": 103.0,
+					"objects": 2923.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 7.73099994659424,
+					"render_gpu_ms": 5.08699989318848
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 27.698,
+					"nodes": 103.0,
+					"objects": 2966.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 9.69400024414063,
+					"render_gpu_ms": 6.26599979400635
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 30.535,
+					"nodes": 103.0,
+					"objects": 2953.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 8.14299964904785,
+					"render_gpu_ms": 6.61399984359741
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 25.071,
+					"nodes": 103.0,
+					"objects": 2973.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 9.22200012207031,
+					"render_gpu_ms": 2.98900008201599
+				},
+				{
+					"draw_calls": 2267.0,
+					"ms": 24.478,
+					"nodes": 102.0,
+					"objects": 2974.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 9.01099967956543,
+					"render_gpu_ms": 5.08599996566772
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 23.867,
+					"nodes": 102.0,
+					"objects": 2951.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 5.38800001144409,
+					"render_gpu_ms": 6.33400011062622
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 20.419,
+					"nodes": 102.0,
+					"objects": 2896.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 10.6389999389648,
+					"render_gpu_ms": 7.11100006103516
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 22.257,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 11.1219997406006,
+					"render_gpu_ms": 6.7810001373291
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 24.028,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 8.03699970245361,
+					"render_gpu_ms": 8.51900005340576
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 26.914,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 10.5830001831055,
+					"render_gpu_ms": 4.9850001335144
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 27.227,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 10.0050001144409,
+					"render_gpu_ms": 5.25600004196167
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 22.858,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 7.02500009536743,
+					"render_gpu_ms": 4.5479998588562
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 26.373,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 6.26599979400635,
+					"render_gpu_ms": 5.17500019073486
+				},
+				{
+					"draw_calls": 2273.0,
+					"ms": 30.571,
+					"nodes": 115.0,
+					"objects": 2920.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 6.40000009536743,
+					"render_gpu_ms": 4.43599987030029
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 30.223,
+					"nodes": 115.0,
+					"objects": 2870.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 9.79500007629395,
+					"render_gpu_ms": 3.57599997520447
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 26.889,
+					"nodes": 115.0,
+					"objects": 2870.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 9.59899997711182,
+					"render_gpu_ms": 2.78099989891052
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 23.836,
+					"nodes": 114.0,
+					"objects": 2870.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 7.63399982452393,
+					"render_gpu_ms": 7.24599981307983
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 25.784,
+					"nodes": 114.0,
+					"objects": 2870.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 9.24300003051758,
+					"render_gpu_ms": 5.8270001411438
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 30.174,
+					"nodes": 114.0,
+					"objects": 2871.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 10.5260000228882,
+					"render_gpu_ms": 7.75600004196167
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 25.204,
+					"nodes": 114.0,
+					"objects": 2870.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 11.1450004577637,
+					"render_gpu_ms": 8.45100021362305
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 24.765,
+					"nodes": 114.0,
+					"objects": 2869.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 10.5209999084473,
+					"render_gpu_ms": 2.83500003814697
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 23.34,
+					"nodes": 114.0,
+					"objects": 2869.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 9.40900039672852,
+					"render_gpu_ms": 3.74399995803833
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 30.21,
+					"nodes": 107.0,
+					"objects": 2862.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 10.5340003967285,
+					"render_gpu_ms": 7.42399978637695
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 26.698,
+					"nodes": 107.0,
+					"objects": 2862.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 10.3920001983643,
+					"render_gpu_ms": 12.3660001754761
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 25.255,
+					"nodes": 106.0,
+					"objects": 2862.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 9.63300037384033,
+					"render_gpu_ms": 3.59699988365173
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 29.162,
+					"nodes": 106.0,
+					"objects": 2862.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 9.27099990844727,
+					"render_gpu_ms": 3.66300010681152
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 28.549,
+					"nodes": 106.0,
+					"objects": 2862.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 9.14400005340576,
+					"render_gpu_ms": 7.28900003433228
+				},
+				{
+					"draw_calls": 2256.0,
+					"ms": 17.793,
+					"nodes": 104.0,
+					"objects": 2861.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 10.2019996643066,
+					"render_gpu_ms": 3.38899993896484
+				},
+				{
+					"draw_calls": 2256.0,
+					"ms": 21.162,
+					"nodes": 104.0,
+					"objects": 2861.0,
+					"physics_ms": 0.053,
+					"process_ms": 87.566,
+					"render_cpu_ms": 10.9020004272461,
+					"render_gpu_ms": 5.21999979019165
+				}
+			],
+			"own_result_sha256": "6d8b8847324a415588c1b8d10253eb5ab9baea2923f2d573e19c9d8727658f69",
+			"repeat": 2,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 64,
+					"max_usec": 132,
+					"usec": 5235
+				},
+				"field_battle.refresh": {
+					"calls": 2,
+					"max_usec": 547,
+					"usec": 705
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 6224,
+					"usec": 6224
+				},
+				"field_hud.hover": {
+					"calls": 2,
+					"max_usec": 18,
+					"usec": 35
+				},
+				"field_hud.update_state": {
+					"calls": 4,
+					"max_usec": 162,
+					"usec": 460
+				},
+				"field_indicators._draw": {
+					"calls": 64,
+					"max_usec": 189,
+					"usec": 7120
+				},
+				"field_indicators._process": {
+					"calls": 64,
+					"max_usec": 276,
+					"usec": 11033
+				},
+				"field_indicators.refresh_items": {
+					"calls": 64,
+					"max_usec": 265,
+					"usec": 10497
+				},
+				"field_labels._draw": {
+					"calls": 64,
+					"max_usec": 239,
+					"usec": 7325
+				},
+				"field_labels._process": {
+					"calls": 64,
+					"max_usec": 591,
+					"usec": 25757
+				},
+				"field_labels.refresh_layout": {
+					"calls": 64,
+					"max_usec": 580,
+					"usec": 25164
+				},
+				"field_minimap._draw": {
+					"calls": 64,
+					"max_usec": 15909,
+					"usec": 765240
+				},
+				"field_minimap._process": {
+					"calls": 64,
+					"max_usec": 15,
+					"usec": 426
+				},
+				"field_rules.ai_plan": {
+					"calls": 5,
+					"max_usec": 21338,
+					"usec": 57013
+				},
+				"field_rules.distance_map": {
+					"calls": 3,
+					"max_usec": 20638,
+					"usec": 54141
+				},
+				"field_rules.reach": {
+					"calls": 8,
+					"max_usec": 617,
+					"usec": 3921
+				}
+			},
+			"workload": "enemy-2x"
+		},
+		{
+			"ai_ms": 69.265,
+			"ai_scopes": {
+				"field_rules.ai_plan": {
+					"calls": 5,
+					"max_usec": 27652,
+					"usec": 66266
+				},
+				"field_rules.distance_map": {
+					"calls": 3,
+					"max_usec": 26850,
+					"usec": 63433
+				},
+				"field_rules.reach": {
+					"calls": 7,
+					"max_usec": 587,
+					"usec": 3540
+				}
+			},
+			"frames": [
+				{
+					"draw_calls": 2245.0,
+					"ms": 99.156,
+					"nodes": 101.0,
+					"objects": 2835.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 10.460000038147,
+					"render_gpu_ms": 17.3579998016357
+				},
+				{
+					"draw_calls": 2256.0,
+					"ms": 27.697,
+					"nodes": 101.0,
+					"objects": 2890.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 7.54099988937378,
+					"render_gpu_ms": 5.30000019073486
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 21.89,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 9.92599964141846,
+					"render_gpu_ms": 6.53599977493286
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 29.498,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 10.5790004730225,
+					"render_gpu_ms": 6.93900012969971
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 26.934,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 10.2819995880127,
+					"render_gpu_ms": 4.79699993133545
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 23.342,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 10.7709999084473,
+					"render_gpu_ms": 4.80700016021729
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 23.05,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 8.80500030517578,
+					"render_gpu_ms": 2.82999992370605
+				},
+				{
+					"draw_calls": 2243.0,
+					"ms": 23.737,
+					"nodes": 101.0,
+					"objects": 2833.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 7.44500017166138,
+					"render_gpu_ms": 5.47300004959106
+				},
+				{
+					"draw_calls": 2244.0,
+					"ms": 27.577,
+					"nodes": 101.0,
+					"objects": 2834.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 10.6949996948242,
+					"render_gpu_ms": 6.86600017547607
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 28.193,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 7.95699977874756,
+					"render_gpu_ms": 3.77699995040894
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 21.99,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 9.35099983215332,
+					"render_gpu_ms": 2.92400002479553
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 26.086,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 9.63099956512451,
+					"render_gpu_ms": 9.8100004196167
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 25.906,
+					"nodes": 101.0,
+					"objects": 2940.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 8.29399967193604,
+					"render_gpu_ms": 4.70699977874756
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 30.433,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 9.68599987030029,
+					"render_gpu_ms": 6.66300010681152
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 24.781,
+					"nodes": 101.0,
+					"objects": 2888.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 9.21500015258789,
+					"render_gpu_ms": 2.91700005531311
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 27.421,
+					"nodes": 101.0,
+					"objects": 2912.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 8.94699954986572,
+					"render_gpu_ms": 12.5880002975464
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 27.015,
+					"nodes": 101.0,
+					"objects": 2860.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 10.4429998397827,
+					"render_gpu_ms": 4.70599985122681
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 29.448,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 10.1579999923706,
+					"render_gpu_ms": 6.95100021362305
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 23.868,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 10.8739995956421,
+					"render_gpu_ms": 5.0310001373291
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 22.455,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 10.9479999542236,
+					"render_gpu_ms": 5.37799978256226
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 22.347,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 8.26399993896484,
+					"render_gpu_ms": 6.45599985122681
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 20.72,
+					"nodes": 101.0,
+					"objects": 2856.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 10.6700000762939,
+					"render_gpu_ms": 6.82399988174438
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 19.862,
+					"nodes": 101.0,
+					"objects": 2856.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 10.2110004425049,
+					"render_gpu_ms": 6.14599990844727
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 27.091,
+					"nodes": 101.0,
+					"objects": 2856.0,
+					"physics_ms": 0.045,
+					"process_ms": 218.229,
+					"render_cpu_ms": 8.04699993133545,
+					"render_gpu_ms": 4.71999979019165
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 23.307,
+					"nodes": 102.0,
+					"objects": 2856.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 9.34799957275391,
+					"render_gpu_ms": 5.42500019073486
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 21.061,
+					"nodes": 102.0,
+					"objects": 2856.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 8.80200004577637,
+					"render_gpu_ms": 2.5
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 25.872,
+					"nodes": 102.0,
+					"objects": 2856.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 6.45499992370605,
+					"render_gpu_ms": 7.55999994277954
+				},
+				{
+					"draw_calls": 2250.0,
+					"ms": 24.08,
+					"nodes": 102.0,
+					"objects": 2843.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 7.4060001373291,
+					"render_gpu_ms": 6.04400014877319
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 28.333,
+					"nodes": 115.0,
+					"objects": 2856.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 10.0620002746582,
+					"render_gpu_ms": 4.20300006866455
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 26.404,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 6.68699979782104,
+					"render_gpu_ms": 4.75699996948242
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 27.507,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 7.98400020599365,
+					"render_gpu_ms": 5.18100023269653
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 26.922,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 9.64999961853027,
+					"render_gpu_ms": 4.95800018310547
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 22.378,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 10.673999786377,
+					"render_gpu_ms": 4.73600006103516
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 20.499,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 10.0670003890991,
+					"render_gpu_ms": 6.63899993896484
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 19.465,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 9.87199974060059,
+					"render_gpu_ms": 6.61899995803833
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 17.871,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 10.1190004348755,
+					"render_gpu_ms": 7.00899982452393
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 19.366,
+					"nodes": 114.0,
+					"objects": 2832.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 9.66800022125244,
+					"render_gpu_ms": 3.29500007629395
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 20.353,
+					"nodes": 114.0,
+					"objects": 2832.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 7.04099988937378,
+					"render_gpu_ms": 5.6710000038147
+				},
+				{
+					"draw_calls": 2250.0,
+					"ms": 25.562,
+					"nodes": 105.0,
+					"objects": 2825.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 6.3899998664856,
+					"render_gpu_ms": 2.81900000572205
+				},
+				{
+					"draw_calls": 2250.0,
+					"ms": 19.035,
+					"nodes": 105.0,
+					"objects": 2825.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 6.17500019073486,
+					"render_gpu_ms": 4.36899995803833
+				},
+				{
+					"draw_calls": 2250.0,
+					"ms": 19.959,
+					"nodes": 105.0,
+					"objects": 2825.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 5.71999979019165,
+					"render_gpu_ms": 3.89599990844727
+				},
+				{
+					"draw_calls": 2250.0,
+					"ms": 20.457,
+					"nodes": 105.0,
+					"objects": 2825.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 5.14799976348877,
+					"render_gpu_ms": 9.97500038146973
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 23.683,
+					"nodes": 105.0,
+					"objects": 2849.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 4.60900020599365,
+					"render_gpu_ms": 3.66499996185303
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 23.722,
+					"nodes": 106.0,
+					"objects": 2849.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 6.54699993133545,
+					"render_gpu_ms": 3.30200004577637
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 23.135,
+					"nodes": 106.0,
+					"objects": 2849.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 5.00099992752075,
+					"render_gpu_ms": 2.69199991226196
+				},
+				{
+					"draw_calls": 2252.0,
+					"ms": 22.205,
+					"nodes": 104.0,
+					"objects": 2847.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 6.48299980163574,
+					"render_gpu_ms": 5.81799983978271
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 24.234,
+					"nodes": 103.0,
+					"objects": 2846.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 4.93300008773804,
+					"render_gpu_ms": 4.38600015640259
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 25.317,
+					"nodes": 103.0,
+					"objects": 2846.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 6.40100002288818,
+					"render_gpu_ms": 4.13600015640259
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 27.228,
+					"nodes": 103.0,
+					"objects": 2846.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 3.91899991035461,
+					"render_gpu_ms": 3.92300009727478
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 31.171,
+					"nodes": 103.0,
+					"objects": 2846.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 6.34600019454956,
+					"render_gpu_ms": 4.86700010299683
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 28.635,
+					"nodes": 102.0,
+					"objects": 2866.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 5.67399978637695,
+					"render_gpu_ms": 7.56799983978271
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 28.971,
+					"nodes": 102.0,
+					"objects": 2917.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 7.10400009155273,
+					"render_gpu_ms": 6.96999979019165
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 22.874,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 8.70800018310547,
+					"render_gpu_ms": 10.9090003967285
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 25.36,
+					"nodes": 102.0,
+					"objects": 2973.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 10.8190002441406,
+					"render_gpu_ms": 7.1100001335144
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 22.377,
+					"nodes": 102.0,
+					"objects": 2973.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 11.253999710083,
+					"render_gpu_ms": 6.89099979400635
+				},
+				{
+					"draw_calls": 2267.0,
+					"ms": 24.692,
+					"nodes": 102.0,
+					"objects": 2974.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 9.28600025177002,
+					"render_gpu_ms": 6.96500015258789
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 27.376,
+					"nodes": 102.0,
+					"objects": 2950.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 9.57400035858154,
+					"render_gpu_ms": 12.7930002212524
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 21.993,
+					"nodes": 102.0,
+					"objects": 2950.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 7.93300008773804,
+					"render_gpu_ms": 3.63199996948242
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 19.017,
+					"nodes": 102.0,
+					"objects": 2950.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 8.57499980926514,
+					"render_gpu_ms": 3.77099990844727
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 22.04,
+					"nodes": 101.0,
+					"objects": 2950.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 7.99300003051758,
+					"render_gpu_ms": 4.75299978256226
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 23.57,
+					"nodes": 101.0,
+					"objects": 2950.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 11.0179996490479,
+					"render_gpu_ms": 7.06199979782104
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 23.036,
+					"nodes": 101.0,
+					"objects": 2950.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 8.3459997177124,
+					"render_gpu_ms": 4.65799999237061
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 23.447,
+					"nodes": 101.0,
+					"objects": 2896.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 8.6560001373291,
+					"render_gpu_ms": 4.56899976730347
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 20.287,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 4.36899995803833,
+					"render_gpu_ms": 3.20300006866455
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 16.703,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 5.76000022888184,
+					"render_gpu_ms": 3.76699995994568
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 19.657,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 6.12400007247925,
+					"render_gpu_ms": 3.44199991226196
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 18.14,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.049,
+					"process_ms": 113.01,
+					"render_cpu_ms": 5.71600008010864,
+					"render_gpu_ms": 3.81599998474121
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 20.288,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 5.75500011444092,
+					"render_gpu_ms": 7.74300003051758
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 23.928,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 6.69399976730347,
+					"render_gpu_ms": 5.51800012588501
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 25.31,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 4.14900016784668,
+					"render_gpu_ms": 3.56800007820129
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 23.464,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 6.88600015640259,
+					"render_gpu_ms": 3.86100006103516
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 18.723,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 5.33300018310547,
+					"render_gpu_ms": 3.25
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 21.547,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 7.96999979019165,
+					"render_gpu_ms": 2.90599989891052
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 26.721,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 10.460000038147,
+					"render_gpu_ms": 6.81400012969971
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 25.787,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 8.78499984741211,
+					"render_gpu_ms": 7.14499998092651
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 29.51,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 5.18699979782104,
+					"render_gpu_ms": 5.66499996185303
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 28.166,
+					"nodes": 102.0,
+					"objects": 2908.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 4.2039999961853,
+					"render_gpu_ms": 4.21099996566772
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 25.803,
+					"nodes": 102.0,
+					"objects": 2857.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 7.67700004577637,
+					"render_gpu_ms": 6.09899997711182
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 31.379,
+					"nodes": 115.0,
+					"objects": 2870.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 8.91300010681152,
+					"render_gpu_ms": 6.31599998474121
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 22.919,
+					"nodes": 115.0,
+					"objects": 2870.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 10.3129997253418,
+					"render_gpu_ms": 7.1230001449585
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 23.105,
+					"nodes": 115.0,
+					"objects": 2870.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 10.4610004425049,
+					"render_gpu_ms": 7.14900016784668
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 21.507,
+					"nodes": 114.0,
+					"objects": 2870.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 9.24899959564209,
+					"render_gpu_ms": 2.79999995231628
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 24.554,
+					"nodes": 114.0,
+					"objects": 2870.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 10.3599996566772,
+					"render_gpu_ms": 13.9010000228882
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 19.612,
+					"nodes": 114.0,
+					"objects": 2870.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 10.0120000839233,
+					"render_gpu_ms": 4.92700004577637
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 19.95,
+					"nodes": 114.0,
+					"objects": 2870.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 6.2189998626709,
+					"render_gpu_ms": 4.94700002670288
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 21.474,
+					"nodes": 114.0,
+					"objects": 2869.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 9.09500026702881,
+					"render_gpu_ms": 4.30499982833862
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 24.225,
+					"nodes": 114.0,
+					"objects": 2868.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 7.64300012588501,
+					"render_gpu_ms": 3.61100006103516
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 26.659,
+					"nodes": 114.0,
+					"objects": 2868.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 6.60300016403198,
+					"render_gpu_ms": 5.18699979782104
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 29.365,
+					"nodes": 106.0,
+					"objects": 2861.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 5.04899978637695,
+					"render_gpu_ms": 4.15999984741211
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 29.859,
+					"nodes": 106.0,
+					"objects": 2861.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 6.31099987030029,
+					"render_gpu_ms": 4.83900022506714
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 26.561,
+					"nodes": 105.0,
+					"objects": 2862.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 8.16499996185303,
+					"render_gpu_ms": 2.95700001716614
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 25.381,
+					"nodes": 105.0,
+					"objects": 2862.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 10.5369997024536,
+					"render_gpu_ms": 5.63100004196167
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 27.768,
+					"nodes": 106.0,
+					"objects": 2862.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 10.9499998092651,
+					"render_gpu_ms": 7.31300020217896
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 23.921,
+					"nodes": 106.0,
+					"objects": 2862.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 10.1590003967285,
+					"render_gpu_ms": 12.0950002670288
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 23.61,
+					"nodes": 104.0,
+					"objects": 2860.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 9.7189998626709,
+					"render_gpu_ms": 5.67799997329712
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 28.56,
+					"nodes": 103.0,
+					"objects": 2859.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 8.62100028991699,
+					"render_gpu_ms": 5.51700019836426
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 25.995,
+					"nodes": 103.0,
+					"objects": 2859.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 9.13300037384033,
+					"render_gpu_ms": 5.35699987411499
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 29.311,
+					"nodes": 103.0,
+					"objects": 2859.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 10.4449996948242,
+					"render_gpu_ms": 14.293999671936
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 22.413,
+					"nodes": 103.0,
+					"objects": 2860.0,
+					"physics_ms": 0.042,
+					"process_ms": 31.045,
+					"render_cpu_ms": 8.98999977111816,
+					"render_gpu_ms": 3.46300005912781
+				}
+			],
+			"own_result_sha256": "6d8b8847324a415588c1b8d10253eb5ab9baea2923f2d573e19c9d8727658f69",
+			"repeat": 3,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 99,
+					"max_usec": 154,
+					"usec": 8790
+				},
+				"field_battle.refresh": {
+					"calls": 2,
+					"max_usec": 576,
+					"usec": 731
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 13323,
+					"usec": 13323
+				},
+				"field_hud.hover": {
+					"calls": 2,
+					"max_usec": 19,
+					"usec": 38
+				},
+				"field_hud.update_state": {
+					"calls": 4,
+					"max_usec": 160,
+					"usec": 457
+				},
+				"field_indicators._draw": {
+					"calls": 99,
+					"max_usec": 208,
+					"usec": 10972
+				},
+				"field_indicators._process": {
+					"calls": 99,
+					"max_usec": 248,
+					"usec": 16540
+				},
+				"field_indicators.refresh_items": {
+					"calls": 99,
+					"max_usec": 237,
+					"usec": 15711
+				},
+				"field_labels._draw": {
+					"calls": 99,
+					"max_usec": 205,
+					"usec": 11143
+				},
+				"field_labels._process": {
+					"calls": 99,
+					"max_usec": 612,
+					"usec": 40246
+				},
+				"field_labels.refresh_layout": {
+					"calls": 99,
+					"max_usec": 600,
+					"usec": 39318
+				},
+				"field_minimap._draw": {
+					"calls": 99,
+					"max_usec": 15571,
+					"usec": 1214941
+				},
+				"field_minimap._process": {
+					"calls": 99,
+					"max_usec": 10,
+					"usec": 625
+				},
+				"field_rules.ai_plan": {
+					"calls": 5,
+					"max_usec": 27652,
+					"usec": 66266
+				},
+				"field_rules.distance_map": {
+					"calls": 3,
+					"max_usec": 26850,
+					"usec": 63433
+				},
+				"field_rules.reach": {
+					"calls": 8,
+					"max_usec": 587,
+					"usec": 3913
+				}
+			},
+			"workload": "enemy-normal"
+		},
+		{
+			"ai_ms": 59.188,
+			"ai_scopes": {
+				"field_rules.ai_plan": {
+					"calls": 5,
+					"max_usec": 21094,
+					"usec": 56183
+				},
+				"field_rules.distance_map": {
+					"calls": 3,
+					"max_usec": 20386,
+					"usec": 53128
+				},
+				"field_rules.reach": {
+					"calls": 7,
+					"max_usec": 853,
+					"usec": 3747
+				}
+			},
+			"frames": [
+				{
+					"draw_calls": 2245.0,
+					"ms": 87.432,
+					"nodes": 101.0,
+					"objects": 2835.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 10.1979999542236,
+					"render_gpu_ms": 3.40199995040894
+				},
+				{
+					"draw_calls": 2252.0,
+					"ms": 24.351,
+					"nodes": 101.0,
+					"objects": 2884.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 9.22599983215332,
+					"render_gpu_ms": 3.26699995994568
+				},
+				{
+					"draw_calls": 2244.0,
+					"ms": 24.93,
+					"nodes": 101.0,
+					"objects": 2834.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 10.5270004272461,
+					"render_gpu_ms": 7.02899980545044
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 20.977,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 9.42500019073486,
+					"render_gpu_ms": 15.4099998474121
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 23.846,
+					"nodes": 101.0,
+					"objects": 2916.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 10.3680000305176,
+					"render_gpu_ms": 7.07999992370605
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 23.98,
+					"nodes": 101.0,
+					"objects": 2940.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 8.80700016021729,
+					"render_gpu_ms": 3.06399989128113
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 19.548,
+					"nodes": 101.0,
+					"objects": 2888.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 7.91099977493286,
+					"render_gpu_ms": 2.44799995422363
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 20.239,
+					"nodes": 101.0,
+					"objects": 2912.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 10.7749996185303,
+					"render_gpu_ms": 5.0
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 22.838,
+					"nodes": 101.0,
+					"objects": 2912.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 5.33199977874756,
+					"render_gpu_ms": 6.59700012207031
+				},
+				{
+					"draw_calls": 2255.0,
+					"ms": 21.165,
+					"nodes": 101.0,
+					"objects": 2860.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 7.79300022125244,
+					"render_gpu_ms": 5.00299978256226
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 19.86,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 8.21500015258789,
+					"render_gpu_ms": 3.69799995422363
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 23.307,
+					"nodes": 101.0,
+					"objects": 2858.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 4.52899980545044,
+					"render_gpu_ms": 3.63700008392334
+				},
+				{
+					"draw_calls": 2253.0,
+					"ms": 29.348,
+					"nodes": 102.0,
+					"objects": 2858.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 4.72499990463257,
+					"render_gpu_ms": 14.0019998550415
+				},
+				{
+					"draw_calls": 2251.0,
+					"ms": 22.245,
+					"nodes": 102.0,
+					"objects": 2856.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 8.64999961853027,
+					"render_gpu_ms": 5.87200021743774
+				},
+				{
+					"draw_calls": 2263.0,
+					"ms": 26.866,
+					"nodes": 115.0,
+					"objects": 2870.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 6.21299982070923,
+					"render_gpu_ms": 9.74199962615967
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 19.29,
+					"nodes": 115.0,
+					"objects": 2857.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 4.68699979782104,
+					"render_gpu_ms": 4.99399995803833
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 22.632,
+					"nodes": 115.0,
+					"objects": 2857.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 8.01099967956543,
+					"render_gpu_ms": 2.92199993133545
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 22.141,
+					"nodes": 115.0,
+					"objects": 2857.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 8.81999969482422,
+					"render_gpu_ms": 6.30499982833862
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 23.985,
+					"nodes": 114.0,
+					"objects": 2857.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 8.44299983978271,
+					"render_gpu_ms": 3.52999997138977
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 19.495,
+					"nodes": 114.0,
+					"objects": 2857.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 8.08500003814697,
+					"render_gpu_ms": 3.63299989700317
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 20.046,
+					"nodes": 114.0,
+					"objects": 2857.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 5.33699989318848,
+					"render_gpu_ms": 6.88000011444092
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 19.507,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 7.07200002670288,
+					"render_gpu_ms": 6.74200010299683
+				},
+				{
+					"draw_calls": 2261.0,
+					"ms": 25.287,
+					"nodes": 114.0,
+					"objects": 2856.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 8.4350004196167,
+					"render_gpu_ms": 6.94700002670288
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 31.009,
+					"nodes": 114.0,
+					"objects": 2832.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 9.06099987030029,
+					"render_gpu_ms": 4.61800003051758
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 25.527,
+					"nodes": 115.0,
+					"objects": 2832.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 6.6269998550415,
+					"render_gpu_ms": 5.08099985122681
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 23.101,
+					"nodes": 107.0,
+					"objects": 2849.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 7.66200017929077,
+					"render_gpu_ms": 8.34000015258789
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 23.349,
+					"nodes": 106.0,
+					"objects": 2849.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 7.39400005340576,
+					"render_gpu_ms": 6.49499988555908
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 21.012,
+					"nodes": 106.0,
+					"objects": 2849.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 8.12600040435791,
+					"render_gpu_ms": 7.42700004577637
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 18.868,
+					"nodes": 106.0,
+					"objects": 2849.0,
+					"physics_ms": 0.056,
+					"process_ms": 217.051,
+					"render_cpu_ms": 11.0659999847412,
+					"render_gpu_ms": 6.27199983596802
+				},
+				{
+					"draw_calls": 2254.0,
+					"ms": 18.024,
+					"nodes": 106.0,
+					"objects": 2849.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 7.09999990463257,
+					"render_gpu_ms": 14.6660003662109
+				},
+				{
+					"draw_calls": 2258.0,
+					"ms": 27.104,
+					"nodes": 106.0,
+					"objects": 2873.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 6.47399997711182,
+					"render_gpu_ms": 4.98899984359741
+				},
+				{
+					"draw_calls": 2256.0,
+					"ms": 22.115,
+					"nodes": 104.0,
+					"objects": 2871.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 7.31799983978271,
+					"render_gpu_ms": 3.48300004005432
+				},
+				{
+					"draw_calls": 2259.0,
+					"ms": 25.154,
+					"nodes": 104.0,
+					"objects": 2924.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 7.91499996185303,
+					"render_gpu_ms": 5.13199996948242
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 20.506,
+					"nodes": 103.0,
+					"objects": 2966.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 4.23799991607666,
+					"render_gpu_ms": 3.53299999237061
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 18.83,
+					"nodes": 103.0,
+					"objects": 2953.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 5.36199998855591,
+					"render_gpu_ms": 3.30699992179871
+				},
+				{
+					"draw_calls": 2268.0,
+					"ms": 19.204,
+					"nodes": 103.0,
+					"objects": 2977.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 10.5080003738403,
+					"render_gpu_ms": 4.24399995803833
+				},
+				{
+					"draw_calls": 2267.0,
+					"ms": 20.454,
+					"nodes": 102.0,
+					"objects": 2974.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 4.73999977111816,
+					"render_gpu_ms": 4.98999977111816
+				},
+				{
+					"draw_calls": 2267.0,
+					"ms": 19.87,
+					"nodes": 102.0,
+					"objects": 2974.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 10.8889999389648,
+					"render_gpu_ms": 3.65300011634827
+				},
+				{
+					"draw_calls": 2262.0,
+					"ms": 19.873,
+					"nodes": 102.0,
+					"objects": 2896.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 5.29300022125244,
+					"render_gpu_ms": 5.00699996948242
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 19.138,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 5.91599988937378,
+					"render_gpu_ms": 5.04199981689453
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 17.098,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 5.21000003814697,
+					"render_gpu_ms": 10.8050003051758
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 17.988,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 6.06899976730347,
+					"render_gpu_ms": 5.38700008392334
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 20.757,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 6.13199996948242,
+					"render_gpu_ms": 4.69299983978271
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 24.343,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 6.11199998855591,
+					"render_gpu_ms": 4.69500017166138
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 23.833,
+					"nodes": 101.0,
+					"objects": 2910.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 7.05299997329712,
+					"render_gpu_ms": 10.8159999847412
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 23.156,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 4.72800016403198,
+					"render_gpu_ms": 4.98699998855591
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 25.415,
+					"nodes": 102.0,
+					"objects": 2910.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 5.09000015258789,
+					"render_gpu_ms": 4.88500022888184
+				},
+				{
+					"draw_calls": 2274.0,
+					"ms": 29.276,
+					"nodes": 115.0,
+					"objects": 2921.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 7.80499982833862,
+					"render_gpu_ms": 3.77699995040894
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 25.45,
+					"nodes": 115.0,
+					"objects": 2871.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 10.4849996566772,
+					"render_gpu_ms": 5.72200012207031
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 30.013,
+					"nodes": 115.0,
+					"objects": 2871.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 8.7519998550415,
+					"render_gpu_ms": 4.88700008392334
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 28.064,
+					"nodes": 115.0,
+					"objects": 2871.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 7.88899993896484,
+					"render_gpu_ms": 4.26200008392334
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 29.579,
+					"nodes": 115.0,
+					"objects": 2871.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 6.72200012207031,
+					"render_gpu_ms": 5.49200010299683
+				},
+				{
+					"draw_calls": 2266.0,
+					"ms": 26.318,
+					"nodes": 114.0,
+					"objects": 2871.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 10.543999671936,
+					"render_gpu_ms": 4.02600002288818
+				},
+				{
+					"draw_calls": 2265.0,
+					"ms": 26.375,
+					"nodes": 114.0,
+					"objects": 2870.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 9.52499961853027,
+					"render_gpu_ms": 6.13600015640259
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 21.06,
+					"nodes": 114.0,
+					"objects": 2869.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 11.2279996871948,
+					"render_gpu_ms": 6.13000011444092
+				},
+				{
+					"draw_calls": 2264.0,
+					"ms": 26.851,
+					"nodes": 115.0,
+					"objects": 2869.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 10.6040000915527,
+					"render_gpu_ms": 15.0649995803833
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 23.783,
+					"nodes": 106.0,
+					"objects": 2862.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 10.2080001831055,
+					"render_gpu_ms": 4.81899976730347
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 20.182,
+					"nodes": 106.0,
+					"objects": 2862.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 10.8409996032715,
+					"render_gpu_ms": 6.15999984741211
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 27.749,
+					"nodes": 106.0,
+					"objects": 2862.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 10.3739995956421,
+					"render_gpu_ms": 5.25099992752075
+				},
+				{
+					"draw_calls": 2257.0,
+					"ms": 27.251,
+					"nodes": 106.0,
+					"objects": 2862.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 7.16300010681152,
+					"render_gpu_ms": 11.1140003204346
+				},
+				{
+					"draw_calls": 2258.0,
+					"ms": 24.231,
+					"nodes": 106.0,
+					"objects": 2863.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 11.0989999771118,
+					"render_gpu_ms": 6.85400009155273
+				},
+				{
+					"draw_calls": 2256.0,
+					"ms": 25.441,
+					"nodes": 104.0,
+					"objects": 2861.0,
+					"physics_ms": 0.048,
+					"process_ms": 103.692,
+					"render_cpu_ms": 5.92500019073486,
+					"render_gpu_ms": 5.41900014877319
+				}
+			],
+			"own_result_sha256": "6d8b8847324a415588c1b8d10253eb5ab9baea2923f2d573e19c9d8727658f69",
+			"repeat": 3,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 62,
+					"max_usec": 143,
+					"usec": 4875
+				},
+				"field_battle.refresh": {
+					"calls": 2,
+					"max_usec": 706,
+					"usec": 864
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 13514,
+					"usec": 13514
+				},
+				"field_hud.hover": {
+					"calls": 2,
+					"max_usec": 23,
+					"usec": 42
+				},
+				"field_hud.update_state": {
+					"calls": 4,
+					"max_usec": 182,
+					"usec": 548
+				},
+				"field_indicators._draw": {
+					"calls": 62,
+					"max_usec": 263,
+					"usec": 7275
+				},
+				"field_indicators._process": {
+					"calls": 62,
+					"max_usec": 242,
+					"usec": 10079
+				},
+				"field_indicators.refresh_items": {
+					"calls": 62,
+					"max_usec": 232,
+					"usec": 9567
+				},
+				"field_labels._draw": {
+					"calls": 62,
+					"max_usec": 182,
+					"usec": 6973
+				},
+				"field_labels._process": {
+					"calls": 62,
+					"max_usec": 681,
+					"usec": 24430
+				},
+				"field_labels.refresh_layout": {
+					"calls": 62,
+					"max_usec": 669,
+					"usec": 23880
+				},
+				"field_minimap._draw": {
+					"calls": 62,
+					"max_usec": 16002,
+					"usec": 716836
+				},
+				"field_minimap._process": {
+					"calls": 62,
+					"max_usec": 10,
+					"usec": 391
+				},
+				"field_rules.ai_plan": {
+					"calls": 5,
+					"max_usec": 21094,
+					"usec": 56183
+				},
+				"field_rules.distance_map": {
+					"calls": 3,
+					"max_usec": 20386,
+					"usec": 53128
+				},
+				"field_rules.reach": {
+					"calls": 8,
+					"max_usec": 853,
+					"usec": 4151
+				}
+			},
+			"workload": "enemy-2x"
+		}
+	],
+	"resolution": "(1280, 720)",
+	"tag": "actual-spike05",
+	"vsync": "disabled; max_fps60",
+	"workload_sha256": "f4e1f2fb6e2e212dae1e7c58c443c515372f7ab33d3c401764b99c95f6d6a91e"
+}

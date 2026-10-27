@@ -1,0 +1,15 @@
+{
+	"policies": [
+		"road",
+		"flank"
+	],
+	"runs": [
+		"runs/road-24018.json",
+		"runs/flank-24018.json"
+	],
+	"seeds": [
+		24018
+	],
+	"variant": "spike05",
+	"variation": "AI coordinate tie-break + same-class policy action/target tie ordering; seed24018 retains historical ordering. Fixed damage; no jitter."
+}

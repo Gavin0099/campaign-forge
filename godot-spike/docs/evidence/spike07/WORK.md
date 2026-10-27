@@ -188,3 +188,34 @@ minimum means PASS; strict16.67all/worst33 FAIL (enemyworst42.23/39.09).
 AI~28ms remainsperaction; no per-frame AI, no unsupported GPU claim. Native field
 normal/crit/reduced<=1.017s,Skirmish9<=1.7s,Reduced<=normal,readbacks0,exit0.
 PERFORMANCE.md records causes, limits and unchanged pixels/profiles.
+
+## W6 — final results, native captures and supplemental render timers
+240default +240frozen06 +2spike05spots exit0. All240frozen traces/commands/status/
+deaths/class/turn metrics matchW1;80road/flank traces also matchW3 after W5 rules
+optimization. ActualPACING tables include every policy×outcome, Wilson, turns,
+class deaths/output/finishes/intercepts, wave/idle/minutes and distinct traces.
+Final road60%,flank67.5%,turtle10%,retreat5%,dash10%,partial27.5%;wave-free wins0
+for all6policies. Scout limitations unchanged (median7,flankfinishes89vs126).
+
+Real native UI captures qa/1080/runtime/lose/bypass-before/after all exit0; parsed
+Tab/V/F1/B/Esc/R checks pass. Full initial-deployment flank1006 winsT14,road1011
+losesThoma; no staged terminal. Partial1014 before T6wins/no wave,afterT6loses/
+wavefirstT5. 720/1080/O/legend/terminal frames visually inspected. Native movies
+scout143frames/15.8MB,enemy478frames/51.4MB,60FPS AVI headers and every1280x720
+frame checked; nine-frame PNG strips extracted without ffmpeg. Reached snapshots,
+not whole-battle movies. Scout legal safe-retreat and wave-contact checks pass.
+
+Uncaptured continuous1006 measurement:43attacks<=0.935s,13enemy phases mean1.416s,
+exit0. Movie timing is capture-only,not runtimeFPS. Supplemental native viewport
+CPU/GPU timers added after W4/W5 (original results retained);3repeats/cell on all
+exports plus AI-inclusive actual phases05/06/07. Actual07normal16.85/worst64.28,
+2x17.03/worst66.80ms; minimummeansPASS,strict60FPS/worst33FAIL. GPUmean4.2–4.5ms,
+viewportCPU7.7–8.0ms; actionCPUremains. First supplemental05scroll conservatively
+repeated clean after offline1.7s movie extraction might overlapsetup; both retained.
+Full method/limits inPERFORMANCE; all native command exits0, harness-only2object
+cleanup warnings retained. No other Godot during native tests.
+
+Autoplay default output moved from historical06 folder to07after (named variants
+to separate07variant-* folders) to prevent accidental old-evidence overwrite.
+All480recorded invocations had explicit output; no simulation logic changed.
+W6 capture-source-hashes freezes runtime/operators; docs/offline Python excluded.

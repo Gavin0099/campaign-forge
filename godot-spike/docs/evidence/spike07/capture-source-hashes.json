@@ -1,0 +1,297 @@
+{
+  "method": "W6 final runtime/data/config/scenes/shaders and GDScript operators working bytes. Offline Python/docs/tests excluded.",
+  "files": [
+    {
+      "path": "godot-spike/config/impact_profile.tres",
+      "sha256": "448467b41a90619b688f7d4704594f0b74108bb9462dcc49a5cc3b51a41bd8ee"
+    },
+    {
+      "path": "godot-spike/config/impact_profile_a9_baseline.tres",
+      "sha256": "a080f88ba5953395cbc26c8e6d7e8067376b215560460ea301c5022b50dd053a"
+    },
+    {
+      "path": "godot-spike/config/impact_profile_spike03.tres",
+      "sha256": "110040412bff567b8cc978fe898dabfd891e358bf2a4221d0fad2362a6b55bf5"
+    },
+    {
+      "path": "godot-spike/config/impact_profile_spike04.tres",
+      "sha256": "f54958b8783c32cb89b35ae20b4e7f93d9ca9fed7ccf1dd1a01a22dd3e0959a6"
+    },
+    {
+      "path": "godot-spike/config/impact_profile_spike05.tres",
+      "sha256": "011c73d879442bd899ded25cc9ae40aefa05e8839c4f897fede73254d5467c5f"
+    },
+    {
+      "path": "godot-spike/data/levels/field_24x18.gd",
+      "sha256": "a4c12c0d6158d53d2b08478858eb91ff3ce4b0d4f332cb25f6a2b7b07f4a6074"
+    },
+    {
+      "path": "godot-spike/data/levels/field_24x18_spike05.gd",
+      "sha256": "bf4865a49c7bb3cfa18d30f4f20b7935660327256b09eae4668b6a7158e2edbd"
+    },
+    {
+      "path": "godot-spike/data/levels/field_24x18_spike06.gd",
+      "sha256": "b206af4e2ce5da16756f112aa30aac6bb55203e2437ccbf3a9ef7bcdb004d6d5"
+    },
+    {
+      "path": "godot-spike/project.godot",
+      "sha256": "b52226cd0e48d69c6763aae6d3defb2dbf2d9bbb0690074b90750051d071bdcd"
+    },
+    {
+      "path": "godot-spike/scenes/levels/Field24x18.tscn",
+      "sha256": "f73dd0d59d6f15ac6690a3a3340f5763e6effbca7282db538944331ceb2b8cab"
+    },
+    {
+      "path": "godot-spike/scenes/mockups/BigMapMockup.tscn",
+      "sha256": "7b6c4479e49f03c634e4f0ff7d7e6be3ea25524377877a63dc2cf883a4f3090c"
+    },
+    {
+      "path": "godot-spike/scenes/Skirmish.tscn",
+      "sha256": "9ab889b6fa9f42a4305cb51b178efafc00b155be9237c7aa93d905ec8ed5ab14"
+    },
+    {
+      "path": "godot-spike/scripts/anim/anim_manifest.gd",
+      "sha256": "098478742de8091238e706ea4545403eb482280ae1036ef1e543948f7fd8f724"
+    },
+    {
+      "path": "godot-spike/scripts/anim/frame_player.gd",
+      "sha256": "1934e9250c03d9e34b06502d1cc4bd076489f8431d97a8ac7f7dfa3524a7016e"
+    },
+    {
+      "path": "godot-spike/scripts/anim/world_particles.gd",
+      "sha256": "05f1a8cd50f76509272ed67fe1afcfd1a5631cf235e3f834b293c060af140be3"
+    },
+    {
+      "path": "godot-spike/scripts/battle_hud.gd",
+      "sha256": "6155c463a59d8140802771347c92979cab1f1d3fd380652b2c5a362879bd351d"
+    },
+    {
+      "path": "godot-spike/scripts/capture_a2.gd",
+      "sha256": "c35d41c7dd77f497e85316727a9e5403c8a8b5eda5778d2662665864d256ae77"
+    },
+    {
+      "path": "godot-spike/scripts/capture_run.gd",
+      "sha256": "7b58da46d7a70dd6c5e3a21c98f2de76881358273f6c27f7388a74e18f94905c"
+    },
+    {
+      "path": "godot-spike/scripts/capture_spike02.gd",
+      "sha256": "2025c807894ace8dc28a5114d05930baec0d536fc1a16c8efe57922f8c413350"
+    },
+    {
+      "path": "godot-spike/scripts/impact/impact_profile.gd",
+      "sha256": "aa1dfbce8c498037d679e2c00a7bcea45a523ce449c359ac7273a21b7750ed44"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_battle.gd",
+      "sha256": "db29d65ab5fb5babcbccee66aeed151a289d37c4479158bb029ea35fb97e4cdb"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_camera.gd",
+      "sha256": "5a9a016925cb7bdb5e7444369ff5b78c981ccc1885814d380d023746f8b083fa"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_ground.gd",
+      "sha256": "7bc47f0bc8e33bec0a5452fed2f6e65777a2340ac7288abc82b10ba46499cde7"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_hud.gd",
+      "sha256": "380c65bd27208fc0958cc7f3c54cd64567536d6a814a6a552f0868236804e44c"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_impact.gd",
+      "sha256": "897b93a141e06dbd11f7d8a75e00e32c8e3350b2d11f611806ceac00dd75ca42"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_indicators.gd",
+      "sha256": "05417a12a58a9a170a7aa39071c9267567bdd511af8ba5f3f400b00d85f368ee"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_labels.gd",
+      "sha256": "a22ad0fdb3efd11b7322662fca6d2ba817d6852764920903fe22a861555d1b4b"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_minimap.gd",
+      "sha256": "3973a6fde86865cb2425aa16046c4dd17feab05fdbf7db65e81ef88d497a5828"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_minimap_terrain.gd",
+      "sha256": "8b7143396882c84f402bca1de66e86cc038128a386f455d6a234f569709bcf8f"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_telemetry.gd",
+      "sha256": "6f4fb386c29d530f34a894cfc9e51a164bbb07f1faaf2d230fabc84b42286bc0"
+    },
+    {
+      "path": "godot-spike/scripts/mockups/big_map_mockup.gd",
+      "sha256": "08e962d36a7ca46566ec9f1182bab2d4e2299cd44cbe06fb4f6548d7c827c241"
+    },
+    {
+      "path": "godot-spike/scripts/readability_a2.gd",
+      "sha256": "10d0fffc64f2fc4e2ba20f292b1425a437e447cf6df9cbbc25d0bb7895ae2cd9"
+    },
+    {
+      "path": "godot-spike/scripts/readability_run.gd",
+      "sha256": "3e55b41159ebc0846971f72eb07de4749f25499737afea2fbbac7244bcb84bc6"
+    },
+    {
+      "path": "godot-spike/scripts/rules/field_rules.gd",
+      "sha256": "8ac82034be10c9e4cefc1c5db65c19b8419ab5729ef93180cb89800cf5f86534"
+    },
+    {
+      "path": "godot-spike/scripts/rules/field_sight.gd",
+      "sha256": "1847879f96d8420704ec1b2f7f9be0fa60bba7d22227ab0ee3da63c5b86a8b0d"
+    },
+    {
+      "path": "godot-spike/scripts/rules/grid_rules.gd",
+      "sha256": "c3d539e3cbfafc8db11262c9fb23ee9345e127cdde0966b363287ae0ca9b59b6"
+    },
+    {
+      "path": "godot-spike/scripts/skirmish.gd",
+      "sha256": "ae5878abc279eabe7af25283c605b96b275ae28217b94684a0082cb3fe0f90fd"
+    },
+    {
+      "path": "godot-spike/shaders/hit_flash.gdshader",
+      "sha256": "32a96b3843653b4f4528b6941415beb9c4d467b1390cb0da80d64c69e5cd1382"
+    },
+    {
+      "path": "godot-spike/tools/autoplay_field.gd",
+      "sha256": "8c96fc855663525a7ae1322855b6e672d22ced197f27bf710d08390cbfd1a06f"
+    },
+    {
+      "path": "godot-spike/tools/capture_a3.gd",
+      "sha256": "86698e29478aeb99030a54631364476644cbab002e5fb89d3e925fbfe7c22d2a"
+    },
+    {
+      "path": "godot-spike/tools/capture_a4.gd",
+      "sha256": "318694d79af03d8a0b1bed7353f38bb8ac7e05df96a31e6dae7036f584326079"
+    },
+    {
+      "path": "godot-spike/tools/capture_a5.gd",
+      "sha256": "76b45ef04b832650e04af7aa60818101b3edefd6987c61b79cf42203b1197316"
+    },
+    {
+      "path": "godot-spike/tools/capture_a6.gd",
+      "sha256": "3f8b7eb09e6ec62ec8b7e7c3f13b538b3519d7540cdf7daff0bbcaf98d5f9a58"
+    },
+    {
+      "path": "godot-spike/tools/capture_a7.gd",
+      "sha256": "90c689fb56c911a23bc0bbb92dccc7d585c0af4fb58214662e8dd72df81bd25e"
+    },
+    {
+      "path": "godot-spike/tools/capture_a8.gd",
+      "sha256": "70eb69e018d2827846f101bcef284b0148d9d53f72c9ce3cc5091dd85b2cd382"
+    },
+    {
+      "path": "godot-spike/tools/capture_a9.gd",
+      "sha256": "8405709a4d63387e7fb0c2c806dc9b05dec543b3994feaa3556c518d3fcfb6ae"
+    },
+    {
+      "path": "godot-spike/tools/capture_big_map.gd",
+      "sha256": "2277ee32c36a33f24b69d3700b1a1177c048541300b2bb4c1efdbfeb8a014299"
+    },
+    {
+      "path": "godot-spike/tools/capture_field.gd",
+      "sha256": "69db4afedc0c1ebe845e3e5e9b85226c6835b65b45a00068514689d99b403ae4"
+    },
+    {
+      "path": "godot-spike/tools/capture_field05.gd",
+      "sha256": "2d2d7a19a1eaabb58fdfbe97f44f6b25cff11e83bc9c8a4324ca23d119107ff6"
+    },
+    {
+      "path": "godot-spike/tools/capture_field06.gd",
+      "sha256": "49eb3031aadfc0c9ab6c6abd68dde7897ae8cc35f141a6ceb7d46c32d8706c3f"
+    },
+    {
+      "path": "godot-spike/tools/capture_field07.gd",
+      "sha256": "834851a1aaf2652c40853eb9ff00d4c28682971eda85927725c52d2f0a3e9680"
+    },
+    {
+      "path": "godot-spike/tools/capture_field_stage.gd",
+      "sha256": "07dd5d808f07377fe8deeadba81cd3ea0501a9a9ca84fcbf33bdc00042ce54bd"
+    },
+    {
+      "path": "godot-spike/tools/capture_hit_field05.gd",
+      "sha256": "44b171c8eab3bd1687c6b6b644fccace6726b3fbef18e4a87abf58377ef2cbc1"
+    },
+    {
+      "path": "godot-spike/tools/capture_hit_field06.gd",
+      "sha256": "168b4c3906b2edac1fc460cbd6c88c2e5516e3184b0b3784b388e9a71b68f919"
+    },
+    {
+      "path": "godot-spike/tools/capture_spike03.gd",
+      "sha256": "006d5682f03eb8f21236632aa1701dc2186f099b6bde71f4517073cae7207f16"
+    },
+    {
+      "path": "godot-spike/tools/capture_spike04.gd",
+      "sha256": "ce101ecc192581099905efd81b32b2d98fd826e3b3a33118d20aeecc65c51ef4"
+    },
+    {
+      "path": "godot-spike/tools/capture_spike05.gd",
+      "sha256": "801005c06c9fd5beb8f35c475c5b0aa1b12fe6a53514382032bf6499210bc858"
+    },
+    {
+      "path": "godot-spike/tools/capture_spike06.gd",
+      "sha256": "b68b735eb7b97a4003a1bc9f75f4e97deee4bb9fa55cde89e457902c6b4f0af8"
+    },
+    {
+      "path": "godot-spike/tools/capture_spike07.gd",
+      "sha256": "79880583eae7b86dd91fe05ae43c089fe103cf62c978b743e43a193c0097e49f"
+    },
+    {
+      "path": "godot-spike/tools/field_harness.gd",
+      "sha256": "1ff88573d6ad22a1f44bb88df12eb3f2de27f3fd7b3cd83943774aa264db2e16"
+    },
+    {
+      "path": "godot-spike/tools/field_policy.gd",
+      "sha256": "f2a74c8a23978731cddb2c4f66b1b44b7b6d0b2b9dc1144a98a1b473e51f830e"
+    },
+    {
+      "path": "godot-spike/tools/field_policy_spike05.gd",
+      "sha256": "18c3d1f65be26aa04a2d0311e37199a4563c7e24f7a113a72ce6f1663ef1508e"
+    },
+    {
+      "path": "godot-spike/tools/field_policy_spike06.gd",
+      "sha256": "1714bef7a57241fb2d7f0f0256820fb6dfba15387ec8ba588c9f26f20803c6d4"
+    },
+    {
+      "path": "godot-spike/tools/make_perf_states07.gd",
+      "sha256": "f27d07bf372b7ab3d24cdf67fa3a1acf9325686503fc0b6a25f72fe18ea1b2e5"
+    },
+    {
+      "path": "godot-spike/tools/perf_field07.gd",
+      "sha256": "6d54e1a3f1b255dab5a2db419b8afaf82a1a296822edfd1f5f439141f69af761"
+    },
+    {
+      "path": "godot-spike/tools/perf_meter07.gd",
+      "sha256": "0e6655886523b1f62b6c375081e208cef82bb089efb2abd1e12d5f66fda193f6"
+    },
+    {
+      "path": "godot-spike/tools/pixels_field07.gd",
+      "sha256": "e547c3786f8ab9fd60e7c220dde5252954d8c6ea40ecb49664e9e24b649be342"
+    },
+    {
+      "path": "godot-spike/tools/preview_perf07.gd",
+      "sha256": "7ff8494423f3e16bfb72ae8eaa46ceeb9e24f93bbf0bea173ada75f7dcfc1cd1"
+    },
+    {
+      "path": "godot-spike/tools/probe_balance06.gd",
+      "sha256": "2c366811837cf9c7dd5525bdf72d6deb6b60cb6f0e9e6c6459ca2251dcf25329"
+    },
+    {
+      "path": "godot-spike/tools/probe_balance07.gd",
+      "sha256": "3190e8d0d0e1b15c08ab1c3e1276ec9ac530094ad993ddd994a050e9bb864ea7"
+    },
+    {
+      "path": "godot-spike/tools/readability_a3.gd",
+      "sha256": "f6dfb2b09b21bbaa2f8bc9fe78442c8287bf7394511ec702c46c9cff5c9dafe9"
+    },
+    {
+      "path": "godot-spike/tools/sync_shared_anim.gd",
+      "sha256": "66dd8a4ca8cf168a567e16d46109820fdef9eeb5428cf466c51ae2798a381a45"
+    },
+    {
+      "path": "godot-spike/tools/timing_field07.gd",
+      "sha256": "3fd9365e0c182c05582727c7feb39c99394aedffa442789405e6e76beede73f7"
+    }
+  ]
+}

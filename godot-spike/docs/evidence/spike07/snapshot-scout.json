@@ -1,0 +1,466 @@
+{
+	"commands": [
+		{
+			"to": "(11, 11)",
+			"type": "move",
+			"unit": "scout-2"
+		},
+		{
+			"target": "knight-1",
+			"type": "attack",
+			"unit": "scout-2"
+		},
+		{
+			"to": "(12, 10)",
+			"type": "move",
+			"unit": "scout-2"
+		}
+	],
+	"context": "Reachable continuous flank seed1006 snapshot, before scout flank move; not a continuous movie",
+	"state": {
+		"groups": {
+			"front": "alert",
+			"party": "alert",
+			"reinforcements": "alert",
+			"south": "alert"
+		},
+		"level": {
+			"ai": {
+				"bodyguard_radius": 3,
+				"intercept_radius": 6,
+				"march_turn": 6,
+				"neighbour_radius": 5,
+				"support_radius": 3
+			},
+			"alert_radius": 6,
+			"deployment": [
+				[
+					"thoma",
+					"ally",
+					"melee",
+					"(3, 10)",
+					"party"
+				],
+				[
+					"guard",
+					"ally",
+					"melee",
+					"(4, 9)",
+					"party"
+				],
+				[
+					"bow-1",
+					"ally",
+					"ranged",
+					"(3, 8)",
+					"party"
+				],
+				[
+					"bow-2",
+					"ally",
+					"ranged",
+					"(3, 11)",
+					"party"
+				],
+				[
+					"scout-1",
+					"ally",
+					"mobile",
+					"(2, 8)",
+					"party"
+				],
+				[
+					"scout-2",
+					"ally",
+					"mobile",
+					"(2, 11)",
+					"party"
+				],
+				[
+					"knight-1",
+					"enemy",
+					"knight",
+					"(14, 8)",
+					"front"
+				],
+				[
+					"knight-2",
+					"enemy",
+					"knight",
+					"(14, 10)",
+					"front"
+				],
+				[
+					"knight-3",
+					"enemy",
+					"knight",
+					"(11, 15)",
+					"south"
+				],
+				[
+					"knight-5",
+					"enemy",
+					"knight",
+					"(18, 3)",
+					"flank"
+				],
+				[
+					"knight-8",
+					"enemy",
+					"knight",
+					"(19, 8)",
+					"reserve"
+				],
+				[
+					"leader",
+					"enemy",
+					"leader",
+					"(22, 9)",
+					"leader"
+				]
+			],
+			"entries": [
+				"(23, 8)",
+				"(23, 9)",
+				"(23, 10)"
+			],
+			"entry_label": "東側渡口入口",
+			"hold_point": "(22, 9)",
+			"label": "PLACEHOLDER / SPIKE TEST VALUES",
+			"leader_contest_radius": 2,
+			"line_of_sight": "centre supercover; cliff/deep water/units block intermediate; forest line/target cover -1 min1; exact corners check both sides",
+			"objective": "defeat_leader",
+			"reinforcement_kinds": [
+				"knight",
+				"knight",
+				"knight"
+			],
+			"reinforcement_turn": 3,
+			"rows": [
+				".....=...^^^^..~........",
+				".....=.........~........",
+				".....=.........~........",
+				".....=.........~........",
+				".....=ffffffff.~........",
+				".....=ffffffff.w........",
+				".....=ffffffff.w........",
+				".....=.........~........",
+				".....=.........~........",
+				"====================dd==",
+				"====================dd==",
+				".....=.........~........",
+				".....=.........~........",
+				".....=..fffff..~........",
+				".....=..fffff..~........",
+				".....=..fffff..~........",
+				".....=..fffff..~........",
+				".....=..f^^^^..~........"
+			],
+			"scout_kit": true,
+			"seed": 1006,
+			"size": "(24, 18)",
+			"stats": {
+				"knight": {
+					"damage": 2,
+					"forest_extra": 0,
+					"hp": 6,
+					"knockback": true,
+					"max_range": 1,
+					"min_range": 1,
+					"move": 4
+				},
+				"leader": {
+					"damage": 2,
+					"forest_extra": 0,
+					"hp": 10,
+					"knockback": true,
+					"max_range": 1,
+					"min_range": 1,
+					"move": 4
+				},
+				"melee": {
+					"damage": 2,
+					"forest_extra": 0,
+					"hp": 8,
+					"knockback": true,
+					"max_range": 1,
+					"min_range": 1,
+					"move": 4
+				},
+				"mobile": {
+					"damage": 2,
+					"forest_extra": 1,
+					"hp": 6,
+					"knockback": true,
+					"max_range": 1,
+					"min_range": 1,
+					"move": 6
+				},
+				"ranged": {
+					"damage": 2,
+					"forest_extra": 0,
+					"hp": 6,
+					"knockback": false,
+					"max_range": 3,
+					"min_range": 2,
+					"move": 3
+				}
+			},
+			"terrain": {
+				".": {
+					"cost": 1,
+					"name": "荒地"
+				},
+				"=": {
+					"cost": 1,
+					"name": "道路"
+				},
+				"^": {
+					"cost": 0,
+					"name": "峭壁"
+				},
+				"d": {
+					"cost": 1,
+					"name": "守備高地（僅地標）"
+				},
+				"f": {
+					"cost": 2,
+					"name": "森林"
+				},
+				"w": {
+					"cost": 2,
+					"name": "淺灘"
+				},
+				"~": {
+					"cost": 0,
+					"name": "深水"
+				}
+			},
+			"turn_limit": 15,
+			"variant": "default"
+		},
+		"occupancy_revision": 44,
+		"phase": "player",
+		"spawned": true,
+		"status": "playing",
+		"turn": 4,
+		"units": [
+			{
+				"acted": true,
+				"ai": "guard",
+				"born_turn": 0,
+				"cell": "(10, 13)",
+				"group": "party",
+				"hp": 4,
+				"id": "thoma",
+				"kind": "melee",
+				"max_hp": 8,
+				"moved": true,
+				"side": "ally",
+				"threatened": true
+			},
+			{
+				"acted": true,
+				"ai": "guard",
+				"born_turn": 0,
+				"cell": "(11, 14)",
+				"group": "party",
+				"hp": 8,
+				"id": "guard",
+				"kind": "melee",
+				"max_hp": 8,
+				"moved": true,
+				"side": "ally",
+				"threatened": false
+			},
+			{
+				"acted": true,
+				"ai": "guard",
+				"born_turn": 0,
+				"cell": "(9, 10)",
+				"group": "party",
+				"hp": 6,
+				"id": "bow-1",
+				"kind": "ranged",
+				"max_hp": 6,
+				"moved": true,
+				"side": "ally",
+				"threatened": false
+			},
+			{
+				"acted": true,
+				"ai": "guard",
+				"born_turn": 0,
+				"cell": "(11, 13)",
+				"group": "party",
+				"hp": 4,
+				"id": "bow-2",
+				"kind": "ranged",
+				"max_hp": 6,
+				"moved": true,
+				"side": "ally",
+				"threatened": true
+			},
+			{
+				"acted": true,
+				"ai": "guard",
+				"born_turn": 0,
+				"cell": "(11, 12)",
+				"group": "party",
+				"hp": 6,
+				"id": "scout-1",
+				"kind": "mobile",
+				"max_hp": 6,
+				"move_spent": 6,
+				"moved": true,
+				"retreat_left": 0,
+				"side": "ally",
+				"threatened": false
+			},
+			{
+				"acted": false,
+				"ai": "guard",
+				"born_turn": 0,
+				"cell": "(8, 12)",
+				"group": "party",
+				"hp": 2,
+				"id": "scout-2",
+				"kind": "mobile",
+				"max_hp": 6,
+				"move_spent": 0,
+				"moved": false,
+				"retreat_left": 0,
+				"side": "ally",
+				"threatened": true
+			},
+			{
+				"acted": false,
+				"ai": "advance",
+				"born_turn": 0,
+				"cell": "(11, 10)",
+				"group": "front",
+				"hp": 2,
+				"id": "knight-1",
+				"kind": "knight",
+				"max_hp": 6,
+				"moved": false,
+				"side": "enemy",
+				"threatened": true
+			},
+			{
+				"acted": false,
+				"ai": "advance",
+				"born_turn": 0,
+				"cell": "(12, 11)",
+				"group": "front",
+				"hp": 0,
+				"id": "knight-2",
+				"kind": "knight",
+				"max_hp": 6,
+				"moved": false,
+				"side": "enemy",
+				"threatened": true
+			},
+			{
+				"acted": false,
+				"ai": "attack",
+				"born_turn": 0,
+				"cell": "(13, 14)",
+				"group": "south",
+				"hp": 0,
+				"id": "knight-3",
+				"kind": "knight",
+				"max_hp": 6,
+				"moved": false,
+				"side": "enemy",
+				"threatened": true
+			},
+			{
+				"acted": false,
+				"ai": "guard",
+				"born_turn": 0,
+				"cell": "(18, 3)",
+				"group": "flank",
+				"hp": 6,
+				"id": "knight-5",
+				"kind": "knight",
+				"max_hp": 6,
+				"moved": false,
+				"side": "enemy",
+				"threatened": false
+			},
+			{
+				"acted": false,
+				"ai": "guard",
+				"born_turn": 0,
+				"cell": "(19, 8)",
+				"group": "reserve",
+				"hp": 6,
+				"id": "knight-8",
+				"kind": "knight",
+				"max_hp": 6,
+				"moved": false,
+				"side": "enemy",
+				"threatened": false
+			},
+			{
+				"acted": false,
+				"ai": "guard",
+				"born_turn": 0,
+				"cell": "(22, 9)",
+				"group": "leader",
+				"hp": 10,
+				"id": "leader",
+				"kind": "leader",
+				"max_hp": 10,
+				"moved": false,
+				"side": "enemy",
+				"threatened": false
+			},
+			{
+				"acted": false,
+				"ai": "guard",
+				"born_turn": 3,
+				"cell": "(23, 8)",
+				"group": "reinforcements",
+				"hp": 6,
+				"id": "reinforcement-0",
+				"kind": "knight",
+				"max_hp": 6,
+				"moved": false,
+				"side": "enemy",
+				"threatened": false
+			},
+			{
+				"acted": false,
+				"ai": "guard",
+				"born_turn": 3,
+				"cell": "(23, 9)",
+				"group": "reinforcements",
+				"hp": 6,
+				"id": "reinforcement-1",
+				"kind": "knight",
+				"max_hp": 6,
+				"moved": false,
+				"side": "enemy",
+				"threatened": false
+			},
+			{
+				"acted": false,
+				"ai": "guard",
+				"born_turn": 3,
+				"cell": "(23, 10)",
+				"group": "reinforcements",
+				"hp": 6,
+				"id": "reinforcement-2",
+				"kind": "knight",
+				"max_hp": 6,
+				"moved": false,
+				"side": "enemy",
+				"threatened": false
+			}
+		],
+		"warned": true
+	},
+	"unit": "scout-2"
+}

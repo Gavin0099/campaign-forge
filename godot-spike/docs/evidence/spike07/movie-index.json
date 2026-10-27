@@ -1,0 +1,22 @@
+{
+  "enemy": {
+    "fps": 60.00240009600384,
+    "frames": 478,
+    "bytes": 51411544,
+    "resolution": [
+      1280,
+      720
+    ],
+    "sha256": "bfee6f291f3972caa66152581ef74c965fa6c60b1bd1d56017eac5bc5b1484b1"
+  },
+  "scout": {
+    "fps": 60.00240009600384,
+    "frames": 143,
+    "bytes": 15834982,
+    "resolution": [
+      1280,
+      720
+    ],
+    "sha256": "54bfdf85aa3abc6f1ee11059a2f1f5df414da0bc2002cfd7174ef2c0938185e8"
+  }
+}

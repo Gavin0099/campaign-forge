@@ -3,7 +3,7 @@ const Harness = preload("res://tools/field_harness.gd")
 func _initialize() -> void:
 	call_deferred("run")
 func run() -> void:
-	var out := "res://docs/evidence/spike06/after/"
+	var out := ""
 	var policies: Array = Harness.POLICIES.duplicate()
 	var seeds: Array = [24018]
 	var variant := "default"
@@ -22,6 +22,7 @@ func run() -> void:
 		push_error("Unknown variant or empty seeds")
 		quit(2)
 		return
+	if out.is_empty(): out="res://docs/evidence/spike07/"+("after" if variant=="default" else "variant-"+variant)+"/"
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(out+"runs/"))
 	var failed := false
 	var index := {"seeds":seeds,"policies":policies,"variant":variant,"runs":[],"variation":"AI coordinate tie-break + same-class policy action/target tie ordering; seed24018 retains historical ordering. Fixed damage; no jitter."}

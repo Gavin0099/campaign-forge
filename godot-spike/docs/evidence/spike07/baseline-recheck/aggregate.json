@@ -1,0 +1,1583 @@
+{
+  "seeds": [
+    24018,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015,
+    1016,
+    1017,
+    1018,
+    1019,
+    1020,
+    1021,
+    1022,
+    1023,
+    1024,
+    1025,
+    1026,
+    1027,
+    1028,
+    1029,
+    1030,
+    1031,
+    1032,
+    1033,
+    1034,
+    1035,
+    1036,
+    1037,
+    1038,
+    1039
+  ],
+  "variant": "spike06",
+  "variation": "AI coordinate tie-break + same-class policy action/target tie ordering; seed24018 retains historical ordering. Fixed damage; no jitter.",
+  "policies": {
+    "road": {
+      "runs": 40,
+      "win_rate": 0.5,
+      "win_turns": {
+        "median": 14.0,
+        "min": 10,
+        "max": 15
+      },
+      "loss_turns": {
+        "median": 16.0,
+        "min": 7,
+        "max": 16
+      },
+      "first_contact": {
+        "median": 2.0,
+        "min": 2,
+        "max": 2
+      },
+      "mean_casualties": 2.775,
+      "reinforcement_engagement_rate": 1,
+      "reinforcement_engagement_in_wins": 1.0,
+      "wave_first_engage": {
+        "median": 7.5,
+        "min": 6,
+        "max": 9
+      },
+      "wave_first_attack": {
+        "median": 7.5,
+        "min": 6,
+        "max": 9
+      },
+      "wave_first_attacked": {
+        "median": 8,
+        "min": 7,
+        "max": 12
+      },
+      "idle_by_group": {
+        "flank": 195,
+        "front": 80,
+        "leader": 153,
+        "rear": 0,
+        "reinforcements": 0,
+        "reserve": 116,
+        "south": 40
+      },
+      "observed_enemy_turns": 2127,
+      "true_idle_share": 0.2745651151857076,
+      "classes": {
+        "melee": {
+          "damage": 772,
+          "kills": 72,
+          "mean_casualties": 0.625,
+          "death_turns": {
+            "median": 9,
+            "min": 7,
+            "max": 15
+          },
+          "living_unit_turns": 965,
+          "finishing_kills": 72,
+          "intercepts": 0,
+          "damage_share": 0.38774485183324964,
+          "kill_share": 0.24489795918367346
+        },
+        "ranged": {
+          "damage": 757,
+          "kills": 89,
+          "mean_casualties": 0.65,
+          "death_turns": {
+            "median": 11.0,
+            "min": 7,
+            "max": 14
+          },
+          "living_unit_turns": 952,
+          "finishing_kills": 89,
+          "intercepts": 0,
+          "damage_share": 0.3802109492717228,
+          "kill_share": 0.30272108843537415
+        },
+        "mobile": {
+          "damage": 462,
+          "kills": 133,
+          "mean_casualties": 1.5,
+          "death_turns": {
+            "median": 8.0,
+            "min": 3,
+            "max": 15
+          },
+          "living_unit_turns": 708,
+          "finishing_kills": 133,
+          "intercepts": 198,
+          "damage_share": 0.23204419889502761,
+          "kill_share": 0.4523809523809524
+        }
+      },
+      "los_blocked_shots": 0,
+      "los_blocked_opportunities": 130,
+      "length_minutes": [
+        9.67223922916667,
+        35.3936896666667
+      ],
+      "median_length_minutes": [
+        17.2686896666667,
+        28.51868966666665
+      ],
+      "length_intervals_inside_target": 0,
+      "distinct_traces": 40,
+      "illegal_commands": 0,
+      "win_interval95": [
+        0.35199278797099753,
+        0.6480072120290025
+      ],
+      "bypass_wins": 0,
+      "bypass_interval95": [
+        -6.938893903907228e-18,
+        0.08762453925039232
+      ],
+      "scout_early_death_runs": 6,
+      "scout_no_early_death_rate": 0.85,
+      "strata": {
+        "bypass-win": {
+          "count": 0,
+          "rate": 0.0,
+          "interval95": [
+            -6.938893903907228e-18,
+            0.08762453925039232
+          ],
+          "turns": null,
+          "deaths": {
+            "melee": null,
+            "ranged": null,
+            "mobile": null
+          },
+          "wave_engaged": 0,
+          "wave_first_engage": null,
+          "scout_death_turns": null,
+          "distinct_traces": 0
+        },
+        "engaged-win": {
+          "count": 20,
+          "rate": 0.5,
+          "interval95": [
+            0.35199278797099753,
+            0.6480072120290025
+          ],
+          "turns": {
+            "median": 14.0,
+            "min": 10,
+            "max": 15
+          },
+          "deaths": {
+            "melee": {
+              "median": 0.0,
+              "min": 0,
+              "max": 1
+            },
+            "ranged": {
+              "median": 0.0,
+              "min": 0,
+              "max": 2
+            },
+            "mobile": {
+              "median": 1.0,
+              "min": 0,
+              "max": 2
+            }
+          },
+          "wave_engaged": 20,
+          "wave_first_engage": {
+            "median": 7.5,
+            "min": 6,
+            "max": 8
+          },
+          "scout_death_turns": {
+            "median": 8,
+            "min": 3,
+            "max": 11
+          },
+          "distinct_traces": 20
+        },
+        "loss-Thoma": {
+          "count": 8,
+          "rate": 0.2,
+          "interval95": [
+            0.10499864973166874,
+            0.34757607381856676
+          ],
+          "turns": {
+            "median": 8.0,
+            "min": 7,
+            "max": 15
+          },
+          "deaths": {
+            "melee": {
+              "median": 1.0,
+              "min": 1,
+              "max": 2
+            },
+            "ranged": {
+              "median": 0.0,
+              "min": 0,
+              "max": 1
+            },
+            "mobile": {
+              "median": 1.0,
+              "min": 0,
+              "max": 2
+            }
+          },
+          "wave_engaged": 8,
+          "wave_first_engage": {
+            "median": 7.5,
+            "min": 7,
+            "max": 8
+          },
+          "scout_death_turns": {
+            "median": 7,
+            "min": 3,
+            "max": 13
+          },
+          "distinct_traces": 8
+        },
+        "loss-timeout": {
+          "count": 12,
+          "rate": 0.3,
+          "interval95": [
+            0.18074670915695296,
+            0.454303106543204
+          ],
+          "turns": {
+            "median": 16.0,
+            "min": 16,
+            "max": 16
+          },
+          "deaths": {
+            "melee": {
+              "median": 1.0,
+              "min": 0,
+              "max": 1
+            },
+            "ranged": {
+              "median": 2.0,
+              "min": 0,
+              "max": 2
+            },
+            "mobile": {
+              "median": 2.0,
+              "min": 2,
+              "max": 2
+            }
+          },
+          "wave_engaged": 12,
+          "wave_first_engage": {
+            "median": 7.5,
+            "min": 7,
+            "max": 9
+          },
+          "scout_death_turns": {
+            "median": 9.0,
+            "min": 3,
+            "max": 15
+          },
+          "distinct_traces": 12
+        }
+      }
+    },
+    "flank": {
+      "runs": 40,
+      "win_rate": 0.625,
+      "win_turns": {
+        "median": 13,
+        "min": 7,
+        "max": 15
+      },
+      "loss_turns": {
+        "median": 16,
+        "min": 7,
+        "max": 16
+      },
+      "first_contact": {
+        "median": 2.0,
+        "min": 2,
+        "max": 2
+      },
+      "mean_casualties": 2.35,
+      "reinforcement_engagement_rate": 0.95,
+      "reinforcement_engagement_in_wins": 0.96,
+      "wave_first_engage": {
+        "median": 7.0,
+        "min": 6,
+        "max": 8
+      },
+      "wave_first_attack": {
+        "median": 7.0,
+        "min": 6,
+        "max": 9
+      },
+      "wave_first_attacked": {
+        "median": 8.0,
+        "min": 7,
+        "max": 9
+      },
+      "idle_by_group": {
+        "flank": 184,
+        "front": 80,
+        "leader": 156,
+        "rear": 0,
+        "reinforcements": 0,
+        "reserve": 122,
+        "south": 40
+      },
+      "observed_enemy_turns": 2027,
+      "true_idle_share": 0.2871238283177109,
+      "classes": {
+        "melee": {
+          "damage": 788,
+          "kills": 79,
+          "mean_casualties": 0.5,
+          "death_turns": {
+            "median": 9.5,
+            "min": 6,
+            "max": 11
+          },
+          "living_unit_turns": 949,
+          "finishing_kills": 79,
+          "intercepts": 0,
+          "damage_share": 0.40122199592668023,
+          "kill_share": 0.2696245733788396
+        },
+        "ranged": {
+          "damage": 713,
+          "kills": 105,
+          "mean_casualties": 0.525,
+          "death_turns": {
+            "median": 9,
+            "min": 7,
+            "max": 13
+          },
+          "living_unit_turns": 922,
+          "finishing_kills": 105,
+          "intercepts": 0,
+          "damage_share": 0.3630346232179226,
+          "kill_share": 0.3583617747440273
+        },
+        "mobile": {
+          "damage": 463,
+          "kills": 109,
+          "mean_casualties": 1.325,
+          "death_turns": {
+            "median": 8,
+            "min": 3,
+            "max": 14
+          },
+          "living_unit_turns": 722,
+          "finishing_kills": 109,
+          "intercepts": 192,
+          "damage_share": 0.23574338085539714,
+          "kill_share": 0.3720136518771331
+        }
+      },
+      "los_blocked_shots": 0,
+      "los_blocked_opportunities": 109,
+      "length_minutes": [
+        9.67223922916667,
+        35.8103563333333
+      ],
+      "median_length_minutes": [
+        17.30757005208335,
+        28.64090338541665
+      ],
+      "length_intervals_inside_target": 0,
+      "distinct_traces": 40,
+      "illegal_commands": 0,
+      "win_interval95": [
+        0.47032160054531913,
+        0.7577722646420829
+      ],
+      "bypass_wins": 1,
+      "bypass_interval95": [
+        0.0044267174077949195,
+        0.1288165948800778
+      ],
+      "scout_early_death_runs": 5,
+      "scout_no_early_death_rate": 0.875,
+      "strata": {
+        "bypass-win": {
+          "count": 1,
+          "rate": 0.025,
+          "interval95": [
+            0.0044267174077949195,
+            0.1288165948800778
+          ],
+          "turns": {
+            "median": 7,
+            "min": 7,
+            "max": 7
+          },
+          "deaths": {
+            "melee": {
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "ranged": {
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "mobile": {
+              "median": 1,
+              "min": 1,
+              "max": 1
+            }
+          },
+          "wave_engaged": 0,
+          "wave_first_engage": null,
+          "scout_death_turns": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "distinct_traces": 1
+        },
+        "engaged-win": {
+          "count": 24,
+          "rate": 0.6,
+          "interval95": [
+            0.445956198273935,
+            0.7365188938759863
+          ],
+          "turns": {
+            "median": 13.5,
+            "min": 7,
+            "max": 15
+          },
+          "deaths": {
+            "melee": {
+              "median": 0.0,
+              "min": 0,
+              "max": 1
+            },
+            "ranged": {
+              "median": 0.0,
+              "min": 0,
+              "max": 2
+            },
+            "mobile": {
+              "median": 1.0,
+              "min": 0,
+              "max": 2
+            }
+          },
+          "wave_engaged": 24,
+          "wave_first_engage": {
+            "median": 7.0,
+            "min": 6,
+            "max": 8
+          },
+          "scout_death_turns": {
+            "median": 8,
+            "min": 3,
+            "max": 14
+          },
+          "distinct_traces": 24
+        },
+        "loss-Thoma": {
+          "count": 4,
+          "rate": 0.1,
+          "interval95": [
+            0.03957888759557486,
+            0.23052074380473897
+          ],
+          "turns": {
+            "median": 7.0,
+            "min": 7,
+            "max": 8
+          },
+          "deaths": {
+            "melee": {
+              "median": 1.0,
+              "min": 1,
+              "max": 1
+            },
+            "ranged": {
+              "median": 0.0,
+              "min": 0,
+              "max": 0
+            },
+            "mobile": {
+              "median": 0.5,
+              "min": 0,
+              "max": 1
+            }
+          },
+          "wave_engaged": 3,
+          "wave_first_engage": {
+            "median": 7,
+            "min": 7,
+            "max": 7
+          },
+          "scout_death_turns": {
+            "median": 5.0,
+            "min": 3,
+            "max": 7
+          },
+          "distinct_traces": 4
+        },
+        "loss-timeout": {
+          "count": 11,
+          "rate": 0.275,
+          "interval95": [
+            0.1610785343314309,
+            0.4283525083312457
+          ],
+          "turns": {
+            "median": 16,
+            "min": 16,
+            "max": 16
+          },
+          "deaths": {
+            "melee": {
+              "median": 1,
+              "min": 0,
+              "max": 1
+            },
+            "ranged": {
+              "median": 1,
+              "min": 0,
+              "max": 2
+            },
+            "mobile": {
+              "median": 2,
+              "min": 0,
+              "max": 2
+            }
+          },
+          "wave_engaged": 11,
+          "wave_first_engage": {
+            "median": 8,
+            "min": 7,
+            "max": 8
+          },
+          "scout_death_turns": {
+            "median": 10,
+            "min": 3,
+            "max": 14
+          },
+          "distinct_traces": 11
+        }
+      }
+    },
+    "turtle": {
+      "runs": 40,
+      "win_rate": 0.125,
+      "win_turns": {
+        "median": 14,
+        "min": 13,
+        "max": 15
+      },
+      "loss_turns": {
+        "median": 12,
+        "min": 9,
+        "max": 16
+      },
+      "first_contact": {
+        "median": 2.0,
+        "min": 2,
+        "max": 2
+      },
+      "mean_casualties": 3.475,
+      "reinforcement_engagement_rate": 1,
+      "reinforcement_engagement_in_wins": 1.0,
+      "wave_first_engage": {
+        "median": 8.0,
+        "min": 7,
+        "max": 9
+      },
+      "wave_first_attack": {
+        "median": 8.0,
+        "min": 7,
+        "max": 9
+      },
+      "wave_first_attacked": {
+        "median": 9.0,
+        "min": 8,
+        "max": 10
+      },
+      "idle_by_group": {
+        "flank": 200,
+        "front": 60,
+        "leader": 182,
+        "rear": 0,
+        "reinforcements": 0,
+        "reserve": 181,
+        "south": 40
+      },
+      "observed_enemy_turns": 2211,
+      "true_idle_share": 0.29986431478968795,
+      "classes": {
+        "melee": {
+          "damage": 768,
+          "kills": 93,
+          "mean_casualties": 1.025,
+          "death_turns": {
+            "median": 11,
+            "min": 7,
+            "max": 13
+          },
+          "living_unit_turns": 944,
+          "finishing_kills": 93,
+          "intercepts": 0,
+          "damage_share": 0.4240750966316952,
+          "kill_share": 0.35094339622641507
+        },
+        "ranged": {
+          "damage": 603,
+          "kills": 85,
+          "mean_casualties": 1.175,
+          "death_turns": {
+            "median": 8,
+            "min": 4,
+            "max": 11
+          },
+          "living_unit_turns": 812,
+          "finishing_kills": 85,
+          "intercepts": 0,
+          "damage_share": 0.33296521258972944,
+          "kill_share": 0.32075471698113206
+        },
+        "mobile": {
+          "damage": 440,
+          "kills": 87,
+          "mean_casualties": 1.275,
+          "death_turns": {
+            "median": 6,
+            "min": 3,
+            "max": 13
+          },
+          "living_unit_turns": 686,
+          "finishing_kills": 87,
+          "intercepts": 183,
+          "damage_share": 0.24295969077857538,
+          "kill_share": 0.3283018867924528
+        }
+      },
+      "los_blocked_shots": 0,
+      "los_blocked_opportunities": 253,
+      "length_minutes": [
+        12.2214504375,
+        32.8690840625
+      ],
+      "median_length_minutes": [
+        14.79526725,
+        24.4619339166667
+      ],
+      "length_intervals_inside_target": 0,
+      "distinct_traces": 28,
+      "illegal_commands": 0,
+      "win_interval95": [
+        0.05459419773541284,
+        0.26112420670238146
+      ],
+      "bypass_wins": 0,
+      "bypass_interval95": [
+        -6.938893903907228e-18,
+        0.08762453925039232
+      ],
+      "scout_early_death_runs": 19,
+      "scout_no_early_death_rate": 0.525,
+      "strata": {
+        "bypass-win": {
+          "count": 0,
+          "rate": 0.0,
+          "interval95": [
+            -6.938893903907228e-18,
+            0.08762453925039232
+          ],
+          "turns": null,
+          "deaths": {
+            "melee": null,
+            "ranged": null,
+            "mobile": null
+          },
+          "wave_engaged": 0,
+          "wave_first_engage": null,
+          "scout_death_turns": null,
+          "distinct_traces": 0
+        },
+        "engaged-win": {
+          "count": 5,
+          "rate": 0.125,
+          "interval95": [
+            0.05459419773541284,
+            0.26112420670238146
+          ],
+          "turns": {
+            "median": 14,
+            "min": 13,
+            "max": 15
+          },
+          "deaths": {
+            "melee": {
+              "median": 0,
+              "min": 0,
+              "max": 1
+            },
+            "ranged": {
+              "median": 1,
+              "min": 0,
+              "max": 2
+            },
+            "mobile": {
+              "median": 1,
+              "min": 0,
+              "max": 1
+            }
+          },
+          "wave_engaged": 5,
+          "wave_first_engage": {
+            "median": 8,
+            "min": 8,
+            "max": 9
+          },
+          "scout_death_turns": {
+            "median": 10,
+            "min": 8,
+            "max": 10
+          },
+          "distinct_traces": 5
+        },
+        "loss-Thoma": {
+          "count": 21,
+          "rate": 0.525,
+          "interval95": [
+            0.37497106853929735,
+            0.6706477044981831
+          ],
+          "turns": {
+            "median": 11,
+            "min": 9,
+            "max": 13
+          },
+          "deaths": {
+            "melee": {
+              "median": 2,
+              "min": 1,
+              "max": 2
+            },
+            "ranged": {
+              "median": 1,
+              "min": 0,
+              "max": 2
+            },
+            "mobile": {
+              "median": 1,
+              "min": 1,
+              "max": 2
+            }
+          },
+          "wave_engaged": 21,
+          "wave_first_engage": {
+            "median": 8,
+            "min": 7,
+            "max": 8
+          },
+          "scout_death_turns": {
+            "median": 6,
+            "min": 3,
+            "max": 11
+          },
+          "distinct_traces": 12
+        },
+        "loss-timeout": {
+          "count": 14,
+          "rate": 0.35,
+          "interval95": [
+            0.2213433317104915,
+            0.5049440300646263
+          ],
+          "turns": {
+            "median": 16.0,
+            "min": 16,
+            "max": 16
+          },
+          "deaths": {
+            "melee": {
+              "median": 1.0,
+              "min": 0,
+              "max": 1
+            },
+            "ranged": {
+              "median": 1.0,
+              "min": 1,
+              "max": 2
+            },
+            "mobile": {
+              "median": 1.5,
+              "min": 1,
+              "max": 2
+            }
+          },
+          "wave_engaged": 14,
+          "wave_first_engage": {
+            "median": 8.0,
+            "min": 7,
+            "max": 9
+          },
+          "scout_death_turns": {
+            "median": 4,
+            "min": 3,
+            "max": 13
+          },
+          "distinct_traces": 11
+        }
+      }
+    },
+    "scout-retreat": {
+      "runs": 40,
+      "win_rate": 0.0,
+      "win_turns": null,
+      "loss_turns": {
+        "median": 8.0,
+        "min": 4,
+        "max": 11
+      },
+      "first_contact": {
+        "median": 2.0,
+        "min": 2,
+        "max": 2
+      },
+      "mean_casualties": 2.05,
+      "reinforcement_engagement_rate": 0.725,
+      "reinforcement_engagement_in_wins": null,
+      "wave_first_engage": {
+        "median": 7,
+        "min": 7,
+        "max": 9
+      },
+      "wave_first_attack": {
+        "median": 7,
+        "min": 7,
+        "max": 9
+      },
+      "wave_first_attacked": {
+        "median": 8.0,
+        "min": 7,
+        "max": 9
+      },
+      "idle_by_group": {
+        "flank": 122,
+        "front": 80,
+        "leader": 153,
+        "rear": 0,
+        "reinforcements": 0,
+        "reserve": 74,
+        "south": 40
+      },
+      "observed_enemy_turns": 1453,
+      "true_idle_share": 0.32278045423262214,
+      "classes": {
+        "melee": {
+          "damage": 610,
+          "kills": 68,
+          "mean_casualties": 1.775,
+          "death_turns": {
+            "median": 7,
+            "min": 4,
+            "max": 11
+          },
+          "living_unit_turns": 536,
+          "finishing_kills": 68,
+          "intercepts": 0,
+          "damage_share": 0.496742671009772,
+          "kill_share": 0.43037974683544306
+        },
+        "ranged": {
+          "damage": 480,
+          "kills": 72,
+          "mean_casualties": 0.275,
+          "death_turns": {
+            "median": 8,
+            "min": 8,
+            "max": 9
+          },
+          "living_unit_turns": 590,
+          "finishing_kills": 72,
+          "intercepts": 0,
+          "damage_share": 0.39087947882736157,
+          "kill_share": 0.45569620253164556
+        },
+        "mobile": {
+          "damage": 138,
+          "kills": 18,
+          "mean_casualties": 0.0,
+          "death_turns": null,
+          "living_unit_turns": 592,
+          "finishing_kills": 18,
+          "intercepts": 88,
+          "damage_share": 0.11237785016286644,
+          "kill_share": 0.11392405063291139
+        }
+      },
+      "los_blocked_shots": 0,
+      "los_blocked_opportunities": 94,
+      "length_minutes": [
+        6.09842241666667,
+        26.9373283125
+      ],
+      "median_length_minutes": [
+        11.4468448333333,
+        18.9468448333333
+      ],
+      "length_intervals_inside_target": 0,
+      "distinct_traces": 24,
+      "illegal_commands": 0,
+      "win_interval95": [
+        -6.938893903907228e-18,
+        0.08762453925039232
+      ],
+      "bypass_wins": 0,
+      "bypass_interval95": [
+        -6.938893903907228e-18,
+        0.08762453925039232
+      ],
+      "scout_early_death_runs": 0,
+      "scout_no_early_death_rate": 1.0,
+      "strata": {
+        "bypass-win": {
+          "count": 0,
+          "rate": 0.0,
+          "interval95": [
+            -6.938893903907228e-18,
+            0.08762453925039232
+          ],
+          "turns": null,
+          "deaths": {
+            "melee": null,
+            "ranged": null,
+            "mobile": null
+          },
+          "wave_engaged": 0,
+          "wave_first_engage": null,
+          "scout_death_turns": null,
+          "distinct_traces": 0
+        },
+        "engaged-win": {
+          "count": 0,
+          "rate": 0.0,
+          "interval95": [
+            -6.938893903907228e-18,
+            0.08762453925039232
+          ],
+          "turns": null,
+          "deaths": {
+            "melee": null,
+            "ranged": null,
+            "mobile": null
+          },
+          "wave_engaged": 0,
+          "wave_first_engage": null,
+          "scout_death_turns": null,
+          "distinct_traces": 0
+        },
+        "loss-Thoma": {
+          "count": 40,
+          "rate": 1.0,
+          "interval95": [
+            0.9123754607496077,
+            1.0
+          ],
+          "turns": {
+            "median": 8.0,
+            "min": 4,
+            "max": 11
+          },
+          "deaths": {
+            "melee": {
+              "median": 2.0,
+              "min": 1,
+              "max": 2
+            },
+            "ranged": {
+              "median": 0.0,
+              "min": 0,
+              "max": 1
+            },
+            "mobile": {
+              "median": 0.0,
+              "min": 0,
+              "max": 0
+            }
+          },
+          "wave_engaged": 29,
+          "wave_first_engage": {
+            "median": 7,
+            "min": 7,
+            "max": 9
+          },
+          "scout_death_turns": null,
+          "distinct_traces": 24
+        },
+        "loss-timeout": {
+          "count": 0,
+          "rate": 0.0,
+          "interval95": [
+            -6.938893903907228e-18,
+            0.08762453925039232
+          ],
+          "turns": null,
+          "deaths": {
+            "melee": null,
+            "ranged": null,
+            "mobile": null
+          },
+          "wave_engaged": 0,
+          "wave_first_engage": null,
+          "scout_death_turns": null,
+          "distinct_traces": 0
+        }
+      }
+    },
+    "leader-dash": {
+      "runs": 40,
+      "win_rate": 0.85,
+      "win_turns": {
+        "median": 6.0,
+        "min": 5,
+        "max": 7
+      },
+      "loss_turns": {
+        "median": 6.0,
+        "min": 5,
+        "max": 7
+      },
+      "first_contact": {
+        "median": 2.0,
+        "min": 2,
+        "max": 2
+      },
+      "mean_casualties": 2.975,
+      "reinforcement_engagement_rate": 0.125,
+      "reinforcement_engagement_in_wins": 0.029411764705882353,
+      "wave_first_engage": {
+        "median": 6,
+        "min": 6,
+        "max": 6
+      },
+      "wave_first_attack": {
+        "median": 6,
+        "min": 6,
+        "max": 6
+      },
+      "wave_first_attacked": null,
+      "idle_by_group": {
+        "flank": 105,
+        "front": 80,
+        "leader": 80,
+        "rear": 0,
+        "reinforcements": 0,
+        "reserve": 80,
+        "south": 41
+      },
+      "observed_enemy_turns": 1231,
+      "true_idle_share": 0.31356620633631194,
+      "classes": {
+        "melee": {
+          "damage": 141,
+          "kills": 20,
+          "mean_casualties": 0.525,
+          "death_turns": {
+            "median": 5,
+            "min": 4,
+            "max": 7
+          },
+          "living_unit_turns": 460,
+          "finishing_kills": 20,
+          "intercepts": 0,
+          "damage_share": 0.36528497409326427,
+          "kill_share": 0.5882352941176471
+        },
+        "ranged": {
+          "damage": 4,
+          "kills": 2,
+          "mean_casualties": 1.775,
+          "death_turns": {
+            "median": 4,
+            "min": 3,
+            "max": 5
+          },
+          "living_unit_turns": 354,
+          "finishing_kills": 2,
+          "intercepts": 0,
+          "damage_share": 0.010362694300518135,
+          "kill_share": 0.058823529411764705
+        },
+        "mobile": {
+          "damage": 241,
+          "kills": 12,
+          "mean_casualties": 0.675,
+          "death_turns": {
+            "median": 2,
+            "min": 2,
+            "max": 6
+          },
+          "living_unit_turns": 391,
+          "finishing_kills": 12,
+          "intercepts": 95,
+          "damage_share": 0.6243523316062176,
+          "kill_share": 0.35294117647058826
+        }
+      },
+      "los_blocked_shots": 0,
+      "los_blocked_opportunities": 69,
+      "length_minutes": [
+        6.897633625,
+        13.897633625
+      ],
+      "median_length_minutes": [
+        7.534936427083335,
+        12.451603093749998
+      ],
+      "length_intervals_inside_target": 0,
+      "distinct_traces": 40,
+      "illegal_commands": 0,
+      "win_interval95": [
+        0.7092737396097997,
+        0.9293890829149256
+      ],
+      "bypass_wins": 33,
+      "bypass_interval95": [
+        0.6804970794560755,
+        0.9125469700311694
+      ],
+      "scout_early_death_runs": 15,
+      "scout_no_early_death_rate": 0.625,
+      "strata": {
+        "bypass-win": {
+          "count": 33,
+          "rate": 0.825,
+          "interval95": [
+            0.6804970794560755,
+            0.9125469700311694
+          ],
+          "turns": {
+            "median": 6,
+            "min": 5,
+            "max": 6
+          },
+          "deaths": {
+            "melee": {
+              "median": 0,
+              "min": 0,
+              "max": 1
+            },
+            "ranged": {
+              "median": 2,
+              "min": 1,
+              "max": 2
+            },
+            "mobile": {
+              "median": 0,
+              "min": 0,
+              "max": 2
+            }
+          },
+          "wave_engaged": 0,
+          "wave_first_engage": null,
+          "scout_death_turns": {
+            "median": 2,
+            "min": 2,
+            "max": 4
+          },
+          "distinct_traces": 33
+        },
+        "engaged-win": {
+          "count": 1,
+          "rate": 0.025,
+          "interval95": [
+            0.0044267174077949195,
+            0.1288165948800778
+          ],
+          "turns": {
+            "median": 7,
+            "min": 7,
+            "max": 7
+          },
+          "deaths": {
+            "melee": {
+              "median": 1,
+              "min": 1,
+              "max": 1
+            },
+            "ranged": {
+              "median": 2,
+              "min": 2,
+              "max": 2
+            },
+            "mobile": {
+              "median": 2,
+              "min": 2,
+              "max": 2
+            }
+          },
+          "wave_engaged": 1,
+          "wave_first_engage": {
+            "median": 6,
+            "min": 6,
+            "max": 6
+          },
+          "scout_death_turns": {
+            "median": 5.0,
+            "min": 4,
+            "max": 6
+          },
+          "distinct_traces": 1
+        },
+        "loss-Thoma": {
+          "count": 6,
+          "rate": 0.15,
+          "interval95": [
+            0.07061091708507435,
+            0.2907262603902003
+          ],
+          "turns": {
+            "median": 6.0,
+            "min": 5,
+            "max": 7
+          },
+          "deaths": {
+            "melee": {
+              "median": 2.0,
+              "min": 1,
+              "max": 2
+            },
+            "ranged": {
+              "median": 2.0,
+              "min": 2,
+              "max": 2
+            },
+            "mobile": {
+              "median": 1.5,
+              "min": 0,
+              "max": 2
+            }
+          },
+          "wave_engaged": 4,
+          "wave_first_engage": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "scout_death_turns": {
+            "median": 4.0,
+            "min": 2,
+            "max": 4
+          },
+          "distinct_traces": 6
+        },
+        "loss-timeout": {
+          "count": 0,
+          "rate": 0.0,
+          "interval95": [
+            -6.938893903907228e-18,
+            0.08762453925039232
+          ],
+          "turns": null,
+          "deaths": {
+            "melee": null,
+            "ranged": null,
+            "mobile": null
+          },
+          "wave_engaged": 0,
+          "wave_first_engage": null,
+          "scout_death_turns": null,
+          "distinct_traces": 0
+        }
+      }
+    },
+    "bypass": {
+      "runs": 40,
+      "win_rate": 0.95,
+      "win_turns": {
+        "median": 7.0,
+        "min": 6,
+        "max": 10
+      },
+      "loss_turns": {
+        "median": 7.0,
+        "min": 7,
+        "max": 7
+      },
+      "first_contact": {
+        "median": 5.0,
+        "min": 5,
+        "max": 5
+      },
+      "mean_casualties": 0.775,
+      "reinforcement_engagement_rate": 0.925,
+      "reinforcement_engagement_in_wins": 0.9210526315789473,
+      "wave_first_engage": {
+        "median": 6,
+        "min": 5,
+        "max": 6
+      },
+      "wave_first_attack": {
+        "median": 6,
+        "min": 6,
+        "max": 6
+      },
+      "wave_first_attacked": {
+        "median": 6,
+        "min": 5,
+        "max": 7
+      },
+      "idle_by_group": {
+        "flank": 1,
+        "front": 0,
+        "leader": 0,
+        "rear": 0,
+        "reinforcements": 0,
+        "reserve": 0,
+        "south": 40
+      },
+      "observed_enemy_turns": 633,
+      "true_idle_share": 0.06477093206951026,
+      "classes": {
+        "melee": {
+          "damage": 447,
+          "kills": 30,
+          "mean_casualties": 0.1,
+          "death_turns": {
+            "median": 7.0,
+            "min": 7,
+            "max": 7
+          },
+          "living_unit_turns": 269,
+          "finishing_kills": 30,
+          "intercepts": 0,
+          "damage_share": 0.3306213017751479,
+          "kill_share": 0.21739130434782608
+        },
+        "ranged": {
+          "damage": 455,
+          "kills": 71,
+          "mean_casualties": 0.45,
+          "death_turns": {
+            "median": 6.5,
+            "min": 6,
+            "max": 8
+          },
+          "living_unit_turns": 249,
+          "finishing_kills": 71,
+          "intercepts": 0,
+          "damage_share": 0.33653846153846156,
+          "kill_share": 0.5144927536231884
+        },
+        "mobile": {
+          "damage": 450,
+          "kills": 37,
+          "mean_casualties": 0.225,
+          "death_turns": {
+            "median": 7,
+            "min": 6,
+            "max": 8
+          },
+          "living_unit_turns": 258,
+          "finishing_kills": 37,
+          "intercepts": 99,
+          "damage_share": 0.3328402366863905,
+          "kill_share": 0.26811594202898553
+        }
+      },
+      "los_blocked_shots": 0,
+      "los_blocked_opportunities": 103,
+      "length_minutes": [
+        3.147633625,
+        13.9960560416667
+      ],
+      "median_length_minutes": [
+        4.67223922916667,
+        7.67223922916667
+      ],
+      "length_intervals_inside_target": 0,
+      "distinct_traces": 20,
+      "illegal_commands": 0,
+      "win_interval95": [
+        0.834958291820748,
+        0.9861796228538989
+      ],
+      "bypass_wins": 3,
+      "bypass_interval95": [
+        0.025835556771858226,
+        0.19864530159097524
+      ],
+      "scout_early_death_runs": 0,
+      "scout_no_early_death_rate": 1.0,
+      "strata": {
+        "bypass-win": {
+          "count": 3,
+          "rate": 0.075,
+          "interval95": [
+            0.025835556771858226,
+            0.19864530159097524
+          ],
+          "turns": {
+            "median": 6,
+            "min": 6,
+            "max": 6
+          },
+          "deaths": {
+            "melee": {
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "ranged": {
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "mobile": {
+              "median": 0,
+              "min": 0,
+              "max": 0
+            }
+          },
+          "wave_engaged": 0,
+          "wave_first_engage": null,
+          "scout_death_turns": null,
+          "distinct_traces": 2
+        },
+        "engaged-win": {
+          "count": 35,
+          "rate": 0.875,
+          "interval95": [
+            0.7388757932976187,
+            0.9454058022645873
+          ],
+          "turns": {
+            "median": 7,
+            "min": 7,
+            "max": 10
+          },
+          "deaths": {
+            "melee": {
+              "median": 0,
+              "min": 0,
+              "max": 1
+            },
+            "ranged": {
+              "median": 0,
+              "min": 0,
+              "max": 2
+            },
+            "mobile": {
+              "median": 0,
+              "min": 0,
+              "max": 2
+            }
+          },
+          "wave_engaged": 35,
+          "wave_first_engage": {
+            "median": 6,
+            "min": 5,
+            "max": 6
+          },
+          "scout_death_turns": {
+            "median": 7,
+            "min": 6,
+            "max": 8
+          },
+          "distinct_traces": 17
+        },
+        "loss-Thoma": {
+          "count": 2,
+          "rate": 0.05,
+          "interval95": [
+            0.013820377146101098,
+            0.165041708179252
+          ],
+          "turns": {
+            "median": 7.0,
+            "min": 7,
+            "max": 7
+          },
+          "deaths": {
+            "melee": {
+              "median": 1.0,
+              "min": 1,
+              "max": 1
+            },
+            "ranged": {
+              "median": 2.0,
+              "min": 2,
+              "max": 2
+            },
+            "mobile": {
+              "median": 1.0,
+              "min": 1,
+              "max": 1
+            }
+          },
+          "wave_engaged": 2,
+          "wave_first_engage": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "scout_death_turns": {
+            "median": 7.0,
+            "min": 7,
+            "max": 7
+          },
+          "distinct_traces": 1
+        },
+        "loss-timeout": {
+          "count": 0,
+          "rate": 0.0,
+          "interval95": [
+            -6.938893903907228e-18,
+            0.08762453925039232
+          ],
+          "turns": null,
+          "deaths": {
+            "melee": null,
+            "ranged": null,
+            "mobile": null
+          },
+          "wave_engaged": 0,
+          "wave_first_engage": null,
+          "scout_death_turns": null,
+          "distinct_traces": 0
+        }
+      }
+    }
+  },
+  "sample_caveat": "Distinct traces are not independent samples; Wilson intervals describe probe counts, not human win probability."
+}
