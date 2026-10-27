@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT/'.godot/spike07-perf'
 SCOPES = {
     'scripts/levels/field_minimap.gd': ['_draw', '_process'],
+    'scripts/levels/field_minimap_terrain.gd': ['_draw'],
     'scripts/levels/field_labels.gd': ['_draw', '_process', 'refresh_layout'],
     'scripts/levels/field_indicators.gd': ['_draw', '_process', 'refresh_items'],
     'scripts/levels/field_ground.gd': ['_draw'],
@@ -23,6 +24,7 @@ def instrument(folder):
     manifest = {}
     for path, names in SCOPES.items():
         file = folder/path
+        if not file.exists(): continue
         source = file.read_text(encoding='utf-8-sig')
         manifest[path] = hashlib.sha256(source.encode()).hexdigest()
         wrappers = []
@@ -63,10 +65,18 @@ def prepare(tag):
             with tar.extractfile(member) as src, target.open('wb') as dst:
                 shutil.copyfileobj(src,dst)
     (folder/'tools').mkdir(exist_ok=True)
+    overrides={}
+    if tag=='after':
+        for tree in ['scripts','data']:
+            for source in (ROOT/tree).rglob('*'):
+                if not source.is_file() or source.suffix not in {'.gd','.uid','.gdshader'}: continue
+                relative=source.relative_to(ROOT)
+                shutil.copyfile(source,folder/relative)
+                overrides[relative.as_posix()]=hashlib.sha256(source.read_bytes().replace(b'\r\n',b'\n')).hexdigest()
     for name in ['perf_field07.gd','perf_meter07.gd','perf_states07.bin']:
         shutil.copyfile(ROOT/'tools'/name,folder/'tools'/name)
     manifest = instrument(folder)
-    (ROOT/f'docs/evidence/spike07/perf/export-{tag}.json').write_text(json.dumps({'tag':tag,'archive_sha256':hashlib.sha256(archive.read_bytes()).hexdigest(),'pre_instrument_LF_sha256':manifest},indent=2)+'\n')
+    (ROOT/f'docs/evidence/spike07/perf/export-{tag}.json').write_text(json.dumps({'tag':tag,'archive_sha256':hashlib.sha256(archive.read_bytes()).hexdigest(),'working_source_overrides_LF_sha256':overrides,'pre_instrument_LF_sha256':manifest},indent=2)+'\n')
     print(folder)
 
 if __name__=='__main__':

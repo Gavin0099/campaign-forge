@@ -1,0 +1,30 @@
+{
+	"pass": true,
+	"readbacks": 0,
+	"runs": [
+		{
+			"crit": false,
+			"kind": "melee",
+			"mode": "normal",
+			"process_seconds": 0.941247787878788,
+			"reduced": false,
+			"wall_seconds": 0.949141
+		},
+		{
+			"crit": true,
+			"kind": "melee",
+			"mode": "crit",
+			"process_seconds": 1.01596633333333,
+			"reduced": false,
+			"wall_seconds": 1.016909
+		},
+		{
+			"crit": false,
+			"kind": "melee",
+			"mode": "reduced",
+			"process_seconds": 0.753918666666667,
+			"reduced": true,
+			"wall_seconds": 0.746875
+		}
+	]
+}

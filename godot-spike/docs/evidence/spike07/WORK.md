@@ -176,3 +176,15 @@ AI distance_map~54ms/action and telemetry reach~22ms/action; no per-frame AI.
 Old34ms mean not reproduced, cannot attribute missing delta to code. All command
 exits0; one cleanup2objects warning retained. CPU engine monitor is coarse sampled
 value, not per-frame CPU sum; GPU elapsed not available. W4 has NO gameplay fix.
+
+## W5 — fixes and equivalence
+Retain minimap terrain commands, exact cached coordinates; invalidate bounds,size,
+rows,holdpoint, not actor movement. Call-local occupancy/terrain/ZoC indexes in
+field_rules reach/distance_map; no global cache or tie-order changes. grid_rules
+untouched. Compare full W4 golden rules snapshot including attack/move/turn.
+Tests2/2,483assertions,exit0. Same-frame deployment/V/O pixel differences0/0/0.
+Same native40-style matrix3repeats after: scroll16.67/16.64,normal16.71,2x16.77ms;
+minimum means PASS; strict16.67all/worst33 FAIL (enemyworst42.23/39.09).
+AI~28ms remainsperaction; no per-frame AI, no unsupported GPU claim. Native field
+normal/crit/reduced<=1.017s,Skirmish9<=1.7s,Reduced<=normal,readbacks0,exit0.
+PERFORMANCE.md records causes, limits and unchanged pixels/profiles.

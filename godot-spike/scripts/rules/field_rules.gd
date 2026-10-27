@@ -25,6 +25,14 @@ static func occupant(s: Dictionary, cell: Vector2i, except_id: String = "") -> D
 		if u.id!=except_id and u.hp>0 and u.cell==cell: return u
 	return {}
 
+static func occupancy(s: Dictionary, except_id: String = "") -> Dictionary:
+	# Call-local index, same first-living-unit semantics as occupant. Never shared
+	# across actions, so move/death/turn invalidation cannot become stale.
+	var found := {}
+	for u in s.units:
+		if u.id!=except_id and u.hp>0 and not found.has(u.cell): found[u.cell]=u
+	return found
+
 static func inside(level: Dictionary, cell: Vector2i) -> bool:
 	return cell.x>=0 and cell.y>=0 and cell.x<level.size.x and cell.y<level.size.y
 
@@ -82,17 +90,21 @@ static func reach(s: Dictionary, id: String, budget: int = -1) -> Dictionary:
 	var costs := {u.cell:0}
 	var parents := {}
 	var open: Array = [u.cell]
+	var occupied := occupancy(s,id)
+	var control := zoc_cells(s) if u.side=="enemy" and s.level.get("scout_kit",false) else {}
+	var terrain_costs := {}
 	while not open.is_empty():
 		open.sort_custom(func(a,b): return costs[a]<costs[b])
 		var here: Vector2i = open.pop_front()
 		# Entering scout control ends this move; leaving an initial controlled cell
 		# remains possible. No damage, reaction strike or global RNG.
-		if here!=u.cell and not zoc_sources(s,here,u.side).is_empty(): continue
+		if here!=u.cell and control.has(here): continue
 		for direction in DIRS:
 			var next: Vector2i = here+direction
-			var step := cost(s.level,next,u.kind)
+			if not terrain_costs.has(next): terrain_costs[next]=cost(s.level,next,u.kind)
+			var step: int = terrain_costs[next]
 			var total: int = costs[here]+step
-			if step==0 or total>budget or not occupant(s,next,id).is_empty(): continue
+			if step==0 or total>budget or occupied.has(next): continue
 			if costs.has(next) and costs[next]<=total: continue
 			costs[next]=total
 			parents[next]=here
@@ -272,6 +284,12 @@ static func distance_map(s: Dictionary, kind: String, side: String, target_id: S
 	var costs := {}
 	var open: Array = []
 	var stats: Dictionary = s.level.stats[kind]
+	var occupants := occupancy(s)
+	var terrain_costs := {}
+	for y in range(s.level.size.y):
+		for x in range(s.level.size.x):
+			var cell := Vector2i(x,y)
+			terrain_costs[cell]=cost(s.level,cell,kind)
 	for target in s.units:
 		if target.hp<=0 or target.side==side: continue
 		if not target_id.is_empty() and target.id!=target_id: continue
@@ -279,7 +297,7 @@ static func distance_map(s: Dictionary, kind: String, side: String, target_id: S
 			for dx in range(-int(stats.max_range),int(stats.max_range)+1):
 				var p: Vector2i = target.cell+Vector2i(dx,dy)
 				var d := distance(p,target.cell)
-				if d<stats.min_range or d>stats.max_range or cost(s.level,p,kind)==0 or not occupant(s,p).is_empty(): continue
+				if d<stats.min_range or d>stats.max_range or terrain_costs.get(p,0)==0 or occupants.has(p): continue
 				if kind=="ranged" and not Sight.check(s,{"id":"path-probe","cell":p},target).clear: continue
 				if not costs.has(p):
 					costs[p]=0
@@ -289,10 +307,10 @@ static func distance_map(s: Dictionary, kind: String, side: String, target_id: S
 		var here: Vector2i = open.pop_front()
 		for dir in DIRS:
 			var p: Vector2i = here+dir
-			if cost(s.level,p,kind)==0: continue
-			var occupied := occupant(s,p)
+			if terrain_costs.get(p,0)==0: continue
+			var occupied: Dictionary = occupants.get(p,{})
 			if not occupied.is_empty() and occupied.side!=side: continue
-			var total: int = costs[here]+cost(s.level,here,kind)
+			var total: int = costs[here]+int(terrain_costs[here])
 			if costs.has(p) and costs[p]<=total: continue
 			costs[p]=total
 			# Friendly occupied cells may read a distance, but cannot be transit.

@@ -2,7 +2,7 @@
 
 Three repetitions per cell; GL Compatibility, AMD780M, max60FPS, VSync off. No movie/readbacks/concurrent Godot. Exact git exports; same reached spike06 flank24018 T2 and waveT8, same enemy event replay. AI evaluated separately. CPU scopes inclusive and overlapping; wall minus process is not GPU time. No GPU timer is claimed.
 
-| Build | Workload | Mean / p95 / worst ms | CPU process mean | Draw calls mean | Pure AI ms mean |
+| Build | Workload | Mean / p95 / worst ms | Sampled TIME_PROCESS monitor ms | Draw calls mean | Pure AI ms mean |
 | --- | --- | --- | --- | --- | --- |
 | spike05 | scroll-T2 | 23.65 / 29.21 / 32.61 | 66.90 | 2245.0 | — |
 | spike05 | scroll-wave | 23.73 / 29.00 / 49.04 | 53.31 | 2214.2 | — |
@@ -17,6 +17,10 @@ Three repetitions per cell; GL Compatibility, AMD780M, max60FPS, VSync off. No m
 | before | enemy-normal | 25.04 / 29.75 / 53.51 | 72.00 | 2257.2 | 61.619 |
 | before | enemy-2x | 24.95 / 30.37 / 45.47 | 160.61 | 2259.8 | 67.47033333333333 |
 | diagnostic | scroll-wave-no-minimap | 16.69 / 28.63 / 31.32 | 37.91 | 1771.8 | — |
+| after | scroll-T2 | 16.67 / 27.30 / 30.80 | 59.68 | 2245.0 | — |
+| after | scroll-wave | 16.64 / 29.65 / 31.17 | 45.33 | 2214.2 | — |
+| after | enemy-normal | 16.71 / 29.77 / 42.23 | 59.54 | 2257.1 | 27.557333333333332 |
+| after | enemy-2x | 16.77 / 29.50 / 39.09 | 144.69 | 2259.6 | 29.208333333333332 |
 
 ## Cause (W4, measurement before fixes)
 
@@ -64,3 +68,33 @@ no change to gameplay source inW4. Temporary exports removed byW8.
 All native/import/diagnostic/pixel/preview commands exit0. Before export exit has
 an engine cleanup warning for2objects (no script error; performance report valid);
 retain raw log, not silent normalization. Not a production memory-leak certification.
+
+## Fix → measured result (W5)
+
+| Measured cause | Fix | Same workload before → after |
+| --- | --- | --- |
+| minimap terrain rebuild12.42ms/frame | Retained static Node2D commands + precomputed exact vertex transforms; only invalidate on size/bounds/terrain/goal change. Live dots/camera rectangle remain live | wave scroll24.36→16.64ms, T2scroll23.58→16.67ms |
+| distance_map repeated linear occupant and terrain/stat queries | Call-local first-living occupancy and terrain-cost indexes; same Dijkstra order/ties/parents. reach also call-local occupancy/ZoC/terrain | own wave AI61.62→27.56ms (normal repeats); no global mutable cache |
+| action playback telemetry/rebuild plus draw submission | same local reach optimization, no telemetry removed | normal25.04→16.71ms,2x24.95→16.77ms |
+
+PASS minimum means20.7scroll/23.5enemy; **FAIL strict <=16.67ms all workloads
+and worst<33ms**. Enemy normalworst42.23,2x39.09ms; scrollworst30.80/31.17.
+One-time terrain _draw/setup and synchronous action telemetry/rebuild remain;
+own AI still27–29ms/action, ~2200 retained draw calls/frame. Frame-cap/host jitter
+and render submission remain mixed in wall samples; no GPU elapsed measurement,
+so GPU-fill bottleneck or necessity of art/renderer changes is NOT established.
+No claim that further improvement is impossible; no renderer/art changes made.
+
+Exact same runtime frozen-idle frames: deployment,V,O each0 differing RGBpixels
+(pixel-diff.json and six PNGs). Same draw order/coordinates/colors/font/labels;
+static geometry retained as commands, not baked textures. All five profiles and
+impact code untouched. W2's truthful T3 warning is present both before/after.
+Tests compare optimized reach costs+parents,threat,AIevents/states vs full W4 rule
+snapshot across reached states,moves,attack and nextturn;483assertions/2tests,exit0.
+Minimap mutation/resize/goal and forced-fresh invalidation checked; units/turn
+correctly leave terrain cache intact. Golden snapshot exact d6455d3 field_rules;
+it is a test fixture, not a selectable gameplay rules variant.
+
+Native no-capture field normal/crit/reduced0.949/1.017/0.747s,all<=1.7s;
+Skirmish all9 setups×modes pass<=1.7s with Reduced<=normal (hitfeel/timing-runtime).
+Readbacks0; both commands exit0. Dedicated full verification followsW7.

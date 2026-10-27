@@ -44,6 +44,9 @@ def main():
         for key,v in workloads.items():
             s=v['wall_ms'];ai=v['ai_ms']
             lines.append(f"| {name} | {key} | {s['mean']:.2f} / {s['p95']:.2f} / {s['worst']:.2f} | {v['process_ms']['mean']:.2f} | {v['draw_calls']['mean']:.1f} | {ai['mean'] if ai else '—'} |")
-    (ROOT/'PERFORMANCE.md').write_text('\n'.join(lines)+'\n')
+    report=ROOT/'PERFORMANCE.md'
+    old=report.read_text(encoding='utf-8-sig') if report.exists() else ''
+    notes='\n## Cause'+old.split('\n## Cause',1)[1] if '\n## Cause' in old else ''
+    report.write_text('\n'.join(lines)+'\n'+notes)
     print('\n'.join(lines[4:]))
 if __name__=='__main__':main()
