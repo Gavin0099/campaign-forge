@@ -93,15 +93,15 @@
     },
     {
       "path": "godot-spike/docs/evidence/spike07/WORK.md",
-      "bytes": 15883,
-      "sha256_working": "b571b6b612143bd9e1d72de10266fe4e3b91486e60ae3454f4215724cfaf8d05",
-      "sha256_LF": "73444a1254c78dc1906ebb98e58815240ca020067fe8455f4665ff42e97c4f0b"
+      "bytes": 17265,
+      "sha256_working": "f4f8715ab70ca0d0cafb599a33af3540789c92d3897feef0bdfe0cdc337c300d",
+      "sha256_LF": "60047e5cdd987743491e1cd2c31821c864f48b843f7cf60f263d06017784c5dd"
     },
     {
       "path": "godot-spike/docs/HANDOFF.md",
-      "bytes": 241139,
-      "sha256_working": "d8ef51b5345445d6979dd30af694687c8939037bf86c947ba4305f45005a7865",
-      "sha256_LF": "d8ef51b5345445d6979dd30af694687c8939037bf86c947ba4305f45005a7865"
+      "bytes": 272974,
+      "sha256_working": "0a9b8b5dce0cb897743ac2ed36a79a0fb545a882b57d899adaff6e4b868f9c9a",
+      "sha256_LF": "820834cb8eb0b3acb1c31c04e164e2aee9a4bff13e57cc084ec6d74c28a70456"
     },
     {
       "path": "godot-spike/docs/VERIFICATION.md",

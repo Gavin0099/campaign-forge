@@ -2,10 +2,12 @@
  godot-spike/data/levels/field_24x18.gd             |     6 +-
  godot-spike/data/levels/field_24x18_spike06.gd     |    55 +
  godot-spike/data/levels/field_24x18_spike06.gd.uid |     1 +
+ godot-spike/docs/VERIFICATION.md                   |    47 +
  godot-spike/docs/evidence/spike07/MOVIE.md         |    11 +
  godot-spike/docs/evidence/spike07/PACING.md        |   148 +
  godot-spike/docs/evidence/spike07/PERFORMANCE.md   |   151 +
- godot-spike/docs/evidence/spike07/WORK.md          |   221 +
+ godot-spike/docs/evidence/spike07/README.md        |    33 +
+ godot-spike/docs/evidence/spike07/WORK.md          |   240 +
  .../docs/evidence/spike07/ablation-fallback.log    |   Bin 0 -> 24552 bytes
  .../docs/evidence/spike07/ablation-leader-post.log |   Bin 0 -> 25850 bytes
  .../evidence/spike07/ablation-post-one-wave-t3.log |   Bin 0 -> 33068 bytes
@@ -286,6 +288,7 @@
  .../evidence/spike07/attempts/ablation-post.log    |   Bin 0 -> 6102 bytes
  .../evidence/spike07/attempts/baseline-routes.log  |   Bin 0 -> 5466 bytes
  .../evidence/spike07/attempts/baseline-spike07.log |   Bin 0 -> 3918 bytes
+ godot-spike/docs/evidence/spike07/audit.json       |    13 +
  .../docs/evidence/spike07/baseline-dash.log        |   Bin 0 -> 6016 bytes
  .../docs/evidence/spike07/baseline-naive.log       |   Bin 0 -> 6384 bytes
  .../evidence/spike07/baseline-recheck/BASELINE.md  |    39 +
@@ -801,8 +804,10 @@
  .../docs/evidence/spike07/capture-runtime.json     |   313 +
  .../docs/evidence/spike07/capture-scout.json       |   276 +
  .../evidence/spike07/capture-source-hashes.json    |   297 +
+ .../docs/evidence/spike07/changed-paths.txt        |  1057 +
  .../docs/evidence/spike07/deployment-1080.png      |   Bin 0 -> 821573 bytes
  godot-spike/docs/evidence/spike07/deployment.png   |   Bin 0 -> 428777 bytes
+ godot-spike/docs/evidence/spike07/diff-stat.txt    |  1057 +
  godot-spike/docs/evidence/spike07/enemy-60fps.avi  |   Bin 0 -> 51411544 bytes
  .../docs/evidence/spike07/enemy-frames/0000.png    |   Bin 0 -> 612182 bytes
  .../docs/evidence/spike07/enemy-frames/0059.png    |   Bin 0 -> 736834 bytes
@@ -816,6 +821,8 @@
  godot-spike/docs/evidence/spike07/enemy-strip.png  |   Bin 0 -> 963880 bytes
  .../docs/evidence/spike07/enemy-wave-contact.png   |   Bin 0 -> 593368 bytes
  .../docs/evidence/spike07/field-timing.json        |    30 +
+ .../docs/evidence/spike07/frozen-profiles.json     |    32 +
+ godot-spike/docs/evidence/spike07/git-scope.json   |    17 +
  .../evidence/spike07/hitfeel/timing-runtime.json   |   544 +
  .../evidence/spike07/impact-profile-before.json    |    22 +
  .../docs/evidence/spike07/import-spike07.log       |   Bin 0 -> 3040 bytes
@@ -988,10 +995,14 @@
  .../evidence/spike07/scout/runs/road-24018.json    |  7622 +++++++
  .../docs/evidence/spike07/snapshot-enemy.json      |   451 +
  .../docs/evidence/spike07/snapshot-scout.json      |   466 +
+ .../docs/evidence/spike07/source-hashes.json       |  1769 ++
  .../docs/evidence/spike07/spike05-spot/index.json  |    15 +
  .../spike07/spike05-spot/runs/flank-24018.json     |  6181 ++++++
  .../spike07/spike05-spot/runs/road-24018.json      |  6845 +++++++
+ .../docs/evidence/spike07/temp-cleanup.json        |     7 +
+ godot-spike/docs/evidence/spike07/test-run.log     |   Bin 0 -> 32844 bytes
  .../docs/evidence/spike07/threat-legend.png        |   Bin 0 -> 426050 bytes
+ .../docs/evidence/spike07/untracked-paths.txt      |    21 +
  godot-spike/docs/evidence/spike07/w1-tests.log     |   Bin 0 -> 1618 bytes
  godot-spike/docs/evidence/spike07/w2-tests.log     |   Bin 0 -> 1946 bytes
  godot-spike/docs/evidence/spike07/w3-flank.log     |   Bin 0 -> 2886 bytes
@@ -1015,43 +1026,58 @@
  godot-spike/docs/evidence/spike07/w6-report.log    |   Bin 0 -> 3534 bytes
  godot-spike/docs/evidence/spike07/w6-runtime.log   |   Bin 0 -> 498 bytes
  godot-spike/docs/evidence/spike07/w6-spike05.log   |   Bin 0 -> 290 bytes
+ godot-spike/docs/evidence/spike07/w7-audit.log     |   Bin 0 -> 218 bytes
+ .../docs/evidence/spike07/w7-exit-codes.json       |     5 +
+ godot-spike/docs/evidence/spike07/w7-import.log    |   Bin 0 -> 5048 bytes
  godot-spike/docs/evidence/spike07/warning.png      |   Bin 0 -> 505525 bytes
  .../docs/evidence/spike07/win-continuous.png       |   Bin 0 -> 308700 bytes
  godot-spike/scripts/levels/field_battle.gd         |     2 +
  godot-spike/scripts/levels/field_labels.gd         |     2 +-
  godot-spike/scripts/levels/field_minimap.gd        |    58 +-
  .../scripts/levels/field_minimap_terrain.gd        |     9 +
+ .../scripts/levels/field_minimap_terrain.gd.uid    |     1 +
  godot-spike/scripts/levels/field_telemetry.gd      |    24 +-
  godot-spike/scripts/rules/field_rules.gd           |    44 +-
  .../tests/fixtures/field_rules_preperf07.gd        |   487 +
+ .../tests/fixtures/field_rules_preperf07.gd.uid    |     1 +
  godot-spike/tests/test_field_autoplay.gd           |     6 +-
  godot-spike/tests/test_field_rules.gd              |     4 +-
  godot-spike/tests/test_perf07.gd                   |    60 +
+ godot-spike/tests/test_perf07.gd.uid               |     1 +
  godot-spike/tests/test_spike06_harness.gd          |     2 +-
  godot-spike/tests/test_spike06_wave.gd             |     4 +-
  godot-spike/tests/test_spike07.gd                  |    97 +
  godot-spike/tests/test_spike07.gd.uid              |     1 +
- godot-spike/tools/audit_spike07.py                 |    68 +
+ godot-spike/tools/audit_spike07.py                 |    73 +
  godot-spike/tools/autoplay_field.gd                |    22 +-
  godot-spike/tools/capture_field07.gd               |   284 +
+ godot-spike/tools/capture_field07.gd.uid           |     1 +
  godot-spike/tools/capture_spike07.gd               |   161 +
+ godot-spike/tools/capture_spike07.gd.uid           |     1 +
  godot-spike/tools/check_spike07_baseline.py        |    30 +
  godot-spike/tools/field_harness.gd                 |    13 +-
  godot-spike/tools/field_policy.gd                  |    53 +-
  godot-spike/tools/field_policy_spike06.gd          |   150 +
  godot-spike/tools/field_policy_spike06.gd.uid      |     1 +
  godot-spike/tools/make_perf_states07.gd            |    24 +
+ godot-spike/tools/make_perf_states07.gd.uid        |     1 +
  godot-spike/tools/package_spike07.py               |   113 +
  godot-spike/tools/perf_field07.gd                  |   111 +
+ godot-spike/tools/perf_field07.gd.uid              |     1 +
  godot-spike/tools/perf_meter07.gd                  |    11 +
+ godot-spike/tools/perf_meter07.gd.uid              |     1 +
  godot-spike/tools/perf_states07.bin                |   Bin 0 -> 31248 bytes
  godot-spike/tools/pixels_field07.gd                |    32 +
+ godot-spike/tools/pixels_field07.gd.uid            |     1 +
  godot-spike/tools/prepare_perf07.py                |    83 +
  godot-spike/tools/preview_perf07.gd                |    41 +
+ godot-spike/tools/preview_perf07.gd.uid            |     1 +
  godot-spike/tools/probe_balance07.gd               |    75 +
+ godot-spike/tools/probe_balance07.gd.uid           |     1 +
  godot-spike/tools/summarize_ablation07.py          |    34 +
  godot-spike/tools/summarize_perf07.py              |    52 +
  godot-spike/tools/summarize_render07.py            |    48 +
  godot-spike/tools/summarize_spike07.py             |    60 +
  godot-spike/tools/timing_field07.gd                |    30 +
- 1056 files changed, 4810938 insertions(+), 47 deletions(-)
+ godot-spike/tools/timing_field07.gd.uid            |     1 +
+ 1082 files changed, 4815032 insertions(+), 47 deletions(-)

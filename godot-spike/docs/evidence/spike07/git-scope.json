@@ -3,7 +3,7 @@
     "base":  "1cff2db",
     "diff_check_exit":  0,
     "branch":  "codex/godot-spike",
-    "head_before_containing_commit":  "8311799a81220f523bca9d02812f1f5e547e8e9f",
+    "head_before_containing_commit":  "9574a4f890ac616cbd4e266737f869f2919b496d",
     "protected_paths":  [
                             "ui-prototype",
                             "docs/art-briefs",
@@ -12,6 +12,7 @@
                             "godot-spike/art",
                             "godot-spike/config",
                             "godot-spike/scripts/rules/grid_rules.gd",
+                            "godot-spike/scripts/skirmish.gd",
                             "godot-spike/scenes/Skirmish.tscn"
                         ]
 }

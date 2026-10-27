@@ -238,3 +238,23 @@ Removed only exact resolved own .godot/spike07-perf path after verifying it lies
 inside this workspace. All4historical/runtime exports, archives and imports gone;
 no temporaryGitworktree was created, no otherworktree touched. temp-cleanup.json.
 W7sourcehashes are pre-containing-commit bytes, W8refreshes documents only.
+
+## W8 — handoff and stop
+TraditionalChinese spike-07 section starts with spoiler-free blind-player launch/
+controls/win/lose, then verified reprocommands, all9ablations/valuechanges,
+scout successes/FAILs, matched-replay and AI-inclusive perf tables,40seedsummary
+and48policy×outcome strata/Wilson/distinct, placeholders/humanpending/risks,
+two one-line Owner questions/resourcechecklist/commit table. No reopened accepted
+difficulty/kit/flash/V/O questions. Exact impact flag checked in source:
+--impact-profile (not --profile). Same-seed24018roadwin14/flanklose16 cited.
+W8 public README cross-check: Grid-Tactics purelogic/render separation; HopeMetal
+Godot grid/data/cost features and separate asset-license credit. URLs inhandoff;
+no code/art downloaded into project, no new license/attribution-bearing asset.
+
+Documentation generator's PowerShell stdin converted en/em dashes toquestion
+marks in newly generated tablecells; restored UTF8 only innewsection, checked no
+questionmarks remain in tablecells and preserved oldhandoff content. gitdiffcheck
+caught trailingblank atEOF and it was removed. Neither issue touched game/evidence
+numbers. No game tests repeated after document-only edits; W7GUT remains175/175.
+Final offline audit and source/doc hash refresh before containingW8commit.
+No push/merge/PR/stash/SessionEnd/canonical closeout. Stop after W8handoffcommit.
