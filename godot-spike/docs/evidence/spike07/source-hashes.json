@@ -1,0 +1,1769 @@
+{
+  "method": "Pre-containing-commit source bytes, text LF normalization also recorded. Excludes self and generated evidence. W8 refreshes docs only. Git protected audit separately checks unchanged historical blobs.",
+  "files": [
+    {
+      "path": "godot-spike/config/impact_profile.tres",
+      "bytes": 1144,
+      "sha256_working": "448467b41a90619b688f7d4704594f0b74108bb9462dcc49a5cc3b51a41bd8ee",
+      "sha256_LF": "448467b41a90619b688f7d4704594f0b74108bb9462dcc49a5cc3b51a41bd8ee"
+    },
+    {
+      "path": "godot-spike/config/impact_profile_a9_baseline.tres",
+      "bytes": 277,
+      "sha256_working": "a080f88ba5953395cbc26c8e6d7e8067376b215560460ea301c5022b50dd053a",
+      "sha256_LF": "a080f88ba5953395cbc26c8e6d7e8067376b215560460ea301c5022b50dd053a"
+    },
+    {
+      "path": "godot-spike/config/impact_profile_spike03.tres",
+      "bytes": 1126,
+      "sha256_working": "110040412bff567b8cc978fe898dabfd891e358bf2a4221d0fad2362a6b55bf5",
+      "sha256_LF": "110040412bff567b8cc978fe898dabfd891e358bf2a4221d0fad2362a6b55bf5"
+    },
+    {
+      "path": "godot-spike/config/impact_profile_spike04.tres",
+      "bytes": 1150,
+      "sha256_working": "f54958b8783c32cb89b35ae20b4e7f93d9ca9fed7ccf1dd1a01a22dd3e0959a6",
+      "sha256_LF": "f54958b8783c32cb89b35ae20b4e7f93d9ca9fed7ccf1dd1a01a22dd3e0959a6"
+    },
+    {
+      "path": "godot-spike/config/impact_profile_spike05.tres",
+      "bytes": 1144,
+      "sha256_working": "011c73d879442bd899ded25cc9ae40aefa05e8839c4f897fede73254d5467c5f",
+      "sha256_LF": "011c73d879442bd899ded25cc9ae40aefa05e8839c4f897fede73254d5467c5f"
+    },
+    {
+      "path": "godot-spike/data/levels/field_24x18.gd",
+      "bytes": 3194,
+      "sha256_working": "a4c12c0d6158d53d2b08478858eb91ff3ce4b0d4f332cb25f6a2b7b07f4a6074",
+      "sha256_LF": "a4c12c0d6158d53d2b08478858eb91ff3ce4b0d4f332cb25f6a2b7b07f4a6074"
+    },
+    {
+      "path": "godot-spike/data/levels/field_24x18.gd.uid",
+      "bytes": 20,
+      "sha256_working": "c2ff70d23dfbb96705ac8a15e7ccdd2d51c9a49720989cb1abb660e7bd468c64",
+      "sha256_LF": "c2ff70d23dfbb96705ac8a15e7ccdd2d51c9a49720989cb1abb660e7bd468c64"
+    },
+    {
+      "path": "godot-spike/data/levels/field_24x18_spike05.gd",
+      "bytes": 3477,
+      "sha256_working": "bf4865a49c7bb3cfa18d30f4f20b7935660327256b09eae4668b6a7158e2edbd",
+      "sha256_LF": "bf4865a49c7bb3cfa18d30f4f20b7935660327256b09eae4668b6a7158e2edbd"
+    },
+    {
+      "path": "godot-spike/data/levels/field_24x18_spike05.gd.uid",
+      "bytes": 19,
+      "sha256_working": "27271cb90b8be33ddca9207cd02bdf5284ccb139fbce4085bd9fbfc9f55443c4",
+      "sha256_LF": "27271cb90b8be33ddca9207cd02bdf5284ccb139fbce4085bd9fbfc9f55443c4"
+    },
+    {
+      "path": "godot-spike/data/levels/field_24x18_spike06.gd",
+      "bytes": 3194,
+      "sha256_working": "b206af4e2ce5da16756f112aa30aac6bb55203e2437ccbf3a9ef7bcdb004d6d5",
+      "sha256_LF": "b206af4e2ce5da16756f112aa30aac6bb55203e2437ccbf3a9ef7bcdb004d6d5"
+    },
+    {
+      "path": "godot-spike/data/levels/field_24x18_spike06.gd.uid",
+      "bytes": 20,
+      "sha256_working": "ffd3da2c8dcf1b9ab93445e76487c0330952ea874279079f907e10de477d0844",
+      "sha256_LF": "ffd3da2c8dcf1b9ab93445e76487c0330952ea874279079f907e10de477d0844"
+    },
+    {
+      "path": "godot-spike/docs/evidence/spike07/MOVIE.md",
+      "bytes": 1541,
+      "sha256_working": "fb635f3c1fa3b6db67020bea0d1ce3e77293eb806c66e3cc2cd9c140bf1e1f4f",
+      "sha256_LF": "c2eeb6ebf4f5559910a981957ca34c8edab1fc38926f8ee4e7ad91d631bfe792"
+    },
+    {
+      "path": "godot-spike/docs/evidence/spike07/PACING.md",
+      "bytes": 15947,
+      "sha256_working": "3f82875a2c4465c1b5a35bd70b3972d2cb76a2e3925cc7a62748d15ab554dd84",
+      "sha256_LF": "4958aa85214e116ab603d24db9680c03f0b80939e5bf62bfcf6948e65cb33ab5"
+    },
+    {
+      "path": "godot-spike/docs/evidence/spike07/PERFORMANCE.md",
+      "bytes": 11320,
+      "sha256_working": "12fd6f0f331c051fe9c70181640b07296e0c5fc4026296381ddccda5eff5308e",
+      "sha256_LF": "f306109807420ee7020fe2ea38b68ae90c0bfa7d8236ba9c9f0ab7d3b9abf9d0"
+    },
+    {
+      "path": "godot-spike/docs/evidence/spike07/README.md",
+      "bytes": 3613,
+      "sha256_working": "e3989522856cd0d8eeaf11436665b7299d6e5651bdbab6423e668426402daf7f",
+      "sha256_LF": "e3989522856cd0d8eeaf11436665b7299d6e5651bdbab6423e668426402daf7f"
+    },
+    {
+      "path": "godot-spike/docs/evidence/spike07/WORK.md",
+      "bytes": 15883,
+      "sha256_working": "b571b6b612143bd9e1d72de10266fe4e3b91486e60ae3454f4215724cfaf8d05",
+      "sha256_LF": "73444a1254c78dc1906ebb98e58815240ca020067fe8455f4665ff42e97c4f0b"
+    },
+    {
+      "path": "godot-spike/docs/HANDOFF.md",
+      "bytes": 241139,
+      "sha256_working": "d8ef51b5345445d6979dd30af694687c8939037bf86c947ba4305f45005a7865",
+      "sha256_LF": "d8ef51b5345445d6979dd30af694687c8939037bf86c947ba4305f45005a7865"
+    },
+    {
+      "path": "godot-spike/docs/VERIFICATION.md",
+      "bytes": 131666,
+      "sha256_working": "a62aca4007adb99eedb94c449e067220854557650bbf9449aae3a69274a13a72",
+      "sha256_LF": "579f21bf9fcdde035c27771c486c75bcc9c85290817d3a5bd3df1ed2bb94c7d0"
+    },
+    {
+      "path": "godot-spike/project.godot",
+      "bytes": 574,
+      "sha256_working": "b52226cd0e48d69c6763aae6d3defb2dbf2d9bbb0690074b90750051d071bdcd",
+      "sha256_LF": "b52226cd0e48d69c6763aae6d3defb2dbf2d9bbb0690074b90750051d071bdcd"
+    },
+    {
+      "path": "godot-spike/scenes/levels/Field24x18.tscn",
+      "bytes": 180,
+      "sha256_working": "f73dd0d59d6f15ac6690a3a3340f5763e6effbca7282db538944331ceb2b8cab",
+      "sha256_LF": "f73dd0d59d6f15ac6690a3a3340f5763e6effbca7282db538944331ceb2b8cab"
+    },
+    {
+      "path": "godot-spike/scenes/mockups/BigMapMockup.tscn",
+      "bytes": 185,
+      "sha256_working": "7b6c4479e49f03c634e4f0ff7d7e6be3ea25524377877a63dc2cf883a4f3090c",
+      "sha256_LF": "7b6c4479e49f03c634e4f0ff7d7e6be3ea25524377877a63dc2cf883a4f3090c"
+    },
+    {
+      "path": "godot-spike/scenes/Skirmish.tscn",
+      "bytes": 167,
+      "sha256_working": "9ab889b6fa9f42a4305cb51b178efafc00b155be9237c7aa93d905ec8ed5ab14",
+      "sha256_LF": "9ab889b6fa9f42a4305cb51b178efafc00b155be9237c7aa93d905ec8ed5ab14"
+    },
+    {
+      "path": "godot-spike/scripts/anim/anim_manifest.gd",
+      "bytes": 4873,
+      "sha256_working": "098478742de8091238e706ea4545403eb482280ae1036ef1e543948f7fd8f724",
+      "sha256_LF": "098478742de8091238e706ea4545403eb482280ae1036ef1e543948f7fd8f724"
+    },
+    {
+      "path": "godot-spike/scripts/anim/anim_manifest.gd.uid",
+      "bytes": 20,
+      "sha256_working": "45b0755ae259f0cbbf479df4220a9ccc12eb61e8a90b5a3777de0c2479e6d9b8",
+      "sha256_LF": "45b0755ae259f0cbbf479df4220a9ccc12eb61e8a90b5a3777de0c2479e6d9b8"
+    },
+    {
+      "path": "godot-spike/scripts/anim/frame_player.gd",
+      "bytes": 3370,
+      "sha256_working": "1934e9250c03d9e34b06502d1cc4bd076489f8431d97a8ac7f7dfa3524a7016e",
+      "sha256_LF": "1934e9250c03d9e34b06502d1cc4bd076489f8431d97a8ac7f7dfa3524a7016e"
+    },
+    {
+      "path": "godot-spike/scripts/anim/frame_player.gd.uid",
+      "bytes": 20,
+      "sha256_working": "cf73b2b58a46a9d703c6340e0cb5955daacab65eccd89d5b5b67fa343f1b2e29",
+      "sha256_LF": "cf73b2b58a46a9d703c6340e0cb5955daacab65eccd89d5b5b67fa343f1b2e29"
+    },
+    {
+      "path": "godot-spike/scripts/anim/world_particles.gd",
+      "bytes": 266,
+      "sha256_working": "05f1a8cd50f76509272ed67fe1afcfd1a5631cf235e3f834b293c060af140be3",
+      "sha256_LF": "05f1a8cd50f76509272ed67fe1afcfd1a5631cf235e3f834b293c060af140be3"
+    },
+    {
+      "path": "godot-spike/scripts/anim/world_particles.gd.uid",
+      "bytes": 20,
+      "sha256_working": "8b950ced6f58ad3846f9938252ba7f01c7b961f1a918d17f997e8f1bfa0d64fd",
+      "sha256_LF": "8b950ced6f58ad3846f9938252ba7f01c7b961f1a918d17f997e8f1bfa0d64fd"
+    },
+    {
+      "path": "godot-spike/scripts/battle_hud.gd",
+      "bytes": 11423,
+      "sha256_working": "6155c463a59d8140802771347c92979cab1f1d3fd380652b2c5a362879bd351d",
+      "sha256_LF": "6155c463a59d8140802771347c92979cab1f1d3fd380652b2c5a362879bd351d"
+    },
+    {
+      "path": "godot-spike/scripts/battle_hud.gd.uid",
+      "bytes": 20,
+      "sha256_working": "e04a7caa4b40fb24fe45b798cd59af883fa123b37977640c7d209c10b5ad1e1a",
+      "sha256_LF": "e04a7caa4b40fb24fe45b798cd59af883fa123b37977640c7d209c10b5ad1e1a"
+    },
+    {
+      "path": "godot-spike/scripts/capture_a2.gd",
+      "bytes": 7755,
+      "sha256_working": "c35d41c7dd77f497e85316727a9e5403c8a8b5eda5778d2662665864d256ae77",
+      "sha256_LF": "c35d41c7dd77f497e85316727a9e5403c8a8b5eda5778d2662665864d256ae77"
+    },
+    {
+      "path": "godot-spike/scripts/capture_a2.gd.uid",
+      "bytes": 20,
+      "sha256_working": "a6df9647d21edafbcf3cfa2b78c1f5c488228a8a2b3bd7cc52aac89e96f29c53",
+      "sha256_LF": "a6df9647d21edafbcf3cfa2b78c1f5c488228a8a2b3bd7cc52aac89e96f29c53"
+    },
+    {
+      "path": "godot-spike/scripts/capture_run.gd",
+      "bytes": 5186,
+      "sha256_working": "7b58da46d7a70dd6c5e3a21c98f2de76881358273f6c27f7388a74e18f94905c",
+      "sha256_LF": "7b58da46d7a70dd6c5e3a21c98f2de76881358273f6c27f7388a74e18f94905c"
+    },
+    {
+      "path": "godot-spike/scripts/capture_run.gd.uid",
+      "bytes": 19,
+      "sha256_working": "5bad16d599283eb48f1ad27f082bae2584cf1e88e62c313a1fc76fd5ebb47344",
+      "sha256_LF": "5bad16d599283eb48f1ad27f082bae2584cf1e88e62c313a1fc76fd5ebb47344"
+    },
+    {
+      "path": "godot-spike/scripts/capture_spike02.gd",
+      "bytes": 9870,
+      "sha256_working": "2025c807894ace8dc28a5114d05930baec0d536fc1a16c8efe57922f8c413350",
+      "sha256_LF": "2025c807894ace8dc28a5114d05930baec0d536fc1a16c8efe57922f8c413350"
+    },
+    {
+      "path": "godot-spike/scripts/capture_spike02.gd.uid",
+      "bytes": 19,
+      "sha256_working": "6d71e35fac9fd67cd23b1dfb43dec65253ebbc0568a0ecd9aa32bac07f576245",
+      "sha256_LF": "6d71e35fac9fd67cd23b1dfb43dec65253ebbc0568a0ecd9aa32bac07f576245"
+    },
+    {
+      "path": "godot-spike/scripts/impact/impact_profile.gd",
+      "bytes": 6662,
+      "sha256_working": "aa1dfbce8c498037d679e2c00a7bcea45a523ce449c359ac7273a21b7750ed44",
+      "sha256_LF": "aa1dfbce8c498037d679e2c00a7bcea45a523ce449c359ac7273a21b7750ed44"
+    },
+    {
+      "path": "godot-spike/scripts/impact/impact_profile.gd.uid",
+      "bytes": 20,
+      "sha256_working": "1ed404c0e7f3930bcdf0384ff50008a99a2e826f7fe9868bceb3e838b2fb4708",
+      "sha256_LF": "1ed404c0e7f3930bcdf0384ff50008a99a2e826f7fe9868bceb3e838b2fb4708"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_battle.gd",
+      "bytes": 16380,
+      "sha256_working": "db29d65ab5fb5babcbccee66aeed151a289d37c4479158bb029ea35fb97e4cdb",
+      "sha256_LF": "db29d65ab5fb5babcbccee66aeed151a289d37c4479158bb029ea35fb97e4cdb"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_battle.gd.uid",
+      "bytes": 19,
+      "sha256_working": "e7140359d38a48d68fd20e8a1f67a1f17a4dc0ed2d0c6dfc30b3a581253f657a",
+      "sha256_LF": "e7140359d38a48d68fd20e8a1f67a1f17a4dc0ed2d0c6dfc30b3a581253f657a"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_camera.gd",
+      "bytes": 9440,
+      "sha256_working": "5a9a016925cb7bdb5e7444369ff5b78c981ccc1885814d380d023746f8b083fa",
+      "sha256_LF": "5a9a016925cb7bdb5e7444369ff5b78c981ccc1885814d380d023746f8b083fa"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_camera.gd.uid",
+      "bytes": 19,
+      "sha256_working": "7dfcc6a239088e7339f26a1373257d8a4dbd0426c407020d0ad167c9d0d17659",
+      "sha256_LF": "7dfcc6a239088e7339f26a1373257d8a4dbd0426c407020d0ad167c9d0d17659"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_ground.gd",
+      "bytes": 2573,
+      "sha256_working": "7bc47f0bc8e33bec0a5452fed2f6e65777a2340ac7288abc82b10ba46499cde7",
+      "sha256_LF": "7bc47f0bc8e33bec0a5452fed2f6e65777a2340ac7288abc82b10ba46499cde7"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_ground.gd.uid",
+      "bytes": 19,
+      "sha256_working": "6b31b82f9e188a670629160e249305a0dbde62c1801b39afd06ebfc7c0d61dae",
+      "sha256_LF": "6b31b82f9e188a670629160e249305a0dbde62c1801b39afd06ebfc7c0d61dae"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_hud.gd",
+      "bytes": 8742,
+      "sha256_working": "380c65bd27208fc0958cc7f3c54cd64567536d6a814a6a552f0868236804e44c",
+      "sha256_LF": "380c65bd27208fc0958cc7f3c54cd64567536d6a814a6a552f0868236804e44c"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_hud.gd.uid",
+      "bytes": 20,
+      "sha256_working": "66f4f0c388baeffb5967fbbe6a48ee253afd7fcf496f31321d03cb10cdea73fd",
+      "sha256_LF": "66f4f0c388baeffb5967fbbe6a48ee253afd7fcf496f31321d03cb10cdea73fd"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_impact.gd",
+      "bytes": 9196,
+      "sha256_working": "897b93a141e06dbd11f7d8a75e00e32c8e3350b2d11f611806ceac00dd75ca42",
+      "sha256_LF": "897b93a141e06dbd11f7d8a75e00e32c8e3350b2d11f611806ceac00dd75ca42"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_impact.gd.uid",
+      "bytes": 20,
+      "sha256_working": "57491b3e135c4d95d75b31cef8a33548b0fadc261d7f17e0744f4ddad45f5249",
+      "sha256_LF": "57491b3e135c4d95d75b31cef8a33548b0fadc261d7f17e0744f4ddad45f5249"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_indicators.gd",
+      "bytes": 3254,
+      "sha256_working": "05417a12a58a9a170a7aa39071c9267567bdd511af8ba5f3f400b00d85f368ee",
+      "sha256_LF": "05417a12a58a9a170a7aa39071c9267567bdd511af8ba5f3f400b00d85f368ee"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_indicators.gd.uid",
+      "bytes": 20,
+      "sha256_working": "3dfacba7304aa19033a47f02be86c51a5d262638f3adef2a2ad0037c3eeca8c2",
+      "sha256_LF": "3dfacba7304aa19033a47f02be86c51a5d262638f3adef2a2ad0037c3eeca8c2"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_labels.gd",
+      "bytes": 5473,
+      "sha256_working": "a22ad0fdb3efd11b7322662fca6d2ba817d6852764920903fe22a861555d1b4b",
+      "sha256_LF": "a22ad0fdb3efd11b7322662fca6d2ba817d6852764920903fe22a861555d1b4b"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_labels.gd.uid",
+      "bytes": 19,
+      "sha256_working": "5a6c45b20b626a53d98a4f88d400b757b99b442cba08d8bd12f7c7eadbde5e50",
+      "sha256_LF": "5a6c45b20b626a53d98a4f88d400b757b99b442cba08d8bd12f7c7eadbde5e50"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_minimap.gd",
+      "bytes": 3301,
+      "sha256_working": "3973a6fde86865cb2425aa16046c4dd17feab05fdbf7db65e81ef88d497a5828",
+      "sha256_LF": "3973a6fde86865cb2425aa16046c4dd17feab05fdbf7db65e81ef88d497a5828"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_minimap.gd.uid",
+      "bytes": 20,
+      "sha256_working": "795c2999fa2b11c3b24ebd3c46f76f324f86b7ac705da2e852f4ad8b5ecb7669",
+      "sha256_LF": "795c2999fa2b11c3b24ebd3c46f76f324f86b7ac705da2e852f4ad8b5ecb7669"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_minimap_terrain.gd",
+      "bytes": 381,
+      "sha256_working": "8b7143396882c84f402bca1de66e86cc038128a386f455d6a234f569709bcf8f",
+      "sha256_LF": "8b7143396882c84f402bca1de66e86cc038128a386f455d6a234f569709bcf8f"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_minimap_terrain.gd.uid",
+      "bytes": 20,
+      "sha256_working": "5beace55e0c3c75026db5ae26c671fc6c200b8660400e3ca55e46ac52074583a",
+      "sha256_LF": "5beace55e0c3c75026db5ae26c671fc6c200b8660400e3ca55e46ac52074583a"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_telemetry.gd",
+      "bytes": 8412,
+      "sha256_working": "6f4fb386c29d530f34a894cfc9e51a164bbb07f1faaf2d230fabc84b42286bc0",
+      "sha256_LF": "6f4fb386c29d530f34a894cfc9e51a164bbb07f1faaf2d230fabc84b42286bc0"
+    },
+    {
+      "path": "godot-spike/scripts/levels/field_telemetry.gd.uid",
+      "bytes": 20,
+      "sha256_working": "eae6bfaf4db0977a4ee1cbee6b474eb770fd6931248fa2416abbd2dd48db29d1",
+      "sha256_LF": "eae6bfaf4db0977a4ee1cbee6b474eb770fd6931248fa2416abbd2dd48db29d1"
+    },
+    {
+      "path": "godot-spike/scripts/mockups/big_map_mockup.gd",
+      "bytes": 10255,
+      "sha256_working": "08e962d36a7ca46566ec9f1182bab2d4e2299cd44cbe06fb4f6548d7c827c241",
+      "sha256_LF": "08e962d36a7ca46566ec9f1182bab2d4e2299cd44cbe06fb4f6548d7c827c241"
+    },
+    {
+      "path": "godot-spike/scripts/mockups/big_map_mockup.gd.uid",
+      "bytes": 20,
+      "sha256_working": "36df02495d67ff88dd118661a9f999cca496df383b24dfb83c29d3ed67e9c70d",
+      "sha256_LF": "36df02495d67ff88dd118661a9f999cca496df383b24dfb83c29d3ed67e9c70d"
+    },
+    {
+      "path": "godot-spike/scripts/readability_a2.gd",
+      "bytes": 3075,
+      "sha256_working": "10d0fffc64f2fc4e2ba20f292b1425a437e447cf6df9cbbc25d0bb7895ae2cd9",
+      "sha256_LF": "10d0fffc64f2fc4e2ba20f292b1425a437e447cf6df9cbbc25d0bb7895ae2cd9"
+    },
+    {
+      "path": "godot-spike/scripts/readability_a2.gd.uid",
+      "bytes": 20,
+      "sha256_working": "cb3e165ab1249fe0228b984b73eabbccd0e063c0857231b7d1c258d9796f0395",
+      "sha256_LF": "cb3e165ab1249fe0228b984b73eabbccd0e063c0857231b7d1c258d9796f0395"
+    },
+    {
+      "path": "godot-spike/scripts/readability_run.gd",
+      "bytes": 2156,
+      "sha256_working": "3e55b41159ebc0846971f72eb07de4749f25499737afea2fbbac7244bcb84bc6",
+      "sha256_LF": "3e55b41159ebc0846971f72eb07de4749f25499737afea2fbbac7244bcb84bc6"
+    },
+    {
+      "path": "godot-spike/scripts/readability_run.gd.uid",
+      "bytes": 20,
+      "sha256_working": "ff761e43b139e1a2ab0f160e0578d83349fa03574a4df95b9b7b9584ab51238f",
+      "sha256_LF": "ff761e43b139e1a2ab0f160e0578d83349fa03574a4df95b9b7b9584ab51238f"
+    },
+    {
+      "path": "godot-spike/scripts/rules/field_rules.gd",
+      "bytes": 23860,
+      "sha256_working": "8ac82034be10c9e4cefc1c5db65c19b8419ab5729ef93180cb89800cf5f86534",
+      "sha256_LF": "8ac82034be10c9e4cefc1c5db65c19b8419ab5729ef93180cb89800cf5f86534"
+    },
+    {
+      "path": "godot-spike/scripts/rules/field_rules.gd.uid",
+      "bytes": 20,
+      "sha256_working": "63a7873d57ee66050936ad295ec0573b850efc0c3d9dfa8e8b87d207041fe08e",
+      "sha256_LF": "63a7873d57ee66050936ad295ec0573b850efc0c3d9dfa8e8b87d207041fe08e"
+    },
+    {
+      "path": "godot-spike/scripts/rules/field_sight.gd",
+      "bytes": 1415,
+      "sha256_working": "1847879f96d8420704ec1b2f7f9be0fa60bba7d22227ab0ee3da63c5b86a8b0d",
+      "sha256_LF": "1847879f96d8420704ec1b2f7f9be0fa60bba7d22227ab0ee3da63c5b86a8b0d"
+    },
+    {
+      "path": "godot-spike/scripts/rules/field_sight.gd.uid",
+      "bytes": 20,
+      "sha256_working": "16cd90f46dcc31141e9ecc7198549932950691be0abc46cd0ac338b75b16bacc",
+      "sha256_LF": "16cd90f46dcc31141e9ecc7198549932950691be0abc46cd0ac338b75b16bacc"
+    },
+    {
+      "path": "godot-spike/scripts/rules/grid_rules.gd",
+      "bytes": 4084,
+      "sha256_working": "c3d539e3cbfafc8db11262c9fb23ee9345e127cdde0966b363287ae0ca9b59b6",
+      "sha256_LF": "c3d539e3cbfafc8db11262c9fb23ee9345e127cdde0966b363287ae0ca9b59b6"
+    },
+    {
+      "path": "godot-spike/scripts/rules/grid_rules.gd.uid",
+      "bytes": 19,
+      "sha256_working": "b206b77138d82cdbedc2dfe135b05a7708fa2be73d542a5e045bdeded15a4f9c",
+      "sha256_LF": "b206b77138d82cdbedc2dfe135b05a7708fa2be73d542a5e045bdeded15a4f9c"
+    },
+    {
+      "path": "godot-spike/scripts/skirmish.gd",
+      "bytes": 30523,
+      "sha256_working": "ae5878abc279eabe7af25283c605b96b275ae28217b94684a0082cb3fe0f90fd",
+      "sha256_LF": "2b01c52251868fbb6abf9accb4e332bb426495cde99e9d417f921d067f884e47"
+    },
+    {
+      "path": "godot-spike/scripts/skirmish.gd.uid",
+      "bytes": 20,
+      "sha256_working": "1bfa03eef667b3d4760cb87349770658649f587df86568119ac753cc744c6fcc",
+      "sha256_LF": "1bfa03eef667b3d4760cb87349770658649f587df86568119ac753cc744c6fcc"
+    },
+    {
+      "path": "godot-spike/shaders/hit_flash.gdshader",
+      "bytes": 383,
+      "sha256_working": "32a96b3843653b4f4528b6941415beb9c4d467b1390cb0da80d64c69e5cd1382",
+      "sha256_LF": "2d17667a08dd14b9e9ed849a597c25dd68032e00f55f404889532d9474c7aa50"
+    },
+    {
+      "path": "godot-spike/shaders/hit_flash.gdshader.uid",
+      "bytes": 19,
+      "sha256_working": "f5640d480e27f1072028c2b2ca0e970119cdd2f27f8c18a6c70eeb32b49ae9e1",
+      "sha256_LF": "f5640d480e27f1072028c2b2ca0e970119cdd2f27f8c18a6c70eeb32b49ae9e1"
+    },
+    {
+      "path": "godot-spike/tests/fixtures/field_rules_preperf07.gd",
+      "bytes": 23109,
+      "sha256_working": "f97e21aba93e07d803d640ae8471aa06afb373592b2883aff73199fe617b8c05",
+      "sha256_LF": "f97e21aba93e07d803d640ae8471aa06afb373592b2883aff73199fe617b8c05"
+    },
+    {
+      "path": "godot-spike/tests/fixtures/field_rules_preperf07.gd.uid",
+      "bytes": 19,
+      "sha256_working": "ab33f678523d3ca3f8d626cc1f093683a564278d9c51dfdb472da4ed57d26254",
+      "sha256_LF": "ab33f678523d3ca3f8d626cc1f093683a564278d9c51dfdb472da4ed57d26254"
+    },
+    {
+      "path": "godot-spike/tests/test_a2_hud.gd",
+      "bytes": 8330,
+      "sha256_working": "de95a599835e1b77312603fc53dfa278091bc2a2a9343651f2a606c53dcc0e6b",
+      "sha256_LF": "37d294e89fd247d6881c06a6e9a573bcce4fb8ae8850fed864b5d6e303d54132"
+    },
+    {
+      "path": "godot-spike/tests/test_a2_hud.gd.uid",
+      "bytes": 20,
+      "sha256_working": "6d85d19d51fa915755762592a2668bf80e353a975a5e140c430971db190e31e3",
+      "sha256_LF": "6d85d19d51fa915755762592a2668bf80e353a975a5e140c430971db190e31e3"
+    },
+    {
+      "path": "godot-spike/tests/test_a3_contract.gd",
+      "bytes": 4632,
+      "sha256_working": "3ca323f55893493d3fedc19071f4ca38d08b56aea77661ab6e2c268529fb886f",
+      "sha256_LF": "3ca323f55893493d3fedc19071f4ca38d08b56aea77661ab6e2c268529fb886f"
+    },
+    {
+      "path": "godot-spike/tests/test_a3_contract.gd.uid",
+      "bytes": 19,
+      "sha256_working": "7097587e74000c07afa8daedd848f8bebea5b1b8e78e001f6215abe87c99c52a",
+      "sha256_LF": "7097587e74000c07afa8daedd848f8bebea5b1b8e78e001f6215abe87c99c52a"
+    },
+    {
+      "path": "godot-spike/tests/test_a4_contract.gd",
+      "bytes": 5510,
+      "sha256_working": "938eb66a76287ad717a43f05ce3b41e062c42c3eb6b676fea1815259ce0ca71c",
+      "sha256_LF": "938eb66a76287ad717a43f05ce3b41e062c42c3eb6b676fea1815259ce0ca71c"
+    },
+    {
+      "path": "godot-spike/tests/test_a4_contract.gd.uid",
+      "bytes": 20,
+      "sha256_working": "e8b28856294052a097dfbfb54f4d9dcf7a25b68e6c453c3945890211bfda4a17",
+      "sha256_LF": "e8b28856294052a097dfbfb54f4d9dcf7a25b68e6c453c3945890211bfda4a17"
+    },
+    {
+      "path": "godot-spike/tests/test_a5_contract.gd",
+      "bytes": 7516,
+      "sha256_working": "827a4630c32cb42c75e88277b5b1e6100a3db1d69dd6dfc7a9df7337c8ed605e",
+      "sha256_LF": "827a4630c32cb42c75e88277b5b1e6100a3db1d69dd6dfc7a9df7337c8ed605e"
+    },
+    {
+      "path": "godot-spike/tests/test_a5_contract.gd.uid",
+      "bytes": 20,
+      "sha256_working": "40e95c215ab2315f009a1ca60ae8cd390ce583855bb8d211cd1297626bd44a51",
+      "sha256_LF": "40e95c215ab2315f009a1ca60ae8cd390ce583855bb8d211cd1297626bd44a51"
+    },
+    {
+      "path": "godot-spike/tests/test_a6_contract.gd",
+      "bytes": 7879,
+      "sha256_working": "e2421a14a7889f5ab604a05f7cee4dbdce689b2341c25139bb8e9b7bacd86d6e",
+      "sha256_LF": "e2421a14a7889f5ab604a05f7cee4dbdce689b2341c25139bb8e9b7bacd86d6e"
+    },
+    {
+      "path": "godot-spike/tests/test_a6_contract.gd.uid",
+      "bytes": 20,
+      "sha256_working": "5503c1bac71675abf900deee8974b6c8d3b47d5a60f2ad48470219adadf974c2",
+      "sha256_LF": "5503c1bac71675abf900deee8974b6c8d3b47d5a60f2ad48470219adadf974c2"
+    },
+    {
+      "path": "godot-spike/tests/test_a7_contract.gd",
+      "bytes": 9184,
+      "sha256_working": "7898918bc8116ec5227530e08a814c84455fff30224903c37a703efd3f07dc77",
+      "sha256_LF": "7898918bc8116ec5227530e08a814c84455fff30224903c37a703efd3f07dc77"
+    },
+    {
+      "path": "godot-spike/tests/test_a7_contract.gd.uid",
+      "bytes": 20,
+      "sha256_working": "d01bf646b79dd9ca375726c23317a320023c81c7f87df1a89746d1d4b1249b29",
+      "sha256_LF": "d01bf646b79dd9ca375726c23317a320023c81c7f87df1a89746d1d4b1249b29"
+    },
+    {
+      "path": "godot-spike/tests/test_a8_contract.gd",
+      "bytes": 8307,
+      "sha256_working": "8cc3276ba1948862bea2320018d91b69786521ec285dd9791c158bad854e46f1",
+      "sha256_LF": "8cc3276ba1948862bea2320018d91b69786521ec285dd9791c158bad854e46f1"
+    },
+    {
+      "path": "godot-spike/tests/test_a8_contract.gd.uid",
+      "bytes": 19,
+      "sha256_working": "bd8d582576cf568785f38de5b7786406a5ff2d82ec69214c1e138e522d24e075",
+      "sha256_LF": "bd8d582576cf568785f38de5b7786406a5ff2d82ec69214c1e138e522d24e075"
+    },
+    {
+      "path": "godot-spike/tests/test_a9_contract.gd",
+      "bytes": 8110,
+      "sha256_working": "4407e0348f897f5142f4b80f5d40126820f32b862cb1edb693b5d4e46a3592c9",
+      "sha256_LF": "4407e0348f897f5142f4b80f5d40126820f32b862cb1edb693b5d4e46a3592c9"
+    },
+    {
+      "path": "godot-spike/tests/test_a9_contract.gd.uid",
+      "bytes": 20,
+      "sha256_working": "070b2a2b4086482198702c0ffead1bd0e204341780bd914bb22356514ba28f83",
+      "sha256_LF": "070b2a2b4086482198702c0ffead1bd0e204341780bd914bb22356514ba28f83"
+    },
+    {
+      "path": "godot-spike/tests/test_big_map_mockup.gd",
+      "bytes": 1204,
+      "sha256_working": "3db0d8a072ce3d3eedcf14e9ecd649c7c55b4cceafa0ce0e0f127f14b0fa3217",
+      "sha256_LF": "3db0d8a072ce3d3eedcf14e9ecd649c7c55b4cceafa0ce0e0f127f14b0fa3217"
+    },
+    {
+      "path": "godot-spike/tests/test_big_map_mockup.gd.uid",
+      "bytes": 20,
+      "sha256_working": "7308027b909fe1cf49bb8373468fd63bda81d333ec12206d3f5e27d7be2fae93",
+      "sha256_LF": "7308027b909fe1cf49bb8373468fd63bda81d333ec12206d3f5e27d7be2fae93"
+    },
+    {
+      "path": "godot-spike/tests/test_field_ai.gd",
+      "bytes": 4107,
+      "sha256_working": "457bad2f6ac76e25783c9b56c77485b714f96240ee8df94b846fef80971b0d09",
+      "sha256_LF": "457bad2f6ac76e25783c9b56c77485b714f96240ee8df94b846fef80971b0d09"
+    },
+    {
+      "path": "godot-spike/tests/test_field_ai.gd.uid",
+      "bytes": 20,
+      "sha256_working": "ffe75d357c140b54b13c7f05e163b2633c0e5b26baa26c1aae314e3fed6c1b1e",
+      "sha256_LF": "ffe75d357c140b54b13c7f05e163b2633c0e5b26baa26c1aae314e3fed6c1b1e"
+    },
+    {
+      "path": "godot-spike/tests/test_field_autoplay.gd",
+      "bytes": 5649,
+      "sha256_working": "72295e34d9800807b66e97478d45f8ce1295624027917f2af2cb4f1c9a246570",
+      "sha256_LF": "72295e34d9800807b66e97478d45f8ce1295624027917f2af2cb4f1c9a246570"
+    },
+    {
+      "path": "godot-spike/tests/test_field_autoplay.gd.uid",
+      "bytes": 20,
+      "sha256_working": "a9314a6bb8202aea41ab36770e595efe52c541e7a8087a5e1b70999afcf3012e",
+      "sha256_LF": "a9314a6bb8202aea41ab36770e595efe52c541e7a8087a5e1b70999afcf3012e"
+    },
+    {
+      "path": "godot-spike/tests/test_field_battle.gd",
+      "bytes": 4628,
+      "sha256_working": "beefdf2eff0fda2dadb5a7e6356e111fd786f5cc54284a9e968607cf30f8a23e",
+      "sha256_LF": "beefdf2eff0fda2dadb5a7e6356e111fd786f5cc54284a9e968607cf30f8a23e"
+    },
+    {
+      "path": "godot-spike/tests/test_field_battle.gd.uid",
+      "bytes": 20,
+      "sha256_working": "18ec44d49209b6bec8305965f66bd3364fc4685ed3a2cbc8bf890b76b082057d",
+      "sha256_LF": "18ec44d49209b6bec8305965f66bd3364fc4685ed3a2cbc8bf890b76b082057d"
+    },
+    {
+      "path": "godot-spike/tests/test_field_camera.gd",
+      "bytes": 4604,
+      "sha256_working": "4c7518c2ca38132e62fedef603e9d98b97d6bd96800b4a349cbf341e0a47e696",
+      "sha256_LF": "4c7518c2ca38132e62fedef603e9d98b97d6bd96800b4a349cbf341e0a47e696"
+    },
+    {
+      "path": "godot-spike/tests/test_field_camera.gd.uid",
+      "bytes": 20,
+      "sha256_working": "53146d5e0055a4984acf7a8dae15c5e53f2f01b4846ff72cf8e9dbe00daba5d3",
+      "sha256_LF": "53146d5e0055a4984acf7a8dae15c5e53f2f01b4846ff72cf8e9dbe00daba5d3"
+    },
+    {
+      "path": "godot-spike/tests/test_field_los.gd",
+      "bytes": 3213,
+      "sha256_working": "b1c8dab3eda0e967d906db30452591b01b31908dbc16d3d13241efd40b95c531",
+      "sha256_LF": "b1c8dab3eda0e967d906db30452591b01b31908dbc16d3d13241efd40b95c531"
+    },
+    {
+      "path": "godot-spike/tests/test_field_los.gd.uid",
+      "bytes": 20,
+      "sha256_working": "587eee055bff1ec7f50176c4ec7b51b846cffa3130a44e732bfd2f5cc64a991d",
+      "sha256_LF": "587eee055bff1ec7f50176c4ec7b51b846cffa3130a44e732bfd2f5cc64a991d"
+    },
+    {
+      "path": "godot-spike/tests/test_field_rules.gd",
+      "bytes": 8031,
+      "sha256_working": "a06338f1c7516005317c760df8d24c2aebd648cecc6b6bb6ea38aa01e3277d78",
+      "sha256_LF": "a06338f1c7516005317c760df8d24c2aebd648cecc6b6bb6ea38aa01e3277d78"
+    },
+    {
+      "path": "godot-spike/tests/test_field_rules.gd.uid",
+      "bytes": 20,
+      "sha256_working": "192004ebcc7de64edc8d47824862c41143eaf2473e1485cc4559412d47ef79a6",
+      "sha256_LF": "192004ebcc7de64edc8d47824862c41143eaf2473e1485cc4559412d47ef79a6"
+    },
+    {
+      "path": "godot-spike/tests/test_field_ui.gd",
+      "bytes": 5639,
+      "sha256_working": "6ad8c77c4129c35ed592527b3f4e476e57438e94dfb0e5d741622eb32857e02b",
+      "sha256_LF": "6ad8c77c4129c35ed592527b3f4e476e57438e94dfb0e5d741622eb32857e02b"
+    },
+    {
+      "path": "godot-spike/tests/test_field_ui.gd.uid",
+      "bytes": 20,
+      "sha256_working": "708d85c6a808eeb02acbbcba932d998561dbbcb2d87296f58715fff3774eaea0",
+      "sha256_LF": "708d85c6a808eeb02acbbcba932d998561dbbcb2d87296f58715fff3774eaea0"
+    },
+    {
+      "path": "godot-spike/tests/test_field_visibility.gd",
+      "bytes": 4674,
+      "sha256_working": "cdb01a923e09129cb31fe8c049ecf755c47b18227b7bcd80ff6fc67045a82288",
+      "sha256_LF": "cdb01a923e09129cb31fe8c049ecf755c47b18227b7bcd80ff6fc67045a82288"
+    },
+    {
+      "path": "godot-spike/tests/test_field_visibility.gd.uid",
+      "bytes": 19,
+      "sha256_working": "a5930f079d3ac51a8fb7d4f64f1ff4cab7daaa04aed21a30561bfefd77bff933",
+      "sha256_LF": "a5930f079d3ac51a8fb7d4f64f1ff4cab7daaa04aed21a30561bfefd77bff933"
+    },
+    {
+      "path": "godot-spike/tests/test_grid_rules.gd",
+      "bytes": 4864,
+      "sha256_working": "f3daf37e1905fe8bf4e7bb160aeb760743d2a25e8f9c8159038c2fd4936fab5c",
+      "sha256_LF": "f3daf37e1905fe8bf4e7bb160aeb760743d2a25e8f9c8159038c2fd4936fab5c"
+    },
+    {
+      "path": "godot-spike/tests/test_grid_rules.gd.uid",
+      "bytes": 20,
+      "sha256_working": "972d31bb27898d21d8cb0d236029a954287032f5d57206b699bc32540fe00444",
+      "sha256_LF": "972d31bb27898d21d8cb0d236029a954287032f5d57206b699bc32540fe00444"
+    },
+    {
+      "path": "godot-spike/tests/test_manifest.gd",
+      "bytes": 2399,
+      "sha256_working": "fc4d1408601ef5d3d51151daec5d89862ef3004b1da11e5ee93b3be3d260b585",
+      "sha256_LF": "fc4d1408601ef5d3d51151daec5d89862ef3004b1da11e5ee93b3be3d260b585"
+    },
+    {
+      "path": "godot-spike/tests/test_manifest.gd.uid",
+      "bytes": 20,
+      "sha256_working": "ebaa044a209eb14c4f5dd0138ba4f17e3ecc9e10c921fc966ffade9c2641e7f2",
+      "sha256_LF": "ebaa044a209eb14c4f5dd0138ba4f17e3ecc9e10c921fc966ffade9c2641e7f2"
+    },
+    {
+      "path": "godot-spike/tests/test_perf07.gd",
+      "bytes": 3017,
+      "sha256_working": "5d6c4a9c4e296cf0e80cdeeb60a1c2fd2ab164ceebd6e6b9b7373e18834de88e",
+      "sha256_LF": "5d6c4a9c4e296cf0e80cdeeb60a1c2fd2ab164ceebd6e6b9b7373e18834de88e"
+    },
+    {
+      "path": "godot-spike/tests/test_perf07.gd.uid",
+      "bytes": 20,
+      "sha256_working": "d73a5dcc40640ef3c065c837f8316736eec1d45fb5431261bb122add2a5c9362",
+      "sha256_LF": "d73a5dcc40640ef3c065c837f8316736eec1d45fb5431261bb122add2a5c9362"
+    },
+    {
+      "path": "godot-spike/tests/test_playback.gd",
+      "bytes": 4583,
+      "sha256_working": "2df10d5061bba6f8c7fe0a8b3b976a45160ed89739ac87992c51c6b59cecf9bf",
+      "sha256_LF": "2df10d5061bba6f8c7fe0a8b3b976a45160ed89739ac87992c51c6b59cecf9bf"
+    },
+    {
+      "path": "godot-spike/tests/test_playback.gd.uid",
+      "bytes": 19,
+      "sha256_working": "f218d9bdecb7ce4f00a3386226756113d3c9610000a71e375a25a311d8ca82e8",
+      "sha256_LF": "f218d9bdecb7ce4f00a3386226756113d3c9610000a71e375a25a311d8ca82e8"
+    },
+    {
+      "path": "godot-spike/tests/test_shared_hashes.gd",
+      "bytes": 1100,
+      "sha256_working": "d6f2cd903a48a65efb0d8d6adade749a7e683cf87d2debec8159252252ebcec4",
+      "sha256_LF": "d6f2cd903a48a65efb0d8d6adade749a7e683cf87d2debec8159252252ebcec4"
+    },
+    {
+      "path": "godot-spike/tests/test_shared_hashes.gd.uid",
+      "bytes": 19,
+      "sha256_working": "ad61506817a430d57de7990ee8821083a36decb39e13ee3423aa2a669bac7c06",
+      "sha256_LF": "ad61506817a430d57de7990ee8821083a36decb39e13ee3423aa2a669bac7c06"
+    },
+    {
+      "path": "godot-spike/tests/test_spike02.gd",
+      "bytes": 6614,
+      "sha256_working": "895516e82a49c946ef75475a1dc769688ed5a7f6781e79bef0876578c110f292",
+      "sha256_LF": "895516e82a49c946ef75475a1dc769688ed5a7f6781e79bef0876578c110f292"
+    },
+    {
+      "path": "godot-spike/tests/test_spike02.gd.uid",
+      "bytes": 20,
+      "sha256_working": "5fa682f27b724dd9ff255f6a0c9da977111118354568ee61588e745b14311bc9",
+      "sha256_LF": "5fa682f27b724dd9ff255f6a0c9da977111118354568ee61588e745b14311bc9"
+    },
+    {
+      "path": "godot-spike/tests/test_spike03_impact.gd",
+      "bytes": 9743,
+      "sha256_working": "dd028ef7367b81b4a818609b6203136cc6c383b49169235f3d13094bdfeaa385",
+      "sha256_LF": "dd028ef7367b81b4a818609b6203136cc6c383b49169235f3d13094bdfeaa385"
+    },
+    {
+      "path": "godot-spike/tests/test_spike03_impact.gd.uid",
+      "bytes": 19,
+      "sha256_working": "e53b9ea0081c83cc8e91d09570946df229a889ffeb5095b1367db020f81d8f0d",
+      "sha256_LF": "e53b9ea0081c83cc8e91d09570946df229a889ffeb5095b1367db020f81d8f0d"
+    },
+    {
+      "path": "godot-spike/tests/test_spike04_profile.gd",
+      "bytes": 1493,
+      "sha256_working": "39870d74124250f5f663ac4b6061f8fe27ce7e15a402072590f6480be6828fea",
+      "sha256_LF": "39870d74124250f5f663ac4b6061f8fe27ce7e15a402072590f6480be6828fea"
+    },
+    {
+      "path": "godot-spike/tests/test_spike04_profile.gd.uid",
+      "bytes": 20,
+      "sha256_working": "8bd767be7ed66217136ebd340cf4adf375cb796063c6dff284e2414f4cc432b6",
+      "sha256_LF": "8bd767be7ed66217136ebd340cf4adf375cb796063c6dff284e2414f4cc432b6"
+    },
+    {
+      "path": "godot-spike/tests/test_spike05_profile.gd",
+      "bytes": 1496,
+      "sha256_working": "0497f6a6b662a05d92982b4dd6bb9fd6a2b23c8e4f2fd5dcdbfaf913374c62a7",
+      "sha256_LF": "0497f6a6b662a05d92982b4dd6bb9fd6a2b23c8e4f2fd5dcdbfaf913374c62a7"
+    },
+    {
+      "path": "godot-spike/tests/test_spike05_profile.gd.uid",
+      "bytes": 20,
+      "sha256_working": "6e5ff20dc3a176ad9657ebe61aa89039c7a2d4d8979e2b4302e5bdb14a01861b",
+      "sha256_LF": "6e5ff20dc3a176ad9657ebe61aa89039c7a2d4d8979e2b4302e5bdb14a01861b"
+    },
+    {
+      "path": "godot-spike/tests/test_spike06_balance.gd",
+      "bytes": 1144,
+      "sha256_working": "610c4a3f0daa861d80f3f3c7e635db3a267dd3c10821a8d9a341d17208e6be0d",
+      "sha256_LF": "610c4a3f0daa861d80f3f3c7e635db3a267dd3c10821a8d9a341d17208e6be0d"
+    },
+    {
+      "path": "godot-spike/tests/test_spike06_balance.gd.uid",
+      "bytes": 20,
+      "sha256_working": "a414af7a3f186968cf0a486b808b5ba8191b48ea1a47666830104adc906b71a9",
+      "sha256_LF": "a414af7a3f186968cf0a486b808b5ba8191b48ea1a47666830104adc906b71a9"
+    },
+    {
+      "path": "godot-spike/tests/test_spike06_harness.gd",
+      "bytes": 1124,
+      "sha256_working": "7291a7ee0a79a441c556968f3e46e14fec3d7a1a4a134f708a18549a9a99abfe",
+      "sha256_LF": "7291a7ee0a79a441c556968f3e46e14fec3d7a1a4a134f708a18549a9a99abfe"
+    },
+    {
+      "path": "godot-spike/tests/test_spike06_harness.gd.uid",
+      "bytes": 20,
+      "sha256_working": "0defe7ccaba69558a660f84a6d0d47a18e2252023d0e9ecd05160a142eaefa24",
+      "sha256_LF": "0defe7ccaba69558a660f84a6d0d47a18e2252023d0e9ecd05160a142eaefa24"
+    },
+    {
+      "path": "godot-spike/tests/test_spike06_profile.gd",
+      "bytes": 1542,
+      "sha256_working": "372a7c054d0650e98cc913dea0668e71983857d87a530261e930517396058476",
+      "sha256_LF": "372a7c054d0650e98cc913dea0668e71983857d87a530261e930517396058476"
+    },
+    {
+      "path": "godot-spike/tests/test_spike06_profile.gd.uid",
+      "bytes": 20,
+      "sha256_working": "5f23b2884b0c063d5f12dad844f87bd65ebd8683fd0e0d74ed79992b1c049120",
+      "sha256_LF": "5f23b2884b0c063d5f12dad844f87bd65ebd8683fd0e0d74ed79992b1c049120"
+    },
+    {
+      "path": "godot-spike/tests/test_spike06_scout.gd",
+      "bytes": 4483,
+      "sha256_working": "b469ebfc10a81f3dad62041255a8263f1058d1b73dc07b8449bf1a07ef5c5f07",
+      "sha256_LF": "b469ebfc10a81f3dad62041255a8263f1058d1b73dc07b8449bf1a07ef5c5f07"
+    },
+    {
+      "path": "godot-spike/tests/test_spike06_scout.gd.uid",
+      "bytes": 20,
+      "sha256_working": "bc436ecec6ca7b050b46c94e2d2b093c09070cceaba5880dafc845e408d9631c",
+      "sha256_LF": "bc436ecec6ca7b050b46c94e2d2b093c09070cceaba5880dafc845e408d9631c"
+    },
+    {
+      "path": "godot-spike/tests/test_spike06_wave.gd",
+      "bytes": 1552,
+      "sha256_working": "b2032f050ac862bdb6a6364d4872dc71ac61901a83cb488b3e4339e09e3f9866",
+      "sha256_LF": "b2032f050ac862bdb6a6364d4872dc71ac61901a83cb488b3e4339e09e3f9866"
+    },
+    {
+      "path": "godot-spike/tests/test_spike06_wave.gd.uid",
+      "bytes": 19,
+      "sha256_working": "df188bf5a1b6efb3ace7d7812dbd521491f7ce5a66bd58671d17824100735f74",
+      "sha256_LF": "df188bf5a1b6efb3ace7d7812dbd521491f7ce5a66bd58671d17824100735f74"
+    },
+    {
+      "path": "godot-spike/tests/test_spike07.gd",
+      "bytes": 4312,
+      "sha256_working": "de6a380c8991e80efaf7aec0c0b6add4e2fb5c8156830264906bac5c5f1e88b0",
+      "sha256_LF": "de6a380c8991e80efaf7aec0c0b6add4e2fb5c8156830264906bac5c5f1e88b0"
+    },
+    {
+      "path": "godot-spike/tests/test_spike07.gd.uid",
+      "bytes": 20,
+      "sha256_working": "4e27f8946f413fb3b2421e24d91489543cc1ef59d4756397a10bd77d7d97af0a",
+      "sha256_LF": "4e27f8946f413fb3b2421e24d91489543cc1ef59d4756397a10bd77d7d97af0a"
+    },
+    {
+      "path": "godot-spike/tools/a3_style_check.py",
+      "bytes": 7677,
+      "sha256_working": "7c2db32b4b68f93b6ab47a22423b0fb92ce3e5807d72c2a80df1f50454c81f9c",
+      "sha256_LF": "7c2db32b4b68f93b6ab47a22423b0fb92ce3e5807d72c2a80df1f50454c81f9c"
+    },
+    {
+      "path": "godot-spike/tools/a4_contact_sheet.py",
+      "bytes": 802,
+      "sha256_working": "2651dabefe85a207a970505eeaf47a38471daa7ab58914e71a2d0b37fde0a55d",
+      "sha256_LF": "2651dabefe85a207a970505eeaf47a38471daa7ab58914e71a2d0b37fde0a55d"
+    },
+    {
+      "path": "godot-spike/tools/a4_style_check.py",
+      "bytes": 12832,
+      "sha256_working": "ab1832b8ea2a66c5cc55daadc19ddb49afc7ae86e476ef6458b73aba7b7b3581",
+      "sha256_LF": "ab1832b8ea2a66c5cc55daadc19ddb49afc7ae86e476ef6458b73aba7b7b3581"
+    },
+    {
+      "path": "godot-spike/tools/a5_audit.py",
+      "bytes": 7691,
+      "sha256_working": "8f04eb5f9b796e79baefa1d6cc141629d49d342da35e2d38c3592885da8d493e",
+      "sha256_LF": "8f04eb5f9b796e79baefa1d6cc141629d49d342da35e2d38c3592885da8d493e"
+    },
+    {
+      "path": "godot-spike/tools/a5_contact_sheet.py",
+      "bytes": 802,
+      "sha256_working": "0889ae1f42ffd6902da56a998ceae1dd2e426ed22853c6fa8a36751c6498f498",
+      "sha256_LF": "0889ae1f42ffd6902da56a998ceae1dd2e426ed22853c6fa8a36751c6498f498"
+    },
+    {
+      "path": "godot-spike/tools/a5_style_check.py",
+      "bytes": 6297,
+      "sha256_working": "c687880e243b5eb4802bb9fee1fe4b6921c6e31b0caa8828874205e6aa58d889",
+      "sha256_LF": "c687880e243b5eb4802bb9fee1fe4b6921c6e31b0caa8828874205e6aa58d889"
+    },
+    {
+      "path": "godot-spike/tools/a6_contact_sheet.py",
+      "bytes": 802,
+      "sha256_working": "c3213d59cb52026dfad2d8f4b3b2d0f9eb6570ba43e1dadabf37c6a561969e49",
+      "sha256_LF": "c3213d59cb52026dfad2d8f4b3b2d0f9eb6570ba43e1dadabf37c6a561969e49"
+    },
+    {
+      "path": "godot-spike/tools/a6_playback_check.py",
+      "bytes": 4321,
+      "sha256_working": "b4724b319ba80ca9dc0ba935e4a062e186b83f1ec509c7d3c89d288453de1b60",
+      "sha256_LF": "b4724b319ba80ca9dc0ba935e4a062e186b83f1ec509c7d3c89d288453de1b60"
+    },
+    {
+      "path": "godot-spike/tools/a6_style_check.py",
+      "bytes": 11470,
+      "sha256_working": "7ac7ebded759e4ef654486aa2c5af3d27eef786848a95839e1c0403d0f02cce7",
+      "sha256_LF": "7ac7ebded759e4ef654486aa2c5af3d27eef786848a95839e1c0403d0f02cce7"
+    },
+    {
+      "path": "godot-spike/tools/a6_w2_compare.py",
+      "bytes": 558,
+      "sha256_working": "d1d1300e287571957b1f56965254aa165495743d0c928fe0beef4a1285000162",
+      "sha256_LF": "d1d1300e287571957b1f56965254aa165495743d0c928fe0beef4a1285000162"
+    },
+    {
+      "path": "godot-spike/tools/a7_contact_sheet.py",
+      "bytes": 802,
+      "sha256_working": "ca5e3aef463b0114b15dfcd3938c57c62ebd648747d191d320e4bbfe51d91001",
+      "sha256_LF": "ca5e3aef463b0114b15dfcd3938c57c62ebd648747d191d320e4bbfe51d91001"
+    },
+    {
+      "path": "godot-spike/tools/a7_playback_check.py",
+      "bytes": 6559,
+      "sha256_working": "ab9afc82254ea8c8fc1019ef7eb2bfbe0bb50776591f3ca0cda2cb2151807da7",
+      "sha256_LF": "ab9afc82254ea8c8fc1019ef7eb2bfbe0bb50776591f3ca0cda2cb2151807da7"
+    },
+    {
+      "path": "godot-spike/tools/a7_style_check.py",
+      "bytes": 12343,
+      "sha256_working": "1a809ee67d96fa225fa16054c1d2fffe067d7143550bc88b6e4ba75aeb74f1d8",
+      "sha256_LF": "1a809ee67d96fa225fa16054c1d2fffe067d7143550bc88b6e4ba75aeb74f1d8"
+    },
+    {
+      "path": "godot-spike/tools/a8_contact_sheet.py",
+      "bytes": 807,
+      "sha256_working": "e407cdd75a9f344c2a58245f854f42bdc122f0edb73850935f9682f145a9c60d",
+      "sha256_LF": "95216b0cfd1c9299f117be92495a28eed9e08a0c44a3541d02c9d90a2104fd15"
+    },
+    {
+      "path": "godot-spike/tools/a8_playback_check.py",
+      "bytes": 6635,
+      "sha256_working": "873954cedd1cef443cfa81093bb65b81b37c671cdc46586be9af02eadabb5a38",
+      "sha256_LF": "da12c308af39501f9754968673583a6877aa0b43172b12bbab28938ec8e9fa91"
+    },
+    {
+      "path": "godot-spike/tools/a8_style_check.py",
+      "bytes": 13140,
+      "sha256_working": "55e77e14c9cceb58c2158632c2b62d5a12d2920d43c114601a40ab92d4e64811",
+      "sha256_LF": "55e77e14c9cceb58c2158632c2b62d5a12d2920d43c114601a40ab92d4e64811"
+    },
+    {
+      "path": "godot-spike/tools/a9_contact_sheet.py",
+      "bytes": 804,
+      "sha256_working": "6fac192d321b12007155e6b06aae80e79005dcad0e872c00d30bd00b4382632e",
+      "sha256_LF": "93b2a6d72f1e809c76d0b3e1fd52356df79c854f03b9fa49522d1cd306d656c0"
+    },
+    {
+      "path": "godot-spike/tools/a9_playback_check.py",
+      "bytes": 5223,
+      "sha256_working": "e8543b7ac9bdb6cef857053a90215708b1051fe6544ab69e82a8b31f0eedb3ba",
+      "sha256_LF": "e8543b7ac9bdb6cef857053a90215708b1051fe6544ab69e82a8b31f0eedb3ba"
+    },
+    {
+      "path": "godot-spike/tools/a9_style_check.py",
+      "bytes": 10680,
+      "sha256_working": "c243adb20ee5a26f443b775cb7126b06227855f9eaf4d3a68bda1e5955436ac4",
+      "sha256_LF": "c243adb20ee5a26f443b775cb7126b06227855f9eaf4d3a68bda1e5955436ac4"
+    },
+    {
+      "path": "godot-spike/tools/adopt_a6_frame.py",
+      "bytes": 1563,
+      "sha256_working": "b142e6c781748baf7622fbe3091e4c698497366da5898e584ce296aab3b6e13d",
+      "sha256_LF": "b142e6c781748baf7622fbe3091e4c698497366da5898e584ce296aab3b6e13d"
+    },
+    {
+      "path": "godot-spike/tools/adopt_a8_sheet.py",
+      "bytes": 15879,
+      "sha256_working": "f53b14e7a7b63eb1f46c729d948c598ebe4ecad4c85c72c7665fcefe0fb322b2",
+      "sha256_LF": "f53b14e7a7b63eb1f46c729d948c598ebe4ecad4c85c72c7665fcefe0fb322b2"
+    },
+    {
+      "path": "godot-spike/tools/audit_spike03.py",
+      "bytes": 9950,
+      "sha256_working": "21a5954b89e47d712cae4e76b2a46df5b9b751f8006c92b0609e46c2691e6fbd",
+      "sha256_LF": "21a5954b89e47d712cae4e76b2a46df5b9b751f8006c92b0609e46c2691e6fbd"
+    },
+    {
+      "path": "godot-spike/tools/audit_spike04.py",
+      "bytes": 6590,
+      "sha256_working": "69ab0550d33e42f81acc352e87738b6bef700b4acf29e7e536c93c0ba85ef8a4",
+      "sha256_LF": "69ab0550d33e42f81acc352e87738b6bef700b4acf29e7e536c93c0ba85ef8a4"
+    },
+    {
+      "path": "godot-spike/tools/audit_spike05.py",
+      "bytes": 7965,
+      "sha256_working": "53cedcd737f2dfbd079a613582df368c9b6396433d3ac57db162d2ff4aa4bbf3",
+      "sha256_LF": "53cedcd737f2dfbd079a613582df368c9b6396433d3ac57db162d2ff4aa4bbf3"
+    },
+    {
+      "path": "godot-spike/tools/audit_spike06.py",
+      "bytes": 8404,
+      "sha256_working": "0164150893bab898777fb8cec5cf1b9659f70f5d3f338ff22a32dcf1123e9145",
+      "sha256_LF": "0164150893bab898777fb8cec5cf1b9659f70f5d3f338ff22a32dcf1123e9145"
+    },
+    {
+      "path": "godot-spike/tools/audit_spike07.py",
+      "bytes": 5490,
+      "sha256_working": "92c1d1802d5d487022b1b21287ce681c441499a7544de01e0d49d18d26e52792",
+      "sha256_LF": "92c1d1802d5d487022b1b21287ce681c441499a7544de01e0d49d18d26e52792"
+    },
+    {
+      "path": "godot-spike/tools/autoplay_field.gd",
+      "bytes": 2628,
+      "sha256_working": "8c96fc855663525a7ae1322855b6e672d22ced197f27bf710d08390cbfd1a06f",
+      "sha256_LF": "8c96fc855663525a7ae1322855b6e672d22ced197f27bf710d08390cbfd1a06f"
+    },
+    {
+      "path": "godot-spike/tools/autoplay_field.gd.uid",
+      "bytes": 19,
+      "sha256_working": "f8cf355937987e6ffb619a2ccae56902f4580a734f49dcde8880ff44d35bc821",
+      "sha256_LF": "f8cf355937987e6ffb619a2ccae56902f4580a734f49dcde8880ff44d35bc821"
+    },
+    {
+      "path": "godot-spike/tools/build_a2_ui.py",
+      "bytes": 1869,
+      "sha256_working": "5be806c1a5815a13b99a288ca51e5e4b3d619df7f9f4bd868cafeea77caebb3e",
+      "sha256_LF": "5be806c1a5815a13b99a288ca51e5e4b3d619df7f9f4bd868cafeea77caebb3e"
+    },
+    {
+      "path": "godot-spike/tools/build_a7_spec.py",
+      "bytes": 17821,
+      "sha256_working": "e58eb45d2c2f3950b0e7f149b0a6be9974979d8196003d59162975e3ba18c29a",
+      "sha256_LF": "e58eb45d2c2f3950b0e7f149b0a6be9974979d8196003d59162975e3ba18c29a"
+    },
+    {
+      "path": "godot-spike/tools/build_manifest.py",
+      "bytes": 4566,
+      "sha256_working": "148a11aef452332be8917d38b1ff424127166cf15101092145db1ac2507da1e5",
+      "sha256_LF": "b954e07ce8e5a7fb52a846781cf4d68054fc201168f25152f6790ad33dc0d455"
+    },
+    {
+      "path": "godot-spike/tools/capture_a3.gd",
+      "bytes": 6039,
+      "sha256_working": "86698e29478aeb99030a54631364476644cbab002e5fb89d3e925fbfe7c22d2a",
+      "sha256_LF": "86698e29478aeb99030a54631364476644cbab002e5fb89d3e925fbfe7c22d2a"
+    },
+    {
+      "path": "godot-spike/tools/capture_a3.gd.uid",
+      "bytes": 20,
+      "sha256_working": "8ff3c9eaa9b7a58ecf6acd3ad05a3744ede015ec5c6858fb8448b76267d09bb9",
+      "sha256_LF": "8ff3c9eaa9b7a58ecf6acd3ad05a3744ede015ec5c6858fb8448b76267d09bb9"
+    },
+    {
+      "path": "godot-spike/tools/capture_a4.gd",
+      "bytes": 6478,
+      "sha256_working": "318694d79af03d8a0b1bed7353f38bb8ac7e05df96a31e6dae7036f584326079",
+      "sha256_LF": "318694d79af03d8a0b1bed7353f38bb8ac7e05df96a31e6dae7036f584326079"
+    },
+    {
+      "path": "godot-spike/tools/capture_a4.gd.uid",
+      "bytes": 19,
+      "sha256_working": "f1c42161cc0e065ed353700319abb0f9bd7831d5f975439a2b85c939a7db2ef4",
+      "sha256_LF": "f1c42161cc0e065ed353700319abb0f9bd7831d5f975439a2b85c939a7db2ef4"
+    },
+    {
+      "path": "godot-spike/tools/capture_a5.gd",
+      "bytes": 6478,
+      "sha256_working": "76b45ef04b832650e04af7aa60818101b3edefd6987c61b79cf42203b1197316",
+      "sha256_LF": "76b45ef04b832650e04af7aa60818101b3edefd6987c61b79cf42203b1197316"
+    },
+    {
+      "path": "godot-spike/tools/capture_a5.gd.uid",
+      "bytes": 20,
+      "sha256_working": "dd2451bf010d2f4ceeebd18231f5eeaa83b0636f0464c01e10da0afc1f3bd8ee",
+      "sha256_LF": "dd2451bf010d2f4ceeebd18231f5eeaa83b0636f0464c01e10da0afc1f3bd8ee"
+    },
+    {
+      "path": "godot-spike/tools/capture_a6.gd",
+      "bytes": 7320,
+      "sha256_working": "3f8b7eb09e6ec62ec8b7e7c3f13b538b3519d7540cdf7daff0bbcaf98d5f9a58",
+      "sha256_LF": "3f8b7eb09e6ec62ec8b7e7c3f13b538b3519d7540cdf7daff0bbcaf98d5f9a58"
+    },
+    {
+      "path": "godot-spike/tools/capture_a6.gd.uid",
+      "bytes": 20,
+      "sha256_working": "c9a64d996e682a6c903ca475bc9b95ea9d7b76110d8f76065036cfbfebc95c82",
+      "sha256_LF": "c9a64d996e682a6c903ca475bc9b95ea9d7b76110d8f76065036cfbfebc95c82"
+    },
+    {
+      "path": "godot-spike/tools/capture_a7.gd",
+      "bytes": 7320,
+      "sha256_working": "90c689fb56c911a23bc0bbb92dccc7d585c0af4fb58214662e8dd72df81bd25e",
+      "sha256_LF": "90c689fb56c911a23bc0bbb92dccc7d585c0af4fb58214662e8dd72df81bd25e"
+    },
+    {
+      "path": "godot-spike/tools/capture_a7.gd.uid",
+      "bytes": 20,
+      "sha256_working": "12c5b0fd3e6aaa8e62bc228c305058ab2edc29a784cd875e4cdcc43d21ae336a",
+      "sha256_LF": "12c5b0fd3e6aaa8e62bc228c305058ab2edc29a784cd875e4cdcc43d21ae336a"
+    },
+    {
+      "path": "godot-spike/tools/capture_a8.gd",
+      "bytes": 7325,
+      "sha256_working": "70eb69e018d2827846f101bcef284b0148d9d53f72c9ce3cc5091dd85b2cd382",
+      "sha256_LF": "cda297b413d8f549aee83f248ba870192279254e1fc7d8279c7ba98249f96adc"
+    },
+    {
+      "path": "godot-spike/tools/capture_a8.gd.uid",
+      "bytes": 20,
+      "sha256_working": "70096133e0dcf309a8219781332aa19fd5f6510b9d7bbb75b00cf3331f1d20e5",
+      "sha256_LF": "70096133e0dcf309a8219781332aa19fd5f6510b9d7bbb75b00cf3331f1d20e5"
+    },
+    {
+      "path": "godot-spike/tools/capture_a9.gd",
+      "bytes": 7321,
+      "sha256_working": "8405709a4d63387e7fb0c2c806dc9b05dec543b3994feaa3556c518d3fcfb6ae",
+      "sha256_LF": "8405709a4d63387e7fb0c2c806dc9b05dec543b3994feaa3556c518d3fcfb6ae"
+    },
+    {
+      "path": "godot-spike/tools/capture_a9.gd.uid",
+      "bytes": 20,
+      "sha256_working": "676f3a139b4ad880fcad97ccd2612a2e8c5ea04aa765abd7755a2254ea9313b0",
+      "sha256_LF": "676f3a139b4ad880fcad97ccd2612a2e8c5ea04aa765abd7755a2254ea9313b0"
+    },
+    {
+      "path": "godot-spike/tools/capture_big_map.gd",
+      "bytes": 4712,
+      "sha256_working": "2277ee32c36a33f24b69d3700b1a1177c048541300b2bb4c1efdbfeb8a014299",
+      "sha256_LF": "2277ee32c36a33f24b69d3700b1a1177c048541300b2bb4c1efdbfeb8a014299"
+    },
+    {
+      "path": "godot-spike/tools/capture_big_map.gd.uid",
+      "bytes": 19,
+      "sha256_working": "e9b69645ed3d6f90c7205371eecd459d7b7d8bb9cf651da856f1066c0e8b6f2c",
+      "sha256_LF": "e9b69645ed3d6f90c7205371eecd459d7b7d8bb9cf651da856f1066c0e8b6f2c"
+    },
+    {
+      "path": "godot-spike/tools/capture_field.gd",
+      "bytes": 10711,
+      "sha256_working": "69db4afedc0c1ebe845e3e5e9b85226c6835b65b45a00068514689d99b403ae4",
+      "sha256_LF": "69db4afedc0c1ebe845e3e5e9b85226c6835b65b45a00068514689d99b403ae4"
+    },
+    {
+      "path": "godot-spike/tools/capture_field.gd.uid",
+      "bytes": 20,
+      "sha256_working": "67598c65a76ca1acee025d1f0724e4dcdfd85f6ac38602af2975b58c737cf7dd",
+      "sha256_LF": "67598c65a76ca1acee025d1f0724e4dcdfd85f6ac38602af2975b58c737cf7dd"
+    },
+    {
+      "path": "godot-spike/tools/capture_field05.gd",
+      "bytes": 10490,
+      "sha256_working": "2d2d7a19a1eaabb58fdfbe97f44f6b25cff11e83bc9c8a4324ca23d119107ff6",
+      "sha256_LF": "2d2d7a19a1eaabb58fdfbe97f44f6b25cff11e83bc9c8a4324ca23d119107ff6"
+    },
+    {
+      "path": "godot-spike/tools/capture_field05.gd.uid",
+      "bytes": 20,
+      "sha256_working": "4e477eb41e63997c7780277708a55524d23840356a0d06c0aeca8972b5da41f4",
+      "sha256_LF": "4e477eb41e63997c7780277708a55524d23840356a0d06c0aeca8972b5da41f4"
+    },
+    {
+      "path": "godot-spike/tools/capture_field06.gd",
+      "bytes": 9120,
+      "sha256_working": "49eb3031aadfc0c9ab6c6abd68dde7897ae8cc35f141a6ceb7d46c32d8706c3f",
+      "sha256_LF": "49eb3031aadfc0c9ab6c6abd68dde7897ae8cc35f141a6ceb7d46c32d8706c3f"
+    },
+    {
+      "path": "godot-spike/tools/capture_field06.gd.uid",
+      "bytes": 20,
+      "sha256_working": "40c58292ff0162fd5ce361aede530b796b04a1b18694e7eaabc5b1e94603a23c",
+      "sha256_LF": "40c58292ff0162fd5ce361aede530b796b04a1b18694e7eaabc5b1e94603a23c"
+    },
+    {
+      "path": "godot-spike/tools/capture_field07.gd",
+      "bytes": 11952,
+      "sha256_working": "834851a1aaf2652c40853eb9ff00d4c28682971eda85927725c52d2f0a3e9680",
+      "sha256_LF": "834851a1aaf2652c40853eb9ff00d4c28682971eda85927725c52d2f0a3e9680"
+    },
+    {
+      "path": "godot-spike/tools/capture_field07.gd.uid",
+      "bytes": 20,
+      "sha256_working": "43fcaef790d402b574747b416e5d6eeff85307652df2e06afac19bf22012efe7",
+      "sha256_LF": "43fcaef790d402b574747b416e5d6eeff85307652df2e06afac19bf22012efe7"
+    },
+    {
+      "path": "godot-spike/tools/capture_field_stage.gd",
+      "bytes": 433,
+      "sha256_working": "07dd5d808f07377fe8deeadba81cd3ea0501a9a9ca84fcbf33bdc00042ce54bd",
+      "sha256_LF": "07dd5d808f07377fe8deeadba81cd3ea0501a9a9ca84fcbf33bdc00042ce54bd"
+    },
+    {
+      "path": "godot-spike/tools/capture_field_stage.gd.uid",
+      "bytes": 19,
+      "sha256_working": "3fe6594bf92c3deae956dddcfae01371f62dfe0504365ef28e236132c21033b7",
+      "sha256_LF": "3fe6594bf92c3deae956dddcfae01371f62dfe0504365ef28e236132c21033b7"
+    },
+    {
+      "path": "godot-spike/tools/capture_hit_field05.gd",
+      "bytes": 963,
+      "sha256_working": "44b171c8eab3bd1687c6b6b644fccace6726b3fbef18e4a87abf58377ef2cbc1",
+      "sha256_LF": "44b171c8eab3bd1687c6b6b644fccace6726b3fbef18e4a87abf58377ef2cbc1"
+    },
+    {
+      "path": "godot-spike/tools/capture_hit_field05.gd.uid",
+      "bytes": 20,
+      "sha256_working": "6d40a49bd08ee7a4eedf375be09e80b12c1d46b23368518ef7e6b408008a2356",
+      "sha256_LF": "6d40a49bd08ee7a4eedf375be09e80b12c1d46b23368518ef7e6b408008a2356"
+    },
+    {
+      "path": "godot-spike/tools/capture_hit_field06.gd",
+      "bytes": 963,
+      "sha256_working": "168b4c3906b2edac1fc460cbd6c88c2e5516e3184b0b3784b388e9a71b68f919",
+      "sha256_LF": "168b4c3906b2edac1fc460cbd6c88c2e5516e3184b0b3784b388e9a71b68f919"
+    },
+    {
+      "path": "godot-spike/tools/capture_hit_field06.gd.uid",
+      "bytes": 20,
+      "sha256_working": "098e411992ce976fc124c5d06c5432819345e46a487daa8907e73934b5c51c8e",
+      "sha256_LF": "098e411992ce976fc124c5d06c5432819345e46a487daa8907e73934b5c51c8e"
+    },
+    {
+      "path": "godot-spike/tools/capture_spike03.gd",
+      "bytes": 6849,
+      "sha256_working": "006d5682f03eb8f21236632aa1701dc2186f099b6bde71f4517073cae7207f16",
+      "sha256_LF": "006d5682f03eb8f21236632aa1701dc2186f099b6bde71f4517073cae7207f16"
+    },
+    {
+      "path": "godot-spike/tools/capture_spike03.gd.uid",
+      "bytes": 20,
+      "sha256_working": "a67e063d9d83daafc887703b8b3480d525478ac83ea58e105196f9a4de724ba4",
+      "sha256_LF": "a67e063d9d83daafc887703b8b3480d525478ac83ea58e105196f9a4de724ba4"
+    },
+    {
+      "path": "godot-spike/tools/capture_spike04.gd",
+      "bytes": 6857,
+      "sha256_working": "ce101ecc192581099905efd81b32b2d98fd826e3b3a33118d20aeecc65c51ef4",
+      "sha256_LF": "ce101ecc192581099905efd81b32b2d98fd826e3b3a33118d20aeecc65c51ef4"
+    },
+    {
+      "path": "godot-spike/tools/capture_spike04.gd.uid",
+      "bytes": 20,
+      "sha256_working": "96e4b76617588b1687be206267c79773721b9a749f66a1845a62746edc74849e",
+      "sha256_LF": "96e4b76617588b1687be206267c79773721b9a749f66a1845a62746edc74849e"
+    },
+    {
+      "path": "godot-spike/tools/capture_spike05.gd",
+      "bytes": 6857,
+      "sha256_working": "801005c06c9fd5beb8f35c475c5b0aa1b12fe6a53514382032bf6499210bc858",
+      "sha256_LF": "801005c06c9fd5beb8f35c475c5b0aa1b12fe6a53514382032bf6499210bc858"
+    },
+    {
+      "path": "godot-spike/tools/capture_spike05.gd.uid",
+      "bytes": 20,
+      "sha256_working": "22d36577af7ae44dc9c522ef6b540c1acd68d2875ca5c975d43d37e2b1730f1d",
+      "sha256_LF": "22d36577af7ae44dc9c522ef6b540c1acd68d2875ca5c975d43d37e2b1730f1d"
+    },
+    {
+      "path": "godot-spike/tools/capture_spike06.gd",
+      "bytes": 7117,
+      "sha256_working": "b68b735eb7b97a4003a1bc9f75f4e97deee4bb9fa55cde89e457902c6b4f0af8",
+      "sha256_LF": "b68b735eb7b97a4003a1bc9f75f4e97deee4bb9fa55cde89e457902c6b4f0af8"
+    },
+    {
+      "path": "godot-spike/tools/capture_spike06.gd.uid",
+      "bytes": 20,
+      "sha256_working": "d2f05a3c895d1728ef8341331e038b2e2096c946825071e3d49e8f9851487417",
+      "sha256_LF": "d2f05a3c895d1728ef8341331e038b2e2096c946825071e3d49e8f9851487417"
+    },
+    {
+      "path": "godot-spike/tools/capture_spike07.gd",
+      "bytes": 7117,
+      "sha256_working": "79880583eae7b86dd91fe05ae43c089fe103cf62c978b743e43a193c0097e49f",
+      "sha256_LF": "79880583eae7b86dd91fe05ae43c089fe103cf62c978b743e43a193c0097e49f"
+    },
+    {
+      "path": "godot-spike/tools/capture_spike07.gd.uid",
+      "bytes": 19,
+      "sha256_working": "30698c17f929d16d52bfdf2b661823bd73249f76af0b972b3c9cf42b0e3a530f",
+      "sha256_LF": "30698c17f929d16d52bfdf2b661823bd73249f76af0b972b3c9cf42b0e3a530f"
+    },
+    {
+      "path": "godot-spike/tools/check_a4_reproduction.py",
+      "bytes": 983,
+      "sha256_working": "bcd7ecf8576ebf15c06b1b666cec33360d1f1364c764c7c2baa76bc10afc7b33",
+      "sha256_LF": "bcd7ecf8576ebf15c06b1b666cec33360d1f1364c764c7c2baa76bc10afc7b33"
+    },
+    {
+      "path": "godot-spike/tools/check_a5_reproduction.py",
+      "bytes": 1696,
+      "sha256_working": "d12d2c47e1ab921b784229c23107518c6e82a892b365afccfd80bce19ca60241",
+      "sha256_LF": "d12d2c47e1ab921b784229c23107518c6e82a892b365afccfd80bce19ca60241"
+    },
+    {
+      "path": "godot-spike/tools/check_a6_reproduction.py",
+      "bytes": 1810,
+      "sha256_working": "5858449fabe68112040df995046fce3252f5da3c417df0426e5a7c6da3a83e12",
+      "sha256_LF": "5858449fabe68112040df995046fce3252f5da3c417df0426e5a7c6da3a83e12"
+    },
+    {
+      "path": "godot-spike/tools/check_spike07_baseline.py",
+      "bytes": 1586,
+      "sha256_working": "71b7d638fc09609220308a98d57caedbc2d99a5eaf8b50cc90283606e0935b6d",
+      "sha256_LF": "71b7d638fc09609220308a98d57caedbc2d99a5eaf8b50cc90283606e0935b6d"
+    },
+    {
+      "path": "godot-spike/tools/create_a6_capture.py",
+      "bytes": 1573,
+      "sha256_working": "b8c5c8b0485c9363be659ee127bb267bb4c7c91122ef61804f87947444664ab3",
+      "sha256_LF": "b8c5c8b0485c9363be659ee127bb267bb4c7c91122ef61804f87947444664ab3"
+    },
+    {
+      "path": "godot-spike/tools/create_a6_package.py",
+      "bytes": 2847,
+      "sha256_working": "c6ad45c96afe7c576878a974766f8d60ac2e8b2f37070316b9911c9b5c67ff6e",
+      "sha256_LF": "c6ad45c96afe7c576878a974766f8d60ac2e8b2f37070316b9911c9b5c67ff6e"
+    },
+    {
+      "path": "godot-spike/tools/create_a7_capture.py",
+      "bytes": 450,
+      "sha256_working": "ee744c96b342e2bca990612a7413331b884e8077e40c9bac479a069deaca5999",
+      "sha256_LF": "ee744c96b342e2bca990612a7413331b884e8077e40c9bac479a069deaca5999"
+    },
+    {
+      "path": "godot-spike/tools/document_a9.py",
+      "bytes": 23103,
+      "sha256_working": "f62571977a1cf6d6eea1550514ba79a20787cf939469d04a0e69a9afa1c54b45",
+      "sha256_LF": "f62571977a1cf6d6eea1550514ba79a20787cf939469d04a0e69a9afa1c54b45"
+    },
+    {
+      "path": "godot-spike/tools/field_harness.gd",
+      "bytes": 2820,
+      "sha256_working": "1ff88573d6ad22a1f44bb88df12eb3f2de27f3fd7b3cd83943774aa264db2e16",
+      "sha256_LF": "1ff88573d6ad22a1f44bb88df12eb3f2de27f3fd7b3cd83943774aa264db2e16"
+    },
+    {
+      "path": "godot-spike/tools/field_harness.gd.uid",
+      "bytes": 20,
+      "sha256_working": "6a3c57d2b16d0e7762608d37b8ca3bd10d5d24b0659d8d336dc2c89f099c568c",
+      "sha256_LF": "6a3c57d2b16d0e7762608d37b8ca3bd10d5d24b0659d8d336dc2c89f099c568c"
+    },
+    {
+      "path": "godot-spike/tools/field_policy.gd",
+      "bytes": 9474,
+      "sha256_working": "f2a74c8a23978731cddb2c4f66b1b44b7b6d0b2b9dc1144a98a1b473e51f830e",
+      "sha256_LF": "f2a74c8a23978731cddb2c4f66b1b44b7b6d0b2b9dc1144a98a1b473e51f830e"
+    },
+    {
+      "path": "godot-spike/tools/field_policy.gd.uid",
+      "bytes": 19,
+      "sha256_working": "22750616fa02f1f4ed4617240c9b0cc9dddd0dcbe14c3b47b2ff86e9183407de",
+      "sha256_LF": "22750616fa02f1f4ed4617240c9b0cc9dddd0dcbe14c3b47b2ff86e9183407de"
+    },
+    {
+      "path": "godot-spike/tools/field_policy_spike05.gd",
+      "bytes": 3753,
+      "sha256_working": "18c3d1f65be26aa04a2d0311e37199a4563c7e24f7a113a72ce6f1663ef1508e",
+      "sha256_LF": "18c3d1f65be26aa04a2d0311e37199a4563c7e24f7a113a72ce6f1663ef1508e"
+    },
+    {
+      "path": "godot-spike/tools/field_policy_spike05.gd.uid",
+      "bytes": 20,
+      "sha256_working": "ea8021e995a1ee2689b341ba1db1b050fc156c21d5f23e11669feee7daf528f4",
+      "sha256_LF": "ea8021e995a1ee2689b341ba1db1b050fc156c21d5f23e11669feee7daf528f4"
+    },
+    {
+      "path": "godot-spike/tools/field_policy_spike06.gd",
+      "bytes": 6923,
+      "sha256_working": "1714bef7a57241fb2d7f0f0256820fb6dfba15387ec8ba588c9f26f20803c6d4",
+      "sha256_LF": "1714bef7a57241fb2d7f0f0256820fb6dfba15387ec8ba588c9f26f20803c6d4"
+    },
+    {
+      "path": "godot-spike/tools/field_policy_spike06.gd.uid",
+      "bytes": 20,
+      "sha256_working": "def6b6d0b7f6291d22c873caec78ef46f1aa11c6e95b183cf5e20d10cd0f2329",
+      "sha256_LF": "def6b6d0b7f6291d22c873caec78ef46f1aa11c6e95b183cf5e20d10cd0f2329"
+    },
+    {
+      "path": "godot-spike/tools/fix_a9_regions.py",
+      "bytes": 29186,
+      "sha256_working": "bc4ee52ab4d0d784d255791f06334c1830e2f7e26e85184bee4f4715a7e1b745",
+      "sha256_LF": "bc4ee52ab4d0d784d255791f06334c1830e2f7e26e85184bee4f4715a7e1b745"
+    },
+    {
+      "path": "godot-spike/tools/make_field_art.py",
+      "bytes": 3019,
+      "sha256_working": "d7d8a684efc4934a102c3951f3d4e93bacb899b776da0a3c16e1b2b65f34d9d6",
+      "sha256_LF": "d7d8a684efc4934a102c3951f3d4e93bacb899b776da0a3c16e1b2b65f34d9d6"
+    },
+    {
+      "path": "godot-spike/tools/make_perf_states07.gd",
+      "bytes": 964,
+      "sha256_working": "f27d07bf372b7ab3d24cdf67fa3a1acf9325686503fc0b6a25f72fe18ea1b2e5",
+      "sha256_LF": "f27d07bf372b7ab3d24cdf67fa3a1acf9325686503fc0b6a25f72fe18ea1b2e5"
+    },
+    {
+      "path": "godot-spike/tools/make_perf_states07.gd.uid",
+      "bytes": 20,
+      "sha256_working": "6a0c61dd1c8e41a9048b4ead66b503f5b78254861d9eaa966456d8961479cb65",
+      "sha256_LF": "6a0c61dd1c8e41a9048b4ead66b503f5b78254861d9eaa966456d8961479cb65"
+    },
+    {
+      "path": "godot-spike/tools/measure_a3_readability.py",
+      "bytes": 5462,
+      "sha256_working": "09962c1eb225801490aff5d4ea31aa8e7e90680dc14dc78a9a86b83498c05328",
+      "sha256_LF": "09962c1eb225801490aff5d4ea31aa8e7e90680dc14dc78a9a86b83498c05328"
+    },
+    {
+      "path": "godot-spike/tools/measure_readability.py",
+      "bytes": 1517,
+      "sha256_working": "83eae6a59bec587ec7da3ca088da1dd06d098a173f5d08e1addb4037df0cb397",
+      "sha256_LF": "83eae6a59bec587ec7da3ca088da1dd06d098a173f5d08e1addb4037df0cb397"
+    },
+    {
+      "path": "godot-spike/tools/normalize_a6_logs.py",
+      "bytes": 549,
+      "sha256_working": "52597f6953c7d212759dd7be0af4d0a7f234d173a3d6240f3a9457a58afcf81a",
+      "sha256_LF": "52597f6953c7d212759dd7be0af4d0a7f234d173a3d6240f3a9457a58afcf81a"
+    },
+    {
+      "path": "godot-spike/tools/normalize_a7_logs.py",
+      "bytes": 581,
+      "sha256_working": "305fe6ade206553061673e4aee873fce3849a8e22f6af2a1c1c75cf266c8a5a6",
+      "sha256_LF": "305fe6ade206553061673e4aee873fce3849a8e22f6af2a1c1c75cf266c8a5a6"
+    },
+    {
+      "path": "godot-spike/tools/package_a2_evidence.py",
+      "bytes": 7184,
+      "sha256_working": "716a8e5a83cbbb98e6c43d5ed4cc24ee68b3efc127ba99079856bc325904f18e",
+      "sha256_LF": "716a8e5a83cbbb98e6c43d5ed4cc24ee68b3efc127ba99079856bc325904f18e"
+    },
+    {
+      "path": "godot-spike/tools/package_a3_evidence.py",
+      "bytes": 9066,
+      "sha256_working": "ace86d8c969abca966e2afea586473e9c563cc71bd7f5c501848a08084b674ba",
+      "sha256_LF": "ace86d8c969abca966e2afea586473e9c563cc71bd7f5c501848a08084b674ba"
+    },
+    {
+      "path": "godot-spike/tools/package_a4_evidence.py",
+      "bytes": 8628,
+      "sha256_working": "14e4f253820b909073874aff6d5eda53ae34ea6bc079d5bd920809344068ef52",
+      "sha256_LF": "14e4f253820b909073874aff6d5eda53ae34ea6bc079d5bd920809344068ef52"
+    },
+    {
+      "path": "godot-spike/tools/package_a5_evidence.py",
+      "bytes": 9692,
+      "sha256_working": "4171d5ebc456f597cedb59409d6a4777201fd15050a7f351afdfedfec48b0bbf",
+      "sha256_LF": "4171d5ebc456f597cedb59409d6a4777201fd15050a7f351afdfedfec48b0bbf"
+    },
+    {
+      "path": "godot-spike/tools/package_a6_evidence.py",
+      "bytes": 9969,
+      "sha256_working": "2413981251b4a8688528641a4757c9e9f24d5171b81ebbaed9bfa4cf44e022c5",
+      "sha256_LF": "2413981251b4a8688528641a4757c9e9f24d5171b81ebbaed9bfa4cf44e022c5"
+    },
+    {
+      "path": "godot-spike/tools/package_a7_evidence.py",
+      "bytes": 9033,
+      "sha256_working": "917fea56ddb19d23dc7a8a434fb912c31c5a4eb1d249fad422adaa7acfc0478a",
+      "sha256_LF": "917fea56ddb19d23dc7a8a434fb912c31c5a4eb1d249fad422adaa7acfc0478a"
+    },
+    {
+      "path": "godot-spike/tools/package_a8_evidence.py",
+      "bytes": 9570,
+      "sha256_working": "62e5d053440d55574e3e2290b1c35a18db85181275a0abea798f652e2d9cf09d",
+      "sha256_LF": "62e5d053440d55574e3e2290b1c35a18db85181275a0abea798f652e2d9cf09d"
+    },
+    {
+      "path": "godot-spike/tools/package_a9_evidence.py",
+      "bytes": 12197,
+      "sha256_working": "83fa3375611769476287b95a1a086aaafe42e8217980e9e8c598bde94fdd3134",
+      "sha256_LF": "83fa3375611769476287b95a1a086aaafe42e8217980e9e8c598bde94fdd3134"
+    },
+    {
+      "path": "godot-spike/tools/package_field_evidence.py",
+      "bytes": 11973,
+      "sha256_working": "bce628c0d5769f76d4a9827b1f727bf9d3fe1e50fb8f24bb2fe2aa3a1aa0bfc7",
+      "sha256_LF": "bce628c0d5769f76d4a9827b1f727bf9d3fe1e50fb8f24bb2fe2aa3a1aa0bfc7"
+    },
+    {
+      "path": "godot-spike/tools/package_spike02_evidence.py",
+      "bytes": 6136,
+      "sha256_working": "237a0e9f3e20512983864b83c88ad53ea50a01fe954c65fd00178d97b8ad4a95",
+      "sha256_LF": "237a0e9f3e20512983864b83c88ad53ea50a01fe954c65fd00178d97b8ad4a95"
+    },
+    {
+      "path": "godot-spike/tools/package_spike03.py",
+      "bytes": 6526,
+      "sha256_working": "1e4dc8325389181a593998804cc40fd6c1eabfc2ab4be1317c2e0de8d68bd799",
+      "sha256_LF": "1e4dc8325389181a593998804cc40fd6c1eabfc2ab4be1317c2e0de8d68bd799"
+    },
+    {
+      "path": "godot-spike/tools/package_spike04_hitfeel.py",
+      "bytes": 1813,
+      "sha256_working": "280fe7c7b6285d34c0486466d35a581323027980cd6b4a81807ef994619dce2f",
+      "sha256_LF": "280fe7c7b6285d34c0486466d35a581323027980cd6b4a81807ef994619dce2f"
+    },
+    {
+      "path": "godot-spike/tools/package_spike05_field.py",
+      "bytes": 12996,
+      "sha256_working": "b1457df62b7e7a81e1d3b7a90a7ecd9cf6c0686880b0907259717c1b5e81451b",
+      "sha256_LF": "b1457df62b7e7a81e1d3b7a90a7ecd9cf6c0686880b0907259717c1b5e81451b"
+    },
+    {
+      "path": "godot-spike/tools/package_spike05_hitfeel.py",
+      "bytes": 1813,
+      "sha256_working": "75d366a701ed745b81282d1b00f213b933bf00fab25111bb8a23386c05d4ae43",
+      "sha256_LF": "75d366a701ed745b81282d1b00f213b933bf00fab25111bb8a23386c05d4ae43"
+    },
+    {
+      "path": "godot-spike/tools/package_spike06_field.py",
+      "bytes": 14782,
+      "sha256_working": "bf4062957655fd7f5160ef1bf988c9d3e03abf501326a22169008d7b0ac82c62",
+      "sha256_LF": "bf4062957655fd7f5160ef1bf988c9d3e03abf501326a22169008d7b0ac82c62"
+    },
+    {
+      "path": "godot-spike/tools/package_spike06_hitfeel.py",
+      "bytes": 2337,
+      "sha256_working": "cc9114f93fefdf8e1a291953afe7647dc6f6466bd4c52235c97861f0ec0cbb73",
+      "sha256_LF": "cc9114f93fefdf8e1a291953afe7647dc6f6466bd4c52235c97861f0ec0cbb73"
+    },
+    {
+      "path": "godot-spike/tools/package_spike07.py",
+      "bytes": 10540,
+      "sha256_working": "5f875c166081c1a46e3b5cbf97820261a70c48e25b58aad068888307e3686cf2",
+      "sha256_LF": "5f875c166081c1a46e3b5cbf97820261a70c48e25b58aad068888307e3686cf2"
+    },
+    {
+      "path": "godot-spike/tools/perf_field07.gd",
+      "bytes": 5421,
+      "sha256_working": "6d54e1a3f1b255dab5a2db419b8afaf82a1a296822edfd1f5f439141f69af761",
+      "sha256_LF": "6d54e1a3f1b255dab5a2db419b8afaf82a1a296822edfd1f5f439141f69af761"
+    },
+    {
+      "path": "godot-spike/tools/perf_field07.gd.uid",
+      "bytes": 19,
+      "sha256_working": "7693dfbf4f9b47f524d3f8414749e6c7c76eb38293a870b360950fcb819bddd9",
+      "sha256_LF": "7693dfbf4f9b47f524d3f8414749e6c7c76eb38293a870b360950fcb819bddd9"
+    },
+    {
+      "path": "godot-spike/tools/perf_meter07.gd",
+      "bytes": 455,
+      "sha256_working": "0e6655886523b1f62b6c375081e208cef82bb089efb2abd1e12d5f66fda193f6",
+      "sha256_LF": "0e6655886523b1f62b6c375081e208cef82bb089efb2abd1e12d5f66fda193f6"
+    },
+    {
+      "path": "godot-spike/tools/perf_meter07.gd.uid",
+      "bytes": 19,
+      "sha256_working": "67f251ee07d4e0a37a4cc6927b6d487adccb57f29bd64a92e7734d1e5f9525c4",
+      "sha256_LF": "67f251ee07d4e0a37a4cc6927b6d487adccb57f29bd64a92e7734d1e5f9525c4"
+    },
+    {
+      "path": "godot-spike/tools/perf_states07.bin",
+      "bytes": 31248,
+      "sha256_working": "f4e1f2fb6e2e212dae1e7c58c443c515372f7ab33d3c401764b99c95f6d6a91e",
+      "sha256_LF": "f4e1f2fb6e2e212dae1e7c58c443c515372f7ab33d3c401764b99c95f6d6a91e"
+    },
+    {
+      "path": "godot-spike/tools/pixels_field07.gd",
+      "bytes": 1081,
+      "sha256_working": "e547c3786f8ab9fd60e7c220dde5252954d8c6ea40ecb49664e9e24b649be342",
+      "sha256_LF": "e547c3786f8ab9fd60e7c220dde5252954d8c6ea40ecb49664e9e24b649be342"
+    },
+    {
+      "path": "godot-spike/tools/pixels_field07.gd.uid",
+      "bytes": 19,
+      "sha256_working": "3af0eb1fe5b22dfc2e4b18908eb402a469ef9ef72043c69ac07a81a15266b361",
+      "sha256_LF": "3af0eb1fe5b22dfc2e4b18908eb402a469ef9ef72043c69ac07a81a15266b361"
+    },
+    {
+      "path": "godot-spike/tools/prepare_a2_frames.py",
+      "bytes": 7169,
+      "sha256_working": "ab2d8de573dd62b2c350edb1080617703e9616a139f552deb1b88e0f109c0016",
+      "sha256_LF": "a64c9d388afd1ed7fcf0d988cf54a6d5576a5627f05dc5964f6f96f148774734"
+    },
+    {
+      "path": "godot-spike/tools/prepare_a2_knight.py",
+      "bytes": 4064,
+      "sha256_working": "477dff33e33aaebb9ee2ebdec6e39d6b09f604157938bc508924018289303cc9",
+      "sha256_LF": "477dff33e33aaebb9ee2ebdec6e39d6b09f604157938bc508924018289303cc9"
+    },
+    {
+      "path": "godot-spike/tools/prepare_a3_frames.py",
+      "bytes": 9283,
+      "sha256_working": "9cf6afb73e1d640cb38f682eba3237538956529c05ea658b8d39a324d26dc7a0",
+      "sha256_LF": "9cf6afb73e1d640cb38f682eba3237538956529c05ea658b8d39a324d26dc7a0"
+    },
+    {
+      "path": "godot-spike/tools/prepare_a4_frames.py",
+      "bytes": 14644,
+      "sha256_working": "7595c4e3bcc6502ea14b038e7429e0ed81388fe10ce662135ef21325009976bf",
+      "sha256_LF": "7595c4e3bcc6502ea14b038e7429e0ed81388fe10ce662135ef21325009976bf"
+    },
+    {
+      "path": "godot-spike/tools/prepare_a5_frames.py",
+      "bytes": 11570,
+      "sha256_working": "183ecc35831ea67088eb0ed1a460865e3dcf6d246e5516ddb815c687074fd602",
+      "sha256_LF": "89fcba652ce31f4276d5d1b9e1afcc81ffc83d7ee35d3c84cdfe4bc6640f701b"
+    },
+    {
+      "path": "godot-spike/tools/prepare_a6_frames.py",
+      "bytes": 6139,
+      "sha256_working": "db6b18d17577a5b2bcb892f664f6fc4fe83a00ee280bf4eacc3363218c26d3de",
+      "sha256_LF": "db6b18d17577a5b2bcb892f664f6fc4fe83a00ee280bf4eacc3363218c26d3de"
+    },
+    {
+      "path": "godot-spike/tools/prepare_a7_frames.py",
+      "bytes": 15172,
+      "sha256_working": "1c872601e9fbd03e87756264a00c9540b25b1d0807a72b199884c913286903d0",
+      "sha256_LF": "1c872601e9fbd03e87756264a00c9540b25b1d0807a72b199884c913286903d0"
+    },
+    {
+      "path": "godot-spike/tools/prepare_a8_sheet.py",
+      "bytes": 7205,
+      "sha256_working": "8130bc7a10782dee22cfc1e23ed4507e946c389e3b5de40ca0de35fef110b72d",
+      "sha256_LF": "8130bc7a10782dee22cfc1e23ed4507e946c389e3b5de40ca0de35fef110b72d"
+    },
+    {
+      "path": "godot-spike/tools/prepare_a9_capture.py",
+      "bytes": 655,
+      "sha256_working": "c23b498db28197707554ed570090511e97dc8577d27ee2a572f1ad2c56b65616",
+      "sha256_LF": "c23b498db28197707554ed570090511e97dc8577d27ee2a572f1ad2c56b65616"
+    },
+    {
+      "path": "godot-spike/tools/prepare_a9_regions.py",
+      "bytes": 8247,
+      "sha256_working": "33bdcb56fe01be33a3a9fc1d926e9370511302c68260029166db563d5a260757",
+      "sha256_LF": "33bdcb56fe01be33a3a9fc1d926e9370511302c68260029166db563d5a260757"
+    },
+    {
+      "path": "godot-spike/tools/prepare_frames.py",
+      "bytes": 8220,
+      "sha256_working": "760d355c0e8ac96d0e4ff0e77d6af9d841441eb09d43a7e4db82c6d1d1ae8a5c",
+      "sha256_LF": "760d355c0e8ac96d0e4ff0e77d6af9d841441eb09d43a7e4db82c6d1d1ae8a5c"
+    },
+    {
+      "path": "godot-spike/tools/prepare_perf07.py",
+      "bytes": 4047,
+      "sha256_working": "2bcc82e3254cce971eccee4d90eacc979123b92cdf68470443731c9a9b76ccc2",
+      "sha256_LF": "2bcc82e3254cce971eccee4d90eacc979123b92cdf68470443731c9a9b76ccc2"
+    },
+    {
+      "path": "godot-spike/tools/preview_perf07.gd",
+      "bytes": 1797,
+      "sha256_working": "7ff8494423f3e16bfb72ae8eaa46ceeb9e24f93bbf0bea173ada75f7dcfc1cd1",
+      "sha256_LF": "7ff8494423f3e16bfb72ae8eaa46ceeb9e24f93bbf0bea173ada75f7dcfc1cd1"
+    },
+    {
+      "path": "godot-spike/tools/preview_perf07.gd.uid",
+      "bytes": 20,
+      "sha256_working": "be049d0b34538d443c8c840c7512eafb67f7c852323013ea6cdcc5bab280f843",
+      "sha256_LF": "be049d0b34538d443c8c840c7512eafb67f7c852323013ea6cdcc5bab280f843"
+    },
+    {
+      "path": "godot-spike/tools/probe_balance06.gd",
+      "bytes": 1695,
+      "sha256_working": "2c366811837cf9c7dd5525bdf72d6deb6b60cb6f0e9e6c6459ca2251dcf25329",
+      "sha256_LF": "2c366811837cf9c7dd5525bdf72d6deb6b60cb6f0e9e6c6459ca2251dcf25329"
+    },
+    {
+      "path": "godot-spike/tools/probe_balance06.gd.uid",
+      "bytes": 19,
+      "sha256_working": "10eef2a3e42ecd681877eee6e7d4ac5cfbca526dbd4263ca33712cf912463859",
+      "sha256_LF": "10eef2a3e42ecd681877eee6e7d4ac5cfbca526dbd4263ca33712cf912463859"
+    },
+    {
+      "path": "godot-spike/tools/probe_balance07.gd",
+      "bytes": 3563,
+      "sha256_working": "3190e8d0d0e1b15c08ab1c3e1276ec9ac530094ad993ddd994a050e9bb864ea7",
+      "sha256_LF": "3190e8d0d0e1b15c08ab1c3e1276ec9ac530094ad993ddd994a050e9bb864ea7"
+    },
+    {
+      "path": "godot-spike/tools/probe_balance07.gd.uid",
+      "bytes": 20,
+      "sha256_working": "7b2cc273731c7a7e80c0b7b73a0753871e0d637cf1cdc3ea1cb9f59c5268ab49",
+      "sha256_LF": "7b2cc273731c7a7e80c0b7b73a0753871e0d637cf1cdc3ea1cb9f59c5268ab49"
+    },
+    {
+      "path": "godot-spike/tools/readability_a3.gd",
+      "bytes": 3580,
+      "sha256_working": "f6dfb2b09b21bbaa2f8bc9fe78442c8287bf7394511ec702c46c9cff5c9dafe9",
+      "sha256_LF": "f6dfb2b09b21bbaa2f8bc9fe78442c8287bf7394511ec702c46c9cff5c9dafe9"
+    },
+    {
+      "path": "godot-spike/tools/readability_a3.gd.uid",
+      "bytes": 20,
+      "sha256_working": "843410d69f144ee004cedf1a4835d0d0781983ef3be0e2c292dda51bf7426d32",
+      "sha256_LF": "843410d69f144ee004cedf1a4835d0d0781983ef3be0e2c292dda51bf7426d32"
+    },
+    {
+      "path": "godot-spike/tools/record_a6_provenance.py",
+      "bytes": 2418,
+      "sha256_working": "960fd43914ddc9524bd6f3fcf237797c6889fb1ac1141772c0c8fff4eefc6b58",
+      "sha256_LF": "960fd43914ddc9524bd6f3fcf237797c6889fb1ac1141772c0c8fff4eefc6b58"
+    },
+    {
+      "path": "godot-spike/tools/refine_a7_followthrough.py",
+      "bytes": 3980,
+      "sha256_working": "d28f2eb97a3280e0b7981ccadd3e956e253dd161d24d176a6263bdb4f0057c90",
+      "sha256_LF": "d28f2eb97a3280e0b7981ccadd3e956e253dd161d24d176a6263bdb4f0057c90"
+    },
+    {
+      "path": "godot-spike/tools/summarize_ablation07.py",
+      "bytes": 2683,
+      "sha256_working": "2ab757a818721e0663869d4cf6f01e2add9dbbe27ca721321e536d7be323de5a",
+      "sha256_LF": "2ab757a818721e0663869d4cf6f01e2add9dbbe27ca721321e536d7be323de5a"
+    },
+    {
+      "path": "godot-spike/tools/summarize_perf07.py",
+      "bytes": 3440,
+      "sha256_working": "bad1cd4922ac32f2c7d750a131ad806f796e6e8ef98833e02dc07f8780992733",
+      "sha256_LF": "bad1cd4922ac32f2c7d750a131ad806f796e6e8ef98833e02dc07f8780992733"
+    },
+    {
+      "path": "godot-spike/tools/summarize_render07.py",
+      "bytes": 3824,
+      "sha256_working": "b2e9a03d8d7889b558d7d8736b1647b73b5a8e7e8a71f109e404f204b50aaf1b",
+      "sha256_LF": "b2e9a03d8d7889b558d7d8736b1647b73b5a8e7e8a71f109e404f204b50aaf1b"
+    },
+    {
+      "path": "godot-spike/tools/summarize_spike06.py",
+      "bytes": 4731,
+      "sha256_working": "ebe8aadbdcf3b1bea1571a9ddb947d8e13382df111d3559bc19df55507b15b83",
+      "sha256_LF": "ebe8aadbdcf3b1bea1571a9ddb947d8e13382df111d3559bc19df55507b15b83"
+    },
+    {
+      "path": "godot-spike/tools/summarize_spike07.py",
+      "bytes": 3541,
+      "sha256_working": "79b93fd032813f8b49a8a265ca7331b62b03e5b125c5175ff9eaf6996a133be0",
+      "sha256_LF": "79b93fd032813f8b49a8a265ca7331b62b03e5b125c5175ff9eaf6996a133be0"
+    },
+    {
+      "path": "godot-spike/tools/sync_shared_anim.gd",
+      "bytes": 1115,
+      "sha256_working": "66dd8a4ca8cf168a567e16d46109820fdef9eeb5428cf466c51ae2798a381a45",
+      "sha256_LF": "66dd8a4ca8cf168a567e16d46109820fdef9eeb5428cf466c51ae2798a381a45"
+    },
+    {
+      "path": "godot-spike/tools/sync_shared_anim.gd.uid",
+      "bytes": 20,
+      "sha256_working": "bee3a9b80f26733c43802413a55388b44a0d8d1c3ebaff8fe924dd9f5abc7f7b",
+      "sha256_LF": "bee3a9b80f26733c43802413a55388b44a0d8d1c3ebaff8fe924dd9f5abc7f7b"
+    },
+    {
+      "path": "godot-spike/tools/timing_field07.gd",
+      "bytes": 1299,
+      "sha256_working": "3fd9365e0c182c05582727c7feb39c99394aedffa442789405e6e76beede73f7",
+      "sha256_LF": "3fd9365e0c182c05582727c7feb39c99394aedffa442789405e6e76beede73f7"
+    },
+    {
+      "path": "godot-spike/tools/timing_field07.gd.uid",
+      "bytes": 20,
+      "sha256_working": "7294419d10d4e6a7a85ee36f3b6e7e6497657b98bb0ea559bfa6267777734aef",
+      "sha256_LF": "7294419d10d4e6a7a85ee36f3b6e7e6497657b98bb0ea559bfa6267777734aef"
+    },
+    {
+      "path": "godot-spike/tools/update_a6_historical_tests.py",
+      "bytes": 1587,
+      "sha256_working": "00eea75f47737cb657c13fa42976af9c3e353aa29c78242b25e6a93a774406f0",
+      "sha256_LF": "00eea75f47737cb657c13fa42976af9c3e353aa29c78242b25e6a93a774406f0"
+    },
+    {
+      "path": "godot-spike/tools/update_a7_historical_tests.py",
+      "bytes": 1269,
+      "sha256_working": "62085d0bd9ef0cc36170bb7c4958040120775e456d6ba1dd10de5042de25ae2f",
+      "sha256_LF": "62085d0bd9ef0cc36170bb7c4958040120775e456d6ba1dd10de5042de25ae2f"
+    },
+    {
+      "path": "godot-spike/tools/update_a8_historical_tests.py",
+      "bytes": 1272,
+      "sha256_working": "ec68c707bac44aa980fc7a73f291a85dd919dbb9f4a2c91bc42129be55e1a186",
+      "sha256_LF": "ec68c707bac44aa980fc7a73f291a85dd919dbb9f4a2c91bc42129be55e1a186"
+    },
+    {
+      "path": "godot-spike/tools/update_a9_historical_tests.py",
+      "bytes": 1109,
+      "sha256_working": "d44007bd07c3bd0d5b7ecad3ca2a45cd2d86001b69b1a0e7bdb70a62dbbf6139",
+      "sha256_LF": "d44007bd07c3bd0d5b7ecad3ca2a45cd2d86001b69b1a0e7bdb70a62dbbf6139"
+    }
+  ]
+}

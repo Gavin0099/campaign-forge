@@ -10,6 +10,9 @@ OUT=ROOT/'docs/evidence/spike07'
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def save(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 def sha(b):return hashlib.sha256(b).hexdigest()
+def content(p):
+    b=p.read_bytes()
+    return b.decode('utf-16' if b.startswith((b'\xff\xfe',b'\xfe\xff')) else 'utf-8-sig')
 def sources():
     files={ROOT/'project.godot',ROOT/'docs/HANDOFF.md',ROOT/'docs/VERIFICATION.md'}
     for folder in ['scripts','data','config','scenes','shaders','tests','tools']:
@@ -21,12 +24,14 @@ def sources():
     save(OUT/'source-hashes.json',{'method':'Pre-containing-commit source bytes, text LF normalization also recorded. Excludes self and generated evidence. W8 refreshes docs only. Git protected audit separately checks unchanged historical blobs.','files':rows})
 def audit():
     exits=read(OUT/'w7-exit-codes.json');assert exits['import_exit']==exits['gut_exit']==0
-    text=(OUT/'test-run.log').read_text(encoding='utf-8-sig')
+    text=content(OUT/'test-run.log')
     count=int(re.search(r'Passing Tests\s+(\d+)',text)[1]);assert count>=165 and 'All tests passed!' in text
     assertions=int(re.search(r'Asserts\s+(\d+)',text)[1])
     assert not any(s in text for s in ['SCRIPT ERROR:','ERROR:','GUT WARNING'])
     scope=read(OUT/'git-scope.json')
     assert scope['branch']=='codex/godot-spike' and scope['protected_diff_exit']==scope['diff_check_exit']==0
+    profiles=read(OUT/'frozen-profiles.json')
+    assert len(profiles)==5 and all(r['equal'] and r['current_blob']==r['expected_blob'] for r in profiles)
     paths=set((OUT/'changed-paths.txt').read_text(encoding='utf-8-sig').splitlines()+(OUT/'untracked-paths.txt').read_text(encoding='utf-8-sig').splitlines())
     for p in paths:
         assert p.startswith('godot-spike/') or p=='docs/tasks/godot-spike-07-bypass-perf.md',p

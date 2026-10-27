@@ -219,3 +219,22 @@ Autoplay default output moved from historical06 folder to07after (named variants
 to separate07variant-* folders) to prevent accidental old-evidence overwrite.
 All480recorded invocations had explicit output; no simulation logic changed.
 W6 capture-source-hashes freezes runtime/operators; docs/offline Python excluded.
+
+## W7 — final verification and scope
+Headless import exit0; fullGUT exit0,32scripts,175/175tests,12305assertions,
+99.429s. Every original165test retained,10newtests. NativeSkirmish9timings/setup
+results unchanged; five profileGitblobs exactly1cff2db,protected pathsdiffexit0,
+gitdiffcheckexit0. Noart/frame/profilevalue/grid_rules/Skirmish/L03change.
+READMEindex,VERIFICATIONactualcommands/exits,and source-hashes recorded.
+
+First offlineaudit exit1 was a decoder error reading PowerShell's UTF16BOM GUT
+log, not a test failure. Auditor detects BOM, retains raw logs, then exit0 with
+175tests/12305assertions,240baseline+80optimized checks, allactualcaptures and
+43nativeattacktimings, profileblobs/scope/frozen runtime verified. Knownfailed
+targets stay explicitly recorded in audit.json; evidence-consistent != alltargets
+met. No need rerun game tests for this offline decoder-only change.
+
+Removed only exact resolved own .godot/spike07-perf path after verifying it lies
+inside this workspace. All4historical/runtime exports, archives and imports gone;
+no temporaryGitworktree was created, no otherworktree touched. temp-cleanup.json.
+W7sourcehashes are pre-containing-commit bytes, W8refreshes documents only.

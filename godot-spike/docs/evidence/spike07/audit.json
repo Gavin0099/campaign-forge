@@ -1,0 +1,13 @@
+{
+  "engineering_evidence_consistent": true,
+  "tests": 175,
+  "assertions": 12305,
+  "baseline_rechecks": 240,
+  "optimized_trace_checks": 80,
+  "known_target_failures": [
+    "Scout conditional death median7<8",
+    "Flank scouts not leading finishing kills",
+    "Not all means<=16.67ms, enemy worst>33ms"
+  ],
+  "human": "HUMAN_PENDING; no Owner acceptance inferred"
+}

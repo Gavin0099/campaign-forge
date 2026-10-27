@@ -1619,3 +1619,50 @@ HUMAN_PENDING：blind road/flank/turtle、實際分鐘、傷亡／困惑／勝�
 docs/design/RULE-ADAPTATION-CONTRACT.md在本checkout不存在，本輪僅自創spike kit，
 不宣稱已通過不存在文件的審核。無global trust、canonical SessionEnd、另一worktree
 寫入、代理／外部reviewer、main／push／merge／PR／stash／Actions／部署／32×24／S4。
+
+## spike-07 — 2026-10-27（本地 W7 驗證）
+
+Godot4.7.2 `ed1daf0bf`；Python3.12.10，皆使用 Owner 指定絕對路徑。
+`$GODOT` 指向 `C:\Users\daish\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe`；
+`$PYTHON` 指向 `C:\Users\daish\AppData\Local\Programs\Python\Python312\python.exe`。
+第一次 sandbox 找不到這兩個執行檔，提權重試成功；沒有新安裝／依賴／信任繞過。
+
+| 實際命令（repo root） | exit | 證據／結果 |
+| --- | --- | --- |
+| `& $GODOT --headless --path godot-spike --import` | 0 | `evidence/spike07/w7-import.log` |
+| `& $GODOT --headless --path godot-spike -s res://addons/gut/gut_cmdln.gd -gdir=res://tests -gexit` | 0 | 32 scripts，**175/175 tests，12,305 assertions**，99.429s；`test-run.log`／`w7-exit-codes.json` |
+| `& $GODOT --headless --path godot-spike -s res://tools/autoplay_field.gd -- --seeds=fixed --enemy-mean=1.47633625 --output=res://docs/evidence/spike07/after/` | 0 | 40×6 final，非法命令0 |
+| 同上加 `--variant=spike06`，output=`baseline-recheck/` | 0 | 240 場逐 trace／commands／outcome／deaths／class／turn 再現 W1 |
+| autoplay `--variant=spike05 --policies=road,flank --output=res://docs/evidence/spike07/spike05-spot/` | 0 | 24018 road敗T8、flank敗T7，歷史行為保留 |
+| `& $PYTHON godot-spike/tools/package_spike07.py reports` | 0 | `PACING.md`、240 baseline +80 optimized trace comparison |
+| `& $GODOT --path godot-spike --resolution 1280x720 --audio-driver Dummy -s res://tools/capture_field07.gd -- --mode=<qa/1080/runtime/lose/bypass-before/bypass-after/measure>` | 各0 | 每模式一個程序，`capture-exits.json`／`movie-measure-exits.json`；無錄影完整 win／lose、keyboard smoke |
+| 同 capture，加 `--fixed-fps 60 --write-movie res://.godot/spike07-movies/<enemy/scout>.avi --mode=<enemy/scout>`（mode 在 `--` 後） | 各0 | 真實可達 snapshot 續播；478／143 幀，非整場影片 |
+| `& $PYTHON godot-spike/tools/package_spike07.py movies` | 0 | AVI header與每幀1280×720驗證、PNG strips；ffmpeg未安裝 |
+| `& $GODOT --path godot-spike --resolution 1280x720 --audio-driver Dummy -s res://tools/timing_field07.gd` | 0 | field normal／crit／Reduced 0.949／1.017／0.747s；readbacks0 |
+| 同原生參數，`-s res://tools/capture_spike07.gd -- --wall-timing` | 0 | Skirmish三setup×三模式9/9，≤1.7s、Reduced≤normal |
+| exact export 原生 `-s res://tools/perf_field07.gd -- --tag=<tag> --out=<absolute-json>`；補測加 `--render-timers`／`--mode=enemy --include-ai` | 各0 | `PERFORMANCE.md`／`perf/*.json`：同狀態、各≥3次、無movie/readback／其他Godot |
+| `& $PYTHON godot-spike/tools/summarize_render07.py` | 0 | CPU／GPU與AI-inclusive表；不把TIME_PROCESS粗取樣相加為CPU總和 |
+| `git diff --quiet 1cff2db -- <protected paths>`／`git diff --check` | 0／0 | `git-scope.json`，保護路徑不變 |
+
+Skirmish／L03規則、三setup、HP／damage2／knockback／walkability／G005與HUD均未改。
+175個測試保留所有原165個；歷史field位置／T5wave斷言改指`spike06`，原數值未刪。
+新增snapshot全檔hash、40種子、dash／bypass、warning／reachable、純exposure／retreat、
+W4 golden rules 全量等價、minimap forced-fresh／invalidations等測試。`grid_rules.gd`未改。
+所有五套profile的歷史Git blob逐一相等（`frozen-profiles.json`）；flash0.5及其他值不變。
+原影格／idle／knight PNG、`shared-anim/`、`ui-prototype/`、art briefs／proposals均無diff。
+
+W5前後部署／V／O逐像素RGB差異均0。O只有W2波次數字T5→T3，格式／字級／配置未改；
+允許時點變更需真實顯示預告，已明列此保守解讀。無任何新art或renderer改動。
+
+40種子default：road60%、flank67.5%，在事前40–60%／52.5–72.5%內；naive10%／5%。
+所有200場完整路線及40場部分起始探針都無wave-free勝利；非全人類策略的不可繞過證明。
+斥候80/80無T4前死亡，傷害非最高；**死亡中位7<8與側翼收尾不領先仍FAIL**。
+原生平均最低20.7／23.5ms門檻PASS；**穩定60FPS／worst<33ms仍FAIL**：納入同步AI後
+normal16.85／worst64.28、2x17.03／worst66.80ms。動畫重播表另列，不能混用。
+GPU平均4.2–4.5ms，CPU action邊界仍有尖峰；未宣稱GPU-only或更換美術即可解決。
+
+無截圖／錄影整場 flank1006 勝T14，43次攻擊≤0.935s，13敵方階段平均1.416251s。
+分鐘統計仍使用相同參考1.47633625s及15–25s／ally-turn假設；沒有為分鐘填HP或調難度。
+175/175、相異trace、像素相等與AVI均不構成人工盲玩、商業品質或Owner批准。
+HUMAN_PENDING：road／flank／turtle盲玩、實際分鐘／傷亡／困惑／勝敗理由、wave公平性、
+捲動順暢、聲音與手感。僅本地commit，無push／merge／PR／stash／Actions／部署／S4。

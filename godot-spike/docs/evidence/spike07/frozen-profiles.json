@@ -1,0 +1,32 @@
+[
+    {
+        "current_blob":  "3c2d1eb738051b6f1e10db4aad02a66fc988de7c",
+        "path":  "godot-spike/config/impact_profile.tres",
+        "expected_blob":  "3c2d1eb738051b6f1e10db4aad02a66fc988de7c",
+        "equal":  true
+    },
+    {
+        "current_blob":  "9613592c27944960e8d8c7b78779f74db3e30b20",
+        "path":  "godot-spike/config/impact_profile_a9_baseline.tres",
+        "expected_blob":  "9613592c27944960e8d8c7b78779f74db3e30b20",
+        "equal":  true
+    },
+    {
+        "current_blob":  "0ff0e9048f9808a0c87f8d3cc2d5836b87cf4725",
+        "path":  "godot-spike/config/impact_profile_spike03.tres",
+        "expected_blob":  "0ff0e9048f9808a0c87f8d3cc2d5836b87cf4725",
+        "equal":  true
+    },
+    {
+        "current_blob":  "07e34c5ccb0c9ca08fd0d32b63d543e35796d363",
+        "path":  "godot-spike/config/impact_profile_spike04.tres",
+        "expected_blob":  "07e34c5ccb0c9ca08fd0d32b63d543e35796d363",
+        "equal":  true
+    },
+    {
+        "current_blob":  "65883cfef205855bfef691380b5dc7d09beb5a07",
+        "path":  "godot-spike/config/impact_profile_spike05.tres",
+        "expected_blob":  "65883cfef205855bfef691380b5dc7d09beb5a07",
+        "equal":  true
+    }
+]
