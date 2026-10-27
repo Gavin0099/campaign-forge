@@ -3,8 +3,9 @@ extends RefCounted
 const Rules = preload("res://scripts/rules/field_rules.gd")
 const Policy = preload("res://tools/field_policy.gd")
 const Telemetry = preload("res://scripts/levels/field_telemetry.gd")
-const SEEDS = [24018,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019]
-const POLICIES = ["road","flank","turtle","scout-retreat","bypass"]
+const SPIKE06_SEEDS = [24018,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019]
+const SEEDS = [24018,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039]
+const POLICIES = ["road","flank","turtle","scout-retreat","leader-dash","bypass"]
 
 static func seeds_from(value: String) -> Array:
 	if value=="fixed": return SEEDS.duplicate()
@@ -46,6 +47,8 @@ static func run(name: String, seed_value: int, variant: String, enemy_mean: floa
 		telemetry.record(s,resolved.events,resolved.state)
 		s=resolved.state
 	var report := telemetry.summary()
+	report.bypass_win=report.status=="win" and report.reinforcement_first_engage_turn<0
+	report.outcome="bypass-win" if report.bypass_win else ("engaged-win" if report.status=="win" else ("loss-Thoma" if Rules.unit(s,"thoma").hp<=0 else "loss-timeout"))
 	report.merge({"policy":name,"seed":seed_value,"variant":variant,"commands":commands,"illegal_commands":illegal,
 		"context":"SCRIPTED mid-battle probe at turn5, not deployment-to-result" if name=="bypass" else "Continuous deployment-to-result automated operator, not human playtest",
 		"final_units":s.units,"trace_hash":JSON.stringify(report.trace).sha256_text()})

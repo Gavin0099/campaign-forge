@@ -21,6 +21,22 @@ var enemy_phases: Array = []
 var trace: Array = []
 var final_status := "playing"
 var final_turn := 1
+var phase_exposure := {}
+
+func record_exposure(s: Dictionary) -> void:
+	phase_exposure.clear()
+	for ally in s.units:
+		if ally.side!="ally" or ally.hp<=0: continue
+		var threats: Array = []
+		for foe in s.units:
+			if foe.side!="enemy" or foe.hp<=0 or foe.born_turn>=s.turn: continue
+			for p in Rules.reach(s,foe.id).costs:
+				var hypothetical: Dictionary = foe.duplicate(true)
+				hypothetical.cell=p
+				if Rules.attack_info(s,hypothetical,ally).legal:
+					threats.append(foe.id)
+					break
+		phase_exposure[ally.id]={"cell":ally.cell,"hp":ally.hp,"threat_count":threats.size(),"threats":threats,"move_spent":ally.get("move_spent",0),"retreat_left":ally.get("retreat_left",0)}
 
 func ensure(kind: String, side: String) -> void:
 	if not totals.has(kind): totals[kind]={"side":side,"unit_turns":0,"move_steps":0,"moves":0,"attacks":0,"damage_dealt":0,"damage_taken":0,"kills":0,"idle_turns":0}
@@ -39,13 +55,17 @@ func register(s: Dictionary, side: String) -> void:
 			var hypothetical: Dictionary = u.duplicate(true)
 			hypothetical.cell=p
 			for target in s.units:
-				if Rules.attack_info(s,hypothetical,target).legal: could_attack=true
+				if Rules.attack_info(s,hypothetical,target).legal:
+					could_attack=true
+					break
+			if could_attack: break
 		unit_turns[key]={"turn":s.turn,"id":u.id,"side":u.side,"kind":u.kind,"group":u.group,"eligible":u.born_turn<s.turn,"observed":false,"move_steps":0,"move_cost":0,"attacks":0,"role_reason":"","could_reach_target":could_attack}
 		ensure(u.kind,u.side)
 		totals[u.kind].unit_turns+=1
 		if not could_attack: totals[u.kind].idle_turns+=1
 
 func record(before: Dictionary, events: Array, after: Dictionary) -> void:
+	if events.any(func(e):return e.type=="phase" and e.phase=="enemy"): record_exposure(before)
 	var turn: int = before.turn
 	var spatial := before.duplicate(true)
 	var roster := {}
@@ -90,7 +110,7 @@ func record(before: Dictionary, events: Array, after: Dictionary) -> void:
 			totals[roster[e.source].kind].damage_dealt+=e.amount
 			totals[roster[e.unit].kind].damage_taken+=e.amount
 			if e.hp_after==0: totals[roster[e.source].kind].kills+=1
-			if e.hp_after==0 and roster[e.unit].side=="ally": deaths.append({"id":e.unit,"kind":roster[e.unit].kind,"turn":turn})
+			if e.hp_after==0 and roster[e.unit].side=="ally": deaths.append({"id":e.unit,"kind":roster[e.unit].kind,"turn":turn,"source":e.source,"source_cell":Rules.unit(spatial,e.source).cell,"death_cell":Rules.unit(spatial,e.unit).cell,"enemy_phase_start":phase_exposure.get(e.unit,{}).duplicate(true)})
 		if e.type=="knockback": Rules.unit(spatial,e.unit).cell=e.to
 		if e.type=="intent" and e.get("role_hold",false):
 			var key := "%d:%s" % [turn,e.unit]

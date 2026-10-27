@@ -4,9 +4,12 @@ const Rules = preload("res://scripts/rules/field_rules.gd")
 const Data = preload("res://data/levels/field_24x18.gd")
 const OldData = preload("res://data/levels/field_24x18_spike05.gd")
 const Legacy = preload("res://tools/field_policy_spike05.gd")
+const Spike06 = preload("res://tools/field_policy_spike06.gd")
+const Data06 = preload("res://data/levels/field_24x18_spike06.gd")
 
 static func start(policy: String, seed_value: int = 24018, variant: String = "default") -> Dictionary:
 	var level := OldData.build() if variant=="spike05" else Data.build()
+	if variant=="spike06": level=Data06.build()
 	level.seed=seed_value
 	level.variant=variant
 	var s := Rules.initial(level)
@@ -32,10 +35,32 @@ static func target(s: Dictionary, id: String) -> String:
 	return candidates[0] if not candidates.is_empty() else ""
 
 static func command(s: Dictionary, id: String, policy: String) -> Dictionary:
+	if policy=="leader-dash": return dash_command(s,id)
+	if s.level.get("variant","")=="spike06": return Spike06.command(s,id,policy)
 	if s.level.get("variant","")=="spike05": return Legacy.command(s,id,policy)
 	if Rules.can_escape(s,Rules.unit(s,id)): return escape_command(s,id)
 	if policy in ["turtle","scout-retreat","bypass"]: return Legacy.command(s,id,policy)
 	return supported_command(s,id,policy)
+
+static func dash_command(s: Dictionary, id: String) -> Dictionary:
+	# Full real deployment, direct leader attack slots; avoid wave threats.
+	var u := Rules.unit(s,id)
+	if Rules.can_escape(s,u): return escape_command(s,id)
+	if not Rules.allowed(s,u): return {}
+	if "leader" in Rules.targets(s,id): return {"type":"attack","unit":id,"target":"leader"}
+	if u.moved: return {"type":"wait","unit":id}
+	var distances := Rules.distance_map(s,u.kind,u.side,"leader")
+	var wave := {}
+	for foe in s.units:
+		if foe.group=="reinforcements" and foe.hp>0: wave.merge(Rules.threat(s,foe.id))
+	var best: Vector2i = u.cell
+	var score := INF
+	for p in Rules.reach(s,id).costs:
+		var value: float = distances.get(p,1000)+(.7 if wave.has(p) else 0.0)+float(tie(s,str(p))%1000)*.00001
+		if value<score:
+			score=value
+			best=p
+	return {"type":"move","unit":id,"to":best} if best!=u.cell else {"type":"wait","unit":id}
 
 static func escape_command(s: Dictionary, id: String) -> Dictionary:
 	var u := Rules.unit(s,id)

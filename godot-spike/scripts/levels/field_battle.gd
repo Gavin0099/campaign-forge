@@ -78,6 +78,7 @@ func kind_name(kind: String) -> String:
 func _ready() -> void:
 	process_mode=Node.PROCESS_MODE_ALWAYS
 	if "--variant=spike05" in OS.get_cmdline_user_args(): state=Rules.initial(preload("res://data/levels/field_24x18_spike05.gd").build())
+	if "--variant=spike06" in OS.get_cmdline_user_args(): state=Rules.initial(preload("res://data/levels/field_24x18_spike06.gd").build())
 	var loader := Manifest.new()
 	if not loader.read():
 		get_tree().quit(1)
@@ -316,6 +317,7 @@ func end_turn() -> void:
 func restart() -> void:
 	if busy: return
 	state=Rules.initial(preload("res://data/levels/field_24x18_spike05.gd").build()) if "--variant=spike05" in OS.get_cmdline_user_args() else Rules.initial()
+	if "--variant=spike06" in OS.get_cmdline_user_args(): state=Rules.initial(preload("res://data/levels/field_24x18_spike06.gd").build())
 	selected_id="thoma"
 	cursor_cell=Rules.unit(state,"thoma").cell
 	pending.clear()

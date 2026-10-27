@@ -2,7 +2,7 @@ extends "res://addons/gut/test.gd"
 const H = preload("res://tools/field_harness.gd")
 const P = preload("res://tools/field_policy.gd")
 func test_fixed_seeds_and_range_parser() -> void:
-	assert_eq(H.SEEDS,[24018,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019])
+	assert_eq(H.SPIKE06_SEEDS,[24018,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019])
 	assert_eq(H.seeds_from("3:5"),[3,4,5])
 	assert_eq(H.seeds_from("24018,8"),[24018,8])
 func test_same_seed_same_commands_events_and_result() -> void:
