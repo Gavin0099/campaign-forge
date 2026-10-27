@@ -1,0 +1,13 @@
+{
+  "tag": "before",
+  "archive_sha256": "a2f6e7b5ea2a1e630138d3f2165661988d6baeafe7d83b92beb150f0083bc7ce",
+  "pre_instrument_LF_sha256": {
+    "scripts/levels/field_minimap.gd": "89c35fe047a9948cd0fd56dcecec563d5ef6350f6d00941c444a63d9c36147a6",
+    "scripts/levels/field_labels.gd": "a22ad0fdb3efd11b7322662fca6d2ba817d6852764920903fe22a861555d1b4b",
+    "scripts/levels/field_indicators.gd": "05417a12a58a9a170a7aa39071c9267567bdd511af8ba5f3f400b00d85f368ee",
+    "scripts/levels/field_ground.gd": "7bc47f0bc8e33bec0a5452fed2f6e65777a2340ac7288abc82b10ba46499cde7",
+    "scripts/levels/field_hud.gd": "380c65bd27208fc0958cc7f3c54cd64567536d6a814a6a552f0868236804e44c",
+    "scripts/levels/field_battle.gd": "db29d65ab5fb5babcbccee66aeed151a289d37c4479158bb029ea35fb97e4cdb",
+    "scripts/rules/field_rules.gd": "f97e21aba93e07d803d640ae8471aa06afb373592b2883aff73199fe617b8c05"
+  }
+}

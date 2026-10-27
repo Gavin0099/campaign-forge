@@ -1,0 +1,2186 @@
+{
+  "spike05": {
+    "scroll-T2": {
+      "repetitions": 3,
+      "wall_ms": {
+        "n": 540,
+        "mean": 23.651557407407406,
+        "p95": 29.212,
+        "worst": 32.607
+      },
+      "repeat_wall_ms": [
+        {
+          "n": 180,
+          "mean": 24.68735,
+          "p95": 29.811,
+          "worst": 30.766
+        },
+        {
+          "n": 180,
+          "mean": 24.41216111111111,
+          "p95": 29.036,
+          "worst": 32.607
+        },
+        {
+          "n": 180,
+          "mean": 21.855161111111112,
+          "p95": 28.041,
+          "worst": 30.737
+        }
+      ],
+      "process_ms": {
+        "n": 540,
+        "mean": 66.8976888888889,
+        "p95": 222.932,
+        "worst": 222.932
+      },
+      "physics_ms": {
+        "n": 540,
+        "mean": 0.05145925925925926,
+        "p95": 0.117,
+        "worst": 0.117
+      },
+      "draw_calls": {
+        "n": 540,
+        "mean": 2244.9574074074076,
+        "p95": 2253.0,
+        "worst": 2258.0
+      },
+      "objects": {
+        "n": 540,
+        "mean": 2701.175925925926,
+        "p95": 2728.0,
+        "worst": 2789.0
+      },
+      "nodes": {
+        "n": 540,
+        "mean": 113.0,
+        "p95": 113.0,
+        "worst": 113.0
+      },
+      "scopes": {
+        "field_battle._process": {
+          "calls": 537,
+          "usec": 51755,
+          "max_usec": 217,
+          "ms_per_frame": 0.0958425925925926,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators._draw": {
+          "calls": 537,
+          "usec": 62186,
+          "max_usec": 599,
+          "ms_per_frame": 0.11515925925925925,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators._process": {
+          "calls": 537,
+          "usec": 88320,
+          "max_usec": 291,
+          "ms_per_frame": 0.16355555555555554,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators.refresh_items": {
+          "calls": 537,
+          "usec": 83710,
+          "max_usec": 281,
+          "ms_per_frame": 0.1550185185185185,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels._draw": {
+          "calls": 537,
+          "usec": 9631,
+          "max_usec": 393,
+          "ms_per_frame": 0.017835185185185187,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels._process": {
+          "calls": 537,
+          "usec": 95532,
+          "max_usec": 385,
+          "ms_per_frame": 0.1769111111111111,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels.refresh_layout": {
+          "calls": 537,
+          "usec": 90903,
+          "max_usec": 371,
+          "ms_per_frame": 0.1683388888888889,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_minimap._draw": {
+          "calls": 537,
+          "usec": 6588425,
+          "max_usec": 17236,
+          "ms_per_frame": 12.200787037037037,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_minimap._process": {
+          "calls": 537,
+          "usec": 3192,
+          "max_usec": 25,
+          "ms_per_frame": 0.005911111111111112,
+          "calls_per_frame": 0.9944444444444445
+        }
+      },
+      "ai_ms": null,
+      "ai_scopes": []
+    },
+    "scroll-wave": {
+      "repetitions": 3,
+      "wall_ms": {
+        "n": 540,
+        "mean": 23.725105555555555,
+        "p95": 28.996,
+        "worst": 49.041
+      },
+      "repeat_wall_ms": [
+        {
+          "n": 180,
+          "mean": 23.902461111111112,
+          "p95": 28.921,
+          "worst": 29.724
+        },
+        {
+          "n": 180,
+          "mean": 22.707355555555555,
+          "p95": 28.996,
+          "worst": 49.041
+        },
+        {
+          "n": 180,
+          "mean": 24.5655,
+          "p95": 29.109,
+          "worst": 33.04
+        }
+      ],
+      "process_ms": {
+        "n": 540,
+        "mean": 53.311994444444444,
+        "p95": 138.815,
+        "worst": 138.815
+      },
+      "physics_ms": {
+        "n": 540,
+        "mean": 0.048325925925925925,
+        "p95": 0.062,
+        "worst": 0.062
+      },
+      "draw_calls": {
+        "n": 540,
+        "mean": 2214.161111111111,
+        "p95": 2222.0,
+        "worst": 2227.0
+      },
+      "objects": {
+        "n": 540,
+        "mean": 2666.3611111111113,
+        "p95": 2693.0,
+        "worst": 2721.0
+      },
+      "nodes": {
+        "n": 540,
+        "mean": 101.0,
+        "p95": 101.0,
+        "worst": 101.0
+      },
+      "scopes": {
+        "field_battle._process": {
+          "calls": 537,
+          "usec": 46212,
+          "max_usec": 140,
+          "ms_per_frame": 0.08557777777777778,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators._draw": {
+          "calls": 537,
+          "usec": 81303,
+          "max_usec": 380,
+          "ms_per_frame": 0.15056111111111112,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators._process": {
+          "calls": 537,
+          "usec": 98637,
+          "max_usec": 325,
+          "ms_per_frame": 0.1826611111111111,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators.refresh_items": {
+          "calls": 537,
+          "usec": 93780,
+          "max_usec": 316,
+          "ms_per_frame": 0.17366666666666666,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels._draw": {
+          "calls": 537,
+          "usec": 5003,
+          "max_usec": 388,
+          "ms_per_frame": 0.009264814814814814,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels._process": {
+          "calls": 537,
+          "usec": 77966,
+          "max_usec": 335,
+          "ms_per_frame": 0.14438148148148147,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels.refresh_layout": {
+          "calls": 537,
+          "usec": 73218,
+          "max_usec": 324,
+          "ms_per_frame": 0.1355888888888889,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_minimap._draw": {
+          "calls": 537,
+          "usec": 6495688,
+          "max_usec": 18092,
+          "ms_per_frame": 12.029051851851852,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_minimap._process": {
+          "calls": 537,
+          "usec": 3184,
+          "max_usec": 31,
+          "ms_per_frame": 0.005896296296296296,
+          "calls_per_frame": 0.9944444444444445
+        }
+      },
+      "ai_ms": null,
+      "ai_scopes": []
+    },
+    "enemy-normal": {
+      "repetitions": 3,
+      "wall_ms": {
+        "n": 295,
+        "mean": 25.192901694915253,
+        "p95": 30.038,
+        "worst": 66.157
+      },
+      "repeat_wall_ms": [
+        {
+          "n": 96,
+          "mean": 25.753572916666666,
+          "p95": 30.616,
+          "worst": 66.157
+        },
+        {
+          "n": 100,
+          "mean": 24.63251,
+          "p95": 29.71,
+          "worst": 35.113
+        },
+        {
+          "n": 99,
+          "mean": 25.215272727272726,
+          "p95": 30.175,
+          "worst": 31.154
+        }
+      ],
+      "process_ms": {
+        "n": 295,
+        "mean": 84.93482033898304,
+        "p95": 143.69,
+        "worst": 143.69
+      },
+      "physics_ms": {
+        "n": 295,
+        "mean": 0.05876949152542373,
+        "p95": 0.108,
+        "worst": 0.108
+      },
+      "draw_calls": {
+        "n": 295,
+        "mean": 2257.328813559322,
+        "p95": 2265.0,
+        "worst": 2267.0
+      },
+      "objects": {
+        "n": 295,
+        "mean": 2877.7118644067796,
+        "p95": 2950.0,
+        "worst": 2974.0
+      },
+      "nodes": {
+        "n": 295,
+        "mean": 104.48135593220339,
+        "p95": 114.0,
+        "worst": 115.0
+      },
+      "scopes": {
+        "field_battle._process": {
+          "calls": 295,
+          "usec": 27150,
+          "max_usec": 144,
+          "ms_per_frame": 0.09203389830508474,
+          "calls_per_frame": 1.0
+        },
+        "field_battle.refresh": {
+          "calls": 6,
+          "usec": 2560,
+          "max_usec": 857,
+          "ms_per_frame": 0.008677966101694915,
+          "calls_per_frame": 0.020338983050847456
+        },
+        "field_ground._draw": {
+          "calls": 3,
+          "usec": 33045,
+          "max_usec": 12432,
+          "ms_per_frame": 0.11201694915254237,
+          "calls_per_frame": 0.010169491525423728
+        },
+        "field_hud.hover": {
+          "calls": 6,
+          "usec": 111,
+          "max_usec": 20,
+          "ms_per_frame": 0.00037627118644067796,
+          "calls_per_frame": 0.020338983050847456
+        },
+        "field_hud.update_state": {
+          "calls": 12,
+          "usec": 1414,
+          "max_usec": 176,
+          "ms_per_frame": 0.004793220338983051,
+          "calls_per_frame": 0.04067796610169491
+        },
+        "field_indicators._draw": {
+          "calls": 295,
+          "usec": 34358,
+          "max_usec": 261,
+          "ms_per_frame": 0.11646779661016948,
+          "calls_per_frame": 1.0
+        },
+        "field_indicators._process": {
+          "calls": 295,
+          "usec": 51626,
+          "max_usec": 285,
+          "ms_per_frame": 0.17500338983050848,
+          "calls_per_frame": 1.0
+        },
+        "field_indicators.refresh_items": {
+          "calls": 295,
+          "usec": 48929,
+          "max_usec": 270,
+          "ms_per_frame": 0.16586101694915256,
+          "calls_per_frame": 1.0
+        },
+        "field_labels._draw": {
+          "calls": 295,
+          "usec": 35751,
+          "max_usec": 383,
+          "ms_per_frame": 0.12118983050847457,
+          "calls_per_frame": 1.0
+        },
+        "field_labels._process": {
+          "calls": 295,
+          "usec": 124488,
+          "max_usec": 684,
+          "ms_per_frame": 0.42199322033898307,
+          "calls_per_frame": 1.0
+        },
+        "field_labels.refresh_layout": {
+          "calls": 295,
+          "usec": 121668,
+          "max_usec": 676,
+          "ms_per_frame": 0.41243389830508476,
+          "calls_per_frame": 1.0
+        },
+        "field_minimap._draw": {
+          "calls": 295,
+          "usec": 3623790,
+          "max_usec": 18429,
+          "ms_per_frame": 12.284033898305085,
+          "calls_per_frame": 1.0
+        },
+        "field_minimap._process": {
+          "calls": 295,
+          "usec": 2112,
+          "max_usec": 229,
+          "ms_per_frame": 0.007159322033898305,
+          "calls_per_frame": 1.0
+        },
+        "field_rules.reach": {
+          "calls": 12,
+          "usec": 5906,
+          "max_usec": 870,
+          "ms_per_frame": 0.020020338983050848,
+          "calls_per_frame": 0.04067796610169491
+        }
+      },
+      "ai_ms": {
+        "n": 3,
+        "mean": 66.84166666666667,
+        "p95": 83.984,
+        "worst": 83.984
+      },
+      "ai_scopes": [
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 20818,
+            "usec": 56085
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 20131,
+            "usec": 53279
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 575,
+            "usec": 3556
+          }
+        },
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 28919,
+            "usec": 79846
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 27924,
+            "usec": 76529
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 894,
+            "usec": 4624
+          }
+        },
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 20750,
+            "usec": 54717
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 20099,
+            "usec": 52039
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 566,
+            "usec": 3355
+          }
+        }
+      ]
+    },
+    "enemy-2x": {
+      "repetitions": 3,
+      "wall_ms": {
+        "n": 192,
+        "mean": 23.773265625,
+        "p95": 29.88,
+        "worst": 35.089
+      },
+      "repeat_wall_ms": [
+        {
+          "n": 59,
+          "mean": 26.411813559322034,
+          "p95": 30.584,
+          "worst": 31.795
+        },
+        {
+          "n": 75,
+          "mean": 19.78526666666667,
+          "p95": 25.153,
+          "worst": 26.263
+        },
+        {
+          "n": 58,
+          "mean": 26.24612068965517,
+          "p95": 29.88,
+          "worst": 35.089
+        }
+      ],
+      "process_ms": {
+        "n": 192,
+        "mean": 156.27724479166667,
+        "p95": 247.606,
+        "worst": 247.606
+      },
+      "physics_ms": {
+        "n": 192,
+        "mean": 0.05076041666666667,
+        "p95": 0.063,
+        "worst": 0.063
+      },
+      "draw_calls": {
+        "n": 192,
+        "mean": 2260.0364583333335,
+        "p95": 2266.0,
+        "worst": 2274.0
+      },
+      "objects": {
+        "n": 192,
+        "mean": 2879.5364583333335,
+        "p95": 2966.0,
+        "worst": 2977.0
+      },
+      "nodes": {
+        "n": 192,
+        "mean": 107.03125,
+        "p95": 115.0,
+        "worst": 115.0
+      },
+      "scopes": {
+        "field_battle._process": {
+          "calls": 192,
+          "usec": 16234,
+          "max_usec": 172,
+          "ms_per_frame": 0.08455208333333335,
+          "calls_per_frame": 1.0
+        },
+        "field_battle.refresh": {
+          "calls": 6,
+          "usec": 2299,
+          "max_usec": 665,
+          "ms_per_frame": 0.011973958333333333,
+          "calls_per_frame": 0.03125
+        },
+        "field_ground._draw": {
+          "calls": 3,
+          "usec": 29799,
+          "max_usec": 11107,
+          "ms_per_frame": 0.155203125,
+          "calls_per_frame": 0.015625
+        },
+        "field_hud.hover": {
+          "calls": 6,
+          "usec": 122,
+          "max_usec": 31,
+          "ms_per_frame": 0.0006354166666666666,
+          "calls_per_frame": 0.03125
+        },
+        "field_hud.update_state": {
+          "calls": 12,
+          "usec": 1429,
+          "max_usec": 178,
+          "ms_per_frame": 0.007442708333333333,
+          "calls_per_frame": 0.0625
+        },
+        "field_indicators._draw": {
+          "calls": 192,
+          "usec": 21649,
+          "max_usec": 219,
+          "ms_per_frame": 0.11275520833333334,
+          "calls_per_frame": 1.0
+        },
+        "field_indicators._process": {
+          "calls": 192,
+          "usec": 32429,
+          "max_usec": 251,
+          "ms_per_frame": 0.16890104166666667,
+          "calls_per_frame": 1.0
+        },
+        "field_indicators.refresh_items": {
+          "calls": 192,
+          "usec": 30755,
+          "max_usec": 239,
+          "ms_per_frame": 0.16018229166666667,
+          "calls_per_frame": 1.0
+        },
+        "field_labels._draw": {
+          "calls": 192,
+          "usec": 21101,
+          "max_usec": 214,
+          "ms_per_frame": 0.10990104166666666,
+          "calls_per_frame": 1.0
+        },
+        "field_labels._process": {
+          "calls": 192,
+          "usec": 78246,
+          "max_usec": 657,
+          "ms_per_frame": 0.40753124999999996,
+          "calls_per_frame": 1.0
+        },
+        "field_labels.refresh_layout": {
+          "calls": 192,
+          "usec": 76491,
+          "max_usec": 645,
+          "ms_per_frame": 0.398390625,
+          "calls_per_frame": 1.0
+        },
+        "field_minimap._draw": {
+          "calls": 192,
+          "usec": 2291449,
+          "max_usec": 15974,
+          "ms_per_frame": 11.934630208333333,
+          "calls_per_frame": 1.0
+        },
+        "field_minimap._process": {
+          "calls": 192,
+          "usec": 1198,
+          "max_usec": 11,
+          "ms_per_frame": 0.006239583333333333,
+          "calls_per_frame": 1.0
+        },
+        "field_rules.reach": {
+          "calls": 3,
+          "usec": 1137,
+          "max_usec": 428,
+          "ms_per_frame": 0.005921875,
+          "calls_per_frame": 0.015625
+        }
+      },
+      "ai_ms": {
+        "n": 3,
+        "mean": 59.245666666666665,
+        "p95": 59.45,
+        "worst": 59.45
+      },
+      "ai_scopes": [
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 21356,
+            "usec": 56400
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 20388,
+            "usec": 53378
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 819,
+            "usec": 3797
+          }
+        },
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 21160,
+            "usec": 55950
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 20301,
+            "usec": 52913
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 709,
+            "usec": 3789
+          }
+        },
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 20981,
+            "usec": 56202
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 20289,
+            "usec": 53401
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 614,
+            "usec": 3552
+          }
+        }
+      ]
+    }
+  },
+  "spike06": {
+    "scroll-T2": {
+      "repetitions": 3,
+      "wall_ms": {
+        "n": 540,
+        "mean": 23.92255925925926,
+        "p95": 29.228,
+        "worst": 31.644
+      },
+      "repeat_wall_ms": [
+        {
+          "n": 180,
+          "mean": 22.9477,
+          "p95": 28.768,
+          "worst": 29.804
+        },
+        {
+          "n": 180,
+          "mean": 23.779105555555557,
+          "p95": 29.358,
+          "worst": 31.644
+        },
+        {
+          "n": 180,
+          "mean": 25.040872222222223,
+          "p95": 29.35,
+          "worst": 30.014
+        }
+      ],
+      "process_ms": {
+        "n": 540,
+        "mean": 62.45548333333333,
+        "p95": 215.988,
+        "worst": 215.988
+      },
+      "physics_ms": {
+        "n": 540,
+        "mean": 0.06230185185185185,
+        "p95": 0.113,
+        "worst": 0.113
+      },
+      "draw_calls": {
+        "n": 540,
+        "mean": 2244.9574074074076,
+        "p95": 2253.0,
+        "worst": 2258.0
+      },
+      "objects": {
+        "n": 540,
+        "mean": 2701.175925925926,
+        "p95": 2728.0,
+        "worst": 2789.0
+      },
+      "nodes": {
+        "n": 540,
+        "mean": 120.0,
+        "p95": 120.0,
+        "worst": 120.0
+      },
+      "scopes": {
+        "field_battle._process": {
+          "calls": 537,
+          "usec": 55836,
+          "max_usec": 178,
+          "ms_per_frame": 0.10339999999999999,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators._draw": {
+          "calls": 537,
+          "usec": 60417,
+          "max_usec": 266,
+          "ms_per_frame": 0.11188333333333333,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators._process": {
+          "calls": 537,
+          "usec": 89939,
+          "max_usec": 292,
+          "ms_per_frame": 0.1665537037037037,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators.refresh_items": {
+          "calls": 537,
+          "usec": 85045,
+          "max_usec": 279,
+          "ms_per_frame": 0.15749074074074074,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels._draw": {
+          "calls": 537,
+          "usec": 9623,
+          "max_usec": 452,
+          "ms_per_frame": 0.01782037037037037,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels._process": {
+          "calls": 537,
+          "usec": 94204,
+          "max_usec": 484,
+          "ms_per_frame": 0.17445185185185183,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels.refresh_layout": {
+          "calls": 537,
+          "usec": 89425,
+          "max_usec": 476,
+          "ms_per_frame": 0.16560185185185183,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_minimap._draw": {
+          "calls": 537,
+          "usec": 6476560,
+          "max_usec": 17586,
+          "ms_per_frame": 11.99362962962963,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_minimap._process": {
+          "calls": 537,
+          "usec": 3504,
+          "max_usec": 24,
+          "ms_per_frame": 0.006488888888888889,
+          "calls_per_frame": 0.9944444444444445
+        }
+      },
+      "ai_ms": null,
+      "ai_scopes": []
+    },
+    "scroll-wave": {
+      "repetitions": 3,
+      "wall_ms": {
+        "n": 540,
+        "mean": 24.807392592592592,
+        "p95": 29.308,
+        "worst": 31.228
+      },
+      "repeat_wall_ms": [
+        {
+          "n": 180,
+          "mean": 24.382538888888888,
+          "p95": 29.4,
+          "worst": 30.258
+        },
+        {
+          "n": 180,
+          "mean": 24.720833333333335,
+          "p95": 28.771,
+          "worst": 31.228
+        },
+        {
+          "n": 180,
+          "mean": 25.318805555555556,
+          "p95": 29.346,
+          "worst": 30.731
+        }
+      ],
+      "process_ms": {
+        "n": 540,
+        "mean": 51.26277777777778,
+        "p95": 135.946,
+        "worst": 135.946
+      },
+      "physics_ms": {
+        "n": 540,
+        "mean": 0.05678518518518519,
+        "p95": 0.103,
+        "worst": 0.111
+      },
+      "draw_calls": {
+        "n": 540,
+        "mean": 2214.161111111111,
+        "p95": 2222.0,
+        "worst": 2227.0
+      },
+      "objects": {
+        "n": 540,
+        "mean": 2666.3611111111113,
+        "p95": 2693.0,
+        "worst": 2721.0
+      },
+      "nodes": {
+        "n": 540,
+        "mean": 108.0,
+        "p95": 108.0,
+        "worst": 108.0
+      },
+      "scopes": {
+        "field_battle._process": {
+          "calls": 537,
+          "usec": 51086,
+          "max_usec": 287,
+          "ms_per_frame": 0.0946037037037037,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators._draw": {
+          "calls": 537,
+          "usec": 83570,
+          "max_usec": 439,
+          "ms_per_frame": 0.15475925925925924,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators._process": {
+          "calls": 537,
+          "usec": 103189,
+          "max_usec": 288,
+          "ms_per_frame": 0.19109074074074073,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators.refresh_items": {
+          "calls": 537,
+          "usec": 97951,
+          "max_usec": 274,
+          "ms_per_frame": 0.18139074074074074,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels._draw": {
+          "calls": 537,
+          "usec": 5238,
+          "max_usec": 233,
+          "ms_per_frame": 0.0097,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels._process": {
+          "calls": 537,
+          "usec": 81246,
+          "max_usec": 364,
+          "ms_per_frame": 0.15045555555555554,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels.refresh_layout": {
+          "calls": 537,
+          "usec": 76370,
+          "max_usec": 352,
+          "ms_per_frame": 0.14142592592592593,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_minimap._draw": {
+          "calls": 537,
+          "usec": 6790080,
+          "max_usec": 17790,
+          "ms_per_frame": 12.574222222222222,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_minimap._process": {
+          "calls": 537,
+          "usec": 3659,
+          "max_usec": 23,
+          "ms_per_frame": 0.006775925925925926,
+          "calls_per_frame": 0.9944444444444445
+        }
+      },
+      "ai_ms": null,
+      "ai_scopes": []
+    },
+    "enemy-normal": {
+      "repetitions": 3,
+      "wall_ms": {
+        "n": 301,
+        "mean": 24.664136212624584,
+        "p95": 30.413,
+        "worst": 46.038
+      },
+      "repeat_wall_ms": [
+        {
+          "n": 107,
+          "mean": 23.14444859813084,
+          "p95": 29.911,
+          "worst": 46.038
+        },
+        {
+          "n": 97,
+          "mean": 25.16941237113402,
+          "p95": 31.053,
+          "worst": 33.745
+        },
+        {
+          "n": 97,
+          "mean": 25.835216494845362,
+          "p95": 31.094,
+          "worst": 33.458
+        }
+      ],
+      "process_ms": {
+        "n": 301,
+        "mean": 74.12310631229236,
+        "p95": 145.861,
+        "worst": 145.861
+      },
+      "physics_ms": {
+        "n": 301,
+        "mean": 0.05988704318936877,
+        "p95": 0.085,
+        "worst": 0.111
+      },
+      "draw_calls": {
+        "n": 301,
+        "mean": 2257.4152823920267,
+        "p95": 2265.0,
+        "worst": 2267.0
+      },
+      "objects": {
+        "n": 301,
+        "mean": 2877.9767441860463,
+        "p95": 2950.0,
+        "worst": 2974.0
+      },
+      "nodes": {
+        "n": 301,
+        "mean": 111.5514950166113,
+        "p95": 121.0,
+        "worst": 122.0
+      },
+      "scopes": {
+        "field_battle._process": {
+          "calls": 301,
+          "usec": 29010,
+          "max_usec": 211,
+          "ms_per_frame": 0.09637873754152824,
+          "calls_per_frame": 1.0
+        },
+        "field_battle.refresh": {
+          "calls": 6,
+          "usec": 4040,
+          "max_usec": 1283,
+          "ms_per_frame": 0.013421926910299004,
+          "calls_per_frame": 0.019933554817275746
+        },
+        "field_ground._draw": {
+          "calls": 3,
+          "usec": 35453,
+          "max_usec": 12535,
+          "ms_per_frame": 0.11778405315614619,
+          "calls_per_frame": 0.009966777408637873
+        },
+        "field_hud.hover": {
+          "calls": 6,
+          "usec": 156,
+          "max_usec": 32,
+          "ms_per_frame": 0.0005182724252491694,
+          "calls_per_frame": 0.019933554817275746
+        },
+        "field_hud.update_state": {
+          "calls": 12,
+          "usec": 4425,
+          "max_usec": 597,
+          "ms_per_frame": 0.014700996677740863,
+          "calls_per_frame": 0.03986710963455149
+        },
+        "field_indicators._draw": {
+          "calls": 301,
+          "usec": 34989,
+          "max_usec": 320,
+          "ms_per_frame": 0.11624252491694351,
+          "calls_per_frame": 1.0
+        },
+        "field_indicators._process": {
+          "calls": 301,
+          "usec": 53247,
+          "max_usec": 350,
+          "ms_per_frame": 0.17690033222591361,
+          "calls_per_frame": 1.0
+        },
+        "field_indicators.refresh_items": {
+          "calls": 301,
+          "usec": 50533,
+          "max_usec": 338,
+          "ms_per_frame": 0.16788372093023257,
+          "calls_per_frame": 1.0
+        },
+        "field_labels._draw": {
+          "calls": 301,
+          "usec": 35330,
+          "max_usec": 404,
+          "ms_per_frame": 0.11737541528239202,
+          "calls_per_frame": 1.0
+        },
+        "field_labels._process": {
+          "calls": 301,
+          "usec": 124877,
+          "max_usec": 697,
+          "ms_per_frame": 0.4148737541528239,
+          "calls_per_frame": 1.0
+        },
+        "field_labels.refresh_layout": {
+          "calls": 301,
+          "usec": 122045,
+          "max_usec": 688,
+          "ms_per_frame": 0.4054651162790698,
+          "calls_per_frame": 1.0
+        },
+        "field_minimap._draw": {
+          "calls": 301,
+          "usec": 3612147,
+          "max_usec": 16118,
+          "ms_per_frame": 12.000488372093024,
+          "calls_per_frame": 1.0
+        },
+        "field_minimap._process": {
+          "calls": 301,
+          "usec": 2107,
+          "max_usec": 17,
+          "ms_per_frame": 0.007000000000000001,
+          "calls_per_frame": 1.0
+        },
+        "field_rules.reach": {
+          "calls": 12,
+          "usec": 7661,
+          "max_usec": 937,
+          "ms_per_frame": 0.025451827242524917,
+          "calls_per_frame": 0.03986710963455149
+        }
+      },
+      "ai_ms": {
+        "n": 3,
+        "mean": 68.26366666666667,
+        "p95": 85.803,
+        "worst": 85.803
+      },
+      "ai_scopes": [
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 21176,
+            "usec": 56569
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 20332,
+            "usec": 53326
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 886,
+            "usec": 4586
+          }
+        },
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 28683,
+            "usec": 80601
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 27245,
+            "usec": 75416
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 1192,
+            "usec": 7068
+          }
+        },
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 20669,
+            "usec": 55331
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 19842,
+            "usec": 52159
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 692,
+            "usec": 4294
+          }
+        }
+      ]
+    },
+    "enemy-2x": {
+      "repetitions": 3,
+      "wall_ms": {
+        "n": 182,
+        "mean": 25.291,
+        "p95": 30.543,
+        "worst": 49.33
+      },
+      "repeat_wall_ms": [
+        {
+          "n": 57,
+          "mean": 25.455877192982456,
+          "p95": 30.197,
+          "worst": 49.33
+        },
+        {
+          "n": 64,
+          "mean": 24.752859375,
+          "p95": 30.727,
+          "worst": 34.331
+        },
+        {
+          "n": 61,
+          "mean": 25.701540983606556,
+          "p95": 30.543,
+          "worst": 32.792
+        }
+      ],
+      "process_ms": {
+        "n": 182,
+        "mean": 158.98370879120878,
+        "p95": 249.446,
+        "worst": 249.446
+      },
+      "physics_ms": {
+        "n": 182,
+        "mean": 0.09392857142857143,
+        "p95": 0.204,
+        "worst": 0.204
+      },
+      "draw_calls": {
+        "n": 182,
+        "mean": 2259.989010989011,
+        "p95": 2266.0,
+        "worst": 2274.0
+      },
+      "objects": {
+        "n": 182,
+        "mean": 2879.6813186813188,
+        "p95": 2966.0,
+        "worst": 2977.0
+      },
+      "nodes": {
+        "n": 182,
+        "mean": 113.97252747252747,
+        "p95": 122.0,
+        "worst": 122.0
+      },
+      "scopes": {
+        "field_battle._process": {
+          "calls": 182,
+          "usec": 16871,
+          "max_usec": 257,
+          "ms_per_frame": 0.09269780219780219,
+          "calls_per_frame": 1.0
+        },
+        "field_battle.refresh": {
+          "calls": 6,
+          "usec": 4009,
+          "max_usec": 1274,
+          "ms_per_frame": 0.02202747252747253,
+          "calls_per_frame": 0.03296703296703297
+        },
+        "field_ground._draw": {
+          "calls": 3,
+          "usec": 29074,
+          "max_usec": 11470,
+          "ms_per_frame": 0.15974725274725277,
+          "calls_per_frame": 0.016483516483516484
+        },
+        "field_hud.hover": {
+          "calls": 6,
+          "usec": 141,
+          "max_usec": 31,
+          "ms_per_frame": 0.0007747252747252746,
+          "calls_per_frame": 0.03296703296703297
+        },
+        "field_hud.update_state": {
+          "calls": 12,
+          "usec": 4083,
+          "max_usec": 575,
+          "ms_per_frame": 0.022434065934065935,
+          "calls_per_frame": 0.06593406593406594
+        },
+        "field_indicators._draw": {
+          "calls": 182,
+          "usec": 22280,
+          "max_usec": 249,
+          "ms_per_frame": 0.12241758241758242,
+          "calls_per_frame": 1.0
+        },
+        "field_indicators._process": {
+          "calls": 182,
+          "usec": 32801,
+          "max_usec": 335,
+          "ms_per_frame": 0.18022527472527475,
+          "calls_per_frame": 1.0
+        },
+        "field_indicators.refresh_items": {
+          "calls": 182,
+          "usec": 31107,
+          "max_usec": 317,
+          "ms_per_frame": 0.17091758241758243,
+          "calls_per_frame": 1.0
+        },
+        "field_labels._draw": {
+          "calls": 182,
+          "usec": 22277,
+          "max_usec": 205,
+          "ms_per_frame": 0.1224010989010989,
+          "calls_per_frame": 1.0
+        },
+        "field_labels._process": {
+          "calls": 182,
+          "usec": 77150,
+          "max_usec": 665,
+          "ms_per_frame": 0.42390109890109895,
+          "calls_per_frame": 1.0
+        },
+        "field_labels.refresh_layout": {
+          "calls": 182,
+          "usec": 75451,
+          "max_usec": 645,
+          "ms_per_frame": 0.414565934065934,
+          "calls_per_frame": 1.0
+        },
+        "field_minimap._draw": {
+          "calls": 182,
+          "usec": 2277826,
+          "max_usec": 16435,
+          "ms_per_frame": 12.515527472527472,
+          "calls_per_frame": 1.0
+        },
+        "field_minimap._process": {
+          "calls": 182,
+          "usec": 1298,
+          "max_usec": 15,
+          "ms_per_frame": 0.007131868131868132,
+          "calls_per_frame": 1.0
+        },
+        "field_rules.reach": {
+          "calls": 3,
+          "usec": 1567,
+          "max_usec": 573,
+          "ms_per_frame": 0.00860989010989011,
+          "calls_per_frame": 0.016483516483516484
+        }
+      },
+      "ai_ms": {
+        "n": 3,
+        "mean": 64.07933333333332,
+        "p95": 73.091,
+        "worst": 73.091
+      },
+      "ai_scopes": [
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 30028,
+            "usec": 69049
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 29068,
+            "usec": 64724
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 1064,
+            "usec": 5460
+          }
+        },
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 20944,
+            "usec": 55770
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 20077,
+            "usec": 52482
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 986,
+            "usec": 4772
+          }
+        },
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 20871,
+            "usec": 56038
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 20012,
+            "usec": 52792
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 710,
+            "usec": 4341
+          }
+        }
+      ]
+    }
+  },
+  "before": {
+    "scroll-T2": {
+      "repetitions": 3,
+      "wall_ms": {
+        "n": 540,
+        "mean": 23.580683333333333,
+        "p95": 28.872,
+        "worst": 30.702
+      },
+      "repeat_wall_ms": [
+        {
+          "n": 180,
+          "mean": 22.706044444444444,
+          "p95": 28.7,
+          "worst": 30.082
+        },
+        {
+          "n": 180,
+          "mean": 23.450944444444445,
+          "p95": 29.048,
+          "worst": 30.702
+        },
+        {
+          "n": 180,
+          "mean": 24.585061111111113,
+          "p95": 28.868,
+          "worst": 30.035
+        }
+      ],
+      "process_ms": {
+        "n": 540,
+        "mean": 61.48747777777778,
+        "p95": 211.978,
+        "worst": 211.978
+      },
+      "physics_ms": {
+        "n": 540,
+        "mean": 0.06356296296296296,
+        "p95": 0.226,
+        "worst": 0.226
+      },
+      "draw_calls": {
+        "n": 540,
+        "mean": 2244.9574074074076,
+        "p95": 2253.0,
+        "worst": 2258.0
+      },
+      "objects": {
+        "n": 540,
+        "mean": 2701.175925925926,
+        "p95": 2728.0,
+        "worst": 2789.0
+      },
+      "nodes": {
+        "n": 540,
+        "mean": 120.0,
+        "p95": 120.0,
+        "worst": 120.0
+      },
+      "scopes": {
+        "field_battle._process": {
+          "calls": 537,
+          "usec": 53171,
+          "max_usec": 195,
+          "ms_per_frame": 0.09846481481481481,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators._draw": {
+          "calls": 537,
+          "usec": 60468,
+          "max_usec": 224,
+          "ms_per_frame": 0.11197777777777779,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators._process": {
+          "calls": 537,
+          "usec": 89188,
+          "max_usec": 320,
+          "ms_per_frame": 0.16516296296296296,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators.refresh_items": {
+          "calls": 537,
+          "usec": 84432,
+          "max_usec": 303,
+          "ms_per_frame": 0.15635555555555555,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels._draw": {
+          "calls": 537,
+          "usec": 9464,
+          "max_usec": 425,
+          "ms_per_frame": 0.017525925925925927,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels._process": {
+          "calls": 537,
+          "usec": 95153,
+          "max_usec": 464,
+          "ms_per_frame": 0.17620925925925926,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels.refresh_layout": {
+          "calls": 537,
+          "usec": 90592,
+          "max_usec": 452,
+          "ms_per_frame": 0.16776296296296295,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_minimap._draw": {
+          "calls": 537,
+          "usec": 6412652,
+          "max_usec": 16896,
+          "ms_per_frame": 11.875281481481482,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_minimap._process": {
+          "calls": 537,
+          "usec": 3353,
+          "max_usec": 25,
+          "ms_per_frame": 0.00620925925925926,
+          "calls_per_frame": 0.9944444444444445
+        }
+      },
+      "ai_ms": null,
+      "ai_scopes": []
+    },
+    "scroll-wave": {
+      "repetitions": 3,
+      "wall_ms": {
+        "n": 540,
+        "mean": 24.357324074074075,
+        "p95": 28.667,
+        "worst": 30.21
+      },
+      "repeat_wall_ms": [
+        {
+          "n": 180,
+          "mean": 24.83348888888889,
+          "p95": 28.667,
+          "worst": 30.159
+        },
+        {
+          "n": 180,
+          "mean": 23.729766666666666,
+          "p95": 28.628,
+          "worst": 30.21
+        },
+        {
+          "n": 180,
+          "mean": 24.50871666666667,
+          "p95": 28.787,
+          "worst": 29.803
+        }
+      ],
+      "process_ms": {
+        "n": 540,
+        "mean": 49.25011851851852,
+        "p95": 134.001,
+        "worst": 134.001
+      },
+      "physics_ms": {
+        "n": 540,
+        "mean": 0.05531666666666667,
+        "p95": 0.121,
+        "worst": 0.121
+      },
+      "draw_calls": {
+        "n": 540,
+        "mean": 2214.161111111111,
+        "p95": 2222.0,
+        "worst": 2227.0
+      },
+      "objects": {
+        "n": 540,
+        "mean": 2666.3611111111113,
+        "p95": 2693.0,
+        "worst": 2721.0
+      },
+      "nodes": {
+        "n": 540,
+        "mean": 108.0,
+        "p95": 108.0,
+        "worst": 108.0
+      },
+      "scopes": {
+        "field_battle._process": {
+          "calls": 537,
+          "usec": 49834,
+          "max_usec": 228,
+          "ms_per_frame": 0.09228518518518519,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators._draw": {
+          "calls": 537,
+          "usec": 82187,
+          "max_usec": 491,
+          "ms_per_frame": 0.15219814814814814,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators._process": {
+          "calls": 537,
+          "usec": 102804,
+          "max_usec": 392,
+          "ms_per_frame": 0.19037777777777778,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators.refresh_items": {
+          "calls": 537,
+          "usec": 97617,
+          "max_usec": 381,
+          "ms_per_frame": 0.18077222222222222,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels._draw": {
+          "calls": 537,
+          "usec": 5306,
+          "max_usec": 315,
+          "ms_per_frame": 0.009825925925925925,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels._process": {
+          "calls": 537,
+          "usec": 81270,
+          "max_usec": 378,
+          "ms_per_frame": 0.1505,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels.refresh_layout": {
+          "calls": 537,
+          "usec": 76480,
+          "max_usec": 368,
+          "ms_per_frame": 0.14162962962962963,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_minimap._draw": {
+          "calls": 537,
+          "usec": 6709196,
+          "max_usec": 17856,
+          "ms_per_frame": 12.424437037037038,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_minimap._process": {
+          "calls": 537,
+          "usec": 3577,
+          "max_usec": 98,
+          "ms_per_frame": 0.006624074074074074,
+          "calls_per_frame": 0.9944444444444445
+        }
+      },
+      "ai_ms": null,
+      "ai_scopes": []
+    },
+    "enemy-normal": {
+      "repetitions": 3,
+      "wall_ms": {
+        "n": 295,
+        "mean": 25.035484745762712,
+        "p95": 29.754,
+        "worst": 53.512
+      },
+      "repeat_wall_ms": [
+        {
+          "n": 99,
+          "mean": 24.954555555555554,
+          "p95": 29.02,
+          "worst": 53.512
+        },
+        {
+          "n": 96,
+          "mean": 25.602427083333332,
+          "p95": 30.507,
+          "worst": 46.038
+        },
+        {
+          "n": 100,
+          "mean": 24.57134,
+          "p95": 29.642,
+          "worst": 42.448
+        }
+      ],
+      "process_ms": {
+        "n": 295,
+        "mean": 71.99863050847458,
+        "p95": 131.718,
+        "worst": 131.718
+      },
+      "physics_ms": {
+        "n": 295,
+        "mean": 0.056793220338983055,
+        "p95": 0.07,
+        "worst": 0.07
+      },
+      "draw_calls": {
+        "n": 295,
+        "mean": 2257.169491525424,
+        "p95": 2265.0,
+        "worst": 2267.0
+      },
+      "objects": {
+        "n": 295,
+        "mean": 2876.735593220339,
+        "p95": 2950.0,
+        "worst": 2974.0
+      },
+      "nodes": {
+        "n": 295,
+        "mean": 111.60338983050848,
+        "p95": 122.0,
+        "worst": 122.0
+      },
+      "scopes": {
+        "field_battle._process": {
+          "calls": 295,
+          "usec": 28366,
+          "max_usec": 283,
+          "ms_per_frame": 0.09615593220338983,
+          "calls_per_frame": 1.0
+        },
+        "field_battle.refresh": {
+          "calls": 6,
+          "usec": 3403,
+          "max_usec": 996,
+          "ms_per_frame": 0.011535593220338983,
+          "calls_per_frame": 0.020338983050847456
+        },
+        "field_ground._draw": {
+          "calls": 3,
+          "usec": 33001,
+          "max_usec": 11780,
+          "ms_per_frame": 0.11186779661016949,
+          "calls_per_frame": 0.010169491525423728
+        },
+        "field_hud.hover": {
+          "calls": 6,
+          "usec": 229,
+          "max_usec": 121,
+          "ms_per_frame": 0.000776271186440678,
+          "calls_per_frame": 0.020338983050847456
+        },
+        "field_hud.update_state": {
+          "calls": 12,
+          "usec": 3842,
+          "max_usec": 501,
+          "ms_per_frame": 0.013023728813559322,
+          "calls_per_frame": 0.04067796610169491
+        },
+        "field_indicators._draw": {
+          "calls": 295,
+          "usec": 33589,
+          "max_usec": 245,
+          "ms_per_frame": 0.11386101694915254,
+          "calls_per_frame": 1.0
+        },
+        "field_indicators._process": {
+          "calls": 295,
+          "usec": 52619,
+          "max_usec": 310,
+          "ms_per_frame": 0.17836949152542372,
+          "calls_per_frame": 1.0
+        },
+        "field_indicators.refresh_items": {
+          "calls": 295,
+          "usec": 49931,
+          "max_usec": 295,
+          "ms_per_frame": 0.16925762711864406,
+          "calls_per_frame": 1.0
+        },
+        "field_labels._draw": {
+          "calls": 295,
+          "usec": 36309,
+          "max_usec": 297,
+          "ms_per_frame": 0.12308135593220339,
+          "calls_per_frame": 1.0
+        },
+        "field_labels._process": {
+          "calls": 295,
+          "usec": 126041,
+          "max_usec": 748,
+          "ms_per_frame": 0.42725762711864407,
+          "calls_per_frame": 1.0
+        },
+        "field_labels.refresh_layout": {
+          "calls": 295,
+          "usec": 123318,
+          "max_usec": 735,
+          "ms_per_frame": 0.4180271186440678,
+          "calls_per_frame": 1.0
+        },
+        "field_minimap._draw": {
+          "calls": 295,
+          "usec": 3647752,
+          "max_usec": 16337,
+          "ms_per_frame": 12.365261016949152,
+          "calls_per_frame": 1.0
+        },
+        "field_minimap._process": {
+          "calls": 295,
+          "usec": 2007,
+          "max_usec": 23,
+          "ms_per_frame": 0.006803389830508475,
+          "calls_per_frame": 1.0
+        },
+        "field_rules.reach": {
+          "calls": 87,
+          "usec": 55627,
+          "max_usec": 1305,
+          "ms_per_frame": 0.18856610169491525,
+          "calls_per_frame": 0.29491525423728815
+        }
+      },
+      "ai_ms": {
+        "n": 3,
+        "mean": 61.619,
+        "p95": 64.646,
+        "worst": 64.646
+      },
+      "ai_scopes": [
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 21230,
+            "usec": 57335
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 20350,
+            "usec": 53687
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 889,
+            "usec": 4626
+          }
+        },
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 20980,
+            "usec": 55858
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 20134,
+            "usec": 52582
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 721,
+            "usec": 4403
+          }
+        },
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 22394,
+            "usec": 60590
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 21504,
+            "usec": 56991
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 724,
+            "usec": 4679
+          }
+        }
+      ]
+    },
+    "enemy-2x": {
+      "repetitions": 3,
+      "wall_ms": {
+        "n": 182,
+        "mean": 24.95278021978022,
+        "p95": 30.367,
+        "worst": 45.472
+      },
+      "repeat_wall_ms": [
+        {
+          "n": 57,
+          "mean": 26.058175438596493,
+          "p95": 31.046,
+          "worst": 42.568
+        },
+        {
+          "n": 58,
+          "mean": 26.04298275862069,
+          "p95": 30.248,
+          "worst": 44.078
+        },
+        {
+          "n": 67,
+          "mean": 23.068611940298506,
+          "p95": 30.767,
+          "worst": 45.472
+        }
+      ],
+      "process_ms": {
+        "n": 182,
+        "mean": 160.61353296703297,
+        "p95": 227.621,
+        "worst": 227.621
+      },
+      "physics_ms": {
+        "n": 182,
+        "mean": 0.05813186813186813,
+        "p95": 0.067,
+        "worst": 0.067
+      },
+      "draw_calls": {
+        "n": 182,
+        "mean": 2259.769230769231,
+        "p95": 2266.0,
+        "worst": 2273.0
+      },
+      "objects": {
+        "n": 182,
+        "mean": 2879.598901098901,
+        "p95": 2973.0,
+        "worst": 2977.0
+      },
+      "nodes": {
+        "n": 182,
+        "mean": 113.82417582417582,
+        "p95": 122.0,
+        "worst": 122.0
+      },
+      "scopes": {
+        "field_battle._process": {
+          "calls": 182,
+          "usec": 16400,
+          "max_usec": 149,
+          "ms_per_frame": 0.09010989010989011,
+          "calls_per_frame": 1.0
+        },
+        "field_battle.refresh": {
+          "calls": 6,
+          "usec": 3278,
+          "max_usec": 937,
+          "ms_per_frame": 0.01801098901098901,
+          "calls_per_frame": 0.03296703296703297
+        },
+        "field_ground._draw": {
+          "calls": 3,
+          "usec": 29667,
+          "max_usec": 10427,
+          "ms_per_frame": 0.1630054945054945,
+          "calls_per_frame": 0.016483516483516484
+        },
+        "field_hud.hover": {
+          "calls": 6,
+          "usec": 131,
+          "max_usec": 33,
+          "ms_per_frame": 0.0007197802197802198,
+          "calls_per_frame": 0.03296703296703297
+        },
+        "field_hud.update_state": {
+          "calls": 12,
+          "usec": 3875,
+          "max_usec": 485,
+          "ms_per_frame": 0.021291208791208792,
+          "calls_per_frame": 0.06593406593406594
+        },
+        "field_indicators._draw": {
+          "calls": 182,
+          "usec": 21613,
+          "max_usec": 225,
+          "ms_per_frame": 0.11875274725274725,
+          "calls_per_frame": 1.0
+        },
+        "field_indicators._process": {
+          "calls": 182,
+          "usec": 32782,
+          "max_usec": 288,
+          "ms_per_frame": 0.1801208791208791,
+          "calls_per_frame": 1.0
+        },
+        "field_indicators.refresh_items": {
+          "calls": 182,
+          "usec": 31105,
+          "max_usec": 276,
+          "ms_per_frame": 0.17090659340659342,
+          "calls_per_frame": 1.0
+        },
+        "field_labels._draw": {
+          "calls": 182,
+          "usec": 21990,
+          "max_usec": 247,
+          "ms_per_frame": 0.12082417582417582,
+          "calls_per_frame": 1.0
+        },
+        "field_labels._process": {
+          "calls": 182,
+          "usec": 76774,
+          "max_usec": 681,
+          "ms_per_frame": 0.42183516483516487,
+          "calls_per_frame": 1.0
+        },
+        "field_labels.refresh_layout": {
+          "calls": 182,
+          "usec": 75114,
+          "max_usec": 672,
+          "ms_per_frame": 0.41271428571428576,
+          "calls_per_frame": 1.0
+        },
+        "field_minimap._draw": {
+          "calls": 182,
+          "usec": 2150671,
+          "max_usec": 16901,
+          "ms_per_frame": 11.816873626373626,
+          "calls_per_frame": 1.0
+        },
+        "field_minimap._process": {
+          "calls": 182,
+          "usec": 1255,
+          "max_usec": 11,
+          "ms_per_frame": 0.006895604395604395,
+          "calls_per_frame": 1.0
+        },
+        "field_rules.reach": {
+          "calls": 78,
+          "usec": 49793,
+          "max_usec": 1801,
+          "ms_per_frame": 0.2735879120879121,
+          "calls_per_frame": 0.42857142857142855
+        }
+      },
+      "ai_ms": {
+        "n": 3,
+        "mean": 67.47033333333333,
+        "p95": 84.506,
+        "worst": 84.506
+      },
+      "ai_scopes": [
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 32463,
+            "usec": 79331
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 31013,
+            "usec": 74566
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 1218,
+            "usec": 6668
+          }
+        },
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 20447,
+            "usec": 54935
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 19644,
+            "usec": 51803
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 846,
+            "usec": 4477
+          }
+        },
+        {
+          "field_rules.ai_plan": {
+            "calls": 5,
+            "max_usec": 20754,
+            "usec": 55906
+          },
+          "field_rules.distance_map": {
+            "calls": 3,
+            "max_usec": 19914,
+            "usec": 52664
+          },
+          "field_rules.reach": {
+            "calls": 7,
+            "max_usec": 699,
+            "usec": 4283
+          }
+        }
+      ]
+    }
+  },
+  "diagnostic": {
+    "scroll-wave-no-minimap": {
+      "repetitions": 3,
+      "wall_ms": {
+        "n": 540,
+        "mean": 16.687783333333332,
+        "p95": 28.634,
+        "worst": 31.315
+      },
+      "repeat_wall_ms": [
+        {
+          "n": 180,
+          "mean": 16.72821111111111,
+          "p95": 28.817,
+          "worst": 30.201
+        },
+        {
+          "n": 180,
+          "mean": 16.67202222222222,
+          "p95": 29.62,
+          "worst": 31.315
+        },
+        {
+          "n": 180,
+          "mean": 16.663116666666667,
+          "p95": 28.094,
+          "worst": 30.835
+        }
+      ],
+      "process_ms": {
+        "n": 540,
+        "mean": 37.90809074074074,
+        "p95": 117.459,
+        "worst": 117.459
+      },
+      "physics_ms": {
+        "n": 540,
+        "mean": 0.0845111111111111,
+        "p95": 0.22,
+        "worst": 0.22
+      },
+      "draw_calls": {
+        "n": 540,
+        "mean": 1771.8277777777778,
+        "p95": 1780.0,
+        "worst": 1784.0
+      },
+      "objects": {
+        "n": 540,
+        "mean": 2216.027777777778,
+        "p95": 2243.0,
+        "worst": 2268.0
+      },
+      "nodes": {
+        "n": 540,
+        "mean": 108.0,
+        "p95": 108.0,
+        "worst": 108.0
+      },
+      "scopes": {
+        "field_battle._process": {
+          "calls": 537,
+          "usec": 46486,
+          "max_usec": 198,
+          "ms_per_frame": 0.08608518518518518,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators._draw": {
+          "calls": 537,
+          "usec": 88088,
+          "max_usec": 537,
+          "ms_per_frame": 0.16312592592592592,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators._process": {
+          "calls": 537,
+          "usec": 102650,
+          "max_usec": 464,
+          "ms_per_frame": 0.1900925925925926,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_indicators.refresh_items": {
+          "calls": 537,
+          "usec": 96556,
+          "max_usec": 439,
+          "ms_per_frame": 0.17880740740740741,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels._draw": {
+          "calls": 537,
+          "usec": 5073,
+          "max_usec": 288,
+          "ms_per_frame": 0.009394444444444445,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels._process": {
+          "calls": 537,
+          "usec": 71003,
+          "max_usec": 340,
+          "ms_per_frame": 0.13148703703703704,
+          "calls_per_frame": 0.9944444444444445
+        },
+        "field_labels.refresh_layout": {
+          "calls": 537,
+          "usec": 66269,
+          "max_usec": 326,
+          "ms_per_frame": 0.12272037037037038,
+          "calls_per_frame": 0.9944444444444445
+        }
+      },
+      "ai_ms": null,
+      "ai_scopes": []
+    }
+  }
+}

@@ -1,0 +1,4462 @@
+{
+	"adapter": "AMD Radeon 780M Graphics",
+	"backend": "gl_compatibility",
+	"engine": "4.7.2-stable (official)",
+	"method": "Native720p, no readbacks/movie/concurrent Godot. Inclusive CPU scopes overlap; frame wall minus process is NOT GPU time. Identical precomputed event replay, pure AI measured separately.",
+	"mode": "diagnostic",
+	"reports": [
+		{
+			"frames": [
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.93,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.661,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.662,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.662,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.671,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.684,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.641,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.739,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.609,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.659,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.658,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.679,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.651,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.696,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.645,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.671,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.645,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.66,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.686,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 16.684,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 16.66,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 16.664,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 16.666,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 16.705,
+					"nodes": 108.0,
+					"objects": 2216.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1774.0,
+					"ms": 16.646,
+					"nodes": 108.0,
+					"objects": 2216.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 16.648,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 16.664,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 16.685,
+					"nodes": 108.0,
+					"objects": 2219.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 16.647,
+					"nodes": 108.0,
+					"objects": 2219.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1779.0,
+					"ms": 16.664,
+					"nodes": 108.0,
+					"objects": 2221.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1784.0,
+					"ms": 16.659,
+					"nodes": 108.0,
+					"objects": 2246.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1784.0,
+					"ms": 16.678,
+					"nodes": 108.0,
+					"objects": 2246.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1781.0,
+					"ms": 16.672,
+					"nodes": 108.0,
+					"objects": 2243.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 16.659,
+					"nodes": 108.0,
+					"objects": 2240.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1779.0,
+					"ms": 16.648,
+					"nodes": 108.0,
+					"objects": 2241.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1783.0,
+					"ms": 16.693,
+					"nodes": 108.0,
+					"objects": 2268.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1783.0,
+					"ms": 16.644,
+					"nodes": 108.0,
+					"objects": 2268.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 16.691,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 26.313,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.034,
+					"process_ms": 81.129
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 8.382,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 22.361,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.042,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.004,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.049,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 24.577,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 6.179,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 28.546,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 7.6,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 23.542,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 7.008,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 27.422,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 7.041,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 24.561,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 7.184,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 27.489,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 6.261,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1780.0,
+					"ms": 30.201,
+					"nodes": 108.0,
+					"objects": 2244.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 6.163,
+					"nodes": 108.0,
+					"objects": 2239.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 26.271,
+					"nodes": 108.0,
+					"objects": 2240.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 7.179,
+					"nodes": 108.0,
+					"objects": 2240.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 23.621,
+					"nodes": 108.0,
+					"objects": 2239.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 5.954,
+					"nodes": 108.0,
+					"objects": 2240.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 26.571,
+					"nodes": 108.0,
+					"objects": 2240.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1781.0,
+					"ms": 7.323,
+					"nodes": 108.0,
+					"objects": 2243.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1783.0,
+					"ms": 26.724,
+					"nodes": 108.0,
+					"objects": 2245.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1784.0,
+					"ms": 7.248,
+					"nodes": 108.0,
+					"objects": 2246.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 23.937,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 8.207,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 25.116,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 8.218,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 28.913,
+					"nodes": 108.0,
+					"objects": 2216.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 6.905,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 24.155,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 6.688,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 24.276,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 9.068,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 26.849,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 7.029,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 23.881,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 8.897,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 22.604,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.574,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.945,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 22.505,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 7.595,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 29.326,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 5.448,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 25.656,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 6.93,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 26.707,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 6.892,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 24.625,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 6.841,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 27.155,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 6.981,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 23.521,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 8.998,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 27.354,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 8.329,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.052,
+					"process_ms": 8.431
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 22.198,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.601,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 9.848,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 29.951,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 8.854,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 23.409,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 9.604,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 21.301,
+					"nodes": 108.0,
+					"objects": 2219.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 6.881,
+					"nodes": 108.0,
+					"objects": 2219.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 29.89,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 8.077,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 24.265,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 5.29,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 27.401,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 6.978,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 28.079,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 6.975,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 26.698,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 7.085,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 24.947,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 7.208,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 23.053,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 7.399,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 26.22,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 7.101,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 23.085,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 15.924,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 16.045,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 15.27,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.254,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.172,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.022,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 30.03,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 7.865,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 22.659,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 9.962,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 22.217,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 11.354,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 23.697,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 6.967,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 23.734,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 8.065,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 28.133,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 6.768,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 26.434,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 6.91,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 26.155,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 7.63,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 23.573,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 7.716,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 16.724,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 29.726,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 6.438,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 24.013,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 6.882,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 25.945,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 7.018,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 24.534,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 8.726,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 27.342,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.07,
+					"process_ms": 9.642
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 7.98,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 23.549,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 8.226,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 22.782,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 10.125,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 20.686,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.353,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.866,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.446,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.975,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.682,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 28.701,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 6.729,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 23.98,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 7.228,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 30.14,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 7.322,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 12.594,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 28.817,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 7.821,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 25.247,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				}
+			],
+			"repeat": 1,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 179,
+					"max_usec": 190,
+					"usec": 15125
+				},
+				"field_indicators._draw": {
+					"calls": 179,
+					"max_usec": 516,
+					"usec": 29160
+				},
+				"field_indicators._process": {
+					"calls": 179,
+					"max_usec": 464,
+					"usec": 32869
+				},
+				"field_indicators.refresh_items": {
+					"calls": 179,
+					"max_usec": 439,
+					"usec": 30928
+				},
+				"field_labels._draw": {
+					"calls": 179,
+					"max_usec": 288,
+					"usec": 2488
+				},
+				"field_labels._process": {
+					"calls": 179,
+					"max_usec": 315,
+					"usec": 22888
+				},
+				"field_labels.refresh_layout": {
+					"calls": 179,
+					"max_usec": 301,
+					"usec": 21340
+				}
+			},
+			"workload": "scroll-wave-no-minimap"
+		},
+		{
+			"frames": [
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.515,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 30.349,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 3.654,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 27.246,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 6.795,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.326,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.628,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 29.62,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 6.955,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 24.627,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 9.385,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 21.329,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 8.06,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 20.432,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 14.269,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.429,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.533,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.669,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.075,
+					"process_ms": 11.198
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 18.751,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 15.496,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 15.739,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 31.315,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 9.287,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 11.152,
+					"nodes": 108.0,
+					"objects": 2216.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1774.0,
+					"ms": 15.094,
+					"nodes": 108.0,
+					"objects": 2216.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 16.515,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 30.487,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 7.465,
+					"nodes": 108.0,
+					"objects": 2219.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 14.962,
+					"nodes": 108.0,
+					"objects": 2219.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1779.0,
+					"ms": 17.134,
+					"nodes": 108.0,
+					"objects": 2221.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1784.0,
+					"ms": 15.41,
+					"nodes": 108.0,
+					"objects": 2246.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1784.0,
+					"ms": 18.28,
+					"nodes": 108.0,
+					"objects": 2246.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1781.0,
+					"ms": 16.161,
+					"nodes": 108.0,
+					"objects": 2243.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 15.272,
+					"nodes": 108.0,
+					"objects": 2240.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1779.0,
+					"ms": 15.981,
+					"nodes": 108.0,
+					"objects": 2241.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1783.0,
+					"ms": 15.53,
+					"nodes": 108.0,
+					"objects": 2268.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1783.0,
+					"ms": 20.874,
+					"nodes": 108.0,
+					"objects": 2268.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 16.082,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.027,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.123,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.509,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.352,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 18.33,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.332,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.339,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 26.464,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 6.87,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.887,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 30.469,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 4.658,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.516,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.876,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.602,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 30.232,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 7.078,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 23.947,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1780.0,
+					"ms": 7.469,
+					"nodes": 108.0,
+					"objects": 2244.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 23.004,
+					"nodes": 108.0,
+					"objects": 2239.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 8.671,
+					"nodes": 108.0,
+					"objects": 2240.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 30.189,
+					"nodes": 108.0,
+					"objects": 2240.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 7.082,
+					"nodes": 108.0,
+					"objects": 2239.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 24.253,
+					"nodes": 108.0,
+					"objects": 2240.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 8.358,
+					"nodes": 108.0,
+					"objects": 2240.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1781.0,
+					"ms": 13.816,
+					"nodes": 108.0,
+					"objects": 2243.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1783.0,
+					"ms": 15.881,
+					"nodes": 108.0,
+					"objects": 2245.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1784.0,
+					"ms": 17.59,
+					"nodes": 108.0,
+					"objects": 2246.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 15.758,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 16.655,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 16.659,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 29.983,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 6.968,
+					"nodes": 108.0,
+					"objects": 2216.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 14.846,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 15.994,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 16.268,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 15.929,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 17.466,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 17.806,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 16.458,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.087,
+					"process_ms": 117.459
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 15.941,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 15.685,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 16.644,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.885,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.466,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 19.39,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.158,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 19.915,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.937,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 18.126,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.591,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.985,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 19.731,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.005,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 14.958,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.128,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 14.854,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.549,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 20.948,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 15.296,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.216,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.422,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.77,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.64,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 19.436,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 15.212,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 15.778,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 18.096,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 16.009,
+					"nodes": 108.0,
+					"objects": 2219.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 20.651,
+					"nodes": 108.0,
+					"objects": 2219.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 14.352,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 15.211,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 15.44,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 18.458,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 15.147,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 16.24,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 22.605,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.648,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.049,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 22.034,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 7.957,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 23.954,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 9.636,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 21.605,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 16.063,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 15.027,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 15.982,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 15.328,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 15.872,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 30.75,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 6.882,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 24.571,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 5.815,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 24.209,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 7.642,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 24.415,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 12.785,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.196,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.568,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.468,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.22,
+					"process_ms": 10.383
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.568,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 22.578,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 14.62,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.144,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 18.721,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.743,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 15.791,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 21.082,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 9.639,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 22.391,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 15.259,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 18.281,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 10.717,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 20.758,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.119,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.478,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 19.373,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 18.671,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 10.619,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 23.036,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 10.268,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 23.536,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 13.223,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.153,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.357,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.088,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 20.322,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.231,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.903,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 17.257,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 18.606,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.029,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 18.409,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.204,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 17.118,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.1,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 18.211,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 14.945,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 19.435,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.794,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.036,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 14.298,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.065,
+					"process_ms": 10.054
+				}
+			],
+			"repeat": 2,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 179,
+					"max_usec": 198,
+					"usec": 15652
+				},
+				"field_indicators._draw": {
+					"calls": 179,
+					"max_usec": 537,
+					"usec": 29415
+				},
+				"field_indicators._process": {
+					"calls": 179,
+					"max_usec": 345,
+					"usec": 34249
+				},
+				"field_indicators.refresh_items": {
+					"calls": 179,
+					"max_usec": 333,
+					"usec": 32195
+				},
+				"field_labels._draw": {
+					"calls": 179,
+					"max_usec": 74,
+					"usec": 1253
+				},
+				"field_labels._process": {
+					"calls": 179,
+					"max_usec": 328,
+					"usec": 23676
+				},
+				"field_labels.refresh_layout": {
+					"calls": 179,
+					"max_usec": 309,
+					"usec": 22120
+				}
+			},
+			"workload": "scroll-wave-no-minimap"
+		},
+		{
+			"frames": [
+				{
+					"draw_calls": 1769.0,
+					"ms": 19.741,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.974,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 18.167,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.353,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 16.112,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 14.784,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.465,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 25.367,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 8.655,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 24.171,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 8.72,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 22.223,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 17.059,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 10.438,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 28.684,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 6.862,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 26.766,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 7.062,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 24.9,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 8.808,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 23.857,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 6.826,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 24.176,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 15.779,
+					"nodes": 108.0,
+					"objects": 2216.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1774.0,
+					"ms": 15.825,
+					"nodes": 108.0,
+					"objects": 2216.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 15.03,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 15.951,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 14.942,
+					"nodes": 108.0,
+					"objects": 2219.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 20.606,
+					"nodes": 108.0,
+					"objects": 2219.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1779.0,
+					"ms": 14.657,
+					"nodes": 108.0,
+					"objects": 2221.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1784.0,
+					"ms": 15.011,
+					"nodes": 108.0,
+					"objects": 2246.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1784.0,
+					"ms": 15.22,
+					"nodes": 108.0,
+					"objects": 2246.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1781.0,
+					"ms": 16.079,
+					"nodes": 108.0,
+					"objects": 2243.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 16.31,
+					"nodes": 108.0,
+					"objects": 2240.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1779.0,
+					"ms": 25.269,
+					"nodes": 108.0,
+					"objects": 2241.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1783.0,
+					"ms": 10.059,
+					"nodes": 108.0,
+					"objects": 2268.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1783.0,
+					"ms": 19.931,
+					"nodes": 108.0,
+					"objects": 2268.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 15.948,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.117,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 21.89,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 8.434,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 22.067,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.041,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.119,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.182,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.556,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.303,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.228,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.856,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 29.846,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 5.044,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 27.038,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 4.915,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 26.982,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 6.131,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 25.001,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1780.0,
+					"ms": 9.188,
+					"nodes": 108.0,
+					"objects": 2244.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 21.026,
+					"nodes": 108.0,
+					"objects": 2239.0,
+					"physics_ms": 0.075,
+					"process_ms": 111.477
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 16.087,
+					"nodes": 108.0,
+					"objects": 2240.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 15.713,
+					"nodes": 108.0,
+					"objects": 2240.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 20.736,
+					"nodes": 108.0,
+					"objects": 2239.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 10.244,
+					"nodes": 108.0,
+					"objects": 2240.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 26.707,
+					"nodes": 108.0,
+					"objects": 2240.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1781.0,
+					"ms": 7.933,
+					"nodes": 108.0,
+					"objects": 2243.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1783.0,
+					"ms": 22.245,
+					"nodes": 108.0,
+					"objects": 2245.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1784.0,
+					"ms": 9.982,
+					"nodes": 108.0,
+					"objects": 2246.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1778.0,
+					"ms": 25.732,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 6.058,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 29.03,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 4.922,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 25.527,
+					"nodes": 108.0,
+					"objects": 2216.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 7.779,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 23.014,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 15.1,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 22.22,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 5.752,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 27.392,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 8.687,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 21.26,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 9.33,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 22.035,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.821,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 14.868,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.58,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.234,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 16.462,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 29.675,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 9.05,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 11.267,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 26.237,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 7.101,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 23.051,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 10.278,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 20.195,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.707,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.581,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 15.218,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 16.632,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 29.63,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 5.833,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 22.588,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 8.612,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 23.666,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1772.0,
+					"ms": 15.966,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 15.042,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 16.07,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 16.015,
+					"nodes": 108.0,
+					"objects": 2219.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1777.0,
+					"ms": 15.593,
+					"nodes": 108.0,
+					"objects": 2219.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 15.445,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 15.612,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 30.835,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1776.0,
+					"ms": 8.748,
+					"nodes": 108.0,
+					"objects": 2218.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 17.738,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1775.0,
+					"ms": 15.68,
+					"nodes": 108.0,
+					"objects": 2217.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1773.0,
+					"ms": 18.747,
+					"nodes": 108.0,
+					"objects": 2215.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.301,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 18.018,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.066,
+					"process_ms": 9.977
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 8.163,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 22.329,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 14.926,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 16.126,
+					"nodes": 108.0,
+					"objects": 2214.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 24.592,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 9.177,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 21.57,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 7.968,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 28.094,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 7.89,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 22.954,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 7.739,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 26.934,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 9.866,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 23.255,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 9.35,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 26.478,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 9.773,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 21.982,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 9.83,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 23.957,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 7.429,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 23.157,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 7.963,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 22.868,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.84,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.506,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 20.354,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 9.442,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 21.025,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 15.655,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 21.65,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1771.0,
+					"ms": 7.651,
+					"nodes": 108.0,
+					"objects": 2213.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 23.084,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 10.245,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 28.634,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 8.971,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 23.695,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 9.405,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 25.514,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 9.76,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 10.686,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 22.654,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 10.675,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 29.867,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 7.105,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 24.35,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 6.86,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 23.862,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.344,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.512,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 10.432,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 20.444,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 14.988,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 15.74,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 24.734,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 7.409,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 23.869,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1770.0,
+					"ms": 14.975,
+					"nodes": 108.0,
+					"objects": 2212.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.121,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.074,
+					"process_ms": 10.135
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.635,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.077,
+					"process_ms": 10.013
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.855,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.077,
+					"process_ms": 10.013
+				},
+				{
+					"draw_calls": 1769.0,
+					"ms": 15.111,
+					"nodes": 108.0,
+					"objects": 2211.0,
+					"physics_ms": 0.077,
+					"process_ms": 10.013
+				}
+			],
+			"repeat": 3,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 179,
+					"max_usec": 141,
+					"usec": 15709
+				},
+				"field_indicators._draw": {
+					"calls": 179,
+					"max_usec": 270,
+					"usec": 29513
+				},
+				"field_indicators._process": {
+					"calls": 179,
+					"max_usec": 410,
+					"usec": 35532
+				},
+				"field_indicators.refresh_items": {
+					"calls": 179,
+					"max_usec": 383,
+					"usec": 33433
+				},
+				"field_labels._draw": {
+					"calls": 179,
+					"max_usec": 74,
+					"usec": 1332
+				},
+				"field_labels._process": {
+					"calls": 179,
+					"max_usec": 340,
+					"usec": 24439
+				},
+				"field_labels.refresh_layout": {
+					"calls": 179,
+					"max_usec": 326,
+					"usec": 22809
+				}
+			},
+			"workload": "scroll-wave-no-minimap"
+		}
+	],
+	"resolution": "(1280, 720)",
+	"tag": "diagnostic",
+	"vsync": "disabled; max_fps60",
+	"workload_sha256": "f4e1f2fb6e2e212dae1e7c58c443c515372f7ab33d3c401764b99c95f6d6a91e"
+}

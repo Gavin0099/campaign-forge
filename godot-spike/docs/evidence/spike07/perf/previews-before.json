@@ -1,0 +1,988 @@
+{
+	"note": "All expensive reach/threat scopes occur on refresh/action, not per scroll frame; no per-frame AI. LOS inside ranged threat/attack_info; legend in HUD.update_state; ZoC inside ground V draw.",
+	"previews": [
+		{
+			"V": false,
+			"refresh_ms": 4.613,
+			"repeat": 0,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 2,
+					"max_usec": 71,
+					"usec": 129
+				},
+				"field_battle.refresh": {
+					"calls": 1,
+					"max_usec": 4610,
+					"usec": 4610
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 7467,
+					"usec": 7467
+				},
+				"field_hud.hover": {
+					"calls": 1,
+					"max_usec": 31,
+					"usec": 31
+				},
+				"field_hud.update_state": {
+					"calls": 1,
+					"max_usec": 3728,
+					"usec": 3728
+				},
+				"field_indicators._draw": {
+					"calls": 2,
+					"max_usec": 497,
+					"usec": 555
+				},
+				"field_indicators._process": {
+					"calls": 2,
+					"max_usec": 111,
+					"usec": 196
+				},
+				"field_indicators.refresh_items": {
+					"calls": 2,
+					"max_usec": 106,
+					"usec": 187
+				},
+				"field_labels._draw": {
+					"calls": 2,
+					"max_usec": 357,
+					"usec": 404
+				},
+				"field_labels._process": {
+					"calls": 2,
+					"max_usec": 189,
+					"usec": 359
+				},
+				"field_labels.refresh_layout": {
+					"calls": 2,
+					"max_usec": 181,
+					"usec": 347
+				},
+				"field_minimap._draw": {
+					"calls": 2,
+					"max_usec": 7124,
+					"usec": 13495
+				},
+				"field_minimap._process": {
+					"calls": 2,
+					"max_usec": 4,
+					"usec": 8
+				},
+				"field_rules.reach": {
+					"calls": 1,
+					"max_usec": 792,
+					"usec": 792
+				}
+			},
+			"turn": 2
+		},
+		{
+			"V": true,
+			"refresh_ms": 10.997,
+			"repeat": 0,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 2,
+					"max_usec": 81,
+					"usec": 141
+				},
+				"field_battle.refresh": {
+					"calls": 1,
+					"max_usec": 10994,
+					"usec": 10994
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 9343,
+					"usec": 9343
+				},
+				"field_hud.hover": {
+					"calls": 1,
+					"max_usec": 19,
+					"usec": 19
+				},
+				"field_hud.update_state": {
+					"calls": 1,
+					"max_usec": 505,
+					"usec": 505
+				},
+				"field_indicators._draw": {
+					"calls": 2,
+					"max_usec": 62,
+					"usec": 124
+				},
+				"field_indicators._process": {
+					"calls": 2,
+					"max_usec": 135,
+					"usec": 262
+				},
+				"field_indicators.refresh_items": {
+					"calls": 2,
+					"max_usec": 126,
+					"usec": 247
+				},
+				"field_labels._draw": {
+					"calls": 2,
+					"max_usec": 43,
+					"usec": 85
+				},
+				"field_labels._process": {
+					"calls": 2,
+					"max_usec": 208,
+					"usec": 396
+				},
+				"field_labels.refresh_layout": {
+					"calls": 2,
+					"max_usec": 200,
+					"usec": 379
+				},
+				"field_minimap._draw": {
+					"calls": 2,
+					"max_usec": 7910,
+					"usec": 14072
+				},
+				"field_minimap._process": {
+					"calls": 2,
+					"max_usec": 6,
+					"usec": 11
+				},
+				"field_rules.reach": {
+					"calls": 7,
+					"max_usec": 808,
+					"usec": 3902
+				},
+				"field_rules.threat": {
+					"calls": 6,
+					"max_usec": 2108,
+					"usec": 9551
+				},
+				"field_rules.zoc_cells": {
+					"calls": 1,
+					"max_usec": 78,
+					"usec": 78
+				}
+			},
+			"turn": 2
+		},
+		{
+			"V": false,
+			"refresh_ms": 1.125,
+			"repeat": 1,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 2,
+					"max_usec": 82,
+					"usec": 134
+				},
+				"field_battle.refresh": {
+					"calls": 1,
+					"max_usec": 1123,
+					"usec": 1123
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 6057,
+					"usec": 6057
+				},
+				"field_hud.hover": {
+					"calls": 1,
+					"max_usec": 13,
+					"usec": 13
+				},
+				"field_hud.update_state": {
+					"calls": 1,
+					"max_usec": 248,
+					"usec": 248
+				},
+				"field_indicators._draw": {
+					"calls": 2,
+					"max_usec": 86,
+					"usec": 148
+				},
+				"field_indicators._process": {
+					"calls": 2,
+					"max_usec": 125,
+					"usec": 205
+				},
+				"field_indicators.refresh_items": {
+					"calls": 2,
+					"max_usec": 119,
+					"usec": 195
+				},
+				"field_labels._draw": {
+					"calls": 2,
+					"max_usec": 53,
+					"usec": 96
+				},
+				"field_labels._process": {
+					"calls": 2,
+					"max_usec": 211,
+					"usec": 378
+				},
+				"field_labels.refresh_layout": {
+					"calls": 2,
+					"max_usec": 203,
+					"usec": 365
+				},
+				"field_minimap._draw": {
+					"calls": 2,
+					"max_usec": 7003,
+					"usec": 13008
+				},
+				"field_minimap._process": {
+					"calls": 2,
+					"max_usec": 4,
+					"usec": 8
+				},
+				"field_rules.reach": {
+					"calls": 1,
+					"max_usec": 795,
+					"usec": 795
+				}
+			},
+			"turn": 2
+		},
+		{
+			"V": true,
+			"refresh_ms": 11.158,
+			"repeat": 1,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 2,
+					"max_usec": 78,
+					"usec": 131
+				},
+				"field_battle.refresh": {
+					"calls": 1,
+					"max_usec": 11155,
+					"usec": 11155
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 7681,
+					"usec": 7681
+				},
+				"field_hud.hover": {
+					"calls": 1,
+					"max_usec": 15,
+					"usec": 15
+				},
+				"field_hud.update_state": {
+					"calls": 1,
+					"max_usec": 451,
+					"usec": 451
+				},
+				"field_indicators._draw": {
+					"calls": 2,
+					"max_usec": 86,
+					"usec": 152
+				},
+				"field_indicators._process": {
+					"calls": 2,
+					"max_usec": 114,
+					"usec": 192
+				},
+				"field_indicators.refresh_items": {
+					"calls": 2,
+					"max_usec": 107,
+					"usec": 180
+				},
+				"field_labels._draw": {
+					"calls": 2,
+					"max_usec": 59,
+					"usec": 97
+				},
+				"field_labels._process": {
+					"calls": 2,
+					"max_usec": 220,
+					"usec": 380
+				},
+				"field_labels.refresh_layout": {
+					"calls": 2,
+					"max_usec": 214,
+					"usec": 369
+				},
+				"field_minimap._draw": {
+					"calls": 2,
+					"max_usec": 6294,
+					"usec": 11822
+				},
+				"field_minimap._process": {
+					"calls": 2,
+					"max_usec": 4,
+					"usec": 8
+				},
+				"field_rules.reach": {
+					"calls": 7,
+					"max_usec": 1320,
+					"usec": 4419
+				},
+				"field_rules.threat": {
+					"calls": 6,
+					"max_usec": 1917,
+					"usec": 9231
+				},
+				"field_rules.zoc_cells": {
+					"calls": 1,
+					"max_usec": 47,
+					"usec": 47
+				}
+			},
+			"turn": 2
+		},
+		{
+			"V": false,
+			"refresh_ms": 1.129,
+			"repeat": 2,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 2,
+					"max_usec": 82,
+					"usec": 132
+				},
+				"field_battle.refresh": {
+					"calls": 1,
+					"max_usec": 1125,
+					"usec": 1125
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 6103,
+					"usec": 6103
+				},
+				"field_hud.hover": {
+					"calls": 1,
+					"max_usec": 14,
+					"usec": 14
+				},
+				"field_hud.update_state": {
+					"calls": 1,
+					"max_usec": 261,
+					"usec": 261
+				},
+				"field_indicators._draw": {
+					"calls": 2,
+					"max_usec": 72,
+					"usec": 131
+				},
+				"field_indicators._process": {
+					"calls": 2,
+					"max_usec": 119,
+					"usec": 197
+				},
+				"field_indicators.refresh_items": {
+					"calls": 2,
+					"max_usec": 113,
+					"usec": 186
+				},
+				"field_labels._draw": {
+					"calls": 2,
+					"max_usec": 43,
+					"usec": 81
+				},
+				"field_labels._process": {
+					"calls": 2,
+					"max_usec": 193,
+					"usec": 346
+				},
+				"field_labels.refresh_layout": {
+					"calls": 2,
+					"max_usec": 187,
+					"usec": 336
+				},
+				"field_minimap._draw": {
+					"calls": 2,
+					"max_usec": 6882,
+					"usec": 13157
+				},
+				"field_minimap._process": {
+					"calls": 2,
+					"max_usec": 6,
+					"usec": 10
+				},
+				"field_rules.reach": {
+					"calls": 1,
+					"max_usec": 786,
+					"usec": 786
+				}
+			},
+			"turn": 2
+		},
+		{
+			"V": true,
+			"refresh_ms": 11.429,
+			"repeat": 2,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 2,
+					"max_usec": 79,
+					"usec": 138
+				},
+				"field_battle.refresh": {
+					"calls": 1,
+					"max_usec": 11425,
+					"usec": 11425
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 6870,
+					"usec": 6870
+				},
+				"field_hud.hover": {
+					"calls": 1,
+					"max_usec": 21,
+					"usec": 21
+				},
+				"field_hud.update_state": {
+					"calls": 1,
+					"max_usec": 533,
+					"usec": 533
+				},
+				"field_indicators._draw": {
+					"calls": 2,
+					"max_usec": 84,
+					"usec": 144
+				},
+				"field_indicators._process": {
+					"calls": 2,
+					"max_usec": 116,
+					"usec": 198
+				},
+				"field_indicators.refresh_items": {
+					"calls": 2,
+					"max_usec": 110,
+					"usec": 187
+				},
+				"field_labels._draw": {
+					"calls": 2,
+					"max_usec": 59,
+					"usec": 102
+				},
+				"field_labels._process": {
+					"calls": 2,
+					"max_usec": 192,
+					"usec": 351
+				},
+				"field_labels.refresh_layout": {
+					"calls": 2,
+					"max_usec": 187,
+					"usec": 341
+				},
+				"field_minimap._draw": {
+					"calls": 2,
+					"max_usec": 6183,
+					"usec": 11790
+				},
+				"field_minimap._process": {
+					"calls": 2,
+					"max_usec": 5,
+					"usec": 9
+				},
+				"field_rules.reach": {
+					"calls": 7,
+					"max_usec": 1183,
+					"usec": 4396
+				},
+				"field_rules.threat": {
+					"calls": 6,
+					"max_usec": 1956,
+					"usec": 9571
+				},
+				"field_rules.zoc_cells": {
+					"calls": 1,
+					"max_usec": 46,
+					"usec": 46
+				}
+			},
+			"turn": 2
+		},
+		{
+			"V": false,
+			"refresh_ms": 0.26,
+			"repeat": 0,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 2,
+					"max_usec": 67,
+					"usec": 116
+				},
+				"field_battle.refresh": {
+					"calls": 1,
+					"max_usec": 258,
+					"usec": 258
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 4905,
+					"usec": 4905
+				},
+				"field_hud.hover": {
+					"calls": 1,
+					"max_usec": 24,
+					"usec": 24
+				},
+				"field_hud.update_state": {
+					"calls": 1,
+					"max_usec": 196,
+					"usec": 196
+				},
+				"field_indicators._draw": {
+					"calls": 2,
+					"max_usec": 327,
+					"usec": 439
+				},
+				"field_indicators._process": {
+					"calls": 2,
+					"max_usec": 133,
+					"usec": 220
+				},
+				"field_indicators.refresh_items": {
+					"calls": 2,
+					"max_usec": 126,
+					"usec": 208
+				},
+				"field_labels._draw": {
+					"calls": 2,
+					"max_usec": 4,
+					"usec": 7
+				},
+				"field_labels._process": {
+					"calls": 2,
+					"max_usec": 78,
+					"usec": 140
+				},
+				"field_labels.refresh_layout": {
+					"calls": 2,
+					"max_usec": 72,
+					"usec": 131
+				},
+				"field_minimap._draw": {
+					"calls": 2,
+					"max_usec": 6850,
+					"usec": 12967
+				},
+				"field_minimap._process": {
+					"calls": 2,
+					"max_usec": 4,
+					"usec": 8
+				}
+			},
+			"turn": 8
+		},
+		{
+			"V": true,
+			"refresh_ms": 6.964,
+			"repeat": 0,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 2,
+					"max_usec": 100,
+					"usec": 145
+				},
+				"field_battle.refresh": {
+					"calls": 1,
+					"max_usec": 6961,
+					"usec": 6961
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 6962,
+					"usec": 6962
+				},
+				"field_hud.hover": {
+					"calls": 1,
+					"max_usec": 17,
+					"usec": 17
+				},
+				"field_hud.update_state": {
+					"calls": 1,
+					"max_usec": 278,
+					"usec": 278
+				},
+				"field_indicators._draw": {
+					"calls": 2,
+					"max_usec": 81,
+					"usec": 158
+				},
+				"field_indicators._process": {
+					"calls": 2,
+					"max_usec": 181,
+					"usec": 259
+				},
+				"field_indicators.refresh_items": {
+					"calls": 2,
+					"max_usec": 173,
+					"usec": 246
+				},
+				"field_labels._draw": {
+					"calls": 2,
+					"max_usec": 4,
+					"usec": 6
+				},
+				"field_labels._process": {
+					"calls": 2,
+					"max_usec": 98,
+					"usec": 155
+				},
+				"field_labels.refresh_layout": {
+					"calls": 2,
+					"max_usec": 92,
+					"usec": 146
+				},
+				"field_minimap._draw": {
+					"calls": 2,
+					"max_usec": 5625,
+					"usec": 10968
+				},
+				"field_minimap._process": {
+					"calls": 2,
+					"max_usec": 6,
+					"usec": 11
+				},
+				"field_rules.reach": {
+					"calls": 5,
+					"max_usec": 775,
+					"usec": 2315
+				},
+				"field_rules.threat": {
+					"calls": 5,
+					"max_usec": 2013,
+					"usec": 6581
+				},
+				"field_rules.zoc_cells": {
+					"calls": 1,
+					"max_usec": 39,
+					"usec": 39
+				}
+			},
+			"turn": 8
+		},
+		{
+			"V": false,
+			"refresh_ms": 0.199,
+			"repeat": 1,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 2,
+					"max_usec": 75,
+					"usec": 117
+				},
+				"field_battle.refresh": {
+					"calls": 1,
+					"max_usec": 197,
+					"usec": 197
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 4031,
+					"usec": 4031
+				},
+				"field_hud.hover": {
+					"calls": 1,
+					"max_usec": 22,
+					"usec": 22
+				},
+				"field_hud.update_state": {
+					"calls": 1,
+					"max_usec": 146,
+					"usec": 146
+				},
+				"field_indicators._draw": {
+					"calls": 2,
+					"max_usec": 124,
+					"usec": 196
+				},
+				"field_indicators._process": {
+					"calls": 2,
+					"max_usec": 124,
+					"usec": 209
+				},
+				"field_indicators.refresh_items": {
+					"calls": 2,
+					"max_usec": 118,
+					"usec": 199
+				},
+				"field_labels._draw": {
+					"calls": 2,
+					"max_usec": 4,
+					"usec": 7
+				},
+				"field_labels._process": {
+					"calls": 2,
+					"max_usec": 77,
+					"usec": 138
+				},
+				"field_labels.refresh_layout": {
+					"calls": 2,
+					"max_usec": 71,
+					"usec": 127
+				},
+				"field_minimap._draw": {
+					"calls": 2,
+					"max_usec": 6631,
+					"usec": 12628
+				},
+				"field_minimap._process": {
+					"calls": 2,
+					"max_usec": 5,
+					"usec": 9
+				}
+			},
+			"turn": 8
+		},
+		{
+			"V": true,
+			"refresh_ms": 6.986,
+			"repeat": 1,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 2,
+					"max_usec": 126,
+					"usec": 188
+				},
+				"field_battle.refresh": {
+					"calls": 1,
+					"max_usec": 6983,
+					"usec": 6983
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 12402,
+					"usec": 12402
+				},
+				"field_hud.hover": {
+					"calls": 1,
+					"max_usec": 13,
+					"usec": 13
+				},
+				"field_hud.update_state": {
+					"calls": 1,
+					"max_usec": 249,
+					"usec": 249
+				},
+				"field_indicators._draw": {
+					"calls": 2,
+					"max_usec": 181,
+					"usec": 306
+				},
+				"field_indicators._process": {
+					"calls": 2,
+					"max_usec": 233,
+					"usec": 337
+				},
+				"field_indicators.refresh_items": {
+					"calls": 2,
+					"max_usec": 223,
+					"usec": 321
+				},
+				"field_labels._draw": {
+					"calls": 2,
+					"max_usec": 5,
+					"usec": 10
+				},
+				"field_labels._process": {
+					"calls": 2,
+					"max_usec": 162,
+					"usec": 250
+				},
+				"field_labels.refresh_layout": {
+					"calls": 2,
+					"max_usec": 152,
+					"usec": 235
+				},
+				"field_minimap._draw": {
+					"calls": 2,
+					"max_usec": 11730,
+					"usec": 22589
+				},
+				"field_minimap._process": {
+					"calls": 2,
+					"max_usec": 9,
+					"usec": 14
+				},
+				"field_rules.reach": {
+					"calls": 5,
+					"max_usec": 824,
+					"usec": 2419
+				},
+				"field_rules.threat": {
+					"calls": 5,
+					"max_usec": 2069,
+					"usec": 6631
+				},
+				"field_rules.zoc_cells": {
+					"calls": 1,
+					"max_usec": 50,
+					"usec": 50
+				}
+			},
+			"turn": 8
+		},
+		{
+			"V": false,
+			"refresh_ms": 0.265,
+			"repeat": 2,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 2,
+					"max_usec": 106,
+					"usec": 162
+				},
+				"field_battle.refresh": {
+					"calls": 1,
+					"max_usec": 262,
+					"usec": 262
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 9542,
+					"usec": 9542
+				},
+				"field_hud.hover": {
+					"calls": 1,
+					"max_usec": 29,
+					"usec": 29
+				},
+				"field_hud.update_state": {
+					"calls": 1,
+					"max_usec": 197,
+					"usec": 197
+				},
+				"field_indicators._draw": {
+					"calls": 2,
+					"max_usec": 124,
+					"usec": 216
+				},
+				"field_indicators._process": {
+					"calls": 2,
+					"max_usec": 191,
+					"usec": 315
+				},
+				"field_indicators.refresh_items": {
+					"calls": 2,
+					"max_usec": 183,
+					"usec": 300
+				},
+				"field_labels._draw": {
+					"calls": 2,
+					"max_usec": 4,
+					"usec": 8
+				},
+				"field_labels._process": {
+					"calls": 2,
+					"max_usec": 141,
+					"usec": 230
+				},
+				"field_labels.refresh_layout": {
+					"calls": 2,
+					"max_usec": 132,
+					"usec": 215
+				},
+				"field_minimap._draw": {
+					"calls": 2,
+					"max_usec": 11598,
+					"usec": 21756
+				},
+				"field_minimap._process": {
+					"calls": 2,
+					"max_usec": 6,
+					"usec": 12
+				}
+			},
+			"turn": 8
+		},
+		{
+			"V": true,
+			"refresh_ms": 9.925,
+			"repeat": 2,
+			"scopes": {
+				"field_battle._process": {
+					"calls": 2,
+					"max_usec": 113,
+					"usec": 196
+				},
+				"field_battle.refresh": {
+					"calls": 1,
+					"max_usec": 9921,
+					"usec": 9921
+				},
+				"field_ground._draw": {
+					"calls": 1,
+					"max_usec": 13251,
+					"usec": 13251
+				},
+				"field_hud.hover": {
+					"calls": 1,
+					"max_usec": 19,
+					"usec": 19
+				},
+				"field_hud.update_state": {
+					"calls": 1,
+					"max_usec": 321,
+					"usec": 321
+				},
+				"field_indicators._draw": {
+					"calls": 2,
+					"max_usec": 200,
+					"usec": 324
+				},
+				"field_indicators._process": {
+					"calls": 2,
+					"max_usec": 213,
+					"usec": 367
+				},
+				"field_indicators.refresh_items": {
+					"calls": 2,
+					"max_usec": 204,
+					"usec": 350
+				},
+				"field_labels._draw": {
+					"calls": 2,
+					"max_usec": 5,
+					"usec": 10
+				},
+				"field_labels._process": {
+					"calls": 2,
+					"max_usec": 157,
+					"usec": 295
+				},
+				"field_labels.refresh_layout": {
+					"calls": 2,
+					"max_usec": 147,
+					"usec": 279
+				},
+				"field_minimap._draw": {
+					"calls": 2,
+					"max_usec": 15598,
+					"usec": 26126
+				},
+				"field_minimap._process": {
+					"calls": 2,
+					"max_usec": 7,
+					"usec": 14
+				},
+				"field_rules.reach": {
+					"calls": 5,
+					"max_usec": 1110,
+					"usec": 3039
+				},
+				"field_rules.threat": {
+					"calls": 5,
+					"max_usec": 3260,
+					"usec": 9486
+				},
+				"field_rules.zoc_cells": {
+					"calls": 1,
+					"max_usec": 62,
+					"usec": 62
+				}
+			},
+			"turn": 8
+		}
+	],
+	"retreat_context": "synthetic <=2cost legal-budget preview",
+	"retreat_preview_ms": 1.126
+}

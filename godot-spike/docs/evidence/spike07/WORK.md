@@ -164,3 +164,15 @@ brings real threats forward; don't pad HP/nerf enemy focus or retune difficulty 
 hide this. Early survival improved, kit remains useful, later survival/finish
 balance remains a measured limitation for human review. No acceptance definition
 relaxed. W3 pure safety/retreat tests8/8,76assertions,exit0 (w3-tests.log).
+
+## W4 — measurement only
+Exact05=6ee5cb7,06=1cff2db,W3before=3449a26 exported with git archive into ignored
+.godot/spike07-perf. No other checkout/worktree touched or temporary worktree
+created. Three repetitions eachT2/wave scroll and common normal/2x enemy replay;
+separate own AI evaluation. Identical reached state binary committed. Native
+720p/no readbacks/movie/other Godot; VSync off,max60. Tables and cause/limitations
+in PERFORMANCE.md. Scoped hotspot minimap~11–12ms/frame; diagnostic24.36→16.69ms;
+AI distance_map~54ms/action and telemetry reach~22ms/action; no per-frame AI.
+Old34ms mean not reproduced, cannot attribute missing delta to code. All command
+exits0; one cleanup2objects warning retained. CPU engine monitor is coarse sampled
+value, not per-frame CPU sum; GPU elapsed not available. W4 has NO gameplay fix.

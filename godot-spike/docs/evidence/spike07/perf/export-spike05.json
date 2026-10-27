@@ -1,0 +1,13 @@
+{
+  "tag": "spike05",
+  "archive_sha256": "f0b3a19473d77802f51b96972ca3c5bf415619d97ca55ab103e077b27205d3b0",
+  "pre_instrument_LF_sha256": {
+    "scripts/levels/field_minimap.gd": "89c35fe047a9948cd0fd56dcecec563d5ef6350f6d00941c444a63d9c36147a6",
+    "scripts/levels/field_labels.gd": "56505d230f8d18b13d21641163a99b33c72dcc1590d253a3ac4d262445d549fc",
+    "scripts/levels/field_indicators.gd": "05417a12a58a9a170a7aa39071c9267567bdd511af8ba5f3f400b00d85f368ee",
+    "scripts/levels/field_ground.gd": "888e3b0756c647dfc26346df9929a0849fdd6bf8bd53a0409df14238192a5dbd",
+    "scripts/levels/field_hud.gd": "e38add63c0c10316063e89cbb7b0814228075bcd7ce5325f6fc9b42d75e9feb5",
+    "scripts/levels/field_battle.gd": "92b22fb66bc05727653207fafd451bc6ce0a9559b3934a8dcff176be237edd78",
+    "scripts/rules/field_rules.gd": "189d335f9c985f83589b0f3b3a992df447200bc79563056ef4804ba6bd82d326"
+  }
+}
