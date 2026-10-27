@@ -1,0 +1,22 @@
+﻿[
+    {
+        "path":  "impact_profile.tres",
+        "sha256":  "448467B41A90619B688F7D4704594F0B74108BB9462DCC49A5CC3B51A41BD8EE"
+    },
+    {
+        "path":  "impact_profile_a9_baseline.tres",
+        "sha256":  "A080F88BA5953395CBC26C8E6D7E8067376B215560460EA301C5022B50DD053A"
+    },
+    {
+        "path":  "impact_profile_spike03.tres",
+        "sha256":  "110040412BFF567B8CC978FE898DABFD891E358BF2A4221D0FAD2362A6B55BF5"
+    },
+    {
+        "path":  "impact_profile_spike04.tres",
+        "sha256":  "F54958B8783C32CB89B35AE20B4E7F93D9CA9FED7CCF1DD1A01A22DD3E0959A6"
+    },
+    {
+        "path":  "impact_profile_spike05.tres",
+        "sha256":  "011C73D879442BD899DED25CC9AE40AEFA05E8839C4F897FEDE73254D5467C5F"
+    }
+]

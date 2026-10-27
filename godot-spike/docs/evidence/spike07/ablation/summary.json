@@ -1,0 +1,380 @@
+[
+  {
+    "case": "fallback",
+    "complete": true,
+    "policies": {
+      "road": {
+        "n": 40,
+        "wins": 20,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "flank": {
+        "n": 40,
+        "wins": 16,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "turtle": {
+        "n": 40,
+        "wins": 1,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "scout-retreat": {
+        "n": 40,
+        "wins": 0,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "leader-dash": {
+        "n": 40,
+        "wins": 36,
+        "bypass_wins": 36,
+        "zero_death_T6_wavefree": 0
+      },
+      "bypass": {
+        "n": 40,
+        "wins": 23,
+        "bypass_wins": 2,
+        "zero_death_T6_wavefree": 2
+      }
+    }
+  },
+  {
+    "case": "leader-post",
+    "complete": true,
+    "policies": {
+      "road": {
+        "n": 40,
+        "wins": 18,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "flank": {
+        "n": 40,
+        "wins": 27,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "turtle": {
+        "n": 40,
+        "wins": 0,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "scout-retreat": {
+        "n": 40,
+        "wins": 2,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "leader-dash": {
+        "n": 40,
+        "wins": 24,
+        "bypass_wins": 15,
+        "zero_death_T6_wavefree": 0
+      },
+      "bypass": {
+        "n": 40,
+        "wins": 15,
+        "bypass_wins": 1,
+        "zero_death_T6_wavefree": 1
+      }
+    }
+  },
+  {
+    "case": "post-one",
+    "complete": true,
+    "policies": {
+      "road": {
+        "n": 40,
+        "wins": 29,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "flank": {
+        "n": 40,
+        "wins": 25,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "turtle": {
+        "n": 40,
+        "wins": 11,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "scout-retreat": {
+        "n": 40,
+        "wins": 0,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "leader-dash": {
+        "n": 40,
+        "wins": 32,
+        "bypass_wins": 30,
+        "zero_death_T6_wavefree": 0
+      },
+      "bypass": {
+        "n": 40,
+        "wins": 27,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      }
+    }
+  },
+  {
+    "case": "post-one-wave-t3",
+    "complete": true,
+    "policies": {
+      "road": {
+        "n": 40,
+        "wins": 26,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "flank": {
+        "n": 40,
+        "wins": 22,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "turtle": {
+        "n": 40,
+        "wins": 12,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "scout-retreat": {
+        "n": 40,
+        "wins": 0,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "leader-dash": {
+        "n": 40,
+        "wins": 10,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "bypass": {
+        "n": 40,
+        "wins": 8,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      }
+    }
+  },
+  {
+    "case": "post-one-wave-t4",
+    "complete": true,
+    "policies": {
+      "road": {
+        "n": 40,
+        "wins": 19,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "flank": {
+        "n": 40,
+        "wins": 23,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "turtle": {
+        "n": 40,
+        "wins": 9,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "scout-retreat": {
+        "n": 40,
+        "wins": 0,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "leader-dash": {
+        "n": 40,
+        "wins": 15,
+        "bypass_wins": 1,
+        "zero_death_T6_wavefree": 0
+      },
+      "bypass": {
+        "n": 40,
+        "wins": 8,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      }
+    }
+  },
+  {
+    "case": "post-wave-t3",
+    "complete": true,
+    "policies": {
+      "road": {
+        "n": 40,
+        "wins": 24,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "flank": {
+        "n": 40,
+        "wins": 23,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "turtle": {
+        "n": 40,
+        "wins": 6,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "scout-retreat": {
+        "n": 40,
+        "wins": 2,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "leader-dash": {
+        "n": 40,
+        "wins": 4,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "bypass": {
+        "n": 40,
+        "wins": 11,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      }
+    }
+  },
+  {
+    "case": "post-wave-t4",
+    "complete": true,
+    "policies": {
+      "road": {
+        "n": 40,
+        "wins": 15,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "flank": {
+        "n": 40,
+        "wins": 24,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "turtle": {
+        "n": 40,
+        "wins": 1,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "scout-retreat": {
+        "n": 40,
+        "wins": 0,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "leader-dash": {
+        "n": 40,
+        "wins": 13,
+        "bypass_wins": 1,
+        "zero_death_T6_wavefree": 0
+      },
+      "bypass": {
+        "n": 40,
+        "wins": 11,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      }
+    }
+  },
+  {
+    "case": "wave-t3",
+    "complete": true,
+    "policies": {
+      "road": {
+        "n": 40,
+        "wins": 26,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "flank": {
+        "n": 40,
+        "wins": 32,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "turtle": {
+        "n": 40,
+        "wins": 10,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "scout-retreat": {
+        "n": 40,
+        "wins": 0,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "leader-dash": {
+        "n": 40,
+        "wins": 8,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "bypass": {
+        "n": 40,
+        "wins": 19,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      }
+    }
+  },
+  {
+    "case": "wave-t4",
+    "complete": true,
+    "policies": {
+      "road": {
+        "n": 40,
+        "wins": 27,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "flank": {
+        "n": 40,
+        "wins": 24,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "turtle": {
+        "n": 40,
+        "wins": 8,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "scout-retreat": {
+        "n": 40,
+        "wins": 0,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      },
+      "leader-dash": {
+        "n": 40,
+        "wins": 24,
+        "bypass_wins": 3,
+        "zero_death_T6_wavefree": 0
+      },
+      "bypass": {
+        "n": 40,
+        "wins": 19,
+        "bypass_wins": 0,
+        "zero_death_T6_wavefree": 0
+      }
+    }
+  }
+]

@@ -18,11 +18,7 @@ static func seeds_from(value: String) -> Array:
 	return seeds
 
 static func run(name: String, seed_value: int, variant: String, enemy_mean: float = 3.456164, overrides: Dictionary = {}) -> Dictionary:
-	var s := Policy.start(name,seed_value,variant)
-	if not overrides.is_empty():
-		var level: Dictionary = s.level.duplicate(true)
-		level.merge(overrides,true)
-		s=Rules.initial(level)
+	var s := Policy.start(name,seed_value,variant,overrides)
 	var telemetry := Telemetry.new()
 	telemetry.estimate_enemy_mean=enemy_mean
 	telemetry.estimate_source="spike05 measured normal phase mean" if is_equal_approx(enemy_mean,3.456164) else "spike06 measured normal phase mean"

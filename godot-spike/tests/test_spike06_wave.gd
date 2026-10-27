@@ -4,7 +4,7 @@ const H = preload("res://tools/field_harness.gd")
 func test_warning_visible_a_full_turn_before_legal_rested_arrival() -> void:
 	var field = add_child_autofree(preload("res://scenes/levels/Field24x18.tscn").instantiate())
 	await get_tree().process_frame
-	var s := R.initial()
+	var s := R.initial(preload("res://data/levels/field_24x18_spike06.gd").build())
 	s.turn=3
 	var warning := R.next_turn(s)
 	var event: Dictionary = warning.events.filter(func(e):return e.type=="reinforcement_warning")[0]
@@ -24,7 +24,7 @@ func test_warning_visible_a_full_turn_before_legal_rested_arrival() -> void:
 		assert_eq(u.born_turn,arrived.state.turn)
 		assert_false(R.allowed(arrived.state,u))
 func test_actual_continuous_route_wave_attacks_and_is_attacked() -> void:
-	var report := H.run("road",24018,"default")
+	var report := H.run("road",24018,"spike06")
 	assert_eq(report.status,"win")
 	assert_gte(report.reinforcement_first_engage_turn,6)
 	assert_gte(report.reinforcement_first_attack_turn,6)

@@ -90,7 +90,7 @@ func refresh_layout() -> void:
 			var g: Dictionary = groups[group]
 			place(group,"%s ×%d" % [group,g.count],g.sum/g.count,battle.TEAL if g.ally else battle.CLAY,144)
 	var entries: Array = battle.hud.warning_entries()
-	if not entries.is_empty(): place("wave","T5 增援 ×3",screen(battle.center(entries[1])),Color(battle.BRASS,.8),112)
+	if not entries.is_empty(): place("wave","T%d 增援 ×3" % battle.state.level.reinforcement_turn,screen(battle.center(entries[1])),Color(battle.BRASS,.8),112)
 
 func _process(_delta: float) -> void:
 	refresh_layout()

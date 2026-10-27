@@ -337,6 +337,7 @@ static func focus_targets(s: Dictionary, id: String, candidates: Array) -> Array
 	return ordered
 
 static func activation(s: Dictionary, u: Dictionary) -> String:
+	if u.kind=="leader" and s.warned and s.level.get("leader_wave_fallback",false): return "announced wave rendezvous"
 	if s.groups.get(u.group,"")=="alert": return "latched / attacked group or neighbour"
 	if u.group=="reinforcements": return "arrival rested; intercept leader approach"
 	if s.turn>=s.level.ai.march_turn: return "turn %d march timer" % s.level.ai.march_turn
@@ -354,6 +355,17 @@ static func ai_plan(s: Dictionary, id: String, cache: Dictionary) -> Dictionary:
 	var role_reason := ""
 	var waypoint := Vector2i(-1,-1)
 	if u.kind=="leader":
+		if s.warned and s.level.get("leader_wave_fallback",false):
+			var rendezvous: Vector2i = s.level.entries[1]
+			var step: Vector2i = u.cell
+			var separation := distance(u.cell,rendezvous)
+			if separation>1:
+				for dir in DIRS:
+					var p: Vector2i = u.cell+dir
+					if cost(s.level,p,u.kind)>0 and occupant(s,p).is_empty() and distance(p,s.level.hold_point)<=2 and distance(p,rendezvous)<separation:
+						step=p
+						separation=distance(p,rendezvous)
+			if step!=u.cell: return {"state":"wave-rendezvous","to":step,"reason":"announced wave: one step toward escort","role_hold":false}
 		# Counter unless low HP and surrounded. Retreat exactly one adjacent cell,
 		# stay within 2 of the authored point, improve nearest opponent distance.
 		if not available.is_empty() and not (u.hp<=4 and nearby_allies.size()>=2):

@@ -84,7 +84,11 @@ func test_terminal_before_later_enemy_does_not_inflate_true_idle() -> void:
 	var report := metrics.summary()
 	assert_eq(report.status,"lose")
 	assert_eq(report.enemy_idle_by_group.leader,0)
-	assert_eq(report.ally_deaths,[{"id":"thoma","kind":"melee","turn":1}])
+	# Preserve the original death contract and additionally validate W1 diagnostics.
+	assert_eq(report.ally_deaths.map(func(d):return {"id":d.id,"kind":d.kind,"turn":d.turn}),[{"id":"thoma","kind":"melee","turn":1}])
+	assert_eq(report.ally_deaths[0].source,"knight")
+	assert_eq(report.ally_deaths[0].enemy_phase_start.hp,2)
+	assert_gte(report.ally_deaths[0].enemy_phase_start.threat_count,1)
 	var leader_rows: Array = report.unit_turns.filter(func(row):return row.id=="leader")
 	assert_false(leader_rows[0].observed)
 

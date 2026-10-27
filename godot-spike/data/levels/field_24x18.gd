@@ -7,7 +7,7 @@ const ALERT_RADIUS = 6
 ## SPIKE06 AI test values, not canon. Manhattan distances; activation latches.
 const AI = {"march_turn":6,"neighbour_radius":5,"support_radius":3,"bodyguard_radius":3,"intercept_radius":6}
 const LEADER_CONTEST_RADIUS = 2
-const REINFORCEMENT_TURN = 5
+const REINFORCEMENT_TURN = 3
 const ENTRIES = [Vector2i(23,8),Vector2i(23,9),Vector2i(23,10)]
 const STATS = {
 	"melee":{"move":4,"hp":8,"min_range":1,"max_range":1,"damage":2,"knockback":true,"forest_extra":0},
@@ -32,7 +32,7 @@ const DEPLOYMENT = [
 	["knight-3","enemy","knight",Vector2i(11,15),"south"],
 	["knight-5","enemy","knight",Vector2i(18,3),"flank"],
 	["knight-8","enemy","knight",Vector2i(19,8),"reserve"],
-	["leader","enemy","leader",Vector2i(20,9),"leader"]]
+	["leader","enemy","leader",Vector2i(22,9),"leader"]]
 
 static func build() -> Dictionary:
 	# Authored geometry: east river, two road crossings and a northern ford.
@@ -50,6 +50,6 @@ static func build() -> Dictionary:
 		rows.append(row)
 	return {"size":SIZE,"rows":rows,"stats":STATS.duplicate(true),"terrain":TERRAIN.duplicate(true),"scout_kit":true,
 		"turn_limit":TURN_LIMIT,"seed":SEED,"alert_radius":ALERT_RADIUS,"ai":AI.duplicate(true),"leader_contest_radius":LEADER_CONTEST_RADIUS,
-		"objective":"defeat_leader","hold_point":Vector2i(20,9),"reinforcement_turn":REINFORCEMENT_TURN,
+		"objective":"defeat_leader","hold_point":Vector2i(22,9),"reinforcement_turn":REINFORCEMENT_TURN,
 		"entries":ENTRIES.duplicate(),"entry_label":"東側渡口入口","reinforcement_kinds":["knight","knight","knight"],
 		"deployment":DEPLOYMENT.duplicate(true),"label":"PLACEHOLDER / SPIKE TEST VALUES","line_of_sight":"centre supercover; cliff/deep water/units block intermediate; forest line/target cover -1 min1; exact corners check both sides"}

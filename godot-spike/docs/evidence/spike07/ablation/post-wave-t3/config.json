@@ -1,0 +1,90 @@
+{
+	"deployment": [
+		[
+			"thoma",
+			"ally",
+			"melee",
+			"(3, 10)",
+			"party"
+		],
+		[
+			"guard",
+			"ally",
+			"melee",
+			"(4, 9)",
+			"party"
+		],
+		[
+			"bow-1",
+			"ally",
+			"ranged",
+			"(3, 8)",
+			"party"
+		],
+		[
+			"bow-2",
+			"ally",
+			"ranged",
+			"(3, 11)",
+			"party"
+		],
+		[
+			"scout-1",
+			"ally",
+			"mobile",
+			"(2, 8)",
+			"party"
+		],
+		[
+			"scout-2",
+			"ally",
+			"mobile",
+			"(2, 11)",
+			"party"
+		],
+		[
+			"knight-1",
+			"enemy",
+			"knight",
+			"(14, 8)",
+			"front"
+		],
+		[
+			"knight-2",
+			"enemy",
+			"knight",
+			"(14, 10)",
+			"front"
+		],
+		[
+			"knight-3",
+			"enemy",
+			"knight",
+			"(11, 15)",
+			"south"
+		],
+		[
+			"knight-5",
+			"enemy",
+			"knight",
+			"(18, 3)",
+			"flank"
+		],
+		[
+			"knight-8",
+			"enemy",
+			"knight",
+			"(19, 8)",
+			"reserve"
+		],
+		[
+			"leader",
+			"enemy",
+			"leader",
+			"(22, 9)",
+			"leader"
+		]
+	],
+	"hold_point": "(22, 9)",
+	"reinforcement_turn": 3
+}

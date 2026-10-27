@@ -2,7 +2,7 @@ extends "res://addons/gut/test.gd"
 const Rules = preload("res://scripts/rules/field_rules.gd")
 
 func fixture(kind: String = "melee") -> Dictionary:
-	var s := Rules.initial()
+	var s := Rules.initial(preload("res://data/levels/field_24x18_spike06.gd").build())
 	for y in range(18): s.level.rows[y]=".".repeat(24)
 	s.units=[Rules.make_unit("thoma","ally",kind,Vector2i(3,9),"party",s.level),
 		Rules.make_unit("knight","enemy","knight",Vector2i(4,9),"front",s.level),
@@ -142,7 +142,7 @@ func test_occupied_entry_fallback_is_nearest_legal_cell() -> void:
 	assert_eq(Rules.occupant(s,Rules.entry_fallback(s,s.level.entries[0])),{})
 
 func test_ai_guard_group_alert_leader_hold_and_determinism() -> void:
-	var s := Rules.initial()
+	var s := Rules.initial(preload("res://data/levels/field_24x18_spike06.gd").build())
 	var before := s.duplicate(true)
 	var a := Rules.enemy_phase(s)
 	assert_eq(a,Rules.enemy_phase(s))

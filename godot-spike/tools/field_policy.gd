@@ -7,18 +7,23 @@ const Legacy = preload("res://tools/field_policy_spike05.gd")
 const Spike06 = preload("res://tools/field_policy_spike06.gd")
 const Data06 = preload("res://data/levels/field_24x18_spike06.gd")
 
-static func start(policy: String, seed_value: int = 24018, variant: String = "default") -> Dictionary:
+static func start(policy: String, seed_value: int = 24018, variant: String = "default", overrides: Dictionary = {}) -> Dictionary:
 	var level := OldData.build() if variant=="spike05" else Data.build()
 	if variant=="spike06": level=Data06.build()
 	level.seed=seed_value
 	level.variant=variant
+	level.merge(overrides,true)
 	var s := Rules.initial(level)
 	if policy=="bypass":
 		var placements := {"thoma":Vector2i(17,9),"guard":Vector2i(17,10),"bow-1":Vector2i(16,9),"bow-2":Vector2i(16,10),"scout-1":Vector2i(18,8),"scout-2":Vector2i(18,10)}
 		for id in placements: Rules.unit(s,id).cell=placements[id]
-		s.turn=4
+		# Partial T5 placement, with a wave's true authored arrival age. On the
+		# original T5 arrival this is byte-equivalent; earlier-wave trials must
+		# not accidentally manufacture a second birth-rest turn on T5.
+		s.turn=mini(4,int(level.reinforcement_turn)-1)
 		s.warned=true
 		s=Rules.next_turn(s).state
+		s.turn=5
 	return s
 
 static func target(s: Dictionary, id: String) -> String:

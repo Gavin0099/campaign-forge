@@ -1,0 +1,5577 @@
+[
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 10
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 11
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 12
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 24018,
+		"status": "win",
+		"trace_hash": "ef52b9640efe026f73a1ec413c37c7393ffed0a8000e483c471b063fb2fb8708",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 7
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1001,
+		"status": "lose",
+		"trace_hash": "e9228f7df4688a2488f92b7f1ded9974cadcd2d7f77528442dc1d65d6acb4b3f",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1002,
+		"status": "lose",
+		"trace_hash": "8da68781b9a77d3593f45fc0c49a19140c18faa35ff8b3d684e4f10b708e4c8d",
+		"turns_to_result": 9
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 11
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 11
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1003,
+		"status": "win",
+		"trace_hash": "ef9f415196c0e38fc10b54c09a0ba6b89b54ab2e27efe1520611532d76478f53",
+		"turns_to_result": 15
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1004,
+		"status": "win",
+		"trace_hash": "11981c75329d630c7fa42baa5b5d6d81d7b58ad8dd25060833f82eac529c5fdd",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 9
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1005,
+		"status": "win",
+		"trace_hash": "029417aa8557438ea91598ee8f64cdf3b7709f0a07629e67d79baeae14206ce5",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1006,
+		"status": "win",
+		"trace_hash": "a12328a67d4a78d5c965811fc458c90a592baacad9aa0fbb8ea18b66882ffa64",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 8
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 10
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 12
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 13
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1007,
+		"status": "lose",
+		"trace_hash": "f73b35e94dd23c4e6fe4a616ed41dd8fd62c7b684ceb637301d09d2425c3228b",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1008,
+		"status": "win",
+		"trace_hash": "86d913f7103d24eeb65064abfa7401ef34dedb98dab452356a0790aa26c58766",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 8
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1009,
+		"status": "win",
+		"trace_hash": "9545b0d6e8904c11bb874bc80431376631a558ad7921049a8f8aa26dd5872da2",
+		"turns_to_result": 15
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1010,
+		"status": "win",
+		"trace_hash": "ce7eedc7eb71e6938a17092e789963e041dd648ade9b1a8229506da93fb6ed02",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1011,
+		"status": "win",
+		"trace_hash": "41d355b866e32156df950bdaf7c986df294999e6b7987da3928c0a990ab97e03",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1012,
+		"status": "win",
+		"trace_hash": "f3dd21b6eb343984c9c8ff9b522693d5f985ab6ff3376c51141904e8d27bbf4c",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 12
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1013,
+		"status": "win",
+		"trace_hash": "a25567aa69473d61264e3155a09f251a1086bbc8a1acc3c88de1faaab00f7466",
+		"turns_to_result": 15
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1014,
+		"status": "win",
+		"trace_hash": "7b194ecd76ca93229569c357c3a9a9faa3451d463c8a7366181bda06970f7300",
+		"turns_to_result": 14
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1015,
+		"status": "win",
+		"trace_hash": "e12f64764e5b451f14cf8257f8ff7d647b18d39e2e53b03c35d15d20dcd3456b",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1016,
+		"status": "lose",
+		"trace_hash": "f96afb32afb58aaa6a810405f365a7f76693b292db11ca88c9aa733c0e965914",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 7
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 13
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1017,
+		"status": "lose",
+		"trace_hash": "00bc0ea410fc0653e5e8be8bbb0bfbb08aa2d315326df9645dc7acd43f7d82d9",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1018,
+		"status": "win",
+		"trace_hash": "34c904814fd7f13e49d5a930d31b473141f66400801ac2e3b0186823e10025a1",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 11
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1019,
+		"status": "win",
+		"trace_hash": "10568c9a8aedf1c6e9743f2817d54bcf44a7f662d1abba1ba878e7e554af93d1",
+		"turns_to_result": 14
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 10
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 11
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1020,
+		"status": "win",
+		"trace_hash": "2971375ddbb878ec1ef7bdead3cb55ba8c75aea029b78508261b5439b67db68e",
+		"turns_to_result": 14
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 9
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1021,
+		"status": "win",
+		"trace_hash": "df4c939cb2283fb15cb78781327c56c436126da88e3882ae85259458a17f4d51",
+		"turns_to_result": 11
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 7
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 11
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 12
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1022,
+		"status": "lose",
+		"trace_hash": "e92257503dd3f17176706016100dd9b07d7c24b994667c859122b3bbc65faaf1",
+		"turns_to_result": 12
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 12
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1023,
+		"status": "lose",
+		"trace_hash": "6c14447ba445c96f0c8ae2d1b49a1fbcd4a8e24cd9af9341954c7430881fc46b",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1024,
+		"status": "win",
+		"trace_hash": "533a73e5269ad67746ea650f13408de46a7d7a0e102c0b45dbcbe699242c8845",
+		"turns_to_result": 11
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1025,
+		"status": "win",
+		"trace_hash": "7f46f8d5b2732efcd4ce2d3f15dbb2006f18a86f149281795b6c0abb67d22962",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 11
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 12
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1026,
+		"status": "lose",
+		"trace_hash": "429c507921f50a2efc91ae05c41b13c30f4a9fd58129e7d513fabd5f7908a495",
+		"turns_to_result": 12
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 11
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1027,
+		"status": "win",
+		"trace_hash": "626dafb89b44a5e63fd1b425d2e2f5b80b94272123e7161892663e67389e600a",
+		"turns_to_result": 15
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1028,
+		"status": "win",
+		"trace_hash": "865a2be5794435de624fbbfc0b204cc75f2f65c9a82420e506c99e037e77517a",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1029,
+		"status": "lose",
+		"trace_hash": "20d11b9e1938e80e174964f615bd6c24ea0ad3baefd7535b8efd58f989fd47e2",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1030,
+		"status": "win",
+		"trace_hash": "bf3e7baf9bf6c516507843ba388dbca3048128c5127a8701ef408714c30a03e2",
+		"turns_to_result": 15
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1031,
+		"status": "win",
+		"trace_hash": "27991237fbb145cc5c7d4b46645d7e7b4f1c2d70f54bd6aeb2b0dc01ef409942",
+		"turns_to_result": 10
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 9
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1032,
+		"status": "lose",
+		"trace_hash": "fc670e548a1cb0587db7f02af73dcfb558f2b71bde806bd137522fcec660fe6d",
+		"turns_to_result": 10
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 7
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 8
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 12
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1033,
+		"status": "lose",
+		"trace_hash": "9c2fc28f626018351c24f278a4dc2dfbb53b735407f83a8b464654fc6de41477",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 7
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 8
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1034,
+		"status": "lose",
+		"trace_hash": "d9210338be3cbe5072898c6817df427a0ed0cac62d2fedac1b1d03606e0558ab",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1035,
+		"status": "win",
+		"trace_hash": "af2529d9e815a5e15d661eff6734053e5bfa1d7429680bff698aa816680a2927",
+		"turns_to_result": 12
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 11
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1036,
+		"status": "win",
+		"trace_hash": "4d191b7ab93295a3ac2c2c7f34c4a788447aec5e1221fe07ea27c0457409690e",
+		"turns_to_result": 15
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1037,
+		"status": "lose",
+		"trace_hash": "6855f509c13d84b890ba9e902eeb2d2bb55b0cff638a1261086224a49379d51c",
+		"turns_to_result": 9
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 9
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 11
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 14
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1038,
+		"status": "lose",
+		"trace_hash": "bf6e24c49a68283529c2164d6b475941b73bd334927668922c5c5eaaa961f523",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "road",
+		"seed": 1039,
+		"status": "win",
+		"trace_hash": "9ea5acca61e9372c5b3fdad0da375626e8ba7d5f6ff4197a5631884b0efb0acb",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 24018,
+		"status": "win",
+		"trace_hash": "67ccc511cd1e1d1910b6617efa9c2ca29bcfaff3e643a4f81fdc745369e7cfb7",
+		"turns_to_result": 14
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1001,
+		"status": "win",
+		"trace_hash": "39fa52fe501b832dc8d7a315dd00913e9d08a7c9f070fe57db0c4b7cff5846f7",
+		"turns_to_result": 11
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 9
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 11
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1002,
+		"status": "lose",
+		"trace_hash": "11cb3c4402554bd0faa1750e036204787a1e4397fcec19eb9818eb5ec7479056",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1003,
+		"status": "win",
+		"trace_hash": "67164d3e6258dc8bee986ae0ffd7614af5db895afbdd703fa8a645fc8bf80ddf",
+		"turns_to_result": 9
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1004,
+		"status": "lose",
+		"trace_hash": "5030085dbe32bee014323d449c8488206eacd44295b374c412cdcd54934e35e7",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 8
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 11
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1005,
+		"status": "win",
+		"trace_hash": "f8de0166595f30ec79aecdf65c3d2c13b2f72f04b66e6c9bd6a3cae0714c6ec0",
+		"turns_to_result": 12
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1006,
+		"status": "win",
+		"trace_hash": "d248601b7b5807ecf8c0c313b9e455351f0b29b9143268c6530fca002c91b215",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1007,
+		"status": "win",
+		"trace_hash": "5314e62d671c8cb9dc6f407d8fe92d0e94876ecfbe3d5b2838024b83d91cb604",
+		"turns_to_result": 11
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 9
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 14
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1008,
+		"status": "lose",
+		"trace_hash": "190ce0ddcef2fc6e0c748490042fb2f5f156d47c74f96d78ff427b0181e8eecf",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 8
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1009,
+		"status": "win",
+		"trace_hash": "e1369db4377e95a2f07ee00d67618096bd89a8b11434be6726da6f6d78eebcb5",
+		"turns_to_result": 15
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 8
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 9
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 10
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 12
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 13
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1010,
+		"status": "lose",
+		"trace_hash": "ef78f1913bbceb5425a4b029dbeff730a3672dfb84e4388c3f4b17032e7982e3",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 9
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1011,
+		"status": "win",
+		"trace_hash": "62d4bc238ee570f4bf278b3b0038effc8a86d9eb343b4857321fd5d1f0bdf748",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 10
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 11
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1012,
+		"status": "win",
+		"trace_hash": "8f1cfda85a3c523fc05bcc4790965dbb8d9fe41dccfda4c57ba6cc6eaf77d527",
+		"turns_to_result": 14
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 10
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1013,
+		"status": "win",
+		"trace_hash": "0cc6df6aa7ce88e9177a447dfeb8784f29539d6ca169acf86256519b2f7d6290",
+		"turns_to_result": 11
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1014,
+		"status": "win",
+		"trace_hash": "93b67cfc2604b03c9663e448b38092faf51fee52d1f233eeab3e45ffce1c5e21",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1015,
+		"status": "win",
+		"trace_hash": "6607d6d2440e449459a6a22a7d668b272c45e4be728d6d566d3b9d31bfdce029",
+		"turns_to_result": 14
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1016,
+		"status": "lose",
+		"trace_hash": "9f9554c47b3dff767798ae0d031a920de7add77e847a7591391fc3705d6f7765",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 9
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1017,
+		"status": "win",
+		"trace_hash": "d95108164897122569b75d638a1fc3e53b19481e70050dd0c9a9dc16cfab1e96",
+		"turns_to_result": 12
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 7
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1018,
+		"status": "lose",
+		"trace_hash": "fe3e80aacd8daa7eda7e6fae3079f2a563e6ade861eb14361e3d1c8342469869",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 12
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 12
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 13
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1019,
+		"status": "lose",
+		"trace_hash": "1abcaac685c0b20cc0484a936c1e6e4134c0086d9d0b8ff79aeb3eddd05378be",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 10
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 11
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1020,
+		"status": "win",
+		"trace_hash": "59c6f7ae0214e4e720d42ef595f589d29b6101b455eebef35e6d767d0f0f2dd1",
+		"turns_to_result": 14
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 9
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1021,
+		"status": "win",
+		"trace_hash": "0c5a55e9a624dfbd8377345b23255cfaedfeb19956794f136164d1750ce73411",
+		"turns_to_result": 12
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 7
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1022,
+		"status": "win",
+		"trace_hash": "70eb28028083ff4593f66d59ad124c4a72e83bbef83c0bfaed22d2742d364d76",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 4
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1023,
+		"status": "win",
+		"trace_hash": "b57ede24caf424bda226944278a454e0161f8cb1e35429943ed4be858a7d9f34",
+		"turns_to_result": 14
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1024,
+		"status": "win",
+		"trace_hash": "415ac8d497534f85e8f1086164575a1c73915709d2a42d70aa9c78671c5da8f2",
+		"turns_to_result": 9
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 9
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 10
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 13
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1025,
+		"status": "lose",
+		"trace_hash": "48421f6a55f15ac99e88f73e9dec971c173a2d2b6eadf1c3b72fca15b5fa3180",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1026,
+		"status": "win",
+		"trace_hash": "61d97c239490897f50ecda06182b32b8874d13ed48c72dcf27c4223068be17eb",
+		"turns_to_result": 9
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 11
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1027,
+		"status": "win",
+		"trace_hash": "d02d7c01b0c5cae0aac50e16e002175ef25997f728cbc9f17639cc095c127d82",
+		"turns_to_result": 15
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 12
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1028,
+		"status": "win",
+		"trace_hash": "c925f833ec3293e3ae714a13d8b55dc10e5314b93dc123665838086a85649c27",
+		"turns_to_result": 15
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 9
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 11
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1029,
+		"status": "win",
+		"trace_hash": "b5630a89996e7e92e6bc7c747ff8c600b9ed8b8051348853239987d5c6e93117",
+		"turns_to_result": 12
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 9
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1030,
+		"status": "win",
+		"trace_hash": "5f5af6972f397f5edd1eaf0f00bd23ccf2e6c7b2384b753b3c39ce67d112a811",
+		"turns_to_result": 12
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1031,
+		"status": "win",
+		"trace_hash": "9219dceda12a78c01771672daf097216cd9fd188b8235de57b772150af3e5255",
+		"turns_to_result": 15
+	},
+	{
+		"ally_deaths": [],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1032,
+		"status": "win",
+		"trace_hash": "b9a38070709f4e68efaa46acc72e9eb42be712bda134d401772f6c8f826c9201",
+		"turns_to_result": 12
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 7
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 9
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 11
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1033,
+		"status": "win",
+		"trace_hash": "558c1f80190637f4d77cb9789ffbcee0a048eb676183f42b2c77cf91a6824c6a",
+		"turns_to_result": 15
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1034,
+		"status": "win",
+		"trace_hash": "a7c9e4a920e715aa6f929b2ce36acf6a0ea2618ce64168ab2761aa9ef742cdb6",
+		"turns_to_result": 15
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1035,
+		"status": "win",
+		"trace_hash": "4f7838ae8dfa7b126c9a6cfb01eff4446254a1a5e36e8ec0ba4c7be8ae267eb6",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 11
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1036,
+		"status": "win",
+		"trace_hash": "5ecabc30d6ce6e5bf58ae160caf14e86d78122deba9e5bb1f9211f90f03c8e27",
+		"turns_to_result": 15
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 9
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1037,
+		"status": "win",
+		"trace_hash": "f75578e5938d59b0b82df765c817cc24359eeca1562d80b4ca853d01552193f2",
+		"turns_to_result": 12
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1038,
+		"status": "win",
+		"trace_hash": "30c0bfca8523c439f467e38baf21661a76df42ac203c6ffd0dbac1ee9ca62343",
+		"turns_to_result": 10
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "flank",
+		"seed": 1039,
+		"status": "win",
+		"trace_hash": "f15526a6d5afe4bca30bd767ac82415bcbde4dc2f1237614d014eccb08f5a6f2",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 8
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 10
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 12
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 24018,
+		"status": "lose",
+		"trace_hash": "e7884f9191e4004025b927a807c1e3e025b23fb402b6a1e9517da81625a68d3c",
+		"turns_to_result": 12
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1001,
+		"status": "lose",
+		"trace_hash": "a3aa1842ba81f9a3ee3969dab4ed8d9b63463c1502d0778924f2447c06795763",
+		"turns_to_result": 10
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1002,
+		"status": "lose",
+		"trace_hash": "247497ece8494298399ee4d8ec7e01652ee8e7dc9d95be5aa243602d55aefb8e",
+		"turns_to_result": 10
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1003,
+		"status": "lose",
+		"trace_hash": "247497ece8494298399ee4d8ec7e01652ee8e7dc9d95be5aa243602d55aefb8e",
+		"turns_to_result": 10
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 8
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1004,
+		"status": "lose",
+		"trace_hash": "6949a9d2c6e809445e6a5dbf8fa7d80ff9ec8366afd5ca47dce21681f2661f44",
+		"turns_to_result": 10
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1005,
+		"status": "lose",
+		"trace_hash": "958c42ddc0c20d5f5dd0c54c15c6f91100908af7818cfc6eb9579419f2a16972",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1006,
+		"status": "lose",
+		"trace_hash": "5f1e72758fc804e52ed4066462461c575e7659329ecfbb1482b5f49049cdca39",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1007,
+		"status": "lose",
+		"trace_hash": "5f1e72758fc804e52ed4066462461c575e7659329ecfbb1482b5f49049cdca39",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1008,
+		"status": "lose",
+		"trace_hash": "5f1e72758fc804e52ed4066462461c575e7659329ecfbb1482b5f49049cdca39",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1009,
+		"status": "lose",
+		"trace_hash": "5f1e72758fc804e52ed4066462461c575e7659329ecfbb1482b5f49049cdca39",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1010,
+		"status": "lose",
+		"trace_hash": "e69ec257579bb96d7b1699352bd467c5fe5319e1e7a532a598d8ed899ed9d841",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1011,
+		"status": "lose",
+		"trace_hash": "e69ec257579bb96d7b1699352bd467c5fe5319e1e7a532a598d8ed899ed9d841",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1012,
+		"status": "lose",
+		"trace_hash": "e69ec257579bb96d7b1699352bd467c5fe5319e1e7a532a598d8ed899ed9d841",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1013,
+		"status": "lose",
+		"trace_hash": "95a7b8181d7ac70bb4960817bf235060064c61ff0f60b6aace62eb89b679e4d2",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1014,
+		"status": "lose",
+		"trace_hash": "95a7b8181d7ac70bb4960817bf235060064c61ff0f60b6aace62eb89b679e4d2",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1015,
+		"status": "lose",
+		"trace_hash": "95a7b8181d7ac70bb4960817bf235060064c61ff0f60b6aace62eb89b679e4d2",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1016,
+		"status": "lose",
+		"trace_hash": "95a7b8181d7ac70bb4960817bf235060064c61ff0f60b6aace62eb89b679e4d2",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1017,
+		"status": "lose",
+		"trace_hash": "95a7b8181d7ac70bb4960817bf235060064c61ff0f60b6aace62eb89b679e4d2",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1018,
+		"status": "lose",
+		"trace_hash": "a485940e60da5dc2471122a8687313591883b30831700deba441ac4207ed3aa1",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 11
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1019,
+		"status": "lose",
+		"trace_hash": "edae7e93b910d4ebc380dab0dc3a652ec9544261ab5264fd97b0b12e62b3761d",
+		"turns_to_result": 11
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 12
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1020,
+		"status": "lose",
+		"trace_hash": "430735edc5a352f19ee74cda7dd43befae345358c150e6b8b81dd0dd9fdc63ef",
+		"turns_to_result": 12
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1021,
+		"status": "win",
+		"trace_hash": "ff3f82ca26b8253ed4b55d90b5f49da7982602431720d929e1bd7fcfd1117c04",
+		"turns_to_result": 14
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 8
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1022,
+		"status": "lose",
+		"trace_hash": "c0b6466de05ad67bd47b286befcbd13ebaa2e84a0cb1b44caeed4ba33e64a828",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1023,
+		"status": "win",
+		"trace_hash": "dfa7d46e9f330ddea2de2428ca8434d111a75a944f14650066fe3e8d5ef5b013",
+		"turns_to_result": 14
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 9
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 12
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1024,
+		"status": "lose",
+		"trace_hash": "17ca1871316240b6315c811a423c2b46623df1a9998f168cf614c0a7fd86d85e",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 9
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 12
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1025,
+		"status": "lose",
+		"trace_hash": "17ca1871316240b6315c811a423c2b46623df1a9998f168cf614c0a7fd86d85e",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 8
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 12
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1026,
+		"status": "lose",
+		"trace_hash": "4d67ee7c215663056a7a45767bab7a79a40b51c3a2eee180fcc3ccd4d48d04f6",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 8
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1027,
+		"status": "lose",
+		"trace_hash": "17888e5351bd3f4e673bc60c102f15709bf3a9534911b516f60d3e8ab90fdb4a",
+		"turns_to_result": 10
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 8
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 12
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1028,
+		"status": "lose",
+		"trace_hash": "d3026d7fd9565e296376482a3ea76d6d5af006f717b486b68c1fdc8570b6a5d6",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 9
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1029,
+		"status": "lose",
+		"trace_hash": "70e345f6d49da0c8912b6101593b5cfee11a567ef4e4f76d253daac39a595d5b",
+		"turns_to_result": 10
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 8
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 9
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 11
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1030,
+		"status": "lose",
+		"trace_hash": "185e34d66eab13773a7771d583b440909781647449e0895f2cdf2272b9ef2767",
+		"turns_to_result": 16
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1031,
+		"status": "win",
+		"trace_hash": "cab99930f96a098014ff0ba3580078078dccc45f1ee8d52c77311207c288fd57",
+		"turns_to_result": 15
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1032,
+		"status": "lose",
+		"trace_hash": "87bfc473d386baf5376d23614d37b86dfe13cd9d33f042748709c4a3699bf5b8",
+		"turns_to_result": 10
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1033,
+		"status": "win",
+		"trace_hash": "d4a4524bd7b21514d21a27add45d0e001b4082d1760b30360ecc894208d5823b",
+		"turns_to_result": 14
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1034,
+		"status": "win",
+		"trace_hash": "58dfb1b798f096011f507d0ade4c92fdee830d49dd5629df42c2afbf9ffca430",
+		"turns_to_result": 11
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1035,
+		"status": "win",
+		"trace_hash": "ebc95d68db2b019d0ff9a8005218ac324d83b7be443a36f5e0f0089db006dab9",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 10
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1036,
+		"status": "win",
+		"trace_hash": "09963f56c523c66244fbfaa5babb98e3805bb5cf8a6e68287cecd5634613825c",
+		"turns_to_result": 14
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1037,
+		"status": "win",
+		"trace_hash": "d694412f2c316aeb32a593893db06a3241f76265c4cc3f3ab2e1b48176502ec4",
+		"turns_to_result": 13
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1038,
+		"status": "win",
+		"trace_hash": "8daf7fb3a863ba10e6fe5dfd3a66ae3e9efe13d5a880df980ddc52cc2ddfe2ac",
+		"turns_to_result": 14
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "turtle",
+		"seed": 1039,
+		"status": "win",
+		"trace_hash": "8daf7fb3a863ba10e6fe5dfd3a66ae3e9efe13d5a880df980ddc52cc2ddfe2ac",
+		"turns_to_result": 14
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 24018,
+		"status": "lose",
+		"trace_hash": "eaf4d78cf76cf8c0246682854b0dc328b8761a0c4692172aecc47f8c39d2bc20",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1001,
+		"status": "lose",
+		"trace_hash": "def729993a4f6937a26c13075480967e80124d3ef4cc4e616b10ee5703fd4be6",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1002,
+		"status": "lose",
+		"trace_hash": "1dd5617372e953dda68678b3c793ae4dcc84d37d09e2e98040025e4a28bfdbc8",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1003,
+		"status": "lose",
+		"trace_hash": "def729993a4f6937a26c13075480967e80124d3ef4cc4e616b10ee5703fd4be6",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1004,
+		"status": "lose",
+		"trace_hash": "dfefbc3528bc00d5b4039b2c875dd4abd724ca6fdb9de519e160b8ba3c00b4cb",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1005,
+		"status": "lose",
+		"trace_hash": "c851abaf7e51d92728bfd75584bf719fd7a22f76af4ed8adfa7e3880e0af80da",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1006,
+		"status": "lose",
+		"trace_hash": "c851abaf7e51d92728bfd75584bf719fd7a22f76af4ed8adfa7e3880e0af80da",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1007,
+		"status": "lose",
+		"trace_hash": "a60e1a8e2557175dd9e10b114467a19b8673a55e096aeeecefc56a1644f3bbae",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1008,
+		"status": "lose",
+		"trace_hash": "a60e1a8e2557175dd9e10b114467a19b8673a55e096aeeecefc56a1644f3bbae",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1009,
+		"status": "lose",
+		"trace_hash": "5076e54f374aa0a306b457db7d18204eef597b92125c31e9baf334254bf8c79f",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1010,
+		"status": "lose",
+		"trace_hash": "5d62b202f4eb3c8c1da24423246a42e69a5242e4039421db453a4c4d17ac8d6c",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1011,
+		"status": "lose",
+		"trace_hash": "5d62b202f4eb3c8c1da24423246a42e69a5242e4039421db453a4c4d17ac8d6c",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1012,
+		"status": "lose",
+		"trace_hash": "752f902fd5285d9279b61283d3ab8ba8647b2d66e496bed2ec1f89612edd3c7d",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1013,
+		"status": "lose",
+		"trace_hash": "2c3a060e43a53f28ee29bded7f221be0e5d928e853a7d37f455ede0d582ad5af",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1014,
+		"status": "lose",
+		"trace_hash": "2c3a060e43a53f28ee29bded7f221be0e5d928e853a7d37f455ede0d582ad5af",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1015,
+		"status": "lose",
+		"trace_hash": "405c8a8b744036ab328d847d9f2bf7c43e4783ed31f545bf8f8cc3f6d9067f85",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1016,
+		"status": "lose",
+		"trace_hash": "405c8a8b744036ab328d847d9f2bf7c43e4783ed31f545bf8f8cc3f6d9067f85",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 7
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1017,
+		"status": "lose",
+		"trace_hash": "36b79b35a5c2b0c10993eda7e363a7058018ace178c94548c02942b2e5013ffa",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 4
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1018,
+		"status": "lose",
+		"trace_hash": "67c912084d28adccfb03829c8eb4b9d523fdcbd5f522e134f5068b7e9375b243",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 4
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1019,
+		"status": "lose",
+		"trace_hash": "67c912084d28adccfb03829c8eb4b9d523fdcbd5f522e134f5068b7e9375b243",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 4
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1020,
+		"status": "lose",
+		"trace_hash": "67c912084d28adccfb03829c8eb4b9d523fdcbd5f522e134f5068b7e9375b243",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 4
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1021,
+		"status": "lose",
+		"trace_hash": "58f0e1926d609dd5896c1850607f2b69705d41ad60ff88bdb7c16ec3a4958c78",
+		"turns_to_result": 4
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 4
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1022,
+		"status": "lose",
+		"trace_hash": "721c6835c90050fb41d00303e9b7ebb17d5a7c177920face7982ccf4a05d5948",
+		"turns_to_result": 4
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 4
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1023,
+		"status": "lose",
+		"trace_hash": "163136c7a92c0ee7c0a82704a9109b79a167efc333e871f5de60ab8238a72d1f",
+		"turns_to_result": 4
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 4
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1024,
+		"status": "lose",
+		"trace_hash": "e1f83555fa842755769d81177d6336d62e8c892df056b741de0905b6904596fc",
+		"turns_to_result": 4
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 4
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1025,
+		"status": "lose",
+		"trace_hash": "e1f83555fa842755769d81177d6336d62e8c892df056b741de0905b6904596fc",
+		"turns_to_result": 4
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 4
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1026,
+		"status": "lose",
+		"trace_hash": "e1f83555fa842755769d81177d6336d62e8c892df056b741de0905b6904596fc",
+		"turns_to_result": 4
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1027,
+		"status": "lose",
+		"trace_hash": "f53e4b245ece2276e6fd12f7d5b7aedb67b82a8553e0deb45be40e73f55fe7f0",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1028,
+		"status": "lose",
+		"trace_hash": "92fa5dd7e587b8c1dddbbacfc67f59ba6ae07549b392980a6396d87c90c26725",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1029,
+		"status": "lose",
+		"trace_hash": "06ededb4086fef9179b8bb2fe1827f88fdf9857e5e68fa3e6871857cbc081419",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1030,
+		"status": "lose",
+		"trace_hash": "06ededb4086fef9179b8bb2fe1827f88fdf9857e5e68fa3e6871857cbc081419",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1031,
+		"status": "lose",
+		"trace_hash": "06ededb4086fef9179b8bb2fe1827f88fdf9857e5e68fa3e6871857cbc081419",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1032,
+		"status": "lose",
+		"trace_hash": "81d714da558b3eda0a5d8aed5c40045082c5a7b62bcc557774a104f508fe8eb8",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1033,
+		"status": "lose",
+		"trace_hash": "f45ba9cfe42a1308d420faac4fb8807eb1be0592a0a1f12fa8dee6267d6fbb5f",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1034,
+		"status": "lose",
+		"trace_hash": "f45ba9cfe42a1308d420faac4fb8807eb1be0592a0a1f12fa8dee6267d6fbb5f",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1035,
+		"status": "lose",
+		"trace_hash": "12566a2e2b258f32e90a41b93ee7cb3ee0e2f4b333174f7508acb40e7ead062d",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1036,
+		"status": "lose",
+		"trace_hash": "12566a2e2b258f32e90a41b93ee7cb3ee0e2f4b333174f7508acb40e7ead062d",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1037,
+		"status": "lose",
+		"trace_hash": "721d26da7973fe1ca1080b2f51b288673ca401fee1a302b6dbf8b1ee62f33222",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1038,
+		"status": "lose",
+		"trace_hash": "d2f940a637fb1aaa76d25f4db03e99e0e37f8a89eabeb9ffaf0af5b89a2415b8",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "scout-retreat",
+		"seed": 1039,
+		"status": "lose",
+		"trace_hash": "0f80715fcc6d1f6d7dc22780236837732b3344149a5d16a0b146df77a750f187",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 3
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 24018,
+		"status": "lose",
+		"trace_hash": "9f60c23dc4b9d770e2eb2aa5a9be462df83131fb24456b3770dbdf6ec5e6cc90",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 2
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 3
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 4
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1001,
+		"status": "lose",
+		"trace_hash": "7bc0165adc92b73b264fc3293b25614734ff45df9744714ccd6345e806e45d6c",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 2
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 4
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 5
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1002,
+		"status": "lose",
+		"trace_hash": "1d5be62489714c8bab8e474bffd0f5465257ae78d361d14755148eea13129d79",
+		"turns_to_result": 5
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 5
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1003,
+		"status": "lose",
+		"trace_hash": "1306deb4069a3533ab983ecd53374bddab5be2153f1565f0e57abb11c1f774db",
+		"turns_to_result": 5
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 2
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 4
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 5
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1004,
+		"status": "lose",
+		"trace_hash": "0d18feb342331dca61de46608b37348f8559a5ad28c6fa3c60894d9109b08c7f",
+		"turns_to_result": 5
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 4
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1005,
+		"status": "lose",
+		"trace_hash": "0e43021e6bc4207f9b0a30f48a6564b270112511d2e4e30273bd1ea0887183c2",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1006,
+		"status": "lose",
+		"trace_hash": "cb8c3f61df6f809b9b77b107b3a0714a7f85860291116f066db9590cf5039690",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1007,
+		"status": "lose",
+		"trace_hash": "1ece6bd1d5c6acab09af39d354ae05958f2b7781a9c244ff62d10e10df94b12f",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 2
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 5
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1008,
+		"status": "lose",
+		"trace_hash": "51d514e8b9ff90d06274da41a2ec8195b572f3a39017e36dadb147c10df63b9d",
+		"turns_to_result": 5
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1009,
+		"status": "lose",
+		"trace_hash": "1e9b2b400e54fdd26bedf8ee831f4d977e0dc19552cba8b862c3d51c9a4b41f5",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 3
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1010,
+		"status": "lose",
+		"trace_hash": "da000069e36b98e6ae4e52b5768d412c3dea433031d1099973376a7b9a0e8c17",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 2
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1011,
+		"status": "lose",
+		"trace_hash": "bf48fb7cbc4e796d7447ca8448fc4f094aed8019c6a92c42a30f3469a6a76afd",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1012,
+		"status": "win",
+		"trace_hash": "56c5e2bc0afeb1a1e9e72667aec44797332bee30908defe15d682f4096fcbd2b",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 2
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1013,
+		"status": "lose",
+		"trace_hash": "9b2083b8b4396e26b1c9ea9068374d5f3ebe2feed6ed4f94417a0773950590f9",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 4
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1014,
+		"status": "win",
+		"trace_hash": "d10cfe6dfbbfd8775593bca8d98b74c25a17363c27fd8d413e670c215a4a2ad8",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 3
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1015,
+		"status": "lose",
+		"trace_hash": "47e4240bb530b19fd3468884b8ba7a5229d98285f94ac276a65df0381edc75e9",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1016,
+		"status": "lose",
+		"trace_hash": "8ca19cce8803950e46fedafa1c175acb7968fa0dbd8db7c9c5cb8e1db354d9f6",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 3
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1017,
+		"status": "win",
+		"trace_hash": "a60f46c79d77ab6483eea6a7985c5e91af9f720c9994dff41141ae40bdee3f8f",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 4
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1018,
+		"status": "lose",
+		"trace_hash": "d315cd1d06bc866131254f248800f5b9f6ed5d922bc76b02778f5570c201bdc1",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1019,
+		"status": "lose",
+		"trace_hash": "93879c50e7f932d6fe8fc3fcd0d52330ed181b0ebdc14c0ecb005693cdb443bc",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1020,
+		"status": "lose",
+		"trace_hash": "52916716cae9b2fb65d95a531c4f9bd284e0ab60c721534beb267a114e993e2c",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 2
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 4
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1021,
+		"status": "lose",
+		"trace_hash": "d5c2827878197b74932373fa231ec375246239315a6a794e059f61a69fa61fb0",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 2
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 5
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1022,
+		"status": "lose",
+		"trace_hash": "08997c418e32f07aeb0e807d437092de39c4fd278d87b3f33fa3e6772992b045",
+		"turns_to_result": 5
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1023,
+		"status": "win",
+		"trace_hash": "76c5cb3cf44fdfa4558cae3640f55aaa63cddf23ac2cc52a3af867f4cbb4bd9c",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 3
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1024,
+		"status": "win",
+		"trace_hash": "f9351382cc89abf4613e78abff232f9f99dd1194dcddc20e8c8abc48966c07d6",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 2
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 4
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1025,
+		"status": "lose",
+		"trace_hash": "1cf4389b30f10c500af4cc660c23ae227ebd004d48a932c595cdce18b0a0d303",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 2
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 5
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1026,
+		"status": "lose",
+		"trace_hash": "9729bae52475530acc183bc2492905b4a2354f687f59000914811c011bf684a0",
+		"turns_to_result": 5
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1027,
+		"status": "lose",
+		"trace_hash": "6d52d792cd633f5905a1deac527e8f65259b11bf918f383510d66f13e01ca19a",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 2
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1028,
+		"status": "lose",
+		"trace_hash": "69ddd30b91534a08b63486f38bf4b58285efc35f33995cc6c27fad8e300aa0f4",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1029,
+		"status": "lose",
+		"trace_hash": "8752e479bdca9520a8ac47a52f2a00e59386e7ac7d32d1936544ea626c9e9fed",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1030,
+		"status": "lose",
+		"trace_hash": "ba671dd26238bb4ae9bd84b098f8ca1aee825a3cd183fc0d8b9df39ffefdb387",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 3
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 7
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1031,
+		"status": "lose",
+		"trace_hash": "265f920fdcc47daa6efcc61342ee2277663ae2b39bf3604dceb6889e21c710af",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 5
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1032,
+		"status": "win",
+		"trace_hash": "d03672919e1de5f96cbc23382b6c807c1e069c8ba27223660bb83af83826c990",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 2
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 5
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1033,
+		"status": "lose",
+		"trace_hash": "5cda530b27c364c86ca0628e9fae89e45bb78455de3a0190d9901c1730349913",
+		"turns_to_result": 5
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1034,
+		"status": "lose",
+		"trace_hash": "03efe022eb6e0df2332d829f185fc508650b9f3c44d1c924cb4d39eaccee7b12",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 2
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 5
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1035,
+		"status": "lose",
+		"trace_hash": "a8493b98dd2555dc814e425d28befc309291c041ab787a01ee3c0756616eb168",
+		"turns_to_result": 5
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 5
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1036,
+		"status": "win",
+		"trace_hash": "68a5f1b4639ceca9047ba7da868edc246874fd8f41dc66a3aecc8e9e8b74f9d8",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 2
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1037,
+		"status": "lose",
+		"trace_hash": "8de65a30df587be0d9f6abfb198898b466fbb7e3968a555c437f29ad24a67cef",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 3
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 4
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1038,
+		"status": "win",
+		"trace_hash": "1560914cc762e8dee11b4911177721cdb9e773ea13a86ba2fca9dc0527881076",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 4
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 5
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 5
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "leader-dash",
+		"seed": 1039,
+		"status": "lose",
+		"trace_hash": "1945ebf396d45250d8fee33fb02b142e6b28012080d3e363fac8724959afc31c",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 6
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 7
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 8
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 24018,
+		"status": "lose",
+		"trace_hash": "c1ddf1384fb637b5da58b33374c676029c80559a93ac5d8891d88ac08e98c49d",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1001,
+		"status": "lose",
+		"trace_hash": "6dc4eefadbd221665993c8e03c738d08736daf2878881bddd75b3314b36c7f7b",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1002,
+		"status": "lose",
+		"trace_hash": "83d80839f4d186a43336eca6097502805ae35749873804c4e732da19c13db52c",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1003,
+		"status": "lose",
+		"trace_hash": "83d80839f4d186a43336eca6097502805ae35749873804c4e732da19c13db52c",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1004,
+		"status": "lose",
+		"trace_hash": "700244d9836500ee5edacf1c2030590b924e25c229bb2b4f0a5b9184c0cb83d8",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1005,
+		"status": "lose",
+		"trace_hash": "83d80839f4d186a43336eca6097502805ae35749873804c4e732da19c13db52c",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1006,
+		"status": "lose",
+		"trace_hash": "83d80839f4d186a43336eca6097502805ae35749873804c4e732da19c13db52c",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1007,
+		"status": "lose",
+		"trace_hash": "83d80839f4d186a43336eca6097502805ae35749873804c4e732da19c13db52c",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 5
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1008,
+		"status": "lose",
+		"trace_hash": "83d80839f4d186a43336eca6097502805ae35749873804c4e732da19c13db52c",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1009,
+		"status": "win",
+		"trace_hash": "dc6b2fa0af57ca227fe4553631fd2d4b9fe077b52f631313815d2668e740be0f",
+		"turns_to_result": 11
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1010,
+		"status": "win",
+		"trace_hash": "dc6b2fa0af57ca227fe4553631fd2d4b9fe077b52f631313815d2668e740be0f",
+		"turns_to_result": 11
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 7
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 7
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1011,
+		"status": "lose",
+		"trace_hash": "b1b772c76785f2954f65bec0350c338958246f6366a93f17d528b70cb1f4c48d",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 7
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 7
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1012,
+		"status": "lose",
+		"trace_hash": "861f725097dfcc76e0283fb2e0b01ac325980d11b85c08144207a8e933de12ff",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 7
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 7
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1013,
+		"status": "lose",
+		"trace_hash": "861f725097dfcc76e0283fb2e0b01ac325980d11b85c08144207a8e933de12ff",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 7
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1014,
+		"status": "win",
+		"trace_hash": "373f98ab361e5bb52c4304def6451f5d3584da9587c4361d241f94c6f163a734",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 7
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1015,
+		"status": "win",
+		"trace_hash": "373f98ab361e5bb52c4304def6451f5d3584da9587c4361d241f94c6f163a734",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1016,
+		"status": "win",
+		"trace_hash": "bc30dce471b6af270e9b3672f049804fba9590a06a9fa28d4a571f4a4dd15e5c",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 6
+			},
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 7
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 7
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1017,
+		"status": "lose",
+		"trace_hash": "7d7ac060758da8b96c64e86e9e64d9adc265229bf32f76d08a011dcca30d0007",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1018,
+		"status": "win",
+		"trace_hash": "5f54d0b5a7ab8a5417bf079b564ba6d498f32d0c1b6fa41629b15757b29c84b8",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1019,
+		"status": "win",
+		"trace_hash": "217300b445c71a2643097a96ba85773fba99cc0c1548362ef8b98a6e1bb76a8a",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 8
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 9
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1020,
+		"status": "lose",
+		"trace_hash": "f86e9bd1572043ab8b692c9f90d2958ddea1e18f7fdf1fe8412ba70a8bb3866a",
+		"turns_to_result": 9
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "scout-1",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 8
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1021,
+		"status": "lose",
+		"trace_hash": "304b7c08cd9ff0cd8fdffff52e892e2f332c71c0e5877a5b6dc343d3fe02e366",
+		"turns_to_result": 8
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-2",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			},
+			{
+				"id": "guard",
+				"kind": "melee",
+				"turn": 7
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1022,
+		"status": "lose",
+		"trace_hash": "736ab29811dbeec4030fc99ff34fedcbfd26d189cec4ce335603e41e96c31212",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1023,
+		"status": "win",
+		"trace_hash": "e982000f315e03df696d88b2f9ca4a662dd5f9c9e316881fe29fb818c4a8836c",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1024,
+		"status": "win",
+		"trace_hash": "e982000f315e03df696d88b2f9ca4a662dd5f9c9e316881fe29fb818c4a8836c",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "bow-1",
+				"kind": "ranged",
+				"turn": 6
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1025,
+		"status": "win",
+		"trace_hash": "e982000f315e03df696d88b2f9ca4a662dd5f9c9e316881fe29fb818c4a8836c",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1026,
+		"status": "lose",
+		"trace_hash": "711c0f9e7d3a7994fe1fb57804a90b1d9d298c002bdb50daef2c92ed54f42652",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "scout-2",
+				"kind": "mobile",
+				"turn": 7
+			},
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1027,
+		"status": "lose",
+		"trace_hash": "7932fcfa199ce77c1d729db5c2935c41a06bd35dfe8ef12b9096101e9a048762",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1028,
+		"status": "lose",
+		"trace_hash": "6afd54df67371a0d50dc445a3527dffa5a31db2a23092d9d66a7ded9b4408c9a",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1029,
+		"status": "lose",
+		"trace_hash": "dc4fc5d8cd81a896c60d0a7cbe78358c022f0d28d20ac310aeebce22e32cbc39",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [
+			{
+				"id": "thoma",
+				"kind": "melee",
+				"turn": 7
+			}
+		],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1030,
+		"status": "lose",
+		"trace_hash": "6afd54df67371a0d50dc445a3527dffa5a31db2a23092d9d66a7ded9b4408c9a",
+		"turns_to_result": 7
+	},
+	{
+		"ally_deaths": [],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1031,
+		"status": "win",
+		"trace_hash": "e26f1ebae8d3cc5f5f4d4a37bfd3837c06c851a896c1bc1960b28400f2d5fd69",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1032,
+		"status": "win",
+		"trace_hash": "e26f1ebae8d3cc5f5f4d4a37bfd3837c06c851a896c1bc1960b28400f2d5fd69",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1033,
+		"status": "win",
+		"trace_hash": "21da12cd79b644ebbcb218099e2dd6d31e30640a6f478092c7387303c4eda818",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1034,
+		"status": "win",
+		"trace_hash": "21da12cd79b644ebbcb218099e2dd6d31e30640a6f478092c7387303c4eda818",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1035,
+		"status": "win",
+		"trace_hash": "21da12cd79b644ebbcb218099e2dd6d31e30640a6f478092c7387303c4eda818",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1036,
+		"status": "win",
+		"trace_hash": "21da12cd79b644ebbcb218099e2dd6d31e30640a6f478092c7387303c4eda818",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1037,
+		"status": "win",
+		"trace_hash": "21da12cd79b644ebbcb218099e2dd6d31e30640a6f478092c7387303c4eda818",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1038,
+		"status": "win",
+		"trace_hash": "21da12cd79b644ebbcb218099e2dd6d31e30640a6f478092c7387303c4eda818",
+		"turns_to_result": 6
+	},
+	{
+		"ally_deaths": [],
+		"bypass_win": false,
+		"policy": "bypass",
+		"seed": 1039,
+		"status": "win",
+		"trace_hash": "21da12cd79b644ebbcb218099e2dd6d31e30640a6f478092c7387303c4eda818",
+		"turns_to_result": 6
+	}
+]

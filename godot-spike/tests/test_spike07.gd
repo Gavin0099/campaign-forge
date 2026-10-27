@@ -3,6 +3,7 @@ const H = preload("res://tools/field_harness.gd")
 const P = preload("res://tools/field_policy.gd")
 const D06 = preload("res://data/levels/field_24x18_spike06.gd")
 const D = preload("res://data/levels/field_24x18.gd")
+const R = preload("res://scripts/rules/field_rules.gd")
 func test_fixed_seed_extension_preserves_original_twenty() -> void:
 	assert_gte(H.SEEDS.size(),40)
 	assert_eq(H.SEEDS.slice(0,20),H.SPIKE06_SEEDS)
@@ -10,10 +11,50 @@ func test_fixed_seed_extension_preserves_original_twenty() -> void:
 	for n in H.SEEDS: seen[n]=true
 	assert_eq(seen.size(),H.SEEDS.size())
 func test_spike06_preserves_baseline_data() -> void:
-	assert_eq(D06.build(),D.build()) # W2 will pin immutable snapshot against source hash.
+	# W2 changes default levers; pin the FULL historical data bytes instead.
+	assert_eq(FileAccess.get_file_as_string("res://data/levels/field_24x18_spike06.gd").replace("\r\n","\n").sha256_text(),"b206af4e2ce5da16756f112aa30aac6bb55203e2437ccbf3a9ef7bcdb004d6d5")
 	assert_eq(P.start("road",1014,"spike06").level.stats,D06.STATS)
 func test_leader_dash_deterministic_from_real_deployment() -> void:
 	var s := P.start("leader-dash",1014,"spike06")
 	assert_eq(s.turn,1)
 	assert_eq(s.units[0].cell,D06.DEPLOYMENT[0][3])
 	assert_eq(P.command(s,"thoma","leader-dash"),P.command(s,"thoma","leader-dash"))
+
+func test_minimal_data_levers_keep_all_fixed_contracts() -> void:
+	var a := D06.build()
+	var b := D.build()
+	for key in ["stats","rows","terrain","size","scout_kit","ai","turn_limit","objective","entries","reinforcement_kinds","alert_radius","line_of_sight"]: assert_eq(a[key],b[key])
+	for i in range(a.deployment.size()-1): assert_eq(a.deployment[i],b.deployment[i])
+	assert_eq(b.hold_point,Vector2i(22,9))
+	var s := R.initial(b)
+	var before := s.duplicate(true)
+	for u in s.units: assert_gt(R.cost(s.level,u.cell,u.kind),0)
+	s.units=[s.units[0]]
+	var paths := R.reach(s,"thoma",200)
+	assert_has(paths.costs,Vector2i(21,9))
+	for p in b.entries: assert_has(paths.costs,p)
+	assert_eq(before,R.initial(b))
+
+func test_warning_birth_rest_and_immutable_deterministic_wave() -> void:
+	var s := R.initial()
+	s.turn=1
+	var before := s.duplicate(true)
+	var warning := R.next_turn(s)
+	var e: Dictionary = warning.events.filter(func(v):return v.type=="reinforcement_warning")[0]
+	assert_lt(e.announced_on,e.turn)
+	assert_eq(e.turn,3)
+	var arrival := R.next_turn(warning.state)
+	assert_eq(arrival,R.next_turn(warning.state))
+	assert_eq(s,before)
+	for u in arrival.state.units:
+		if u.group=="reinforcements": assert_false(R.allowed(arrival.state,u))
+
+func test_bypass_and_real_dash_counterexamples_closed() -> void:
+	for name in ["bypass","leader-dash"]:
+		var r := H.run(name,1014,"default")
+		assert_false(r.bypass_win)
+		assert_eq(r.illegal_commands,[])
+	var old := H.run("bypass",1014,"spike06")
+	assert_true(old.bypass_win)
+	assert_eq(old.turns_to_result,6)
+	assert_eq(old.ally_deaths,[])
