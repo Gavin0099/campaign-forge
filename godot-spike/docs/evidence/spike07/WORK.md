@@ -129,3 +129,38 @@ the FULL snapshot source SHA256, frozen contracts/deployment of every other
 unit, leader/entry reachability, T2 warning<T3 arrival/birth rest/determinism/
 immutability, plus1014 full dash and partial bypass without wave-free wins.
 Original1014 variant still T6 zero-death wave-free. Commit follows W2 completion.
+
+## W3 — early scout safety (target BEFORE tuning)
+
+Target unchanged: >=90% intended road/flank runs have no scout death beforeT4;
+conditional scout death median>=8; scouts lead/co-lead finishes/intercepts but not
+damage. Maintain W1 difficulty bands and bypass closure. Enemy focus/kit/stats
+remain unchanged. Try policy safety before any deployment edit.
+
+W1 road9/flank8 scout deaths beforeT5; early examples1015/1027 scout2T3 at(9,12),
+HP2, killed by knight3 from(10,12), one legal enemy threat at phase start; weighted
+movement3, retreat consumed/none left. Other deathsT4 at(12,12),HP2,knight1(13,12).
+Original heuristic discounts a foe at distance3–5 to.5 and nearby melee by.4:
+it can call a lethal reachable knight just.1 risk, below retreat trigger1.
+Thus death need not involve >=2 enemies. Enemy low-HP focus is understandable;
+do not make it ignore the scout. Early opening is unchanged inW2 except distant
+wave/post, so baseline traces locate the policy defect; W2 deaths are retained
+in compact reports and W3 detailed reruns bind new phase-start diagnostics.
+
+Candidate: only T1–3, HP<=2 scouts use conservative legal enemy threat counts
+(remove their own occupancy/ZoC; other ally blockers and LOS remain). One lethal
+threat triggers repositioning; candidate cells score20 per threat instead of the
+discounted heuristic. Early HP<=4 retreat-cell selection uses same legal counts
+within the existing<=2-cost reach. Later turns and healthy travel remain baseline.
+No deployment, enemy focus, damage, HP, move, kit or formal gameplay change.
+
+W3 measured (40 seeds each, detailed scout/ runs): road24/40=60%, flank27/40=67.5%;
+both within locked bands. No scout death<T4 in80/80; bypass0/80. Scout damage
+road22.04%,flank19.08% (not top), finishes road122 vs melee94/ranged98 (leads),
+flank89 vs melee99/ranged126 (does not lead); intercepts188/190 (only scout class).
+Conditional scout death median7 for BOTH routes, range road4–15/flank4–12:
+**FAIL median>=8 target**, and flank finishing-lead target not met. Earlier wave
+brings real threats forward; don't pad HP/nerf enemy focus or retune difficulty to
+hide this. Early survival improved, kit remains useful, later survival/finish
+balance remains a measured limitation for human review. No acceptance definition
+relaxed. W3 pure safety/retreat tests8/8,76assertions,exit0 (w3-tests.log).

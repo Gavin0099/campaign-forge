@@ -69,15 +69,29 @@ static func dash_command(s: Dictionary, id: String) -> Dictionary:
 
 static func escape_command(s: Dictionary, id: String) -> Dictionary:
 	var u := Rules.unit(s,id)
+	var precise: bool = s.level.get("variant","")!="spike06" and s.turn<=3 and u.hp<=4
+	var threats := scout_threat_counts(s,id) if precise else {}
 	var best: Vector2i = u.cell
 	var value := INF
 	for p in Rules.reach(s,id).costs:
 		var score := exposure(s,p,id)*4.0+Rules.distance(p,Rules.unit(s,"leader").cell)*.2
+		if precise: score=float(threats.get(p,0))*20.0+exposure(s,p,id)+Rules.distance(p,Rules.unit(s,"leader").cell)*.2
 		score+=float(tie(s,str(p))%1000)*.00001
 		if score<value:
 			value=score
 			best=p
 	return {"type":"move","unit":id,"to":best} if best!=u.cell else {"type":"wait","unit":id}
+
+static func scout_threat_counts(s: Dictionary, id: String) -> Dictionary:
+	# Conservative legal threat with this scout removed: do not count its own
+	# future ZoC as guaranteed protection. Other living allies/terrain still block.
+	var hypothetical := s.duplicate(true)
+	Rules.unit(hypothetical,id).hp=0
+	var counts := {}
+	for foe in hypothetical.units:
+		if foe.side!="enemy" or foe.hp<=0: continue
+		for cell in Rules.threat(hypothetical,foe.id): counts[cell]=int(counts.get(cell,0))+1
+	return counts
 
 static func scout_opportunity(s: Dictionary, u: Dictionary, foe: Dictionary) -> bool:
 	if u.kind!="mobile" or not s.level.get("scout_kit",false): return true
@@ -129,9 +143,12 @@ static func exposure(s: Dictionary, cell: Vector2i, id: String) -> float:
 static func supported_command(s: Dictionary, id: String, policy: String) -> Dictionary:
 	var u := Rules.unit(s,id)
 	if not Rules.allowed(s,u): return {}
+	var early: bool = u.kind=="mobile" and s.turn<=3 and u.hp<=2
+	var threats := scout_threat_counts(s,id) if early else {}
 	var victim := target(s,id)
 	if victim!="" and not scout_opportunity(s,u,Rules.unit(s,victim)): victim=""
 	var retreat: bool = not u.moved and u.hp<=4 and exposure(s,u.cell,id)>=1.0
+	if early and not u.moved and threats.get(u.cell,0)>0: retreat=true
 	if victim!="" and not retreat: return {"type":"attack","unit":id,"target":victim}
 	if u.moved: return {"type":"wait","unit":id}
 	# Full six for travel; score a reserved two-point escape when striking.
@@ -156,10 +173,12 @@ static func supported_command(s: Dictionary, id: String, policy: String) -> Dict
 					leader_push_safe=Rules.cost(s.level,into,foe.kind)>0 and Rules.occupant(s,into).is_empty()
 				attack_value=maxf(attack_value,value)
 		var danger := exposure(s,p,id)
+		if early: danger=float(threats.get(p,0))
 		if leader_push_safe: danger=maxf(0,danger-1.0) # known knockback denies adjacent leader counter
 		var danger_weight := 1.3 if u.kind=="melee" else 2.0
 		if u.hp<=4: danger_weight*=2.0
 		if id=="thoma" and u.hp<=4: danger_weight*=4.0
+		if early: danger_weight=20.0
 		var progress: float = distances.get(p,100)
 		var score := attack_value-progress*.65-danger*danger_weight
 		if u.kind=="mobile" and attack_value>0 and reachable.costs[p]>4: score-=danger*1.5

@@ -58,3 +58,40 @@ func test_bypass_and_real_dash_counterexamples_closed() -> void:
 	assert_true(old.bypass_win)
 	assert_eq(old.turns_to_result,6)
 	assert_eq(old.ally_deaths,[])
+
+func safety_fixture() -> Dictionary:
+	var s := R.initial()
+	for y in range(18): s.level.rows[y]=".".repeat(24)
+	s.turn=3
+	s.units=[R.make_unit("thoma","ally","melee",Vector2i(2,9),"party",s.level),R.make_unit("scout","ally","mobile",Vector2i(5,8),"party",s.level),R.make_unit("foe","enemy","knight",Vector2i(9,8),"front",s.level),R.make_unit("leader","enemy","leader",Vector2i(22,9),"leader",s.level)]
+	s.units[1].hp=2
+	return s
+
+func test_early_exposure_prefers_safe_position_and_preserves_input() -> void:
+	var s := safety_fixture()
+	var before := s.duplicate(true)
+	var threats := P.scout_threat_counts(s,"scout")
+	assert_gte(threats.get(Vector2i(5,8),0),1)
+	assert_eq(threats.get(Vector2i(3,8),0),0)
+	var command := P.command(s,"scout","flank")
+	assert_eq(command.type,"move")
+	assert_eq(threats.get(command.to,0),0)
+	assert_eq(command,P.command(s,"scout","flank"))
+	assert_eq(s,before)
+
+func test_safe_retreat_respects_two_weighted_cost_and_total_six() -> void:
+	var s := safety_fixture()
+	s.units[1].acted=true
+	s.units[1].moved=true
+	s.units[1].retreat_left=2
+	s.units[1].move_spent=4
+	var before := s.duplicate(true)
+	var command := P.escape_command(s,"scout")
+	assert_eq(command.type,"move")
+	assert_lte(int(R.reach(s,"scout").costs[command.to]),2)
+	assert_eq(P.scout_threat_counts(s,"scout").get(command.to,0),0)
+	var moved := R.move(s,"scout",command.to)
+	assert_true(moved.ok)
+	assert_lte(int(R.unit(moved.state,"scout").move_spent),6)
+	assert_false(R.can_escape(moved.state,R.unit(moved.state,"scout")))
+	assert_eq(s,before)
